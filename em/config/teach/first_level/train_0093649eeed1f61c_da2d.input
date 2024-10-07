@@ -1,0 +1,205 @@
+0.	2023-10-05 08:42:43.383398 - 2023-10-05 08:43:25.445533: Goal: Pickup(Apple_1)
+	Visual observation: Apple_1, PaperTowelRoll_1, WineBottle_1, Tomato_2, Potato_2, Cabinet_0, Window, Sink, CounterTop_2, Knife_0, HousePlant, Plate, CreditCard_0, Cup_0 [dirty], CoffeeMachine, Sink_Basin, DishSponge, Mug [dirty], Faucet
+	WineBottle_1, Apple_1, Cup_0, Mug, PaperTowelRoll_1, Plate, CreditCard_0, Knife_0 are in/on Sink_Basin
+1.	2023-10-05 08:43:27.360209 - 2023-10-05 08:43:32.614679: Goal: Place(CounterTop_2)
+	Visual observation: Apple_1, PaperTowelRoll_1, WineBottle_1, Tomato_2, Potato_2, Window, Sink, CounterTop_2, Knife_0, HousePlant, Plate, CreditCard_0, Cup_0 [dirty], Sink_Basin, DishSponge, Mug [dirty], Faucet, agent hand
+	PaperTowelRoll_1, WineBottle_1, Cup_0, Mug, Knife_0, CreditCard_0, Plate are in/on Sink_Basin
+	Apple_1 is inside agent hand
+	Speech:
+	2023-10-05 08:43:30.612944: cook a slice of potato slice it using a knife
+2.	2023-10-05 08:43:36.935671 - 2023-10-05 08:43:42.299499: Goal: Pickup(Knife_0)
+	Visual observation: Apple_1, PaperTowelRoll_1, WineBottle_1, Tomato_2, Potato_2, Cabinet_0, Window, Sink, CounterTop_2, Knife_0, HousePlant, Plate, CreditCard_0, Cup_0 [dirty], CoffeeMachine, Sink_Basin, DishSponge, Mug [dirty], Faucet
+	Tomato_2, Apple_1, HousePlant, Potato_2, DishSponge, CoffeeMachine are in/on CounterTop_2
+	WineBottle_1, Cup_0, Mug, PaperTowelRoll_1, Plate, CreditCard_0, Knife_0 are in/on Sink_Basin
+3.	2023-10-05 08:43:47.123955 - 2023-10-05 08:43:47.123955: Goal: Slice(Potato_2)
+	Visual observation: Apple_1, PaperTowelRoll_1, WineBottle_1, Tomato_2, Potato_2, Cabinet_0, Window, Sink, CounterTop_2, Knife_0, HousePlant, Plate, CreditCard_0, Cup_0 [dirty], CoffeeMachine, Sink_Basin, DishSponge, Mug [dirty], Faucet, agent hand
+	Tomato_2, Apple_1, HousePlant, Potato_2, DishSponge, CoffeeMachine are in/on CounterTop_2
+	Cup_0, Mug, PaperTowelRoll_1, Plate, CreditCard_0, WineBottle_1 are in/on Sink_Basin
+	Knife_0 is inside agent hand
+4.	2023-10-05 08:43:49.401686 - 2023-10-05 08:43:49.401686: Goal: Place(CounterTop_2)
+	Visual observation: Potato_2_Sliced_6, Potato_2_Sliced_5, Potato_2_Sliced_4, Potato_2_Sliced_3, Potato_2_Sliced_2, Potato_2_Sliced_1, Potato_2_Sliced_0, Apple_1, PaperTowelRoll_1, WineBottle_1, Tomato_2, Cabinet_0, Window, Sink, CounterTop_2, Knife_0, HousePlant, Plate, CreditCard_0, Cup_0 [dirty], CoffeeMachine, Sink_Basin, DishSponge, Mug [dirty], Faucet, agent hand
+	HousePlant, Potato_2_Sliced_1, Potato_2_Sliced_6, Potato_2_Sliced_4, Potato_2_Sliced_5, CoffeeMachine, Tomato_2, DishSponge, Potato_2_Sliced_0, Apple_1, Potato_2_Sliced_2, Potato_2_Sliced_3 are in/on CounterTop_2
+	PaperTowelRoll_1, WineBottle_1, Mug, Plate, Cup_0, CreditCard_0 are in/on Sink_Basin
+	Knife_0 is inside agent hand
+5.	2023-10-05 08:43:50.898734 - 2023-10-05 08:43:53.711167: Goal: Pickup(Potato_2_Sliced_7)
+	Visual observation: Potato_2_Sliced_7, Potato_2_Sliced_6, Potato_2_Sliced_5, Potato_2_Sliced_4, Potato_2_Sliced_3, Potato_2_Sliced_2, Potato_2_Sliced_1, Potato_2_Sliced_0, PaperTowelRoll_1, WineBottle_1, Tomato_2, Cabinet_0, Window, Sink, Cabinet_3, CounterTop_2, Knife_0, HousePlant, Plate, CreditCard_0, Cup_0 [dirty], Sink_Basin, Mug [dirty], Faucet, Apple_1
+	WineBottle_1, CreditCard_0, Cup_0, PaperTowelRoll_1, Plate, Mug are in/on Sink_Basin
+	Tomato_2, Potato_2_Sliced_2, Knife_0, Potato_2_Sliced_4, Potato_2_Sliced_7, HousePlant, Potato_2_Sliced_0, Potato_2_Sliced_3, Potato_2_Sliced_6, Apple_1, Potato_2_Sliced_5, Potato_2_Sliced_1 are in/on CounterTop_2
+6.	2023-10-05 08:43:55.338351 - 2023-10-05 08:44:06.068906: Goal: ToggleOff(Microwave)
+	Visual observation: Potato_2_Sliced_7, StoveBurner_0, StoveBurner_1, CounterTop_1, StoveBurner_2, StoveBurner_3, Cabinet_2, Cabinet_3, CounterTop_2, Microwave [toggled], Fork_0, HousePlant, Kettle [filled], Pot [dirty], agent hand, Apple_1, Knife_0
+	Pot, Fork_0, Knife_0, Apple_1, HousePlant are in/on CounterTop_2
+	Potato_2_Sliced_7 is inside agent hand
+7.	2023-10-05 08:44:08.668212 - 2023-10-05 08:44:08.668212: Goal: Open(Microwave)
+	Visual observation: Potato_2_Sliced_7, StoveBurner_0, StoveBurner_1, CounterTop_1, StoveBurner_2, StoveBurner_3, Cabinet_2, Cabinet_3, CounterTop_2, Microwave, Fork_0, HousePlant, Kettle [filled], Pot [dirty], agent hand, Apple_1, Knife_0
+	Pot, Fork_0, Knife_0, Apple_1, HousePlant are in/on CounterTop_2
+	Potato_2_Sliced_7 is inside agent hand
+8.	2023-10-05 08:44:11.449172 - 2023-10-05 08:44:16.164351: Goal: Place(Microwave)
+	Visual observation: Potato_2_Sliced_7, StoveBurner_0, StoveBurner_1, CounterTop_1, StoveBurner_2, StoveBurner_3, Cabinet_2, Cabinet_3, CounterTop_2, Microwave [open], Fork_0, HousePlant, Kettle [filled], Pot [dirty], agent hand, Apple_1, Knife_0
+	Pot, Fork_0, Knife_0, Apple_1, HousePlant are in/on CounterTop_2
+	Potato_2_Sliced_7 is inside agent hand
+9.	2023-10-05 08:44:18.005497 - 2023-10-05 08:44:20.463810: Goal: Pickup(Potato_2_Sliced_4)
+	Visual observation: Potato_2_Sliced_6, Potato_2_Sliced_5, Potato_2_Sliced_4, Potato_2_Sliced_3, Potato_2_Sliced_2, Potato_2_Sliced_1, Potato_2_Sliced_0, Apple_1, PaperTowelRoll_1, WineBottle_1, Tomato_2, Cabinet_0, Window, Sink, CounterTop_2, Knife_0, HousePlant, Plate, CreditCard_0, Cup_0 [dirty], CoffeeMachine, Sink_Basin, DishSponge, Mug [dirty], Faucet, Microwave [open], Potato_2_Sliced_7
+	HousePlant, Potato_2_Sliced_1, Potato_2_Sliced_6, Potato_2_Sliced_4, Potato_2_Sliced_5, CoffeeMachine, DishSponge, Tomato_2, Potato_2_Sliced_0, Apple_1, Potato_2_Sliced_2, Knife_0, Potato_2_Sliced_3 are in/on CounterTop_2
+	PaperTowelRoll_1, WineBottle_1, Mug, Plate, Cup_0, CreditCard_0 are in/on Sink_Basin
+	Potato_2_Sliced_7 is in/on Microwave
+	Speech:
+	2023-10-05 08:44:19.708876: the potato is in the white shelf near a ladder
+10.	2023-10-05 08:44:21.574893 - 2023-10-05 08:44:25.496187: Goal: Place(Microwave)
+	Visual observation: Potato_2_Sliced_7, Potato_2_Sliced_4, StoveBurner_0, CounterTop_1, StoveBurner_2, StoveBurner_3, Cabinet_2, CounterTop_2, Microwave [open], Fork_0, Kettle [filled], Pot [dirty], agent hand, Apple_1, Knife_0
+	Fork_0, Apple_1, Knife_0, Pot are in/on CounterTop_2
+	Potato_2_Sliced_4 is inside agent hand
+	Potato_2_Sliced_7 is in/on Microwave
+11.	2023-10-05 08:44:28.440832 - 2023-10-05 08:44:28.440832: Goal: Close(Microwave)
+	Visual observation: Potato_2_Sliced_7, Potato_2_Sliced_4, StoveBurner_0, CounterTop_1, StoveBurner_2, StoveBurner_3, Cabinet_2, CounterTop_2, Microwave [open], Fork_0, Kettle [filled], Pot [dirty], Apple_1, Knife_0
+	Fork_0, Knife_0, Apple_1, Pot are in/on CounterTop_2
+	Potato_2_Sliced_7, Potato_2_Sliced_4 are in/on Microwave
+12.	2023-10-05 08:44:30.633707 - 2023-10-05 08:44:30.633707: Goal: ToggleOn(Microwave)
+	Visual observation: StoveBurner_0, CounterTop_1, StoveBurner_2, StoveBurner_3, Cabinet_2, CounterTop_2, Microwave [open], Fork_0, Kettle [filled], Pot [dirty], Potato_2_Sliced_7, Potato_2_Sliced_4, Apple_1, Knife_0
+	Pot, Fork_0, Knife_0, Apple_1 are in/on CounterTop_2
+	Potato_2_Sliced_7, Potato_2_Sliced_4 are in/on Microwave
+13.	2023-10-05 08:44:32.713747 - 2023-10-05 08:44:35.919472: Goal: ToggleOff(Microwave)
+	Visual observation: StoveBurner_0, CounterTop_1, StoveBurner_2, StoveBurner_3, Cabinet_2, CounterTop_2, Microwave [open], Fork_0, Kettle [filled], Pot [dirty], Potato_2_Sliced_7 [cooked], Potato_2_Sliced_4 [cooked], Apple_1, Knife_0
+	Pot, Fork_0, Knife_0, Apple_1 are in/on CounterTop_2
+	Potato_2_Sliced_7, Potato_2_Sliced_4 are in/on Microwave
+14.	2023-10-05 08:44:37.770726 - 2023-10-05 08:44:37.770726: Goal: Open(Microwave)
+	Visual observation: StoveBurner_0, CounterTop_1, StoveBurner_2, StoveBurner_3, Cabinet_2, CounterTop_2, Microwave [open], Fork_0, Kettle [filled], Pot [dirty], Potato_2_Sliced_7 [cooked], Potato_2_Sliced_4 [cooked], Apple_1, Knife_0
+	Pot, Fork_0, Knife_0, Apple_1 are in/on CounterTop_2
+	Potato_2_Sliced_7, Potato_2_Sliced_4 are in/on Microwave
+15.	2023-10-05 08:44:40.260587 - 2023-10-05 08:44:40.260587: Goal: Pickup(Potato_2_Sliced_4)
+	Visual observation: Potato_2_Sliced_7 [cooked], Potato_2_Sliced_4 [cooked], StoveBurner_0, CounterTop_1, StoveBurner_2, StoveBurner_3, Cabinet_2, CounterTop_2, Microwave [open], Fork_0, Kettle [filled], Pot [dirty], Apple_1, Knife_0
+	Fork_0, Knife_0, Apple_1, Pot are in/on CounterTop_2
+	Potato_2_Sliced_7, Potato_2_Sliced_4 are in/on Microwave
+16.	2023-10-05 08:44:42.188200 - 2023-10-05 08:45:00.035138: Goal: Place(CounterTop_2)
+	Visual observation: Potato_2_Sliced_7 [cooked], Potato_2_Sliced_4 [cooked], StoveBurner_0, StoveBurner_1, CounterTop_1, StoveBurner_2, StoveBurner_3, Cabinet_2, Cabinet_8, CounterTop_2, Microwave [open], Fork_0, SoapBottle_0, Kettle [filled], Pan [dirty], Pot [dirty], Spatula, agent hand, Apple_1, Knife_0
+	Knife_0, Fork_0, Apple_1, Pot are in/on CounterTop_2
+	Potato_2_Sliced_4 is inside agent hand
+	Potato_2_Sliced_7 is in/on Microwave
+	Speech:
+	2023-10-05 08:44:42.188200: good
+17.	2023-10-05 08:45:03.670995 - 2023-10-05 08:45:03.670995: Goal: Pickup(Potato_2_Sliced_7)
+	Visual observation: Potato_2_Sliced_7 [cooked], Potato_2_Sliced_4 [cooked], StoveBurner_0, StoveBurner_1, CounterTop_1, StoveBurner_2, StoveBurner_3, Cabinet_2, Cabinet_8, CounterTop_2, Microwave [open], Fork_0, SoapBottle_0, Kettle [filled], Pan [dirty], Pot [dirty], Spatula, Apple_1, Knife_0
+	Potato_2_Sliced_4, Apple_1, Fork_0, Knife_0, Pot are in/on CounterTop_2
+	Potato_2_Sliced_7 is in/on Microwave
+18.	2023-10-05 08:45:04.458052 - 2023-10-05 08:45:08.398745: Goal: Close(Microwave)
+	Visual observation: Potato_2_Sliced_7 [cooked], Potato_2_Sliced_4 [cooked], StoveBurner_0, StoveBurner_1, CounterTop_1, StoveBurner_2, StoveBurner_3, Cabinet_2, Cabinet_8, CounterTop_2, Microwave [open], Fork_0, SoapBottle_0, Kettle [filled], Pan [dirty], Pot [dirty], Spatula, agent hand, Apple_1, Knife_0
+	Knife_0, Potato_2_Sliced_4, Fork_0, Apple_1, Pot are in/on CounterTop_2
+	Potato_2_Sliced_7 is inside agent hand
+	Speech:
+	2023-10-05 08:45:04.458052: put the cooked potato slice into a clean bowl
+19.	2023-10-05 08:45:20.204226 - 2023-10-05 08:45:26.139296: Goal: Place(CounterTop_2)
+	Visual observation: Potato_2_Sliced_7 [cooked], Potato_2_Sliced_4 [cooked], StoveBurner_0, StoveBurner_1, CounterTop_1, StoveBurner_2, StoveBurner_3, Cabinet_2, Cabinet_8, CounterTop_2, Microwave [open], Fork_0, SoapBottle_0, Kettle [filled], Pan [dirty], Pot [dirty], Spatula, agent hand, Apple_1, Knife_0
+	Knife_0, Potato_2_Sliced_4, Fork_0, Apple_1, Pot are in/on CounterTop_2
+	Potato_2_Sliced_7 is inside agent hand
+20.	2023-10-05 08:45:27.759318 - 2023-10-05 08:45:31.875657: Goal: Pickup(Bowl_2)
+	Visual observation: Lettuce_1, Bowl_2 [dirty, filled], Cup_2 [filled], Tomato_1, CounterTop_1, Cabinet_7, Bread, Shelf_0, Shelf_1, Pan [dirty], PaperTowelRoll_0, ShelvingUnit, CounterTop_2, Potato_2_Sliced_7 [cooked], Potato_2_Sliced_4 [cooked], Apple_1, Knife_0
+	Knife_0, Apple_1, Potato_2_Sliced_7, Potato_2_Sliced_4 are in/on CounterTop_2
+21.	2023-10-05 08:45:32.854872 - 2023-10-05 08:45:40.869418: Goal: Pour(Sink_Basin)
+	Visual observation: Apple_1, Bowl_2 [dirty, filled], PaperTowelRoll_1, WineBottle_1, Tomato_2, Window, Sink, CounterTop_2, Knife_0, HousePlant, Plate, CreditCard_0, Cup_0 [dirty], Sink_Basin, DishSponge, Mug [dirty], Faucet, Potato_2_Sliced_7 [cooked], Potato_2_Sliced_4 [cooked], agent hand
+	Apple_1, HousePlant, Potato_2_Sliced_7, Tomato_2, Knife_0, DishSponge, Potato_2_Sliced_4 are in/on CounterTop_2
+	WineBottle_1, Cup_0, Mug, PaperTowelRoll_1, CreditCard_0, Plate are in/on Sink_Basin
+	Bowl_2 is inside agent hand
+	Speech:
+	2023-10-05 08:45:35.322542: the bowl is inside the fridge
+22.	2023-10-05 08:45:48.976155 - 2023-10-05 08:45:51.610510: Goal: Place(CounterTop_2)
+	Visual observation: Potato_2_Sliced_6, Potato_2_Sliced_5, Potato_2_Sliced_3, Potato_2_Sliced_2, Potato_2_Sliced_1, Potato_2_Sliced_0, Apple_1, Bowl_2 [dirty], PaperTowelRoll_1, WineBottle_1, Tomato_2, Cabinet_0, Window, Sink, CounterTop_2, Knife_0, HousePlant, Plate, CreditCard_0, Cup_0 [dirty], CoffeeMachine, Sink_Basin, DishSponge, Mug [dirty], Potato_2_Sliced_7 [cooked], Potato_2_Sliced_4 [cooked], agent hand
+	HousePlant, Potato_2_Sliced_0, Potato_2_Sliced_6, Potato_2_Sliced_7, Potato_2_Sliced_3, Potato_2_Sliced_4, Potato_2_Sliced_5, CoffeeMachine, DishSponge, Tomato_2, Apple_1, Potato_2_Sliced_1, Knife_0, Potato_2_Sliced_2 are in/on CounterTop_2
+	PaperTowelRoll_1, WineBottle_1, Mug, Plate, Cup_0, CreditCard_0 are in/on Sink_Basin
+	Bowl_2 is inside agent hand
+23.	2023-10-05 08:45:54.349963 - 2023-10-05 08:45:54.349963: Goal: Pickup(CreditCard_0)
+	Visual observation: Potato_2_Sliced_6, Potato_2_Sliced_5, Potato_2_Sliced_3, Potato_2_Sliced_2, Potato_2_Sliced_1, Potato_2_Sliced_0, Apple_1, Bowl_2 [dirty], PaperTowelRoll_1, WineBottle_1, Tomato_2, Cabinet_0, Window, Sink, CounterTop_2, Knife_0, HousePlant, Plate, CreditCard_0, Cup_0 [dirty], CoffeeMachine, Sink_Basin, DishSponge, Mug [dirty], Faucet, Potato_2_Sliced_7 [cooked], Potato_2_Sliced_4 [cooked]
+	HousePlant, Potato_2_Sliced_0, Potato_2_Sliced_6, Potato_2_Sliced_3, Potato_2_Sliced_7, Potato_2_Sliced_5, Potato_2_Sliced_4, CoffeeMachine, DishSponge, Tomato_2, Apple_1, Bowl_2, Potato_2_Sliced_1, Knife_0, Potato_2_Sliced_2 are in/on CounterTop_2
+	PaperTowelRoll_1, WineBottle_1, Mug, Plate, Cup_0, CreditCard_0 are in/on Sink_Basin
+24.	2023-10-05 08:45:56.700499 - 2023-10-05 08:45:56.700499: Goal: Place(CounterTop_2)
+	Visual observation: Potato_2_Sliced_6, Potato_2_Sliced_5, Potato_2_Sliced_3, Potato_2_Sliced_2, Potato_2_Sliced_1, Potato_2_Sliced_0, Apple_1, Bowl_2 [dirty], PaperTowelRoll_1, WineBottle_1, Tomato_2, Cabinet_0, Window, Sink, CounterTop_2, Knife_0, HousePlant, Plate, CreditCard_0, Cup_0 [dirty], CoffeeMachine, Sink_Basin, DishSponge, Mug [dirty], Faucet, Potato_2_Sliced_7 [cooked], Potato_2_Sliced_4 [cooked], agent hand
+	HousePlant, Potato_2_Sliced_0, Potato_2_Sliced_6, Potato_2_Sliced_3, Potato_2_Sliced_7, Potato_2_Sliced_5, Potato_2_Sliced_4, CoffeeMachine, DishSponge, Tomato_2, Apple_1, Bowl_2, Potato_2_Sliced_1, Knife_0, Potato_2_Sliced_2 are in/on CounterTop_2
+	PaperTowelRoll_1, WineBottle_1, Mug, Plate, Cup_0 are in/on Sink_Basin
+	CreditCard_0 is inside agent hand
+25.	2023-10-05 08:45:59.721698 - 2023-10-05 08:45:59.721698: Goal: Pickup(Bowl_2)
+	Visual observation: Potato_2_Sliced_6, Potato_2_Sliced_5, Potato_2_Sliced_3, Potato_2_Sliced_2, Potato_2_Sliced_1, Potato_2_Sliced_0, Apple_1, Bowl_2 [dirty], PaperTowelRoll_1, WineBottle_1, Tomato_2, Cabinet_0, Window, Sink, CounterTop_2, Knife_0, HousePlant, Plate, CreditCard_0, Cup_0 [dirty], CoffeeMachine, Sink_Basin, DishSponge, Mug [dirty], Faucet, Potato_2_Sliced_7 [cooked], Potato_2_Sliced_4 [cooked]
+	HousePlant, Potato_2_Sliced_0, CreditCard_0, Potato_2_Sliced_6, Potato_2_Sliced_3, Potato_2_Sliced_7, Potato_2_Sliced_5, Potato_2_Sliced_4, CoffeeMachine, DishSponge, Tomato_2, Apple_1, Bowl_2, Potato_2_Sliced_1, Knife_0, Potato_2_Sliced_2 are in/on CounterTop_2
+	PaperTowelRoll_1, WineBottle_1, Mug, Plate, Cup_0 are in/on Sink_Basin
+26.	2023-10-05 08:46:02.130623 - 2023-10-05 08:46:07.816320: Goal: Place(CounterTop_2)
+	Visual observation: Potato_2_Sliced_6, Potato_2_Sliced_5, Potato_2_Sliced_3, Potato_2_Sliced_2, Potato_2_Sliced_1, Potato_2_Sliced_0, Apple_1, Bowl_2 [dirty], PaperTowelRoll_1, WineBottle_1, Tomato_2, Cabinet_0, Window, Sink, CounterTop_2, Knife_0, HousePlant, Plate, CreditCard_0, Cup_0 [dirty], CoffeeMachine, Sink_Basin, DishSponge, Mug [dirty], Potato_2_Sliced_7 [cooked], Potato_2_Sliced_4 [cooked], agent hand
+	HousePlant, Potato_2_Sliced_0, CreditCard_0, Potato_2_Sliced_6, Potato_2_Sliced_7, Potato_2_Sliced_3, Potato_2_Sliced_4, Potato_2_Sliced_5, CoffeeMachine, DishSponge, Tomato_2, Apple_1, Potato_2_Sliced_1, Knife_0, Potato_2_Sliced_2 are in/on CounterTop_2
+	PaperTowelRoll_1, WineBottle_1, Mug, Plate, Cup_0 are in/on Sink_Basin
+	Bowl_2 is inside agent hand
+27.	2023-10-05 08:46:09.936347 - 2023-10-05 08:46:09.936347: Goal: Pickup(Cup_0)
+	Visual observation: Potato_2_Sliced_6, Potato_2_Sliced_5, Potato_2_Sliced_3, Potato_2_Sliced_2, Potato_2_Sliced_1, Potato_2_Sliced_0, Apple_1, Bowl_2 [dirty], PaperTowelRoll_1, WineBottle_1, Tomato_2, Cabinet_0, Window, Sink, CounterTop_2, Knife_0, HousePlant, Plate, CreditCard_0, Cup_0 [dirty], CoffeeMachine, Sink_Basin, DishSponge, Mug [dirty], Faucet, Potato_2_Sliced_7 [cooked], Potato_2_Sliced_4 [cooked]
+	HousePlant, Potato_2_Sliced_0, CreditCard_0, Potato_2_Sliced_6, Potato_2_Sliced_3, Potato_2_Sliced_7, Potato_2_Sliced_5, Potato_2_Sliced_4, CoffeeMachine, DishSponge, Tomato_2, Apple_1, Bowl_2, Potato_2_Sliced_1, Knife_0, Potato_2_Sliced_2 are in/on CounterTop_2
+	PaperTowelRoll_1, WineBottle_1, Mug, Plate, Cup_0 are in/on Sink_Basin
+28.	2023-10-05 08:46:12.293807 - 2023-10-05 08:46:12.293807: Goal: Place(CounterTop_2)
+	Visual observation: Potato_2_Sliced_6, Potato_2_Sliced_5, Potato_2_Sliced_3, Potato_2_Sliced_2, Potato_2_Sliced_1, Potato_2_Sliced_0, Apple_1, Bowl_2 [dirty], PaperTowelRoll_1, WineBottle_1, Tomato_2, Cabinet_0, Window, Sink, CounterTop_2, Knife_0, HousePlant, Plate, CreditCard_0, Cup_0 [dirty], CoffeeMachine, Sink_Basin, DishSponge, Mug [dirty], Faucet, Potato_2_Sliced_7 [cooked], Potato_2_Sliced_4 [cooked], agent hand
+	HousePlant, Potato_2_Sliced_0, CreditCard_0, Potato_2_Sliced_6, Potato_2_Sliced_3, Potato_2_Sliced_7, Potato_2_Sliced_5, Potato_2_Sliced_4, CoffeeMachine, DishSponge, Tomato_2, Apple_1, Bowl_2, Potato_2_Sliced_1, Knife_0, Potato_2_Sliced_2 are in/on CounterTop_2
+	PaperTowelRoll_1, WineBottle_1, Mug, Plate are in/on Sink_Basin
+	Cup_0 is inside agent hand
+29.	2023-10-05 08:46:14.474493 - 2023-10-05 08:46:14.474493: Goal: Pickup(Plate)
+	Visual observation: Potato_2_Sliced_6, Potato_2_Sliced_5, Potato_2_Sliced_3, Potato_2_Sliced_2, Potato_2_Sliced_1, Potato_2_Sliced_0, Apple_1, Bowl_2 [dirty], PaperTowelRoll_1, WineBottle_1, Tomato_2, Cabinet_0, Window, Sink, CounterTop_2, Knife_0, HousePlant, Plate, CreditCard_0, Cup_0 [dirty], CoffeeMachine, Sink_Basin, DishSponge, Mug [dirty], Faucet, Potato_2_Sliced_7 [cooked], Potato_2_Sliced_4 [cooked]
+	HousePlant, Potato_2_Sliced_0, CreditCard_0, Potato_2_Sliced_6, Potato_2_Sliced_3, Potato_2_Sliced_7, Potato_2_Sliced_5, Potato_2_Sliced_4, CoffeeMachine, DishSponge, Tomato_2, Apple_1, Bowl_2, Cup_0, Potato_2_Sliced_1, Knife_0, Potato_2_Sliced_2 are in/on CounterTop_2
+	PaperTowelRoll_1, WineBottle_1, Mug, Plate are in/on Sink_Basin
+30.	2023-10-05 08:46:17.000144 - 2023-10-05 08:46:17.000144: Goal: Place(CounterTop_2)
+	Visual observation: Potato_2_Sliced_6, Potato_2_Sliced_5, Potato_2_Sliced_3, Potato_2_Sliced_2, Potato_2_Sliced_1, Potato_2_Sliced_0, Apple_1, Bowl_2 [dirty], PaperTowelRoll_1, WineBottle_1, Tomato_2, Cabinet_0, Window, Sink, CounterTop_2, Knife_0, HousePlant, Plate, CreditCard_0, Cup_0 [dirty], CoffeeMachine, DishSponge, Mug [dirty], Faucet, Potato_2_Sliced_7 [cooked], Potato_2_Sliced_4 [cooked], agent hand, Sink_Basin
+	HousePlant, Potato_2_Sliced_0, CreditCard_0, Potato_2_Sliced_6, Potato_2_Sliced_7, Potato_2_Sliced_3, Potato_2_Sliced_4, Potato_2_Sliced_5, CoffeeMachine, DishSponge, Tomato_2, Apple_1, Bowl_2, Cup_0, Potato_2_Sliced_1, Knife_0, Potato_2_Sliced_2 are in/on CounterTop_2
+	PaperTowelRoll_1, WineBottle_1, Mug are in/on Sink_Basin
+	Plate is inside agent hand
+31.	2023-10-05 08:46:19.315671 - 2023-10-05 08:46:19.315671: Goal: Pickup(Mug)
+	Visual observation: Potato_2_Sliced_6, Potato_2_Sliced_5, Potato_2_Sliced_3, Potato_2_Sliced_2, Potato_2_Sliced_1, Potato_2_Sliced_0, Apple_1, Bowl_2 [dirty], PaperTowelRoll_1, WineBottle_1, Tomato_2, Cabinet_0, Window, Sink, CounterTop_2, Knife_0, HousePlant, Plate, CreditCard_0, Cup_0 [dirty], CoffeeMachine, Sink_Basin, DishSponge, Mug [dirty], Faucet, Potato_2_Sliced_7 [cooked], Potato_2_Sliced_4 [cooked]
+	HousePlant, Potato_2_Sliced_0, CreditCard_0, Potato_2_Sliced_6, Potato_2_Sliced_3, Potato_2_Sliced_7, Potato_2_Sliced_5, Potato_2_Sliced_4, CoffeeMachine, DishSponge, Tomato_2, Plate, Apple_1, Bowl_2, Cup_0, Potato_2_Sliced_1, Knife_0, Potato_2_Sliced_2 are in/on CounterTop_2
+	PaperTowelRoll_1, WineBottle_1, Mug are in/on Sink_Basin
+32.	2023-10-05 08:46:21.611761 - 2023-10-05 08:46:21.611761: Goal: Place(CounterTop_2)
+	Visual observation: Potato_2_Sliced_6, Potato_2_Sliced_5, Potato_2_Sliced_3, Potato_2_Sliced_2, Potato_2_Sliced_1, Potato_2_Sliced_0, Apple_1, Bowl_2 [dirty], PaperTowelRoll_1, WineBottle_1, Tomato_2, Cabinet_0, Window, Sink, CounterTop_2, Knife_0, HousePlant, Plate, CreditCard_0, Cup_0 [dirty], CoffeeMachine, Sink_Basin, DishSponge, Mug [dirty], Potato_2_Sliced_7 [cooked], Potato_2_Sliced_4 [cooked], agent hand
+	HousePlant, Potato_2_Sliced_0, CreditCard_0, Potato_2_Sliced_6, Potato_2_Sliced_7, Potato_2_Sliced_3, Potato_2_Sliced_4, Potato_2_Sliced_5, CoffeeMachine, DishSponge, Tomato_2, Plate, Apple_1, Bowl_2, Cup_0, Potato_2_Sliced_1, Knife_0, Potato_2_Sliced_2 are in/on CounterTop_2
+	PaperTowelRoll_1, WineBottle_1 are in/on Sink_Basin
+	Mug is inside agent hand
+33.	2023-10-05 08:46:23.749137 - 2023-10-05 08:46:23.749137: Goal: Pickup(Bowl_2)
+	Visual observation: Potato_2_Sliced_6, Potato_2_Sliced_5, Potato_2_Sliced_3, Potato_2_Sliced_2, Potato_2_Sliced_1, Potato_2_Sliced_0, Apple_1, Bowl_2 [dirty], PaperTowelRoll_1, WineBottle_1, Tomato_2, Cabinet_0, Window, Sink, CounterTop_2, Knife_0, HousePlant, Plate, CreditCard_0, Cup_0 [dirty], CoffeeMachine, Sink_Basin, DishSponge, Mug [dirty], Faucet, Potato_2_Sliced_7 [cooked], Potato_2_Sliced_4 [cooked]
+	HousePlant, Potato_2_Sliced_0, CreditCard_0, Potato_2_Sliced_6, Potato_2_Sliced_3, Potato_2_Sliced_7, Potato_2_Sliced_5, Potato_2_Sliced_4, CoffeeMachine, DishSponge, Tomato_2, Mug, Plate, Apple_1, Bowl_2, Cup_0, Potato_2_Sliced_1, Knife_0, Potato_2_Sliced_2 are in/on CounterTop_2
+	PaperTowelRoll_1, WineBottle_1 are in/on Sink_Basin
+34.	2023-10-05 08:46:25.912136 - 2023-10-05 08:46:25.912136: Goal: Place(Sink_Basin)
+	Visual observation: Potato_2_Sliced_6, Potato_2_Sliced_5, Potato_2_Sliced_3, Potato_2_Sliced_2, Potato_2_Sliced_1, Potato_2_Sliced_0, Apple_1, Bowl_2 [dirty], PaperTowelRoll_1, WineBottle_1, Tomato_2, Cabinet_0, Window, Sink, CounterTop_2, Knife_0, HousePlant, Plate, CreditCard_0, Cup_0 [dirty], CoffeeMachine, Sink_Basin, DishSponge, Mug [dirty], Potato_2_Sliced_7 [cooked], Potato_2_Sliced_4 [cooked], agent hand
+	HousePlant, Potato_2_Sliced_0, CreditCard_0, Potato_2_Sliced_6, Potato_2_Sliced_7, Potato_2_Sliced_3, Potato_2_Sliced_4, Potato_2_Sliced_5, CoffeeMachine, DishSponge, Tomato_2, Mug, Plate, Apple_1, Cup_0, Potato_2_Sliced_1, Knife_0, Potato_2_Sliced_2 are in/on CounterTop_2
+	PaperTowelRoll_1, WineBottle_1 are in/on Sink_Basin
+	Bowl_2 is inside agent hand
+35.	2023-10-05 08:46:28.865191 - 2023-10-05 08:46:28.865191: Goal: ToggleOn(Faucet)
+	Visual observation: Potato_2_Sliced_6, Potato_2_Sliced_5, Potato_2_Sliced_3, Potato_2_Sliced_2, Potato_2_Sliced_1, Potato_2_Sliced_0, Apple_1, Bowl_2 [dirty], PaperTowelRoll_1, WineBottle_1, Tomato_2, Cabinet_0, Window, Sink, CounterTop_2, Knife_0, HousePlant, Plate, CreditCard_0, Cup_0 [dirty], CoffeeMachine, Sink_Basin, DishSponge, Mug [dirty], Faucet, Potato_2_Sliced_7 [cooked], Potato_2_Sliced_4 [cooked]
+	HousePlant, Potato_2_Sliced_0, CreditCard_0, Potato_2_Sliced_6, Potato_2_Sliced_3, Potato_2_Sliced_7, Potato_2_Sliced_5, CoffeeMachine, Potato_2_Sliced_4, DishSponge, Tomato_2, Mug, Plate, Apple_1, Cup_0, Potato_2_Sliced_1, Knife_0, Potato_2_Sliced_2 are in/on CounterTop_2
+	PaperTowelRoll_1, WineBottle_1, Bowl_2 are in/on Sink_Basin
+36.	2023-10-05 08:46:31.281208 - 2023-10-05 08:46:31.281208: Goal: ToggleOff(Faucet)
+	Visual observation: Potato_2_Sliced_6, Potato_2_Sliced_5, Potato_2_Sliced_3, Potato_2_Sliced_2, Potato_2_Sliced_1, Potato_2_Sliced_0, Apple_1, Bowl_2 [filled], PaperTowelRoll_1, WineBottle_1 [filled], Tomato_2, Cabinet_0, Window, Sink, CounterTop_2, Knife_0, HousePlant, Plate, CreditCard_0, Cup_0 [dirty], CoffeeMachine, Sink_Basin, DishSponge, Mug [dirty], Faucet [toggled], Potato_2_Sliced_7 [cooked], Potato_2_Sliced_4 [cooked]
+	HousePlant, Potato_2_Sliced_0, CreditCard_0, Potato_2_Sliced_6, Potato_2_Sliced_3, Potato_2_Sliced_7, Potato_2_Sliced_5, CoffeeMachine, Potato_2_Sliced_4, DishSponge, Tomato_2, Mug, Plate, Apple_1, Cup_0, Potato_2_Sliced_1, Knife_0, Potato_2_Sliced_2 are in/on CounterTop_2
+	PaperTowelRoll_1, WineBottle_1, Bowl_2 are in/on Sink_Basin
+37.	2023-10-05 08:46:33.509659 - 2023-10-05 08:46:33.509659: Goal: Pickup(Bowl_2)
+	Visual observation: Potato_2_Sliced_6, Potato_2_Sliced_5, Potato_2_Sliced_3, Potato_2_Sliced_2, Potato_2_Sliced_1, Potato_2_Sliced_0, Apple_1, Bowl_2 [filled], PaperTowelRoll_1, WineBottle_1 [filled], Tomato_2, Cabinet_0, Window, Sink, CounterTop_2, Knife_0, HousePlant, Plate, CreditCard_0, Cup_0 [dirty], CoffeeMachine, Sink_Basin, DishSponge, Mug [dirty], Faucet [toggled], Potato_2_Sliced_7 [cooked], Potato_2_Sliced_4 [cooked]
+	HousePlant, Potato_2_Sliced_0, CreditCard_0, Potato_2_Sliced_6, Potato_2_Sliced_3, Potato_2_Sliced_7, Potato_2_Sliced_5, CoffeeMachine, Potato_2_Sliced_4, DishSponge, Tomato_2, Mug, Plate, Apple_1, Cup_0, Potato_2_Sliced_1, Knife_0, Potato_2_Sliced_2 are in/on CounterTop_2
+	PaperTowelRoll_1, WineBottle_1, Bowl_2 are in/on Sink_Basin
+38.	2023-10-05 08:46:35.564287 - 2023-10-05 08:46:35.564287: Goal: Pour(Sink_Basin)
+	Visual observation: Potato_2_Sliced_6, Potato_2_Sliced_5, Potato_2_Sliced_3, Potato_2_Sliced_2, Potato_2_Sliced_1, Potato_2_Sliced_0, Apple_1, Bowl_2 [filled], PaperTowelRoll_1, WineBottle_1 [filled], Tomato_2, Cabinet_0, Window, Sink, CounterTop_2, Knife_0, HousePlant, Plate, CreditCard_0, Cup_0 [dirty], CoffeeMachine, Sink_Basin, DishSponge, Mug [dirty], Potato_2_Sliced_7 [cooked], Potato_2_Sliced_4 [cooked], agent hand
+	HousePlant, Potato_2_Sliced_0, CreditCard_0, Potato_2_Sliced_6, Potato_2_Sliced_7, Potato_2_Sliced_3, Potato_2_Sliced_4, Potato_2_Sliced_5, CoffeeMachine, DishSponge, Tomato_2, Mug, Plate, Apple_1, Cup_0, Potato_2_Sliced_1, Knife_0, Potato_2_Sliced_2 are in/on CounterTop_2
+	PaperTowelRoll_1, WineBottle_1 are in/on Sink_Basin
+	Bowl_2 is inside agent hand
+39.	2023-10-05 08:46:36.798699 - 2023-10-05 08:46:39.865235: Goal: Place(CounterTop_2)
+	Visual observation: Potato_2_Sliced_7 [cooked], Potato_2_Sliced_4 [cooked], Bowl_2, StoveBurner_0, StoveBurner_1, CounterTop_1, StoveBurner_2, StoveBurner_3, Cabinet_2, Cabinet_3, CounterTop_2, Microwave [open], Fork_0, HousePlant, Kettle [filled], Plate, Pot [dirty], Apple_1, agent hand, Knife_0, CreditCard_0, Cup_0 [dirty], Mug [dirty]
+	Mug, Knife_0, Pot, Potato_2_Sliced_4, Potato_2_Sliced_7, HousePlant, CreditCard_0, Apple_1, Plate, Fork_0, Cup_0 are in/on CounterTop_2
+	Bowl_2 is inside agent hand
+40.	2023-10-05 08:46:42.547490 - 2023-10-05 08:46:42.547490: Goal: Pickup(Potato_2_Sliced_4)
+	Visual observation: Potato_2_Sliced_7 [cooked], Potato_2_Sliced_4 [cooked], Bowl_2, StoveBurner_0, StoveBurner_1, CounterTop_1, StoveBurner_2, StoveBurner_3, Cabinet_2, Cabinet_3, CounterTop_2, Microwave [open], Fork_0, HousePlant, Kettle [filled], Plate, Pot [dirty], Apple_1, Knife_0, CreditCard_0, Cup_0 [dirty], Mug [dirty]
+	CreditCard_0, Pot, Potato_2_Sliced_4, Potato_2_Sliced_7, HousePlant, Cup_0, Apple_1, Mug, Knife_0, Plate, Fork_0, Bowl_2 are in/on CounterTop_2
+41.	2023-10-05 08:46:44.884983 - 2023-10-05 08:46:44.884983: Goal: Place(Bowl_2)
+	Visual observation: Potato_2_Sliced_7 [cooked], Potato_2_Sliced_4 [cooked], Bowl_2, StoveBurner_0, StoveBurner_1, CounterTop_1, StoveBurner_2, StoveBurner_3, Cabinet_2, Cabinet_3, CounterTop_2, Microwave [open], Fork_0, HousePlant, Kettle [filled], Plate, Pot [dirty], agent hand, Apple_1, Knife_0, CreditCard_0, Cup_0 [dirty], Mug [dirty]
+	Potato_2_Sliced_4 is inside agent hand
+	Mug, Knife_0, Pot, Potato_2_Sliced_7, HousePlant, CreditCard_0, Cup_0, Apple_1, Plate, Fork_0, Bowl_2 are in/on CounterTop_2
+42.	2023-10-05 08:46:47.329855 - 2023-10-05 08:46:47.329855: Goal: Pickup(Potato_2_Sliced_7)
+	Visual observation: Potato_2_Sliced_7 [cooked], Potato_2_Sliced_4 [cooked], Bowl_2, StoveBurner_0, StoveBurner_1, CounterTop_1, StoveBurner_2, StoveBurner_3, Cabinet_2, Cabinet_3, CounterTop_2, Microwave [open], Fork_0, HousePlant, Kettle [filled], Plate, Pot [dirty], Apple_1, Knife_0, CreditCard_0, Cup_0 [dirty], Mug [dirty]
+	Potato_2_Sliced_4 is in/on Bowl_2
+	CreditCard_0, Pot, Potato_2_Sliced_4, Potato_2_Sliced_7, HousePlant, Cup_0, Apple_1, Mug, Knife_0, Plate, Fork_0, Bowl_2 are in/on CounterTop_2
+43.	2023-10-05 08:46:49.795414 - 2023-10-05 08:46:49.795414: Goal: Place(Bowl_2)
+	Visual observation: Potato_2_Sliced_7 [cooked], Potato_2_Sliced_4 [cooked], Bowl_2, StoveBurner_0, StoveBurner_1, CounterTop_1, StoveBurner_2, StoveBurner_3, Cabinet_2, Cabinet_3, CounterTop_2, Microwave [open], Fork_0, HousePlant, Kettle [filled], Plate, Pot [dirty], agent hand, Apple_1, Knife_0, CreditCard_0, Cup_0 [dirty], Mug [dirty]
+	Potato_2_Sliced_4 is in/on Bowl_2
+	Mug, Knife_0, Pot, Potato_2_Sliced_4, HousePlant, CreditCard_0, Cup_0, Apple_1, Plate, Fork_0, Bowl_2 are in/on CounterTop_2
+	Potato_2_Sliced_7 is inside agent hand
+44.	2023-10-05 08:46:51.908624 - 2023-10-05 08:47:03.747062: Goal: Say(":)")
+	Visual observation: Potato_2_Sliced_7 [cooked], Potato_2_Sliced_4 [cooked], Bowl_2, StoveBurner_0, StoveBurner_1, CounterTop_1, StoveBurner_2, StoveBurner_3, Cabinet_2, Cabinet_3, CounterTop_2, Microwave [open], Fork_0, HousePlant, Kettle [filled], Plate, Pot [dirty], Apple_1, Knife_0, CreditCard_0, Cup_0 [dirty], Mug [dirty]
+	Potato_2_Sliced_4, Potato_2_Sliced_7 are in/on Bowl_2
+	CreditCard_0, Pot, Potato_2_Sliced_4, Potato_2_Sliced_7, HousePlant, Cup_0, Apple_1, Mug, Knife_0, Plate, Fork_0, Bowl_2 are in/on CounterTop_2
+	Speech:
+	2023-10-05 08:46:58.453964: done
+	2023-10-05 08:47:03.244230: very good

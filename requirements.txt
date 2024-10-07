@@ -1,0 +1,14 @@
+pillow~=10.2.0
+numpy~=1.26.3
+langchain~=0.2.1
+langchain-openai~=0.1.4
+langchain-experimental~=0.0.59
+PyYAML~=6.0.1
+torch
+sentence-transformers~=2.2.2
+sacrebleu~=2.4.3
+rouge_score~=0.1.2
+astunparse~=1.6.3
+openai~=1.23.6
+zarr
+git+https://git.h2t.iar.kit.edu/sw/armarx/python3-armarx.git

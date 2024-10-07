@@ -1,0 +1,285 @@
+0.	2024-04-14 08:24:27.746274 - 2024-04-14 08:25:28.932843: Goal: Pickup(Mug_1)
+	Visual observation: Mug_1 [dirty], CounterTop_0, Tomato_0, Cup [dirty], DishSponge_0, Spoon_0, Statue_0, Stool_0, Stool_1, Bowl_0, Floor
+	Mug_1, DishSponge_0 are in/on Stool_0
+	Bowl_0, Statue_0 are in/on CounterTop_0
+	Stool_0, Stool_1 are in/on Floor
+	Speech:
+	2024-04-14 08:24:27.746274: Good day! We are preparing breakfast. We first need to wash a dirty mug.
+1.	2024-04-14 08:25:30.801413 - 2024-04-14 08:25:49.930238: Goal: Place(Sink)
+	Visual observation: Mug_1 [dirty], Spoon_1, Bowl_1 [dirty, filled], Sink, CounterTop_0, Cabinet_5, Cabinet_6, Cabinet_7, Cabinet_10, Window_0, Sink_Basin, SaltShaker_0, Apple, CoffeeMachine [toggled], SoapBottle, Faucet, agent hand
+	Sink, Apple, SoapBottle, CoffeeMachine are in/on CounterTop_0
+	Spoon_1, Faucet, Bowl_1, SaltShaker_0 are in/on Sink
+	Mug_1 is inside agent hand
+	Speech:
+	2024-04-14 08:25:45.766007: The mug is located under the sink
+2.	2024-04-14 08:25:56.106225 - 2024-04-14 08:25:56.106225: Goal: ToggleOn(Faucet)
+	Visual observation: Mug_1 [dirty], Bowl_1 [dirty, filled], Sink, CounterTop_0, Cabinet_5, Cabinet_6, Cabinet_7, Cabinet_10, Window_0, Sink_Basin, SaltShaker_0, Apple, CoffeeMachine [toggled], SoapBottle, Faucet
+	Bowl_1, Mug_1, Faucet, SaltShaker_0 are in/on Sink
+	SoapBottle, CoffeeMachine, Sink, Apple are in/on CounterTop_0
+3.	2024-04-14 08:26:01.240306 - 2024-04-14 08:26:01.240306: Goal: ToggleOff(Faucet)
+	Visual observation: Mug_1 [filled], Bowl_1 [filled], Sink, CounterTop_0, Cabinet_5, Cabinet_6, Cabinet_7, Cabinet_10, Window_0, Sink_Basin, SaltShaker_0, Apple, CoffeeMachine [toggled], SoapBottle, Faucet [toggled]
+	Bowl_1, Mug_1, Faucet, SaltShaker_0 are in/on Sink
+	SoapBottle, CoffeeMachine, Sink, Apple are in/on CounterTop_0
+4.	2024-04-14 08:26:04.357579 - 2024-04-14 08:26:05.025315: Goal: Pickup(Mug_1)
+	Visual observation: Mug_1 [filled], Bowl_1 [filled], Sink, CounterTop_0, Cabinet_5, Cabinet_6, Cabinet_7, Cabinet_10, Window_0, Sink_Basin, SaltShaker_0, Apple, CoffeeMachine [toggled], SoapBottle, Faucet [toggled]
+	Bowl_1, Mug_1, Faucet, SaltShaker_0 are in/on Sink
+	SoapBottle, CoffeeMachine, Sink, Apple are in/on CounterTop_0
+	Speech:
+	2024-04-14 08:26:04.357579: Oh you found one! Okay.
+5.	2024-04-14 08:26:07.793404 - 2024-04-14 08:26:07.793404: Goal: Pour(Sink)
+	Visual observation: Mug_1 [filled], Spoon_1, Bowl_1 [filled], Sink, CounterTop_0, Cabinet_5, Cabinet_6, Cabinet_7, Cabinet_10, Window_0, Sink_Basin, SaltShaker_0, Apple, CoffeeMachine [toggled], SoapBottle, Faucet [toggled], agent hand
+	Sink, Apple, SoapBottle, CoffeeMachine are in/on CounterTop_0
+	Spoon_1, Faucet, Bowl_1, SaltShaker_0 are in/on Sink
+	Mug_1 is inside agent hand
+6.	2024-04-14 08:26:10.976932 - 2024-04-14 08:26:10.976932: Goal: Place(CoffeeMachine)
+	Visual observation: Mug_1 [filled], Spoon_1, Bowl_1 [filled], Sink, CounterTop_0, Cabinet_5, Cabinet_6, Cabinet_7, Cabinet_10, Window_0, Sink_Basin, SaltShaker_0, Apple, CoffeeMachine [toggled], SoapBottle, Faucet [toggled], agent hand
+	Sink, Apple, SoapBottle, CoffeeMachine are in/on CounterTop_0
+	Spoon_1, Faucet, Bowl_1, SaltShaker_0 are in/on Sink
+	Mug_1 is inside agent hand
+7.	2024-04-14 08:26:14.753322 - 2024-04-14 08:26:38.768913: Goal: ToggleOff(CoffeeMachine)
+	Visual observation: Mug_1 [filled], Spoon_1, Book, Sink, CounterTop_0, Cabinet_3, Cabinet_6, Cabinet_7, Cabinet_10, Cabinet_11, Window_0, Sink_Basin, SaltShaker_0, Lettuce, Apple, CoffeeMachine [toggled], Faucet [toggled]
+	Sink, Mug_1, Book, Apple, CoffeeMachine, Lettuce are in/on CounterTop_0
+	Faucet, Spoon_1, SaltShaker_0 are in/on Sink
+	Mug_1 is in/on CoffeeMachine
+8.	2024-04-14 08:26:44.400946 - 2024-04-14 08:26:44.400946: Goal: ToggleOn(CoffeeMachine)
+	Visual observation: Mug_1 [filled], Spoon_1, Book, Sink, CounterTop_0, Cabinet_3, Cabinet_6, Cabinet_7, Cabinet_10, Cabinet_11, Window_0, Sink_Basin, SaltShaker_0, Lettuce, Apple, CoffeeMachine, Faucet [toggled]
+	Sink, Mug_1, Book, Apple, CoffeeMachine, Lettuce are in/on CounterTop_0
+	Faucet, Spoon_1, SaltShaker_0 are in/on Sink
+	Mug_1 is in/on CoffeeMachine
+9.	2024-04-14 08:26:52.255591 - 2024-04-14 08:26:52.255591: Goal: ToggleOff(CoffeeMachine)
+	Visual observation: Mug_1 [filled], Spoon_1, Book, Sink, CounterTop_0, Cabinet_3, Cabinet_6, Cabinet_7, Cabinet_10, Cabinet_11, Window_0, Sink_Basin, SaltShaker_0, Lettuce, Apple, CoffeeMachine, Faucet [toggled]
+	Sink, Mug_1, Book, Apple, CoffeeMachine, Lettuce are in/on CounterTop_0
+	Faucet, Spoon_1, SaltShaker_0 are in/on Sink
+	Mug_1 is in/on CoffeeMachine
+10.	2024-04-14 08:27:01.782970 - 2024-04-14 08:27:58.119595: Goal: Pickup(Knife_1)
+	Visual observation: Bowl_2 [dirty], SaltShaker_2, Plate_1, Knife_1, DiningTable, Egg_0, Vase_1, Plate_0 [dirty], ButterKnife_0, HousePlant [filled], Chair_1, Chair_2, CoffeeMachine, Mug_1 [filled], Floor, CounterTop_0
+	Knife_1, Plate_0, SaltShaker_2, Bowl_2, HousePlant, Egg_0, Plate_1, ButterKnife_0, Vase_1 are in/on DiningTable
+	Chair_1, Chair_2, DiningTable are in/on Floor
+	Mug_1 is in/on CoffeeMachine
+	Mug_1, CoffeeMachine are in/on CounterTop_0
+	Speech:
+	2024-04-14 08:27:03.106944: Great. We are making a sandwich. we need a knife to start.
+	2024-04-14 08:27:34.486873: It is already on the dining table.
+11.	2024-04-14 08:27:59.878089 - 2024-04-14 08:28:12.607280: Goal: Slice(Bread_1)
+	Visual observation: Bread_1, Knife_1, CounterTop_0, Cabinet_3, Drawer_0, Bowl_0, CoffeeMachine, Mug_1 [filled], agent hand
+	Mug_1, Bread_1, Bowl_0, CoffeeMachine are in/on CounterTop_0
+	Knife_1 is inside agent hand
+	Mug_1 is in/on CoffeeMachine
+12.	2024-04-14 08:28:14.528346 - 2024-04-14 08:28:20.459571: Goal: Place(CounterTop_0)
+	Visual observation: Bread_1_Sliced_4, Bread_1_Sliced_3, Bread_1_Sliced_2, Bread_1_Sliced_1, Bread_1__0, Knife_1, CounterTop_0, Cabinet_3, Drawer_0, Bowl_0, CoffeeMachine, Mug_1 [filled], agent hand
+	CoffeeMachine, Bowl_0, Bread_1_Sliced_2, Bread_1_Sliced_1, Bread_1_Sliced_4, Mug_1, Bread_1__0, Bread_1_Sliced_3 are in/on CounterTop_0
+	Knife_1 is inside agent hand
+	Mug_1 is in/on CoffeeMachine
+	Speech:
+	2024-04-14 08:28:14.528346: You will need to use the toaster, so set it there
+13.	2024-04-14 08:28:24.950782 - 2024-04-14 08:28:24.950782: Goal: Pickup(Bread_1_Sliced_3)
+	Visual observation: Bread_1_Sliced_4, Bread_1_Sliced_3, Bread_1_Sliced_2, Bread_1_Sliced_1, Bread_1__0, Knife_1, CounterTop_0, Cabinet_3, Drawer_0, Bowl_0, CoffeeMachine, Mug_1 [filled]
+	CoffeeMachine, Bowl_0, Bread_1_Sliced_2, Bread_1_Sliced_1, Bread_1_Sliced_4, Knife_1, Mug_1, Bread_1__0, Bread_1_Sliced_3 are in/on CounterTop_0
+	Mug_1 is in/on CoffeeMachine
+14.	2024-04-14 08:28:26.925115 - 2024-04-14 08:28:36.877971: Goal: Place(Toaster)
+	Visual observation: Bread_1_Sliced_3, Spoon_1, Bowl_1 [filled], Sink, StoveBurner_0, CounterTop_0, StoveBurner_1, StoveBurner_2, Cabinet_4, Cabinet_5, Cabinet_6, Cabinet_7, Cabinet_8, Cabinet_9, Drawer_1, Drawer_2, StoveBurner_3, CounterTop_1, Microwave [toggled], Potato, Pot [dirty], SaltShaker_0, PepperShaker, StoveKnob_0, StoveKnob_1, StoveKnob_2, StoveKnob_3 [toggled], Toaster, Pan [dirty], SoapBottle, agent hand, CoffeeMachine, Mug_1 [filled], Knife_1
+	Bowl_1, Spoon_1, SaltShaker_0 are in/on Sink
+	Mug_1 is in/on CoffeeMachine
+	Sink, Mug_1, SoapBottle, Knife_1, CoffeeMachine are in/on CounterTop_0
+	Bread_1_Sliced_3 is inside agent hand
+	Potato, PepperShaker, Toaster are in/on CounterTop_1
+	Speech:
+	2024-04-14 08:28:27.568489: Next find bread.
+15.	2024-04-14 08:28:43.534610 - 2024-04-14 08:28:43.534610: Goal: ToggleOn(Toaster)
+	Visual observation: Bread_1_Sliced_3, Spoon_1, Bowl_1 [filled], Sink, StoveBurner_0, CounterTop_0, StoveBurner_1, StoveBurner_2, Cabinet_4, Cabinet_5, Cabinet_6, Cabinet_7, Cabinet_8, Cabinet_9, Drawer_1, Drawer_2, StoveBurner_3, CounterTop_1, Microwave [toggled], Potato, Pot [dirty], SaltShaker_0, PepperShaker, StoveKnob_0, StoveKnob_1, StoveKnob_2, StoveKnob_3 [toggled], Toaster, Pan [dirty], SoapBottle, CoffeeMachine, Mug_1 [filled], Knife_1
+	Bowl_1, Spoon_1, SaltShaker_0 are in/on Sink
+	Bread_1_Sliced_3, Potato, PepperShaker, Toaster are in/on CounterTop_1
+	Sink, Knife_1, SoapBottle, CoffeeMachine, Mug_1 are in/on CounterTop_0
+	Bread_1_Sliced_3 is in/on Toaster
+	Mug_1 is in/on CoffeeMachine
+16.	2024-04-14 08:28:49.143071 - 2024-04-14 08:28:49.143071: Goal: ToggleOff(Toaster)
+	Visual observation: Bread_1_Sliced_3 [cooked], Spoon_1, Bowl_1 [filled], Sink, StoveBurner_0, CounterTop_0, StoveBurner_1, StoveBurner_2, Cabinet_4, Cabinet_5, Cabinet_6, Cabinet_7, Cabinet_8, Cabinet_9, Drawer_1, Drawer_2, StoveBurner_3, CounterTop_1, Microwave [toggled], Potato, Pot [dirty], SaltShaker_0, PepperShaker, StoveKnob_0, StoveKnob_1, StoveKnob_2, StoveKnob_3 [toggled], Toaster [toggled], Pan [dirty], SoapBottle, CoffeeMachine, Mug_1 [filled], Knife_1
+	Bowl_1, Spoon_1, SaltShaker_0 are in/on Sink
+	Bread_1_Sliced_3, Potato, PepperShaker, Toaster are in/on CounterTop_1
+	Sink, Knife_1, SoapBottle, CoffeeMachine, Mug_1 are in/on CounterTop_0
+	Bread_1_Sliced_3 is in/on Toaster
+	Mug_1 is in/on CoffeeMachine
+17.	2024-04-14 08:28:53.510350 - 2024-04-14 08:28:53.510350: Goal: Pickup(Bread_1_Sliced_3)
+	Visual observation: Bread_1_Sliced_3 [cooked], Spoon_1, Bowl_1 [filled], Sink, StoveBurner_0, CounterTop_0, StoveBurner_1, StoveBurner_2, Cabinet_4, Cabinet_5, Cabinet_6, Cabinet_7, Cabinet_8, Cabinet_9, Drawer_1, Drawer_2, StoveBurner_3, CounterTop_1, Microwave [toggled], Potato, Pot [dirty], SaltShaker_0, PepperShaker, StoveKnob_0, StoveKnob_1, StoveKnob_2, StoveKnob_3 [toggled], Toaster [toggled], Pan [dirty], SoapBottle, CoffeeMachine, Mug_1 [filled], Knife_1
+	Bowl_1, Spoon_1, SaltShaker_0 are in/on Sink
+	Bread_1_Sliced_3, Potato, PepperShaker, Toaster are in/on CounterTop_1
+	Sink, Knife_1, SoapBottle, CoffeeMachine, Mug_1 are in/on CounterTop_0
+	Bread_1_Sliced_3 is in/on Toaster
+	Mug_1 is in/on CoffeeMachine
+18.	2024-04-14 08:28:56.397333 - 2024-04-14 08:29:08.186677: Goal: Place(CounterTop_0)
+	Visual observation: Bread_1_Sliced_4, Bread_1_Sliced_3 [cooked], Bread_1_Sliced_2, Bread_1_Sliced_1, Bread_1__0, Knife_1, CounterTop_0, Cabinet_3, Drawer_0, Lettuce, CoffeeMachine, Statue_0, Bowl_0, agent hand, Mug_1 [filled]
+	Bowl_0, CoffeeMachine, Lettuce, Bread_1_Sliced_2, Bread_1_Sliced_1, Mug_1, Bread_1_Sliced_4, Knife_1, Statue_0, Bread_1__0 are in/on CounterTop_0
+	Mug_1 is in/on CoffeeMachine
+	Bread_1_Sliced_3 is inside agent hand
+19.	2024-04-14 08:29:13.068779 - 2024-04-14 08:29:13.068779: Goal: Pickup(Bread_1_Sliced_4)
+	Visual observation: Bread_1_Sliced_4, Bread_1_Sliced_3 [cooked], Bread_1_Sliced_2, Bread_1_Sliced_1, Bread_1__0, Knife_1, CounterTop_0, Cabinet_3, Drawer_0, Lettuce, CoffeeMachine, Statue_0, Bowl_0, Mug_1 [filled]
+	Bowl_0, CoffeeMachine, Lettuce, Bread_1_Sliced_2, Bread_1_Sliced_1, Bread_1_Sliced_4, Knife_1, Mug_1, Statue_0, Bread_1__0, Bread_1_Sliced_3 are in/on CounterTop_0
+	Mug_1 is in/on CoffeeMachine
+20.	2024-04-14 08:29:14.716808 - 2024-04-14 08:29:27.093196: Goal: Place(Toaster)
+	Visual observation: Bread_1_Sliced_4, Bowl_1 [filled], Sink, StoveBurner_0, CounterTop_0, StoveBurner_2, Cabinet_4, Cabinet_5, Cabinet_6, Cabinet_8, Cabinet_9, Drawer_1, Drawer_2, StoveBurner_3, CounterTop_1, Microwave [toggled], Potato, Pot [dirty], PepperShaker, StoveKnob_0, StoveKnob_1, StoveKnob_2, StoveKnob_3 [toggled], Toaster [toggled], Pan [dirty], SoapBottle, agent hand, Bread_1_Sliced_3 [cooked], CoffeeMachine, Mug_1 [filled], Knife_1
+	Bowl_1 is in/on Sink
+	Mug_1, SoapBottle, Knife_1, Bread_1_Sliced_3, Sink, CoffeeMachine are in/on CounterTop_0
+	Potato, Toaster, PepperShaker are in/on CounterTop_1
+	Mug_1 is in/on CoffeeMachine
+	Bread_1_Sliced_4 is inside agent hand
+21.	2024-04-14 08:29:31.749500 - 2024-04-14 08:29:31.749500: Goal: ToggleOn(Toaster)
+	Visual observation: Bread_1_Sliced_4, Bowl_1 [filled], Sink, StoveBurner_0, CounterTop_0, StoveBurner_2, Cabinet_4, Cabinet_5, Cabinet_6, Cabinet_8, Cabinet_9, Drawer_1, Drawer_2, StoveBurner_3, CounterTop_1, Microwave [toggled], Potato, Pot [dirty], PepperShaker, StoveKnob_0, StoveKnob_1, StoveKnob_2, StoveKnob_3 [toggled], Toaster [toggled], Pan [dirty], SoapBottle, Bread_1_Sliced_3 [cooked], CoffeeMachine, Mug_1 [filled], Knife_1
+	Bread_1_Sliced_3, Knife_1, SoapBottle, CoffeeMachine, Sink, Mug_1 are in/on CounterTop_0
+	Bread_1_Sliced_4 is in/on Toaster
+	Mug_1 is in/on CoffeeMachine
+	Bowl_1 is in/on Sink
+	Potato, Toaster, Bread_1_Sliced_4, PepperShaker are in/on CounterTop_1
+22.	2024-04-14 08:29:35.917298 - 2024-04-14 08:29:35.917298: Goal: Pickup(Bread_1_Sliced_4)
+	Visual observation: Bread_1_Sliced_4, Bowl_1 [filled], Sink, StoveBurner_0, CounterTop_0, StoveBurner_2, Cabinet_4, Cabinet_5, Cabinet_6, Cabinet_8, Cabinet_9, Drawer_1, Drawer_2, StoveBurner_3, CounterTop_1, Microwave [toggled], Potato, Pot [dirty], PepperShaker, StoveKnob_0, StoveKnob_1, StoveKnob_2, StoveKnob_3 [toggled], Toaster [toggled], Pan [dirty], SoapBottle, Bread_1_Sliced_3 [cooked], CoffeeMachine, Mug_1 [filled], Knife_1
+	Bread_1_Sliced_3, Knife_1, SoapBottle, CoffeeMachine, Sink, Mug_1 are in/on CounterTop_0
+	Bread_1_Sliced_4 is in/on Toaster
+	Mug_1 is in/on CoffeeMachine
+	Bowl_1 is in/on Sink
+	Potato, Toaster, Bread_1_Sliced_4, PepperShaker are in/on CounterTop_1
+23.	2024-04-14 08:29:39.580423 - 2024-04-14 08:29:48.148641: Goal: Place(CounterTop_0)
+	Visual observation: Bread_1_Sliced_4 [cooked], Bread_1_Sliced_3 [cooked], Bread_1_Sliced_2, Bread_1_Sliced_1, Bread_1__0, Knife_1, Book, CounterTop_0, Cabinet_3, Drawer_0, Kettle [filled], Lettuce, Statue_0, Bowl_0, agent hand, CoffeeMachine, Mug_1 [filled]
+	Bread_1_Sliced_1, Mug_1, Bowl_0, Bread_1_Sliced_2, Bread_1__0, Bread_1_Sliced_3, CoffeeMachine, Knife_1, Statue_0, Book, Lettuce, Kettle are in/on CounterTop_0
+	Mug_1 is in/on CoffeeMachine
+	Bread_1_Sliced_4 is inside agent hand
+24.	2024-04-14 08:29:50.699328 - 2024-04-14 08:30:08.099803: Goal: Pickup(Tomato_0)
+	Visual observation: CounterTop_0, Tomato_0, Cup [dirty], Window_1, Spoon_0, Stool_0, Stool_1, Bread_1_Sliced_4 [cooked], Bread_1_Sliced_3 [cooked], CoffeeMachine, Mug_1 [filled], Knife_1, Floor
+	CoffeeMachine, Mug_1, Bread_1_Sliced_4, Knife_1, Bread_1_Sliced_3 are in/on CounterTop_0
+	Mug_1 is in/on CoffeeMachine
+	Stool_1, Stool_0 are in/on Floor
+25.	2024-04-14 08:30:10.275698 - 2024-04-14 08:30:16.362624: Goal: Place(CounterTop_0)
+	Visual observation: Knife_1, CounterTop_0, Tomato_0, Cup [dirty], DishSponge_0, Spoon_0, Stool_0, Stool_1, Bowl_0, Bread_1_Sliced_4 [cooked], Bread_1_Sliced_3 [cooked], CoffeeMachine, Mug_1 [filled], Floor, agent hand
+	Cup, Spoon_0 are in/on Stool_1
+	Knife_1, Mug_1, Bread_1_Sliced_4, Bread_1_Sliced_3, CoffeeMachine, Bowl_0 are in/on CounterTop_0
+	Stool_1, Stool_0 are in/on Floor
+	Mug_1 is in/on CoffeeMachine
+	Tomato_0 is inside agent hand
+	DishSponge_0 is in/on Stool_0
+26.	2024-04-14 08:30:23.749507 - 2024-04-14 08:30:32.856378: Goal: Pickup(Knife_1)
+	Visual observation: Bread_1_Sliced_4 [cooked], Bread_1_Sliced_3 [cooked], Bread_1_Sliced_2, Bread_1_Sliced_1, Bread_1__0, Knife_1, CounterTop_0, Tomato_0, Bowl_0, CoffeeMachine, Mug_1 [filled]
+	Mug_1, Bread_1_Sliced_2, CoffeeMachine, Bread_1_Sliced_1, Tomato_0, Bread_1_Sliced_4, Knife_1, Bread_1__0, Bowl_0, Bread_1_Sliced_3 are in/on CounterTop_0
+	Mug_1 is in/on CoffeeMachine
+27.	2024-04-14 08:30:37.568646 - 2024-04-14 08:30:37.568646: Goal: Slice(Tomato_0)
+	Visual observation: Bread_1_Sliced_4 [cooked], Bread_1_Sliced_3 [cooked], Bread_1_Sliced_2, Bread_1_Sliced_1, Bread_1__0, Knife_1, CounterTop_0, Tomato_0, Bowl_0, CoffeeMachine, Mug_1 [filled], agent hand
+	Mug_1, Bread_1_Sliced_2, CoffeeMachine, Bread_1_Sliced_1, Tomato_0, Bread_1_Sliced_4, Bread_1__0, Bowl_0, Bread_1_Sliced_3 are in/on CounterTop_0
+	Mug_1 is in/on CoffeeMachine
+	Knife_1 is inside agent hand
+28.	2024-04-14 08:30:41.768010 - 2024-04-14 08:30:41.768010: Goal: Place(CounterTop_0)
+	Visual observation: Tomato_0_Sliced_4, Tomato_0_Sliced_3, Tomato_0_Sliced_2, Tomato_0_Sliced_1, Tomato_0_Sliced_0, Bread_1_Sliced_4 [cooked], Bread_1_Sliced_3 [cooked], Bread_1_Sliced_2, Bread_1_Sliced_1, Bread_1__0, Knife_1, CounterTop_0, Bowl_0, Tomato_0_Sliced_6, Tomato_0_Sliced_5, CoffeeMachine, Mug_1 [filled], agent hand, Tomato_0
+	Tomato_0_Sliced_6, Tomato_0_Sliced_1, Tomato_0_Sliced_5, Bread_1_Sliced_2, Tomato_0_Sliced_3, Bread_1_Sliced_1, Tomato_0_Sliced_4, Mug_1, Bread_1__0, Bread_1_Sliced_4, Bowl_0, Tomato_0_Sliced_2, Bread_1_Sliced_3, CoffeeMachine, Tomato_0, Tomato_0_Sliced_0 are in/on CounterTop_0
+	Knife_1 is inside agent hand
+	Mug_1 is in/on CoffeeMachine
+29.	2024-04-14 08:30:44.631157 - 2024-04-14 08:30:59.951372: Goal: Open(Fridge)
+	Visual observation: Fridge, GarbageCan, CounterTop_0, Tomato_0_Sliced_6, Tomato_0_Sliced_5, Tomato_0_Sliced_4, Tomato_0_Sliced_3, Tomato_0_Sliced_2, Tomato_0_Sliced_1, Tomato_0_Sliced_0, CoffeeMachine, Mug_1 [filled], Knife_1, Floor
+	Tomato_0_Sliced_2, Tomato_0_Sliced_5, Tomato_0_Sliced_1, Tomato_0_Sliced_4, Knife_1, Tomato_0_Sliced_0, Tomato_0_Sliced_3, Mug_1, Tomato_0_Sliced_6, CoffeeMachine are in/on CounterTop_0
+	GarbageCan, Fridge are in/on Floor
+	Mug_1 is in/on CoffeeMachine
+30.	2024-04-14 08:31:07.536078 - 2024-04-14 08:31:07.536078: Goal: Close(Fridge)
+	Visual observation: Egg_1, ButterKnife_1, SaltShaker_1, Fridge [open], GarbageCan, Vase_0, Statue_1, CounterTop_0, Tomato_0_Sliced_6, Tomato_0_Sliced_5, Tomato_0_Sliced_4, Tomato_0_Sliced_3, Tomato_0_Sliced_2, Tomato_0_Sliced_1, Tomato_0_Sliced_0, CoffeeMachine, Mug_1 [filled], Knife_1, Floor
+	Mug_1, Tomato_0_Sliced_5, Tomato_0_Sliced_1, Knife_1, Tomato_0_Sliced_6, CoffeeMachine, Tomato_0_Sliced_2, Tomato_0_Sliced_0, Tomato_0_Sliced_3, Tomato_0_Sliced_4 are in/on CounterTop_0
+	Egg_1, ButterKnife_1, Vase_0, SaltShaker_1, Statue_1 are in/on Fridge
+	Mug_1 is in/on CoffeeMachine
+	Fridge, GarbageCan are in/on Floor
+31.	2024-04-14 08:31:09.806941 - 2024-04-14 08:31:25.126876: Goal: Pickup(Plate_1)
+	Visual observation: Bowl_2 [dirty], SaltShaker_2, Plate_1, DiningTable, Egg_0, Vase_1, Plate_0 [dirty], ButterKnife_0, HousePlant [filled], Chair_2, CounterTop_0, Tomato_0_Sliced_6, Tomato_0_Sliced_5, Tomato_0_Sliced_4, Tomato_0_Sliced_3, Tomato_0_Sliced_2, Tomato_0_Sliced_1, Tomato_0_Sliced_0, CoffeeMachine, Mug_1 [filled], Knife_1, Floor
+	Bowl_2, SaltShaker_2, Plate_1, HousePlant, ButterKnife_0, Plate_0, Egg_0, Vase_1 are in/on DiningTable
+	Tomato_0_Sliced_3, Knife_1, Tomato_0_Sliced_6, Tomato_0_Sliced_0, Mug_1, Tomato_0_Sliced_4, Tomato_0_Sliced_2, Tomato_0_Sliced_1, CoffeeMachine, Tomato_0_Sliced_5 are in/on CounterTop_0
+	Chair_2, DiningTable are in/on Floor
+	Mug_1 is in/on CoffeeMachine
+32.	2024-04-14 08:31:27.686742 - 2024-04-14 08:31:45.694921: Goal: Place(CounterTop_0)
+	Visual observation: Mug_1 [filled], Spoon_1, Plate_1, Book, Sink, CounterTop_0, Cabinet_3, Cabinet_6, Cabinet_7, Cabinet_10, Cabinet_11, Window_0, Sink_Basin, SaltShaker_0, Lettuce, Apple, CoffeeMachine, Faucet [toggled], Tomato_0_Sliced_6, Tomato_0_Sliced_5, Tomato_0_Sliced_4, Tomato_0_Sliced_3, Tomato_0_Sliced_2, Tomato_0_Sliced_1, Tomato_0_Sliced_0, agent hand, Knife_1
+	Book, CoffeeMachine, Sink, Tomato_0_Sliced_6, Mug_1, Tomato_0_Sliced_0, Knife_1, Lettuce, Tomato_0_Sliced_3, Tomato_0_Sliced_2, Tomato_0_Sliced_4, Tomato_0_Sliced_1, Tomato_0_Sliced_5, Apple are in/on CounterTop_0
+	Mug_1 is in/on CoffeeMachine
+	Faucet, SaltShaker_0, Spoon_1 are in/on Sink
+	Plate_1 is inside agent hand
+33.	2024-04-14 08:31:48.669868 - 2024-04-14 08:31:53.107588: Goal: Pickup(Bread_1_Sliced_3)
+	Visual observation: Tomato_0_Sliced_6, Tomato_0_Sliced_5, Tomato_0_Sliced_4, Tomato_0_Sliced_3, Tomato_0_Sliced_2, Tomato_0_Sliced_1, Tomato_0_Sliced_0, Bread_1_Sliced_4 [cooked], Bread_1_Sliced_3 [cooked], Bread_1_Sliced_2, Bread_1_Sliced_1, Bread_1__0, Plate_1, Knife_1, Book, Cabinet_0, CounterTop_0, Cabinet_3, Drawer_0, Kettle [filled], Lettuce, Statue_0, Bowl_0, CoffeeMachine, Mug_1 [filled]
+	Knife_1, Tomato_0_Sliced_3, Tomato_0_Sliced_2, Tomato_0_Sliced_1, Plate_1, Tomato_0_Sliced_6, Tomato_0_Sliced_5, Mug_1, Tomato_0_Sliced_4, Book, Bread_1_Sliced_2, Bread_1_Sliced_1, Lettuce, Bread_1_Sliced_3, Statue_0, Bread_1__0, Bowl_0, Tomato_0_Sliced_0, CoffeeMachine, Bread_1_Sliced_4, Kettle are in/on CounterTop_0
+	Mug_1 is in/on CoffeeMachine
+34.	2024-04-14 08:31:57.214699 - 2024-04-14 08:31:57.214699: Goal: Place(Plate_1)
+	Visual observation: Tomato_0_Sliced_6, Tomato_0_Sliced_5, Tomato_0_Sliced_4, Tomato_0_Sliced_3, Tomato_0_Sliced_2, Tomato_0_Sliced_1, Tomato_0_Sliced_0, Bread_1_Sliced_4 [cooked], Bread_1_Sliced_3 [cooked], Bread_1_Sliced_2, Bread_1_Sliced_1, Bread_1__0, Plate_1, Knife_1, Book, Cabinet_0, CounterTop_0, Cabinet_3, Drawer_0, Kettle [filled], Lettuce, Statue_0, Bowl_0, agent hand, CoffeeMachine, Mug_1 [filled]
+	Knife_1, Tomato_0_Sliced_3, Tomato_0_Sliced_2, Tomato_0_Sliced_1, Plate_1, Tomato_0_Sliced_6, Tomato_0_Sliced_5, CoffeeMachine, Tomato_0_Sliced_4, Book, Mug_1, Bread_1_Sliced_2, Bread_1_Sliced_1, Lettuce, Statue_0, Bread_1__0, Bowl_0, Tomato_0_Sliced_0, Bread_1_Sliced_4, Kettle are in/on CounterTop_0
+	Mug_1 is in/on CoffeeMachine
+	Bread_1_Sliced_3 is inside agent hand
+35.	2024-04-14 08:32:02.591927 - 2024-04-14 08:32:02.591927: Goal: Pickup(Tomato_0_Sliced_6)
+	Visual observation: Tomato_0_Sliced_6, Tomato_0_Sliced_5, Tomato_0_Sliced_4, Tomato_0_Sliced_3, Tomato_0_Sliced_2, Tomato_0_Sliced_1, Tomato_0_Sliced_0, Bread_1_Sliced_4 [cooked], Bread_1_Sliced_3 [cooked], Bread_1_Sliced_2, Bread_1_Sliced_1, Bread_1__0, Plate_1, Knife_1, Book, Cabinet_0, CounterTop_0, Cabinet_3, Drawer_0, Kettle [filled], Lettuce, Statue_0, Bowl_0, CoffeeMachine, Mug_1 [filled]
+	Knife_1, Tomato_0_Sliced_3, Tomato_0_Sliced_2, Tomato_0_Sliced_1, Plate_1, Tomato_0_Sliced_6, Tomato_0_Sliced_5, Mug_1, Tomato_0_Sliced_4, Book, Bread_1_Sliced_2, Bread_1_Sliced_1, Lettuce, Bread_1_Sliced_3, Statue_0, Bread_1__0, Bowl_0, Tomato_0_Sliced_0, CoffeeMachine, Bread_1_Sliced_4, Kettle are in/on CounterTop_0
+	Mug_1 is in/on CoffeeMachine
+	Bread_1_Sliced_3 is in/on Plate_1
+36.	2024-04-14 08:32:07.478548 - 2024-04-14 08:32:37.173686: Goal: Place(CounterTop_0)
+	Visual observation: Tomato_0_Sliced_6, Tomato_0_Sliced_5, Tomato_0_Sliced_4, Tomato_0_Sliced_3, Tomato_0_Sliced_2, Tomato_0_Sliced_1, Tomato_0_Sliced_0, Bread_1_Sliced_4 [cooked], Bread_1_Sliced_2, Bread_1_Sliced_1, Bread_1__0, Knife_1, CounterTop_0, Cabinet_3, Drawer_0, Kettle [filled], Lettuce, Statue_0, Bowl_0, agent hand, Plate_1, Bread_1_Sliced_3 [cooked], CoffeeMachine, Mug_1 [filled]
+	Tomato_0_Sliced_5, Tomato_0_Sliced_4, Bread_1_Sliced_2, Bread_1_Sliced_1, Plate_1, Bread_1__0, Mug_1, Bread_1_Sliced_3, Knife_1, CoffeeMachine, Tomato_0_Sliced_0, Statue_0, Bread_1_Sliced_4, Tomato_0_Sliced_3, Tomato_0_Sliced_2, Lettuce, Kettle, Tomato_0_Sliced_1, Bowl_0 are in/on CounterTop_0
+	Tomato_0_Sliced_6 is inside agent hand
+	Bread_1_Sliced_3 is in/on Plate_1
+	Mug_1 is in/on CoffeeMachine
+	Speech:
+	2024-04-14 08:32:11.135092: After you place the items on the plate. All breakfast items need to go to the table.
+37.	2024-04-14 08:32:41.659332 - 2024-04-14 08:32:41.659332: Goal: Pickup(Bread_1_Sliced_4)
+	Visual observation: Tomato_0_Sliced_6, Tomato_0_Sliced_5, Tomato_0_Sliced_4, Tomato_0_Sliced_3, Tomato_0_Sliced_2, Tomato_0_Sliced_1, Tomato_0_Sliced_0, Bread_1_Sliced_4 [cooked], Bread_1_Sliced_2, Bread_1_Sliced_1, Bread_1__0, Knife_1, CounterTop_0, Cabinet_3, Drawer_0, Kettle [filled], Lettuce, Statue_0, Bowl_0, Plate_1, Bread_1_Sliced_3 [cooked], CoffeeMachine, Mug_1 [filled]
+	Tomato_0_Sliced_6, Tomato_0_Sliced_5, Tomato_0_Sliced_4, Bread_1_Sliced_2, Bread_1_Sliced_1, Bread_1_Sliced_3, Bread_1__0, CoffeeMachine, Knife_1, Mug_1, Tomato_0_Sliced_0, Statue_0, Bread_1_Sliced_4, Plate_1, Tomato_0_Sliced_3, Tomato_0_Sliced_2, Lettuce, Kettle, Tomato_0_Sliced_1, Bowl_0 are in/on CounterTop_0
+	Bread_1_Sliced_3 is in/on Plate_1
+	Mug_1 is in/on CoffeeMachine
+38.	2024-04-14 08:32:43.701121 - 2024-04-14 08:32:48.853102: Goal: Place(Plate_1)
+	Visual observation: Tomato_0_Sliced_6, Tomato_0_Sliced_5, Tomato_0_Sliced_4, Tomato_0_Sliced_3, Tomato_0_Sliced_2, Tomato_0_Sliced_1, Tomato_0_Sliced_0, Bread_1_Sliced_4 [cooked], Bread_1_Sliced_3 [cooked], Bread_1_Sliced_2, Bread_1_Sliced_1, Bread_1__0, Plate_1, Knife_1, Book, Cabinet_0, CounterTop_0, Cabinet_3, Drawer_0, Kettle [filled], Lettuce, Statue_0, Bowl_0, agent hand, CoffeeMachine, Mug_1 [filled]
+	Knife_1, Tomato_0_Sliced_3, Tomato_0_Sliced_2, Tomato_0_Sliced_1, Plate_1, Tomato_0_Sliced_6, Tomato_0_Sliced_5, CoffeeMachine, Tomato_0_Sliced_4, Book, Mug_1, Bread_1_Sliced_2, Bread_1_Sliced_1, Lettuce, Bread_1_Sliced_3, Statue_0, Bread_1__0, Bowl_0, Tomato_0_Sliced_0, Kettle are in/on CounterTop_0
+	Bread_1_Sliced_3 is in/on Plate_1
+	Bread_1_Sliced_4 is inside agent hand
+	Mug_1 is in/on CoffeeMachine
+39.	2024-04-14 08:32:51.821787 - 2024-04-14 08:33:03.999398: Goal: Pickup(Tomato_0_Sliced_5)
+	Visual observation: Tomato_0_Sliced_5, Tomato_0_Sliced_4, Tomato_0_Sliced_3, Tomato_0_Sliced_2, Tomato_0_Sliced_1, Tomato_0_Sliced_0, Bread_1_Sliced_2, Bread_1_Sliced_1, Bread_1__0, Knife_1, CounterTop_0, Kettle [filled], Lettuce, Statue_0, Bowl_0, Tomato_0_Sliced_6, Plate_1, Bread_1_Sliced_4 [cooked], Bread_1_Sliced_3 [cooked], CoffeeMachine, Mug_1 [filled]
+	Tomato_0_Sliced_4, Bowl_0, Mug_1, Bread_1__0, Knife_1, Kettle, Bread_1_Sliced_4, Bread_1_Sliced_2, Bread_1_Sliced_1, CoffeeMachine, Statue_0, Tomato_0_Sliced_1, Tomato_0_Sliced_6, Tomato_0_Sliced_2, Plate_1, Tomato_0_Sliced_5, Tomato_0_Sliced_0, Bread_1_Sliced_3, Lettuce, Tomato_0_Sliced_3 are in/on CounterTop_0
+	Mug_1 is in/on CoffeeMachine
+	Bread_1_Sliced_3, Bread_1_Sliced_4 are in/on Plate_1
+40.	2024-04-14 08:33:07.583432 - 2024-04-14 08:33:20.132320: Goal: Place(CounterTop_0)
+	Visual observation: Tomato_0_Sliced_5, Bread_1_Sliced_4 [cooked], Bread_1_Sliced_3 [cooked], Mug_1 [filled], Plate_1, Bowl_1 [filled], Cabinet_0, Sink, CounterTop_0, Cabinet_3, Cabinet_6, Cabinet_7, Cabinet_10, Cabinet_11, Sink_Basin, Lettuce, Apple, CoffeeMachine, Faucet [toggled], Tomato_0_Sliced_6, agent hand, Tomato_0_Sliced_4, Tomato_0_Sliced_3, Tomato_0_Sliced_2, Tomato_0_Sliced_1, Tomato_0_Sliced_0, Knife_1
+	Knife_1, Tomato_0_Sliced_2, Tomato_0_Sliced_4, CoffeeMachine, Sink, Tomato_0_Sliced_3, Tomato_0_Sliced_6, Mug_1, Plate_1, Apple, Lettuce, Bread_1_Sliced_4, Tomato_0_Sliced_1, Bread_1_Sliced_3, Tomato_0_Sliced_0 are in/on CounterTop_0
+	Bowl_1, Faucet are in/on Sink
+	Mug_1 is in/on CoffeeMachine
+	Tomato_0_Sliced_5 is inside agent hand
+	Bread_1_Sliced_4, Bread_1_Sliced_3 are in/on Plate_1
+41.	2024-04-14 08:33:21.659922 - 2024-04-14 08:33:27.274686: Goal: Pickup(Tomato_0_Sliced_4)
+	Visual observation: Tomato_0_Sliced_4, Tomato_0_Sliced_3, Tomato_0_Sliced_2, Tomato_0_Sliced_1, Tomato_0_Sliced_0, Bread_1_Sliced_2, Bread_1_Sliced_1, Bread_1__0, Knife_1, CounterTop_0, Kettle [filled], Lettuce, Statue_0, Bowl_0, Tomato_0_Sliced_6, Tomato_0_Sliced_5, Plate_1, Bread_1_Sliced_4 [cooked], Bread_1_Sliced_3 [cooked], CoffeeMachine, Mug_1 [filled]
+	Bread_1__0, CoffeeMachine, Bowl_0, Tomato_0_Sliced_5, Tomato_0_Sliced_1, Tomato_0_Sliced_0, Plate_1, Bread_1_Sliced_2, Bread_1_Sliced_3, Statue_0, Tomato_0_Sliced_4, Tomato_0_Sliced_3, Tomato_0_Sliced_2, Tomato_0_Sliced_6, Knife_1, Kettle, Mug_1, Lettuce, Bread_1_Sliced_4, Bread_1_Sliced_1 are in/on CounterTop_0
+	Mug_1 is in/on CoffeeMachine
+	Bread_1_Sliced_3, Bread_1_Sliced_4 are in/on Plate_1
+42.	2024-04-14 08:33:31.476122 - 2024-04-14 08:33:57.489625: Goal: Place(Plate_1)
+	Visual observation: Tomato_0_Sliced_6, Tomato_0_Sliced_4, Tomato_0_Sliced_3, Tomato_0_Sliced_2, Tomato_0_Sliced_1, Tomato_0_Sliced_0, Bread_1_Sliced_4 [cooked], Bread_1_Sliced_3 [cooked], Bread_1_Sliced_2, Bread_1_Sliced_1, Bread_1__0, Plate_1, Knife_1, Book, Cabinet_0, CounterTop_0, Cabinet_11, Kettle [filled], Lettuce, Statue_0, Bowl_0, Tomato_0_Sliced_5, agent hand, CoffeeMachine, Mug_1 [filled]
+	Tomato_0_Sliced_4 is inside agent hand
+	Bread_1__0, CoffeeMachine, Kettle, Bread_1_Sliced_3, Bread_1_Sliced_4, Statue_0, Tomato_0_Sliced_2, Book, Tomato_0_Sliced_1, Tomato_0_Sliced_0, Lettuce, Tomato_0_Sliced_6, Bread_1_Sliced_1, Knife_1, Mug_1, Tomato_0_Sliced_3, Bowl_0, Bread_1_Sliced_2, Plate_1, Tomato_0_Sliced_5 are in/on CounterTop_0
+	Bread_1_Sliced_3, Bread_1_Sliced_4 are in/on Plate_1
+	Mug_1 is in/on CoffeeMachine
+43.	2024-04-14 08:34:05.307718 - 2024-04-14 08:34:05.307718: Goal: Pickup(Plate_1)
+	Visual observation: Tomato_0_Sliced_6, Tomato_0_Sliced_4, Tomato_0_Sliced_3, Tomato_0_Sliced_2, Tomato_0_Sliced_1, Tomato_0_Sliced_0, Bread_1_Sliced_4 [cooked], Bread_1_Sliced_3 [cooked], Bread_1_Sliced_2, Bread_1_Sliced_1, Bread_1__0, Plate_1, Knife_1, Book, Cabinet_0, CounterTop_0, Cabinet_11, Kettle [filled], Lettuce, Statue_0, Bowl_0, Tomato_0_Sliced_5, CoffeeMachine, Mug_1 [filled]
+	Bread_1__0, CoffeeMachine, Mug_1, Kettle, Bread_1_Sliced_3, Bread_1_Sliced_4, Statue_0, Tomato_0_Sliced_2, Book, Tomato_0_Sliced_1, Tomato_0_Sliced_0, Lettuce, Tomato_0_Sliced_6, Bread_1_Sliced_1, Tomato_0_Sliced_4, Knife_1, Tomato_0_Sliced_3, Bowl_0, Bread_1_Sliced_2, Plate_1, Tomato_0_Sliced_5 are in/on CounterTop_0
+	Bread_1_Sliced_3, Bread_1_Sliced_4, Tomato_0_Sliced_4 are in/on Plate_1
+	Mug_1 is in/on CoffeeMachine
+44.	2024-04-14 08:34:08.514255 - 2024-04-14 08:34:20.803328: Goal: Place(DiningTable)
+	Visual observation: Bread_1_Sliced_4 [cooked], Bread_1_Sliced_3 [cooked], Plate_1, DiningTable, HousePlant [filled], Chair_1, Chair_2, CounterTop_0, Tomato_0_Sliced_6, Tomato_0_Sliced_5, Tomato_0_Sliced_4, Tomato_0_Sliced_3, Tomato_0_Sliced_2, Tomato_0_Sliced_1, Tomato_0_Sliced_0, CoffeeMachine, Mug_1 [filled], agent hand, Knife_1, Floor
+	Mug_1, Tomato_0_Sliced_5, Tomato_0_Sliced_1, Tomato_0_Sliced_6, CoffeeMachine, Tomato_0_Sliced_2, Tomato_0_Sliced_0, Tomato_0_Sliced_3, Knife_1 are in/on CounterTop_0
+	Bread_1_Sliced_3, Bread_1_Sliced_4, Tomato_0_Sliced_4 are in/on Plate_1
+	Mug_1 is in/on CoffeeMachine
+	Plate_1 is inside agent hand
+	HousePlant is in/on DiningTable
+	Chair_1, Chair_2, DiningTable are in/on Floor
+45.	2024-04-14 08:34:22.571028 - 2024-04-14 08:34:33.258808: Goal: Pickup(Mug_1)
+	Visual observation: Tomato_0_Sliced_5, Mug_1 [filled], Bowl_1 [filled], Sink, CounterTop_0, Cabinet_3, Cabinet_5, Cabinet_6, Cabinet_7, Cabinet_10, Cabinet_11, Drawer_0, Drawer_2, Sink_Basin, Apple, CoffeeMachine, Faucet [toggled], Tomato_0_Sliced_6, Plate_1, Tomato_0_Sliced_4, Tomato_0_Sliced_3, Tomato_0_Sliced_2, Tomato_0_Sliced_1, Tomato_0_Sliced_0, Bread_1_Sliced_4 [cooked], Bread_1_Sliced_3 [cooked], DiningTable, Knife_1, Floor
+	Faucet, Bowl_1 are in/on Sink
+	DiningTable is in/on Floor
+	Tomato_0_Sliced_3, Tomato_0_Sliced_0, Tomato_0_Sliced_2, Tomato_0_Sliced_1, Tomato_0_Sliced_6, Sink, Tomato_0_Sliced_5, Knife_1, CoffeeMachine, Mug_1, Apple are in/on CounterTop_0
+	Tomato_0_Sliced_4, Plate_1, Bread_1_Sliced_4, Bread_1_Sliced_3 are in/on DiningTable
+	Bread_1_Sliced_3, Bread_1_Sliced_4, Tomato_0_Sliced_4 are in/on Plate_1
+	Mug_1 is in/on CoffeeMachine
+46.	2024-04-14 08:34:34.506042 - 2024-04-14 08:34:48.418331: Goal: Place(DiningTable)
+	Visual observation: Tomato_0_Sliced_4, Bread_1_Sliced_4 [cooked], Bread_1_Sliced_3 [cooked], Mug_1 [filled], Plate_1, DiningTable, HousePlant [filled], Chair_2, CounterTop_0, Tomato_0_Sliced_6, Tomato_0_Sliced_5, Tomato_0_Sliced_3, Tomato_0_Sliced_2, Tomato_0_Sliced_1, Tomato_0_Sliced_0, agent hand, Knife_1, Floor
+	HousePlant, Plate_1, Bread_1_Sliced_4, Bread_1_Sliced_3, Tomato_0_Sliced_4 are in/on DiningTable
+	Tomato_0_Sliced_2, Tomato_0_Sliced_6, Tomato_0_Sliced_1, Tomato_0_Sliced_5, Knife_1, Tomato_0_Sliced_0, Tomato_0_Sliced_3 are in/on CounterTop_0
+	Mug_1 is inside agent hand
+	Tomato_0_Sliced_4, Bread_1_Sliced_4, Bread_1_Sliced_3 are in/on Plate_1
+	Chair_2, DiningTable are in/on Floor
+47.	2024-04-14 08:34:53.420178 - 2024-04-14 08:35:04.775773: Goal: Noop
+	Visual observation: Tomato_0_Sliced_4, Bread_1_Sliced_4 [cooked], Bread_1_Sliced_3 [cooked], Mug_1 [filled], Plate_1, DiningTable, HousePlant [filled], Chair_2, CounterTop_0, Tomato_0_Sliced_6, Tomato_0_Sliced_5, Tomato_0_Sliced_3, Tomato_0_Sliced_2, Tomato_0_Sliced_1, Tomato_0_Sliced_0, Knife_1, Floor
+	HousePlant, Mug_1, Plate_1, Bread_1_Sliced_4, Bread_1_Sliced_3, Tomato_0_Sliced_4 are in/on DiningTable
+	Tomato_0_Sliced_2, Tomato_0_Sliced_6, Tomato_0_Sliced_1, Tomato_0_Sliced_5, Knife_1, Tomato_0_Sliced_0, Tomato_0_Sliced_3 are in/on CounterTop_0
+	Tomato_0_Sliced_4, Bread_1_Sliced_4, Bread_1_Sliced_3 are in/on Plate_1
+	Chair_2, DiningTable are in/on Floor
+	Speech:
+	2024-04-14 08:35:04.775773: All done!

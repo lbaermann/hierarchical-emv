@@ -1,0 +1,162 @@
+{
+  "config": {
+    "cfg": "teach/simplified/predefined",
+    "output": "output/teach-dechant/multi-ep/gpt-4o/preliminary/exp_1-25_train_predef_1shot_20.json",
+    "dataset": "teach-dechant",
+    "n_samples": "20",
+    "qa_file": "/home/lbaermann/emv/data/TEACh/dechant-qa/multi-episode/24-08-22/static_five_to_twenty_five_episode_sequences_train_10_questions_per_task.pkl",
+    "max_samples_per_episode": "None",
+    "use_only_question_types": "None",
+    "skip_first_n_episodes": "500",
+    "teach_base": "/home/lbaermann/emv/data/TEACh",
+    "llm_summarizer_cfg": "{'llm': {'model_name': 'gpt-4o-2024-08-06', 'request_timeout': 30, 'max_retries': 2, 'openai_api_key': None}, 'example_db_name': 'teach', 'few_shot_k': 2}"
+  },
+  "code_commit": "a749e8f0b0fc0f71ef691e323a9054d85f0da91b",
+  "results": {
+    "463928b7b694b5d3_f3be-19e060787ca1778e_505b-64faef873f4637f8_2aef-fba09eb42138074d_8576-4e32a37852512e84_f991-74568fe327ea17eb_636e-92585feeef040d80_5d46-a0b04cba3a973293_0f78-0-sequence_of_task_descs": {
+      "q_time": "2023/06/29 16:51:04",
+      "q": "List the tasks you performed.",
+      "gt": "put all cup in any sink. clean all the cloths. prepare breakfast. make a plate of toast. put all tissue box on one sidetable. boil potato. put all tissue box on one coffeetable. prepare coffee in a clean mug.",
+      "hyp": "put all cups in the sink, clean clothes, prepare coffee in a clean mug, make a plate of toast, cook potato slices, slice an apple, organize tissue boxes.",
+      "cat": "partially_correct_missing"
+    },
+    "463928b7b694b5d3_f3be-19e060787ca1778e_505b-64faef873f4637f8_2aef-fba09eb42138074d_8576-4e32a37852512e84_f991-74568fe327ea17eb_636e-92585feeef040d80_5d46-a0b04cba3a973293_0f78-0-seq_specific_shortened_low_actions": {
+      "q_time": "2023/06/29 16:51:04",
+      "q": "describe what you did when you boil potato.",
+      "gt": "open the fridge, pick up the potato, place the potato on the countertop, pick up the soap bottle, place the soap bottle on the countertop, pick up the potato, place the potato in the pot, toggle on the stove knob, toggle off the stove knob, pick up the potato",
+      "hyp": "I found a pot, boiled the potato, and turned off the stove once it was cooked.",
+      "cat": "partially_correct_missing"
+    },
+    "463928b7b694b5d3_f3be-19e060787ca1778e_505b-64faef873f4637f8_2aef-fba09eb42138074d_8576-4e32a37852512e84_f991-74568fe327ea17eb_636e-92585feeef040d80_5d46-a0b04cba3a973293_0f78-0-seq_right_after_questions": {
+      "q_time": "2023/06/29 16:51:04",
+      "q": "What task did you do just after put all tissue box on one coffeetable?",
+      "gt": "prepare coffee in a clean mug.",
+      "hyp": "Pickup(Cup_1)",
+      "cat": "wrong"
+    },
+    "463928b7b694b5d3_f3be-19e060787ca1778e_505b-64faef873f4637f8_2aef-fba09eb42138074d_8576-4e32a37852512e84_f991-74568fe327ea17eb_636e-92585feeef040d80_5d46-a0b04cba3a973293_0f78-0-seq_right_before_questions": {
+      "q_time": "2023/06/29 16:51:04",
+      "q": "What task did you do just before boil potato?",
+      "gt": "put all tissue box on one sidetable.",
+      "hyp": "Place(CounterTop_0)",
+      "cat": "wrong"
+    },
+    "463928b7b694b5d3_f3be-19e060787ca1778e_505b-64faef873f4637f8_2aef-fba09eb42138074d_8576-4e32a37852512e84_f991-74568fe327ea17eb_636e-92585feeef040d80_5d46-a0b04cba3a973293_0f78-0-seq_simple_object_yes_no": {
+      "q_time": "2023/06/29 16:51:04",
+      "q": "Was there a painting ?",
+      "gt": "no",
+      "hyp": "no",
+      "cat": "correct"
+    },
+    "463928b7b694b5d3_f3be-19e060787ca1778e_505b-64faef873f4637f8_2aef-fba09eb42138074d_8576-4e32a37852512e84_f991-74568fe327ea17eb_636e-92585feeef040d80_5d46-a0b04cba3a973293_0f78-0-exact_time_to_episode": {
+      "q_time": "2023/06/29 16:51:04",
+      "q": "what did you do on June 29 at 01:07 PM?",
+      "gt": "prepare coffee in a clean mug.",
+      "hyp": "Picked up a dirty cup to clean it.",
+      "cat": "partially_correct_missing"
+    },
+    "463928b7b694b5d3_f3be-19e060787ca1778e_505b-64faef873f4637f8_2aef-fba09eb42138074d_8576-4e32a37852512e84_f991-74568fe327ea17eb_636e-92585feeef040d80_5d46-a0b04cba3a973293_0f78-0-tasks_to_exact_times": {
+      "q_time": "2023/06/29 16:51:04",
+      "q": "When did you put all cup in any sink?",
+      "gt": "June 23 at 05:01 PM",
+      "hyp": "June 23 at 17:01 PM",
+      "cat": "correct"
+    },
+    "463928b7b694b5d3_f3be-19e060787ca1778e_505b-64faef873f4637f8_2aef-fba09eb42138074d_8576-4e32a37852512e84_f991-74568fe327ea17eb_636e-92585feeef040d80_5d46-a0b04cba3a973293_0f78-0-tasks_to_days_ago": {
+      "q_time": "2023/06/29 16:51:04",
+      "q": "Today is June 29. How many days ago did you prepare breakfast?",
+      "gt": "4 days ago",
+      "hyp": "4 days ago",
+      "cat": "correct"
+    },
+    "463928b7b694b5d3_f3be-19e060787ca1778e_505b-64faef873f4637f8_2aef-fba09eb42138074d_8576-4e32a37852512e84_f991-74568fe327ea17eb_636e-92585feeef040d80_5d46-a0b04cba3a973293_0f78-0-days_ago_to_episode": {
+      "q_time": "2023/06/29 16:51:04",
+      "q": "Today is June 29. What did you do 0 day ago?",
+      "gt": "put all tissue box on one coffee table and prepare coffee in a clean mug.",
+      "hyp": "I organized tissue boxes, cleaned a coffee mug, and made coffee.",
+      "cat": "correct_summarized"
+    },
+    "463928b7b694b5d3_f3be-19e060787ca1778e_505b-64faef873f4637f8_2aef-fba09eb42138074d_8576-4e32a37852512e84_f991-74568fe327ea17eb_636e-92585feeef040d80_5d46-a0b04cba3a973293_0f78-1-seq_specific_shortened_low_actions": {
+      "q_time": "2023/06/29 16:51:04",
+      "q": "describe what you did when you put all tissue box on one coffeetable.",
+      "gt": "pick up the tissue box, place the tissue box on the coffee table, pick up the tissue box, place the tissue box on the coffee table",
+      "hyp": "The action to put all tissue boxes on one coffee table was initiated but not detailed in the history.",
+      "cat": "no_answer"
+    },
+    "463928b7b694b5d3_f3be-19e060787ca1778e_505b-64faef873f4637f8_2aef-fba09eb42138074d_8576-4e32a37852512e84_f991-74568fe327ea17eb_636e-92585feeef040d80_5d46-a0b04cba3a973293_0f78-1-seq_right_after_questions": {
+      "q_time": "2023/06/29 16:51:04",
+      "q": "What task did you do just after put all tissue box on one sidetable?",
+      "gt": "boil potato.",
+      "hyp": "Open(Fridge)",
+      "cat": "wrong"
+    },
+    "463928b7b694b5d3_f3be-19e060787ca1778e_505b-64faef873f4637f8_2aef-fba09eb42138074d_8576-4e32a37852512e84_f991-74568fe327ea17eb_636e-92585feeef040d80_5d46-a0b04cba3a973293_0f78-1-seq_right_before_questions": {
+      "q_time": "2023/06/29 16:51:04",
+      "q": "What task did you do just before put all tissue box on one sidetable?",
+      "gt": "make a plate of toast.",
+      "hyp": "Slice an apple.",
+      "cat": "wrong"
+    },
+    "463928b7b694b5d3_f3be-19e060787ca1778e_505b-64faef873f4637f8_2aef-fba09eb42138074d_8576-4e32a37852512e84_f991-74568fe327ea17eb_636e-92585feeef040d80_5d46-a0b04cba3a973293_0f78-1-seq_simple_object_yes_no": {
+      "q_time": "2023/06/29 16:51:04",
+      "q": "Was there a watch ?",
+      "gt": "no",
+      "hyp": "no",
+      "cat": "correct"
+    },
+    "463928b7b694b5d3_f3be-19e060787ca1778e_505b-64faef873f4637f8_2aef-fba09eb42138074d_8576-4e32a37852512e84_f991-74568fe327ea17eb_636e-92585feeef040d80_5d46-a0b04cba3a973293_0f78-1-exact_time_to_episode": {
+      "q_time": "2023/06/29 16:51:04",
+      "q": "what did you do on June 28 at 12:16 PM?",
+      "gt": "boil potato.",
+      "hyp": "Opened the fridge to get a potato.",
+      "cat": "partially_correct_missing"
+    },
+    "463928b7b694b5d3_f3be-19e060787ca1778e_505b-64faef873f4637f8_2aef-fba09eb42138074d_8576-4e32a37852512e84_f991-74568fe327ea17eb_636e-92585feeef040d80_5d46-a0b04cba3a973293_0f78-1-tasks_to_exact_times": {
+      "q_time": "2023/06/29 16:51:04",
+      "q": "When did you prepare coffee in a clean mug?",
+      "gt": "June 29 at 01:07 PM",
+      "hyp": "June 25 at 10:21 AM",
+      "cat": "wrong"
+    },
+    "463928b7b694b5d3_f3be-19e060787ca1778e_505b-64faef873f4637f8_2aef-fba09eb42138074d_8576-4e32a37852512e84_f991-74568fe327ea17eb_636e-92585feeef040d80_5d46-a0b04cba3a973293_0f78-1-tasks_to_days_ago": {
+      "q_time": "2023/06/29 16:51:04",
+      "q": "Today is June 29. How many days ago did you put all cup in any sink?",
+      "gt": "6 days ago",
+      "hyp": "6 days ago",
+      "cat": "correct"
+    },
+    "463928b7b694b5d3_f3be-19e060787ca1778e_505b-64faef873f4637f8_2aef-fba09eb42138074d_8576-4e32a37852512e84_f991-74568fe327ea17eb_636e-92585feeef040d80_5d46-a0b04cba3a973293_0f78-1-days_ago_to_episode": {
+      "q_time": "2023/06/29 16:51:04",
+      "q": "Today is June 29. What did you do 3 days ago?",
+      "gt": "make a plate of toast.",
+      "hyp": "I made a slice of toast.",
+      "cat": "correct"
+    },
+    "463928b7b694b5d3_f3be-19e060787ca1778e_505b-64faef873f4637f8_2aef-fba09eb42138074d_8576-4e32a37852512e84_f991-74568fe327ea17eb_636e-92585feeef040d80_5d46-a0b04cba3a973293_0f78-2-seq_specific_shortened_low_actions": {
+      "q_time": "2023/06/29 16:51:04",
+      "q": "describe what you did when you prepare breakfast.",
+      "gt": "pick up the mug, place the mug in the sink, toggle on the faucet, pick up the mug, pour the mug in the sink, place the mug on the coffee machine, toggle off the coffee machine, toggle on the coffee machine, pick up the plate, place the plate on the countertop, pick up the knife, slice bread, place the knife on the countertop, pick up the bread, place the bread on the toaster, toggle on the toaster, pick up the bread, place the bread on the plate, pick up the knife, toggle off the microwave, open the microwave, open the fridge, slice potato, place the knife on the countertop, pick up the potato, place the potato on the plate, pick up the potato, place the potato on the plate, pick up the plate, place the plate on the countertop, pick up the dish sponge, place the dish sponge on the countertop, pick up the apple, place the apple on the countertop, pick up the apple, place the apple on the countertop, pick up the plate, place the plate in the microwave, close the microwave, toggle on the microwave, toggle off the microwave, open the microwave, pick up the plate, place the plate on the countertop, pick up the knife, slice apple, place the knife on the countertop, open the cabinet, open the cabinet, pick up the bowl, place the bowl on the countertop, pick up the salt shaker, place the salt shaker on the countertop, toggle off the faucet, pick up the fork, place the fork on the countertop, pick up the spoon, place the spoon on the countertop, pick up the bowl, place the bowl in the sink, toggle on the faucet, toggle off the faucet, pick up the bowl, place the bowl on the countertop, pick up the apple, place the apple on the bowl, pick up the bowl, pour the bowl in the sink, place the bowl on the countertop",
+      "hyp": "I prepared coffee, sliced and toasted bread, cooked potato slices, and sliced an apple.",
+      "cat": "partially_correct_missing"
+    },
+    "463928b7b694b5d3_f3be-19e060787ca1778e_505b-64faef873f4637f8_2aef-fba09eb42138074d_8576-4e32a37852512e84_f991-74568fe327ea17eb_636e-92585feeef040d80_5d46-a0b04cba3a973293_0f78-2-seq_right_after_questions": {
+      "q_time": "2023/06/29 16:51:04",
+      "q": "What task did you do just after boil potato?",
+      "gt": "put all tissue box on one coffeetable.",
+      "hyp": "Pickup the cooked potato from the pot.",
+      "cat": "wrong"
+    },
+    "463928b7b694b5d3_f3be-19e060787ca1778e_505b-64faef873f4637f8_2aef-fba09eb42138074d_8576-4e32a37852512e84_f991-74568fe327ea17eb_636e-92585feeef040d80_5d46-a0b04cba3a973293_0f78-2-seq_right_before_questions": {
+      "q_time": "2023/06/29 16:51:04",
+      "q": "What task did you do just before clean all the cloths?",
+      "gt": "put all cup in any sink.",
+      "hyp": "Pickup(Mug) and prepare coffee in a clean mug.",
+      "cat": "wrong"
+    }
+  },
+  "openai_costs": {
+    "cost": 8.0747525,
+    "prompt_tokens": 3223569,
+    "completion_tokens": 1583
+  }
+}

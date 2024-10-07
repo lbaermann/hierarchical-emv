@@ -1,0 +1,12 @@
+type: zs_one_pass
+prompt_name: teach
+history_levels: 0  # since the goal nodes for armarx_lt_mem can be deeply nested, use completely flat approach here
+include_lowest_level_details: True  # The agent approaches also receive these details
+llm:
+  type: ChatGoogleGenerativeAI
+  model: gemini-1.5-pro
+  max_tokens: 512
+  temperature: 0.1
+  request_timeout: 40
+  max_retries: 2
+prompt_cfg: null

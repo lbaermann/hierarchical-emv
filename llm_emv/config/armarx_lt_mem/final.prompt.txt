@@ -1,0 +1,4 @@
+Answer the given question based on the history of actions.
+The history object contains information on what you did in the past, represented as a tree.
+Answer the question by calling answer(reasoning="...", answer="X").
+Generate syntactically correct python console statements only, no explanations or other natural language statements.

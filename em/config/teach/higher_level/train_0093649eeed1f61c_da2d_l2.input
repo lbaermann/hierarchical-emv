@@ -1,0 +1,10 @@
+0.	2023-10-05 08:42:43.383398 - 2023-10-05 08:43:32.614679: I picked up an apple and placed it on the countertop. During this time, I received an instruction to cook a slice of potato.
+1.	2023-10-05 08:43:36.935671 - 2023-10-05 08:43:49.401686: I picked up a knife and sliced a potato.
+2.	2023-10-05 08:43:50.898734 - 2023-10-05 08:44:16.164351: I picked up a potato slice and placed it in the microwave.
+3.	2023-10-05 08:44:18.005497 - 2023-10-05 08:44:35.919472: I picked up another potato slice, placed it in the microwave, and toggled the microwave on and off to cook the slices.
+4.	2023-10-05 08:44:37.770726 - 2023-10-05 08:45:00.035138: I opened the microwave, picked up a cooked potato slice, and placed it on the countertop.
+5.	2023-10-05 08:45:03.670995 - 2023-10-05 08:45:26.139296: I picked up the second cooked potato slice and placed it on the countertop. During this time, I was instructed to put the cooked potato slices into a clean bowl.
+6.	2023-10-05 08:45:27.759318 - 2023-10-05 08:45:51.610510: I poured the liquid from a dirty bowl into the sink and placed it on the countertop.
+7.	2023-10-05 08:45:54.349963 - 2023-10-05 08:46:21.611761: I removed multiple items from the sink basin to make space for washing the bowl. I picked up a credit card, cup, plate, and mug, and placed them on the countertop.
+8.	2023-10-05 08:46:23.749137 - 2023-10-05 08:46:31.281208: I picked up the dirty bowl, placed it in the sink basin, turned on and off the faucet to clean it, then poured the remaining water into the sink and placed the bowl on the countertop.
+9.	2023-10-05 08:46:33.509659 - 2023-10-05 08:47:03.747062: I picked up the clean bowl, placed the cooked potato slices in it, and reported task completion which was confirmed by the user.

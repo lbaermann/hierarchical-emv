@@ -1,0 +1,3 @@
++include: full
+prompt_cfg:
+  system: system_few_shot_vision

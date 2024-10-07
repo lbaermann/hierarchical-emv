@@ -1,0 +1,12 @@
+{
+  "0-2": "I went to home pose, checked which objects I can see and told the user about that.",
+  "3": "I brought the milk from the side board to the human.",
+  "4": "I went to home pose.",
+  "5-9": "I navigated to the sideboard and told the user which objects I can see.",
+  "10-12": "I brought the milk from the sideboard to the human.",
+  "13-19": "I went to home pose, then tried to bring the milk to the user two times but got aborted, then a third time it worked.",
+  "20-25": "I received an object from the human, handed it over to the human, and then loaded the dishwasher.",
+  "26-27": "I loaded the dishwasher.",
+  "28-30": "I went to home pose, looked ahead, and then tried to learn the current person but failed.",
+  "31": "I did a self-introduction."
+}

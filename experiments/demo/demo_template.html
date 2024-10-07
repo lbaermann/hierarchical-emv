@@ -1,0 +1,312 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Hierarchical EMV Demo</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
+    <style>
+        body {
+            background: white;
+            font-family: Helvetica, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            height: calc(100% - 34px); /* Full height - top buttons */
+            overflow: hidden; /* Hide overflow */
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        .column {
+            padding: 20px;
+            box-sizing: border-box;
+            overflow: auto;
+        }
+
+        .column-left {
+            width: 40%;
+            overflow: auto;
+        }
+
+        .column-right-scrolling {
+            width: 60%;
+            overflow: auto;
+        }
+
+        .column-right-scaling {
+            overflow: unset;
+            position: relative; /* to allow scaling */
+            top: 0;
+            left: 0;
+            transform-origin: top center; /* Scale from top-left */
+            width: 60%;
+            height: fit-content;
+        }
+
+        .node {
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+            overflow: hidden;
+            transition: all 0.5s;
+            max-height: 50px;
+            opacity: 1;
+        }
+
+        .child-container {
+            display: flex;
+            flex-direction: column;
+            border: 0 solid currentColor;
+            border-left-width: 1px;
+            margin-left: 20px;
+        }
+
+        .child-container.l0 {
+            color: black;
+        }
+
+        .child-container.l1 {
+            color: rgb(70, 70, 70);
+        }
+
+        .child-container.l2 {
+            color: rgb(120, 120, 120);
+        }
+
+        .child-container.l3 {
+            color: rgb(160, 160, 160);
+        }
+
+        .child-container.l4 {
+            color: rgb(200, 200, 200);
+        }
+
+        .child-container:not(.collapsed)::after {
+            content: '';
+            height: 22px;
+            margin-top: -22px;
+            border: solid white;
+            border-width: 0 0 0 4px;
+            position: relative;
+            left: -2px;
+        }
+
+        .node-children-indicator {
+            overflow: hidden;
+            box-sizing: border-box;
+            transition: all 0.5s;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            max-height: 50px;
+            opacity: 1;
+        }
+
+        .collapsed {
+            max-height: 0 !important;
+            opacity: 0 !important;
+        }
+
+
+        .node > * {
+            padding: 0 5px;
+        }
+
+        .node-children-indicator > * {
+            padding: 15px;
+        }
+
+        .node-icon {
+            flex-shrink: 0;
+            width: 30px;
+            padding: 0;
+            height: 0;
+            align-self: center;
+            border: solid;
+            border-width: 1px 0 0 0;
+            box-sizing: content-box;
+        }
+
+        .node-icon-2 {
+            flex-shrink: 0;
+            position: relative;
+            top: 20px;
+            right: 10px;
+            padding: 0;
+            height: 25px;
+            border: solid;
+            filter: brightness(120%);
+            border-width: 0 1px 0 0;
+        }
+
+        .l4 .node-icon-2 {
+            filter: none;
+        }
+
+        .leaf > .node-icon-2 {
+            border: none;
+        }
+
+        .node-idx, .node-dt {
+            color: rgb(100, 100, 100);
+        }
+
+        .node-idx::after {
+            content: ':';
+        }
+
+        .node-summary {
+            color: black;
+        }
+
+        button {
+            background: #0084ff;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 14px;
+            font-size: 15px;
+            color: #fff;
+        }
+
+    </style>
+
+    <style>
+        .message {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            max-width: 85%;
+            clear: both;
+            position: relative;
+            max-height: 150px;
+            opacity: 1;
+            transition: all 0.5s;
+            font-size: 15px;
+            font-family: monospace;
+            overflow: clip;
+        }
+
+        .message.from-human {
+            background-color: #eceae1;
+            margin-left: auto;
+            text-align: right;
+        }
+
+        .message.from-bot {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            margin-right: auto;
+            text-align: left;
+        }
+
+        .message.initial, .message.answer {
+            text-align: center;
+            margin-right: auto;
+            margin-left: auto;
+            font-weight: bold;
+            font-family: Helvetica, sans-serif;
+        }
+
+        .message.initial {
+            background-color: lightcyan;
+        }
+
+        .message.answer {
+            background-color: #d5ffd5;
+        }
+    </style>
+
+
+</head>
+<body>
+
+<div id="button-bar">
+    <button id="button-animate">
+        Animate
+    </button>
+    <button id="button-prev">
+        Previous
+    </button>
+    <button id="button-next">
+        Next
+    </button>
+
+    <label style="margin-left: 30px">
+        <input type="checkbox" id="scale-or-scroll-checkbox" onchange="toggleScalingOrScrolling()">
+        Scale tree to fit
+    </label>
+</div>
+
+
+<div class="container">
+    <div class="column column-left">
+        <div class="chat-container">
+            {messages}
+        </div>
+    </div>
+
+    <div class="column column-right-scrolling" id="tree-column">
+        {tree}
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    /*js_code*/
+</script>
+<script type="text/javascript">
+    function scaleContent() {
+        var container = $('.container');
+        var content = $('.column-right-scaling');
+        // Get container and content dimensions
+        var containerWidth = container.width();
+        var containerHeight = container.height();
+        var contentWidth = content[0].scrollWidth;
+        var contentHeight = content[0].scrollHeight;
+        // Calculate scale factors
+        var scaleX = containerWidth / contentWidth;
+        var scaleY = containerHeight / contentHeight;
+        // Use the smaller scale factor to ensure the content fits both dimensions
+        var scale = Math.min(scaleX, scaleY, 1);
+        // Apply the scale transformation
+        content.css({
+            'transform': 'scale(' + scale + ')'
+        });
+    }
+
+    // Also observe changes in the content's size via the ResizeObserver (for better handling)
+    var resizeObserver = new ResizeObserver(function (entries) {
+        for (let entry of entries) {
+            if (entry.target.matches('.column-right-scaling')) {
+                scaleContent();
+            }
+        }
+    });
+
+    function toggleScalingOrScrolling() {
+        let scale = $('#scale-or-scroll-checkbox').get(0).checked
+        if (scale) {
+            $('#tree-column').addClass('column-right-scaling').removeClass('column-right-scrolling');
+            resizeObserver.observe($('.column-right-scaling').get(0))
+        } else {
+            resizeObserver.disconnect()
+            $('.column-right-scaling').css('transform', 'none');
+            $('#tree-column').addClass('column-right-scrolling').removeClass('column-right-scaling');
+        }
+
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,259 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Hierarchical EMV Demo</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
+    <style>
+        body {
+            background: white;
+            padding: 20px;
+            font-family: Helvetica, sans-serif;
+        }
+
+        .node {
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+            overflow: hidden;
+            transition: all 0.2s;
+            max-height: 50px;
+            opacity: 1;
+        }
+
+        .child-container {
+            display: flex;
+            flex-direction: column;
+            border: solid gray;
+            border-width: 0 0 0 1px;
+            margin-left: 20px;
+        }
+
+        .child-container:not(.collapsed)::after {
+            content: '';
+            height: 22px;
+            margin-top: -22px;
+            border: solid white;
+            border-width: 0 0 0 1px;
+            position: relative;
+            left: -1px;
+        }
+
+        .node-children-indicator {
+            overflow: hidden;
+            max-height: 0;
+            box-sizing: border-box;
+            opacity: 0;
+            transition: all 0.2s;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .node-children-indicator:last-of-type,
+        .node-children-indicator.shown {
+            max-height: 50px;
+            opacity: 1;
+        }
+
+        .collapsed {
+            max-height: 0 !important;
+            opacity: 0 !important;
+        }
+
+
+        .node > * {
+            padding: 0 5px;
+        }
+
+        .node-children-indicator > * {
+            padding: 15px;
+        }
+
+        .node-icon {
+            flex-shrink: 0;
+            width: 30px;
+            padding: 0;
+            height: 0;
+            align-self: center;
+            border: solid gray;
+            border-width: 1px 0 0 0;
+            box-sizing: content-box;
+        }
+
+        .node-icon-2 {
+            flex-shrink: 0;
+            position: relative;
+            top: 20px;
+            right: 10px;
+            padding: 0;
+            height: 25px;
+            border: solid gray;
+            border-width: 0 1px 0 0;
+        }
+
+        .leaf > .node-icon-2 {
+            border: none;
+        }
+
+        .node-dt {
+            color: rgb(70, 70, 70);
+        }
+
+
+        button {
+            background: #0084ff;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 14px;
+            font-size: 15px;
+            color: #fff;
+        }
+
+    </style>
+
+</head>
+<body>
+<button id="button-1">
+    Toggle Root
+</button>
+<button id="button-2">
+    Toggle child
+</button>
+<button id="button-3">
+    Search root
+</button>
+
+
+<br/>
+<br/>
+
+<div class="node" id="node-0">
+    <i class="node-icon"
+       style="margin-left: 17px; height: 2px; width: 2px; margin-right:7px; border-width: 2px; border-radius: 2px; background-color: gray"></i>
+    <i class="node-icon-2"></i>
+    <p class="node-dt">2024/07/03 - 2024/10/04</p>
+    <p class="node-summary">The last months, I did ...</p>
+</div>
+<div class="child-container" id="child-container-0">
+    <div class="node collapsed" id="node-1">
+        <i class="node-icon"></i>
+        <p class="node-dt">2024/07/03 - 2024/07/15</p>
+        <p class="node-summary">In July, I did ...</p>
+    </div>
+    <div class="child-container collapsed" id="child-container-1">
+    </div>
+    <div class="node-children-indicator" id="child-indicator-after-node-1">
+        <i class="node-icon"></i>
+        <i class="fa-solid fa-ellipsis"></i>
+    </div>
+    <div class="node collapsed" id="node-2">
+        <i class="node-icon"></i>
+        <i class="node-icon-2"></i>
+        <p class="node-dt">2024/08/03 - 2024/08/15</p>
+        <p class="node-summary">In August, I did ...</p>
+    </div>
+    <div class="child-container collapsed" id="child-container-2">
+        <div class="node collapsed" id="node-2-1">
+            <i class="node-icon"></i>
+            <p class="node-dt">2024/08/03 11:30 - 15:42</p>
+            <p class="node-summary">On August 3, I did ...</p>
+        </div>
+        <div class="node-children-indicator" id="child-indicator-after-node-2-1">
+            <i class="node-icon"></i>
+            <i class="fa-solid fa-ellipsis"></i>
+        </div>
+        <div class="node collapsed" id="node-2-2">
+            <i class="node-icon"></i>
+            <p class="node-dt">2024/08/05 14:30 - 14:42</p>
+            <p class="node-summary">On August 5, I did ...</p>
+        </div>
+        <div class="node-children-indicator" id="child-indicator-after-node-2-2">
+            <i class="node-icon"></i>
+            <i class="fa-solid fa-ellipsis"></i>
+        </div>
+    </div>
+    <div class="node-children-indicator" id="child-indicator-after-node-2">
+        <i class="node-icon"></i>
+        <i class="fa-solid fa-ellipsis"></i>
+    </div>
+    <div class="node collapsed" id="node-3">
+        <i class="node-icon"></i>
+        <p class="node-dt">2024/09/01 - 2024/09/04</p>
+        <p class="node-summary">In September, I did ...</p>
+    </div>
+    <div class="child-container collapsed" id="child-container-3">
+    </div>
+    <div class="node-children-indicator" id="child-indicator-after-node-3">
+        <i class="node-icon"></i>
+        <i class="fa-solid fa-ellipsis"></i>
+    </div>
+    <div class="node collapsed" id="node-4">
+        <i class="node-icon"></i>
+        <i class="node-icon-2"></i>
+        <p class="node-dt">2024/10/03 - 2024/10/15</p>
+        <p class="node-summary">In October, I did ...</p>
+    </div>
+    <div class="child-container collapsed" id="child-container-4">
+        <div class="node collapsed" id="node-4-1">
+            <i class="node-icon"></i>
+            <i class="node-icon-2"></i>
+            <p class="node-dt">2024/10/03 11:30 - 15:42</p>
+            <p class="node-summary">On Oct 3, I did ...</p>
+        </div>
+        <div class="node collapsed" id="node-4-2">
+            <i class="node-icon"></i>
+            <i class="node-icon-2"></i>
+            <p class="node-dt">2024/10/05 14:30 - 14:42</p>
+            <p class="node-summary">On Oct 5, I did ...</p>
+        </div>
+        <div class="node-children-indicator">
+            <i class="node-icon"></i>
+            <i class="fa-solid fa-ellipsis"></i>
+        </div>
+    </div>
+    <div class="node-children-indicator" id="child-indicator-after-node-4">
+        <i class="node-icon"></i>
+        <i class="fa-solid fa-ellipsis"></i>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+
+    $("#button-1").on("click", () => {
+        $("#node-0 > .node.icon").toggleClass("expanded")
+        $("#child-container-0 > *").toggleClass("collapsed")
+    })
+
+    $("#button-2").on("click", () => {
+        $("#node-2 > .node-icon").toggleClass("expanded")
+        $("#child-container-2 > *").toggleClass("collapsed")
+    })
+
+    $("#button-3").on("click", () => {
+        $("#node-0 > .node-icon").toggleClass("expanded")
+        $('#child-container-0 > *').addClass("collapsed")
+
+        $('#child-indicator-after-node-1').toggleClass("collapsed shown")
+        $("#node-2").toggleClass("collapsed")
+        $("#child-container-2").toggleClass("collapsed")
+        $('#child-indicator-after-node-2').toggleClass("collapsed shown")
+        $("#node-4").toggleClass("collapsed")
+        $("#child-container-4").toggleClass("collapsed")
+    })
+
+</script>
+
+</body>
+</html>

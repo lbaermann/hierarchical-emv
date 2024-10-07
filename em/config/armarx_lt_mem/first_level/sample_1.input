@@ -1,0 +1,21 @@
+0.	2024-07-12 13:14:19.122018 - 2024-07-12 13:14:21.017943: Goal: HomePose(hand=0, shape=Platform)
+1.	2024-07-12 13:17:22.241711 - 2024-07-12 13:19:35.629073: Goal: WhatCanYouSeeNow
+2.	2024-07-12 13:28:46.959783 - 2024-07-12 13:28:52.512607: Goal: WhatCanYouSeeNow.Say(text=I can see an apple tea, a nesquik, a milk, and a vanilla cookies)
+3.	2024-07-12 14:08:42.617048 - 2024-07-12 14:11:34.872992: Goal: BringObjectToHuman(graspLocation=sideboard, graspObject=milk)
+4.	2024-07-12 15:00:28.595857 - 2024-07-12 15:00:29.792542: Goal: HomePose(hand=0, shape=Platform)
+6.	2024-07-12 15:07:49.695414 - 2024-07-12 15:07:55.929298: Goal: NavigateToLocation(location=MobileKitchen/sideboard, velocityLimitLinear=300.0)
+8.	2024-07-12 15:08:20.665475 - 2024-07-12 15:08:31.715655: Goal: WhatCanYouSeeNow
+10.	2024-07-12 15:11:38.422261 - 2024-07-12 15:12:28.469477: Goal: BringNamedObjectFromNamedLocationToHuman(object=milk, location=side side, handoverLocation=home)
+12.	2024-07-12 15:13:41.764865 - 2024-07-12 15:14:38.041896: Goal: BringNamedObjectFromNamedLocationToHuman <Running>
+13.	2024-07-12 15:16:02.426745 - 2024-07-12 15:16:05.026818: Goal: HomePose
+15.	2024-07-12 15:18:33.314711 - 2024-07-12 15:18:45.015048: Goal: BringNamedObjectFromNamedLocationToHuman(object=milk, location=coffee-filter, handoverLocation=home) <Aborted>
+17.	2024-07-12 15:19:55.411862 - 2024-07-12 15:20:14.962076: Goal: BringNamedObjectFromNamedLocationToHuman(object=move, fromLocation=MobileKitchen/counter, toLocation=home) <Aborted>
+19.	2024-07-12 15:20:36.812552 - 2024-07-12 15:21:37.521697: Goal: BringNamedObjectFromNamedLocationToHuman
+21.	2024-07-12 15:24:41.328585 - 2024-07-12 15:24:55.738764: Goal: ReceiveObjectFromHuman
+23.	2024-07-12 15:25:08.555557 - 2024-07-12 15:25:19.135081: Goal: HandOverObjectToHuman
+25.	2024-07-12 15:26:33.956690 - 2024-07-12 15:28:19.556850: Goal: LoadDishwasher(close=True, open=True, placeObject=True, dishwasherLocation=mobile-dishwasher/OpenDishwasher:0)
+27.	2024-07-12 15:29:28.517937 - 2024-07-12 15:31:08.015345: Goal: LoadDishwasher
+28.	2024-07-12 15:32:19.202063 - 2024-07-12 15:32:19.652172: Goal: HomePose
+29.	2024-07-12 15:32:19.710945 - 2024-07-12 15:32:19.759644: Goal: LookAhead
+30.	2024-07-12 15:46:11.426240 - 2024-07-12 15:47:33.137963: Goal: LearnCurrentPerson <Failed>
+31.	2024-07-12 16:08:38.388934 - 2024-07-12 16:12:16.914528: Goal: Introduction

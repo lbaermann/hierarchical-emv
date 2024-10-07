@@ -1,0 +1,228 @@
+{
+  "config": {
+    "cfg": "armarx_lt_mem/full",
+    "output": "output/armarx_lt_mem/test_full.json",
+    "dataset": "simple",
+    "n_samples": "None",
+    "history_dir": "data/armarx_lt_mem",
+    "qa_file": "data/armarx_lt_mem/qa.json"
+  },
+  "code_commit": "ca829c8de9d3d4b7adfc0386b24cc8915ab29044",
+  "results": {
+    "a7a-merged-explain-1": {
+      "q_time": "2024/08/28 13:44:43",
+      "q": "Describe what you did.",
+      "gt": "Over the past months, I performed various activities at 5 different days, including introducing myself, grasping the milk, receiving and handing over objects, loading the dishwasher, and engaging in dialog with the user.",
+      "hyp": "Over the past few months, I have engaged in a variety of activities, including object identification and handovers, navigation, introductions, and interacting with people through gestures and speech, while encountering challenges like failed object retrievals and dishwasher loading attempts.",
+      "cat": "correct_summarized"
+    },
+    "a7a-merged-explain-2": {
+      "q_time": "2024/08/28 10:25:34",
+      "q": "Tell me in detail what happened yesterday before noon.",
+      "gt": "I first grasped the milk, moved backwards, and went to home pose. Then I introduced myself, moved further back, went to home pose, looked ahead, navigated to home position, failed to grasp the 'object' object, and tried to receive an object from the human. Later, I looked ahead and down, closed and opened my hand, again looked ahead, down and ahead, and performed another introduction.",
+      "hyp": "On August 27th, before noon, I engaged in various activities such as grasping and moving objects, introducing myself, and interacting with humans through speech and gestures. I also navigated and attempted to load the dishwasher.",
+      "cat": "partially_correct_missing"
+    },
+    "a7a-merged-explain-3": {
+      "q_time": "2024/08/27 17:19:42",
+      "q": "Explain briefly what you did at each day that you can remember.",
+      "gt": "On June 26, I handed over and received objects multiple times, learned a new object, and engaged in dialog. On June 27, I navigated to multiple locations, introduced myself, and grasped the milk. On July 12, I described my surroundings, went to home pose, brought the milk, received and handed over objects, loaded the dishwasher, failed to learn a person, and introduced myself. On July 13, I performed introductions, navigated to various locations, handed over objects, loaded a dishwasher, analyzed surroundings, and performed grasping tasks. On August 27, I introduced myself, engaged in conversations, moved around, shaped my hands, and handled objects, with mixed success.",
+      "hyp": "On June 26-27, I engaged in object handovers, navigation, object learning, and introductions, noting soy milk. On July 12, I performed tasks like identifying objects and introductions. On July 13, I introduced myself, identified objects, and loaded the dishwasher. On August 27, I attempted grasping and moving objects, navigated, and interacted with humans, encountering some challenges.",
+      "cat": "correct_summarized"
+    },
+    "a7a-merged-explain-4": {
+      "q_time": "2024/08/27 17:56:53",
+      "q": "Summarize your highlights from June.",
+      "gt": "On June 26 and 27, among other activities, I handed over and received objects, introduced myself, and learned a new object.",
+      "hyp": "In June, my highlights included engaging in object handovers, navigation, object learning, and introductions, while noting the presence of soy milk and using different phrases to state my identity.",
+      "cat": "correct"
+    },
+    "a7a-merged-explain-5": {
+      "q_time": "2024/08/27 18:41:39",
+      "q": "Explain in detail what you did when you introduce yourself.",
+      "gt": "I start by waving and introducing myself verbally. I then continue by explaining my purpose and my hardware design while moving my joints. Afterwards, I tell about my software abilities, point with my hand, and showcase my workspace with my arms. After returning to home pose, I talk about my hands. In the end, I move around and rotate my platform to explain its capabilities, and finally offer my help to the user.",
+      "hyp": "I introduced myself by saying: 'Hello! My name is Armar seven. I am a member of the Armar humanoid robot family developed at the Institute of Anthropomatics and Robotics at KIT. I have been developed within the Youbot project funded by the Karl Zeiss Stiftung. My goal is to provide help for people in their daily life activities. I have thirty-two degrees of freedom and more than one hundred sensors. My cognitive architecture integrates methods of artificial intelligence, informatics, and mechatronics. I am able to learn skills by watching humans and adapt them to different user preferences and needs. I have torque-controlled joints for safe human-robot interaction. The limitless joints in my arms enlarge my workspace. They allow me to provide specialized skills. I have two underactuated five-finger hands to grasp various objects and tools. I can use my thumb and my index finger individually and abduct my thumb to precisely grasp objects. With my holonomic platform, I can move in arbitrary directions which is helpful in narrow spaces. I can even move sideways and turn on the spot. I am glad that you are here today. How can I help you?'",
+      "cat": "correct_tmi"
+    },
+    "a7a-merged-req-at-time-1": {
+      "q_time": "2024/08/27 15:55:17",
+      "q": "What did you do at June 26 shortly after 8 PM?",
+      "gt": "Receive an object from a human, afterwards hand over the object to the human",
+      "hyp": "I was receiving objects, navigating, and introducing myself, while observing soy milk nearby.",
+      "cat": "partially_correct_tmi"
+    },
+    "a7a-merged-req-at-time-2": {
+      "q_time": "2024/08/29 15:21:42",
+      "q": "What did you do two days ago at 11:24?",
+      "gt": "Grasp the soy milk",
+      "hyp": "I attempted to grasp a named object, 'milk'.",
+      "cat": "correct"
+    },
+    "a7a-merged-req-at-time-3": {
+      "q_time": "2024/09/12 13:14:42",
+      "q": "What did you do exactly at this day and time two months ago from now?",
+      "gt": "Move my hand to home pose",
+      "hyp": "From June 26 to June 27, I engaged in various activities including object handovers, navigation, object learning, and introductions. I noted the presence of soy milk and used different phrases to state my identity.",
+      "cat": "wrong"
+    },
+    "a7a-merged-action-detail-1": {
+      "q_time": "2024/08/27 17:01:59",
+      "q": "Which object did you try to bring today at noon?",
+      "gt": "the soy milk",
+      "hyp": "soy milk",
+      "cat": "correct"
+    },
+    "a7a-merged-action-detail-2": {
+      "q_time": "2024/08/27 16:19:01",
+      "q": "What objects did you detect when telling what you can see at June 26 ?",
+      "gt": "I detected an unknown object and asked the user to tell me its name",
+      "hyp": "###ERROR### Index 2 out of range (length 1)",
+      "cat": "no_answer"
+    },
+    "a7a-merged-action-detail-3": {
+      "q_time": "2024/08/27 19:15:01",
+      "q": "What objects did you detect when telling what you can see at July 12 around 1:30 PM?",
+      "gt": "I detected apple tea, nesquik, milk, and vanilla cookies",
+      "hyp": "An apple tea, a nesquik, a milk, and vanilla cookies.",
+      "cat": "correct"
+    },
+    "a7a-merged-action-detail-4": {
+      "q_time": "2024/08/27 17:01:59",
+      "q": "How far did you move today the last time I asked you to go one step back?",
+      "gt": "1 cm",
+      "hyp": "10 units",
+      "cat": "partially_correct_missing"
+    },
+    "a7a-merged-action-detail-5": {
+      "q_time": "2024/08/27 17:44:16",
+      "q": "Where did you last bring the milk at July 12?",
+      "gt": "I handed it over to the human at the home location at 15:21.",
+      "hyp": "home",
+      "cat": "correct"
+    },
+    "a7a-merged-objects-1": {
+      "q_time": "2024/08/27 15:23:18",
+      "q": "when did you last see the vanilla cookies?",
+      "gt": "2024/07/13 13:12:56",
+      "hyp": "July 13, 2024, at 13:45:29",
+      "cat": "wrong"
+    },
+    "a7a-merged-objects-2": {
+      "q_time": "2024/08/27 19:05:00",
+      "q": "when did you first see the milk?",
+      "gt": "2024/06/27 13:03:18",
+      "hyp": "June 26, 2024",
+      "cat": "partially_correct_missing"
+    },
+    "a7a-merged-objects-3": {
+      "q_time": "2024/08/27 15:44:26",
+      "q": "At which days did you see the soy milk?",
+      "gt": "At 2024/06/27, 07/13 and 08/27",
+      "hyp": "June 26th to June 27th",
+      "cat": "partially_correct_missing"
+    },
+    "a7a-merged-objects-4": {
+      "q_time": "2024/08/27 17:01:59",
+      "q": "What did you do with the milk today?",
+      "gt": "I grasped it at 11:24, 12:08, 14:37, and 14:55.",
+      "hyp": "I attempted to grasp the milk but did not succeed. The soy milk was observed on the mobile kitchen counter.",
+      "cat": "wrong"
+    },
+    "a7a-merged-objects-5": {
+      "q_time": "2024/08/27 17:01:59",
+      "q": "Which object was next to the soy milk last time you grasped it today in the afternoon?",
+      "gt": "Orange juice bottle",
+      "hyp": "OrangeJuice, CoffeeFilters2, and SoftCakeOrange were next to the soy milk.",
+      "cat": "partially_correct_tmi"
+    },
+    "a7a-merged-objects-6": {
+      "q_time": "2024/08/27 17:01:59",
+      "q": "What object did you see inside the dishwasher when you opened it today?",
+      "gt": "a blue cup",
+      "hyp": "No specific objects were noted inside the dishwasher when I opened it today.",
+      "cat": "wrong"
+    },
+    "a7a-merged-objects-7": {
+      "q_time": "2024/08/28 12:02:33",
+      "q": "What color was the milk packaging that you grasped yesterday around 3 PM?",
+      "gt": "green, white and blue",
+      "hyp": "The milk packaging was green and white.",
+      "cat": "correct"
+    },
+    "a7a-merged-events-1": {
+      "q_time": "2024/08/27 19:44:05",
+      "q": "How often did you successfully load the dishwasher?",
+      "gt": "4 times: at 2024/07/12 15:26, 07/13 13:46 and 14:54, 08/27 14:40",
+      "hyp": "Once",
+      "cat": "wrong"
+    },
+    "a7a-merged-events-2": {
+      "q_time": "2024/08/27 15:23:35",
+      "q": "How often did you fail to load the dishwasher?",
+      "gt": "2 times: at 2024/08/27 14:38 and 13:39",
+      "hyp": "I failed to load the dishwasher at least once on August 27th.",
+      "cat": "partially_correct_missing"
+    },
+    "a7a-merged-events-3": {
+      "q_time": "2024/08/27 15:04:22",
+      "q": "When did you talk about your favorite drink?",
+      "gt": "At 2024/08/27 12:04",
+      "hyp": "I talked about my favorite drink, Orange Juice, on August 27, 2024, around 14:54 to 14:58.",
+      "cat": "wrong"
+    },
+    "a7a-merged-events-4": {
+      "q_time": "2024/08/27 16:47:39",
+      "q": "What did you do last on July 12?",
+      "gt": "I introduced myself",
+      "hyp": "Introduction task from 16:08 to 16:12.",
+      "cat": "correct_tmi"
+    },
+    "a7a-merged-events-5": {
+      "q_time": "2024/08/27 20:41:42",
+      "q": "What did you do just after introducing yourself today before noon?",
+      "gt": "I moved 1 meter backwards.",
+      "hyp": "I moved two steps backwards.",
+      "cat": "correct"
+    },
+    "a7a-merged-events-6": {
+      "q_time": "2024/08/27 15:08:13",
+      "q": "How many times did you introduce yourself?",
+      "gt": "6 times: Once on June 26 and July 12, twice on July 13 and August 27, each",
+      "hyp": "2",
+      "cat": "wrong"
+    },
+    "a7a-merged-events-7": {
+      "q_time": "2024/08/27 18:08:34",
+      "q": "How long did it take to introduce yourself on average?",
+      "gt": "On average, the 'Introduction' skill took 97.7 seconds.",
+      "hyp": "On average, it took 1 minute and 45 seconds to introduce myself.",
+      "cat": "partially_correct_missing"
+    },
+    "a7a-merged-problems-1": {
+      "q_time": "2024/08/27 16:46:34",
+      "q": "Did you have any problems during the demo on July 12?",
+      "gt": "I did not finish bringing the milk to the human at 15:11, and I failed to learn a new person at 15:46",
+      "hyp": "Yes, there were problems during the demo on July 12.",
+      "cat": "correct"
+    },
+    "a7a-merged-problems-2": {
+      "q_time": "2024/08/27 18:12:24",
+      "q": "Did you have any problems during the demo on July 13?",
+      "gt": "No, everything went fine.",
+      "hyp": "No, I did not have any problems during the demo on July 13.",
+      "cat": "correct"
+    },
+    "a7a-merged-problems-3": {
+      "q_time": "2024/08/28 11:11:11",
+      "q": "What was the reason why you needed two attempts to grasp the milk yesterday shortly before 3pm?",
+      "gt": "Initially, the speech recognition was off, and I tried to grasp the 'Moog' which does not exist. The user had to repeat the command.",
+      "hyp": "The robot initially attempted to grasp soy milk instead of milk, leading to a second attempt.",
+      "cat": "wrong"
+    }
+  },
+  "openai_costs": {
+    "cost": 0.0,
+    "prompt_tokens": 0,
+    "completion_tokens": 0
+  }
+}

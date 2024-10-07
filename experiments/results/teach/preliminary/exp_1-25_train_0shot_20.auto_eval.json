@@ -1,0 +1,66 @@
+{
+  "config": "config/llm_eval/gpt4o.yaml",
+  "code_commit": "f9d5100324506d9faa5a71965748001f6c198b9f",
+  "results": {
+    "463928b7b694b5d3_f3be-19e060787ca1778e_505b-64faef873f4637f8_2aef-fba09eb42138074d_8576-4e32a37852512e84_f991-74568fe327ea17eb_636e-92585feeef040d80_5d46-a0b04cba3a973293_0f78-0-sequence_of_task_descs": {
+      "cat": "correct_summarized"
+    },
+    "463928b7b694b5d3_f3be-19e060787ca1778e_505b-64faef873f4637f8_2aef-fba09eb42138074d_8576-4e32a37852512e84_f991-74568fe327ea17eb_636e-92585feeef040d80_5d46-a0b04cba3a973293_0f78-0-seq_specific_shortened_low_actions": {
+      "cat": "no_answer"
+    },
+    "463928b7b694b5d3_f3be-19e060787ca1778e_505b-64faef873f4637f8_2aef-fba09eb42138074d_8576-4e32a37852512e84_f991-74568fe327ea17eb_636e-92585feeef040d80_5d46-a0b04cba3a973293_0f78-0-seq_right_after_questions": {
+      "cat": "correct"
+    },
+    "463928b7b694b5d3_f3be-19e060787ca1778e_505b-64faef873f4637f8_2aef-fba09eb42138074d_8576-4e32a37852512e84_f991-74568fe327ea17eb_636e-92585feeef040d80_5d46-a0b04cba3a973293_0f78-0-seq_right_before_questions": {
+      "cat": "wrong"
+    },
+    "463928b7b694b5d3_f3be-19e060787ca1778e_505b-64faef873f4637f8_2aef-fba09eb42138074d_8576-4e32a37852512e84_f991-74568fe327ea17eb_636e-92585feeef040d80_5d46-a0b04cba3a973293_0f78-0-seq_simple_object_yes_no": {
+      "cat": "correct"
+    },
+    "463928b7b694b5d3_f3be-19e060787ca1778e_505b-64faef873f4637f8_2aef-fba09eb42138074d_8576-4e32a37852512e84_f991-74568fe327ea17eb_636e-92585feeef040d80_5d46-a0b04cba3a973293_0f78-0-exact_time_to_episode": {
+      "cat": "correct_tmi"
+    },
+    "463928b7b694b5d3_f3be-19e060787ca1778e_505b-64faef873f4637f8_2aef-fba09eb42138074d_8576-4e32a37852512e84_f991-74568fe327ea17eb_636e-92585feeef040d80_5d46-a0b04cba3a973293_0f78-0-tasks_to_exact_times": {
+      "cat": "partially_correct_missing"
+    },
+    "463928b7b694b5d3_f3be-19e060787ca1778e_505b-64faef873f4637f8_2aef-fba09eb42138074d_8576-4e32a37852512e84_f991-74568fe327ea17eb_636e-92585feeef040d80_5d46-a0b04cba3a973293_0f78-0-tasks_to_days_ago": {
+      "cat": "correct"
+    },
+    "463928b7b694b5d3_f3be-19e060787ca1778e_505b-64faef873f4637f8_2aef-fba09eb42138074d_8576-4e32a37852512e84_f991-74568fe327ea17eb_636e-92585feeef040d80_5d46-a0b04cba3a973293_0f78-0-days_ago_to_episode": {
+      "cat": "correct_tmi"
+    },
+    "463928b7b694b5d3_f3be-19e060787ca1778e_505b-64faef873f4637f8_2aef-fba09eb42138074d_8576-4e32a37852512e84_f991-74568fe327ea17eb_636e-92585feeef040d80_5d46-a0b04cba3a973293_0f78-1-seq_specific_shortened_low_actions": {
+      "cat": "partially_correct_missing"
+    },
+    "463928b7b694b5d3_f3be-19e060787ca1778e_505b-64faef873f4637f8_2aef-fba09eb42138074d_8576-4e32a37852512e84_f991-74568fe327ea17eb_636e-92585feeef040d80_5d46-a0b04cba3a973293_0f78-1-seq_right_after_questions": {
+      "cat": "wrong"
+    },
+    "463928b7b694b5d3_f3be-19e060787ca1778e_505b-64faef873f4637f8_2aef-fba09eb42138074d_8576-4e32a37852512e84_f991-74568fe327ea17eb_636e-92585feeef040d80_5d46-a0b04cba3a973293_0f78-1-seq_right_before_questions": {
+      "cat": "wrong"
+    },
+    "463928b7b694b5d3_f3be-19e060787ca1778e_505b-64faef873f4637f8_2aef-fba09eb42138074d_8576-4e32a37852512e84_f991-74568fe327ea17eb_636e-92585feeef040d80_5d46-a0b04cba3a973293_0f78-1-seq_simple_object_yes_no": {
+      "cat": "correct"
+    },
+    "463928b7b694b5d3_f3be-19e060787ca1778e_505b-64faef873f4637f8_2aef-fba09eb42138074d_8576-4e32a37852512e84_f991-74568fe327ea17eb_636e-92585feeef040d80_5d46-a0b04cba3a973293_0f78-1-exact_time_to_episode": {
+      "cat": "correct"
+    },
+    "463928b7b694b5d3_f3be-19e060787ca1778e_505b-64faef873f4637f8_2aef-fba09eb42138074d_8576-4e32a37852512e84_f991-74568fe327ea17eb_636e-92585feeef040d80_5d46-a0b04cba3a973293_0f78-1-tasks_to_exact_times": {
+      "cat": "partially_correct_missing"
+    },
+    "463928b7b694b5d3_f3be-19e060787ca1778e_505b-64faef873f4637f8_2aef-fba09eb42138074d_8576-4e32a37852512e84_f991-74568fe327ea17eb_636e-92585feeef040d80_5d46-a0b04cba3a973293_0f78-1-tasks_to_days_ago": {
+      "cat": "correct"
+    },
+    "463928b7b694b5d3_f3be-19e060787ca1778e_505b-64faef873f4637f8_2aef-fba09eb42138074d_8576-4e32a37852512e84_f991-74568fe327ea17eb_636e-92585feeef040d80_5d46-a0b04cba3a973293_0f78-1-days_ago_to_episode": {
+      "cat": "correct"
+    },
+    "463928b7b694b5d3_f3be-19e060787ca1778e_505b-64faef873f4637f8_2aef-fba09eb42138074d_8576-4e32a37852512e84_f991-74568fe327ea17eb_636e-92585feeef040d80_5d46-a0b04cba3a973293_0f78-2-seq_specific_shortened_low_actions": {
+      "cat": "correct_summarized"
+    },
+    "463928b7b694b5d3_f3be-19e060787ca1778e_505b-64faef873f4637f8_2aef-fba09eb42138074d_8576-4e32a37852512e84_f991-74568fe327ea17eb_636e-92585feeef040d80_5d46-a0b04cba3a973293_0f78-2-seq_right_after_questions": {
+      "cat": "wrong"
+    },
+    "463928b7b694b5d3_f3be-19e060787ca1778e_505b-64faef873f4637f8_2aef-fba09eb42138074d_8576-4e32a37852512e84_f991-74568fe327ea17eb_636e-92585feeef040d80_5d46-a0b04cba3a973293_0f78-2-seq_right_before_questions": {
+      "cat": "wrong"
+    }
+  }
+}

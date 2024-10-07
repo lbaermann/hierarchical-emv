@@ -1,0 +1,53 @@
+type: simplified_coding
+llm:
+  type: ChatOpenAI
+  model_name: gpt-4o-2024-08-06
+  max_tokens: 512
+  temperature: 0.1
+  request_timeout: 20
+  max_retries: 2
+question_vlm:
+  type: ChatOpenAI
+  model_name: gpt-4o-2024-08-06
+  max_tokens: 64
+  temperature: 0.3
+  request_timeout: 30
+  max_retries: 1
+prompt_cfg:
+  system: system_few_shot
+  usage: usage
+  user_question: user_question
+  history: history
+  final_try: final
+  db:
+    - train/qa.*
+  retrieval:
+    sentence_similarity_model: all-mpnet-base-v2
+    top_k: 1
+    question_modifier_llm:
+      system_prompt: 'Replace every object- or task-specific phrase in the following question/command with X, so that only the basic question/command type remains. Example: When did you do X? describe what you did when X. Answer with only the modified question/command, no other text.'
+      type: ChatOpenAI
+      model_name: gpt-4o-mini-2024-07-18
+      max_tokens: 64
+      temperature: 0
+      request_timeout: 15
+      max_retries: 1
+search:
+  embedding: all-mpnet-base-v2
+  filter_kwargs:
+    top_p: 0.3
+    min_cos_sim: 0.2
+    close_match_top_p: 0.3
+    close_match_min_cos_sim: 0.7
+api:
+  include_groups:
+    - dialog
+    - util
+    - tools
+  include_names:
+    - history
+    - answer
+exclude_imports:
+  - history # This is visible, but not explicitly imported (since it's a property and would be rendered strangely).
+  - wait_for_trigger # Hidden so that the LM prefers "answer"
+  - say # Hidden so that the LM prefers "answer"

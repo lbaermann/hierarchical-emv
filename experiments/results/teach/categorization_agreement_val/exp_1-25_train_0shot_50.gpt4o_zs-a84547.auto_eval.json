@@ -1,0 +1,156 @@
+{
+  "config": "config/llm_eval/gpt4o_zs.yaml",
+  "code_commit": "a84547d6788755120e5d0f7bd77956a536799357",
+  "results": {
+    "67b015ec29b4d72b_29b9-ee5eba7cfd4e3518_5245-ff0a18102ce158de_97c6-9bf133507d9af7d3_cdad-11c57f7bab9c35b3_68fc-e3329234c2cfe3a6_478f-33d9c1f5b0994000_cce6-e837b0aa95fc5e07_61dc-75c03c5b39a0daa4_2f3f-c7c0a9f2bc2988c7_9168-0a743cc844d97d87_5037-0-sequence_of_task_descs": {
+      "cat": "correct_summarized"
+    },
+    "67b015ec29b4d72b_29b9-ee5eba7cfd4e3518_5245-ff0a18102ce158de_97c6-9bf133507d9af7d3_cdad-11c57f7bab9c35b3_68fc-e3329234c2cfe3a6_478f-33d9c1f5b0994000_cce6-e837b0aa95fc5e07_61dc-75c03c5b39a0daa4_2f3f-c7c0a9f2bc2988c7_9168-0a743cc844d97d87_5037-0-seq_specific_shortened_low_actions": {
+      "cat": "partially_correct_missing"
+    },
+    "67b015ec29b4d72b_29b9-ee5eba7cfd4e3518_5245-ff0a18102ce158de_97c6-9bf133507d9af7d3_cdad-11c57f7bab9c35b3_68fc-e3329234c2cfe3a6_478f-33d9c1f5b0994000_cce6-e837b0aa95fc5e07_61dc-75c03c5b39a0daa4_2f3f-c7c0a9f2bc2988c7_9168-0a743cc844d97d87_5037-0-seq_right_after_questions": {
+      "cat": "correct_summarized"
+    },
+    "67b015ec29b4d72b_29b9-ee5eba7cfd4e3518_5245-ff0a18102ce158de_97c6-9bf133507d9af7d3_cdad-11c57f7bab9c35b3_68fc-e3329234c2cfe3a6_478f-33d9c1f5b0994000_cce6-e837b0aa95fc5e07_61dc-75c03c5b39a0daa4_2f3f-c7c0a9f2bc2988c7_9168-0a743cc844d97d87_5037-0-seq_right_before_questions": {
+      "cat": "partially_correct_missing"
+    },
+    "67b015ec29b4d72b_29b9-ee5eba7cfd4e3518_5245-ff0a18102ce158de_97c6-9bf133507d9af7d3_cdad-11c57f7bab9c35b3_68fc-e3329234c2cfe3a6_478f-33d9c1f5b0994000_cce6-e837b0aa95fc5e07_61dc-75c03c5b39a0daa4_2f3f-c7c0a9f2bc2988c7_9168-0a743cc844d97d87_5037-0-seq_simple_object_yes_no": {
+      "cat": "correct"
+    },
+    "67b015ec29b4d72b_29b9-ee5eba7cfd4e3518_5245-ff0a18102ce158de_97c6-9bf133507d9af7d3_cdad-11c57f7bab9c35b3_68fc-e3329234c2cfe3a6_478f-33d9c1f5b0994000_cce6-e837b0aa95fc5e07_61dc-75c03c5b39a0daa4_2f3f-c7c0a9f2bc2988c7_9168-0a743cc844d97d87_5037-0-exact_time_to_episode": {
+      "cat": "partially_correct_tmi"
+    },
+    "67b015ec29b4d72b_29b9-ee5eba7cfd4e3518_5245-ff0a18102ce158de_97c6-9bf133507d9af7d3_cdad-11c57f7bab9c35b3_68fc-e3329234c2cfe3a6_478f-33d9c1f5b0994000_cce6-e837b0aa95fc5e07_61dc-75c03c5b39a0daa4_2f3f-c7c0a9f2bc2988c7_9168-0a743cc844d97d87_5037-0-tasks_to_exact_times": {
+      "cat": "wrong"
+    },
+    "67b015ec29b4d72b_29b9-ee5eba7cfd4e3518_5245-ff0a18102ce158de_97c6-9bf133507d9af7d3_cdad-11c57f7bab9c35b3_68fc-e3329234c2cfe3a6_478f-33d9c1f5b0994000_cce6-e837b0aa95fc5e07_61dc-75c03c5b39a0daa4_2f3f-c7c0a9f2bc2988c7_9168-0a743cc844d97d87_5037-0-tasks_to_days_ago": {
+      "cat": "correct"
+    },
+    "67b015ec29b4d72b_29b9-ee5eba7cfd4e3518_5245-ff0a18102ce158de_97c6-9bf133507d9af7d3_cdad-11c57f7bab9c35b3_68fc-e3329234c2cfe3a6_478f-33d9c1f5b0994000_cce6-e837b0aa95fc5e07_61dc-75c03c5b39a0daa4_2f3f-c7c0a9f2bc2988c7_9168-0a743cc844d97d87_5037-0-days_ago_to_episode": {
+      "cat": "correct_summarized"
+    },
+    "67b015ec29b4d72b_29b9-ee5eba7cfd4e3518_5245-ff0a18102ce158de_97c6-9bf133507d9af7d3_cdad-11c57f7bab9c35b3_68fc-e3329234c2cfe3a6_478f-33d9c1f5b0994000_cce6-e837b0aa95fc5e07_61dc-75c03c5b39a0daa4_2f3f-c7c0a9f2bc2988c7_9168-0a743cc844d97d87_5037-1-seq_specific_shortened_low_actions": {
+      "cat": "no_answer"
+    },
+    "b0145016721eaf7a_ed81-4fa2ec0968ff1914_23bf-af9133a3fa83196e_f4fc-19f512eab5786ae2_fbce-5f8216a4b4ab3214_ef95-0-sequence_of_task_descs": {
+      "cat": "correct_summarized"
+    },
+    "b0145016721eaf7a_ed81-4fa2ec0968ff1914_23bf-af9133a3fa83196e_f4fc-19f512eab5786ae2_fbce-5f8216a4b4ab3214_ef95-0-seq_specific_shortened_low_actions": {
+      "cat": "correct_summarized"
+    },
+    "b0145016721eaf7a_ed81-4fa2ec0968ff1914_23bf-af9133a3fa83196e_f4fc-19f512eab5786ae2_fbce-5f8216a4b4ab3214_ef95-0-seq_right_after_questions": {
+      "cat": "partially_correct_missing"
+    },
+    "b0145016721eaf7a_ed81-4fa2ec0968ff1914_23bf-af9133a3fa83196e_f4fc-19f512eab5786ae2_fbce-5f8216a4b4ab3214_ef95-0-seq_right_before_questions": {
+      "cat": "wrong"
+    },
+    "b0145016721eaf7a_ed81-4fa2ec0968ff1914_23bf-af9133a3fa83196e_f4fc-19f512eab5786ae2_fbce-5f8216a4b4ab3214_ef95-0-seq_simple_object_yes_no": {
+      "cat": "correct"
+    },
+    "b0145016721eaf7a_ed81-4fa2ec0968ff1914_23bf-af9133a3fa83196e_f4fc-19f512eab5786ae2_fbce-5f8216a4b4ab3214_ef95-0-exact_time_to_episode": {
+      "cat": "wrong"
+    },
+    "b0145016721eaf7a_ed81-4fa2ec0968ff1914_23bf-af9133a3fa83196e_f4fc-19f512eab5786ae2_fbce-5f8216a4b4ab3214_ef95-0-tasks_to_exact_times": {
+      "cat": "correct_summarized"
+    },
+    "b0145016721eaf7a_ed81-4fa2ec0968ff1914_23bf-af9133a3fa83196e_f4fc-19f512eab5786ae2_fbce-5f8216a4b4ab3214_ef95-0-tasks_to_days_ago": {
+      "cat": "correct"
+    },
+    "b0145016721eaf7a_ed81-4fa2ec0968ff1914_23bf-af9133a3fa83196e_f4fc-19f512eab5786ae2_fbce-5f8216a4b4ab3214_ef95-0-days_ago_to_episode": {
+      "cat": "partially_correct_missing"
+    },
+    "b0145016721eaf7a_ed81-4fa2ec0968ff1914_23bf-af9133a3fa83196e_f4fc-19f512eab5786ae2_fbce-5f8216a4b4ab3214_ef95-1-seq_specific_shortened_low_actions": {
+      "cat": "correct_summarized"
+    },
+    "2bb5605a3b3e63b4_cb07-3552f1a23f734b97_dce4-8d615abc0f826c37_556f-470f9c054b38bb8e_7abe-51575f6d8d664ad7_e807-39944c5272506032_5b70-3f2bc053bf9538f0_f000-ce2be720bcbc9aed_1f9d-62b41ce556a8c78b_54ee-75c03c5b39a0daa4_2f3f-4132a7996eb02929_02c7-0af9e23ab484da47_76da-69657d4143346a77_b008-da6307fedc15a446_30d9-4aedbc7aca492294_97f6-1ccaf767926ec0ff_b8bf-cdead98594e39fad_2fd4-8920e8135a63baeb_3de5-bf9f3f8255e7e6f5_b7c0-2a3f5edcc77abb24_295c-f12ea253f6cdecfb_dcfb-ab55c6959d4f9e0e_22ee-2670e1ebe702e930_b8e1-8f913f613a2365c1_aa1d-39b2e12afc97ed74_ff07-0-sequence_of_task_descs": {
+      "cat": "correct_summarized"
+    },
+    "2bb5605a3b3e63b4_cb07-3552f1a23f734b97_dce4-8d615abc0f826c37_556f-470f9c054b38bb8e_7abe-51575f6d8d664ad7_e807-39944c5272506032_5b70-3f2bc053bf9538f0_f000-ce2be720bcbc9aed_1f9d-62b41ce556a8c78b_54ee-75c03c5b39a0daa4_2f3f-4132a7996eb02929_02c7-0af9e23ab484da47_76da-69657d4143346a77_b008-da6307fedc15a446_30d9-4aedbc7aca492294_97f6-1ccaf767926ec0ff_b8bf-cdead98594e39fad_2fd4-8920e8135a63baeb_3de5-bf9f3f8255e7e6f5_b7c0-2a3f5edcc77abb24_295c-f12ea253f6cdecfb_dcfb-ab55c6959d4f9e0e_22ee-2670e1ebe702e930_b8e1-8f913f613a2365c1_aa1d-39b2e12afc97ed74_ff07-0-seq_specific_shortened_low_actions": {
+      "cat": "partially_correct_missing"
+    },
+    "2bb5605a3b3e63b4_cb07-3552f1a23f734b97_dce4-8d615abc0f826c37_556f-470f9c054b38bb8e_7abe-51575f6d8d664ad7_e807-39944c5272506032_5b70-3f2bc053bf9538f0_f000-ce2be720bcbc9aed_1f9d-62b41ce556a8c78b_54ee-75c03c5b39a0daa4_2f3f-4132a7996eb02929_02c7-0af9e23ab484da47_76da-69657d4143346a77_b008-da6307fedc15a446_30d9-4aedbc7aca492294_97f6-1ccaf767926ec0ff_b8bf-cdead98594e39fad_2fd4-8920e8135a63baeb_3de5-bf9f3f8255e7e6f5_b7c0-2a3f5edcc77abb24_295c-f12ea253f6cdecfb_dcfb-ab55c6959d4f9e0e_22ee-2670e1ebe702e930_b8e1-8f913f613a2365c1_aa1d-39b2e12afc97ed74_ff07-0-seq_right_after_questions": {
+      "cat": "correct_summarized"
+    },
+    "2bb5605a3b3e63b4_cb07-3552f1a23f734b97_dce4-8d615abc0f826c37_556f-470f9c054b38bb8e_7abe-51575f6d8d664ad7_e807-39944c5272506032_5b70-3f2bc053bf9538f0_f000-ce2be720bcbc9aed_1f9d-62b41ce556a8c78b_54ee-75c03c5b39a0daa4_2f3f-4132a7996eb02929_02c7-0af9e23ab484da47_76da-69657d4143346a77_b008-da6307fedc15a446_30d9-4aedbc7aca492294_97f6-1ccaf767926ec0ff_b8bf-cdead98594e39fad_2fd4-8920e8135a63baeb_3de5-bf9f3f8255e7e6f5_b7c0-2a3f5edcc77abb24_295c-f12ea253f6cdecfb_dcfb-ab55c6959d4f9e0e_22ee-2670e1ebe702e930_b8e1-8f913f613a2365c1_aa1d-39b2e12afc97ed74_ff07-0-seq_right_before_questions": {
+      "cat": "wrong"
+    },
+    "2bb5605a3b3e63b4_cb07-3552f1a23f734b97_dce4-8d615abc0f826c37_556f-470f9c054b38bb8e_7abe-51575f6d8d664ad7_e807-39944c5272506032_5b70-3f2bc053bf9538f0_f000-ce2be720bcbc9aed_1f9d-62b41ce556a8c78b_54ee-75c03c5b39a0daa4_2f3f-4132a7996eb02929_02c7-0af9e23ab484da47_76da-69657d4143346a77_b008-da6307fedc15a446_30d9-4aedbc7aca492294_97f6-1ccaf767926ec0ff_b8bf-cdead98594e39fad_2fd4-8920e8135a63baeb_3de5-bf9f3f8255e7e6f5_b7c0-2a3f5edcc77abb24_295c-f12ea253f6cdecfb_dcfb-ab55c6959d4f9e0e_22ee-2670e1ebe702e930_b8e1-8f913f613a2365c1_aa1d-39b2e12afc97ed74_ff07-0-seq_simple_object_yes_no": {
+      "cat": "correct"
+    },
+    "2bb5605a3b3e63b4_cb07-3552f1a23f734b97_dce4-8d615abc0f826c37_556f-470f9c054b38bb8e_7abe-51575f6d8d664ad7_e807-39944c5272506032_5b70-3f2bc053bf9538f0_f000-ce2be720bcbc9aed_1f9d-62b41ce556a8c78b_54ee-75c03c5b39a0daa4_2f3f-4132a7996eb02929_02c7-0af9e23ab484da47_76da-69657d4143346a77_b008-da6307fedc15a446_30d9-4aedbc7aca492294_97f6-1ccaf767926ec0ff_b8bf-cdead98594e39fad_2fd4-8920e8135a63baeb_3de5-bf9f3f8255e7e6f5_b7c0-2a3f5edcc77abb24_295c-f12ea253f6cdecfb_dcfb-ab55c6959d4f9e0e_22ee-2670e1ebe702e930_b8e1-8f913f613a2365c1_aa1d-39b2e12afc97ed74_ff07-0-exact_time_to_episode": {
+      "cat": "correct_summarized"
+    },
+    "2bb5605a3b3e63b4_cb07-3552f1a23f734b97_dce4-8d615abc0f826c37_556f-470f9c054b38bb8e_7abe-51575f6d8d664ad7_e807-39944c5272506032_5b70-3f2bc053bf9538f0_f000-ce2be720bcbc9aed_1f9d-62b41ce556a8c78b_54ee-75c03c5b39a0daa4_2f3f-4132a7996eb02929_02c7-0af9e23ab484da47_76da-69657d4143346a77_b008-da6307fedc15a446_30d9-4aedbc7aca492294_97f6-1ccaf767926ec0ff_b8bf-cdead98594e39fad_2fd4-8920e8135a63baeb_3de5-bf9f3f8255e7e6f5_b7c0-2a3f5edcc77abb24_295c-f12ea253f6cdecfb_dcfb-ab55c6959d4f9e0e_22ee-2670e1ebe702e930_b8e1-8f913f613a2365c1_aa1d-39b2e12afc97ed74_ff07-0-tasks_to_exact_times": {
+      "cat": "wrong"
+    },
+    "2bb5605a3b3e63b4_cb07-3552f1a23f734b97_dce4-8d615abc0f826c37_556f-470f9c054b38bb8e_7abe-51575f6d8d664ad7_e807-39944c5272506032_5b70-3f2bc053bf9538f0_f000-ce2be720bcbc9aed_1f9d-62b41ce556a8c78b_54ee-75c03c5b39a0daa4_2f3f-4132a7996eb02929_02c7-0af9e23ab484da47_76da-69657d4143346a77_b008-da6307fedc15a446_30d9-4aedbc7aca492294_97f6-1ccaf767926ec0ff_b8bf-cdead98594e39fad_2fd4-8920e8135a63baeb_3de5-bf9f3f8255e7e6f5_b7c0-2a3f5edcc77abb24_295c-f12ea253f6cdecfb_dcfb-ab55c6959d4f9e0e_22ee-2670e1ebe702e930_b8e1-8f913f613a2365c1_aa1d-39b2e12afc97ed74_ff07-0-tasks_to_days_ago": {
+      "cat": "correct"
+    },
+    "2bb5605a3b3e63b4_cb07-3552f1a23f734b97_dce4-8d615abc0f826c37_556f-470f9c054b38bb8e_7abe-51575f6d8d664ad7_e807-39944c5272506032_5b70-3f2bc053bf9538f0_f000-ce2be720bcbc9aed_1f9d-62b41ce556a8c78b_54ee-75c03c5b39a0daa4_2f3f-4132a7996eb02929_02c7-0af9e23ab484da47_76da-69657d4143346a77_b008-da6307fedc15a446_30d9-4aedbc7aca492294_97f6-1ccaf767926ec0ff_b8bf-cdead98594e39fad_2fd4-8920e8135a63baeb_3de5-bf9f3f8255e7e6f5_b7c0-2a3f5edcc77abb24_295c-f12ea253f6cdecfb_dcfb-ab55c6959d4f9e0e_22ee-2670e1ebe702e930_b8e1-8f913f613a2365c1_aa1d-39b2e12afc97ed74_ff07-0-days_ago_to_episode": {
+      "cat": "correct_summarized"
+    },
+    "2bb5605a3b3e63b4_cb07-3552f1a23f734b97_dce4-8d615abc0f826c37_556f-470f9c054b38bb8e_7abe-51575f6d8d664ad7_e807-39944c5272506032_5b70-3f2bc053bf9538f0_f000-ce2be720bcbc9aed_1f9d-62b41ce556a8c78b_54ee-75c03c5b39a0daa4_2f3f-4132a7996eb02929_02c7-0af9e23ab484da47_76da-69657d4143346a77_b008-da6307fedc15a446_30d9-4aedbc7aca492294_97f6-1ccaf767926ec0ff_b8bf-cdead98594e39fad_2fd4-8920e8135a63baeb_3de5-bf9f3f8255e7e6f5_b7c0-2a3f5edcc77abb24_295c-f12ea253f6cdecfb_dcfb-ab55c6959d4f9e0e_22ee-2670e1ebe702e930_b8e1-8f913f613a2365c1_aa1d-39b2e12afc97ed74_ff07-1-seq_specific_shortened_low_actions": {
+      "cat": "partially_correct_missing"
+    },
+    "9737263591a87cc5_5bfb-2dc698e1f80b4f5c_30fc-fc6427cb1d962b8e_5936-ee20e5b960bdf6b4_4c84-79bcb67ba5083a8e_6b2c-0cb8da0d8e6c29a2_8ec8-b1d18509aed47acd_d6ac-0fcb89ee7a25ca40_3733-77236df59fa60772_01dd-9f0fba9edff81552_1082-b6c043a0d8411916_94fd-a7ef4431cf183d45_6e51-0-sequence_of_task_descs": {
+      "cat": "correct_summarized"
+    },
+    "9737263591a87cc5_5bfb-2dc698e1f80b4f5c_30fc-fc6427cb1d962b8e_5936-ee20e5b960bdf6b4_4c84-79bcb67ba5083a8e_6b2c-0cb8da0d8e6c29a2_8ec8-b1d18509aed47acd_d6ac-0fcb89ee7a25ca40_3733-77236df59fa60772_01dd-9f0fba9edff81552_1082-b6c043a0d8411916_94fd-a7ef4431cf183d45_6e51-0-seq_specific_shortened_low_actions": {
+      "cat": "correct_summarized"
+    },
+    "9737263591a87cc5_5bfb-2dc698e1f80b4f5c_30fc-fc6427cb1d962b8e_5936-ee20e5b960bdf6b4_4c84-79bcb67ba5083a8e_6b2c-0cb8da0d8e6c29a2_8ec8-b1d18509aed47acd_d6ac-0fcb89ee7a25ca40_3733-77236df59fa60772_01dd-9f0fba9edff81552_1082-b6c043a0d8411916_94fd-a7ef4431cf183d45_6e51-0-seq_right_after_questions": {
+      "cat": "wrong"
+    },
+    "9737263591a87cc5_5bfb-2dc698e1f80b4f5c_30fc-fc6427cb1d962b8e_5936-ee20e5b960bdf6b4_4c84-79bcb67ba5083a8e_6b2c-0cb8da0d8e6c29a2_8ec8-b1d18509aed47acd_d6ac-0fcb89ee7a25ca40_3733-77236df59fa60772_01dd-9f0fba9edff81552_1082-b6c043a0d8411916_94fd-a7ef4431cf183d45_6e51-0-seq_right_before_questions": {
+      "cat": "wrong"
+    },
+    "9737263591a87cc5_5bfb-2dc698e1f80b4f5c_30fc-fc6427cb1d962b8e_5936-ee20e5b960bdf6b4_4c84-79bcb67ba5083a8e_6b2c-0cb8da0d8e6c29a2_8ec8-b1d18509aed47acd_d6ac-0fcb89ee7a25ca40_3733-77236df59fa60772_01dd-9f0fba9edff81552_1082-b6c043a0d8411916_94fd-a7ef4431cf183d45_6e51-0-seq_simple_object_yes_no": {
+      "cat": "correct"
+    },
+    "9737263591a87cc5_5bfb-2dc698e1f80b4f5c_30fc-fc6427cb1d962b8e_5936-ee20e5b960bdf6b4_4c84-79bcb67ba5083a8e_6b2c-0cb8da0d8e6c29a2_8ec8-b1d18509aed47acd_d6ac-0fcb89ee7a25ca40_3733-77236df59fa60772_01dd-9f0fba9edff81552_1082-b6c043a0d8411916_94fd-a7ef4431cf183d45_6e51-0-exact_time_to_episode": {
+      "cat": "wrong"
+    },
+    "9737263591a87cc5_5bfb-2dc698e1f80b4f5c_30fc-fc6427cb1d962b8e_5936-ee20e5b960bdf6b4_4c84-79bcb67ba5083a8e_6b2c-0cb8da0d8e6c29a2_8ec8-b1d18509aed47acd_d6ac-0fcb89ee7a25ca40_3733-77236df59fa60772_01dd-9f0fba9edff81552_1082-b6c043a0d8411916_94fd-a7ef4431cf183d45_6e51-0-tasks_to_exact_times": {
+      "cat": "wrong"
+    },
+    "9737263591a87cc5_5bfb-2dc698e1f80b4f5c_30fc-fc6427cb1d962b8e_5936-ee20e5b960bdf6b4_4c84-79bcb67ba5083a8e_6b2c-0cb8da0d8e6c29a2_8ec8-b1d18509aed47acd_d6ac-0fcb89ee7a25ca40_3733-77236df59fa60772_01dd-9f0fba9edff81552_1082-b6c043a0d8411916_94fd-a7ef4431cf183d45_6e51-0-tasks_to_days_ago": {
+      "cat": "correct"
+    },
+    "9737263591a87cc5_5bfb-2dc698e1f80b4f5c_30fc-fc6427cb1d962b8e_5936-ee20e5b960bdf6b4_4c84-79bcb67ba5083a8e_6b2c-0cb8da0d8e6c29a2_8ec8-b1d18509aed47acd_d6ac-0fcb89ee7a25ca40_3733-77236df59fa60772_01dd-9f0fba9edff81552_1082-b6c043a0d8411916_94fd-a7ef4431cf183d45_6e51-0-days_ago_to_episode": {
+      "cat": "correct"
+    },
+    "9737263591a87cc5_5bfb-2dc698e1f80b4f5c_30fc-fc6427cb1d962b8e_5936-ee20e5b960bdf6b4_4c84-79bcb67ba5083a8e_6b2c-0cb8da0d8e6c29a2_8ec8-b1d18509aed47acd_d6ac-0fcb89ee7a25ca40_3733-77236df59fa60772_01dd-9f0fba9edff81552_1082-b6c043a0d8411916_94fd-a7ef4431cf183d45_6e51-1-seq_specific_shortened_low_actions": {
+      "cat": "partially_correct_missing"
+    },
+    "7457f04aafddf5e7_cfc5-e2f733b140a55780_20ca-e4fd167160ca64f9_db4b-c3ea8b2be50acced_6c0d-128e184d9477800b_9b48-0ca46703456248e2_3431-1e5f0c4d9130ba54_9a5e-6920b431120c39d0_3d03-0-sequence_of_task_descs": {
+      "cat": "partially_correct_missing"
+    },
+    "7457f04aafddf5e7_cfc5-e2f733b140a55780_20ca-e4fd167160ca64f9_db4b-c3ea8b2be50acced_6c0d-128e184d9477800b_9b48-0ca46703456248e2_3431-1e5f0c4d9130ba54_9a5e-6920b431120c39d0_3d03-0-seq_specific_shortened_low_actions": {
+      "cat": "partially_correct_tmi"
+    },
+    "7457f04aafddf5e7_cfc5-e2f733b140a55780_20ca-e4fd167160ca64f9_db4b-c3ea8b2be50acced_6c0d-128e184d9477800b_9b48-0ca46703456248e2_3431-1e5f0c4d9130ba54_9a5e-6920b431120c39d0_3d03-0-seq_right_after_questions": {
+      "cat": "wrong"
+    },
+    "7457f04aafddf5e7_cfc5-e2f733b140a55780_20ca-e4fd167160ca64f9_db4b-c3ea8b2be50acced_6c0d-128e184d9477800b_9b48-0ca46703456248e2_3431-1e5f0c4d9130ba54_9a5e-6920b431120c39d0_3d03-0-seq_right_before_questions": {
+      "cat": "wrong"
+    },
+    "7457f04aafddf5e7_cfc5-e2f733b140a55780_20ca-e4fd167160ca64f9_db4b-c3ea8b2be50acced_6c0d-128e184d9477800b_9b48-0ca46703456248e2_3431-1e5f0c4d9130ba54_9a5e-6920b431120c39d0_3d03-0-seq_simple_object_yes_no": {
+      "cat": "correct"
+    },
+    "7457f04aafddf5e7_cfc5-e2f733b140a55780_20ca-e4fd167160ca64f9_db4b-c3ea8b2be50acced_6c0d-128e184d9477800b_9b48-0ca46703456248e2_3431-1e5f0c4d9130ba54_9a5e-6920b431120c39d0_3d03-0-exact_time_to_episode": {
+      "cat": "partially_correct_missing"
+    },
+    "7457f04aafddf5e7_cfc5-e2f733b140a55780_20ca-e4fd167160ca64f9_db4b-c3ea8b2be50acced_6c0d-128e184d9477800b_9b48-0ca46703456248e2_3431-1e5f0c4d9130ba54_9a5e-6920b431120c39d0_3d03-0-tasks_to_exact_times": {
+      "cat": "correct_summarized"
+    },
+    "7457f04aafddf5e7_cfc5-e2f733b140a55780_20ca-e4fd167160ca64f9_db4b-c3ea8b2be50acced_6c0d-128e184d9477800b_9b48-0ca46703456248e2_3431-1e5f0c4d9130ba54_9a5e-6920b431120c39d0_3d03-0-tasks_to_days_ago": {
+      "cat": "wrong"
+    },
+    "7457f04aafddf5e7_cfc5-e2f733b140a55780_20ca-e4fd167160ca64f9_db4b-c3ea8b2be50acced_6c0d-128e184d9477800b_9b48-0ca46703456248e2_3431-1e5f0c4d9130ba54_9a5e-6920b431120c39d0_3d03-0-days_ago_to_episode": {
+      "cat": "partially_correct_missing"
+    },
+    "7457f04aafddf5e7_cfc5-e2f733b140a55780_20ca-e4fd167160ca64f9_db4b-c3ea8b2be50acced_6c0d-128e184d9477800b_9b48-0ca46703456248e2_3431-1e5f0c4d9130ba54_9a5e-6920b431120c39d0_3d03-1-seq_specific_shortened_low_actions": {
+      "cat": "partially_correct_missing"
+    }
+  }
+}

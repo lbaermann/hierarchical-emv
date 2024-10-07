@@ -1,0 +1,475 @@
+[
+  {
+    "history": [
+      {
+        "video_id": "878666b9-5f3d-476a-960f-3a5d02da7619",
+        "start_time": "2024-08-01 10:25:34"
+      }
+    ],
+    "questions": [
+      {
+        "q": "What was the name of the restaurant where we had lunch?",
+        "a": "Diana Garcia",
+        "support": [
+          {
+            "video_id": "878666b9-5f3d-476a-960f-3a5d02da7619",
+            "frame": 330571
+          }
+        ]
+      },
+      {
+        "q": "How long did it take me to pass the wooden bridge during the hike?",
+        "a": "11 seconds",
+        "support": [
+          {
+            "video_id": "878666b9-5f3d-476a-960f-3a5d02da7619",
+            "frame": 85924
+          }
+        ]
+      },
+      {
+        "q": "What was each bridge that I passed over crossing?",
+        "a": "The bridge during the hike was crossing a small river, the bridge in the city was crossing a highway.",
+        "support": [
+          {
+            "video_id": "878666b9-5f3d-476a-960f-3a5d02da7619",
+            "frame": 86007
+          },
+          {
+            "video_id": "878666b9-5f3d-476a-960f-3a5d02da7619",
+            "frame": 620276
+          }
+        ]
+      },
+      {
+        "q": "How did I pay at the restaurant: by cash or card?",
+        "a": "credit card",
+        "support": [
+          {
+            "video_id": "878666b9-5f3d-476a-960f-3a5d02da7619",
+            "frame": 430341
+          }
+        ]
+      },
+      {
+        "q": "What amount of money did I withdraw in total from both ATMs?",
+        "a": "None, it did not work both times",
+        "support": [
+          {
+            "video_id": "878666b9-5f3d-476a-960f-3a5d02da7619",
+            "frame": 438742
+          },
+          {
+            "video_id": "878666b9-5f3d-476a-960f-3a5d02da7619",
+            "frame": 448130
+          }
+        ]
+      },
+      {
+        "q": "Where did I get the roller skate boots from?",
+        "a": "I brought them along in my backpack",
+        "support": [
+          {
+            "video_id": "878666b9-5f3d-476a-960f-3a5d02da7619",
+            "frame": 449892
+          }
+        ]
+      },
+      {
+        "q": "Where did I take a rest during the hike?",
+        "a": "On the roots of trees and stones, next to a waterfall",
+        "support": [
+          {
+            "video_id": "878666b9-5f3d-476a-960f-3a5d02da7619",
+            "frame": 93285
+          }
+        ]
+      },
+      {
+        "q": "Where did I walk around after the forest?",
+        "a": "On streets/roads",
+        "support": [
+          {
+            "video_id": "878666b9-5f3d-476a-960f-3a5d02da7619",
+            "frame": 157818
+          }
+        ]
+      },
+      {
+        "q": "What did I do to the golden/brownish dog?",
+        "a": "I let him smell me and then I pet him",
+        "support": [
+          {
+            "video_id": "878666b9-5f3d-476a-960f-3a5d02da7619",
+            "frame": 190849
+          }
+        ]
+      },
+      {
+        "q": "Which dog followed us?",
+        "a": "The white/gray one",
+        "support": [
+          {
+            "video_id": "878666b9-5f3d-476a-960f-3a5d02da7619",
+            "frame": 196002
+          }
+        ]
+      },
+      {
+        "q": "What snacks were offered to me in the house?",
+        "a": "Reeses and ManiMoto (nuts)",
+        "support": [
+          {
+            "video_id": "878666b9-5f3d-476a-960f-3a5d02da7619",
+            "frame": 206963
+          }
+        ]
+      },
+      {
+        "q": "Do I wear protection while rollerskating?",
+        "a": "Yes",
+        "support": [
+          {
+            "video_id": "878666b9-5f3d-476a-960f-3a5d02da7619",
+            "frame": 453213
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history": [
+      {
+        "video_id": "8fafc02a-ef7a-46f4-ae97-b0c68c8bb207",
+        "start_time": "2022-05-13 14:42:01"
+      }
+    ],
+    "questions": [
+      {
+        "q": "What was the name of the museum that I visited?",
+        "a": "Museo Naval del Caribe",
+        "support": [
+          {
+            "video_id": "8fafc02a-ef7a-46f4-ae97-b0c68c8bb207",
+            "frame": 21728
+          }
+        ]
+      },
+      {
+        "q": "How did we pay the entrance to the museum?",
+        "a": "cash",
+        "support": [
+          {
+            "video_id": "8fafc02a-ef7a-46f4-ae97-b0c68c8bb207",
+            "frame": 23628
+          }
+        ]
+      },
+      {
+        "q": "Where did we go after the museum?",
+        "a": "we did a small walk and then met with two women on a bench at a central place",
+        "support": [
+          {
+            "video_id": "8fafc02a-ef7a-46f4-ae97-b0c68c8bb207",
+            "frame": 168797
+          }
+        ]
+      },
+      {
+        "q": "Who spent the day of sightseeing with me?",
+        "a": "In the museum, I was with a young woman in a black shirt and a young man in a red shirt. Later, we met with two more women, who spent the rest of the day with us.",
+        "support": [
+          {
+            "video_id": "8fafc02a-ef7a-46f4-ae97-b0c68c8bb207",
+            "frame": 23386
+          },
+          {
+            "video_id": "8fafc02a-ef7a-46f4-ae97-b0c68c8bb207",
+            "frame": 168797
+          }
+        ]
+      },
+      {
+        "q": "What food did we get at the end of the day?",
+        "a": "ice cream",
+        "support": [
+          {
+            "video_id": "8fafc02a-ef7a-46f4-ae97-b0c68c8bb207",
+            "frame": 477600
+          }
+        ]
+      },
+      {
+        "q": "How long did we have to wait for the ice cream?",
+        "a": "3:57:38 - 4:21:28",
+        "support": [
+          {
+            "video_id": "8fafc02a-ef7a-46f4-ae97-b0c68c8bb207",
+            "frame": 427740
+          },
+          {
+            "video_id": "8fafc02a-ef7a-46f4-ae97-b0c68c8bb207",
+            "frame": 470641
+          }
+        ]
+      },
+      {
+        "q": "How many canons were infront of the museum?",
+        "a": "2",
+        "support": [
+          {
+            "video_id": "8fafc02a-ef7a-46f4-ae97-b0c68c8bb207",
+            "frame": 159516
+          }
+        ]
+      },
+      {
+        "q": "What were the genders of the people I interacted with on the bench and then joined us afterwards?",
+        "a": "2 women",
+        "support": [
+          {
+            "video_id": "8fafc02a-ef7a-46f4-ae97-b0c68c8bb207",
+            "frame": 169690
+          }
+        ]
+      },
+      {
+        "q": "Did I buy something in the first shop?",
+        "a": "No",
+        "support": [
+          {
+            "video_id": "8fafc02a-ef7a-46f4-ae97-b0c68c8bb207",
+            "frame": 212003
+          }
+        ]
+      },
+      {
+        "q": "In the bag shop, what color did the bag had I was interested in and took a picture of?",
+        "a": "Rose color",
+        "support": [
+          {
+            "video_id": "8fafc02a-ef7a-46f4-ae97-b0c68c8bb207",
+            "frame": 227230
+          }
+        ]
+      },
+      {
+        "q": "What did I do after taking a picture of the bag in the bag shop?",
+        "a": "Sent it to a contact, left the shop",
+        "support": [
+          {
+            "video_id": "8fafc02a-ef7a-46f4-ae97-b0c68c8bb207",
+            "frame": 228995
+          }
+        ]
+      },
+      {
+        "q": "Did we see a bride at a touristic place?",
+        "a": "Yes",
+        "support": [
+          {
+            "video_id": "8fafc02a-ef7a-46f4-ae97-b0c68c8bb207",
+            "frame": 247982
+          }
+        ]
+      },
+      {
+        "q": "Where did we watch the sunset?",
+        "a": "On a touristic platform (fort or mural)",
+        "support": [
+          {
+            "video_id": "8fafc02a-ef7a-46f4-ae97-b0c68c8bb207",
+            "frame": 262585
+          }
+        ]
+      },
+      {
+        "q": "Where did we sit down when it was dark to take a rest?",
+        "a": "Between shops and cars (parking lot)",
+        "support": [
+          {
+            "video_id": "8fafc02a-ef7a-46f4-ae97-b0c68c8bb207",
+            "frame": 366843
+          }
+        ]
+      },
+      {
+        "q": "Which colors were the cars we sat in front of at the parking lot?",
+        "a": "White and red",
+        "support": [
+          {
+            "video_id": "8fafc02a-ef7a-46f4-ae97-b0c68c8bb207",
+            "frame": 367072
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history": [
+      {
+        "video_id": "c4333895-ed19-42fe-9323-271a41bdfe4c",
+        "start_time": "2023-11-08 16:07:26"
+      },
+      {
+        "video_id": "e837708f-8276-4d2b-88b3-319cddabbf74",
+        "start_time": "2023-11-14 09:12:21"
+      },
+      {
+        "video_id": "6b0f2b6d-74aa-466e-a8b8-762223c4d581",
+        "start_time": "2023-11-15 11:41:48"
+      }
+    ],
+    "questions": [
+      {
+        "q_time": "2023-11-15 15:23:59",
+        "q": "Where did I do go yesterday?",
+        "a": "took a walk to the supermarket",
+        "support": [
+          {
+            "video_id": "e837708f-8276-4d2b-88b3-319cddabbf74"
+          }
+        ]
+      },
+      {
+        "q_time": "2023-11-15 15:23:59",
+        "q": "What did do today?",
+        "a": "Played ping-pong, walked to the supermarket to buy some prepared meals, sat into the car",
+        "support": [
+          {
+            "video_id": "6b0f2b6d-74aa-466e-a8b8-762223c4d581"
+          }
+        ]
+      },
+      {
+        "q_time": "2023-11-15 15:23:59",
+        "q": "Summarize what I did a week ago from today.",
+        "a": "exercised in the gym, walked home, worked on the computer, walked to the supermarket, bought few groceries, walked back home",
+        "support": [
+          {
+            "video_id": "c4333895-ed19-42fe-9323-271a41bdfe4c"
+          }
+        ]
+      },
+      {
+        "q_time": "2023-11-15 15:23:59",
+        "q": "What did I do after leaving the gym last week?",
+        "a": "First walked home, worked on the computer, later shortly visited the supermarket",
+        "support": [
+          {
+            "video_id": "c4333895-ed19-42fe-9323-271a41bdfe4c"
+          }
+        ]
+      },
+      {
+        "q_time": "2023-11-15 15:23:59",
+        "q": "Where did I go after I being at the supermarket today?",
+        "a": "walked through the streets to the car",
+        "support": [
+          {
+            "video_id": "6b0f2b6d-74aa-466e-a8b8-762223c4d581"
+          }
+        ]
+      },
+      {
+        "q_time": "2023-11-15 15:23:59",
+        "q": "What did I do today before buying food at the supermarket?",
+        "a": "playing ping-pong in the basement of bar",
+        "support": [
+          {
+            "video_id": "6b0f2b6d-74aa-466e-a8b8-762223c4d581"
+          }
+        ]
+      },
+      {
+        "q_time": "2023-11-15 15:23:59",
+        "q": "How did I pay at the supermarket yesterday?",
+        "a": "by card",
+        "support": [
+          {
+            "video_id": "e837708f-8276-4d2b-88b3-319cddabbf74",
+            "frame": 36300
+          }
+        ]
+      },
+      {
+        "q_time": "2023-11-15 15:23:59",
+        "q": "How was the weather yesterday?",
+        "a": "sunny, but fresh (man wearing jacket and hat)",
+        "support": [
+          {
+            "video_id": "e837708f-8276-4d2b-88b3-319cddabbf74",
+            "frame": 2600
+          }
+        ]
+      },
+      {
+        "q_time": "2023-11-15 15:23:59",
+        "q": "How was the weather after leaving the supermarket today?",
+        "a": "gray and there is snow (but it is not snowing)",
+        "support": [
+          {
+            "video_id": "6b0f2b6d-74aa-466e-a8b8-762223c4d581",
+            "frame": 27665
+          }
+        ]
+      },
+      {
+        "q_time": "2023-11-15 15:23:59",
+        "q": "When did leave the bar today?",
+        "a": "2023-11-15, 11:48:50",
+        "support": [
+          {
+            "video_id": "6b0f2b6d-74aa-466e-a8b8-762223c4d581",
+            "frame": 12665
+          }
+        ]
+      },
+      {
+        "q_time": "2023-11-15 15:23:59",
+        "q": "How long did I stay inside the supermarket yesterday?",
+        "a": "10 minutes and 18 seconds",
+        "support": [
+          {
+            "video_id": "e837708f-8276-4d2b-88b3-319cddabbf74",
+            "frame": 21299
+          },
+          {
+            "video_id": "e837708f-8276-4d2b-88b3-319cddabbf74",
+            "frame": 39836
+          }
+        ]
+      },
+      {
+        "q_time": "2023-11-15 15:23:59",
+        "q": "How long did I stay inside the supermarket today?",
+        "a": "4 minutes and 56 seconds",
+        "support": [
+          {
+            "video_id": "6b0f2b6d-74aa-466e-a8b8-762223c4d581",
+            "frame": 17220
+          },
+          {
+            "video_id": "6b0f2b6d-74aa-466e-a8b8-762223c4d581",
+            "frame": 26103
+          }
+        ]
+      },
+      {
+        "q_time": "2023-11-15 15:23:59",
+        "q": "How long did I stay inside the supermarket a week ago?",
+        "a": "1 minute and 16 seconds",
+        "support": [
+          {
+            "video_id": "c4333895-ed19-42fe-9323-271a41bdfe4c",
+            "frame": 42763
+          },
+          {
+            "video_id": "c4333895-ed19-42fe-9323-271a41bdfe4c",
+            "frame": 45046
+          }
+        ]
+      }
+    ]
+  }
+]

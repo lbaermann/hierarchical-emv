@@ -1,0 +1,10 @@
+llm:
+  type: ChatOpenAI
+  model_name: gpt-4o-2024-08-06
+  max_tokens: 128
+  temperature: 0.1
+  request_timeout: 20
+  max_retries: 2
+similarity_model: all-mpnet-base-v2
+few_shot_k: 0
+samples: [ ]

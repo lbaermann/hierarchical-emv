@@ -1,0 +1,623 @@
+{
+  "config": {
+    "cfg": "teach/zs_one_pass_semi_flat",
+    "output": "output/teach-dechant/multi-ep/gemini-1.5-pro/test_1pass_l1_0shot_5.json",
+    "dataset": "teach-dechant",
+    "n_samples": "None",
+    "qa_file": "/home/lbaermann/emv/data/TEACh/dechant-qa/multi-episode/test_sets/test_set_5.pkl",
+    "max_samples_per_episode": "None",
+    "use_only_question_types": "None",
+    "skip_first_n_episodes": "0",
+    "teach_base": "/home/lbaermann/emv/data/TEACh",
+    "llm_summarizer_cfg": "None",
+    "pure_img_approach": "None"
+  },
+  "code_commit": "090ddfc9b73fd4dd1f09753059049d09adfc630c",
+  "results": {
+    "03379f213dfbda39_79a2-724c11f87d95f819_a970-38d01f55a8e1ff9b_ca2f-2513b9a8d8ae5129_ab38-2bb159500f5ee79b_77a4-0-sequence_of_task_descs": {
+      "q_time": "2023/07/24 19:43:07",
+      "q": "List the tasks you performed.",
+      "gt": "prepare coffee in a clean mug. make a salad. boil potato. water the plant. make a plate of toast.",
+      "hyp": "I made coffee, sliced a tomato, cooked a potato in the microwave, put tomato and potato slices on a plate, boiled a potato, and made toast. \n"
+    },
+    "03379f213dfbda39_79a2-724c11f87d95f819_a970-38d01f55a8e1ff9b_ca2f-2513b9a8d8ae5129_ab38-2bb159500f5ee79b_77a4-0-seq_specific_shortened_low_actions": {
+      "q_time": "2023/07/24 19:43:07",
+      "q": "describe what you did when you make a salad.",
+      "gt": "pick up the tomato, place the tomato on the countertop, pick up the butter knife, slice tomato, place the butter knife on the countertop, toggle off the faucet, pick up the potato, toggle off the microwave, open the microwave, place the potato in the microwave, pick up the fork, place the fork on the countertop, pick up the apple, place the apple on the countertop, close the microwave, toggle on the microwave, toggle off the microwave, open the microwave, pick up the potato, close the microwave, place the potato on the countertop, pick up the fork, place the fork on the countertop, pick up the knife, slice potato, place the knife on the countertop, pick up the plate, place the plate on the countertop, pick up the potato, place the potato on the plate, pick up the tomato, place the tomato on the plate, pick up the potato, place the potato on the plate",
+      "hyp": "I sliced a tomato into pieces. \n"
+    },
+    "03379f213dfbda39_79a2-724c11f87d95f819_a970-38d01f55a8e1ff9b_ca2f-2513b9a8d8ae5129_ab38-2bb159500f5ee79b_77a4-0-seq_right_after_questions": {
+      "q_time": "2023/07/24 19:43:07",
+      "q": "What task did you do just after make a salad?",
+      "gt": "boil potato.",
+      "hyp": "Slice potato and cook it in the microwave. \n"
+    },
+    "03379f213dfbda39_79a2-724c11f87d95f819_a970-38d01f55a8e1ff9b_ca2f-2513b9a8d8ae5129_ab38-2bb159500f5ee79b_77a4-0-seq_right_before_questions": {
+      "q_time": "2023/07/24 19:43:07",
+      "q": "What task did you do just before boil potato?",
+      "gt": "make a salad.",
+      "hyp": "make coffee. \n"
+    },
+    "03379f213dfbda39_79a2-724c11f87d95f819_a970-38d01f55a8e1ff9b_ca2f-2513b9a8d8ae5129_ab38-2bb159500f5ee79b_77a4-0-seq_simple_object_yes_no": {
+      "q_time": "2023/07/24 19:43:07",
+      "q": "Was there a dresser ?",
+      "gt": "no",
+      "hyp": "No. \n"
+    },
+    "03379f213dfbda39_79a2-724c11f87d95f819_a970-38d01f55a8e1ff9b_ca2f-2513b9a8d8ae5129_ab38-2bb159500f5ee79b_77a4-0-seq_low_actions_to_episode_task_descs": {
+      "q_time": "2023/07/24 19:43:07",
+      "q": "what task or tasks did you perform when you place the potato on the countertop?",
+      "gt": " boil potato. and make a salad.",
+      "hyp": "The task was to boil the potato. \n"
+    },
+    "03379f213dfbda39_79a2-724c11f87d95f819_a970-38d01f55a8e1ff9b_ca2f-2513b9a8d8ae5129_ab38-2bb159500f5ee79b_77a4-0-exact_time_to_episode": {
+      "q_time": "2023/07/24 19:43:07",
+      "q": "what did you do on Jul 22, 2023 at 11:06 AM?",
+      "gt": "make a salad.",
+      "hyp": "I picked up a tomato from the garbage can. \n"
+    },
+    "03379f213dfbda39_79a2-724c11f87d95f819_a970-38d01f55a8e1ff9b_ca2f-2513b9a8d8ae5129_ab38-2bb159500f5ee79b_77a4-0-tasks_to_exact_times": {
+      "q_time": "2023/07/24 19:43:07",
+      "q": "When did you boil potato?",
+      "gt": "Jul 23, 2023 at 03:20 PM",
+      "hyp": "2023/07/23. \n"
+    },
+    "03379f213dfbda39_79a2-724c11f87d95f819_a970-38d01f55a8e1ff9b_ca2f-2513b9a8d8ae5129_ab38-2bb159500f5ee79b_77a4-0-tasks_to_days_ago": {
+      "q_time": "2023/07/24 19:43:07",
+      "q": "Today is Jul 24, 2023 at 07:43 PM. How many days ago did you boil potato?",
+      "gt": "1 day ago",
+      "hyp": "1 day ago. \n"
+    },
+    "03379f213dfbda39_79a2-724c11f87d95f819_a970-38d01f55a8e1ff9b_ca2f-2513b9a8d8ae5129_ab38-2bb159500f5ee79b_77a4-0-days_ago_to_episode": {
+      "q_time": "2023/07/24 19:43:07",
+      "q": "Today is Jul 24, 2023 at 07:43 PM. What did you do 1 day ago?",
+      "gt": "boil potato.",
+      "hyp": "On July 22nd, 2023, I made coffee and sliced a tomato. \n"
+    },
+    "ed9479c5dd8f204d_0102-92ec5d9ad47a53b8_d3c5-fe6b3de8c88b8573_9f76-5f3063384d77aa71_0ac8-ce0a11d25e229099_8adc-0-sequence_of_task_descs": {
+      "q_time": "2024/03/12 19:57:38",
+      "q": "List the tasks you performed.",
+      "gt": "water the plant. cook 2 slice(s) of potato and serve on a plate. make a salad. prepare coffee in a clean mug. prepare breakfast.",
+      "hyp": "ng: The question asks for a list of tasks performed, which can be found by looking at the user's speech commands in the history. \n\nAnswer:\n- Water the plant\n- Cook 2 slices of potato\n- Slice a tomato\n- Cook two slices of a potato\n- Put all the salad components on the plate\n- Put coffee in mug\n- Wash the mug\n- Slice the lettuce, tomato and potato\n- Cook 2 slices of the potato\n- Place lettuce and 2 slices of potatoes on the plate\n- Place a slice of tomato and a slice of lettuce on the plate \n"
+    },
+    "ed9479c5dd8f204d_0102-92ec5d9ad47a53b8_d3c5-fe6b3de8c88b8573_9f76-5f3063384d77aa71_0ac8-ce0a11d25e229099_8adc-0-seq_specific_shortened_low_actions": {
+      "q_time": "2024/03/12 19:57:38",
+      "q": "describe what you did when you make a salad.",
+      "gt": "pick up the knife, slice tomato, place the knife on the countertop, pick up the potato, place the potato on the countertop, pick up the knife, slice potato, place the knife on the countertop, pick up the plate, place the plate on the countertop, pick up the mug, place the mug on the chair, pick up the potato, toggle off the microwave, open the microwave, place the potato in the microwave, pick up the potato, place the potato in the microwave, close the microwave, toggle on the microwave, toggle off the microwave, open the microwave, close the microwave, toggle on the microwave, pick up the potato, place the potato on the plate, pick up the potato, place the potato on the plate, pick up the tomato, place the tomato on the plate, pick up the plate, place the plate on the countertop, pick up the papertowel roll, place the papertowel roll on the countertop, pick up the soap bottle, place the soap bottle on the countertop, pick up the pepper shaker, place the pepper shaker on the countertop, pick up the potato, place the potato on the pan, pick up the potato, place the potato on the pan, pick up the tomato, place the tomato on the countertop, pick up the plate, place the plate in the sink, toggle on the faucet, toggle off the faucet, pick up the plate, place the plate on the countertop, pick up the credit card, place the credit card on the countertop, toggle on the stove knob, pick up the potato, place the potato on the plate, pick up the potato, place the potato on the plate, pick up the tomato, place the tomato on the plate, pick up the tomato, place the tomato on the countertop, pick up the tomato",
+      "hyp": "I sliced lettuce, tomato and potato, and put two slices of potato in the microwave to cook. After they were cooked, I put the lettuce, two slices of potato and a slice of tomato on a plate. \n"
+    },
+    "ed9479c5dd8f204d_0102-92ec5d9ad47a53b8_d3c5-fe6b3de8c88b8573_9f76-5f3063384d77aa71_0ac8-ce0a11d25e229099_8adc-0-seq_right_after_questions": {
+      "q_time": "2024/03/12 19:57:38",
+      "q": "What task did you do just after prepare coffee in a clean mug?",
+      "gt": "prepare breakfast.",
+      "hyp": "Cook two slices of potato. \n"
+    },
+    "ed9479c5dd8f204d_0102-92ec5d9ad47a53b8_d3c5-fe6b3de8c88b8573_9f76-5f3063384d77aa71_0ac8-ce0a11d25e229099_8adc-0-seq_right_before_questions": {
+      "q_time": "2024/03/12 19:57:38",
+      "q": "What task did you do just before prepare breakfast?",
+      "gt": "prepare coffee in a clean mug.",
+      "hyp": "I made coffee. \n"
+    },
+    "ed9479c5dd8f204d_0102-92ec5d9ad47a53b8_d3c5-fe6b3de8c88b8573_9f76-5f3063384d77aa71_0ac8-ce0a11d25e229099_8adc-0-seq_simple_object_yes_no": {
+      "q_time": "2024/03/12 19:57:38",
+      "q": "Was there a television ?",
+      "gt": "no",
+      "hyp": "No. \n"
+    },
+    "ed9479c5dd8f204d_0102-92ec5d9ad47a53b8_d3c5-fe6b3de8c88b8573_9f76-5f3063384d77aa71_0ac8-ce0a11d25e229099_8adc-0-seq_low_actions_to_episode_task_descs": {
+      "q_time": "2024/03/12 19:57:38",
+      "q": "what task or tasks did you perform when you pick up the peppershaker?",
+      "gt": " make a salad.",
+      "hyp": "I picked up the peppershaker to put it on the counter. \n"
+    },
+    "ed9479c5dd8f204d_0102-92ec5d9ad47a53b8_d3c5-fe6b3de8c88b8573_9f76-5f3063384d77aa71_0ac8-ce0a11d25e229099_8adc-0-exact_time_to_episode": {
+      "q_time": "2024/03/12 19:57:38",
+      "q": "what did you do on Mar 10, 2024 at 01:59 PM?",
+      "gt": "water the plant.",
+      "hyp": "I picked up Statue_0. \n"
+    },
+    "ed9479c5dd8f204d_0102-92ec5d9ad47a53b8_d3c5-fe6b3de8c88b8573_9f76-5f3063384d77aa71_0ac8-ce0a11d25e229099_8adc-0-tasks_to_exact_times": {
+      "q_time": "2024/03/12 19:57:38",
+      "q": "When did you prepare breakfast?",
+      "gt": "Mar 12, 2024 at 03:04 PM",
+      "hyp": "2024/03/10 and 2024/03/12. \n"
+    },
+    "ed9479c5dd8f204d_0102-92ec5d9ad47a53b8_d3c5-fe6b3de8c88b8573_9f76-5f3063384d77aa71_0ac8-ce0a11d25e229099_8adc-0-tasks_to_days_ago": {
+      "q_time": "2024/03/12 19:57:38",
+      "q": "Today is Mar 12, 2024 at 07:57 PM. How many days ago did you prepare coffee in a clean mug?",
+      "gt": "1 day ago",
+      "hyp": "0 days ago. \n"
+    },
+    "ed9479c5dd8f204d_0102-92ec5d9ad47a53b8_d3c5-fe6b3de8c88b8573_9f76-5f3063384d77aa71_0ac8-ce0a11d25e229099_8adc-0-days_ago_to_episode": {
+      "q_time": "2024/03/12 19:57:38",
+      "q": "Today is Mar 12, 2024 at 07:57 PM. What did you do 0 day ago?",
+      "gt": "prepare breakfast.",
+      "hyp": "I made coffee, sliced lettuce, tomato and potato, cooked potato in the microwave and put lettuce, potato and tomato on a plate. \n"
+    },
+    "935fb97bba18de43_1130-a966ba0c6e0d463d_ce88-e6843c101e55d384_ffcf-60adcb4590587fb8_3e77-8b2af8ba42ca5cae_913a-0-sequence_of_task_descs": {
+      "q_time": "2023/03/17 13:40:06",
+      "q": "List the tasks you performed.",
+      "gt": "prepare coffee in a clean mug. make a plate of toast. clean all the cups. prepare breakfast. serve 1 slice(s) of tomato in a bowl.",
+      "hyp": "ng: The history contains all the actions I performed and the corresponding time. I can list all the actions based on the history.\n\nAnswer:\n- ToggleOff Faucet\n- Say What should I do today?\n- TurnRight\n- TurnLeft\n- TurnLeft\n- TurnLeft\n- TurnLeft\n- Noop\n- Say Where is the mug?\n- TurnRight\n- TurnRight\n- Noop\n- TurnRight\n- TurnRight\n- TurnLeft\n- Forward\n- Forward\n- TurnRight\n- Forward\n- Forward\n- Forward\n- Forward\n- TurnRight\n- Forward\n- Forward\n- Forward\n- Forward\n- Forward\n- Forward\n- TurnRight\n- ToggleOff Faucet\n- Pickup Mug_2\n- Pour Sink_Basin\n- TurnLeft\n- TurnLeft\n- PanRight\n- PanRight\n- PanRight\n- PanRight\n- Forward\n- Place CoffeeMachine\n- ToggleOn CoffeeMachine\n- Noop\n- Say Ok. I have filled the mug\n- Say What shall I do today?\n- Noop\n- Say Can you help me find bread?\n- Noop\n- Forward\n- TurnLeft\n- Forward\n- Forward\n- Forward\n- Forward\n- Forward\n- Forward\n- Forward\n- Forward\n- Forward\n- TurnLeft\n- TurnRight\n- Backward\n- Open Fridge\n- Pickup Bread\n- TurnLeft\n- Place CounterTop_0\n- TurnRight\n- Pickup Knife_0\n- TurnLeft\n- Place None\n- Slice Bread\n- Place CounterTop_0\n- Forward\n- Forward\n- Say How many slices?\n- Noop\n- Pickup None\n- Forward\n- PanRight\n- PanRight\n- Forward\n- Forward\n- TurnLeft\n- Pickup Bread_Sliced_3\n- PanLeft\n- PanLeft\n- TurnRight\n- TurnRight\n- TurnRight\n- TurnRight\n- Forward\n- Forward\n- TurnLeft\n- Place Toaster\n- ToggleOn Toaster\n- ToggleOff Toaster\n- Say Place the toast on plate\n- Say \n- Noop\n- Noop\n- Pickup Plate_0\n- Place CounterTop_1\n- Pickup Bread_Sliced_3\n- Place None\n- PanRight\n- Forward\n- Place None\n- Place CounterTop_1\n- Say Unable to place the slice\n- Noop\n- LookUp\n- Open Cabinet_4\n- Close Cabinet_4\n- PanRight\n- PanRight\n- Backward\n- Backward\n- Open Cabinet_5\n- Pickup Plate_1\n- TurnRight\n- TurnRight\n- LookDown\n- Place CounterTop_0\n- PanRight\n- PanRight\n- PanRight\n- PanRight\n- Forward\n- Forward\n- Forward\n- TurnLeft\n- Pickup Bread_Sliced_6\n- TurnLeft\n- Forward\n- Forward\n- Forward\n- PanRight\n- Place Toaster\n- ToggleOn Toaster\n- ToggleOff Toaster\n- Pickup Bread_Sliced_6\n- Place Plate_0\n- Noop\n- TurnRight\n- TurnRight\n- TurnRight\n- LookDown\n- Pickup SoapBottle_2\n- Place CounterTop_0\n- Pickup Plate_1\n- Noop\n- Place Sink_Basin\n- Noop\n- ToggleOn Faucet\n- ToggleOff Faucet\n- Pickup Plate_1\n- TurnRight\n- TurnRight\n- Place CounterTop_1\n- Pickup Potato_0_Sliced_7\n- Place Plate_1\n- Pickup Potato_0_Sliced_6\n- Place Plate_1\n- Pickup Tomato_Sliced_6\n- Place Plate_1\n- TurnRight\n- Noop\n- TurnRight\n- PanLeft\n- PanLeft\n- Forward\n- Pickup Lettuce_2_Sliced_6\n- TurnRight\n- TurnRight\n- PanLeft\n- PanLeft\n- Place Plate_1\n- Say done\n- Noop\n- Noop\n- Say hi, how can i help?\n- TurnRight\n- Noop\n- Forward\n- Forward\n- Forward\n- Forward\n- Forward\n- PanRight\n- Noop\n- TurnRight\n- Forward\n- TurnLeft\n- Forward\n- Forward\n- Forward\n- Forward\n- Forward\n- TurnLeft\n- Forward\n- Forward\n- Forward\n- Forward\n- Noop\n- Forward\n- Forward\n- Forward\n- TurnRight\n- Pickup Knife_0\n- Slice Tomato_1\n- Forward\n- Place CounterTop_1\n- Say done, what should i do next?\n- Noop\n- Noop\n- TurnLeft\n- Forward\n- Forward\n- Forward\n- TurnLeft\n- Forward\n- Forward\n- Forward\n- TurnRight\n- Forward\n- TurnRight\n- Open Fridge\n- Forward\n- Forward\n- Forward\n- Pickup Bowl_2\n- PanRight\n- PanRight\n- PanRight\n- PanRight\n- PanRight\n- PanRight\n- TurnRight\n- TurnRight\n- Forward\n- Place CounterTop_0\n- ToggleOff Faucet\n- Pickup Mug\n- Place CounterTop_0\n- Pickup DishSponge\n- Place CounterTop_0\n- Pickup Bowl_2\n- Place Sink_Basin\n- ToggleOn Faucet\n- ToggleOff Faucet\n- Pickup Bowl_2\n- Pour Sink_Basin\n- TurnLeft\n- TurnLeft\n- Place CounterTop_1\n- Pickup Tomato_1_Sliced_6\n- Place Bowl_2\n- Noop \n"
+    },
+    "935fb97bba18de43_1130-a966ba0c6e0d463d_ce88-e6843c101e55d384_ffcf-60adcb4590587fb8_3e77-8b2af8ba42ca5cae_913a-0-seq_specific_shortened_low_actions": {
+      "q_time": "2023/03/17 13:40:06",
+      "q": "describe what you did when you make a plate of toast.",
+      "gt": "open the fridge, pick up the bread, place the bread on the countertop, pick up the knife, slice bread, place the knife on the countertop, pick up the bread, place the bread on the toaster, toggle on the toaster, toggle off the toaster, pick up the plate, place the plate on the countertop, pick up the bread, place the bread on the countertop, open the cabinet, close the cabinet, open the cabinet, pick up the plate, place the plate on the countertop, pick up the bread, place the bread on the toaster, toggle on the toaster, toggle off the toaster, pick up the bread, place the bread on the plate",
+      "hyp": "I opened the fridge, took out bread and a knife, sliced the bread, put a slice in the toaster, turned it on, then off, and placed the toast on a plate from the fridge. \n"
+    },
+    "935fb97bba18de43_1130-a966ba0c6e0d463d_ce88-e6843c101e55d384_ffcf-60adcb4590587fb8_3e77-8b2af8ba42ca5cae_913a-0-seq_right_after_questions": {
+      "q_time": "2023/03/17 13:40:06",
+      "q": "What task did you do just after make a plate of toast?",
+      "gt": "clean all the cups.",
+      "hyp": "I opened the fridge. \n"
+    },
+    "935fb97bba18de43_1130-a966ba0c6e0d463d_ce88-e6843c101e55d384_ffcf-60adcb4590587fb8_3e77-8b2af8ba42ca5cae_913a-0-seq_right_before_questions": {
+      "q_time": "2023/03/17 13:40:06",
+      "q": "What task did you do just before prepare breakfast?",
+      "gt": "clean all the cups.",
+      "hyp": "I cannot answer this question. \n"
+    },
+    "935fb97bba18de43_1130-a966ba0c6e0d463d_ce88-e6843c101e55d384_ffcf-60adcb4590587fb8_3e77-8b2af8ba42ca5cae_913a-0-seq_simple_object_yes_no": {
+      "q_time": "2023/03/17 13:40:06",
+      "q": "Was there an armchair ?",
+      "gt": "no",
+      "hyp": "No. \n"
+    },
+    "935fb97bba18de43_1130-a966ba0c6e0d463d_ce88-e6843c101e55d384_ffcf-60adcb4590587fb8_3e77-8b2af8ba42ca5cae_913a-0-seq_low_actions_to_episode_task_descs": {
+      "q_time": "2023/03/17 13:40:06",
+      "q": "what task or tasks did you perform when you place the cup on the countertop?",
+      "gt": " clean all the cups.",
+      "hyp": "I was cleaning the cup. \n"
+    },
+    "935fb97bba18de43_1130-a966ba0c6e0d463d_ce88-e6843c101e55d384_ffcf-60adcb4590587fb8_3e77-8b2af8ba42ca5cae_913a-0-exact_time_to_episode": {
+      "q_time": "2023/03/17 13:40:06",
+      "q": "what did you do on Mar 15, 2023 at 02:14 PM?",
+      "gt": "make a plate of toast.",
+      "hyp": "I opened the fridge. \n"
+    },
+    "935fb97bba18de43_1130-a966ba0c6e0d463d_ce88-e6843c101e55d384_ffcf-60adcb4590587fb8_3e77-8b2af8ba42ca5cae_913a-0-tasks_to_exact_times": {
+      "q_time": "2023/03/17 13:40:06",
+      "q": "When did you clean all the cups?",
+      "gt": "Mar 15, 2023 at 03:42 PM",
+      "hyp": "Never. \n"
+    },
+    "935fb97bba18de43_1130-a966ba0c6e0d463d_ce88-e6843c101e55d384_ffcf-60adcb4590587fb8_3e77-8b2af8ba42ca5cae_913a-0-tasks_to_days_ago": {
+      "q_time": "2023/03/17 13:40:06",
+      "q": "Today is Mar 17, 2023 at 01:40 PM. How many days ago did you clean all the cups?",
+      "gt": "2 days ago",
+      "hyp": "2 days ago. \n"
+    },
+    "935fb97bba18de43_1130-a966ba0c6e0d463d_ce88-e6843c101e55d384_ffcf-60adcb4590587fb8_3e77-8b2af8ba42ca5cae_913a-0-days_ago_to_episode": {
+      "q_time": "2023/03/17 13:40:06",
+      "q": "Today is Mar 17, 2023 at 01:40 PM. What did you do 0 day ago?",
+      "gt": "serve 1 slice(s) of tomato in a bowl.",
+      "hyp": "I picked up a knife, sliced a tomato, placed the knife, opened the fridge, picked up a bowl, placed it on the counter, turned off the faucet, picked up a mug, placed it on the counter, picked up a sponge, placed it on the counter, picked up the bowl, placed it in the sink, turned on the faucet, turned off the faucet, picked up the bowl, poured water into the sink, placed the bowl on the counter, picked up a tomato slice, placed it in the bowl. \n"
+    },
+    "bb571c169830c652_63a4-aa310077d368fbbc_0a82-6f28bbc4c8ed232a_bfc2-eb4e4611871c24cb_8467-e0eef229bbf6e195_2ba8-0-sequence_of_task_descs": {
+      "q_time": "2024/04/20 17:57:00",
+      "q": "List the tasks you performed.",
+      "gt": "make a plate of toast. put all newspaper on one dresser. clean all the plates. serve 2 slice(s) of tomato on a plate. water the plant.",
+      "hyp": "ng: The question asks for a list of tasks that I have performed, which are the actions that I successfully executed.\n\nAnswer:\n- Pickup(Knife_0)\n- Slice(Bread)\n- Place(CounterTop_1)\n- Pickup(Bread_Sliced_5)\n- Place(Toaster)\n- Pickup(Plate_1)\n- Place(CounterTop_1)\n- Pickup(Bread_Sliced_5)\n- Place(Plate_1)\n- Pickup(Newspaper_0)\n- Place(Dresser)\n- Open(Fridge)\n- Pickup(Plate_1)\n- Close(Fridge)\n- Place(Sink_Basin)\n- ToggleOn(Faucet)\n- ToggleOn(LightSwitch)\n- Open(Fridge)\n- Pickup(Tomato_1)\n- Place(CounterTop_1)\n- Pickup(Knife)\n- Slice(Tomato_1)\n- Place(CounterTop_0)\n- Close(Fridge)\n- Pickup(Plate_0)\n- Place(CounterTop_1)\n- Pickup(Tomato_1_Sliced_4)\n- Place(Plate_0)\n- Pickup(Tomato_1_Sliced_3)\n- Place(Plate_0)\n- Pickup(Cup)\n- Pour(HousePlant) \n"
+    },
+    "bb571c169830c652_63a4-aa310077d368fbbc_0a82-6f28bbc4c8ed232a_bfc2-eb4e4611871c24cb_8467-e0eef229bbf6e195_2ba8-0-seq_specific_shortened_low_actions": {
+      "q_time": "2024/04/20 17:57:00",
+      "q": "describe what you did when you serve 2 slice(s) of tomato on a plate.",
+      "gt": "toggle on the light switch, open the fridge, pick up the tomato, place the tomato on the countertop, pick up the knife, slice tomato, place the knife on the countertop, close the fridge, pick up the plate, place the plate on the countertop, pick up the tomato, place the tomato on the plate, pick up the tomato, place the tomato on the plate",
+      "hyp": "I sliced a tomato into several slices, picked up two of them and put them on a plate. \n"
+    },
+    "bb571c169830c652_63a4-aa310077d368fbbc_0a82-6f28bbc4c8ed232a_bfc2-eb4e4611871c24cb_8467-e0eef229bbf6e195_2ba8-0-seq_right_after_questions": {
+      "q_time": "2024/04/20 17:57:00",
+      "q": "What task did you do just after make a plate of toast?",
+      "gt": "put all newspaper on one dresser.",
+      "hyp": "Put the newspaper on the dresser. \n"
+    },
+    "bb571c169830c652_63a4-aa310077d368fbbc_0a82-6f28bbc4c8ed232a_bfc2-eb4e4611871c24cb_8467-e0eef229bbf6e195_2ba8-0-seq_right_before_questions": {
+      "q_time": "2024/04/20 17:57:00",
+      "q": "What task did you do just before serve 2 slice(s) of tomato on a plate?",
+      "gt": "clean all the plates.",
+      "hyp": "Slice tomato. \n"
+    },
+    "bb571c169830c652_63a4-aa310077d368fbbc_0a82-6f28bbc4c8ed232a_bfc2-eb4e4611871c24cb_8467-e0eef229bbf6e195_2ba8-0-seq_simple_object_yes_no": {
+      "q_time": "2024/04/20 17:57:00",
+      "q": "Was there a bed ?",
+      "gt": "no",
+      "hyp": "No. \n"
+    },
+    "bb571c169830c652_63a4-aa310077d368fbbc_0a82-6f28bbc4c8ed232a_bfc2-eb4e4611871c24cb_8467-e0eef229bbf6e195_2ba8-0-seq_low_actions_to_episode_task_descs": {
+      "q_time": "2024/04/20 17:57:00",
+      "q": "what task or tasks did you perform when you pick up the newspaper?",
+      "gt": " put all newspaper on one dresser.",
+      "hyp": "I picked up the newspaper and placed it on the dresser. \n"
+    },
+    "bb571c169830c652_63a4-aa310077d368fbbc_0a82-6f28bbc4c8ed232a_bfc2-eb4e4611871c24cb_8467-e0eef229bbf6e195_2ba8-0-exact_time_to_episode": {
+      "q_time": "2024/04/20 17:57:00",
+      "q": "what did you do on Apr 19, 2024 at 09:23 AM?",
+      "gt": "put all newspaper on one dresser.",
+      "hyp": "I put a newspaper on the dresser. \n"
+    },
+    "bb571c169830c652_63a4-aa310077d368fbbc_0a82-6f28bbc4c8ed232a_bfc2-eb4e4611871c24cb_8467-e0eef229bbf6e195_2ba8-0-tasks_to_exact_times": {
+      "q_time": "2024/04/20 17:57:00",
+      "q": "When did you clean all the plates?",
+      "gt": "Apr 19, 2024 at 06:55 PM",
+      "hyp": "I have never cleaned all the plates. \n"
+    },
+    "bb571c169830c652_63a4-aa310077d368fbbc_0a82-6f28bbc4c8ed232a_bfc2-eb4e4611871c24cb_8467-e0eef229bbf6e195_2ba8-0-tasks_to_days_ago": {
+      "q_time": "2024/04/20 17:57:00",
+      "q": "Today is Apr 20, 2024 at 05:57 PM. How many days ago did you serve 2 slice(s) of tomato on a plate?",
+      "gt": "0 day ago",
+      "hyp": "0 day(s) ago. \n"
+    },
+    "bb571c169830c652_63a4-aa310077d368fbbc_0a82-6f28bbc4c8ed232a_bfc2-eb4e4611871c24cb_8467-e0eef229bbf6e195_2ba8-0-days_ago_to_episode": {
+      "q_time": "2024/04/20 17:57:00",
+      "q": "Today is Apr 20, 2024 at 05:57 PM. What did you do 1 day ago?",
+      "gt": "make a plate of toast and put all newspaper on one dresser and clean all the plates.",
+      "hyp": "I picked up a knife, sliced bread, and put the slice on a plate. I also picked up a newspaper and placed it on the dresser. Finally, I opened the fridge and picked up a dirty plate from it. \n"
+    },
+    "c7cc40993ef8468b_3e7b-09916b24496645e4_5ff9-9e23434a16a146b5_7f9a-af51d39b23e95018_8b5d-b53c115c99ca34dd_675e-0-sequence_of_task_descs": {
+      "q_time": "2023/10/30 11:53:14",
+      "q": "List the tasks you performed.",
+      "gt": "cook 2 slice(s) of potato and serve in a bowl. make a plate of toast. put all newspaper on any sidetable. make a salad. make a sandwich.",
+      "hyp": "ng: The history contains information on all the tasks that I have performed. I can list all the top level actions to answer the question.\n\nAnswer:\nPickup, Say, Noop, Forward, TurnLeft, PanRight, Slice, Place, ToggleOff, Open, Pour, ToggleOn, Backward, LookUp, LookDown, Close"
+    },
+    "c7cc40993ef8468b_3e7b-09916b24496645e4_5ff9-9e23434a16a146b5_7f9a-af51d39b23e95018_8b5d-b53c115c99ca34dd_675e-0-seq_specific_shortened_low_actions": {
+      "q_time": "2023/10/30 11:53:14",
+      "q": "describe what you did when you make a sandwich.",
+      "gt": "pick up the butter knife, slice bread, place the butter knife on the countertop, pick up the butter knife, slice bread, place the butter knife on the countertop, pick up the soap bottle, place the soap bottle on the countertop, pick up the bread, place the bread on the toaster, toggle on the toaster, pick up the bread, place the bread on the countertop, pick up the bread, place the bread on the toaster, pick up the bread, place the bread on the countertop, open the fridge, pick up the lettuce, place the lettuce on the countertop, pick up the butter knife, slice lettuce, place the butter knife on the countertop, pick up the plate, place the plate on the countertop, pick up the bread, place the bread on the plate, pick up the bread, place the bread on the plate, pick up the lettuce, place the lettuce on the countertop, pick up the lettuce, place the lettuce on the plate, pick up the lettuce, place the lettuce on the plate",
+      "hyp": "I sliced a loaf of bread at the sink, put one slice on a plate from the fridge, and toasted it. \n"
+    },
+    "c7cc40993ef8468b_3e7b-09916b24496645e4_5ff9-9e23434a16a146b5_7f9a-af51d39b23e95018_8b5d-b53c115c99ca34dd_675e-0-seq_right_after_questions": {
+      "q_time": "2023/10/30 11:53:14",
+      "q": "What task did you do just after cook 2 slice(s) of potato and serve in a bowl?",
+      "gt": "make a plate of toast.",
+      "hyp": "Make a plate of toast. \n"
+    },
+    "c7cc40993ef8468b_3e7b-09916b24496645e4_5ff9-9e23434a16a146b5_7f9a-af51d39b23e95018_8b5d-b53c115c99ca34dd_675e-0-seq_right_before_questions": {
+      "q_time": "2023/10/30 11:53:14",
+      "q": "What task did you do just before make a plate of toast?",
+      "gt": "cook 2 slice(s) of potato and serve in a bowl.",
+      "hyp": "Put cooked potato slices in a clean bowl. \n"
+    },
+    "c7cc40993ef8468b_3e7b-09916b24496645e4_5ff9-9e23434a16a146b5_7f9a-af51d39b23e95018_8b5d-b53c115c99ca34dd_675e-0-seq_simple_object_yes_no": {
+      "q_time": "2023/10/30 11:53:14",
+      "q": "Was there a mirror ?",
+      "gt": "no",
+      "hyp": "No. \n"
+    },
+    "c7cc40993ef8468b_3e7b-09916b24496645e4_5ff9-9e23434a16a146b5_7f9a-af51d39b23e95018_8b5d-b53c115c99ca34dd_675e-0-seq_low_actions_to_episode_task_descs": {
+      "q_time": "2023/10/30 11:53:14",
+      "q": "what task or tasks did you perform when you close the microwave?",
+      "gt": " cook 2 slice(s) of potato and serve in a bowl. and make a salad.",
+      "hyp": "The microwave was closed as part of cooking potato slices in the microwave and cleaning a dirty plate. \n"
+    },
+    "c7cc40993ef8468b_3e7b-09916b24496645e4_5ff9-9e23434a16a146b5_7f9a-af51d39b23e95018_8b5d-b53c115c99ca34dd_675e-0-exact_time_to_episode": {
+      "q_time": "2023/10/30 11:53:14",
+      "q": "what did you do on Oct 30, 2023 at 10:31 AM?",
+      "gt": "make a sandwich.",
+      "hyp": "I was told to slice the bread located at the sink. \n"
+    },
+    "c7cc40993ef8468b_3e7b-09916b24496645e4_5ff9-9e23434a16a146b5_7f9a-af51d39b23e95018_8b5d-b53c115c99ca34dd_675e-0-tasks_to_exact_times": {
+      "q_time": "2023/10/30 11:53:14",
+      "q": "When did you make a plate of toast?",
+      "gt": "Oct 29, 2023 at 10:23 AM",
+      "hyp": "2023/10/29 10:23:54 - 10:26:55. \n"
+    },
+    "c7cc40993ef8468b_3e7b-09916b24496645e4_5ff9-9e23434a16a146b5_7f9a-af51d39b23e95018_8b5d-b53c115c99ca34dd_675e-0-tasks_to_days_ago": {
+      "q_time": "2023/10/30 11:53:14",
+      "q": "Today is Oct 30, 2023 at 11:53 AM. How many days ago did you make a plate of toast?",
+      "gt": "1 day ago",
+      "hyp": "1 day ago. \n"
+    },
+    "c7cc40993ef8468b_3e7b-09916b24496645e4_5ff9-9e23434a16a146b5_7f9a-af51d39b23e95018_8b5d-b53c115c99ca34dd_675e-0-days_ago_to_episode": {
+      "q_time": "2023/10/30 11:53:14",
+      "q": "Today is Oct 30, 2023 at 11:53 AM. What did you do 2 days ago?",
+      "gt": "cook 2 slice(s) of potato and serve in a bowl.",
+      "hyp": "Two days ago, I sliced a potato and microwaved two slices. \n"
+    },
+    "a1fc527709ebcb56_2b5d-f2fab283e8dd367a_cb1f-78aa4022d248623e_af13-1e8fb21f2b41b0b0_db8b-e32e722334301fa7_892d-0-sequence_of_task_descs": {
+      "q_time": "2024/05/29 10:52:13",
+      "q": "List the tasks you performed.",
+      "gt": "water the plant. make a sandwich. prepare coffee in a clean mug. serve 1 slice(s) of tomato in a bowl. put all tissue box on one sidetable.",
+      "hyp": "ng: The question asks for a list of tasks performed, which can be found by looking at the user's speech in the history. \n\nAnswer:\n- Water the plant\n- Make a sandwich\n- Clean a mug\n- Slice a tomato\n- Clean a bowl\n- Place all tissue boxes on the side table with a lampshade on it. \n"
+    },
+    "a1fc527709ebcb56_2b5d-f2fab283e8dd367a_cb1f-78aa4022d248623e_af13-1e8fb21f2b41b0b0_db8b-e32e722334301fa7_892d-0-seq_specific_shortened_low_actions": {
+      "q_time": "2024/05/29 10:52:13",
+      "q": "describe what you did when you water the plant.",
+      "gt": "pick up the bowl, place the bowl on the countertop, pick up the cellphone, place the cellphone on the countertop, pick up the papertowel roll, place the papertowel roll on the countertop, pick up the bottle, place the bottle in the sink, pick up the spatula, place the spatula on the countertop, pick up the bottle, place the bottle on the countertop, pick up the spoon, place the spoon on the countertop, pick up the credit card, place the credit card on the countertop, pick up the bottle, place the bottle in the sink, toggle on the faucet, toggle off the faucet, pick up the bottle, place the bottle on the countertop, pick up the bowl, place the bowl in the sink, pick up the bowl, place the bowl on the countertop, pick up the pot, place the pot in the sink, toggle on the faucet, toggle off the faucet, pick up the pot, pour the pot on the houseplant, place the pot on the countertop",
+      "hyp": "I filled a bottle with water from the sink and poured it into the house plant. \n"
+    },
+    "a1fc527709ebcb56_2b5d-f2fab283e8dd367a_cb1f-78aa4022d248623e_af13-1e8fb21f2b41b0b0_db8b-e32e722334301fa7_892d-0-seq_right_after_questions": {
+      "q_time": "2024/05/29 10:52:13",
+      "q": "What task did you do just after prepare coffee in a clean mug?",
+      "gt": "serve 1 slice(s) of tomato in a bowl.",
+      "hyp": "Slice tomato. \n"
+    },
+    "a1fc527709ebcb56_2b5d-f2fab283e8dd367a_cb1f-78aa4022d248623e_af13-1e8fb21f2b41b0b0_db8b-e32e722334301fa7_892d-0-seq_right_before_questions": {
+      "q_time": "2024/05/29 10:52:13",
+      "q": "What task did you do just before serve 1 slice(s) of tomato in a bowl?",
+      "gt": "prepare coffee in a clean mug.",
+      "hyp": "Clean a bowl. \n"
+    },
+    "a1fc527709ebcb56_2b5d-f2fab283e8dd367a_cb1f-78aa4022d248623e_af13-1e8fb21f2b41b0b0_db8b-e32e722334301fa7_892d-0-seq_simple_object_yes_no": {
+      "q_time": "2024/05/29 10:52:13",
+      "q": "Was there a knife ?",
+      "gt": "yes, when I make a sandwich. and water the plant. and serve 1 slice(s) of tomato in a bowl.",
+      "hyp": "Yes. \n"
+    },
+    "a1fc527709ebcb56_2b5d-f2fab283e8dd367a_cb1f-78aa4022d248623e_af13-1e8fb21f2b41b0b0_db8b-e32e722334301fa7_892d-0-seq_low_actions_to_episode_task_descs": {
+      "q_time": "2024/05/29 10:52:13",
+      "q": "what task or tasks did you perform when you pick up the butterknife?",
+      "gt": " serve 1 slice(s) of tomato in a bowl.",
+      "hyp": "I sliced a tomato. \n"
+    },
+    "a1fc527709ebcb56_2b5d-f2fab283e8dd367a_cb1f-78aa4022d248623e_af13-1e8fb21f2b41b0b0_db8b-e32e722334301fa7_892d-0-exact_time_to_episode": {
+      "q_time": "2024/05/29 10:52:13",
+      "q": "what did you do on May 27, 2024 at 02:50 PM?",
+      "gt": "make a sandwich.",
+      "hyp": "I picked up a knife from the shelving unit. \n"
+    },
+    "a1fc527709ebcb56_2b5d-f2fab283e8dd367a_cb1f-78aa4022d248623e_af13-1e8fb21f2b41b0b0_db8b-e32e722334301fa7_892d-0-tasks_to_exact_times": {
+      "q_time": "2024/05/29 10:52:13",
+      "q": "When did you water the plant?",
+      "gt": "May 27, 2024 at 02:13 PM",
+      "hyp": "2024/05/27 14:19:30 \n"
+    },
+    "a1fc527709ebcb56_2b5d-f2fab283e8dd367a_cb1f-78aa4022d248623e_af13-1e8fb21f2b41b0b0_db8b-e32e722334301fa7_892d-0-tasks_to_days_ago": {
+      "q_time": "2024/05/29 10:52:13",
+      "q": "Today is May 29, 2024 at 10:52 AM. How many days ago did you put all tissue box on one sidetable?",
+      "gt": "1 day ago",
+      "hyp": "1 day ago. \n"
+    },
+    "a1fc527709ebcb56_2b5d-f2fab283e8dd367a_cb1f-78aa4022d248623e_af13-1e8fb21f2b41b0b0_db8b-e32e722334301fa7_892d-0-days_ago_to_episode": {
+      "q_time": "2024/05/29 10:52:13",
+      "q": "Today is May 29, 2024 at 10:52 AM. What did you do 2 days ago?",
+      "gt": "water the plant and make a sandwich.",
+      "hyp": "On May 27, 2024, I picked up and placed various objects, including bowls, cellphones, paper towel rolls, and bottles. I also interacted with the sink, turning the faucet on and off, and attempted to water a houseplant. Later, I made a sandwich by slicing bread and tomato and placing them on a plate. \n"
+    },
+    "18f6da623ba658a2_9f53-6e26385c641764c7_e084-41b067f2ce6f3fef_d081-c3d1e8e83a3ffcf5_0d1e-2f8d482d22e56fdd_3e5c-0-sequence_of_task_descs": {
+      "q_time": "2023/04/14 19:15:27",
+      "q": "List the tasks you performed.",
+      "gt": "cook 1 slice(s) of potato and serve in a bowl. clean all the mugs. put all remote control on one dresser. make a sandwich. serve 1 slice(s) of lettuce on a plate.",
+      "hyp": "ng: The history contains information on all the tasks that I performed. I can list all the high-level tasks by looking at the timestamps.\n\nAnswer:\n- ToggleOff Faucet\n- Pickup Egg_0\n- Place Sink_Basin\n- Pickup Pot\n- Place CounterTop_0\n- Pickup Pot\n- Place CounterTop_0\n- Pickup Pot\n- Place Floor\n- Pickup Potato\n- Place CounterTop_1\n- Pickup Knife_2\n- Slice Potato\n- Place CounterTop_1\n- Open Microwave\n- Pickup Potato_Sliced_3\n- Place Microwave\n- Open Cabinet_4\n- Open Cabinet_0\n- Close Microwave\n- ToggleOn Microwave\n- ToggleOff Microwave\n- Open Microwave\n- Pickup Potato_Sliced_3\n- Place Plate_2\n- Pickup SaltShaker_1\n- Place CounterTop_1\n- Open Fridge\n- Pickup Bowl_1\n- Pour Sink\n- Place CounterTop_1\n- Pickup Potato_Sliced_3\n- Place Bowl_1\n- Noop\n- Pickup Mug\n- Place CounterTop_0\n- ToggleOff Faucet\n- Pickup CreditCard\n- Place CounterTop_0\n- Pickup Spatula\n- Place CounterTop_0\n- Pickup Mug\n- Place Sink_Basin\n- ToggleOn Faucet\n- ToggleOff Faucet\n- Pickup Mug\n- Pour Sink_Basin\n- Noop\n- Noop\n- Open Drawer_0\n- Close Drawer_0\n- Pickup RemoteControl_0\n- Place Dresser\n- Open Cabinet_1\n- Close Laptop_2\n- Close Cabinet_1\n- Open Cabinet_2\n- Close Cabinet_2\n- Open Drawer_2\n- Close Drawer_2\n- Open Drawer_0\n- Close Drawer_0\n- Open Drawer_1\n- Close Drawer_1\n- Open Drawer_2\n- Open Drawer_4\n- Close Drawer_2\n- Open Cabinet_0\n- Pickup RemoteControl_1\n- Place Dresser\n- Noop\n- Pickup Knife_3\n- Slice Bread_1\n- Slice Tomato_0\n- Place CounterTop_0\n- Pickup Bread_1_Sliced_3\n- Place Toaster\n- Pickup Bread_1_Sliced_5\n- Place CounterTop_1\n- Pickup Bread_1_Sliced_3\n- Place CounterTop_1\n- Pickup Bread_1_Sliced_5\n- Place Toaster\n- Pickup Bread_1_Sliced_5\n- Place CounterTop_1\n- Pickup Knife_0\n- Slice Lettuce_1\n- Place CounterTop_0\n- Pickup Plate_1\n- ToggleOff Faucet\n- Place Sink_Basin\n- ToggleOn Faucet\n- ToggleOff Faucet\n- Pickup Plate_1\n- Place CounterTop_0\n- Pickup Mug_0\n- Place Sink_Basin\n- Pickup Lettuce_1_Sliced_6\n- Place Plate_1\n- Pickup Bread_1_Sliced_5\n- Place Plate_1\n- Pickup Knife_0\n- Slice Tomato_3\n- Place CounterTop_0\n- Pickup Tomato_3_Sliced_0\n- Place Sink_Basin\n- Pickup Tomato_3_Sliced_1\n- Place Sink_Basin\n- Pickup Lettuce_1_Sliced_7\n- Place Plate_1\n- Pickup Bread_1_Sliced_3\n- Place CounterTop_0\n- Pickup Knife_0\n- Place CounterTop_0\n- Pickup Lettuce_1_Sliced_1\n- Place Plate_1\n- Pickup Lettuce_1_Sliced_6\n- Place CounterTop_0\n- Pickup Bread_1_Sliced_3\n- Place CounterTop_2\n- Pickup Knife_2\n- Slice Bread_2\n- Place CounterTop_1\n- Pickup Bread_2_Sliced_6\n- Place Toaster\n- Pickup Bread_2_Sliced_6\n- Place Toaster\n- ToggleOff Toaster\n- Pickup Bread_2_Sliced_6\n- Place CounterTop_0\n- Pickup Bread_1_Sliced_5\n- Place CounterTop_0\n- Pickup Bread_2_Sliced_6\n- Place Plate_1\n- Pickup Bread_2_Sliced_5\n- Place Toaster\n- ToggleOn Toaster\n- ToggleOff Toaster\n- Pickup Bread_2_Sliced_5\n- Place Plate_1\n- Noop\n- Pickup Plate_1\n- Place Sink_Basin\n- ToggleOn Faucet\n- ToggleOff Faucet\n- Pickup Plate_1\n- Place CounterTop_0\n- Pickup Knife_0\n- Place CounterTop_0\n- Open Fridge\n- Pickup Lettuce_2\n- Place CounterTop_0\n- Pickup Knife_0\n- Slice Lettuce_2\n- Place CounterTop_0\n- Pickup Lettuce_2_Sliced_3\n- Place Plate_1\n- Say good? \n"
+    },
+    "18f6da623ba658a2_9f53-6e26385c641764c7_e084-41b067f2ce6f3fef_d081-c3d1e8e83a3ffcf5_0d1e-2f8d482d22e56fdd_3e5c-0-seq_specific_shortened_low_actions": {
+      "q_time": "2023/04/14 19:15:27",
+      "q": "describe what you did when you serve 1 slice(s) of lettuce on a plate.",
+      "gt": "pick up the plate, place the plate in the sink, toggle on the faucet, toggle off the faucet, pick up the plate, place the plate on the countertop, pick up the knife, place the knife on the countertop, open the fridge, pick up the lettuce, place the lettuce on the countertop, pick up the knife, slice lettuce, place the knife on the countertop, pick up the lettuce, place the lettuce on the plate",
+      "hyp": "I picked up a dirty plate, washed it, picked up a lettuce, sliced it, put one slice on the plate, and placed the plate on the counter. \n"
+    },
+    "18f6da623ba658a2_9f53-6e26385c641764c7_e084-41b067f2ce6f3fef_d081-c3d1e8e83a3ffcf5_0d1e-2f8d482d22e56fdd_3e5c-0-seq_right_after_questions": {
+      "q_time": "2023/04/14 19:15:27",
+      "q": "What task did you do just after make a sandwich?",
+      "gt": "serve 1 slice(s) of lettuce on a plate.",
+      "hyp": "I cannot answer this question. \n"
+    },
+    "18f6da623ba658a2_9f53-6e26385c641764c7_e084-41b067f2ce6f3fef_d081-c3d1e8e83a3ffcf5_0d1e-2f8d482d22e56fdd_3e5c-0-seq_right_before_questions": {
+      "q_time": "2023/04/14 19:15:27",
+      "q": "What task did you do just before make a sandwich?",
+      "gt": "put all remote control on one dresser.",
+      "hyp": "Cook potato in microwave. \n"
+    },
+    "18f6da623ba658a2_9f53-6e26385c641764c7_e084-41b067f2ce6f3fef_d081-c3d1e8e83a3ffcf5_0d1e-2f8d482d22e56fdd_3e5c-0-seq_simple_object_yes_no": {
+      "q_time": "2023/04/14 19:15:27",
+      "q": "Was there a soap bottle ?",
+      "gt": "yes, when I cook 1 slice(s) of potato and serve in a bowl. and make a sandwich. and serve 1 slice(s) of lettuce on a plate. and clean all the mugs.",
+      "hyp": "Yes. \n"
+    },
+    "18f6da623ba658a2_9f53-6e26385c641764c7_e084-41b067f2ce6f3fef_d081-c3d1e8e83a3ffcf5_0d1e-2f8d482d22e56fdd_3e5c-0-seq_low_actions_to_episode_task_descs": {
+      "q_time": "2023/04/14 19:15:27",
+      "q": "what task or tasks did you perform when you close the drawer?",
+      "gt": " put all remote control on one dresser.",
+      "hyp": "I did not close any drawers. \n"
+    },
+    "18f6da623ba658a2_9f53-6e26385c641764c7_e084-41b067f2ce6f3fef_d081-c3d1e8e83a3ffcf5_0d1e-2f8d482d22e56fdd_3e5c-0-exact_time_to_episode": {
+      "q_time": "2023/04/14 19:15:27",
+      "q": "what did you do on Apr 12, 2023 at 09:28 AM?",
+      "gt": "clean all the mugs.",
+      "hyp": "I was asked to clean a mug. \n"
+    },
+    "18f6da623ba658a2_9f53-6e26385c641764c7_e084-41b067f2ce6f3fef_d081-c3d1e8e83a3ffcf5_0d1e-2f8d482d22e56fdd_3e5c-0-tasks_to_exact_times": {
+      "q_time": "2023/04/14 19:15:27",
+      "q": "When did you serve 1 slice(s) of lettuce on a plate?",
+      "gt": "Apr 13, 2023 at 05:17 PM",
+      "hyp": "2023/04/13 17:19:39 \n"
+    },
+    "18f6da623ba658a2_9f53-6e26385c641764c7_e084-41b067f2ce6f3fef_d081-c3d1e8e83a3ffcf5_0d1e-2f8d482d22e56fdd_3e5c-0-tasks_to_days_ago": {
+      "q_time": "2023/04/14 19:15:27",
+      "q": "Today is Apr 14, 2023 at 07:15 PM. How many days ago did you cook 1 slice(s) of potato and serve in a bowl?",
+      "gt": "2 days ago",
+      "hyp": "2 days ago. \n"
+    },
+    "18f6da623ba658a2_9f53-6e26385c641764c7_e084-41b067f2ce6f3fef_d081-c3d1e8e83a3ffcf5_0d1e-2f8d482d22e56fdd_3e5c-0-days_ago_to_episode": {
+      "q_time": "2023/04/14 19:15:27",
+      "q": "Today is Apr 14, 2023 at 07:15 PM. What did you do 2 days ago?",
+      "gt": "cook 1 slice(s) of potato and serve in a bowl and clean all the mugs and put all remote control on one dresser.",
+      "hyp": "On Apr 12, 2023, I tried to slice a potato and cook it in the microwave. I also cleaned a mug. Finally, I put all the remote controls on the dresser. \n"
+    },
+    "bfa7505b440eadde_750f-48f25d2481974dee_e871-cf32d4a95cdbcd3a_9fa2-5aa3cbd322d4f163_3bda-15fa5e0caaf6a06f_81e4-0-sequence_of_task_descs": {
+      "q_time": "2024/09/18 19:35:57",
+      "q": "List the tasks you performed.",
+      "gt": "serve 3 slice(s) of lettuce on a plate. prepare breakfast. make a salad. serve 1 slice(s) of tomato on a plate. serve 1 slice(s) of tomato on a plate.",
+      "hyp": "ng: The history contains all the tasks that I have performed. I will list them in chronological order.\n\nAnswer:\n- Pickup ButterKnife_1\n- Slice Lettuce_1\n- Slice Tomato\n- Place on CounterTop_0\n- Pickup PepperShaker\n- Place on Chair_0\n- Pickup CreditCard_2\n- Place on Floor\n- Pickup Plate\n- Place on CounterTop_1\n- Pickup Lettuce_1_Sliced_0\n- Place on CounterTop_1\n- Pickup Lettuce_1_Sliced_7\n- Place on Plate\n- Pickup Lettuce_1_Sliced_6\n- Place on Plate\n- Pickup Lettuce_1_Sliced_1\n- Place on Plate\n- Open Fridge\n- Pickup Mug\n- Close Fridge\n- Place in Sink_Basin\n- Pickup SoapBottle\n- Place on CounterTop_0\n- ToggleOn Faucet\n- ToggleOff Faucet\n- Pickup Mug\n- Pour in Sink_Basin\n- Place on CoffeeMachine\n- ToggleOff CoffeeMachine\n- ToggleOn CoffeeMachine\n- ToggleOff CoffeeMachine\n- Pickup Mug\n- Place on CoffeeMachine\n- ToggleOn CoffeeMachine\n- Open Cabinet_2\n- Pickup Lettuce_1\n- Place on CounterTop_0\n- Close Cabinet_2\n- Pickup Knife_1\n- Slice Lettuce_1\n- Place on CounterTop_0\n- Open Fridge\n- Pickup Tomato\n- Place on CounterTop_0\n- Pickup Knife_1\n- Slice Tomato\n- Place on CounterTop_0\n- Pickup Potato_1\n- Place on CounterTop_0\n- Pickup Knife_1\n- Slice Potato_1\n- Place on CounterTop_0\n- Pickup Pan_1\n- Place on CounterTop_1\n- Pickup Pan_0\n- Place on CounterTop_0\n- Pickup Pan_1\n- Place on StoveBurner_0\n- Pickup Potato_1_Sliced_1\n- Place on Pan_1\n- Pickup Plate_0\n- Place on CounterTop_0\n- Pickup DishSponge\n- Place on CounterTop_0\n- Pickup Potato_0\n- Place on CounterTop_0\n- Pickup Plate_0\n- Place in Sink_Basin\n- ToggleOn Faucet\n- ToggleOff Faucet\n- Pickup Plate_0\n- Place on CounterTop_1\n- Pickup Potato_1_Sliced_1\n- Place on Plate_0\n- Pickup Lettuce_1_Sliced_0\n- Place on CounterTop_1\n- Pickup Lettuce_1_Sliced_1\n- Place on Plate_0\n- Pickup Tomato_Sliced_0\n- Place on CounterTop_0\n- Pickup Tomato_Sliced_1\n- Place on Plate_0\n- Pickup Lettuce_3\n- Place on CounterTop_0\n- Open Fridge\n- Pickup Knife_0\n- Slice Lettuce_3\n- Place on CounterTop_0\n- Say Done\n- Close Fridge\n- Pickup Potato_2\n- Place on CounterTop_1\n- Pickup Knife_1\n- Slice Potato_2\n- Place on CounterTop_1\n- Open Cabinet_5\n- Open Cabinet_4\n- Pickup Plate_1\n- Place on CounterTop_1\n- Pickup SoapBottle_3\n- Place in Cabinet_5\n- Pickup Plate_1\n- ToggleOff Faucet\n- Place in Sink_Basin\n- ToggleOn Faucet\n- ToggleOff Faucet\n- Pickup Plate_1\n- Place on CounterTop_0\n- Pickup Lettuce_3_Sliced_0\n- Place on CounterTop_0\n- Pickup Lettuce_3_Sliced_1\n- Place on Plate_1\n- Pickup Lettuce_3_Sliced_2\n- Place on Plate_1\n- Pickup Potato_2_Sliced_4\n- Place on Plate_1\n- Say Done\n- Open Cabinet_4\n- Pickup Tomato_1\n- Place on CounterTop_0\n- Open Cabinet_1\n- Pickup Knife_1\n- Slice Tomato_1\n- Place on CounterTop_0\n- Pickup Plate_1\n- Place on CounterTop_0\n- Pickup Tomato_1_Sliced_4\n- Place on Plate_1\n- Say done\n- Open Fridge\n- Pickup Tomato_0\n- Place on CounterTop_0\n- ToggleOff Faucet\n- Pickup Knife_2\n- Slice Tomato_0\n- Place in Sink_Basin\n- Pickup Plate\n- Place on CounterTop_0\n- Pickup Tomato_0_Sliced_4\n- Place on Plate\n- Say all set? \n"
+    },
+    "bfa7505b440eadde_750f-48f25d2481974dee_e871-cf32d4a95cdbcd3a_9fa2-5aa3cbd322d4f163_3bda-15fa5e0caaf6a06f_81e4-0-seq_specific_shortened_low_actions": {
+      "q_time": "2024/09/18 19:35:57",
+      "q": "describe what you did when you serve 3 slice(s) of lettuce on a plate.",
+      "gt": "pick up the butter knife, slice lettuce, slice tomato, place the butter knife on the countertop, pick up the pepper shaker, place the pepper shaker on the chair, pick up the credit card, place the credit card on the floor, pick up the plate, place the plate on the countertop, pick up the lettuce, place the lettuce on the countertop, pick up the lettuce, place the lettuce on the plate, pick up the lettuce, place the lettuce on the plate, pick up the lettuce, place the lettuce on the plate",
+      "hyp": "I cannot answer this question. Although I sliced lettuce multiple times, I never served 3 slices of lettuce on a plate. \n"
+    },
+    "bfa7505b440eadde_750f-48f25d2481974dee_e871-cf32d4a95cdbcd3a_9fa2-5aa3cbd322d4f163_3bda-15fa5e0caaf6a06f_81e4-0-seq_right_after_questions": {
+      "q_time": "2024/09/18 19:35:57",
+      "q": "What task did you do just after serve 3 slice(s) of lettuce on a plate?",
+      "gt": "prepare breakfast.",
+      "hyp": "I cooked a potato. \n"
+    },
+    "bfa7505b440eadde_750f-48f25d2481974dee_e871-cf32d4a95cdbcd3a_9fa2-5aa3cbd322d4f163_3bda-15fa5e0caaf6a06f_81e4-0-seq_right_before_questions": {
+      "q_time": "2024/09/18 19:35:57",
+      "q": "What task did you do just before make a salad?",
+      "gt": "prepare breakfast.",
+      "hyp": "The user did not ask to make a salad. \n"
+    },
+    "bfa7505b440eadde_750f-48f25d2481974dee_e871-cf32d4a95cdbcd3a_9fa2-5aa3cbd322d4f163_3bda-15fa5e0caaf6a06f_81e4-0-seq_simple_object_yes_no": {
+      "q_time": "2024/09/18 19:35:57",
+      "q": "Was there a floor ?",
+      "gt": "yes, when I prepare breakfast. and serve 1 slice(s) of tomato on a plate. and make a salad. and serve 3 slice(s) of lettuce on a plate.",
+      "hyp": "Yes. \n"
+    },
+    "bfa7505b440eadde_750f-48f25d2481974dee_e871-cf32d4a95cdbcd3a_9fa2-5aa3cbd322d4f163_3bda-15fa5e0caaf6a06f_81e4-0-seq_low_actions_to_episode_task_descs": {
+      "q_time": "2024/09/18 19:35:57",
+      "q": "what task or tasks did you perform when you place the soap bottle on the cabinet?",
+      "gt": " make a salad.",
+      "hyp": "I never placed a soap bottle on a cabinet. \n"
+    },
+    "bfa7505b440eadde_750f-48f25d2481974dee_e871-cf32d4a95cdbcd3a_9fa2-5aa3cbd322d4f163_3bda-15fa5e0caaf6a06f_81e4-0-exact_time_to_episode": {
+      "q_time": "2024/09/18 19:35:57",
+      "q": "what did you do on Sep 16, 2024 at 05:59 PM?",
+      "gt": "serve 1 slice(s) of tomato on a plate.",
+      "hyp": "I placed a potato on CounterTop_0. \n"
+    },
+    "bfa7505b440eadde_750f-48f25d2481974dee_e871-cf32d4a95cdbcd3a_9fa2-5aa3cbd322d4f163_3bda-15fa5e0caaf6a06f_81e4-0-tasks_to_exact_times": {
+      "q_time": "2024/09/18 19:35:57",
+      "q": "When did you serve 3 slice(s) of lettuce on a plate?",
+      "gt": "Sep 15, 2024 at 11:04 AM",
+      "hyp": "Never. \n"
+    },
+    "bfa7505b440eadde_750f-48f25d2481974dee_e871-cf32d4a95cdbcd3a_9fa2-5aa3cbd322d4f163_3bda-15fa5e0caaf6a06f_81e4-0-tasks_to_days_ago": {
+      "q_time": "2024/09/18 19:35:57",
+      "q": "Today is Sep 18, 2024 at 07:35 PM. How many days ago did you serve 1 slice(s) of tomato on a plate?",
+      "gt": "2 days ago and 1 day ago",
+      "hyp": "2 days ago. \n"
+    },
+    "bfa7505b440eadde_750f-48f25d2481974dee_e871-cf32d4a95cdbcd3a_9fa2-5aa3cbd322d4f163_3bda-15fa5e0caaf6a06f_81e4-0-days_ago_to_episode": {
+      "q_time": "2024/09/18 19:35:57",
+      "q": "Today is Sep 18, 2024 at 07:35 PM. What did you do 3 days ago?",
+      "gt": "serve 3 slice(s) of lettuce on a plate.",
+      "hyp": "On Sep 15, 2024, I picked up a butter knife, sliced lettuce, and sliced a tomato. \n"
+    },
+    "1fefbf1fb30901cd_4a9b-15fa5e0caaf6a06f_46f8-b0987966f589a51f_79fc-7c76f284a689ed0a_f789-18f6da623ba658a2_aa07-0-sequence_of_task_descs": {
+      "q_time": "2024/10/29 18:41:45",
+      "q": "List the tasks you performed.",
+      "gt": "cook 5 slice(s) of potato and serve on a plate. serve 1 slice(s) of tomato on a plate. water the plant. make a plate of toast. cook 1 slice(s) of potato and serve in a bowl.",
+      "hyp": "ng: The question asks for a list of the tasks that I performed, which can be found in the history.\nAnswer:\n- Opened the fridge\n- Picked up an egg\n- Placed the egg in the fridge\n- Closed the fridge\n- Picked up a potato\n- Placed the potato on the counter\n- Picked up a knife\n- Sliced the potato\n- Placed the knife on the counter\n- Picked up a slice of potato\n- Toggled the microwave off\n- Opened the microwave\n- Placed the potato slice in the microwave\n- Closed the microwave\n- Toggled the microwave on\n- Toggled the microwave off\n- Opened the microwave\n- Picked up the potato slice\n- Placed the potato slice on the counter\n- Picked up a cell phone\n- Placed the cell phone on the counter\n- Picked up a slice of potato\n- Placed the potato slice in the microwave\n- Closed the microwave\n- Toggled the microwave on\n- Toggled the microwave off\n- Opened the microwave\n- Picked up the potato slice\n- Placed the potato slice on the counter\n- Picked up a slice of potato\n- Placed the potato slice in the microwave\n- Closed the microwave\n- Toggled the microwave on\n- Toggled the microwave off\n- Opened the microwave\n- Picked up the potato slice\n- Placed the potato slice on the counter\n- Picked up a slice of potato\n- Placed the potato slice in the microwave\n- Closed the microwave\n- Toggled the microwave on\n- Toggled the microwave off\n- Opened the microwave\n- Picked up the potato slice\n- Placed the potato slice on the counter\n- Opened the fridge\n- Picked up a plate\n- Placed the plate on the counter\n- Picked up a pepper shaker\n- Placed the pepper shaker on the counter\n- Picked up a slice of potato\n- Placed the potato slice on the plate\n- Picked up a slice of potato\n- Placed the potato slice on the plate\n- Picked up a slice of potato\n- Placed the potato slice on the plate\n- Picked up a slice of potato\n- Placed the potato slice on the plate\n- Picked up a slice of potato\n- Placed the potato slice on the plate\n- Opened the fridge\n- Picked up a tomato\n- Placed the tomato on the counter\n- Picked up a knife\n- Sliced the tomato\n- Placed the knife on the counter\n- Picked up a slice of tomato\n- Placed the tomato slice on the plate\n- Toggled the faucet off\n- Picked up a cup\n- Placed the cup in the sink basin\n- Toggled the faucet on\n- Toggled the faucet off\n- Picked up the cup\n- Poured water from the cup into the house plant\n- Picked up bread\n- Placed the bread on the counter\n- Picked up a knife\n- Sliced the bread\n- Placed the knife on the counter\n- Picked up a slice of bread\n- Placed the slice of bread on the counter\n- Picked up a slice of bread\n- Placed the slice of bread in the toaster\n- Opened the fridge\n- Opened a cabinet\n- Opened another cabinet\n- Picked up a plate\n- Placed the plate on the counter\n- Toggled the faucet off\n- Picked up an egg\n- Placed the egg on the counter\n- Picked up the plate\n- Placed the plate in the sink basin\n- Toggled the faucet on\n- Toggled the faucet off\n- Picked up the plate\n- Placed the plate on the counter\n- Picked up a slice of bread\n- Placed the slice of bread on the plate\n- Picked up a slice of bread\n- Placed the slice of bread in the toaster\n- Picked up the slice of bread\n- Placed the slice of bread on the plate\n- Picked up a knife\n- Placed the knife on the counter\n- Picked up a potato\n- Placed the potato on the counter\n- Picked up the knife\n- Sliced the potato\n- Placed the knife on the counter\n- Picked up a slice of potato\n- Opened the microwave\n- Placed the potato slice in the microwave\n- Picked up a slice of potato\n- Placed the potato slice in the microwave\n- Picked up a slice of potato\n- Placed the potato slice in the microwave\n- Closed the microwave\n- Toggled the microwave on\n- Toggled the microwave off\n- Opened the microwave\n- Picked up a slice of potato\n- Placed the potato slice on a plate\n- Picked up a slice of potato\n- Placed the potato slice on the counter\n- Picked up a slice of potato\n- Placed the potato slice on the counter\n- Closed the microwave\n- Picked up a slice of potato\n- Placed the potato slice on the counter\n- Opened a cabinet\n- Closed the cabinet\n- Opened a cabinet\n- Opened a cabinet\n- Picked up a bowl\n- Placed the bowl on the counter\n- Picked up a slice of potato\n- Placed the potato slice in the bowl\n- Picked up a slice of potato\n- Placed the potato slice in the bowl\n- Picked up a slice of potato"
+    },
+    "1fefbf1fb30901cd_4a9b-15fa5e0caaf6a06f_46f8-b0987966f589a51f_79fc-7c76f284a689ed0a_f789-18f6da623ba658a2_aa07-0-seq_specific_shortened_low_actions": {
+      "q_time": "2024/10/29 18:41:45",
+      "q": "describe what you did when you serve 1 slice(s) of tomato on a plate.",
+      "gt": "open the fridge, pick up the tomato, place the tomato on the countertop, pick up the knife, slice tomato, place the knife on the countertop, pick up the tomato, place the tomato on the plate",
+      "hyp": "I sliced a tomato into 7 slices and placed slice number 4 on a plate. \n"
+    },
+    "1fefbf1fb30901cd_4a9b-15fa5e0caaf6a06f_46f8-b0987966f589a51f_79fc-7c76f284a689ed0a_f789-18f6da623ba658a2_aa07-0-seq_right_after_questions": {
+      "q_time": "2024/10/29 18:41:45",
+      "q": "What task did you do just after cook 5 slice(s) of potato and serve on a plate?",
+      "gt": "serve 1 slice(s) of tomato on a plate.",
+      "hyp": "The history does not contain information about cooking 5 slices of potato and serving them on a plate. \n"
+    },
+    "1fefbf1fb30901cd_4a9b-15fa5e0caaf6a06f_46f8-b0987966f589a51f_79fc-7c76f284a689ed0a_f789-18f6da623ba658a2_aa07-0-seq_right_before_questions": {
+      "q_time": "2024/10/29 18:41:45",
+      "q": "What task did you do just before cook 1 slice(s) of potato and serve in a bowl?",
+      "gt": "make a plate of toast.",
+      "hyp": "Make a plate of toast. \n"
+    },
+    "1fefbf1fb30901cd_4a9b-15fa5e0caaf6a06f_46f8-b0987966f589a51f_79fc-7c76f284a689ed0a_f789-18f6da623ba658a2_aa07-0-seq_simple_object_yes_no": {
+      "q_time": "2024/10/29 18:41:45",
+      "q": "Was there a vase ?",
+      "gt": "yes, when I cook 1 slice(s) of potato and serve in a bowl. and cook 5 slice(s) of potato and serve on a plate. and make a plate of toast. and serve 1 slice(s) of tomato on a plate.",
+      "hyp": "Yes. \n"
+    },
+    "1fefbf1fb30901cd_4a9b-15fa5e0caaf6a06f_46f8-b0987966f589a51f_79fc-7c76f284a689ed0a_f789-18f6da623ba658a2_aa07-0-seq_low_actions_to_episode_task_descs": {
+      "q_time": "2024/10/29 18:41:45",
+      "q": "what task or tasks did you perform when you place the cellphone on the countertop?",
+      "gt": " cook 5 slice(s) of potato and serve on a plate.",
+      "hyp": "I placed the cellphone on the countertop after picking it up to make space for slicing a potato. \n"
+    },
+    "1fefbf1fb30901cd_4a9b-15fa5e0caaf6a06f_46f8-b0987966f589a51f_79fc-7c76f284a689ed0a_f789-18f6da623ba658a2_aa07-0-exact_time_to_episode": {
+      "q_time": "2024/10/29 18:41:45",
+      "q": "what did you do on Oct 29, 2024 at 12:39 PM?",
+      "gt": "cook 1 slice(s) of potato and serve in a bowl.",
+      "hyp": "I was not given any instructions at that time. \n"
+    },
+    "1fefbf1fb30901cd_4a9b-15fa5e0caaf6a06f_46f8-b0987966f589a51f_79fc-7c76f284a689ed0a_f789-18f6da623ba658a2_aa07-0-tasks_to_exact_times": {
+      "q_time": "2024/10/29 18:41:45",
+      "q": "When did you cook 1 slice(s) of potato and serve in a bowl?",
+      "gt": "Oct 29, 2024 at 12:39 PM",
+      "hyp": "Never. \n"
+    },
+    "1fefbf1fb30901cd_4a9b-15fa5e0caaf6a06f_46f8-b0987966f589a51f_79fc-7c76f284a689ed0a_f789-18f6da623ba658a2_aa07-0-tasks_to_days_ago": {
+      "q_time": "2024/10/29 18:41:45",
+      "q": "Today is Oct 29, 2024 at 06:41 PM. How many days ago did you make a plate of toast?",
+      "gt": "0 day ago",
+      "hyp": "0 days ago. \n"
+    },
+    "1fefbf1fb30901cd_4a9b-15fa5e0caaf6a06f_46f8-b0987966f589a51f_79fc-7c76f284a689ed0a_f789-18f6da623ba658a2_aa07-0-days_ago_to_episode": {
+      "q_time": "2024/10/29 18:41:45",
+      "q": "Today is Oct 29, 2024 at 06:41 PM. What did you do 1 day ago?",
+      "gt": "cook 5 slice(s) of potato and serve on a plate and serve 1 slice(s) of tomato on a plate and water the plant.",
+      "hyp": "On Oct 28, 2024, I opened the fridge, picked up an egg, placed it back in the fridge, closed the fridge, picked up a potato, sliced it, microwaved the slices, and placed them on a plate. I also opened the fridge again, picked up a tomato, sliced it, and placed a slice on a plate. Later, I turned off the faucet, picked up a cup, filled it with water, and poured it on a houseplant. \n"
+    },
+    "a72c03efd22ce41c_c338-ad2e4eb0b24a5940_9c9d-b2815444299854b0_d30e-c70d9a05ca542364_77d5-3574c805169b19b0_a532-0-sequence_of_task_descs": {
+      "q_time": "2023/06/19 16:42:13",
+      "q": "List the tasks you performed.",
+      "gt": "put all watch on one furniture. water the plant. make a sandwich. make a sandwich. make a plate of toast.",
+      "hyp": "ng: The history contains information on all the tasks that I have performed. I can simply list all the top level actions.\n\nAnswer:\nPickup, Place, Pour, Noop, Slice, ToggleOn, ToggleOff, Open, Close, Say. \n"
+    },
+    "a72c03efd22ce41c_c338-ad2e4eb0b24a5940_9c9d-b2815444299854b0_d30e-c70d9a05ca542364_77d5-3574c805169b19b0_a532-0-seq_specific_shortened_low_actions": {
+      "q_time": "2023/06/19 16:42:13",
+      "q": "describe what you did when you put all watch on one furniture.",
+      "gt": "pick up the watch, place the watch on the armchair, pick up the watch, place the watch on the armchair, pick up the watch, place the watch on the dresser, pick up the watch, place the watch on the side table, pick up the watch, place the watch on the side table",
+      "hyp": "I did not put all watches on one furniture. \n"
+    },
+    "a72c03efd22ce41c_c338-ad2e4eb0b24a5940_9c9d-b2815444299854b0_d30e-c70d9a05ca542364_77d5-3574c805169b19b0_a532-0-seq_right_after_questions": {
+      "q_time": "2023/06/19 16:42:13",
+      "q": "What task did you do just after put all watch on one furniture?",
+      "gt": "water the plant.",
+      "hyp": "Pickup(Watch_2) \n"
+    },
+    "a72c03efd22ce41c_c338-ad2e4eb0b24a5940_9c9d-b2815444299854b0_d30e-c70d9a05ca542364_77d5-3574c805169b19b0_a532-0-seq_right_before_questions": {
+      "q_time": "2023/06/19 16:42:13",
+      "q": "What task did you do just before water the plant?",
+      "gt": "put all watch on one furniture.",
+      "hyp": "Pickup(Mug_1)"
+    },
+    "a72c03efd22ce41c_c338-ad2e4eb0b24a5940_9c9d-b2815444299854b0_d30e-c70d9a05ca542364_77d5-3574c805169b19b0_a532-0-seq_simple_object_yes_no": {
+      "q_time": "2023/06/19 16:42:13",
+      "q": "Was there a safe ?",
+      "gt": "yes, when I put all watch on one furniture.",
+      "hyp": "Yes. \n"
+    },
+    "a72c03efd22ce41c_c338-ad2e4eb0b24a5940_9c9d-b2815444299854b0_d30e-c70d9a05ca542364_77d5-3574c805169b19b0_a532-0-seq_low_actions_to_episode_task_descs": {
+      "q_time": "2023/06/19 16:42:13",
+      "q": "what task or tasks did you perform when you open the cabinet?",
+      "gt": " make a sandwich.",
+      "hyp": "I opened the cabinet to find a plate. \n"
+    },
+    "a72c03efd22ce41c_c338-ad2e4eb0b24a5940_9c9d-b2815444299854b0_d30e-c70d9a05ca542364_77d5-3574c805169b19b0_a532-0-exact_time_to_episode": {
+      "q_time": "2023/06/19 16:42:13",
+      "q": "what did you do on Jun 18, 2023 at 12:43 PM?",
+      "gt": "make a plate of toast.",
+      "hyp": "I turned on the light switch. \n"
+    },
+    "a72c03efd22ce41c_c338-ad2e4eb0b24a5940_9c9d-b2815444299854b0_d30e-c70d9a05ca542364_77d5-3574c805169b19b0_a532-0-tasks_to_exact_times": {
+      "q_time": "2023/06/19 16:42:13",
+      "q": "When did you make a plate of toast?",
+      "gt": "Jun 18, 2023 at 12:43 PM",
+      "hyp": "June 18, 2023 12:44:24 - 12:52:55. \n"
+    },
+    "a72c03efd22ce41c_c338-ad2e4eb0b24a5940_9c9d-b2815444299854b0_d30e-c70d9a05ca542364_77d5-3574c805169b19b0_a532-0-tasks_to_days_ago": {
+      "q_time": "2023/06/19 16:42:13",
+      "q": "Today is Jun 19, 2023 at 04:42 PM. How many days ago did you water the plant?",
+      "gt": "2 days ago",
+      "hyp": "2 days ago. \n"
+    },
+    "a72c03efd22ce41c_c338-ad2e4eb0b24a5940_9c9d-b2815444299854b0_d30e-c70d9a05ca542364_77d5-3574c805169b19b0_a532-0-days_ago_to_episode": {
+      "q_time": "2023/06/19 16:42:13",
+      "q": "Today is Jun 19, 2023 at 04:42 PM. What did you do 1 day ago?",
+      "gt": "make a plate of toast.",
+      "hyp": "On June 18, 2023, I turned on the light switch, opened the fridge, made toast, and cleaned a plate. \n"
+    }
+  },
+  "openai_costs": {
+    "cost": 0.0,
+    "prompt_tokens": 0,
+    "completion_tokens": 0
+  }
+}

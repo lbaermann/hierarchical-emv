@@ -1,0 +1,10 @@
+{
+  "0-1": "I picked up an apple and placed it on the countertop. During this time, I received an instruction to cook a slice of potato.",
+  "2-8": "I picked up a knife and sliced a potato.",
+  "5-13": "I picked up two potato slices, placed them in the microwave, and turned it on and off to cook them.",
+  "14-19": "I opened the microwave, picked up the two cooked potato slices, and placed them on the countertop. Meanwhile, I was instructed to put the cooked potato slices into a clean bowl.",
+  "20-22": "I poured the liquid from the dirty bowl into the sink and placed it on the countertop.",
+  "23-32": "In order to wash the bowl, I removed multiple items from the sink basin to make same space. I picked up a credit card, cup, plate, and mug and placed it on the countertop.",
+  "33-39": "I picked up the dirty bowl and placed it in the sink basin, turning on and off the faucet to clean it, then pouring the remaining water into the sink and placing it on the countertop.",
+  "40-44": "I picked up the cooked potato slices and placed it in the clean bowl. I then reported task completion which was confirmed by the user.",
+}

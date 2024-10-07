@@ -1,0 +1,5 @@
++include: full
+hierarchy_level: predefined
+prompt_cfg:
+  db:
+    - train_predef/qa.*

@@ -1,0 +1,301 @@
+{
+  "config": {
+    "cfg": "ego4d/predefined",
+    "output": "output/ego4d/predef.json",
+    "dataset": "ego4d-custom",
+    "only_iter_dataset": "False",
+    "n_samples": "None",
+    "history_pickle_dir": "/home/lbaermann/emv/tmp/video-recap/captions/ego4d_detailed",
+    "qa_file": "data/ego4d_long_qa/qa.json",
+    "llm_summarizer_cfg": "{'llm': {'model_name': 'gpt-4o-2024-08-06', 'request_timeout': 60, 'max_retries': 2, 'openai_api_key': None}, 'example_db_name': 'ego4d', 'few_shot_k': 2}",
+    "pkl_suffix": "first_person.objs.pkl"
+  },
+  "code_commit": "4e2bae9100f89d0fc71be1151a4b70cbc2b5ecb6",
+  "results": {
+    "878666-0-q0": {
+      "q_time": "2024/08/01 17:45:40",
+      "q": "What was the name of the restaurant where we had lunch?",
+      "gt": "Diana Garcia",
+      "hyp": "The name of the restaurant is not available in the history.",
+      "cat": "no_answer"
+    },
+    "878666-0-q1": {
+      "q_time": "2024/08/01 19:42:23",
+      "q": "How long did it take me to pass the wooden bridge during the hike?",
+      "gt": "11 seconds",
+      "hyp": "1 minute.",
+      "cat": "wrong"
+    },
+    "878666-0-q2": {
+      "q_time": "2024/08/02 16:10:23",
+      "q": "What was each bridge that I passed over crossing?",
+      "gt": "The bridge during the hike was crossing a small river, the bridge in the city was crossing a highway.",
+      "hyp": "No information available about bridges crossed.",
+      "cat": "no_answer"
+    },
+    "878666-0-q3": {
+      "q_time": "2024/08/01 17:59:20",
+      "q": "How did I pay at the restaurant: by cash or card?",
+      "gt": "credit card",
+      "hyp": "Card",
+      "cat": "correct"
+    },
+    "878666-0-q4": {
+      "q_time": "2024/08/01 18:11:00",
+      "q": "What amount of money did I withdraw in total from both ATMs?",
+      "gt": "None, it did not work both times",
+      "hyp": "0",
+      "cat": "correct"
+    },
+    "878666-0-q5": {
+      "q_time": "2024/08/01 17:35:51",
+      "q": "Where did I get the roller skate boots from?",
+      "gt": "I brought them along in my backpack",
+      "hyp": "You got the roller skate boots from the skate park.",
+      "cat": "wrong"
+    },
+    "878666-0-q6": {
+      "q_time": "2024/08/01 18:41:25",
+      "q": "Where did I take a rest during the hike?",
+      "gt": "On the roots of trees and stones, next to a waterfall",
+      "hyp": "The user took a rest on a bench in the forest.",
+      "cat": "wrong"
+    },
+    "878666-0-q7": {
+      "q_time": "2024/08/01 20:41:04",
+      "q": "Where did I walk around after the forest?",
+      "gt": "On streets/roads",
+      "hyp": "On a muddy pathway.",
+      "cat": "wrong"
+    },
+    "878666-0-q8": {
+      "q_time": "2024/08/01 19:30:56",
+      "q": "What did I do to the golden/brownish dog?",
+      "gt": "I let him smell me and then I pet him",
+      "hyp": "There is no specific record of interacting with a golden/brownish dog.",
+      "cat": "no_answer"
+    },
+    "878666-0-q9": {
+      "q_time": "2024/08/01 17:27:13",
+      "q": "Which dog followed us?",
+      "gt": "The white/gray one",
+      "hyp": "Dog X and Dog Y followed us.",
+      "cat": "correct_tmi"
+    },
+    "878666-0-q10": {
+      "q_time": "2024/08/01 17:22:37",
+      "q": "What snacks were offered to me in the house?",
+      "gt": "Reeses and ManiMoto (nuts)",
+      "hyp": "Biscuits were offered as snacks in the house.",
+      "cat": "wrong"
+    },
+    "878666-0-q11": {
+      "q_time": "2024/08/01 19:23:13",
+      "q": "Do I wear protection while rollerskating?",
+      "gt": "Yes",
+      "hyp": "Yes, you wore protection while rollerskating.",
+      "cat": "correct"
+    },
+    "8fafc0-1-q0": {
+      "q_time": "2022/05/13 19:23:47",
+      "q": "What was the name of the museum that I visited?",
+      "gt": "Museo Naval del Caribe",
+      "hyp": "The name of the museum is not specified in the history.",
+      "cat": "no_answer"
+    },
+    "8fafc0-1-q1": {
+      "q_time": "2022/05/13 19:32:02",
+      "q": "How did we pay the entrance to the museum?",
+      "gt": "cash",
+      "hyp": "We paid the entrance to the museum using a card.",
+      "cat": "wrong"
+    },
+    "8fafc0-1-q2": {
+      "q_time": "2022/05/13 19:53:12",
+      "q": "Where did we go after the museum?",
+      "gt": "we did a small walk and then met with two women on a bench at a central place",
+      "hyp": "After the museum, you went to a house.",
+      "cat": "wrong"
+    },
+    "8fafc0-1-q3": {
+      "q_time": "2022/05/13 19:48:37",
+      "q": "Who spent the day of sightseeing with me?",
+      "gt": "In the museum, I was with a young woman in a black shirt and a young man in a red shirt. Later, we met with two more women, who spent the rest of the day with us.",
+      "hyp": "Persons X and Y spent the day of sightseeing with you.",
+      "cat": "partially_correct_missing"
+    },
+    "8fafc0-1-q4": {
+      "q_time": "2022/05/13 19:48:01",
+      "q": "What food did we get at the end of the day?",
+      "gt": "ice cream",
+      "hyp": "Ice cream",
+      "cat": "correct"
+    },
+    "8fafc0-1-q5": {
+      "q_time": "2022/05/13 19:20:24",
+      "q": "How long did we have to wait for the ice cream?",
+      "gt": "3:57:38 - 4:21:28",
+      "hyp": "Approximately one minute.",
+      "cat": "wrong"
+    },
+    "8fafc0-1-q6": {
+      "q_time": "2022/05/13 19:50:55",
+      "q": "How many canons were infront of the museum?",
+      "gt": "2",
+      "hyp": "0",
+      "cat": "wrong"
+    },
+    "8fafc0-1-q7": {
+      "q_time": "2022/05/15 08:50:46",
+      "q": "What were the genders of the people I interacted with on the bench and then joined us afterwards?",
+      "gt": "2 women",
+      "hyp": "The gender of the person on the bench was a woman, and the people who joined afterwards were also women.",
+      "cat": "partially_correct_tmi"
+    },
+    "8fafc0-1-q8": {
+      "q_time": "2022/05/13 19:30:43",
+      "q": "Did I buy something in the first shop?",
+      "gt": "No",
+      "hyp": "Yes, you bought something in the first shop.",
+      "cat": "wrong"
+    },
+    "8fafc0-1-q9": {
+      "q_time": "2022/05/13 19:31:53",
+      "q": "In the bag shop, what color did the bag had I was interested in and took a picture of?",
+      "gt": "Rose color",
+      "hyp": "The bag you were interested in and took a picture of was red.",
+      "cat": "partially_correct_missing"
+    },
+    "8fafc0-1-q10": {
+      "q_time": "2022/05/13 19:44:58",
+      "q": "What did I do after taking a picture of the bag in the bag shop?",
+      "gt": "Sent it to a contact, left the shop",
+      "hyp": "The user operated the phone and interacted with a woman B in the shop.",
+      "cat": "correct"
+    },
+    "8fafc0-1-q11": {
+      "q_time": "2022/05/13 19:54:00",
+      "q": "Did we see a bride at a touristic place?",
+      "gt": "Yes",
+      "hyp": "No, we did not see a bride at a touristic place.",
+      "cat": "wrong"
+    },
+    "8fafc0-1-q12": {
+      "q_time": "2022/05/13 19:38:43",
+      "q": "Where did we watch the sunset?",
+      "gt": "On a touristic platform (fort or mural)",
+      "hyp": "In the ocean, on a boat.",
+      "cat": "wrong"
+    },
+    "8fafc0-1-q13": {
+      "q_time": "2022/05/13 19:37:34",
+      "q": "Where did we sit down when it was dark to take a rest?",
+      "gt": "Between shops and cars (parking lot)",
+      "hyp": "In the house, on a bench.",
+      "cat": "wrong"
+    },
+    "8fafc0-1-q14": {
+      "q_time": "2022/05/13 19:55:23",
+      "q": "Which colors were the cars we sat in front of at the parking lot?",
+      "gt": "White and red",
+      "hyp": "The cars were yellow and black.",
+      "cat": "wrong"
+    },
+    "c43338-e83770-6b0f2b-2-q0": {
+      "q_time": "2023/11/15 15:23:59",
+      "q": "Where did I do go yesterday?",
+      "gt": "took a walk to the supermarket",
+      "hyp": "You were at home, on the road, outside, in a supermarket, and in a parking lot yesterday.",
+      "cat": "correct_tmi"
+    },
+    "c43338-e83770-6b0f2b-2-q1": {
+      "q_time": "2023/11/15 15:23:59",
+      "q": "What did do today?",
+      "gt": "Played ping-pong, walked to the supermarket to buy some prepared meals, sat into the car",
+      "hyp": "Today, you played a game and interacted with a woman at home, walked outside and conversed with a woman, visited a supermarket and interacted with several people, and finally drove a car.",
+      "cat": "partially_correct_tmi"
+    },
+    "c43338-e83770-6b0f2b-2-q2": {
+      "q_time": "2023/11/15 15:23:59",
+      "q": "Summarize what I did a week ago from today.",
+      "gt": "exercised in the gym, walked home, worked on the computer, walked to the supermarket, bought few groceries, walked back home",
+      "hyp": "A week ago, you exercised at the gym, interacted with people, rode a bicycle, used a computer, and visited a supermarket.",
+      "cat": "partially_correct_tmi"
+    },
+    "c43338-e83770-6b0f2b-2-q3": {
+      "q_time": "2023/11/15 15:23:59",
+      "q": "What did I do after leaving the gym last week?",
+      "gt": "First walked home, worked on the computer, later shortly visited the supermarket",
+      "hyp": "After leaving the gym, you went to a house, walked around, used the phone, interacted with man Y, rode a bicycle, talked to man X, and continued riding outside, interacting with man X and Y.",
+      "cat": "partially_correct_missing"
+    },
+    "c43338-e83770-6b0f2b-2-q4": {
+      "q_time": "2023/11/15 15:23:59",
+      "q": "Where did I go after I being at the supermarket today?",
+      "gt": "walked through the streets to the car",
+      "hyp": "The user went to a parking area or street after being at the supermarket.",
+      "cat": "correct"
+    },
+    "c43338-e83770-6b0f2b-2-q5": {
+      "q_time": "2023/11/15 15:23:59",
+      "q": "What did I do today before buying food at the supermarket?",
+      "gt": "playing ping-pong in the basement of bar",
+      "hyp": "In the car, walked on the road, scrolled the phone, interacted with person X.",
+      "cat": "wrong"
+    },
+    "c43338-e83770-6b0f2b-2-q6": {
+      "q_time": "2023/11/15 15:23:59",
+      "q": "How did I pay at the supermarket yesterday?",
+      "gt": "by card",
+      "hyp": "The payment method at the supermarket yesterday is not specified in the history.",
+      "cat": "no_answer"
+    },
+    "c43338-e83770-6b0f2b-2-q7": {
+      "q_time": "2023/11/15 15:23:59",
+      "q": "How was the weather yesterday?",
+      "gt": "sunny, but fresh (man wearing jacket and hat)",
+      "hyp": "The weather yesterday was clear and sunny.",
+      "cat": "correct"
+    },
+    "c43338-e83770-6b0f2b-2-q8": {
+      "q_time": "2023/11/15 15:23:59",
+      "q": "How was the weather after leaving the supermarket today?",
+      "gt": "gray and there is snow (but it is not snowing)",
+      "hyp": "The weather was cold and snowy after leaving the supermarket today.",
+      "cat": "correct"
+    },
+    "c43338-e83770-6b0f2b-2-q9": {
+      "q_time": "2023/11/15 15:23:59",
+      "q": "When did leave the bar today?",
+      "gt": "2023-11-15, 11:48:50",
+      "hyp": "The user did not leave a bar today.",
+      "cat": "wrong"
+    },
+    "c43338-e83770-6b0f2b-2-q10": {
+      "q_time": "2023/11/15 15:23:59",
+      "q": "How long did I stay inside the supermarket yesterday?",
+      "gt": "10 minutes and 18 seconds",
+      "hyp": "1 minute and 59 seconds",
+      "cat": "wrong"
+    },
+    "c43338-e83770-6b0f2b-2-q11": {
+      "q_time": "2023/11/15 15:23:59",
+      "q": "How long did I stay inside the supermarket today?",
+      "gt": "4 minutes and 56 seconds",
+      "hyp": "The user stayed inside the supermarket for approximately 10 minutes today.",
+      "cat": "wrong"
+    },
+    "c43338-e83770-6b0f2b-2-q12": {
+      "q_time": "2023/11/15 15:23:59",
+      "q": "How long did I stay inside the supermarket a week ago?",
+      "gt": "1 minute and 16 seconds",
+      "hyp": "2 minutes",
+      "cat": "partially_correct_missing"
+    }
+  },
+  "openai_costs": {
+    "cost": 5.819107499999999,
+    "prompt_tokens": 2302091,
+    "completion_tokens": 6388
+  }
+}

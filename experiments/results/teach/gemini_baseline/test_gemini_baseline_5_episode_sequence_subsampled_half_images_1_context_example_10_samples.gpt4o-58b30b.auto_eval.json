@@ -1,0 +1,306 @@
+{
+  "config": "config/llm_eval/gpt4o.yaml",
+  "code_commit": "58b30b9f844f6bb0384d0e8864ab6c6d926763e8",
+  "results": {
+    "03379f213dfbda39_79a2-724c11f87d95f819_a970-38d01f55a8e1ff9b_ca2f-2513b9a8d8ae5129_ab38-2bb159500f5ee79b_77a4-0-sequence_of_task_descs": {
+      "cat": "partially_correct_missing"
+    },
+    "03379f213dfbda39_79a2-724c11f87d95f819_a970-38d01f55a8e1ff9b_ca2f-2513b9a8d8ae5129_ab38-2bb159500f5ee79b_77a4-0-seq_specific_shortened_low_actions": {
+      "cat": "wrong"
+    },
+    "03379f213dfbda39_79a2-724c11f87d95f819_a970-38d01f55a8e1ff9b_ca2f-2513b9a8d8ae5129_ab38-2bb159500f5ee79b_77a4-0-seq_right_after_questions": {
+      "cat": "correct"
+    },
+    "03379f213dfbda39_79a2-724c11f87d95f819_a970-38d01f55a8e1ff9b_ca2f-2513b9a8d8ae5129_ab38-2bb159500f5ee79b_77a4-0-seq_right_before_questions": {
+      "cat": "wrong"
+    },
+    "03379f213dfbda39_79a2-724c11f87d95f819_a970-38d01f55a8e1ff9b_ca2f-2513b9a8d8ae5129_ab38-2bb159500f5ee79b_77a4-0-seq_simple_object_yes_no": {
+      "cat": "correct"
+    },
+    "03379f213dfbda39_79a2-724c11f87d95f819_a970-38d01f55a8e1ff9b_ca2f-2513b9a8d8ae5129_ab38-2bb159500f5ee79b_77a4-0-seq_low_actions_to_episode_task_descs": {
+      "cat": "partially_correct_missing"
+    },
+    "03379f213dfbda39_79a2-724c11f87d95f819_a970-38d01f55a8e1ff9b_ca2f-2513b9a8d8ae5129_ab38-2bb159500f5ee79b_77a4-0-exact_time_to_episode": {
+      "cat": "wrong"
+    },
+    "03379f213dfbda39_79a2-724c11f87d95f819_a970-38d01f55a8e1ff9b_ca2f-2513b9a8d8ae5129_ab38-2bb159500f5ee79b_77a4-0-tasks_to_exact_times": {
+      "cat": "correct"
+    },
+    "03379f213dfbda39_79a2-724c11f87d95f819_a970-38d01f55a8e1ff9b_ca2f-2513b9a8d8ae5129_ab38-2bb159500f5ee79b_77a4-0-tasks_to_days_ago": {
+      "cat": "correct"
+    },
+    "03379f213dfbda39_79a2-724c11f87d95f819_a970-38d01f55a8e1ff9b_ca2f-2513b9a8d8ae5129_ab38-2bb159500f5ee79b_77a4-0-days_ago_to_episode": {
+      "cat": "wrong"
+    },
+    "ed9479c5dd8f204d_0102-92ec5d9ad47a53b8_d3c5-fe6b3de8c88b8573_9f76-5f3063384d77aa71_0ac8-ce0a11d25e229099_8adc-0-sequence_of_task_descs": {
+      "cat": "correct_summarized"
+    },
+    "ed9479c5dd8f204d_0102-92ec5d9ad47a53b8_d3c5-fe6b3de8c88b8573_9f76-5f3063384d77aa71_0ac8-ce0a11d25e229099_8adc-0-seq_specific_shortened_low_actions": {
+      "cat": "wrong"
+    },
+    "ed9479c5dd8f204d_0102-92ec5d9ad47a53b8_d3c5-fe6b3de8c88b8573_9f76-5f3063384d77aa71_0ac8-ce0a11d25e229099_8adc-0-seq_right_after_questions": {
+      "cat": "wrong"
+    },
+    "ed9479c5dd8f204d_0102-92ec5d9ad47a53b8_d3c5-fe6b3de8c88b8573_9f76-5f3063384d77aa71_0ac8-ce0a11d25e229099_8adc-0-seq_right_before_questions": {
+      "cat": "wrong"
+    },
+    "ed9479c5dd8f204d_0102-92ec5d9ad47a53b8_d3c5-fe6b3de8c88b8573_9f76-5f3063384d77aa71_0ac8-ce0a11d25e229099_8adc-0-seq_simple_object_yes_no": {
+      "cat": "correct"
+    },
+    "ed9479c5dd8f204d_0102-92ec5d9ad47a53b8_d3c5-fe6b3de8c88b8573_9f76-5f3063384d77aa71_0ac8-ce0a11d25e229099_8adc-0-seq_low_actions_to_episode_task_descs": {
+      "cat": "wrong"
+    },
+    "ed9479c5dd8f204d_0102-92ec5d9ad47a53b8_d3c5-fe6b3de8c88b8573_9f76-5f3063384d77aa71_0ac8-ce0a11d25e229099_8adc-0-exact_time_to_episode": {
+      "cat": "wrong"
+    },
+    "ed9479c5dd8f204d_0102-92ec5d9ad47a53b8_d3c5-fe6b3de8c88b8573_9f76-5f3063384d77aa71_0ac8-ce0a11d25e229099_8adc-0-tasks_to_exact_times": {
+      "cat": "wrong"
+    },
+    "ed9479c5dd8f204d_0102-92ec5d9ad47a53b8_d3c5-fe6b3de8c88b8573_9f76-5f3063384d77aa71_0ac8-ce0a11d25e229099_8adc-0-tasks_to_days_ago": {
+      "cat": "wrong"
+    },
+    "ed9479c5dd8f204d_0102-92ec5d9ad47a53b8_d3c5-fe6b3de8c88b8573_9f76-5f3063384d77aa71_0ac8-ce0a11d25e229099_8adc-0-days_ago_to_episode": {
+      "cat": "wrong"
+    },
+    "935fb97bba18de43_1130-a966ba0c6e0d463d_ce88-e6843c101e55d384_ffcf-60adcb4590587fb8_3e77-8b2af8ba42ca5cae_913a-0-sequence_of_task_descs": {
+      "cat": "partially_correct_missing"
+    },
+    "935fb97bba18de43_1130-a966ba0c6e0d463d_ce88-e6843c101e55d384_ffcf-60adcb4590587fb8_3e77-8b2af8ba42ca5cae_913a-0-seq_specific_shortened_low_actions": {
+      "cat": "partially_correct_missing"
+    },
+    "935fb97bba18de43_1130-a966ba0c6e0d463d_ce88-e6843c101e55d384_ffcf-60adcb4590587fb8_3e77-8b2af8ba42ca5cae_913a-0-seq_right_after_questions": {
+      "cat": "wrong"
+    },
+    "935fb97bba18de43_1130-a966ba0c6e0d463d_ce88-e6843c101e55d384_ffcf-60adcb4590587fb8_3e77-8b2af8ba42ca5cae_913a-0-seq_right_before_questions": {
+      "cat": "wrong"
+    },
+    "935fb97bba18de43_1130-a966ba0c6e0d463d_ce88-e6843c101e55d384_ffcf-60adcb4590587fb8_3e77-8b2af8ba42ca5cae_913a-0-seq_simple_object_yes_no": {
+      "cat": "wrong"
+    },
+    "935fb97bba18de43_1130-a966ba0c6e0d463d_ce88-e6843c101e55d384_ffcf-60adcb4590587fb8_3e77-8b2af8ba42ca5cae_913a-0-seq_low_actions_to_episode_task_descs": {
+      "cat": "wrong"
+    },
+    "935fb97bba18de43_1130-a966ba0c6e0d463d_ce88-e6843c101e55d384_ffcf-60adcb4590587fb8_3e77-8b2af8ba42ca5cae_913a-0-exact_time_to_episode": {
+      "cat": "wrong"
+    },
+    "935fb97bba18de43_1130-a966ba0c6e0d463d_ce88-e6843c101e55d384_ffcf-60adcb4590587fb8_3e77-8b2af8ba42ca5cae_913a-0-tasks_to_exact_times": {
+      "cat": "wrong"
+    },
+    "935fb97bba18de43_1130-a966ba0c6e0d463d_ce88-e6843c101e55d384_ffcf-60adcb4590587fb8_3e77-8b2af8ba42ca5cae_913a-0-tasks_to_days_ago": {
+      "cat": "wrong"
+    },
+    "935fb97bba18de43_1130-a966ba0c6e0d463d_ce88-e6843c101e55d384_ffcf-60adcb4590587fb8_3e77-8b2af8ba42ca5cae_913a-0-days_ago_to_episode": {
+      "cat": "wrong"
+    },
+    "bb571c169830c652_63a4-aa310077d368fbbc_0a82-6f28bbc4c8ed232a_bfc2-eb4e4611871c24cb_8467-e0eef229bbf6e195_2ba8-0-sequence_of_task_descs": {
+      "cat": "partially_correct_missing"
+    },
+    "bb571c169830c652_63a4-aa310077d368fbbc_0a82-6f28bbc4c8ed232a_bfc2-eb4e4611871c24cb_8467-e0eef229bbf6e195_2ba8-0-seq_specific_shortened_low_actions": {
+      "cat": "partially_correct_missing"
+    },
+    "bb571c169830c652_63a4-aa310077d368fbbc_0a82-6f28bbc4c8ed232a_bfc2-eb4e4611871c24cb_8467-e0eef229bbf6e195_2ba8-0-seq_right_after_questions": {
+      "cat": "wrong"
+    },
+    "bb571c169830c652_63a4-aa310077d368fbbc_0a82-6f28bbc4c8ed232a_bfc2-eb4e4611871c24cb_8467-e0eef229bbf6e195_2ba8-0-seq_right_before_questions": {
+      "cat": "wrong"
+    },
+    "bb571c169830c652_63a4-aa310077d368fbbc_0a82-6f28bbc4c8ed232a_bfc2-eb4e4611871c24cb_8467-e0eef229bbf6e195_2ba8-0-seq_simple_object_yes_no": {
+      "cat": "correct"
+    },
+    "bb571c169830c652_63a4-aa310077d368fbbc_0a82-6f28bbc4c8ed232a_bfc2-eb4e4611871c24cb_8467-e0eef229bbf6e195_2ba8-0-seq_low_actions_to_episode_task_descs": {
+      "cat": "partially_correct_missing"
+    },
+    "bb571c169830c652_63a4-aa310077d368fbbc_0a82-6f28bbc4c8ed232a_bfc2-eb4e4611871c24cb_8467-e0eef229bbf6e195_2ba8-0-exact_time_to_episode": {
+      "cat": "wrong"
+    },
+    "bb571c169830c652_63a4-aa310077d368fbbc_0a82-6f28bbc4c8ed232a_bfc2-eb4e4611871c24cb_8467-e0eef229bbf6e195_2ba8-0-tasks_to_exact_times": {
+      "cat": "wrong"
+    },
+    "bb571c169830c652_63a4-aa310077d368fbbc_0a82-6f28bbc4c8ed232a_bfc2-eb4e4611871c24cb_8467-e0eef229bbf6e195_2ba8-0-tasks_to_days_ago": {
+      "cat": "correct"
+    },
+    "bb571c169830c652_63a4-aa310077d368fbbc_0a82-6f28bbc4c8ed232a_bfc2-eb4e4611871c24cb_8467-e0eef229bbf6e195_2ba8-0-days_ago_to_episode": {
+      "cat": "partially_correct_tmi"
+    },
+    "c7cc40993ef8468b_3e7b-09916b24496645e4_5ff9-9e23434a16a146b5_7f9a-af51d39b23e95018_8b5d-b53c115c99ca34dd_675e-0-sequence_of_task_descs": {
+      "cat": "partially_correct_missing"
+    },
+    "c7cc40993ef8468b_3e7b-09916b24496645e4_5ff9-9e23434a16a146b5_7f9a-af51d39b23e95018_8b5d-b53c115c99ca34dd_675e-0-seq_specific_shortened_low_actions": {
+      "cat": "partially_correct_missing"
+    },
+    "c7cc40993ef8468b_3e7b-09916b24496645e4_5ff9-9e23434a16a146b5_7f9a-af51d39b23e95018_8b5d-b53c115c99ca34dd_675e-0-seq_right_after_questions": {
+      "cat": "wrong"
+    },
+    "c7cc40993ef8468b_3e7b-09916b24496645e4_5ff9-9e23434a16a146b5_7f9a-af51d39b23e95018_8b5d-b53c115c99ca34dd_675e-0-seq_right_before_questions": {
+      "cat": "wrong"
+    },
+    "c7cc40993ef8468b_3e7b-09916b24496645e4_5ff9-9e23434a16a146b5_7f9a-af51d39b23e95018_8b5d-b53c115c99ca34dd_675e-0-seq_simple_object_yes_no": {
+      "cat": "correct"
+    },
+    "c7cc40993ef8468b_3e7b-09916b24496645e4_5ff9-9e23434a16a146b5_7f9a-af51d39b23e95018_8b5d-b53c115c99ca34dd_675e-0-seq_low_actions_to_episode_task_descs": {
+      "cat": "partially_correct_missing"
+    },
+    "c7cc40993ef8468b_3e7b-09916b24496645e4_5ff9-9e23434a16a146b5_7f9a-af51d39b23e95018_8b5d-b53c115c99ca34dd_675e-0-exact_time_to_episode": {
+      "cat": "wrong"
+    },
+    "c7cc40993ef8468b_3e7b-09916b24496645e4_5ff9-9e23434a16a146b5_7f9a-af51d39b23e95018_8b5d-b53c115c99ca34dd_675e-0-tasks_to_exact_times": {
+      "cat": "wrong"
+    },
+    "c7cc40993ef8468b_3e7b-09916b24496645e4_5ff9-9e23434a16a146b5_7f9a-af51d39b23e95018_8b5d-b53c115c99ca34dd_675e-0-tasks_to_days_ago": {
+      "cat": "wrong"
+    },
+    "c7cc40993ef8468b_3e7b-09916b24496645e4_5ff9-9e23434a16a146b5_7f9a-af51d39b23e95018_8b5d-b53c115c99ca34dd_675e-0-days_ago_to_episode": {
+      "cat": "wrong"
+    },
+    "a1fc527709ebcb56_2b5d-f2fab283e8dd367a_cb1f-78aa4022d248623e_af13-1e8fb21f2b41b0b0_db8b-e32e722334301fa7_892d-0-sequence_of_task_descs": {
+      "cat": "partially_correct_missing"
+    },
+    "a1fc527709ebcb56_2b5d-f2fab283e8dd367a_cb1f-78aa4022d248623e_af13-1e8fb21f2b41b0b0_db8b-e32e722334301fa7_892d-0-seq_specific_shortened_low_actions": {
+      "cat": "partially_correct_tmi"
+    },
+    "a1fc527709ebcb56_2b5d-f2fab283e8dd367a_cb1f-78aa4022d248623e_af13-1e8fb21f2b41b0b0_db8b-e32e722334301fa7_892d-0-seq_right_after_questions": {
+      "cat": "correct"
+    },
+    "a1fc527709ebcb56_2b5d-f2fab283e8dd367a_cb1f-78aa4022d248623e_af13-1e8fb21f2b41b0b0_db8b-e32e722334301fa7_892d-0-seq_right_before_questions": {
+      "cat": "correct"
+    },
+    "a1fc527709ebcb56_2b5d-f2fab283e8dd367a_cb1f-78aa4022d248623e_af13-1e8fb21f2b41b0b0_db8b-e32e722334301fa7_892d-0-seq_simple_object_yes_no": {
+      "cat": "correct"
+    },
+    "a1fc527709ebcb56_2b5d-f2fab283e8dd367a_cb1f-78aa4022d248623e_af13-1e8fb21f2b41b0b0_db8b-e32e722334301fa7_892d-0-seq_low_actions_to_episode_task_descs": {
+      "cat": "wrong"
+    },
+    "a1fc527709ebcb56_2b5d-f2fab283e8dd367a_cb1f-78aa4022d248623e_af13-1e8fb21f2b41b0b0_db8b-e32e722334301fa7_892d-0-exact_time_to_episode": {
+      "cat": "partially_correct_missing"
+    },
+    "a1fc527709ebcb56_2b5d-f2fab283e8dd367a_cb1f-78aa4022d248623e_af13-1e8fb21f2b41b0b0_db8b-e32e722334301fa7_892d-0-tasks_to_exact_times": {
+      "cat": "wrong"
+    },
+    "a1fc527709ebcb56_2b5d-f2fab283e8dd367a_cb1f-78aa4022d248623e_af13-1e8fb21f2b41b0b0_db8b-e32e722334301fa7_892d-0-tasks_to_days_ago": {
+      "cat": "correct"
+    },
+    "a1fc527709ebcb56_2b5d-f2fab283e8dd367a_cb1f-78aa4022d248623e_af13-1e8fb21f2b41b0b0_db8b-e32e722334301fa7_892d-0-days_ago_to_episode": {
+      "cat": "wrong"
+    },
+    "18f6da623ba658a2_9f53-6e26385c641764c7_e084-41b067f2ce6f3fef_d081-c3d1e8e83a3ffcf5_0d1e-2f8d482d22e56fdd_3e5c-0-sequence_of_task_descs": {
+      "cat": "partially_correct_tmi"
+    },
+    "18f6da623ba658a2_9f53-6e26385c641764c7_e084-41b067f2ce6f3fef_d081-c3d1e8e83a3ffcf5_0d1e-2f8d482d22e56fdd_3e5c-0-seq_specific_shortened_low_actions": {
+      "cat": "partially_correct_missing"
+    },
+    "18f6da623ba658a2_9f53-6e26385c641764c7_e084-41b067f2ce6f3fef_d081-c3d1e8e83a3ffcf5_0d1e-2f8d482d22e56fdd_3e5c-0-seq_right_after_questions": {
+      "cat": "correct"
+    },
+    "18f6da623ba658a2_9f53-6e26385c641764c7_e084-41b067f2ce6f3fef_d081-c3d1e8e83a3ffcf5_0d1e-2f8d482d22e56fdd_3e5c-0-seq_right_before_questions": {
+      "cat": "wrong"
+    },
+    "18f6da623ba658a2_9f53-6e26385c641764c7_e084-41b067f2ce6f3fef_d081-c3d1e8e83a3ffcf5_0d1e-2f8d482d22e56fdd_3e5c-0-seq_simple_object_yes_no": {
+      "cat": "correct_tmi"
+    },
+    "18f6da623ba658a2_9f53-6e26385c641764c7_e084-41b067f2ce6f3fef_d081-c3d1e8e83a3ffcf5_0d1e-2f8d482d22e56fdd_3e5c-0-seq_low_actions_to_episode_task_descs": {
+      "cat": "wrong"
+    },
+    "18f6da623ba658a2_9f53-6e26385c641764c7_e084-41b067f2ce6f3fef_d081-c3d1e8e83a3ffcf5_0d1e-2f8d482d22e56fdd_3e5c-0-exact_time_to_episode": {
+      "cat": "wrong"
+    },
+    "18f6da623ba658a2_9f53-6e26385c641764c7_e084-41b067f2ce6f3fef_d081-c3d1e8e83a3ffcf5_0d1e-2f8d482d22e56fdd_3e5c-0-tasks_to_exact_times": {
+      "cat": "wrong"
+    },
+    "18f6da623ba658a2_9f53-6e26385c641764c7_e084-41b067f2ce6f3fef_d081-c3d1e8e83a3ffcf5_0d1e-2f8d482d22e56fdd_3e5c-0-tasks_to_days_ago": {
+      "cat": "correct"
+    },
+    "18f6da623ba658a2_9f53-6e26385c641764c7_e084-41b067f2ce6f3fef_d081-c3d1e8e83a3ffcf5_0d1e-2f8d482d22e56fdd_3e5c-0-days_ago_to_episode": {
+      "cat": "partially_correct_missing"
+    },
+    "bfa7505b440eadde_750f-48f25d2481974dee_e871-cf32d4a95cdbcd3a_9fa2-5aa3cbd322d4f163_3bda-15fa5e0caaf6a06f_81e4-0-sequence_of_task_descs": {
+      "cat": "partially_correct_missing"
+    },
+    "bfa7505b440eadde_750f-48f25d2481974dee_e871-cf32d4a95cdbcd3a_9fa2-5aa3cbd322d4f163_3bda-15fa5e0caaf6a06f_81e4-0-seq_specific_shortened_low_actions": {
+      "cat": "partially_correct_missing"
+    },
+    "bfa7505b440eadde_750f-48f25d2481974dee_e871-cf32d4a95cdbcd3a_9fa2-5aa3cbd322d4f163_3bda-15fa5e0caaf6a06f_81e4-0-seq_right_after_questions": {
+      "cat": "wrong"
+    },
+    "bfa7505b440eadde_750f-48f25d2481974dee_e871-cf32d4a95cdbcd3a_9fa2-5aa3cbd322d4f163_3bda-15fa5e0caaf6a06f_81e4-0-seq_right_before_questions": {
+      "cat": "wrong"
+    },
+    "bfa7505b440eadde_750f-48f25d2481974dee_e871-cf32d4a95cdbcd3a_9fa2-5aa3cbd322d4f163_3bda-15fa5e0caaf6a06f_81e4-0-seq_simple_object_yes_no": {
+      "cat": "correct_summarized"
+    },
+    "bfa7505b440eadde_750f-48f25d2481974dee_e871-cf32d4a95cdbcd3a_9fa2-5aa3cbd322d4f163_3bda-15fa5e0caaf6a06f_81e4-0-seq_low_actions_to_episode_task_descs": {
+      "cat": "correct"
+    },
+    "bfa7505b440eadde_750f-48f25d2481974dee_e871-cf32d4a95cdbcd3a_9fa2-5aa3cbd322d4f163_3bda-15fa5e0caaf6a06f_81e4-0-exact_time_to_episode": {
+      "cat": "wrong"
+    },
+    "bfa7505b440eadde_750f-48f25d2481974dee_e871-cf32d4a95cdbcd3a_9fa2-5aa3cbd322d4f163_3bda-15fa5e0caaf6a06f_81e4-0-tasks_to_exact_times": {
+      "cat": "correct"
+    },
+    "bfa7505b440eadde_750f-48f25d2481974dee_e871-cf32d4a95cdbcd3a_9fa2-5aa3cbd322d4f163_3bda-15fa5e0caaf6a06f_81e4-0-tasks_to_days_ago": {
+      "cat": "partially_correct_missing"
+    },
+    "bfa7505b440eadde_750f-48f25d2481974dee_e871-cf32d4a95cdbcd3a_9fa2-5aa3cbd322d4f163_3bda-15fa5e0caaf6a06f_81e4-0-days_ago_to_episode": {
+      "cat": "wrong"
+    },
+    "1fefbf1fb30901cd_4a9b-15fa5e0caaf6a06f_46f8-b0987966f589a51f_79fc-7c76f284a689ed0a_f789-18f6da623ba658a2_aa07-0-sequence_of_task_descs": {
+      "cat": "correct"
+    },
+    "1fefbf1fb30901cd_4a9b-15fa5e0caaf6a06f_46f8-b0987966f589a51f_79fc-7c76f284a689ed0a_f789-18f6da623ba658a2_aa07-0-seq_specific_shortened_low_actions": {
+      "cat": "partially_correct_tmi"
+    },
+    "1fefbf1fb30901cd_4a9b-15fa5e0caaf6a06f_46f8-b0987966f589a51f_79fc-7c76f284a689ed0a_f789-18f6da623ba658a2_aa07-0-seq_right_after_questions": {
+      "cat": "wrong"
+    },
+    "1fefbf1fb30901cd_4a9b-15fa5e0caaf6a06f_46f8-b0987966f589a51f_79fc-7c76f284a689ed0a_f789-18f6da623ba658a2_aa07-0-seq_right_before_questions": {
+      "cat": "wrong"
+    },
+    "1fefbf1fb30901cd_4a9b-15fa5e0caaf6a06f_46f8-b0987966f589a51f_79fc-7c76f284a689ed0a_f789-18f6da623ba658a2_aa07-0-seq_simple_object_yes_no": {
+      "cat": "correct_summarized"
+    },
+    "1fefbf1fb30901cd_4a9b-15fa5e0caaf6a06f_46f8-b0987966f589a51f_79fc-7c76f284a689ed0a_f789-18f6da623ba658a2_aa07-0-seq_low_actions_to_episode_task_descs": {
+      "cat": "partially_correct_tmi"
+    },
+    "1fefbf1fb30901cd_4a9b-15fa5e0caaf6a06f_46f8-b0987966f589a51f_79fc-7c76f284a689ed0a_f789-18f6da623ba658a2_aa07-0-exact_time_to_episode": {
+      "cat": "wrong"
+    },
+    "1fefbf1fb30901cd_4a9b-15fa5e0caaf6a06f_46f8-b0987966f589a51f_79fc-7c76f284a689ed0a_f789-18f6da623ba658a2_aa07-0-tasks_to_exact_times": {
+      "cat": "wrong"
+    },
+    "1fefbf1fb30901cd_4a9b-15fa5e0caaf6a06f_46f8-b0987966f589a51f_79fc-7c76f284a689ed0a_f789-18f6da623ba658a2_aa07-0-tasks_to_days_ago": {
+      "cat": "correct_summarized"
+    },
+    "1fefbf1fb30901cd_4a9b-15fa5e0caaf6a06f_46f8-b0987966f589a51f_79fc-7c76f284a689ed0a_f789-18f6da623ba658a2_aa07-0-days_ago_to_episode": {
+      "cat": "partially_correct_tmi"
+    },
+    "a72c03efd22ce41c_c338-ad2e4eb0b24a5940_9c9d-b2815444299854b0_d30e-c70d9a05ca542364_77d5-3574c805169b19b0_a532-0-sequence_of_task_descs": {
+      "cat": "partially_correct_missing"
+    },
+    "a72c03efd22ce41c_c338-ad2e4eb0b24a5940_9c9d-b2815444299854b0_d30e-c70d9a05ca542364_77d5-3574c805169b19b0_a532-0-seq_specific_shortened_low_actions": {
+      "cat": "partially_correct_missing"
+    },
+    "a72c03efd22ce41c_c338-ad2e4eb0b24a5940_9c9d-b2815444299854b0_d30e-c70d9a05ca542364_77d5-3574c805169b19b0_a532-0-seq_right_after_questions": {
+      "cat": "correct"
+    },
+    "a72c03efd22ce41c_c338-ad2e4eb0b24a5940_9c9d-b2815444299854b0_d30e-c70d9a05ca542364_77d5-3574c805169b19b0_a532-0-seq_right_before_questions": {
+      "cat": "correct"
+    },
+    "a72c03efd22ce41c_c338-ad2e4eb0b24a5940_9c9d-b2815444299854b0_d30e-c70d9a05ca542364_77d5-3574c805169b19b0_a532-0-seq_simple_object_yes_no": {
+      "cat": "wrong"
+    },
+    "a72c03efd22ce41c_c338-ad2e4eb0b24a5940_9c9d-b2815444299854b0_d30e-c70d9a05ca542364_77d5-3574c805169b19b0_a532-0-seq_low_actions_to_episode_task_descs": {
+      "cat": "wrong"
+    },
+    "a72c03efd22ce41c_c338-ad2e4eb0b24a5940_9c9d-b2815444299854b0_d30e-c70d9a05ca542364_77d5-3574c805169b19b0_a532-0-exact_time_to_episode": {
+      "cat": "wrong"
+    },
+    "a72c03efd22ce41c_c338-ad2e4eb0b24a5940_9c9d-b2815444299854b0_d30e-c70d9a05ca542364_77d5-3574c805169b19b0_a532-0-tasks_to_exact_times": {
+      "cat": "wrong"
+    },
+    "a72c03efd22ce41c_c338-ad2e4eb0b24a5940_9c9d-b2815444299854b0_d30e-c70d9a05ca542364_77d5-3574c805169b19b0_a532-0-tasks_to_days_ago": {
+      "cat": "wrong"
+    },
+    "a72c03efd22ce41c_c338-ad2e4eb0b24a5940_9c9d-b2815444299854b0_d30e-c70d9a05ca542364_77d5-3574c805169b19b0_a532-0-days_ago_to_episode": {
+      "cat": "wrong"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+type: simplified_coding
+max_rounds: 15
+llm:
+  type: ChatOpenAI
+  model_name: gpt-4o-2024-08-06
+  max_tokens: 512
+  temperature: 0.1
+  request_timeout: 20
+  max_retries: 2
+question_vlm:
+  type: ChatOpenAI
+  model_name: gpt-4o-2024-08-06
+  max_tokens: 64
+  temperature: 0.3
+  request_timeout: 30
+  max_retries: 1
+prompt_cfg:
+  system: system
+  usage: usage
+  user_question: user_question
+  history: history
+  final_try: final
+search:
+  embedding: all-mpnet-base-v2
+  filter_kwargs:
+    top_p: 0.3
+    min_cos_sim: 0.2
+api:
+  include_groups:
+    - dialog
+    - util
+    - tools
+  include_names:
+    - history
+    - answer
+exclude_imports:
+  - history # This is visible, but not explicitly imported (since it's a property and would be rendered strangely).
+  - wait_for_trigger # Hidden so that the LM prefers "answer"
+  - say # Hidden so that the LM prefers "answer"

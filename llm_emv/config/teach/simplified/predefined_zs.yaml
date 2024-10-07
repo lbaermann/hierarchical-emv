@@ -1,0 +1,6 @@
++include: predefined
+prompt_cfg:
+  system: system_zero_shot
+  db: [ ]
+  retrieval:
+    top_k: 0

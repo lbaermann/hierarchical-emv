@@ -1,0 +1,10 @@
+0.	2024-07-12 13:14:19.122018 - 2024-07-12 13:28:52.512607: I went to home pose, checked which objects I can see and told the user about that.
+1.	2024-07-12 14:08:42.617048 - 2024-07-12 14:11:34.872992: I brought the milk from the side board to the human.
+2.	2024-07-12 15:00:28.595857 - 2024-07-12 15:00:29.792542: I went to home pose.
+3.	2024-07-12 15:07:49.543870 - 2024-07-12 15:11:38.377649: I navigated to the sideboard and told the user which objects I can see.
+4.	2024-07-12 15:11:38.422261 - 2024-07-12 15:14:38.041896: I brought the milk from the sideboard to the human.
+5.	2024-07-12 15:16:02.426745 - 2024-07-12 15:21:37.521697: I went to home pose, then tried to bring the milk to the user two times but got aborted, then a third time it worked.
+6.	2024-07-12 15:24:41.134490 - 2024-07-12 15:28:19.556850: I received an object from the human, handed it over to the human, and then loaded the dishwasher.
+7.	2024-07-12 15:29:28.405484 - 2024-07-12 15:31:08.015345: I loaded the dishwasher.
+8.	2024-07-12 15:32:19.202063 - 2024-07-12 15:47:33.137963: I went to home pose, looked ahead, and then tried to learn the current person but failed.
+9.	2024-07-12 16:08:38.388934 - 2024-07-12 16:12:16.914528: I did a self-introduction
