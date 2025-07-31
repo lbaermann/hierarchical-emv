@@ -5,8 +5,8 @@ include_lowest_level_details: True  # The agent approaches also receive these de
 llm:
   type: ChatGoogleGenerativeAI
   model: gemini-1.5-pro
-  max_tokens: 512
+  max_output_tokens: 512
   temperature: 0.1
-  request_timeout: 40
+  timeout: 40
   max_retries: 2
 prompt_cfg: null

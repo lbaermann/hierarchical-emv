@@ -1,10 +1,10 @@
 type: simplified_coding
 llm:
-  type: ChatOpenAI
-  model_name: gpt-4o-2024-08-06
-  max_tokens: 512
+  type: ChatGoogleGenerativeAI
+  model: gemini-1.5-pro
+  max_output_tokens: 512
   temperature: 0.1
-  request_timeout: 20
+  request_timeout: 40
   max_retries: 2
 question_vlm:
   type: ChatOpenAI

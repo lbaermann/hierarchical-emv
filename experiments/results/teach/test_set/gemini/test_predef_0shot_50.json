@@ -1,0 +1,1869 @@
+{
+  "config": {
+    "cfg": "teach/simplified/predefined_zs",
+    "output": "output/teach-dechant/multi-ep/gemini-1.5-pro/test_predef_0shot_50.json",
+    "only_iter_dataset": "False",
+    "dataset": "teach-dechant",
+    "n_samples": "None",
+    "qa_file": "/home/lbaermann/emv/data/TEACh/dechant-qa/multi-episode/corrected_ep_test_set/test_set_50.pkl",
+    "max_samples_per_episode": "None",
+    "use_only_question_types": "None",
+    "skip_first_n_episodes": "0",
+    "teach_base": "/home/lbaermann/emv/data/TEACh",
+    "llm_summarizer_cfg": "None",
+    "pure_img_approach": "None"
+  },
+  "code_commit": "354590e0cc8652e7977214eb064c7d7beae5dbf9",
+  "results": {
+    "6c24abb778c24a7c_704a-977b52faf01e6c05_d71f-01c1b8aa1820aa0b_adaf-32918ea00b69d9fe_38ff-cdf30defa61245ba_5590-2513b9a8d8ae5129_ab38-7337be5c30b1b5d1_874c-57862376ad3394a1_c9dc-32fe2fa7cc43fbc3_b8f3-0de4b62afcd06138_45f2-a966ba0c6e0d463d_ce88-25ef88cce38adfbc_1740-7504548a0dd7baf8_b148-064a69cb5d40b41f_9c2e-a690a35743c855aa_4c00-4b813e7c9bc088d0_1ce1-e4909f617bc99db4_4ab8-03379f213dfbda39_79a2-c49a96282ec09e90_5bfa-a2d31b84a569e568_fb03-88ddc0cbf1a23687_43ea-b36a8d73976068a3_6afd-c02445dd7a5b6f26_d92a-a76099fbab67c9da_4d48-c6c5c151b7b8e770_38db-60d26ec0f9c4757e_425d-9539c0004762d6a8_2eee-b2fde7ee4eb1c40f_1f95-c2ffd6a81bfe2613_f91c-81b10da74f7ac9ff_15c8-6ccc8b815fbc093a_e921-5aa3cbd322d4f163_402a-52e190f2e5f3b790_edbb-71392179ff5e728f_d7fe-4e893adaff5699af_ab4f-6f4aca312776de7b_97f3-4e88e46c6584bd85_21d2-eef61c8f3cdd8280_c537-bfb3e4eaf7ba458f_81db-af3fc77ab8313235_5b72-dbb41344c474217f_ee0e-498d06abfb7e9487_5c19-36492265af47de94_a352-9c97a83f60095487_02d9-0d1a67f82b3b5854_d74d-2f8d482d22e56fdd_410e-5c12b219bbb5bc07_6008-4aafdc038df138e8_58f0-474a8460bc35eb12_20d0-0f0664338151d4ac_5c06-0-sequence_of_task_descs": {
+      "q_time": "2023/08/04 15:24:47",
+      "q": "List the tasks you performed.",
+      "gt": "make a plate of toast. cook 2 slice(s) of potato and serve in a bowl. clean all the plates. water the plant. make a sandwich. water the plant. water the plant. clean all the plates. clean all the pans. cook 2 slice(s) of potato and serve on a plate. make a plate of toast. put all credit card on any furniture. make a sandwich. cook 5 slice(s) of potato and serve on a plate. make a sandwich. boil potato. clean all the cups. prepare coffee in a clean mug. make a sandwich. make a sandwich. put all remote control on one tables. make a salad. prepare coffee in a clean mug. put all remote control on one chairs. put all tissue box on one sidetable. put all tissue box on one tables. clean all the drinkwares. clean all the plates. put all remote control on one armchair. boil potato. cook 5 slice(s) of potato and serve on a plate. serve 1 slice(s) of tomato on a plate. clean all the plates. serve 1 slice(s) of tomato on a plate. put all book on any bed. boil potato. make a salad. put all pencil on any bed. prepare coffee in a clean mug. cook 3 slice(s) of potato and serve on a plate. serve 1 slice(s) of tomato in a bowl. serve 2 slice(s) of tomato on a plate. put all newspaper on one armchair. make a salad. make a salad. serve 1 slice(s) of lettuce on a plate. prepare breakfast. put all watch on one sofa. prepare coffee in a clean mug. put all tissue box on one dresser.",
+      "hyp": "I performed these tasks:\nOpen(Cabinet_2)\nPickup(Bread_1)\nClose(Cabinet_2)\nPlace(CounterTop_1)\nPickup(Knife_0)\nSlice(Bread_1)\nPlace(CounterTop_1)\nPickup(Bread_1_Sliced_5)\nPlace(Toaster)\nToggleOn(Toaster)\nPickup(Plate)\nPlace(CounterTop_0)\nPickup(Lettuce_1)\nPlace(CounterTop_1)\nPickup(Plate)\nPlace(Sink_Basin)\nToggleOn(Faucet)\nToggleOff(Faucet)\nPickup(Plate)\nPlace(CounterTop_1)\nToggleOff(Toaster)\nPickup(Bread_1_Sliced_5)\nPlace(Plate)\nNoop\nPickup(Egg_1)\nPlace(Chair_0)\nPickup(Potato_1)\nOpen(Microwave)\nPlace(Microwave)\nClose(Microwave)\nToggleOn(Microwave)\nToggleOff(Microwave)\nOpen(Microwave)\nPickup(Potato_1)\nClose(Microwave)\nPlace(CounterTop_0)\nPickup(Knife_0)\nSlice(Potato_1)\nPlace(CounterTop_0)\nPickup(Bowl_1)\nPour(Sink_Basin)\nPlace(CounterTop_0)\nPickup(Potato_1_Sliced_6)\nPlace(Bowl_1)\nPickup(Potato_1_Sliced_7)\nPlace(Bowl_1)\nNoop\nToggleOff(Faucet)\nPickup(PepperShaker_0)\nPlace(CounterTop_0)\nPickup(Plate)\nPlace(Sink_Basin)\nToggleOn(Faucet)\nToggleOff(Faucet)\nNoop\nPickup(Mug)\nPlace(Sink_Basin)\nToggleOn(Faucet)\nToggleOff(Faucet)\nPickup(Mug)\nPour(Sink_Basin)\nPlace(Sink_Basin)\nToggleOn(Faucet)\nToggleOff(Faucet)\nPickup(Mug)\nPour(HousePlant)\nPlace(CounterTop_0)\nPickup(SoapBottle_0)\nPlace(Floor)\nOpen(Fridge)\nPickup"
+    },
+    "6c24abb778c24a7c_704a-977b52faf01e6c05_d71f-01c1b8aa1820aa0b_adaf-32918ea00b69d9fe_38ff-cdf30defa61245ba_5590-2513b9a8d8ae5129_ab38-7337be5c30b1b5d1_874c-57862376ad3394a1_c9dc-32fe2fa7cc43fbc3_b8f3-0de4b62afcd06138_45f2-a966ba0c6e0d463d_ce88-25ef88cce38adfbc_1740-7504548a0dd7baf8_b148-064a69cb5d40b41f_9c2e-a690a35743c855aa_4c00-4b813e7c9bc088d0_1ce1-e4909f617bc99db4_4ab8-03379f213dfbda39_79a2-c49a96282ec09e90_5bfa-a2d31b84a569e568_fb03-88ddc0cbf1a23687_43ea-b36a8d73976068a3_6afd-c02445dd7a5b6f26_d92a-a76099fbab67c9da_4d48-c6c5c151b7b8e770_38db-60d26ec0f9c4757e_425d-9539c0004762d6a8_2eee-b2fde7ee4eb1c40f_1f95-c2ffd6a81bfe2613_f91c-81b10da74f7ac9ff_15c8-6ccc8b815fbc093a_e921-5aa3cbd322d4f163_402a-52e190f2e5f3b790_edbb-71392179ff5e728f_d7fe-4e893adaff5699af_ab4f-6f4aca312776de7b_97f3-4e88e46c6584bd85_21d2-eef61c8f3cdd8280_c537-bfb3e4eaf7ba458f_81db-af3fc77ab8313235_5b72-dbb41344c474217f_ee0e-498d06abfb7e9487_5c19-36492265af47de94_a352-9c97a83f60095487_02d9-0d1a67f82b3b5854_d74d-2f8d482d22e56fdd_410e-5c12b219bbb5bc07_6008-4aafdc038df138e8_58f0-474a8460bc35eb12_20d0-0f0664338151d4ac_5c06-0-seq_specific_shortened_low_actions": {
+      "q_time": "2023/08/04 15:24:47",
+      "q": "describe what you did when you clean all the pans.",
+      "gt": "pick up the pan, place the pan on the countertop, toggle off the faucet, pick up the dish sponge, place the dish sponge on the countertop, pick up the knife, place the knife on the countertop, pick up the potato, place the potato on the countertop, pick up the cellphone, place the cellphone on the countertop, pick up the knife, place the knife on the countertop, pick up the pan, place the pan in the sink, toggle on the faucet, toggle off the faucet, pick up the pan",
+      "hyp": "I moved to the stove, confirmed the pan's location, and picked it up.",
+      "ref_ts": [
+        [
+          "2023/07/16 13:10:02",
+          "2023/07/16 13:12:13"
+        ]
+      ]
+    },
+    "6c24abb778c24a7c_704a-977b52faf01e6c05_d71f-01c1b8aa1820aa0b_adaf-32918ea00b69d9fe_38ff-cdf30defa61245ba_5590-2513b9a8d8ae5129_ab38-7337be5c30b1b5d1_874c-57862376ad3394a1_c9dc-32fe2fa7cc43fbc3_b8f3-0de4b62afcd06138_45f2-a966ba0c6e0d463d_ce88-25ef88cce38adfbc_1740-7504548a0dd7baf8_b148-064a69cb5d40b41f_9c2e-a690a35743c855aa_4c00-4b813e7c9bc088d0_1ce1-e4909f617bc99db4_4ab8-03379f213dfbda39_79a2-c49a96282ec09e90_5bfa-a2d31b84a569e568_fb03-88ddc0cbf1a23687_43ea-b36a8d73976068a3_6afd-c02445dd7a5b6f26_d92a-a76099fbab67c9da_4d48-c6c5c151b7b8e770_38db-60d26ec0f9c4757e_425d-9539c0004762d6a8_2eee-b2fde7ee4eb1c40f_1f95-c2ffd6a81bfe2613_f91c-81b10da74f7ac9ff_15c8-6ccc8b815fbc093a_e921-5aa3cbd322d4f163_402a-52e190f2e5f3b790_edbb-71392179ff5e728f_d7fe-4e893adaff5699af_ab4f-6f4aca312776de7b_97f3-4e88e46c6584bd85_21d2-eef61c8f3cdd8280_c537-bfb3e4eaf7ba458f_81db-af3fc77ab8313235_5b72-dbb41344c474217f_ee0e-498d06abfb7e9487_5c19-36492265af47de94_a352-9c97a83f60095487_02d9-0d1a67f82b3b5854_d74d-2f8d482d22e56fdd_410e-5c12b219bbb5bc07_6008-4aafdc038df138e8_58f0-474a8460bc35eb12_20d0-0f0664338151d4ac_5c06-0-seq_right_after_questions": {
+      "q_time": "2023/08/04 15:24:47",
+      "q": "What task did you do just after put all book on any bed?",
+      "gt": "boil potato.",
+      "hyp": "I turned left.",
+      "ref_ts": [
+        [
+          "2023/07/28 12:26:43",
+          "2023/07/28 12:27:56"
+        ],
+        [
+          "2023/07/29 14:40:34",
+          "2023/07/29 14:47:39"
+        ]
+      ]
+    },
+    "6c24abb778c24a7c_704a-977b52faf01e6c05_d71f-01c1b8aa1820aa0b_adaf-32918ea00b69d9fe_38ff-cdf30defa61245ba_5590-2513b9a8d8ae5129_ab38-7337be5c30b1b5d1_874c-57862376ad3394a1_c9dc-32fe2fa7cc43fbc3_b8f3-0de4b62afcd06138_45f2-a966ba0c6e0d463d_ce88-25ef88cce38adfbc_1740-7504548a0dd7baf8_b148-064a69cb5d40b41f_9c2e-a690a35743c855aa_4c00-4b813e7c9bc088d0_1ce1-e4909f617bc99db4_4ab8-03379f213dfbda39_79a2-c49a96282ec09e90_5bfa-a2d31b84a569e568_fb03-88ddc0cbf1a23687_43ea-b36a8d73976068a3_6afd-c02445dd7a5b6f26_d92a-a76099fbab67c9da_4d48-c6c5c151b7b8e770_38db-60d26ec0f9c4757e_425d-9539c0004762d6a8_2eee-b2fde7ee4eb1c40f_1f95-c2ffd6a81bfe2613_f91c-81b10da74f7ac9ff_15c8-6ccc8b815fbc093a_e921-5aa3cbd322d4f163_402a-52e190f2e5f3b790_edbb-71392179ff5e728f_d7fe-4e893adaff5699af_ab4f-6f4aca312776de7b_97f3-4e88e46c6584bd85_21d2-eef61c8f3cdd8280_c537-bfb3e4eaf7ba458f_81db-af3fc77ab8313235_5b72-dbb41344c474217f_ee0e-498d06abfb7e9487_5c19-36492265af47de94_a352-9c97a83f60095487_02d9-0d1a67f82b3b5854_d74d-2f8d482d22e56fdd_410e-5c12b219bbb5bc07_6008-4aafdc038df138e8_58f0-474a8460bc35eb12_20d0-0f0664338151d4ac_5c06-0-seq_right_before_questions": {
+      "q_time": "2023/08/04 15:24:47",
+      "q": "What task did you do just before put all newspaper on one armchair?",
+      "gt": "serve 2 slice(s) of tomato on a plate.",
+      "hyp": "Picking up the newspaper.",
+      "ref_ts": [
+        [
+          "2023/07/31 08:25:31",
+          "2023/07/31 08:28:29"
+        ],
+        [
+          "2023/07/31 11:39:16",
+          "2023/07/31 11:45:46"
+        ]
+      ]
+    },
+    "6c24abb778c24a7c_704a-977b52faf01e6c05_d71f-01c1b8aa1820aa0b_adaf-32918ea00b69d9fe_38ff-cdf30defa61245ba_5590-2513b9a8d8ae5129_ab38-7337be5c30b1b5d1_874c-57862376ad3394a1_c9dc-32fe2fa7cc43fbc3_b8f3-0de4b62afcd06138_45f2-a966ba0c6e0d463d_ce88-25ef88cce38adfbc_1740-7504548a0dd7baf8_b148-064a69cb5d40b41f_9c2e-a690a35743c855aa_4c00-4b813e7c9bc088d0_1ce1-e4909f617bc99db4_4ab8-03379f213dfbda39_79a2-c49a96282ec09e90_5bfa-a2d31b84a569e568_fb03-88ddc0cbf1a23687_43ea-b36a8d73976068a3_6afd-c02445dd7a5b6f26_d92a-a76099fbab67c9da_4d48-c6c5c151b7b8e770_38db-60d26ec0f9c4757e_425d-9539c0004762d6a8_2eee-b2fde7ee4eb1c40f_1f95-c2ffd6a81bfe2613_f91c-81b10da74f7ac9ff_15c8-6ccc8b815fbc093a_e921-5aa3cbd322d4f163_402a-52e190f2e5f3b790_edbb-71392179ff5e728f_d7fe-4e893adaff5699af_ab4f-6f4aca312776de7b_97f3-4e88e46c6584bd85_21d2-eef61c8f3cdd8280_c537-bfb3e4eaf7ba458f_81db-af3fc77ab8313235_5b72-dbb41344c474217f_ee0e-498d06abfb7e9487_5c19-36492265af47de94_a352-9c97a83f60095487_02d9-0d1a67f82b3b5854_d74d-2f8d482d22e56fdd_410e-5c12b219bbb5bc07_6008-4aafdc038df138e8_58f0-474a8460bc35eb12_20d0-0f0664338151d4ac_5c06-0-seq_simple_object_yes_no": {
+      "q_time": "2023/08/04 15:24:47",
+      "q": "Was there a baseball bat ?",
+      "gt": "no",
+      "hyp": "No."
+    },
+    "6c24abb778c24a7c_704a-977b52faf01e6c05_d71f-01c1b8aa1820aa0b_adaf-32918ea00b69d9fe_38ff-cdf30defa61245ba_5590-2513b9a8d8ae5129_ab38-7337be5c30b1b5d1_874c-57862376ad3394a1_c9dc-32fe2fa7cc43fbc3_b8f3-0de4b62afcd06138_45f2-a966ba0c6e0d463d_ce88-25ef88cce38adfbc_1740-7504548a0dd7baf8_b148-064a69cb5d40b41f_9c2e-a690a35743c855aa_4c00-4b813e7c9bc088d0_1ce1-e4909f617bc99db4_4ab8-03379f213dfbda39_79a2-c49a96282ec09e90_5bfa-a2d31b84a569e568_fb03-88ddc0cbf1a23687_43ea-b36a8d73976068a3_6afd-c02445dd7a5b6f26_d92a-a76099fbab67c9da_4d48-c6c5c151b7b8e770_38db-60d26ec0f9c4757e_425d-9539c0004762d6a8_2eee-b2fde7ee4eb1c40f_1f95-c2ffd6a81bfe2613_f91c-81b10da74f7ac9ff_15c8-6ccc8b815fbc093a_e921-5aa3cbd322d4f163_402a-52e190f2e5f3b790_edbb-71392179ff5e728f_d7fe-4e893adaff5699af_ab4f-6f4aca312776de7b_97f3-4e88e46c6584bd85_21d2-eef61c8f3cdd8280_c537-bfb3e4eaf7ba458f_81db-af3fc77ab8313235_5b72-dbb41344c474217f_ee0e-498d06abfb7e9487_5c19-36492265af47de94_a352-9c97a83f60095487_02d9-0d1a67f82b3b5854_d74d-2f8d482d22e56fdd_410e-5c12b219bbb5bc07_6008-4aafdc038df138e8_58f0-474a8460bc35eb12_20d0-0f0664338151d4ac_5c06-0-seq_low_actions_to_episode_task_descs": {
+      "q_time": "2023/08/04 15:24:47",
+      "q": "what task or tasks did you perform when you place the mug on the coffeemachine?",
+      "gt": " prepare breakfast. and prepare coffee in a clean mug. and clean all the cups.",
+      "hyp": "make coffee",
+      "ref_ts": [
+        [
+          "2023/07/19 17:03:45",
+          "2023/07/19 17:09:50"
+        ],
+        [
+          "2023/08/03 16:21:27",
+          "2023/08/03 16:27:39"
+        ],
+        [
+          "2023/07/20 13:07:57",
+          "2023/07/20 13:11:02"
+        ],
+        [
+          "2023/07/30 10:01:22",
+          "2023/07/30 10:03:35"
+        ],
+        [
+          "2023/07/23 08:00:42",
+          "2023/07/23 08:06:48"
+        ],
+        [
+          "2023/08/02 10:58:41",
+          "2023/08/02 11:12:04"
+        ]
+      ]
+    },
+    "6c24abb778c24a7c_704a-977b52faf01e6c05_d71f-01c1b8aa1820aa0b_adaf-32918ea00b69d9fe_38ff-cdf30defa61245ba_5590-2513b9a8d8ae5129_ab38-7337be5c30b1b5d1_874c-57862376ad3394a1_c9dc-32fe2fa7cc43fbc3_b8f3-0de4b62afcd06138_45f2-a966ba0c6e0d463d_ce88-25ef88cce38adfbc_1740-7504548a0dd7baf8_b148-064a69cb5d40b41f_9c2e-a690a35743c855aa_4c00-4b813e7c9bc088d0_1ce1-e4909f617bc99db4_4ab8-03379f213dfbda39_79a2-c49a96282ec09e90_5bfa-a2d31b84a569e568_fb03-88ddc0cbf1a23687_43ea-b36a8d73976068a3_6afd-c02445dd7a5b6f26_d92a-a76099fbab67c9da_4d48-c6c5c151b7b8e770_38db-60d26ec0f9c4757e_425d-9539c0004762d6a8_2eee-b2fde7ee4eb1c40f_1f95-c2ffd6a81bfe2613_f91c-81b10da74f7ac9ff_15c8-6ccc8b815fbc093a_e921-5aa3cbd322d4f163_402a-52e190f2e5f3b790_edbb-71392179ff5e728f_d7fe-4e893adaff5699af_ab4f-6f4aca312776de7b_97f3-4e88e46c6584bd85_21d2-eef61c8f3cdd8280_c537-bfb3e4eaf7ba458f_81db-af3fc77ab8313235_5b72-dbb41344c474217f_ee0e-498d06abfb7e9487_5c19-36492265af47de94_a352-9c97a83f60095487_02d9-0d1a67f82b3b5854_d74d-2f8d482d22e56fdd_410e-5c12b219bbb5bc07_6008-4aafdc038df138e8_58f0-474a8460bc35eb12_20d0-0f0664338151d4ac_5c06-0-exact_time_to_episode": {
+      "q_time": "2023/08/04 15:24:47",
+      "q": "what did you do on Jul 24, 2023 at 04:12 PM?",
+      "gt": "clean all the plates.",
+      "hyp": "I picked up Plate_2.",
+      "ref_ts": [
+        [
+          "2023/07/24 16:12:01",
+          "2023/07/24 16:15:47"
+        ]
+      ]
+    },
+    "6c24abb778c24a7c_704a-977b52faf01e6c05_d71f-01c1b8aa1820aa0b_adaf-32918ea00b69d9fe_38ff-cdf30defa61245ba_5590-2513b9a8d8ae5129_ab38-7337be5c30b1b5d1_874c-57862376ad3394a1_c9dc-32fe2fa7cc43fbc3_b8f3-0de4b62afcd06138_45f2-a966ba0c6e0d463d_ce88-25ef88cce38adfbc_1740-7504548a0dd7baf8_b148-064a69cb5d40b41f_9c2e-a690a35743c855aa_4c00-4b813e7c9bc088d0_1ce1-e4909f617bc99db4_4ab8-03379f213dfbda39_79a2-c49a96282ec09e90_5bfa-a2d31b84a569e568_fb03-88ddc0cbf1a23687_43ea-b36a8d73976068a3_6afd-c02445dd7a5b6f26_d92a-a76099fbab67c9da_4d48-c6c5c151b7b8e770_38db-60d26ec0f9c4757e_425d-9539c0004762d6a8_2eee-b2fde7ee4eb1c40f_1f95-c2ffd6a81bfe2613_f91c-81b10da74f7ac9ff_15c8-6ccc8b815fbc093a_e921-5aa3cbd322d4f163_402a-52e190f2e5f3b790_edbb-71392179ff5e728f_d7fe-4e893adaff5699af_ab4f-6f4aca312776de7b_97f3-4e88e46c6584bd85_21d2-eef61c8f3cdd8280_c537-bfb3e4eaf7ba458f_81db-af3fc77ab8313235_5b72-dbb41344c474217f_ee0e-498d06abfb7e9487_5c19-36492265af47de94_a352-9c97a83f60095487_02d9-0d1a67f82b3b5854_d74d-2f8d482d22e56fdd_410e-5c12b219bbb5bc07_6008-4aafdc038df138e8_58f0-474a8460bc35eb12_20d0-0f0664338151d4ac_5c06-0-tasks_to_exact_times": {
+      "q_time": "2023/08/04 15:24:47",
+      "q": "When did you make a sandwich?",
+      "gt": "Jul 15, 2023 at 09:29 AM and Jul 18, 2023 at 01:36 PM and Jul 19, 2023 at 08:45 AM and Jul 21, 2023 at 09:16 AM and Jul 21, 2023 at 03:51 PM",
+      "hyp": "2023/07/15 09:30:28",
+      "ref_ts": [
+        [
+          "2023/07/15 09:29:48",
+          "2023/07/15 09:38:33"
+        ],
+        [
+          "2023/07/18 13:36:57",
+          "2023/07/18 13:42:35"
+        ],
+        [
+          "2023/07/19 08:45:16",
+          "2023/07/19 09:00:35"
+        ],
+        [
+          "2023/07/21 09:16:13",
+          "2023/07/21 09:32:07"
+        ],
+        [
+          "2023/07/21 15:51:20",
+          "2023/07/21 16:02:13"
+        ]
+      ]
+    },
+    "6c24abb778c24a7c_704a-977b52faf01e6c05_d71f-01c1b8aa1820aa0b_adaf-32918ea00b69d9fe_38ff-cdf30defa61245ba_5590-2513b9a8d8ae5129_ab38-7337be5c30b1b5d1_874c-57862376ad3394a1_c9dc-32fe2fa7cc43fbc3_b8f3-0de4b62afcd06138_45f2-a966ba0c6e0d463d_ce88-25ef88cce38adfbc_1740-7504548a0dd7baf8_b148-064a69cb5d40b41f_9c2e-a690a35743c855aa_4c00-4b813e7c9bc088d0_1ce1-e4909f617bc99db4_4ab8-03379f213dfbda39_79a2-c49a96282ec09e90_5bfa-a2d31b84a569e568_fb03-88ddc0cbf1a23687_43ea-b36a8d73976068a3_6afd-c02445dd7a5b6f26_d92a-a76099fbab67c9da_4d48-c6c5c151b7b8e770_38db-60d26ec0f9c4757e_425d-9539c0004762d6a8_2eee-b2fde7ee4eb1c40f_1f95-c2ffd6a81bfe2613_f91c-81b10da74f7ac9ff_15c8-6ccc8b815fbc093a_e921-5aa3cbd322d4f163_402a-52e190f2e5f3b790_edbb-71392179ff5e728f_d7fe-4e893adaff5699af_ab4f-6f4aca312776de7b_97f3-4e88e46c6584bd85_21d2-eef61c8f3cdd8280_c537-bfb3e4eaf7ba458f_81db-af3fc77ab8313235_5b72-dbb41344c474217f_ee0e-498d06abfb7e9487_5c19-36492265af47de94_a352-9c97a83f60095487_02d9-0d1a67f82b3b5854_d74d-2f8d482d22e56fdd_410e-5c12b219bbb5bc07_6008-4aafdc038df138e8_58f0-474a8460bc35eb12_20d0-0f0664338151d4ac_5c06-0-tasks_to_days_ago": {
+      "q_time": "2023/08/04 15:24:47",
+      "q": "Today is Aug 04, 2023 at 03:24 PM. How many days ago did you clean all the cups?",
+      "gt": "16 days ago",
+      "hyp": "16 days ago",
+      "ref_ts": [
+        [
+          "2023/07/19 17:03:45",
+          "2023/07/19 17:09:50"
+        ]
+      ]
+    },
+    "6c24abb778c24a7c_704a-977b52faf01e6c05_d71f-01c1b8aa1820aa0b_adaf-32918ea00b69d9fe_38ff-cdf30defa61245ba_5590-2513b9a8d8ae5129_ab38-7337be5c30b1b5d1_874c-57862376ad3394a1_c9dc-32fe2fa7cc43fbc3_b8f3-0de4b62afcd06138_45f2-a966ba0c6e0d463d_ce88-25ef88cce38adfbc_1740-7504548a0dd7baf8_b148-064a69cb5d40b41f_9c2e-a690a35743c855aa_4c00-4b813e7c9bc088d0_1ce1-e4909f617bc99db4_4ab8-03379f213dfbda39_79a2-c49a96282ec09e90_5bfa-a2d31b84a569e568_fb03-88ddc0cbf1a23687_43ea-b36a8d73976068a3_6afd-c02445dd7a5b6f26_d92a-a76099fbab67c9da_4d48-c6c5c151b7b8e770_38db-60d26ec0f9c4757e_425d-9539c0004762d6a8_2eee-b2fde7ee4eb1c40f_1f95-c2ffd6a81bfe2613_f91c-81b10da74f7ac9ff_15c8-6ccc8b815fbc093a_e921-5aa3cbd322d4f163_402a-52e190f2e5f3b790_edbb-71392179ff5e728f_d7fe-4e893adaff5699af_ab4f-6f4aca312776de7b_97f3-4e88e46c6584bd85_21d2-eef61c8f3cdd8280_c537-bfb3e4eaf7ba458f_81db-af3fc77ab8313235_5b72-dbb41344c474217f_ee0e-498d06abfb7e9487_5c19-36492265af47de94_a352-9c97a83f60095487_02d9-0d1a67f82b3b5854_d74d-2f8d482d22e56fdd_410e-5c12b219bbb5bc07_6008-4aafdc038df138e8_58f0-474a8460bc35eb12_20d0-0f0664338151d4ac_5c06-0-days_ago_to_episode": {
+      "q_time": "2023/08/04 15:24:47",
+      "q": "Today is Aug 04, 2023 at 03:24 PM. What did you do 4 days ago?",
+      "gt": "serve 2 slice(s) of tomato on a plate and put all newspaper on one armchair and make a salad.",
+      "hyp": "Four days ago, I sliced a tomato and a potato. Then, I cooked one potato slice and placed it, along with two tomato slices, on a plate.",
+      "ref_ts": [
+        [
+          "2023/07/31 08:25:31",
+          "2023/07/31 08:28:29"
+        ],
+        [
+          "2023/07/31 11:39:16",
+          "2023/07/31 11:45:46"
+        ],
+        [
+          "2023/07/31 18:36:14",
+          "2023/07/31 18:43:06"
+        ]
+      ]
+    },
+    "e336199e4aca573c_4d32-85ec788c6b00fb0d_14d1-ad2e4eb0b24a5940_9c9d-50bc3abf986ccabb_7071-915fdf90f4bc33cd_6c72-1fd74046ded8f9d1_42a3-cb0e41e1b364ad27_9a72-4b7b1a5b7f3d19ae_1413-cce21676357b2d20_b27c-01c1b8aa1820aa0b_adaf-b8f22271faff678f_dce6-4fc54b735d3f45a6_b7b4-e8f7cd03e3683657_4d70-84d6411d0710d918_5b3c-04ae108b77699c0f_2453-b53c115c99ca34dd_5e2b-b63078c7b3e28f59_355d-c6f7828bc5640531_1604-c7cc40993ef8468b_3e7b-0b161c6f709cde89_4c30-fef7c3fc3990d2e8_518b-e85d1457c7af9ad4_4960-9e23434a16a146b5_7f9a-41b067f2ce6f3fef_8ee6-9539c0004762d6a8_fe91-a2b0269334c60e48_2cb5-464fb2558d308797_4110-d8034826803791df_10bf-88f8ad0d2d356270_bb95-491169530040eb68_c8b0-e035a44ebae9d3fd_c842-c02445dd7a5b6f26_86bd-8150a936da2df63d_2451-3ebbcf3c3aed7c9e_5813-1e8fb21f2b41b0b0_db8b-a451af83aeece675_117b-140e54aadad74d20_222f-e455dbf27ecaf413_8484-c6c5c151b7b8e770_38db-18f6da623ba658a2_aa07-612f99763b6978b6_0c1a-09d537bcc73a42fc_52e8-5ab41ea72487ce0f_e5be-0d1a67f82b3b5854_d74d-0d600126a7947365_cac4-2b5a33d4908ee77d_20f6-a82cd949493bada0_ffe5-b2815444299854b0_d30e-5026400c43e20c2d_d3fc-85ec788c6b00fb0d_49ba-0-sequence_of_task_descs": {
+      "q_time": "2023/12/14 18:25:57",
+      "q": "List the tasks you performed.",
+      "gt": "clean all the plates. make a plate of toast. water the plant. make a salad. put all fork in any cabinet. clean all the plates. cook 3 slice(s) of potato and serve on a plate. clean all the plates. boil potato. clean all the plates. water the plant. boil potato. make a sandwich. boil potato. make a plate of toast. make a sandwich. serve 1 slice(s) of tomato in a bowl. put all watch on any furniture. cook 2 slice(s) of potato and serve in a bowl. make a salad. clean all the pots. prepare coffee in a clean mug. put all newspaper on any sidetable. put all remote control on one dresser. clean all the drinkwares. make a plate of toast. serve 1 slice(s) of tomato on a plate. serve 2 slice(s) of tomato in a bowl. serve 2 slice(s) of tomato on a plate. put all newspaper on any chairs. make a sandwich. prepare coffee in a clean mug. prepare coffee in a clean mug. put all pillow on any armchair. serve 1 slice(s) of tomato in a bowl. make a sandwich. make a salad. serve 1 slice(s) of tomato on a plate. put all tissue box on one sidetable. cook 1 slice(s) of potato and serve in a bowl. water the plant. clean all the plates. boil potato. make a salad. make a salad. clean all the mugs. serve 1 slice(s) of tomato on a plate. make a sandwich. cook 2 slice(s) of potato and serve in a bowl. make a plate of toast.",
+      "hyp": "I performed these tasks: Open(Fridge), Pickup(Plate_0), Place(Fridge), Pickup(Plate_0), Close(Fridge), Place(CounterTop_0), ToggleOff(Faucet), Pickup(CreditCard_0), Place(CounterTop_0), Pickup(Egg_1), Place(CounterTop_0), Pickup(Plate_0), Place(Sink_Basin), ToggleOn(Faucet), ToggleOff(Faucet), Pickup(Plate_0), ToggleOff(Faucet), Open(Fridge), Close(Fridge), Pickup(Bread), Place(CounterTop_0), Open(Cabinet_4), Pickup(Knife), Close(Cabinet_4), Slice(Bread), Place(CounterTop_0), Pickup(Bread_Sliced_6), Place(Toaster), Pickup(Bread_Sliced_6), Place(CounterTop_1), Pickup(Bread_Sliced_5), Place(Toaster), Pickup(Bread_Sliced_5), Place(CounterTop_1), Pickup(Bottle), Place(CounterTop_0), Pickup(Plate), Place(Sink_Basin), ToggleOn(Faucet), ToggleOff(Faucet), Pickup(Plate), Place(CounterTop_1), Pickup(Bread_Sliced_5), Place(Plate), Pickup(Bread_Sliced_6), Place(Plate), Pickup(Mug_1), Pour(HousePlant), Noop, Open(Fridge), Pickup(Knife), Close(Fridge), Slice(Lettuce), Place(CounterTop_1), Open(Cabinet_5), Pickup(Plate_1), Close(Cabinet_5), Place(CounterTop_1), Pickup(Tomato_2), Place(CounterTop_1), Pickup(Lettuce_Sliced_4), Place(Plate_1), Pickup(Knife), Slice(Tomato_2), Place(CounterTop_1), Pickup(Tomato_2_Sliced_3), Place(Plate_1), Pickup(Tomato_2_Sliced_4), Place(Plate_1), Noop, Pickup(Fork_1), Open(Cabinet_4), Close(Cabinet_4), Open(Cabinet_5), Place(Cabinet_5), Pickup(Fork_2), Place(Cabinet_5), PanRight(), Open(Fridge), Pickup(Plate_1), Place(CounterTop_0),"
+    },
+    "e336199e4aca573c_4d32-85ec788c6b00fb0d_14d1-ad2e4eb0b24a5940_9c9d-50bc3abf986ccabb_7071-915fdf90f4bc33cd_6c72-1fd74046ded8f9d1_42a3-cb0e41e1b364ad27_9a72-4b7b1a5b7f3d19ae_1413-cce21676357b2d20_b27c-01c1b8aa1820aa0b_adaf-b8f22271faff678f_dce6-4fc54b735d3f45a6_b7b4-e8f7cd03e3683657_4d70-84d6411d0710d918_5b3c-04ae108b77699c0f_2453-b53c115c99ca34dd_5e2b-b63078c7b3e28f59_355d-c6f7828bc5640531_1604-c7cc40993ef8468b_3e7b-0b161c6f709cde89_4c30-fef7c3fc3990d2e8_518b-e85d1457c7af9ad4_4960-9e23434a16a146b5_7f9a-41b067f2ce6f3fef_8ee6-9539c0004762d6a8_fe91-a2b0269334c60e48_2cb5-464fb2558d308797_4110-d8034826803791df_10bf-88f8ad0d2d356270_bb95-491169530040eb68_c8b0-e035a44ebae9d3fd_c842-c02445dd7a5b6f26_86bd-8150a936da2df63d_2451-3ebbcf3c3aed7c9e_5813-1e8fb21f2b41b0b0_db8b-a451af83aeece675_117b-140e54aadad74d20_222f-e455dbf27ecaf413_8484-c6c5c151b7b8e770_38db-18f6da623ba658a2_aa07-612f99763b6978b6_0c1a-09d537bcc73a42fc_52e8-5ab41ea72487ce0f_e5be-0d1a67f82b3b5854_d74d-0d600126a7947365_cac4-2b5a33d4908ee77d_20f6-a82cd949493bada0_ffe5-b2815444299854b0_d30e-5026400c43e20c2d_d3fc-85ec788c6b00fb0d_49ba-0-seq_specific_shortened_low_actions": {
+      "q_time": "2023/12/14 18:25:57",
+      "q": "describe what you did when you clean all the mugs.",
+      "gt": "pick up the mug, pour the mug in the sink, place the mug in the sink, toggle on the faucet, toggle off the faucet, pick up the mug, pour the mug in the sink, place the mug on the countertop, pick up the mug, place the mug in the sink, toggle on the faucet, toggle off the faucet, pick up the mug",
+      "hyp": "I turned right, asked where the mugs are, turned right twice, moved forward twice, panned camera left to find the mug, and then picked up the mug.",
+      "ref_ts": [
+        [
+          "2023/12/13 12:37:16",
+          "2023/12/13 12:39:55"
+        ]
+      ]
+    },
+    "e336199e4aca573c_4d32-85ec788c6b00fb0d_14d1-ad2e4eb0b24a5940_9c9d-50bc3abf986ccabb_7071-915fdf90f4bc33cd_6c72-1fd74046ded8f9d1_42a3-cb0e41e1b364ad27_9a72-4b7b1a5b7f3d19ae_1413-cce21676357b2d20_b27c-01c1b8aa1820aa0b_adaf-b8f22271faff678f_dce6-4fc54b735d3f45a6_b7b4-e8f7cd03e3683657_4d70-84d6411d0710d918_5b3c-04ae108b77699c0f_2453-b53c115c99ca34dd_5e2b-b63078c7b3e28f59_355d-c6f7828bc5640531_1604-c7cc40993ef8468b_3e7b-0b161c6f709cde89_4c30-fef7c3fc3990d2e8_518b-e85d1457c7af9ad4_4960-9e23434a16a146b5_7f9a-41b067f2ce6f3fef_8ee6-9539c0004762d6a8_fe91-a2b0269334c60e48_2cb5-464fb2558d308797_4110-d8034826803791df_10bf-88f8ad0d2d356270_bb95-491169530040eb68_c8b0-e035a44ebae9d3fd_c842-c02445dd7a5b6f26_86bd-8150a936da2df63d_2451-3ebbcf3c3aed7c9e_5813-1e8fb21f2b41b0b0_db8b-a451af83aeece675_117b-140e54aadad74d20_222f-e455dbf27ecaf413_8484-c6c5c151b7b8e770_38db-18f6da623ba658a2_aa07-612f99763b6978b6_0c1a-09d537bcc73a42fc_52e8-5ab41ea72487ce0f_e5be-0d1a67f82b3b5854_d74d-0d600126a7947365_cac4-2b5a33d4908ee77d_20f6-a82cd949493bada0_ffe5-b2815444299854b0_d30e-5026400c43e20c2d_d3fc-85ec788c6b00fb0d_49ba-0-seq_right_after_questions": {
+      "q_time": "2023/12/14 18:25:57",
+      "q": "What task did you do just after put all newspaper on any chairs?",
+      "gt": "make a sandwich.",
+      "hyp": "I said \"done\".",
+      "ref_ts": [
+        [
+          "2023/12/06 13:03:51",
+          "2023/12/06 13:07:22"
+        ],
+        [
+          "2023/12/06 15:00:32",
+          "2023/12/06 15:12:04"
+        ]
+      ]
+    },
+    "e336199e4aca573c_4d32-85ec788c6b00fb0d_14d1-ad2e4eb0b24a5940_9c9d-50bc3abf986ccabb_7071-915fdf90f4bc33cd_6c72-1fd74046ded8f9d1_42a3-cb0e41e1b364ad27_9a72-4b7b1a5b7f3d19ae_1413-cce21676357b2d20_b27c-01c1b8aa1820aa0b_adaf-b8f22271faff678f_dce6-4fc54b735d3f45a6_b7b4-e8f7cd03e3683657_4d70-84d6411d0710d918_5b3c-04ae108b77699c0f_2453-b53c115c99ca34dd_5e2b-b63078c7b3e28f59_355d-c6f7828bc5640531_1604-c7cc40993ef8468b_3e7b-0b161c6f709cde89_4c30-fef7c3fc3990d2e8_518b-e85d1457c7af9ad4_4960-9e23434a16a146b5_7f9a-41b067f2ce6f3fef_8ee6-9539c0004762d6a8_fe91-a2b0269334c60e48_2cb5-464fb2558d308797_4110-d8034826803791df_10bf-88f8ad0d2d356270_bb95-491169530040eb68_c8b0-e035a44ebae9d3fd_c842-c02445dd7a5b6f26_86bd-8150a936da2df63d_2451-3ebbcf3c3aed7c9e_5813-1e8fb21f2b41b0b0_db8b-a451af83aeece675_117b-140e54aadad74d20_222f-e455dbf27ecaf413_8484-c6c5c151b7b8e770_38db-18f6da623ba658a2_aa07-612f99763b6978b6_0c1a-09d537bcc73a42fc_52e8-5ab41ea72487ce0f_e5be-0d1a67f82b3b5854_d74d-0d600126a7947365_cac4-2b5a33d4908ee77d_20f6-a82cd949493bada0_ffe5-b2815444299854b0_d30e-5026400c43e20c2d_d3fc-85ec788c6b00fb0d_49ba-0-seq_right_before_questions": {
+      "q_time": "2023/12/14 18:25:57",
+      "q": "What task did you do just before clean all the mugs?",
+      "gt": "make a salad.",
+      "hyp": "Checking the fridge and the cabinet to the left of the microwave.",
+      "ref_ts": [
+        [
+          "2023/12/12 15:18:09",
+          "2023/12/12 15:28:41"
+        ],
+        [
+          "2023/12/13 12:37:16",
+          "2023/12/13 12:39:55"
+        ]
+      ]
+    },
+    "e336199e4aca573c_4d32-85ec788c6b00fb0d_14d1-ad2e4eb0b24a5940_9c9d-50bc3abf986ccabb_7071-915fdf90f4bc33cd_6c72-1fd74046ded8f9d1_42a3-cb0e41e1b364ad27_9a72-4b7b1a5b7f3d19ae_1413-cce21676357b2d20_b27c-01c1b8aa1820aa0b_adaf-b8f22271faff678f_dce6-4fc54b735d3f45a6_b7b4-e8f7cd03e3683657_4d70-84d6411d0710d918_5b3c-04ae108b77699c0f_2453-b53c115c99ca34dd_5e2b-b63078c7b3e28f59_355d-c6f7828bc5640531_1604-c7cc40993ef8468b_3e7b-0b161c6f709cde89_4c30-fef7c3fc3990d2e8_518b-e85d1457c7af9ad4_4960-9e23434a16a146b5_7f9a-41b067f2ce6f3fef_8ee6-9539c0004762d6a8_fe91-a2b0269334c60e48_2cb5-464fb2558d308797_4110-d8034826803791df_10bf-88f8ad0d2d356270_bb95-491169530040eb68_c8b0-e035a44ebae9d3fd_c842-c02445dd7a5b6f26_86bd-8150a936da2df63d_2451-3ebbcf3c3aed7c9e_5813-1e8fb21f2b41b0b0_db8b-a451af83aeece675_117b-140e54aadad74d20_222f-e455dbf27ecaf413_8484-c6c5c151b7b8e770_38db-18f6da623ba658a2_aa07-612f99763b6978b6_0c1a-09d537bcc73a42fc_52e8-5ab41ea72487ce0f_e5be-0d1a67f82b3b5854_d74d-0d600126a7947365_cac4-2b5a33d4908ee77d_20f6-a82cd949493bada0_ffe5-b2815444299854b0_d30e-5026400c43e20c2d_d3fc-85ec788c6b00fb0d_49ba-0-seq_simple_object_yes_no": {
+      "q_time": "2023/12/14 18:25:57",
+      "q": "Was there a blinds ?",
+      "gt": "no",
+      "hyp": "No."
+    },
+    "e336199e4aca573c_4d32-85ec788c6b00fb0d_14d1-ad2e4eb0b24a5940_9c9d-50bc3abf986ccabb_7071-915fdf90f4bc33cd_6c72-1fd74046ded8f9d1_42a3-cb0e41e1b364ad27_9a72-4b7b1a5b7f3d19ae_1413-cce21676357b2d20_b27c-01c1b8aa1820aa0b_adaf-b8f22271faff678f_dce6-4fc54b735d3f45a6_b7b4-e8f7cd03e3683657_4d70-84d6411d0710d918_5b3c-04ae108b77699c0f_2453-b53c115c99ca34dd_5e2b-b63078c7b3e28f59_355d-c6f7828bc5640531_1604-c7cc40993ef8468b_3e7b-0b161c6f709cde89_4c30-fef7c3fc3990d2e8_518b-e85d1457c7af9ad4_4960-9e23434a16a146b5_7f9a-41b067f2ce6f3fef_8ee6-9539c0004762d6a8_fe91-a2b0269334c60e48_2cb5-464fb2558d308797_4110-d8034826803791df_10bf-88f8ad0d2d356270_bb95-491169530040eb68_c8b0-e035a44ebae9d3fd_c842-c02445dd7a5b6f26_86bd-8150a936da2df63d_2451-3ebbcf3c3aed7c9e_5813-1e8fb21f2b41b0b0_db8b-a451af83aeece675_117b-140e54aadad74d20_222f-e455dbf27ecaf413_8484-c6c5c151b7b8e770_38db-18f6da623ba658a2_aa07-612f99763b6978b6_0c1a-09d537bcc73a42fc_52e8-5ab41ea72487ce0f_e5be-0d1a67f82b3b5854_d74d-0d600126a7947365_cac4-2b5a33d4908ee77d_20f6-a82cd949493bada0_ffe5-b2815444299854b0_d30e-5026400c43e20c2d_d3fc-85ec788c6b00fb0d_49ba-0-seq_low_actions_to_episode_task_descs": {
+      "q_time": "2023/12/14 18:25:57",
+      "q": "what task or tasks did you perform when you toggle on the faucet?",
+      "gt": " clean all the mugs. and clean all the pots. and cook 2 slice(s) of potato and serve in a bowl. and make a salad. and clean all the drinkwares. and clean all the plates. and serve 1 slice(s) of tomato in a bowl. and make a plate of toast. and make a sandwich. and prepare coffee in a clean mug. and boil potato.",
+      "hyp": "I moved forward multiple times and turned right to place a dirty plate on the countertop.",
+      "ref_ts": [
+        [
+          "2023/11/23 13:28:11",
+          "2023/11/23 13:31:22"
+        ],
+        [
+          "2023/11/23 14:22:46",
+          "2023/11/23 14:26:33"
+        ],
+        [
+          "2023/11/25 10:28:49",
+          "2023/11/25 10:32:58"
+        ],
+        [
+          "2023/11/26 08:09:58",
+          "2023/11/26 08:16:19"
+        ],
+        [
+          "2023/11/26 15:12:19",
+          "2023/11/26 15:27:37"
+        ],
+        [
+          "2023/11/27 08:39:15",
+          "2023/11/27 08:42:06"
+        ],
+        [
+          "2023/11/28 16:00:14",
+          "2023/11/28 16:05:25"
+        ],
+        [
+          "2023/11/30 10:43:43",
+          "2023/11/30 10:57:10"
+        ],
+        [
+          "2023/11/30 15:07:22",
+          "2023/11/30 15:20:16"
+        ],
+        [
+          "2023/12/01 16:18:55",
+          "2023/12/01 16:24:07"
+        ],
+        [
+          "2023/12/02 08:52:14",
+          "2023/12/02 09:07:02"
+        ],
+        [
+          "2023/12/02 09:01:16",
+          "2023/12/02 09:03:30"
+        ],
+        [
+          "2023/12/03 08:35:36",
+          "2023/12/03 08:38:55"
+        ],
+        [
+          "2023/12/04 13:27:12",
+          "2023/12/04 13:33:15"
+        ],
+        [
+          "2023/12/07 10:11:18",
+          "2023/12/07 10:14:46"
+        ],
+        [
+          "2023/12/07 18:23:20",
+          "2023/12/07 18:25:53"
+        ],
+        [
+          "2023/12/08 10:02:16",
+          "2023/12/08 10:10:46"
+        ],
+        [
+          "2023/12/08 13:21:45",
+          "2023/12/08 13:35:18"
+        ],
+        [
+          "2023/12/09 17:54:54",
+          "2023/12/09 18:00:35"
+        ],
+        [
+          "2023/12/11 08:27:09",
+          "2023/12/11 08:29:55"
+        ],
+        [
+          "2023/12/11 09:11:27",
+          "2023/12/11 09:14:17"
+        ],
+        [
+          "2023/12/13 12:37:16",
+          "2023/12/13 12:39:55"
+        ],
+        [
+          "2023/12/14 11:14:04",
+          "2023/12/14 11:24:18"
+        ],
+        [
+          "2023/12/14 11:20:35",
+          "2023/12/14 11:33:00"
+        ]
+      ]
+    },
+    "e336199e4aca573c_4d32-85ec788c6b00fb0d_14d1-ad2e4eb0b24a5940_9c9d-50bc3abf986ccabb_7071-915fdf90f4bc33cd_6c72-1fd74046ded8f9d1_42a3-cb0e41e1b364ad27_9a72-4b7b1a5b7f3d19ae_1413-cce21676357b2d20_b27c-01c1b8aa1820aa0b_adaf-b8f22271faff678f_dce6-4fc54b735d3f45a6_b7b4-e8f7cd03e3683657_4d70-84d6411d0710d918_5b3c-04ae108b77699c0f_2453-b53c115c99ca34dd_5e2b-b63078c7b3e28f59_355d-c6f7828bc5640531_1604-c7cc40993ef8468b_3e7b-0b161c6f709cde89_4c30-fef7c3fc3990d2e8_518b-e85d1457c7af9ad4_4960-9e23434a16a146b5_7f9a-41b067f2ce6f3fef_8ee6-9539c0004762d6a8_fe91-a2b0269334c60e48_2cb5-464fb2558d308797_4110-d8034826803791df_10bf-88f8ad0d2d356270_bb95-491169530040eb68_c8b0-e035a44ebae9d3fd_c842-c02445dd7a5b6f26_86bd-8150a936da2df63d_2451-3ebbcf3c3aed7c9e_5813-1e8fb21f2b41b0b0_db8b-a451af83aeece675_117b-140e54aadad74d20_222f-e455dbf27ecaf413_8484-c6c5c151b7b8e770_38db-18f6da623ba658a2_aa07-612f99763b6978b6_0c1a-09d537bcc73a42fc_52e8-5ab41ea72487ce0f_e5be-0d1a67f82b3b5854_d74d-0d600126a7947365_cac4-2b5a33d4908ee77d_20f6-a82cd949493bada0_ffe5-b2815444299854b0_d30e-5026400c43e20c2d_d3fc-85ec788c6b00fb0d_49ba-0-exact_time_to_episode": {
+      "q_time": "2023/12/14 18:25:57",
+      "q": "what did you do on Nov 24, 2023 at 09:56 AM?",
+      "gt": "water the plant.",
+      "hyp": "I was about to pick up Mug_1 and said 'water the plant'.",
+      "ref_ts": [
+        [
+          "2023/11/24 09:56:49",
+          "2023/11/24 09:57:44"
+        ]
+      ]
+    },
+    "e336199e4aca573c_4d32-85ec788c6b00fb0d_14d1-ad2e4eb0b24a5940_9c9d-50bc3abf986ccabb_7071-915fdf90f4bc33cd_6c72-1fd74046ded8f9d1_42a3-cb0e41e1b364ad27_9a72-4b7b1a5b7f3d19ae_1413-cce21676357b2d20_b27c-01c1b8aa1820aa0b_adaf-b8f22271faff678f_dce6-4fc54b735d3f45a6_b7b4-e8f7cd03e3683657_4d70-84d6411d0710d918_5b3c-04ae108b77699c0f_2453-b53c115c99ca34dd_5e2b-b63078c7b3e28f59_355d-c6f7828bc5640531_1604-c7cc40993ef8468b_3e7b-0b161c6f709cde89_4c30-fef7c3fc3990d2e8_518b-e85d1457c7af9ad4_4960-9e23434a16a146b5_7f9a-41b067f2ce6f3fef_8ee6-9539c0004762d6a8_fe91-a2b0269334c60e48_2cb5-464fb2558d308797_4110-d8034826803791df_10bf-88f8ad0d2d356270_bb95-491169530040eb68_c8b0-e035a44ebae9d3fd_c842-c02445dd7a5b6f26_86bd-8150a936da2df63d_2451-3ebbcf3c3aed7c9e_5813-1e8fb21f2b41b0b0_db8b-a451af83aeece675_117b-140e54aadad74d20_222f-e455dbf27ecaf413_8484-c6c5c151b7b8e770_38db-18f6da623ba658a2_aa07-612f99763b6978b6_0c1a-09d537bcc73a42fc_52e8-5ab41ea72487ce0f_e5be-0d1a67f82b3b5854_d74d-0d600126a7947365_cac4-2b5a33d4908ee77d_20f6-a82cd949493bada0_ffe5-b2815444299854b0_d30e-5026400c43e20c2d_d3fc-85ec788c6b00fb0d_49ba-0-tasks_to_exact_times": {
+      "q_time": "2023/12/14 18:25:57",
+      "q": "When did you cook 3 slice(s) of potato and serve on a plate?",
+      "gt": "Nov 25, 2023 at 07:48 PM",
+      "hyp": "2023/11/25 19:55:04",
+      "ref_ts": [
+        [
+          "2023/11/25 19:48:18",
+          "2023/11/25 19:56:09"
+        ]
+      ]
+    },
+    "e336199e4aca573c_4d32-85ec788c6b00fb0d_14d1-ad2e4eb0b24a5940_9c9d-50bc3abf986ccabb_7071-915fdf90f4bc33cd_6c72-1fd74046ded8f9d1_42a3-cb0e41e1b364ad27_9a72-4b7b1a5b7f3d19ae_1413-cce21676357b2d20_b27c-01c1b8aa1820aa0b_adaf-b8f22271faff678f_dce6-4fc54b735d3f45a6_b7b4-e8f7cd03e3683657_4d70-84d6411d0710d918_5b3c-04ae108b77699c0f_2453-b53c115c99ca34dd_5e2b-b63078c7b3e28f59_355d-c6f7828bc5640531_1604-c7cc40993ef8468b_3e7b-0b161c6f709cde89_4c30-fef7c3fc3990d2e8_518b-e85d1457c7af9ad4_4960-9e23434a16a146b5_7f9a-41b067f2ce6f3fef_8ee6-9539c0004762d6a8_fe91-a2b0269334c60e48_2cb5-464fb2558d308797_4110-d8034826803791df_10bf-88f8ad0d2d356270_bb95-491169530040eb68_c8b0-e035a44ebae9d3fd_c842-c02445dd7a5b6f26_86bd-8150a936da2df63d_2451-3ebbcf3c3aed7c9e_5813-1e8fb21f2b41b0b0_db8b-a451af83aeece675_117b-140e54aadad74d20_222f-e455dbf27ecaf413_8484-c6c5c151b7b8e770_38db-18f6da623ba658a2_aa07-612f99763b6978b6_0c1a-09d537bcc73a42fc_52e8-5ab41ea72487ce0f_e5be-0d1a67f82b3b5854_d74d-0d600126a7947365_cac4-2b5a33d4908ee77d_20f6-a82cd949493bada0_ffe5-b2815444299854b0_d30e-5026400c43e20c2d_d3fc-85ec788c6b00fb0d_49ba-0-tasks_to_days_ago": {
+      "q_time": "2023/12/14 18:25:57",
+      "q": "Today is Dec 14, 2023 at 06:25 PM. How many days ago did you serve 1 slice(s) of tomato in a bowl?",
+      "gt": "14 days ago and 6 days ago",
+      "hyp": "18 days ago",
+      "ref_ts": [
+        [
+          "2023/11/30 15:07:22",
+          "2023/11/30 15:20:16"
+        ],
+        [
+          "2023/12/08 10:02:16",
+          "2023/12/08 10:10:46"
+        ]
+      ]
+    },
+    "e336199e4aca573c_4d32-85ec788c6b00fb0d_14d1-ad2e4eb0b24a5940_9c9d-50bc3abf986ccabb_7071-915fdf90f4bc33cd_6c72-1fd74046ded8f9d1_42a3-cb0e41e1b364ad27_9a72-4b7b1a5b7f3d19ae_1413-cce21676357b2d20_b27c-01c1b8aa1820aa0b_adaf-b8f22271faff678f_dce6-4fc54b735d3f45a6_b7b4-e8f7cd03e3683657_4d70-84d6411d0710d918_5b3c-04ae108b77699c0f_2453-b53c115c99ca34dd_5e2b-b63078c7b3e28f59_355d-c6f7828bc5640531_1604-c7cc40993ef8468b_3e7b-0b161c6f709cde89_4c30-fef7c3fc3990d2e8_518b-e85d1457c7af9ad4_4960-9e23434a16a146b5_7f9a-41b067f2ce6f3fef_8ee6-9539c0004762d6a8_fe91-a2b0269334c60e48_2cb5-464fb2558d308797_4110-d8034826803791df_10bf-88f8ad0d2d356270_bb95-491169530040eb68_c8b0-e035a44ebae9d3fd_c842-c02445dd7a5b6f26_86bd-8150a936da2df63d_2451-3ebbcf3c3aed7c9e_5813-1e8fb21f2b41b0b0_db8b-a451af83aeece675_117b-140e54aadad74d20_222f-e455dbf27ecaf413_8484-c6c5c151b7b8e770_38db-18f6da623ba658a2_aa07-612f99763b6978b6_0c1a-09d537bcc73a42fc_52e8-5ab41ea72487ce0f_e5be-0d1a67f82b3b5854_d74d-0d600126a7947365_cac4-2b5a33d4908ee77d_20f6-a82cd949493bada0_ffe5-b2815444299854b0_d30e-5026400c43e20c2d_d3fc-85ec788c6b00fb0d_49ba-0-days_ago_to_episode": {
+      "q_time": "2023/12/14 18:25:57",
+      "q": "Today is Dec 14, 2023 at 06:25 PM. What did you do 21 days ago?",
+      "gt": "clean all the plates and make a plate of toast.",
+      "hyp": "On November 23, 2023, I performed a series of tasks, including opening and closing the fridge, washing a plate, making toast, and rinsing a dirty plate.",
+      "ref_ts": [
+        [
+          "2023/11/23 13:28:11",
+          "2023/11/23 13:31:22"
+        ],
+        [
+          "2023/11/23 14:22:46",
+          "2023/11/23 14:26:33"
+        ]
+      ]
+    },
+    "ed9479c5dd8f204d_0102-488f96fab858496c_d6e2-a01d8c5e515fa9c4_c871-345624f0e74dc947_8525-dbb41344c474217f_2e3e-57862376ad3394a1_464f-977b52faf01e6c05_2895-15fa5e0caaf6a06f_81e4-eccc0afc91fb9b74_d5ba-c4c12513ffbf7d33_9e16-fef7c3fc3990d2e8_fb19-7affadfe549cbeb4_1df8-92904ea754a401e6_2b2c-064a69cb5d40b41f_f773-bbe083aa96535a1d_a996-7d0db28e7d18c776_c97a-0d1a67f82b3b5854_d74d-c1eba1e4b831e04b_aab3-5ab41ea72487ce0f_e5be-a44d13c7da084070_fe04-bd7327d5d2853453_fad6-c02445dd7a5b6f26_fffd-53472cf3cabeb021_46b6-1fa4f0593088b6f2_89ee-1023a6f334db1f63_f0f2-bd7327d5d2853453_5b4f-cdf30defa61245ba_5590-88f8ad0d2d356270_bb95-864a2333f20b0957_be88-75a59f83a279bd78_fb03-c2787b38615034c6_6175-1a8b00c643110183_ebc6-1e8fb21f2b41b0b0_db8b-fe6b3de8c88b8573_9f76-8057d5b1cab47555_9345-04ae108b77699c0f_2453-dd2efe33087ddc60_cb3a-23acf721b22a6456_1716-1801730beafdda15_f501-a1694dc92f54473f_0b07-b8729e0c4c857a8e_24b5-4c98e155c32cdc6f_7acc-f7ca0c5c4964bcdc_c0cf-e82f290cb4ab70bd_86a3-b2fde7ee4eb1c40f_1f95-c7cc40993ef8468b_3e7b-41b067f2ce6f3fef_8ee6-f25eed33d1c37931_1a7f-0de4b62afcd06138_45f2-36651928a974c895_caa2-0-sequence_of_task_descs": {
+      "q_time": "2023/04/23 15:22:48",
+      "q": "List the tasks you performed.",
+      "gt": "water the plant. put all fork in any sink. serve 1 slice(s) of tomato in a bowl. prepare breakfast. serve 1 slice(s) of tomato in a bowl. clean all the plates. cook 2 slice(s) of potato and serve in a bowl. serve 1 slice(s) of tomato on a plate. make a plate of toast. boil potato. clean all the pots. put all remote control on one sofa. make a sandwich. cook 5 slice(s) of potato and serve on a plate. make a plate of toast. make a sandwich. make a salad. make a plate of toast. boil potato. make a plate of toast. water the plant. prepare coffee in a clean mug. put all pillow on any sofa. clean all the drinkwares. prepare breakfast. water the plant. make a sandwich. serve 2 slice(s) of tomato on a plate. prepare breakfast. serve 1 slice(s) of tomato in a bowl. serve 1 slice(s) of tomato in a bowl. put all baseball bat on any bed. serve 1 slice(s) of tomato in a bowl. make a salad. boil potato. make a plate of toast. prepare coffee in a clean mug. water the plant. prepare breakfast. water the plant. boil potato. prepare coffee in a clean mug. prepare coffee in a clean mug. water the plant. clean all the plates. cook 2 slice(s) of potato and serve in a bowl. put all remote control on one dresser. prepare breakfast. cook 2 slice(s) of potato and serve on a plate. water the plant.",
+      "hyp": "I performed these tasks:\nPickup(Statue_0)\nPlace(CounterTop_1)\nPickup(Cup)\nToggleOff(Faucet)\nPour(Sink_Basin)\nPlace(Sink_Basin)\nToggleOn(Faucet)\nToggleOff(Faucet)\nPickup(Cup)\nPour(HousePlant)\nNoop\nPickup(Fork_2)\nPlace(Sink_Basin)\nOpen(Fridge)\nPickup(Bowl_1)\nPlace(Fridge)\nPickup(Fork_0)\nPlace(Sink_Basin)\nNoop\nOpen(Fridge)\nPickup(Bowl_2)\nPlace(CounterTop_0)\nToggleOff(Faucet)\nPickup(Bowl_1)\nPour(Sink_Basin)\nPlace(CounterTop_0)\nPickup(Knife)\nSlice(Tomato_0)\nPlace(CounterTop_0)\nPickup(Tomato_0_Sliced_3)\nPlace(Bowl_1)\nSay(\"good?\")\nOpen(Microwave)\nPickup(Mug_1)\nClose(Microwave)\nPlace(CoffeeMachine)\nToggleOff(CoffeeMachine)\nToggleOn(CoffeeMachine)\nToggleOff(CoffeeMachine)\nPickup(Mug_1)\nPlace(CounterTop_0)\nPickup(Potato_1)\nPlace(CounterTop_0)\nOpen(Fridge)\nPickup(Knife_0)\nClose(Fridge)\nSlice(Potato_1)\nPlace(CounterTop_0)\nPickup(Potato_1_Sliced_3)\nOpen(Microwave)\nPlace(CounterTop_2)\nPickup(Egg_1)\nPlace(CounterTop_1)\nPickup(Egg_0)\nPlace(CounterTop_1)\nPickup(Potato_1_Sliced_3)\nPlace(Microwave)\nClose(Microwave)\nToggleOn(Microwave)\nToggleOff(Microwave)\nOpen(Microwave)\nClose(Microwave)\nPickup(Plate_0)\nPlace(CounterTop_0)\nPickup(Potato_1_Sliced_2)\nOpen(Microwave)\nPlace(Microwave)\nPickup(Potato_1_Sliced_1)\nPlace(Microwave)\nClose(Microwave)\nToggleOn("
+    },
+    "ed9479c5dd8f204d_0102-488f96fab858496c_d6e2-a01d8c5e515fa9c4_c871-345624f0e74dc947_8525-dbb41344c474217f_2e3e-57862376ad3394a1_464f-977b52faf01e6c05_2895-15fa5e0caaf6a06f_81e4-eccc0afc91fb9b74_d5ba-c4c12513ffbf7d33_9e16-fef7c3fc3990d2e8_fb19-7affadfe549cbeb4_1df8-92904ea754a401e6_2b2c-064a69cb5d40b41f_f773-bbe083aa96535a1d_a996-7d0db28e7d18c776_c97a-0d1a67f82b3b5854_d74d-c1eba1e4b831e04b_aab3-5ab41ea72487ce0f_e5be-a44d13c7da084070_fe04-bd7327d5d2853453_fad6-c02445dd7a5b6f26_fffd-53472cf3cabeb021_46b6-1fa4f0593088b6f2_89ee-1023a6f334db1f63_f0f2-bd7327d5d2853453_5b4f-cdf30defa61245ba_5590-88f8ad0d2d356270_bb95-864a2333f20b0957_be88-75a59f83a279bd78_fb03-c2787b38615034c6_6175-1a8b00c643110183_ebc6-1e8fb21f2b41b0b0_db8b-fe6b3de8c88b8573_9f76-8057d5b1cab47555_9345-04ae108b77699c0f_2453-dd2efe33087ddc60_cb3a-23acf721b22a6456_1716-1801730beafdda15_f501-a1694dc92f54473f_0b07-b8729e0c4c857a8e_24b5-4c98e155c32cdc6f_7acc-f7ca0c5c4964bcdc_c0cf-e82f290cb4ab70bd_86a3-b2fde7ee4eb1c40f_1f95-c7cc40993ef8468b_3e7b-41b067f2ce6f3fef_8ee6-f25eed33d1c37931_1a7f-0de4b62afcd06138_45f2-36651928a974c895_caa2-0-seq_specific_shortened_low_actions": {
+      "q_time": "2023/04/23 15:22:48",
+      "q": "describe what you did when you serve 2 slice(s) of tomato on a plate.",
+      "gt": "pick up the knife, place the knife on the countertop, pick up the tomato, place the tomato on the countertop, pick up the knife, slice tomato, place the knife on the countertop, open the cabinet, pick up the plate, place the plate on the countertop, pick up the cup, place the cup on the countertop, pick up the plate, place the plate on the countertop, pick up the tomato, place the tomato on the plate, pick up the tomato, place the tomato on the plate",
+      "hyp": "I picked up a slice of tomato from the counter.",
+      "ref_ts": [
+        [
+          "2023/04/12 13:20:46",
+          "2023/04/12 13:22:30"
+        ]
+      ]
+    },
+    "ed9479c5dd8f204d_0102-488f96fab858496c_d6e2-a01d8c5e515fa9c4_c871-345624f0e74dc947_8525-dbb41344c474217f_2e3e-57862376ad3394a1_464f-977b52faf01e6c05_2895-15fa5e0caaf6a06f_81e4-eccc0afc91fb9b74_d5ba-c4c12513ffbf7d33_9e16-fef7c3fc3990d2e8_fb19-7affadfe549cbeb4_1df8-92904ea754a401e6_2b2c-064a69cb5d40b41f_f773-bbe083aa96535a1d_a996-7d0db28e7d18c776_c97a-0d1a67f82b3b5854_d74d-c1eba1e4b831e04b_aab3-5ab41ea72487ce0f_e5be-a44d13c7da084070_fe04-bd7327d5d2853453_fad6-c02445dd7a5b6f26_fffd-53472cf3cabeb021_46b6-1fa4f0593088b6f2_89ee-1023a6f334db1f63_f0f2-bd7327d5d2853453_5b4f-cdf30defa61245ba_5590-88f8ad0d2d356270_bb95-864a2333f20b0957_be88-75a59f83a279bd78_fb03-c2787b38615034c6_6175-1a8b00c643110183_ebc6-1e8fb21f2b41b0b0_db8b-fe6b3de8c88b8573_9f76-8057d5b1cab47555_9345-04ae108b77699c0f_2453-dd2efe33087ddc60_cb3a-23acf721b22a6456_1716-1801730beafdda15_f501-a1694dc92f54473f_0b07-b8729e0c4c857a8e_24b5-4c98e155c32cdc6f_7acc-f7ca0c5c4964bcdc_c0cf-e82f290cb4ab70bd_86a3-b2fde7ee4eb1c40f_1f95-c7cc40993ef8468b_3e7b-41b067f2ce6f3fef_8ee6-f25eed33d1c37931_1a7f-0de4b62afcd06138_45f2-36651928a974c895_caa2-0-seq_right_after_questions": {
+      "q_time": "2023/04/23 15:22:48",
+      "q": "What task did you do just after clean all the pots?",
+      "gt": "put all remote control on one sofa.",
+      "hyp": "Picking up Pot_1",
+      "ref_ts": [
+        [
+          "2023/04/03 10:28:09",
+          "2023/04/03 10:36:03"
+        ],
+        [
+          "2023/04/03 14:10:20",
+          "2023/04/03 14:13:07"
+        ]
+      ]
+    },
+    "ed9479c5dd8f204d_0102-488f96fab858496c_d6e2-a01d8c5e515fa9c4_c871-345624f0e74dc947_8525-dbb41344c474217f_2e3e-57862376ad3394a1_464f-977b52faf01e6c05_2895-15fa5e0caaf6a06f_81e4-eccc0afc91fb9b74_d5ba-c4c12513ffbf7d33_9e16-fef7c3fc3990d2e8_fb19-7affadfe549cbeb4_1df8-92904ea754a401e6_2b2c-064a69cb5d40b41f_f773-bbe083aa96535a1d_a996-7d0db28e7d18c776_c97a-0d1a67f82b3b5854_d74d-c1eba1e4b831e04b_aab3-5ab41ea72487ce0f_e5be-a44d13c7da084070_fe04-bd7327d5d2853453_fad6-c02445dd7a5b6f26_fffd-53472cf3cabeb021_46b6-1fa4f0593088b6f2_89ee-1023a6f334db1f63_f0f2-bd7327d5d2853453_5b4f-cdf30defa61245ba_5590-88f8ad0d2d356270_bb95-864a2333f20b0957_be88-75a59f83a279bd78_fb03-c2787b38615034c6_6175-1a8b00c643110183_ebc6-1e8fb21f2b41b0b0_db8b-fe6b3de8c88b8573_9f76-8057d5b1cab47555_9345-04ae108b77699c0f_2453-dd2efe33087ddc60_cb3a-23acf721b22a6456_1716-1801730beafdda15_f501-a1694dc92f54473f_0b07-b8729e0c4c857a8e_24b5-4c98e155c32cdc6f_7acc-f7ca0c5c4964bcdc_c0cf-e82f290cb4ab70bd_86a3-b2fde7ee4eb1c40f_1f95-c7cc40993ef8468b_3e7b-41b067f2ce6f3fef_8ee6-f25eed33d1c37931_1a7f-0de4b62afcd06138_45f2-36651928a974c895_caa2-0-seq_right_before_questions": {
+      "q_time": "2023/04/23 15:22:48",
+      "q": "What task did you do just before clean all the drinkwares?",
+      "gt": "put all pillow on any sofa.",
+      "hyp": "rinse the drinkware",
+      "ref_ts": [
+        [
+          "2023/04/09 12:51:34",
+          "2023/04/09 12:55:32"
+        ],
+        [
+          "2023/04/10 15:48:37",
+          "2023/04/10 15:51:00"
+        ]
+      ]
+    },
+    "ed9479c5dd8f204d_0102-488f96fab858496c_d6e2-a01d8c5e515fa9c4_c871-345624f0e74dc947_8525-dbb41344c474217f_2e3e-57862376ad3394a1_464f-977b52faf01e6c05_2895-15fa5e0caaf6a06f_81e4-eccc0afc91fb9b74_d5ba-c4c12513ffbf7d33_9e16-fef7c3fc3990d2e8_fb19-7affadfe549cbeb4_1df8-92904ea754a401e6_2b2c-064a69cb5d40b41f_f773-bbe083aa96535a1d_a996-7d0db28e7d18c776_c97a-0d1a67f82b3b5854_d74d-c1eba1e4b831e04b_aab3-5ab41ea72487ce0f_e5be-a44d13c7da084070_fe04-bd7327d5d2853453_fad6-c02445dd7a5b6f26_fffd-53472cf3cabeb021_46b6-1fa4f0593088b6f2_89ee-1023a6f334db1f63_f0f2-bd7327d5d2853453_5b4f-cdf30defa61245ba_5590-88f8ad0d2d356270_bb95-864a2333f20b0957_be88-75a59f83a279bd78_fb03-c2787b38615034c6_6175-1a8b00c643110183_ebc6-1e8fb21f2b41b0b0_db8b-fe6b3de8c88b8573_9f76-8057d5b1cab47555_9345-04ae108b77699c0f_2453-dd2efe33087ddc60_cb3a-23acf721b22a6456_1716-1801730beafdda15_f501-a1694dc92f54473f_0b07-b8729e0c4c857a8e_24b5-4c98e155c32cdc6f_7acc-f7ca0c5c4964bcdc_c0cf-e82f290cb4ab70bd_86a3-b2fde7ee4eb1c40f_1f95-c7cc40993ef8468b_3e7b-41b067f2ce6f3fef_8ee6-f25eed33d1c37931_1a7f-0de4b62afcd06138_45f2-36651928a974c895_caa2-0-seq_simple_object_yes_no": {
+      "q_time": "2023/04/23 15:22:48",
+      "q": "Was there a painting ?",
+      "gt": "no",
+      "hyp": "No."
+    },
+    "ed9479c5dd8f204d_0102-488f96fab858496c_d6e2-a01d8c5e515fa9c4_c871-345624f0e74dc947_8525-dbb41344c474217f_2e3e-57862376ad3394a1_464f-977b52faf01e6c05_2895-15fa5e0caaf6a06f_81e4-eccc0afc91fb9b74_d5ba-c4c12513ffbf7d33_9e16-fef7c3fc3990d2e8_fb19-7affadfe549cbeb4_1df8-92904ea754a401e6_2b2c-064a69cb5d40b41f_f773-bbe083aa96535a1d_a996-7d0db28e7d18c776_c97a-0d1a67f82b3b5854_d74d-c1eba1e4b831e04b_aab3-5ab41ea72487ce0f_e5be-a44d13c7da084070_fe04-bd7327d5d2853453_fad6-c02445dd7a5b6f26_fffd-53472cf3cabeb021_46b6-1fa4f0593088b6f2_89ee-1023a6f334db1f63_f0f2-bd7327d5d2853453_5b4f-cdf30defa61245ba_5590-88f8ad0d2d356270_bb95-864a2333f20b0957_be88-75a59f83a279bd78_fb03-c2787b38615034c6_6175-1a8b00c643110183_ebc6-1e8fb21f2b41b0b0_db8b-fe6b3de8c88b8573_9f76-8057d5b1cab47555_9345-04ae108b77699c0f_2453-dd2efe33087ddc60_cb3a-23acf721b22a6456_1716-1801730beafdda15_f501-a1694dc92f54473f_0b07-b8729e0c4c857a8e_24b5-4c98e155c32cdc6f_7acc-f7ca0c5c4964bcdc_c0cf-e82f290cb4ab70bd_86a3-b2fde7ee4eb1c40f_1f95-c7cc40993ef8468b_3e7b-41b067f2ce6f3fef_8ee6-f25eed33d1c37931_1a7f-0de4b62afcd06138_45f2-36651928a974c895_caa2-0-seq_low_actions_to_episode_task_descs": {
+      "q_time": "2023/04/23 15:22:48",
+      "q": "what task or tasks did you perform when you pick up the butterknife?",
+      "gt": " clean all the plates. and serve 1 slice(s) of tomato in a bowl. and make a plate of toast. and cook 5 slice(s) of potato and serve on a plate.",
+      "hyp": "I was navigating to the countertop.",
+      "ref_ts": [
+        [
+          "2023/04/15 09:34:22",
+          "2023/04/15 09:42:52"
+        ],
+        [
+          "2023/04/07 08:22:30",
+          "2023/04/07 08:27:31"
+        ],
+        [
+          "2023/04/13 19:37:46",
+          "2023/04/13 19:42:06"
+        ],
+        [
+          "2023/04/01 17:34:59",
+          "2023/04/01 17:37:21"
+        ],
+        [
+          "2023/04/14 09:32:48",
+          "2023/04/14 09:45:57"
+        ],
+        [
+          "2023/04/04 19:21:35",
+          "2023/04/04 19:31:38"
+        ],
+        [
+          "2023/04/05 17:56:56",
+          "2023/04/05 18:01:44"
+        ]
+      ]
+    },
+    "ed9479c5dd8f204d_0102-488f96fab858496c_d6e2-a01d8c5e515fa9c4_c871-345624f0e74dc947_8525-dbb41344c474217f_2e3e-57862376ad3394a1_464f-977b52faf01e6c05_2895-15fa5e0caaf6a06f_81e4-eccc0afc91fb9b74_d5ba-c4c12513ffbf7d33_9e16-fef7c3fc3990d2e8_fb19-7affadfe549cbeb4_1df8-92904ea754a401e6_2b2c-064a69cb5d40b41f_f773-bbe083aa96535a1d_a996-7d0db28e7d18c776_c97a-0d1a67f82b3b5854_d74d-c1eba1e4b831e04b_aab3-5ab41ea72487ce0f_e5be-a44d13c7da084070_fe04-bd7327d5d2853453_fad6-c02445dd7a5b6f26_fffd-53472cf3cabeb021_46b6-1fa4f0593088b6f2_89ee-1023a6f334db1f63_f0f2-bd7327d5d2853453_5b4f-cdf30defa61245ba_5590-88f8ad0d2d356270_bb95-864a2333f20b0957_be88-75a59f83a279bd78_fb03-c2787b38615034c6_6175-1a8b00c643110183_ebc6-1e8fb21f2b41b0b0_db8b-fe6b3de8c88b8573_9f76-8057d5b1cab47555_9345-04ae108b77699c0f_2453-dd2efe33087ddc60_cb3a-23acf721b22a6456_1716-1801730beafdda15_f501-a1694dc92f54473f_0b07-b8729e0c4c857a8e_24b5-4c98e155c32cdc6f_7acc-f7ca0c5c4964bcdc_c0cf-e82f290cb4ab70bd_86a3-b2fde7ee4eb1c40f_1f95-c7cc40993ef8468b_3e7b-41b067f2ce6f3fef_8ee6-f25eed33d1c37931_1a7f-0de4b62afcd06138_45f2-36651928a974c895_caa2-0-exact_time_to_episode": {
+      "q_time": "2023/04/23 15:22:48",
+      "q": "what did you do on Apr 02, 2023 at 04:09 PM?",
+      "gt": "cook 2 slice(s) of potato and serve in a bowl.",
+      "hyp": "I received the command to cook the potato in the sink.",
+      "ref_ts": [
+        [
+          "2023/04/02 16:09:10",
+          "2023/04/02 16:25:23"
+        ]
+      ]
+    },
+    "ed9479c5dd8f204d_0102-488f96fab858496c_d6e2-a01d8c5e515fa9c4_c871-345624f0e74dc947_8525-dbb41344c474217f_2e3e-57862376ad3394a1_464f-977b52faf01e6c05_2895-15fa5e0caaf6a06f_81e4-eccc0afc91fb9b74_d5ba-c4c12513ffbf7d33_9e16-fef7c3fc3990d2e8_fb19-7affadfe549cbeb4_1df8-92904ea754a401e6_2b2c-064a69cb5d40b41f_f773-bbe083aa96535a1d_a996-7d0db28e7d18c776_c97a-0d1a67f82b3b5854_d74d-c1eba1e4b831e04b_aab3-5ab41ea72487ce0f_e5be-a44d13c7da084070_fe04-bd7327d5d2853453_fad6-c02445dd7a5b6f26_fffd-53472cf3cabeb021_46b6-1fa4f0593088b6f2_89ee-1023a6f334db1f63_f0f2-bd7327d5d2853453_5b4f-cdf30defa61245ba_5590-88f8ad0d2d356270_bb95-864a2333f20b0957_be88-75a59f83a279bd78_fb03-c2787b38615034c6_6175-1a8b00c643110183_ebc6-1e8fb21f2b41b0b0_db8b-fe6b3de8c88b8573_9f76-8057d5b1cab47555_9345-04ae108b77699c0f_2453-dd2efe33087ddc60_cb3a-23acf721b22a6456_1716-1801730beafdda15_f501-a1694dc92f54473f_0b07-b8729e0c4c857a8e_24b5-4c98e155c32cdc6f_7acc-f7ca0c5c4964bcdc_c0cf-e82f290cb4ab70bd_86a3-b2fde7ee4eb1c40f_1f95-c7cc40993ef8468b_3e7b-41b067f2ce6f3fef_8ee6-f25eed33d1c37931_1a7f-0de4b62afcd06138_45f2-36651928a974c895_caa2-0-tasks_to_exact_times": {
+      "q_time": "2023/04/23 15:22:48",
+      "q": "When did you serve 1 slice(s) of tomato on a plate?",
+      "gt": "Apr 02, 2023 at 06:33 PM",
+      "hyp": "I sliced a tomato at 2023/03/30 19:43:12",
+      "ref_ts": [
+        [
+          "2023/04/02 18:33:55",
+          "2023/04/02 18:35:30"
+        ]
+      ]
+    },
+    "ed9479c5dd8f204d_0102-488f96fab858496c_d6e2-a01d8c5e515fa9c4_c871-345624f0e74dc947_8525-dbb41344c474217f_2e3e-57862376ad3394a1_464f-977b52faf01e6c05_2895-15fa5e0caaf6a06f_81e4-eccc0afc91fb9b74_d5ba-c4c12513ffbf7d33_9e16-fef7c3fc3990d2e8_fb19-7affadfe549cbeb4_1df8-92904ea754a401e6_2b2c-064a69cb5d40b41f_f773-bbe083aa96535a1d_a996-7d0db28e7d18c776_c97a-0d1a67f82b3b5854_d74d-c1eba1e4b831e04b_aab3-5ab41ea72487ce0f_e5be-a44d13c7da084070_fe04-bd7327d5d2853453_fad6-c02445dd7a5b6f26_fffd-53472cf3cabeb021_46b6-1fa4f0593088b6f2_89ee-1023a6f334db1f63_f0f2-bd7327d5d2853453_5b4f-cdf30defa61245ba_5590-88f8ad0d2d356270_bb95-864a2333f20b0957_be88-75a59f83a279bd78_fb03-c2787b38615034c6_6175-1a8b00c643110183_ebc6-1e8fb21f2b41b0b0_db8b-fe6b3de8c88b8573_9f76-8057d5b1cab47555_9345-04ae108b77699c0f_2453-dd2efe33087ddc60_cb3a-23acf721b22a6456_1716-1801730beafdda15_f501-a1694dc92f54473f_0b07-b8729e0c4c857a8e_24b5-4c98e155c32cdc6f_7acc-f7ca0c5c4964bcdc_c0cf-e82f290cb4ab70bd_86a3-b2fde7ee4eb1c40f_1f95-c7cc40993ef8468b_3e7b-41b067f2ce6f3fef_8ee6-f25eed33d1c37931_1a7f-0de4b62afcd06138_45f2-36651928a974c895_caa2-0-tasks_to_days_ago": {
+      "q_time": "2023/04/23 15:22:48",
+      "q": "Today is Apr 23, 2023 at 03:22 PM. How many days ago did you serve 1 slice(s) of tomato in a bowl?",
+      "gt": "24 days ago and 22 days ago and 10 days ago and 9 days ago and 8 days ago",
+      "hyp": "I did not serve tomato slices in a bowl two days ago.",
+      "ref_ts": [
+        [
+          "2023/04/15 09:34:22",
+          "2023/04/15 09:42:52"
+        ],
+        [
+          "2023/03/30 19:42:01",
+          "2023/03/30 19:44:05"
+        ],
+        [
+          "2023/04/01 16:57:20",
+          "2023/04/01 17:03:27"
+        ],
+        [
+          "2023/04/13 19:37:46",
+          "2023/04/13 19:42:06"
+        ],
+        [
+          "2023/04/14 09:32:48",
+          "2023/04/14 09:45:57"
+        ]
+      ]
+    },
+    "ed9479c5dd8f204d_0102-488f96fab858496c_d6e2-a01d8c5e515fa9c4_c871-345624f0e74dc947_8525-dbb41344c474217f_2e3e-57862376ad3394a1_464f-977b52faf01e6c05_2895-15fa5e0caaf6a06f_81e4-eccc0afc91fb9b74_d5ba-c4c12513ffbf7d33_9e16-fef7c3fc3990d2e8_fb19-7affadfe549cbeb4_1df8-92904ea754a401e6_2b2c-064a69cb5d40b41f_f773-bbe083aa96535a1d_a996-7d0db28e7d18c776_c97a-0d1a67f82b3b5854_d74d-c1eba1e4b831e04b_aab3-5ab41ea72487ce0f_e5be-a44d13c7da084070_fe04-bd7327d5d2853453_fad6-c02445dd7a5b6f26_fffd-53472cf3cabeb021_46b6-1fa4f0593088b6f2_89ee-1023a6f334db1f63_f0f2-bd7327d5d2853453_5b4f-cdf30defa61245ba_5590-88f8ad0d2d356270_bb95-864a2333f20b0957_be88-75a59f83a279bd78_fb03-c2787b38615034c6_6175-1a8b00c643110183_ebc6-1e8fb21f2b41b0b0_db8b-fe6b3de8c88b8573_9f76-8057d5b1cab47555_9345-04ae108b77699c0f_2453-dd2efe33087ddc60_cb3a-23acf721b22a6456_1716-1801730beafdda15_f501-a1694dc92f54473f_0b07-b8729e0c4c857a8e_24b5-4c98e155c32cdc6f_7acc-f7ca0c5c4964bcdc_c0cf-e82f290cb4ab70bd_86a3-b2fde7ee4eb1c40f_1f95-c7cc40993ef8468b_3e7b-41b067f2ce6f3fef_8ee6-f25eed33d1c37931_1a7f-0de4b62afcd06138_45f2-36651928a974c895_caa2-0-days_ago_to_episode": {
+      "q_time": "2023/04/23 15:22:48",
+      "q": "Today is Apr 23, 2023 at 03:22 PM. What did you do 10 days ago?",
+      "gt": "prepare breakfast and serve 1 slice(s) of tomato in a bowl.",
+      "hyp": "On April 13, 2023, I rinsed a mug and made coffee, made toast, and prepared a bowl with a slice of tomato.",
+      "ref_ts": [
+        [
+          "2023/04/13 13:41:31",
+          "2023/04/13 13:48:21"
+        ],
+        [
+          "2023/04/13 19:37:46",
+          "2023/04/13 19:42:06"
+        ]
+      ]
+    },
+    "464fb2558d308797_4110-5f3063384d77aa71_0ac8-bfa7505b440eadde_750f-249afd96389c8ae6_c966-dcc90b08c376f4dc_74ab-ebd80a433c115116_b3d7-555c981b1ecc6c8a_7c01-32e631d248583662_5835-c02445dd7a5b6f26_be05-93af984d7981fdaa_6fc9-a690a35743c855aa_4c00-b87bd55d7820c86e_8d92-345624f0e74dc947_8525-49c94e2372ffae4f_3917-2b5a33d4908ee77d_20f6-7c76f284a689ed0a_dee3-22fa2e73c63bc50f_c1a7-6ccc8b815fbc093a_5cca-32813f06255beef5_0bd5-18f6da623ba658a2_aa07-e32e722334301fa7_892d-aae955889a0ba5fa_d123-35025f516f41aba5_ba52-4b813e7c9bc088d0_8155-61e8f5910474b00b_53e6-aa310077d368fbbc_0a82-c2ffd6a81bfe2613_f91c-41b067f2ce6f3fef_8ee6-fef7c3fc3990d2e8_e2e9-fb7d765ba6874372_db67-59d897f4009147d8_1d27-a451af83aeece675_117b-e455dbf27ecaf413_8484-dd2efe33087ddc60_cb3a-48f25d2481974dee_e871-9d1c053084e66e7b_dc9f-c4c12513ffbf7d33_9e16-a76099fbab67c9da_4d48-15fa5e0caaf6a06f_46f8-fc0fe94a4c8e3a29_9052-d62a957ecbfa6792_8217-0ae40b26ad1ead81_6240-c02445dd7a5b6f26_86bd-f82346f1b273c70a_aaf6-53472cf3cabeb021_b7f8-6e26385c641764c7_fe5a-e035a44ebae9d3fd_c842-7d0db28e7d18c776_c97a-dbb41344c474217f_2e3e-8f7791c488b51c98_fa79-0-sequence_of_task_descs": {
+      "q_time": "2024/10/12 19:53:14",
+      "q": "List the tasks you performed.",
+      "gt": "serve 1 slice(s) of tomato on a plate. prepare coffee in a clean mug. serve 3 slice(s) of lettuce on a plate. make a plate of toast. prepare coffee in a clean mug. water the plant. make a salad. prepare breakfast. prepare coffee in a clean mug. clean all the bowls. make a sandwich. prepare breakfast. prepare breakfast. make a sandwich. clean all the mugs. make a plate of toast. prepare coffee in a clean mug. cook 5 slice(s) of potato and serve on a plate. put all watch in one box. cook 1 slice(s) of potato and serve in a bowl. put all tissue box on one sidetable. make a sandwich. prepare breakfast. boil potato. make a salad. put all newspaper on one dresser. put all remote control on one armchair. put all remote control on one dresser. clean all the pots. cook 1 slice(s) of potato and serve on a plate. cook 3 slice(s) of potato and serve in a bowl. make a sandwich. serve 1 slice(s) of tomato on a plate. prepare coffee in a clean mug. prepare breakfast. water the plant. boil potato. put all remote control on one chairs. serve 1 slice(s) of tomato on a plate. prepare breakfast. prepare coffee in a clean mug. water the plant. prepare coffee in a clean mug. make a salad. put all pillow on any sofa. clean all the mugs. make a sandwich. make a sandwich. serve 1 slice(s) of tomato in a bowl. make a sandwich.",
+      "hyp": "I performed these tasks: Pickup(Knife), Slice(Tomato), Place(CounterTop_1), Pickup(Plate_2), Place(CounterTop_1), Pickup(Tomato_Sliced_2), Place(Plate_2), Noop, Pickup(Mug_1), Place(Sink_Basin), ToggleOn(Faucet), ToggleOff(Faucet), Pickup(Mug_1), Pour(Sink_Basin), Place(CoffeeMachine), ToggleOff(CoffeeMachine), ToggleOn(CoffeeMachine), Say(\"your coffee is ready\"), Pickup(ButterKnife_1), Slice(Lettuce_1), Slice(Tomato), Place(CounterTop_0), Pickup(PepperShaker), Place(Chair_0), Pickup(CreditCard_2), Place(Floor), Pickup(Plate), Place(CounterTop_1), Pickup(Lettuce_1_Sliced_0), Place(CounterTop_1), Pickup(Lettuce_1_Sliced_7), Place(Plate), Pickup(Lettuce_1_Sliced_6), Place(Plate), Pickup(Lettuce_1_Sliced_1), Place(Plate), Say(\"what else can i do?\"), Pickup(SaltShaker_2), Place(CounterTop_0), Pickup(Plate), Place(CounterTop_0), Open(Fridge), Pickup(Bread_1), Place(CounterTop_1), Close(Fridge), Pickup(Knife_0), Slice(Bread_1), Place(CounterTop_1), Pickup(Bread_1_Sliced_2), Place(Toaster), ToggleOff(Toaster), Pickup(Plate), Place(CounterTop_0), Pickup(Cup_0), Place(CounterTop_0), Pickup(PaperTowelRoll_2), Place(CounterTop_0), Pickup(Plate), Place(CounterTop_0), ToggleOff(Faucet), Pickup(Plate), Place(Sink_Basin), ToggleOn(Faucet), ToggleOff(Faucet), Pickup(Plate), Place(CounterTop_1), Pickup(Bread_1_Sliced_2), Place(CounterTop_1), Pickup(Bread_1_Sliced_6), Place(CounterTop_1), Pickup(Bread_1_Sliced_5), Place(Toaster), ToggleOn(Toaster), Pickup(Bread_1_Sliced_5),"
+    },
+    "464fb2558d308797_4110-5f3063384d77aa71_0ac8-bfa7505b440eadde_750f-249afd96389c8ae6_c966-dcc90b08c376f4dc_74ab-ebd80a433c115116_b3d7-555c981b1ecc6c8a_7c01-32e631d248583662_5835-c02445dd7a5b6f26_be05-93af984d7981fdaa_6fc9-a690a35743c855aa_4c00-b87bd55d7820c86e_8d92-345624f0e74dc947_8525-49c94e2372ffae4f_3917-2b5a33d4908ee77d_20f6-7c76f284a689ed0a_dee3-22fa2e73c63bc50f_c1a7-6ccc8b815fbc093a_5cca-32813f06255beef5_0bd5-18f6da623ba658a2_aa07-e32e722334301fa7_892d-aae955889a0ba5fa_d123-35025f516f41aba5_ba52-4b813e7c9bc088d0_8155-61e8f5910474b00b_53e6-aa310077d368fbbc_0a82-c2ffd6a81bfe2613_f91c-41b067f2ce6f3fef_8ee6-fef7c3fc3990d2e8_e2e9-fb7d765ba6874372_db67-59d897f4009147d8_1d27-a451af83aeece675_117b-e455dbf27ecaf413_8484-dd2efe33087ddc60_cb3a-48f25d2481974dee_e871-9d1c053084e66e7b_dc9f-c4c12513ffbf7d33_9e16-a76099fbab67c9da_4d48-15fa5e0caaf6a06f_46f8-fc0fe94a4c8e3a29_9052-d62a957ecbfa6792_8217-0ae40b26ad1ead81_6240-c02445dd7a5b6f26_86bd-f82346f1b273c70a_aaf6-53472cf3cabeb021_b7f8-6e26385c641764c7_fe5a-e035a44ebae9d3fd_c842-7d0db28e7d18c776_c97a-dbb41344c474217f_2e3e-8f7791c488b51c98_fa79-0-seq_specific_shortened_low_actions": {
+      "q_time": "2024/10/12 19:53:14",
+      "q": "describe what you did when you put all pillow on any sofa.",
+      "gt": "pick up the pillow, place the pillow on the sofa, open the cabinet, pick up the pillow, place the pillow on the sofa",
+      "hyp": "I moved towards the sofa, turned left, and then placed the pillow onto it.",
+      "ref_ts": [
+        [
+          "2024/10/09 13:50:24",
+          "2024/10/09 13:53:10"
+        ]
+      ]
+    },
+    "464fb2558d308797_4110-5f3063384d77aa71_0ac8-bfa7505b440eadde_750f-249afd96389c8ae6_c966-dcc90b08c376f4dc_74ab-ebd80a433c115116_b3d7-555c981b1ecc6c8a_7c01-32e631d248583662_5835-c02445dd7a5b6f26_be05-93af984d7981fdaa_6fc9-a690a35743c855aa_4c00-b87bd55d7820c86e_8d92-345624f0e74dc947_8525-49c94e2372ffae4f_3917-2b5a33d4908ee77d_20f6-7c76f284a689ed0a_dee3-22fa2e73c63bc50f_c1a7-6ccc8b815fbc093a_5cca-32813f06255beef5_0bd5-18f6da623ba658a2_aa07-e32e722334301fa7_892d-aae955889a0ba5fa_d123-35025f516f41aba5_ba52-4b813e7c9bc088d0_8155-61e8f5910474b00b_53e6-aa310077d368fbbc_0a82-c2ffd6a81bfe2613_f91c-41b067f2ce6f3fef_8ee6-fef7c3fc3990d2e8_e2e9-fb7d765ba6874372_db67-59d897f4009147d8_1d27-a451af83aeece675_117b-e455dbf27ecaf413_8484-dd2efe33087ddc60_cb3a-48f25d2481974dee_e871-9d1c053084e66e7b_dc9f-c4c12513ffbf7d33_9e16-a76099fbab67c9da_4d48-15fa5e0caaf6a06f_46f8-fc0fe94a4c8e3a29_9052-d62a957ecbfa6792_8217-0ae40b26ad1ead81_6240-c02445dd7a5b6f26_86bd-f82346f1b273c70a_aaf6-53472cf3cabeb021_b7f8-6e26385c641764c7_fe5a-e035a44ebae9d3fd_c842-7d0db28e7d18c776_c97a-dbb41344c474217f_2e3e-8f7791c488b51c98_fa79-0-seq_right_after_questions": {
+      "q_time": "2024/10/12 19:53:14",
+      "q": "What task did you do just after cook 1 slice(s) of potato and serve in a bowl?",
+      "gt": "put all tissue box on one sidetable.",
+      "hyp": "Say(':')",
+      "ref_ts": [
+        [
+          "2024/09/27 15:11:53",
+          "2024/09/27 15:23:28"
+        ],
+        [
+          "2024/09/27 18:06:23",
+          "2024/09/27 18:09:48"
+        ]
+      ]
+    },
+    "464fb2558d308797_4110-5f3063384d77aa71_0ac8-bfa7505b440eadde_750f-249afd96389c8ae6_c966-dcc90b08c376f4dc_74ab-ebd80a433c115116_b3d7-555c981b1ecc6c8a_7c01-32e631d248583662_5835-c02445dd7a5b6f26_be05-93af984d7981fdaa_6fc9-a690a35743c855aa_4c00-b87bd55d7820c86e_8d92-345624f0e74dc947_8525-49c94e2372ffae4f_3917-2b5a33d4908ee77d_20f6-7c76f284a689ed0a_dee3-22fa2e73c63bc50f_c1a7-6ccc8b815fbc093a_5cca-32813f06255beef5_0bd5-18f6da623ba658a2_aa07-e32e722334301fa7_892d-aae955889a0ba5fa_d123-35025f516f41aba5_ba52-4b813e7c9bc088d0_8155-61e8f5910474b00b_53e6-aa310077d368fbbc_0a82-c2ffd6a81bfe2613_f91c-41b067f2ce6f3fef_8ee6-fef7c3fc3990d2e8_e2e9-fb7d765ba6874372_db67-59d897f4009147d8_1d27-a451af83aeece675_117b-e455dbf27ecaf413_8484-dd2efe33087ddc60_cb3a-48f25d2481974dee_e871-9d1c053084e66e7b_dc9f-c4c12513ffbf7d33_9e16-a76099fbab67c9da_4d48-15fa5e0caaf6a06f_46f8-fc0fe94a4c8e3a29_9052-d62a957ecbfa6792_8217-0ae40b26ad1ead81_6240-c02445dd7a5b6f26_86bd-f82346f1b273c70a_aaf6-53472cf3cabeb021_b7f8-6e26385c641764c7_fe5a-e035a44ebae9d3fd_c842-7d0db28e7d18c776_c97a-dbb41344c474217f_2e3e-8f7791c488b51c98_fa79-0-seq_right_before_questions": {
+      "q_time": "2024/10/12 19:53:14",
+      "q": "What task did you do just before clean all the pots?",
+      "gt": "put all remote control on one dresser.",
+      "hyp": "Placing a mug on the coffee machine.",
+      "ref_ts": [
+        [
+          "2024/09/30 17:35:50",
+          "2024/09/30 17:38:26"
+        ],
+        [
+          "2024/10/01 08:58:16",
+          "2024/10/01 09:02:09"
+        ]
+      ]
+    },
+    "464fb2558d308797_4110-5f3063384d77aa71_0ac8-bfa7505b440eadde_750f-249afd96389c8ae6_c966-dcc90b08c376f4dc_74ab-ebd80a433c115116_b3d7-555c981b1ecc6c8a_7c01-32e631d248583662_5835-c02445dd7a5b6f26_be05-93af984d7981fdaa_6fc9-a690a35743c855aa_4c00-b87bd55d7820c86e_8d92-345624f0e74dc947_8525-49c94e2372ffae4f_3917-2b5a33d4908ee77d_20f6-7c76f284a689ed0a_dee3-22fa2e73c63bc50f_c1a7-6ccc8b815fbc093a_5cca-32813f06255beef5_0bd5-18f6da623ba658a2_aa07-e32e722334301fa7_892d-aae955889a0ba5fa_d123-35025f516f41aba5_ba52-4b813e7c9bc088d0_8155-61e8f5910474b00b_53e6-aa310077d368fbbc_0a82-c2ffd6a81bfe2613_f91c-41b067f2ce6f3fef_8ee6-fef7c3fc3990d2e8_e2e9-fb7d765ba6874372_db67-59d897f4009147d8_1d27-a451af83aeece675_117b-e455dbf27ecaf413_8484-dd2efe33087ddc60_cb3a-48f25d2481974dee_e871-9d1c053084e66e7b_dc9f-c4c12513ffbf7d33_9e16-a76099fbab67c9da_4d48-15fa5e0caaf6a06f_46f8-fc0fe94a4c8e3a29_9052-d62a957ecbfa6792_8217-0ae40b26ad1ead81_6240-c02445dd7a5b6f26_86bd-f82346f1b273c70a_aaf6-53472cf3cabeb021_b7f8-6e26385c641764c7_fe5a-e035a44ebae9d3fd_c842-7d0db28e7d18c776_c97a-dbb41344c474217f_2e3e-8f7791c488b51c98_fa79-0-seq_simple_object_yes_no": {
+      "q_time": "2024/10/12 19:53:14",
+      "q": "Was there a desk ?",
+      "gt": "no",
+      "hyp": "No."
+    },
+    "464fb2558d308797_4110-5f3063384d77aa71_0ac8-bfa7505b440eadde_750f-249afd96389c8ae6_c966-dcc90b08c376f4dc_74ab-ebd80a433c115116_b3d7-555c981b1ecc6c8a_7c01-32e631d248583662_5835-c02445dd7a5b6f26_be05-93af984d7981fdaa_6fc9-a690a35743c855aa_4c00-b87bd55d7820c86e_8d92-345624f0e74dc947_8525-49c94e2372ffae4f_3917-2b5a33d4908ee77d_20f6-7c76f284a689ed0a_dee3-22fa2e73c63bc50f_c1a7-6ccc8b815fbc093a_5cca-32813f06255beef5_0bd5-18f6da623ba658a2_aa07-e32e722334301fa7_892d-aae955889a0ba5fa_d123-35025f516f41aba5_ba52-4b813e7c9bc088d0_8155-61e8f5910474b00b_53e6-aa310077d368fbbc_0a82-c2ffd6a81bfe2613_f91c-41b067f2ce6f3fef_8ee6-fef7c3fc3990d2e8_e2e9-fb7d765ba6874372_db67-59d897f4009147d8_1d27-a451af83aeece675_117b-e455dbf27ecaf413_8484-dd2efe33087ddc60_cb3a-48f25d2481974dee_e871-9d1c053084e66e7b_dc9f-c4c12513ffbf7d33_9e16-a76099fbab67c9da_4d48-15fa5e0caaf6a06f_46f8-fc0fe94a4c8e3a29_9052-d62a957ecbfa6792_8217-0ae40b26ad1ead81_6240-c02445dd7a5b6f26_86bd-f82346f1b273c70a_aaf6-53472cf3cabeb021_b7f8-6e26385c641764c7_fe5a-e035a44ebae9d3fd_c842-7d0db28e7d18c776_c97a-dbb41344c474217f_2e3e-8f7791c488b51c98_fa79-0-seq_low_actions_to_episode_task_descs": {
+      "q_time": "2024/10/12 19:53:14",
+      "q": "what task or tasks did you perform when you open the drawer?",
+      "gt": " make a sandwich. and put all tissue box on one sidetable. and put all remote control on one dresser.",
+      "hyp": "I have not opened any drawers.",
+      "ref_ts": [
+        [
+          "2024/10/11 19:33:56",
+          "2024/10/11 19:43:09"
+        ],
+        [
+          "2024/09/30 17:35:50",
+          "2024/09/30 17:38:26"
+        ],
+        [
+          "2024/09/27 18:06:23",
+          "2024/09/27 18:09:48"
+        ]
+      ]
+    },
+    "464fb2558d308797_4110-5f3063384d77aa71_0ac8-bfa7505b440eadde_750f-249afd96389c8ae6_c966-dcc90b08c376f4dc_74ab-ebd80a433c115116_b3d7-555c981b1ecc6c8a_7c01-32e631d248583662_5835-c02445dd7a5b6f26_be05-93af984d7981fdaa_6fc9-a690a35743c855aa_4c00-b87bd55d7820c86e_8d92-345624f0e74dc947_8525-49c94e2372ffae4f_3917-2b5a33d4908ee77d_20f6-7c76f284a689ed0a_dee3-22fa2e73c63bc50f_c1a7-6ccc8b815fbc093a_5cca-32813f06255beef5_0bd5-18f6da623ba658a2_aa07-e32e722334301fa7_892d-aae955889a0ba5fa_d123-35025f516f41aba5_ba52-4b813e7c9bc088d0_8155-61e8f5910474b00b_53e6-aa310077d368fbbc_0a82-c2ffd6a81bfe2613_f91c-41b067f2ce6f3fef_8ee6-fef7c3fc3990d2e8_e2e9-fb7d765ba6874372_db67-59d897f4009147d8_1d27-a451af83aeece675_117b-e455dbf27ecaf413_8484-dd2efe33087ddc60_cb3a-48f25d2481974dee_e871-9d1c053084e66e7b_dc9f-c4c12513ffbf7d33_9e16-a76099fbab67c9da_4d48-15fa5e0caaf6a06f_46f8-fc0fe94a4c8e3a29_9052-d62a957ecbfa6792_8217-0ae40b26ad1ead81_6240-c02445dd7a5b6f26_86bd-f82346f1b273c70a_aaf6-53472cf3cabeb021_b7f8-6e26385c641764c7_fe5a-e035a44ebae9d3fd_c842-7d0db28e7d18c776_c97a-dbb41344c474217f_2e3e-8f7791c488b51c98_fa79-0-exact_time_to_episode": {
+      "q_time": "2024/10/12 19:53:14",
+      "q": "what did you do on Sep 23, 2024 at 12:11 PM?",
+      "gt": "prepare coffee in a clean mug.",
+      "hyp": "I rinsed a mug on the coffee maker and made fresh coffee.",
+      "ref_ts": [
+        [
+          "2024/09/23 12:11:26",
+          "2024/09/23 12:14:01"
+        ]
+      ]
+    },
+    "464fb2558d308797_4110-5f3063384d77aa71_0ac8-bfa7505b440eadde_750f-249afd96389c8ae6_c966-dcc90b08c376f4dc_74ab-ebd80a433c115116_b3d7-555c981b1ecc6c8a_7c01-32e631d248583662_5835-c02445dd7a5b6f26_be05-93af984d7981fdaa_6fc9-a690a35743c855aa_4c00-b87bd55d7820c86e_8d92-345624f0e74dc947_8525-49c94e2372ffae4f_3917-2b5a33d4908ee77d_20f6-7c76f284a689ed0a_dee3-22fa2e73c63bc50f_c1a7-6ccc8b815fbc093a_5cca-32813f06255beef5_0bd5-18f6da623ba658a2_aa07-e32e722334301fa7_892d-aae955889a0ba5fa_d123-35025f516f41aba5_ba52-4b813e7c9bc088d0_8155-61e8f5910474b00b_53e6-aa310077d368fbbc_0a82-c2ffd6a81bfe2613_f91c-41b067f2ce6f3fef_8ee6-fef7c3fc3990d2e8_e2e9-fb7d765ba6874372_db67-59d897f4009147d8_1d27-a451af83aeece675_117b-e455dbf27ecaf413_8484-dd2efe33087ddc60_cb3a-48f25d2481974dee_e871-9d1c053084e66e7b_dc9f-c4c12513ffbf7d33_9e16-a76099fbab67c9da_4d48-15fa5e0caaf6a06f_46f8-fc0fe94a4c8e3a29_9052-d62a957ecbfa6792_8217-0ae40b26ad1ead81_6240-c02445dd7a5b6f26_86bd-f82346f1b273c70a_aaf6-53472cf3cabeb021_b7f8-6e26385c641764c7_fe5a-e035a44ebae9d3fd_c842-7d0db28e7d18c776_c97a-dbb41344c474217f_2e3e-8f7791c488b51c98_fa79-0-tasks_to_exact_times": {
+      "q_time": "2024/10/12 19:53:14",
+      "q": "When did you cook 3 slice(s) of potato and serve in a bowl?",
+      "gt": "Oct 01, 2024 at 06:21 PM",
+      "hyp": "I cooked 3 slices of potato at 2024/10/01 18:25:50, but I served them in a pan, not a bowl.",
+      "ref_ts": [
+        [
+          "2024/10/01 18:21:18",
+          "2024/10/01 18:28:38"
+        ]
+      ]
+    },
+    "464fb2558d308797_4110-5f3063384d77aa71_0ac8-bfa7505b440eadde_750f-249afd96389c8ae6_c966-dcc90b08c376f4dc_74ab-ebd80a433c115116_b3d7-555c981b1ecc6c8a_7c01-32e631d248583662_5835-c02445dd7a5b6f26_be05-93af984d7981fdaa_6fc9-a690a35743c855aa_4c00-b87bd55d7820c86e_8d92-345624f0e74dc947_8525-49c94e2372ffae4f_3917-2b5a33d4908ee77d_20f6-7c76f284a689ed0a_dee3-22fa2e73c63bc50f_c1a7-6ccc8b815fbc093a_5cca-32813f06255beef5_0bd5-18f6da623ba658a2_aa07-e32e722334301fa7_892d-aae955889a0ba5fa_d123-35025f516f41aba5_ba52-4b813e7c9bc088d0_8155-61e8f5910474b00b_53e6-aa310077d368fbbc_0a82-c2ffd6a81bfe2613_f91c-41b067f2ce6f3fef_8ee6-fef7c3fc3990d2e8_e2e9-fb7d765ba6874372_db67-59d897f4009147d8_1d27-a451af83aeece675_117b-e455dbf27ecaf413_8484-dd2efe33087ddc60_cb3a-48f25d2481974dee_e871-9d1c053084e66e7b_dc9f-c4c12513ffbf7d33_9e16-a76099fbab67c9da_4d48-15fa5e0caaf6a06f_46f8-fc0fe94a4c8e3a29_9052-d62a957ecbfa6792_8217-0ae40b26ad1ead81_6240-c02445dd7a5b6f26_86bd-f82346f1b273c70a_aaf6-53472cf3cabeb021_b7f8-6e26385c641764c7_fe5a-e035a44ebae9d3fd_c842-7d0db28e7d18c776_c97a-dbb41344c474217f_2e3e-8f7791c488b51c98_fa79-0-tasks_to_days_ago": {
+      "q_time": "2024/10/12 19:53:14",
+      "q": "Today is Oct 12, 2024 at 07:53 PM. How many days ago did you put all remote control on one armchair?",
+      "gt": "12 days ago",
+      "hyp": "12 days",
+      "ref_ts": [
+        [
+          "2024/09/30 15:34:47",
+          "2024/09/30 15:38:00"
+        ]
+      ]
+    },
+    "464fb2558d308797_4110-5f3063384d77aa71_0ac8-bfa7505b440eadde_750f-249afd96389c8ae6_c966-dcc90b08c376f4dc_74ab-ebd80a433c115116_b3d7-555c981b1ecc6c8a_7c01-32e631d248583662_5835-c02445dd7a5b6f26_be05-93af984d7981fdaa_6fc9-a690a35743c855aa_4c00-b87bd55d7820c86e_8d92-345624f0e74dc947_8525-49c94e2372ffae4f_3917-2b5a33d4908ee77d_20f6-7c76f284a689ed0a_dee3-22fa2e73c63bc50f_c1a7-6ccc8b815fbc093a_5cca-32813f06255beef5_0bd5-18f6da623ba658a2_aa07-e32e722334301fa7_892d-aae955889a0ba5fa_d123-35025f516f41aba5_ba52-4b813e7c9bc088d0_8155-61e8f5910474b00b_53e6-aa310077d368fbbc_0a82-c2ffd6a81bfe2613_f91c-41b067f2ce6f3fef_8ee6-fef7c3fc3990d2e8_e2e9-fb7d765ba6874372_db67-59d897f4009147d8_1d27-a451af83aeece675_117b-e455dbf27ecaf413_8484-dd2efe33087ddc60_cb3a-48f25d2481974dee_e871-9d1c053084e66e7b_dc9f-c4c12513ffbf7d33_9e16-a76099fbab67c9da_4d48-15fa5e0caaf6a06f_46f8-fc0fe94a4c8e3a29_9052-d62a957ecbfa6792_8217-0ae40b26ad1ead81_6240-c02445dd7a5b6f26_86bd-f82346f1b273c70a_aaf6-53472cf3cabeb021_b7f8-6e26385c641764c7_fe5a-e035a44ebae9d3fd_c842-7d0db28e7d18c776_c97a-dbb41344c474217f_2e3e-8f7791c488b51c98_fa79-0-days_ago_to_episode": {
+      "q_time": "2024/10/12 19:53:14",
+      "q": "Today is Oct 12, 2024 at 07:53 PM. What did you do 21 days ago?",
+      "gt": "prepare coffee in a clean mug.",
+      "hyp": "21 days ago, which was September 22, 2024, you watered a houseplant, prepared a meal involving lettuce, tomato, apple, and potato, and made coffee.",
+      "ref_ts": [
+        [
+          "2024/09/21 08:46:11",
+          "2024/09/21 08:48:00"
+        ]
+      ]
+    },
+    "18e6380ba49c1f55_4ae0-e141c8f6246ebd83_9dee-88f8ad0d2d356270_bb95-05fbc1a35520554d_c1b9-9d1c053084e66e7b_dc9f-14995cb55fdcb9f9_e822-dbb41344c474217f_2e3e-369a8cd57dde1b82_096e-35351038f6f3be3b_9c0e-8b2af8ba42ca5cae_913a-af3ea35af62cb764_aea5-d8d05917aadc27f7_0e39-48f25d2481974dee_e871-064a69cb5d40b41f_9237-04ae108b77699c0f_2453-dfc3dfb3dd5ff1fd_69af-5aa3cbd322d4f163_3bda-d56ca9d2e98c55a5_5d2f-0de4b62afcd06138_f2bb-32e631d248583662_5835-f2fab283e8dd367a_cb1f-3a9da83a824cb52d_c626-faa9c7a273f50d7f_eeba-0ad91909295bf186_134b-7c0a07e02524ae40_f540-3574c805169b19b0_a532-e4909f617bc99db4_4ab8-578d2cc749317a6f_ae7b-af3ea35af62cb764_dbcb-9c97a83f60095487_02d9-7d0e059ca3243596_a484-9e23434a16a146b5_7f9a-c58ede352f7d040b_04a3-1e037cbd9977ec99_d8f3-f2f6723ebab1e6a2_6bea-93af984d7981fdaa_6fc9-9539c0004762d6a8_cdd8-c1eba1e4b831e04b_aab3-09916b24496645e4_5ff9-935fb97bba18de43_1130-6f4aca312776de7b_7e6e-dda9ea220761cc52_5a27-2623dd6b654da651_0cb3-5f3063384d77aa71_0ac8-8455e3db97f9a4dc_de9d-2f8d482d22e56fdd_3e5c-8e41a1f030035e13_d7f5-6e26385c641764c7_1d69-f0f408b728183c76_09d4-a72c03efd22ce41c_c338-0-sequence_of_task_descs": {
+      "q_time": "2023/05/14 17:50:02",
+      "q": "List the tasks you performed.",
+      "gt": "make a salad. put all remote control on one chairs. serve 2 slice(s) of tomato on a plate. prepare coffee in a clean mug. water the plant. make a plate of toast. serve 1 slice(s) of tomato in a bowl. prepare breakfast. serve 1 slice(s) of tomato in a bowl. serve 1 slice(s) of tomato in a bowl. put all pillow on any armchair. boil potato. prepare breakfast. cook 5 slice(s) of potato and serve on a plate. make a plate of toast. put all newspaper on one dresser. serve 1 slice(s) of tomato on a plate. prepare breakfast. cook 2 slice(s) of potato and serve on a plate. prepare breakfast. make a sandwich. put all watch on any sidetable. prepare breakfast. boil potato. prepare breakfast. make a plate of toast. clean all the cups. boil potato. put all pillow on any armchair. make a salad. clean all the plates. put all newspaper on any sidetable. boil potato. prepare breakfast. water the plant. clean all the bowls. clean all the drinkwares. make a plate of toast. make a plate of toast. prepare coffee in a clean mug. boil potato. boil potato. boil potato. prepare coffee in a clean mug. make a plate of toast. serve 1 slice(s) of lettuce on a plate. make a plate of toast. clean all the mugs. make a salad. put all watch on one furniture.",
+      "hyp": "I performed these tasks:\nOpen(Fridge), Open(Cabinet_2), Pickup(Plate), Place(CounterTop_0), ToggleOff(Faucet), Pickup(Bowl_1), Place(CounterTop_0), Pickup(Plate), Place(Sink_Basin), Pickup(Knife_2), Place(CounterTop_0), ToggleOn(Faucet), ToggleOff(Faucet), Pickup(Plate), Place(CounterTop_0), Pickup(Potato_1), Place(CounterTop_0), Pickup(Knife_2), Slice(Potato_1), Place(CounterTop_0), Pickup(Potato_1_Sliced_4), ToggleOff(Microwave), Open(Microwave), Place(Microwave), Close(Microwave), ToggleOn(Microwave), ToggleOff(Microwave), Open(Microwave), Pickup(Potato_1_Sliced_4), Place(Plate), Open(Cabinet_4), Close(Cabinet_4), Open(Cabinet_5), Close(Cabinet_5), Open(Cabinet_1), Pickup(Tomato_0), Place(CounterTop_0), Pickup(Knife_2), Slice(Tomato_0), Place(CounterTop_0), Pickup(Tomato_0_Sliced_4), Place(Plate), Pickup(Tomato_0_Sliced_2), Place(Plate), Noop, Open(Cabinet_1), Open(Cabinet_0), Pickup(RemoteControl_1), Place(ArmChair), Pickup(Knife_1), Place(CounterTop_0), Pickup(Tomato_1), Place(CounterTop_0), Pickup(Knife_1), Slice(Tomato_1), Place(CounterTop_1), Open(Cabinet_5), Pickup(Plate_1), Place(CounterTop_1), Pickup(Cup_1), Place(CounterTop_1), Pickup(Plate_1), Place(CounterTop_0), Pickup(Tomato_1_Sliced_6), Place(Plate_1), Pickup(Tomato_1_Sliced_5), Place(Plate_1), Say(\"2 tomato on plate\"), Pickup(Mug), Place(CounterTop_0), Pickup(Lettuce), Place(CounterTop_0), ToggleOff(Faucet), Pickup(Cup_0), Place(CounterTop_0), Pickup(DishSponge_1), Place(CounterTop_0), Pickup(Knife"
+    },
+    "18e6380ba49c1f55_4ae0-e141c8f6246ebd83_9dee-88f8ad0d2d356270_bb95-05fbc1a35520554d_c1b9-9d1c053084e66e7b_dc9f-14995cb55fdcb9f9_e822-dbb41344c474217f_2e3e-369a8cd57dde1b82_096e-35351038f6f3be3b_9c0e-8b2af8ba42ca5cae_913a-af3ea35af62cb764_aea5-d8d05917aadc27f7_0e39-48f25d2481974dee_e871-064a69cb5d40b41f_9237-04ae108b77699c0f_2453-dfc3dfb3dd5ff1fd_69af-5aa3cbd322d4f163_3bda-d56ca9d2e98c55a5_5d2f-0de4b62afcd06138_f2bb-32e631d248583662_5835-f2fab283e8dd367a_cb1f-3a9da83a824cb52d_c626-faa9c7a273f50d7f_eeba-0ad91909295bf186_134b-7c0a07e02524ae40_f540-3574c805169b19b0_a532-e4909f617bc99db4_4ab8-578d2cc749317a6f_ae7b-af3ea35af62cb764_dbcb-9c97a83f60095487_02d9-7d0e059ca3243596_a484-9e23434a16a146b5_7f9a-c58ede352f7d040b_04a3-1e037cbd9977ec99_d8f3-f2f6723ebab1e6a2_6bea-93af984d7981fdaa_6fc9-9539c0004762d6a8_cdd8-c1eba1e4b831e04b_aab3-09916b24496645e4_5ff9-935fb97bba18de43_1130-6f4aca312776de7b_7e6e-dda9ea220761cc52_5a27-2623dd6b654da651_0cb3-5f3063384d77aa71_0ac8-8455e3db97f9a4dc_de9d-2f8d482d22e56fdd_3e5c-8e41a1f030035e13_d7f5-6e26385c641764c7_1d69-f0f408b728183c76_09d4-a72c03efd22ce41c_c338-0-seq_specific_shortened_low_actions": {
+      "q_time": "2023/05/14 17:50:02",
+      "q": "describe what you did when you put all remote control on one chairs.",
+      "gt": "open the cabinet, open the cabinet, pick up the remote control, place the remote control on the armchair",
+      "hyp": "I cannot describe the actions of putting all remote controls on one chair because the provided history excerpt does not contain information about such an event.",
+      "ref_ts": [
+        [
+          "2023/04/23 11:49:52",
+          "2023/04/23 11:51:12"
+        ]
+      ]
+    },
+    "18e6380ba49c1f55_4ae0-e141c8f6246ebd83_9dee-88f8ad0d2d356270_bb95-05fbc1a35520554d_c1b9-9d1c053084e66e7b_dc9f-14995cb55fdcb9f9_e822-dbb41344c474217f_2e3e-369a8cd57dde1b82_096e-35351038f6f3be3b_9c0e-8b2af8ba42ca5cae_913a-af3ea35af62cb764_aea5-d8d05917aadc27f7_0e39-48f25d2481974dee_e871-064a69cb5d40b41f_9237-04ae108b77699c0f_2453-dfc3dfb3dd5ff1fd_69af-5aa3cbd322d4f163_3bda-d56ca9d2e98c55a5_5d2f-0de4b62afcd06138_f2bb-32e631d248583662_5835-f2fab283e8dd367a_cb1f-3a9da83a824cb52d_c626-faa9c7a273f50d7f_eeba-0ad91909295bf186_134b-7c0a07e02524ae40_f540-3574c805169b19b0_a532-e4909f617bc99db4_4ab8-578d2cc749317a6f_ae7b-af3ea35af62cb764_dbcb-9c97a83f60095487_02d9-7d0e059ca3243596_a484-9e23434a16a146b5_7f9a-c58ede352f7d040b_04a3-1e037cbd9977ec99_d8f3-f2f6723ebab1e6a2_6bea-93af984d7981fdaa_6fc9-9539c0004762d6a8_cdd8-c1eba1e4b831e04b_aab3-09916b24496645e4_5ff9-935fb97bba18de43_1130-6f4aca312776de7b_7e6e-dda9ea220761cc52_5a27-2623dd6b654da651_0cb3-5f3063384d77aa71_0ac8-8455e3db97f9a4dc_de9d-2f8d482d22e56fdd_3e5c-8e41a1f030035e13_d7f5-6e26385c641764c7_1d69-f0f408b728183c76_09d4-a72c03efd22ce41c_c338-0-seq_right_after_questions": {
+      "q_time": "2023/05/14 17:50:02",
+      "q": "What task did you do just after put all watch on any sidetable?",
+      "gt": "prepare breakfast.",
+      "hyp": "I placed the watch on the side table and did not perform any other task after that.",
+      "ref_ts": [
+        [
+          "2023/05/01 14:45:57",
+          "2023/05/01 14:48:43"
+        ],
+        [
+          "2023/05/02 13:24:11",
+          "2023/05/02 13:33:44"
+        ]
+      ]
+    },
+    "18e6380ba49c1f55_4ae0-e141c8f6246ebd83_9dee-88f8ad0d2d356270_bb95-05fbc1a35520554d_c1b9-9d1c053084e66e7b_dc9f-14995cb55fdcb9f9_e822-dbb41344c474217f_2e3e-369a8cd57dde1b82_096e-35351038f6f3be3b_9c0e-8b2af8ba42ca5cae_913a-af3ea35af62cb764_aea5-d8d05917aadc27f7_0e39-48f25d2481974dee_e871-064a69cb5d40b41f_9237-04ae108b77699c0f_2453-dfc3dfb3dd5ff1fd_69af-5aa3cbd322d4f163_3bda-d56ca9d2e98c55a5_5d2f-0de4b62afcd06138_f2bb-32e631d248583662_5835-f2fab283e8dd367a_cb1f-3a9da83a824cb52d_c626-faa9c7a273f50d7f_eeba-0ad91909295bf186_134b-7c0a07e02524ae40_f540-3574c805169b19b0_a532-e4909f617bc99db4_4ab8-578d2cc749317a6f_ae7b-af3ea35af62cb764_dbcb-9c97a83f60095487_02d9-7d0e059ca3243596_a484-9e23434a16a146b5_7f9a-c58ede352f7d040b_04a3-1e037cbd9977ec99_d8f3-f2f6723ebab1e6a2_6bea-93af984d7981fdaa_6fc9-9539c0004762d6a8_cdd8-c1eba1e4b831e04b_aab3-09916b24496645e4_5ff9-935fb97bba18de43_1130-6f4aca312776de7b_7e6e-dda9ea220761cc52_5a27-2623dd6b654da651_0cb3-5f3063384d77aa71_0ac8-8455e3db97f9a4dc_de9d-2f8d482d22e56fdd_3e5c-8e41a1f030035e13_d7f5-6e26385c641764c7_1d69-f0f408b728183c76_09d4-a72c03efd22ce41c_c338-0-seq_right_before_questions": {
+      "q_time": "2023/05/14 17:50:02",
+      "q": "What task did you do just before serve 2 slice(s) of tomato on a plate?",
+      "gt": "put all remote control on one chairs.",
+      "hyp": "PanRight()",
+      "ref_ts": [
+        [
+          "2023/04/23 11:49:52",
+          "2023/04/23 11:51:12"
+        ],
+        [
+          "2023/04/23 14:45:31",
+          "2023/04/23 14:47:15"
+        ]
+      ]
+    },
+    "18e6380ba49c1f55_4ae0-e141c8f6246ebd83_9dee-88f8ad0d2d356270_bb95-05fbc1a35520554d_c1b9-9d1c053084e66e7b_dc9f-14995cb55fdcb9f9_e822-dbb41344c474217f_2e3e-369a8cd57dde1b82_096e-35351038f6f3be3b_9c0e-8b2af8ba42ca5cae_913a-af3ea35af62cb764_aea5-d8d05917aadc27f7_0e39-48f25d2481974dee_e871-064a69cb5d40b41f_9237-04ae108b77699c0f_2453-dfc3dfb3dd5ff1fd_69af-5aa3cbd322d4f163_3bda-d56ca9d2e98c55a5_5d2f-0de4b62afcd06138_f2bb-32e631d248583662_5835-f2fab283e8dd367a_cb1f-3a9da83a824cb52d_c626-faa9c7a273f50d7f_eeba-0ad91909295bf186_134b-7c0a07e02524ae40_f540-3574c805169b19b0_a532-e4909f617bc99db4_4ab8-578d2cc749317a6f_ae7b-af3ea35af62cb764_dbcb-9c97a83f60095487_02d9-7d0e059ca3243596_a484-9e23434a16a146b5_7f9a-c58ede352f7d040b_04a3-1e037cbd9977ec99_d8f3-f2f6723ebab1e6a2_6bea-93af984d7981fdaa_6fc9-9539c0004762d6a8_cdd8-c1eba1e4b831e04b_aab3-09916b24496645e4_5ff9-935fb97bba18de43_1130-6f4aca312776de7b_7e6e-dda9ea220761cc52_5a27-2623dd6b654da651_0cb3-5f3063384d77aa71_0ac8-8455e3db97f9a4dc_de9d-2f8d482d22e56fdd_3e5c-8e41a1f030035e13_d7f5-6e26385c641764c7_1d69-f0f408b728183c76_09d4-a72c03efd22ce41c_c338-0-seq_simple_object_yes_no": {
+      "q_time": "2023/05/14 17:50:02",
+      "q": "Was there a blinds ?",
+      "gt": "no",
+      "hyp": "No."
+    },
+    "18e6380ba49c1f55_4ae0-e141c8f6246ebd83_9dee-88f8ad0d2d356270_bb95-05fbc1a35520554d_c1b9-9d1c053084e66e7b_dc9f-14995cb55fdcb9f9_e822-dbb41344c474217f_2e3e-369a8cd57dde1b82_096e-35351038f6f3be3b_9c0e-8b2af8ba42ca5cae_913a-af3ea35af62cb764_aea5-d8d05917aadc27f7_0e39-48f25d2481974dee_e871-064a69cb5d40b41f_9237-04ae108b77699c0f_2453-dfc3dfb3dd5ff1fd_69af-5aa3cbd322d4f163_3bda-d56ca9d2e98c55a5_5d2f-0de4b62afcd06138_f2bb-32e631d248583662_5835-f2fab283e8dd367a_cb1f-3a9da83a824cb52d_c626-faa9c7a273f50d7f_eeba-0ad91909295bf186_134b-7c0a07e02524ae40_f540-3574c805169b19b0_a532-e4909f617bc99db4_4ab8-578d2cc749317a6f_ae7b-af3ea35af62cb764_dbcb-9c97a83f60095487_02d9-7d0e059ca3243596_a484-9e23434a16a146b5_7f9a-c58ede352f7d040b_04a3-1e037cbd9977ec99_d8f3-f2f6723ebab1e6a2_6bea-93af984d7981fdaa_6fc9-9539c0004762d6a8_cdd8-c1eba1e4b831e04b_aab3-09916b24496645e4_5ff9-935fb97bba18de43_1130-6f4aca312776de7b_7e6e-dda9ea220761cc52_5a27-2623dd6b654da651_0cb3-5f3063384d77aa71_0ac8-8455e3db97f9a4dc_de9d-2f8d482d22e56fdd_3e5c-8e41a1f030035e13_d7f5-6e26385c641764c7_1d69-f0f408b728183c76_09d4-a72c03efd22ce41c_c338-0-seq_low_actions_to_episode_task_descs": {
+      "q_time": "2023/05/14 17:50:02",
+      "q": "what task or tasks did you perform when you pick up the remotecontrol?",
+      "gt": " put all remote control on one chairs.",
+      "hyp": "I picked up the remote control.",
+      "ref_ts": [
+        [
+          "2023/04/23 11:49:52",
+          "2023/04/23 11:51:12"
+        ]
+      ]
+    },
+    "18e6380ba49c1f55_4ae0-e141c8f6246ebd83_9dee-88f8ad0d2d356270_bb95-05fbc1a35520554d_c1b9-9d1c053084e66e7b_dc9f-14995cb55fdcb9f9_e822-dbb41344c474217f_2e3e-369a8cd57dde1b82_096e-35351038f6f3be3b_9c0e-8b2af8ba42ca5cae_913a-af3ea35af62cb764_aea5-d8d05917aadc27f7_0e39-48f25d2481974dee_e871-064a69cb5d40b41f_9237-04ae108b77699c0f_2453-dfc3dfb3dd5ff1fd_69af-5aa3cbd322d4f163_3bda-d56ca9d2e98c55a5_5d2f-0de4b62afcd06138_f2bb-32e631d248583662_5835-f2fab283e8dd367a_cb1f-3a9da83a824cb52d_c626-faa9c7a273f50d7f_eeba-0ad91909295bf186_134b-7c0a07e02524ae40_f540-3574c805169b19b0_a532-e4909f617bc99db4_4ab8-578d2cc749317a6f_ae7b-af3ea35af62cb764_dbcb-9c97a83f60095487_02d9-7d0e059ca3243596_a484-9e23434a16a146b5_7f9a-c58ede352f7d040b_04a3-1e037cbd9977ec99_d8f3-f2f6723ebab1e6a2_6bea-93af984d7981fdaa_6fc9-9539c0004762d6a8_cdd8-c1eba1e4b831e04b_aab3-09916b24496645e4_5ff9-935fb97bba18de43_1130-6f4aca312776de7b_7e6e-dda9ea220761cc52_5a27-2623dd6b654da651_0cb3-5f3063384d77aa71_0ac8-8455e3db97f9a4dc_de9d-2f8d482d22e56fdd_3e5c-8e41a1f030035e13_d7f5-6e26385c641764c7_1d69-f0f408b728183c76_09d4-a72c03efd22ce41c_c338-0-exact_time_to_episode": {
+      "q_time": "2023/05/14 17:50:02",
+      "q": "what did you do on May 13, 2023 at 05:27 PM?",
+      "gt": "make a salad.",
+      "hyp": "I was about to pick up a knife to make a salad.",
+      "ref_ts": [
+        [
+          "2023/05/13 17:27:12",
+          "2023/05/13 17:38:16"
+        ]
+      ]
+    },
+    "18e6380ba49c1f55_4ae0-e141c8f6246ebd83_9dee-88f8ad0d2d356270_bb95-05fbc1a35520554d_c1b9-9d1c053084e66e7b_dc9f-14995cb55fdcb9f9_e822-dbb41344c474217f_2e3e-369a8cd57dde1b82_096e-35351038f6f3be3b_9c0e-8b2af8ba42ca5cae_913a-af3ea35af62cb764_aea5-d8d05917aadc27f7_0e39-48f25d2481974dee_e871-064a69cb5d40b41f_9237-04ae108b77699c0f_2453-dfc3dfb3dd5ff1fd_69af-5aa3cbd322d4f163_3bda-d56ca9d2e98c55a5_5d2f-0de4b62afcd06138_f2bb-32e631d248583662_5835-f2fab283e8dd367a_cb1f-3a9da83a824cb52d_c626-faa9c7a273f50d7f_eeba-0ad91909295bf186_134b-7c0a07e02524ae40_f540-3574c805169b19b0_a532-e4909f617bc99db4_4ab8-578d2cc749317a6f_ae7b-af3ea35af62cb764_dbcb-9c97a83f60095487_02d9-7d0e059ca3243596_a484-9e23434a16a146b5_7f9a-c58ede352f7d040b_04a3-1e037cbd9977ec99_d8f3-f2f6723ebab1e6a2_6bea-93af984d7981fdaa_6fc9-9539c0004762d6a8_cdd8-c1eba1e4b831e04b_aab3-09916b24496645e4_5ff9-935fb97bba18de43_1130-6f4aca312776de7b_7e6e-dda9ea220761cc52_5a27-2623dd6b654da651_0cb3-5f3063384d77aa71_0ac8-8455e3db97f9a4dc_de9d-2f8d482d22e56fdd_3e5c-8e41a1f030035e13_d7f5-6e26385c641764c7_1d69-f0f408b728183c76_09d4-a72c03efd22ce41c_c338-0-tasks_to_exact_times": {
+      "q_time": "2023/05/14 17:50:02",
+      "q": "When did you put all pillow on any armchair?",
+      "gt": "Apr 27, 2023 at 12:10 PM and May 04, 2023 at 10:07 AM",
+      "hyp": "I haven't put all pillows on the armchair yet.",
+      "ref_ts": [
+        [
+          "2023/04/27 12:10:24",
+          "2023/04/27 12:13:02"
+        ],
+        [
+          "2023/05/04 10:07:00",
+          "2023/05/04 10:10:22"
+        ]
+      ]
+    },
+    "18e6380ba49c1f55_4ae0-e141c8f6246ebd83_9dee-88f8ad0d2d356270_bb95-05fbc1a35520554d_c1b9-9d1c053084e66e7b_dc9f-14995cb55fdcb9f9_e822-dbb41344c474217f_2e3e-369a8cd57dde1b82_096e-35351038f6f3be3b_9c0e-8b2af8ba42ca5cae_913a-af3ea35af62cb764_aea5-d8d05917aadc27f7_0e39-48f25d2481974dee_e871-064a69cb5d40b41f_9237-04ae108b77699c0f_2453-dfc3dfb3dd5ff1fd_69af-5aa3cbd322d4f163_3bda-d56ca9d2e98c55a5_5d2f-0de4b62afcd06138_f2bb-32e631d248583662_5835-f2fab283e8dd367a_cb1f-3a9da83a824cb52d_c626-faa9c7a273f50d7f_eeba-0ad91909295bf186_134b-7c0a07e02524ae40_f540-3574c805169b19b0_a532-e4909f617bc99db4_4ab8-578d2cc749317a6f_ae7b-af3ea35af62cb764_dbcb-9c97a83f60095487_02d9-7d0e059ca3243596_a484-9e23434a16a146b5_7f9a-c58ede352f7d040b_04a3-1e037cbd9977ec99_d8f3-f2f6723ebab1e6a2_6bea-93af984d7981fdaa_6fc9-9539c0004762d6a8_cdd8-c1eba1e4b831e04b_aab3-09916b24496645e4_5ff9-935fb97bba18de43_1130-6f4aca312776de7b_7e6e-dda9ea220761cc52_5a27-2623dd6b654da651_0cb3-5f3063384d77aa71_0ac8-8455e3db97f9a4dc_de9d-2f8d482d22e56fdd_3e5c-8e41a1f030035e13_d7f5-6e26385c641764c7_1d69-f0f408b728183c76_09d4-a72c03efd22ce41c_c338-0-tasks_to_days_ago": {
+      "q_time": "2023/05/14 17:50:02",
+      "q": "Today is May 14, 2023 at 05:50 PM. How many days ago did you put all pillow on any armchair?",
+      "gt": "17 days ago and 10 days ago",
+      "hyp": "17 days ago",
+      "ref_ts": [
+        [
+          "2023/04/27 12:10:24",
+          "2023/04/27 12:13:02"
+        ],
+        [
+          "2023/05/04 10:07:00",
+          "2023/05/04 10:10:22"
+        ]
+      ]
+    },
+    "18e6380ba49c1f55_4ae0-e141c8f6246ebd83_9dee-88f8ad0d2d356270_bb95-05fbc1a35520554d_c1b9-9d1c053084e66e7b_dc9f-14995cb55fdcb9f9_e822-dbb41344c474217f_2e3e-369a8cd57dde1b82_096e-35351038f6f3be3b_9c0e-8b2af8ba42ca5cae_913a-af3ea35af62cb764_aea5-d8d05917aadc27f7_0e39-48f25d2481974dee_e871-064a69cb5d40b41f_9237-04ae108b77699c0f_2453-dfc3dfb3dd5ff1fd_69af-5aa3cbd322d4f163_3bda-d56ca9d2e98c55a5_5d2f-0de4b62afcd06138_f2bb-32e631d248583662_5835-f2fab283e8dd367a_cb1f-3a9da83a824cb52d_c626-faa9c7a273f50d7f_eeba-0ad91909295bf186_134b-7c0a07e02524ae40_f540-3574c805169b19b0_a532-e4909f617bc99db4_4ab8-578d2cc749317a6f_ae7b-af3ea35af62cb764_dbcb-9c97a83f60095487_02d9-7d0e059ca3243596_a484-9e23434a16a146b5_7f9a-c58ede352f7d040b_04a3-1e037cbd9977ec99_d8f3-f2f6723ebab1e6a2_6bea-93af984d7981fdaa_6fc9-9539c0004762d6a8_cdd8-c1eba1e4b831e04b_aab3-09916b24496645e4_5ff9-935fb97bba18de43_1130-6f4aca312776de7b_7e6e-dda9ea220761cc52_5a27-2623dd6b654da651_0cb3-5f3063384d77aa71_0ac8-8455e3db97f9a4dc_de9d-2f8d482d22e56fdd_3e5c-8e41a1f030035e13_d7f5-6e26385c641764c7_1d69-f0f408b728183c76_09d4-a72c03efd22ce41c_c338-0-days_ago_to_episode": {
+      "q_time": "2023/05/14 17:50:02",
+      "q": "Today is May 14, 2023 at 05:50 PM. What did you do 12 days ago?",
+      "gt": "prepare breakfast and boil potato and prepare breakfast.",
+      "hyp": "On May 2, 2023, I performed various tasks, including making coffee, a sandwich, toast, and preparing some fruits and vegetables.",
+      "ref_ts": [
+        [
+          "2023/05/02 17:22:13",
+          "2023/05/02 17:47:10"
+        ],
+        [
+          "2023/05/02 13:24:11",
+          "2023/05/02 13:33:44"
+        ],
+        [
+          "2023/05/02 17:18:17",
+          "2023/05/02 17:23:58"
+        ]
+      ]
+    },
+    "94a921b29def9f26_9157-c81332c37968338f_4641-b001404996cd3a29_0181-ba8bcc8d1e38b29c_a4c6-dfc3dfb3dd5ff1fd_69af-a4352bf3d6d33265_46d2-88ddc0cbf1a23687_43ea-fb63d82d79e5a2f7_5622-66015369bcfd9dea_464c-05a5b8e82c4d198e_a899-f3bd012a65dbb5df_9b4f-3cc94d435588751b_fa04-4cd977ff61272336_4706-c66cfa360ba2ee00_45b2-d442e2b6bd559455_e091-b63996c03c2d6b3e_5234-dda9ea220761cc52_5a27-b53c115c99ca34dd_5e2b-95cb6d56c9a3d66a_7b48-64c836cb91614ac6_913a-1b382ab21a3bffcd_561a-064a69cb5d40b41f_9237-4c98e155c32cdc6f_7acc-47f966f6920a05d6_742e-09916b24496645e4_5ff9-e4f148195c6e2fd9_c290-6ccc8b815fbc093a_e921-11ed5eaa6ebb7198_c80b-6f4aca312776de7b_97f3-ad2e4eb0b24a5940_69e9-b221d3f0ccfccea1_2abf-fb7d765ba6874372_2361-81b10da74f7ac9ff_15c8-25b52159ad56e77c_ff7f-0955031ec589b508_aa4c-3eea22aeefd4b6ec_a76b-8463e3c141964336_c9cc-ce6428e9c062e409_9fae-173518e3f508ca80_9ffa-cf32d4a95cdbcd3a_9fa2-96f5c7fccc368de7_dfe9-0de4b62afcd06138_f2bb-a259c276e58a6548_0c8d-32813f06255beef5_0bd5-c63cc11d19216a88_1356-464fb2558d308797_5a27-2b5a33d4908ee77d_20f6-d94b413680f6d6de_17a8-dbb41344c474217f_2e3e-f22a5e8ac037a420_1c14-0-sequence_of_task_descs": {
+      "q_time": "2023/11/22 10:57:39",
+      "q": "List the tasks you performed.",
+      "gt": "put all remote control on any sofa. water the plant. prepare coffee in a clean mug. put all newspaper on one tables. put all newspaper on one dresser. make a sandwich. put all remote control on one tables. prepare coffee in a clean mug. put all credit card on any bed. serve 1 slice(s) of tomato on a plate. boil potato. make a salad. boil potato. clean all the plates. prepare coffee in a clean mug. clean all the plates. boil potato. make a sandwich. put all pencil in any safe. put all newspaper on one armchair. put all tissue box on any sidetable. cook 5 slice(s) of potato and serve on a plate. prepare coffee in a clean mug. serve 2 slice(s) of tomato on a plate. make a plate of toast. boil potato. cook 5 slice(s) of potato and serve on a plate. prepare coffee in a clean mug. boil potato. water the plant. boil potato. cook 1 slice(s) of potato and serve on a plate. boil potato. make a plate of toast. make a sandwich. prepare breakfast. put all credit card on any bed. make a plate of toast. clean all the plates. make a salad. put all book on any desk. cook 2 slice(s) of potato and serve on a plate. serve 1 slice(s) of tomato in a bowl. put all watch in one box. clean all the plates. serve 1 slice(s) of tomato on a plate. clean all the mugs. boil potato. serve 1 slice(s) of tomato in a bowl. prepare coffee in a clean mug.",
+      "hyp": "I performed these tasks:\nPickup RemoteControl_1, Place on Sofa\nPickup RemoteControl_0, Place on Sofa\nSay \"thank you\"\nPickup Pot, ToggleOff Faucet, Place on CounterTop_0, Pickup Cup, Pour on HousePlant, Place on CounterTop_0, Say \"done\"\nPickup Mug, Pour on Sink_Basin, Place on CoffeeMachine, ToggleOff CoffeeMachine, ToggleOn CoffeeMachine, Noop\nPickup Newspaper_2, Place on SideTable, Pickup Newspaper_1, Place on SideTable, Say \"done?\"\nOpen Drawer_4, Open Cabinet_1, Pickup Newspaper_1, Place on Dresser, Close Cabinet_1, Open Cabinet_0, Open Cabinet_3, Pickup Newspaper_0, Place on Dresser, Noop\nPickup Plate_1, Place on CounterTop_1, Pickup Lettuce_1, Place on CounterTop_1, Pickup Knife_1, Slice Bread_2, Slice Lettuce_1, Place on CounterTop_1, Pickup Bread_2_Sliced_6, Place on Toaster, ToggleOn Toaster, Pickup Lettuce_1_Sliced_3, Place on Plate_1, Pickup Lettuce_1_Sliced_0, Place on CounterTop_1, Pickup Lettuce_1_Sliced_2, Place on CounterTop_1, Pickup Lettuce_1_Sliced_5, Place on CounterTop_1, Pickup Lettuce_1_Sliced_7, Place on CounterTop_1, Pickup Lettuce_1_Sliced_6, Place on CounterTop_1, Pickup Plate_1, Place on CounterTop_1, Pickup Bread_2_Sliced_6, Place on Plate_1, Pickup Bread_2_Sliced_5, Place on Toaster, Pickup Bread_2_Sliced_5, Place on Plate_1, Noop\nPickup RemoteControl_1, Place on SideTable, Pickup RemoteControl_0, Place on SideTable, Noop\nPickup Mug_1, Place on CoffeeMachine, ToggleOn CoffeeMachine, Noop\nOpen Drawer_0, Close Drawer_0, Pickup CreditCard_1, Place on Bed, Pickup CreditCard_0, Place on Bed, Forward, Pickup Tomato_1, Place on CounterTop_0, Open Fridge,"
+    },
+    "94a921b29def9f26_9157-c81332c37968338f_4641-b001404996cd3a29_0181-ba8bcc8d1e38b29c_a4c6-dfc3dfb3dd5ff1fd_69af-a4352bf3d6d33265_46d2-88ddc0cbf1a23687_43ea-fb63d82d79e5a2f7_5622-66015369bcfd9dea_464c-05a5b8e82c4d198e_a899-f3bd012a65dbb5df_9b4f-3cc94d435588751b_fa04-4cd977ff61272336_4706-c66cfa360ba2ee00_45b2-d442e2b6bd559455_e091-b63996c03c2d6b3e_5234-dda9ea220761cc52_5a27-b53c115c99ca34dd_5e2b-95cb6d56c9a3d66a_7b48-64c836cb91614ac6_913a-1b382ab21a3bffcd_561a-064a69cb5d40b41f_9237-4c98e155c32cdc6f_7acc-47f966f6920a05d6_742e-09916b24496645e4_5ff9-e4f148195c6e2fd9_c290-6ccc8b815fbc093a_e921-11ed5eaa6ebb7198_c80b-6f4aca312776de7b_97f3-ad2e4eb0b24a5940_69e9-b221d3f0ccfccea1_2abf-fb7d765ba6874372_2361-81b10da74f7ac9ff_15c8-25b52159ad56e77c_ff7f-0955031ec589b508_aa4c-3eea22aeefd4b6ec_a76b-8463e3c141964336_c9cc-ce6428e9c062e409_9fae-173518e3f508ca80_9ffa-cf32d4a95cdbcd3a_9fa2-96f5c7fccc368de7_dfe9-0de4b62afcd06138_f2bb-a259c276e58a6548_0c8d-32813f06255beef5_0bd5-c63cc11d19216a88_1356-464fb2558d308797_5a27-2b5a33d4908ee77d_20f6-d94b413680f6d6de_17a8-dbb41344c474217f_2e3e-f22a5e8ac037a420_1c14-0-seq_specific_shortened_low_actions": {
+      "q_time": "2023/11/22 10:57:39",
+      "q": "describe what you did when you put all remote control on any sofa.",
+      "gt": "pick up the remote control, place the remote control on the sofa, pick up the remote control, place the remote control on the sofa",
+      "hyp": "I turned right, then I placed the remote control that I was holding onto the sofa.",
+      "ref_ts": [
+        [
+          "2023/10/28 10:25:24",
+          "2023/10/28 10:26:53"
+        ]
+      ]
+    },
+    "94a921b29def9f26_9157-c81332c37968338f_4641-b001404996cd3a29_0181-ba8bcc8d1e38b29c_a4c6-dfc3dfb3dd5ff1fd_69af-a4352bf3d6d33265_46d2-88ddc0cbf1a23687_43ea-fb63d82d79e5a2f7_5622-66015369bcfd9dea_464c-05a5b8e82c4d198e_a899-f3bd012a65dbb5df_9b4f-3cc94d435588751b_fa04-4cd977ff61272336_4706-c66cfa360ba2ee00_45b2-d442e2b6bd559455_e091-b63996c03c2d6b3e_5234-dda9ea220761cc52_5a27-b53c115c99ca34dd_5e2b-95cb6d56c9a3d66a_7b48-64c836cb91614ac6_913a-1b382ab21a3bffcd_561a-064a69cb5d40b41f_9237-4c98e155c32cdc6f_7acc-47f966f6920a05d6_742e-09916b24496645e4_5ff9-e4f148195c6e2fd9_c290-6ccc8b815fbc093a_e921-11ed5eaa6ebb7198_c80b-6f4aca312776de7b_97f3-ad2e4eb0b24a5940_69e9-b221d3f0ccfccea1_2abf-fb7d765ba6874372_2361-81b10da74f7ac9ff_15c8-25b52159ad56e77c_ff7f-0955031ec589b508_aa4c-3eea22aeefd4b6ec_a76b-8463e3c141964336_c9cc-ce6428e9c062e409_9fae-173518e3f508ca80_9ffa-cf32d4a95cdbcd3a_9fa2-96f5c7fccc368de7_dfe9-0de4b62afcd06138_f2bb-a259c276e58a6548_0c8d-32813f06255beef5_0bd5-c63cc11d19216a88_1356-464fb2558d308797_5a27-2b5a33d4908ee77d_20f6-d94b413680f6d6de_17a8-dbb41344c474217f_2e3e-f22a5e8ac037a420_1c14-0-seq_right_after_questions": {
+      "q_time": "2023/11/22 10:57:39",
+      "q": "What task did you do just after serve 2 slice(s) of tomato on a plate?",
+      "gt": "make a plate of toast.",
+      "hyp": "I placed the plate on countertop.",
+      "ref_ts": [
+        [
+          "2023/11/09 09:11:01",
+          "2023/11/09 09:14:03"
+        ],
+        [
+          "2023/11/08 13:27:32",
+          "2023/11/08 13:35:15"
+        ]
+      ]
+    },
+    "94a921b29def9f26_9157-c81332c37968338f_4641-b001404996cd3a29_0181-ba8bcc8d1e38b29c_a4c6-dfc3dfb3dd5ff1fd_69af-a4352bf3d6d33265_46d2-88ddc0cbf1a23687_43ea-fb63d82d79e5a2f7_5622-66015369bcfd9dea_464c-05a5b8e82c4d198e_a899-f3bd012a65dbb5df_9b4f-3cc94d435588751b_fa04-4cd977ff61272336_4706-c66cfa360ba2ee00_45b2-d442e2b6bd559455_e091-b63996c03c2d6b3e_5234-dda9ea220761cc52_5a27-b53c115c99ca34dd_5e2b-95cb6d56c9a3d66a_7b48-64c836cb91614ac6_913a-1b382ab21a3bffcd_561a-064a69cb5d40b41f_9237-4c98e155c32cdc6f_7acc-47f966f6920a05d6_742e-09916b24496645e4_5ff9-e4f148195c6e2fd9_c290-6ccc8b815fbc093a_e921-11ed5eaa6ebb7198_c80b-6f4aca312776de7b_97f3-ad2e4eb0b24a5940_69e9-b221d3f0ccfccea1_2abf-fb7d765ba6874372_2361-81b10da74f7ac9ff_15c8-25b52159ad56e77c_ff7f-0955031ec589b508_aa4c-3eea22aeefd4b6ec_a76b-8463e3c141964336_c9cc-ce6428e9c062e409_9fae-173518e3f508ca80_9ffa-cf32d4a95cdbcd3a_9fa2-96f5c7fccc368de7_dfe9-0de4b62afcd06138_f2bb-a259c276e58a6548_0c8d-32813f06255beef5_0bd5-c63cc11d19216a88_1356-464fb2558d308797_5a27-2b5a33d4908ee77d_20f6-d94b413680f6d6de_17a8-dbb41344c474217f_2e3e-f22a5e8ac037a420_1c14-0-seq_right_before_questions": {
+      "q_time": "2023/11/22 10:57:39",
+      "q": "What task did you do just before put all book on any desk?",
+      "gt": "make a salad.",
+      "hyp": "Picking up a book from the desk.",
+      "ref_ts": [
+        [
+          "2023/11/17 18:34:12",
+          "2023/11/17 18:35:44"
+        ],
+        [
+          "2023/11/16 14:53:23",
+          "2023/11/16 15:02:13"
+        ]
+      ]
+    },
+    "94a921b29def9f26_9157-c81332c37968338f_4641-b001404996cd3a29_0181-ba8bcc8d1e38b29c_a4c6-dfc3dfb3dd5ff1fd_69af-a4352bf3d6d33265_46d2-88ddc0cbf1a23687_43ea-fb63d82d79e5a2f7_5622-66015369bcfd9dea_464c-05a5b8e82c4d198e_a899-f3bd012a65dbb5df_9b4f-3cc94d435588751b_fa04-4cd977ff61272336_4706-c66cfa360ba2ee00_45b2-d442e2b6bd559455_e091-b63996c03c2d6b3e_5234-dda9ea220761cc52_5a27-b53c115c99ca34dd_5e2b-95cb6d56c9a3d66a_7b48-64c836cb91614ac6_913a-1b382ab21a3bffcd_561a-064a69cb5d40b41f_9237-4c98e155c32cdc6f_7acc-47f966f6920a05d6_742e-09916b24496645e4_5ff9-e4f148195c6e2fd9_c290-6ccc8b815fbc093a_e921-11ed5eaa6ebb7198_c80b-6f4aca312776de7b_97f3-ad2e4eb0b24a5940_69e9-b221d3f0ccfccea1_2abf-fb7d765ba6874372_2361-81b10da74f7ac9ff_15c8-25b52159ad56e77c_ff7f-0955031ec589b508_aa4c-3eea22aeefd4b6ec_a76b-8463e3c141964336_c9cc-ce6428e9c062e409_9fae-173518e3f508ca80_9ffa-cf32d4a95cdbcd3a_9fa2-96f5c7fccc368de7_dfe9-0de4b62afcd06138_f2bb-a259c276e58a6548_0c8d-32813f06255beef5_0bd5-c63cc11d19216a88_1356-464fb2558d308797_5a27-2b5a33d4908ee77d_20f6-d94b413680f6d6de_17a8-dbb41344c474217f_2e3e-f22a5e8ac037a420_1c14-0-seq_simple_object_yes_no": {
+      "q_time": "2023/11/22 10:57:39",
+      "q": "Was there a cd ?",
+      "gt": "yes, when I put all book on any desk. and put all pencil in any safe. and put all credit card on any bed.",
+      "hyp": "Yes, there were two CDs.",
+      "ref_ts": [
+        [
+          "2023/10/31 18:36:15",
+          "2023/10/31 18:38:40"
+        ],
+        [
+          "2023/11/06 13:25:06",
+          "2023/11/06 13:28:05"
+        ],
+        [
+          "2023/11/17 18:34:12",
+          "2023/11/17 18:35:44"
+        ],
+        [
+          "2023/11/15 14:17:24",
+          "2023/11/15 14:20:58"
+        ]
+      ]
+    },
+    "94a921b29def9f26_9157-c81332c37968338f_4641-b001404996cd3a29_0181-ba8bcc8d1e38b29c_a4c6-dfc3dfb3dd5ff1fd_69af-a4352bf3d6d33265_46d2-88ddc0cbf1a23687_43ea-fb63d82d79e5a2f7_5622-66015369bcfd9dea_464c-05a5b8e82c4d198e_a899-f3bd012a65dbb5df_9b4f-3cc94d435588751b_fa04-4cd977ff61272336_4706-c66cfa360ba2ee00_45b2-d442e2b6bd559455_e091-b63996c03c2d6b3e_5234-dda9ea220761cc52_5a27-b53c115c99ca34dd_5e2b-95cb6d56c9a3d66a_7b48-64c836cb91614ac6_913a-1b382ab21a3bffcd_561a-064a69cb5d40b41f_9237-4c98e155c32cdc6f_7acc-47f966f6920a05d6_742e-09916b24496645e4_5ff9-e4f148195c6e2fd9_c290-6ccc8b815fbc093a_e921-11ed5eaa6ebb7198_c80b-6f4aca312776de7b_97f3-ad2e4eb0b24a5940_69e9-b221d3f0ccfccea1_2abf-fb7d765ba6874372_2361-81b10da74f7ac9ff_15c8-25b52159ad56e77c_ff7f-0955031ec589b508_aa4c-3eea22aeefd4b6ec_a76b-8463e3c141964336_c9cc-ce6428e9c062e409_9fae-173518e3f508ca80_9ffa-cf32d4a95cdbcd3a_9fa2-96f5c7fccc368de7_dfe9-0de4b62afcd06138_f2bb-a259c276e58a6548_0c8d-32813f06255beef5_0bd5-c63cc11d19216a88_1356-464fb2558d308797_5a27-2b5a33d4908ee77d_20f6-d94b413680f6d6de_17a8-dbb41344c474217f_2e3e-f22a5e8ac037a420_1c14-0-seq_low_actions_to_episode_task_descs": {
+      "q_time": "2023/11/22 10:57:39",
+      "q": "what task or tasks did you perform when you place the egg on the countertop?",
+      "gt": " boil potato.",
+      "hyp": "I turned right, moved forward, panned right, and then placed the egg on the countertop.",
+      "ref_ts": [
+        [
+          "2023/11/10 19:21:20",
+          "2023/11/10 19:28:25"
+        ],
+        [
+          "2023/11/12 10:40:00",
+          "2023/11/12 10:45:47"
+        ]
+      ]
+    },
+    "94a921b29def9f26_9157-c81332c37968338f_4641-b001404996cd3a29_0181-ba8bcc8d1e38b29c_a4c6-dfc3dfb3dd5ff1fd_69af-a4352bf3d6d33265_46d2-88ddc0cbf1a23687_43ea-fb63d82d79e5a2f7_5622-66015369bcfd9dea_464c-05a5b8e82c4d198e_a899-f3bd012a65dbb5df_9b4f-3cc94d435588751b_fa04-4cd977ff61272336_4706-c66cfa360ba2ee00_45b2-d442e2b6bd559455_e091-b63996c03c2d6b3e_5234-dda9ea220761cc52_5a27-b53c115c99ca34dd_5e2b-95cb6d56c9a3d66a_7b48-64c836cb91614ac6_913a-1b382ab21a3bffcd_561a-064a69cb5d40b41f_9237-4c98e155c32cdc6f_7acc-47f966f6920a05d6_742e-09916b24496645e4_5ff9-e4f148195c6e2fd9_c290-6ccc8b815fbc093a_e921-11ed5eaa6ebb7198_c80b-6f4aca312776de7b_97f3-ad2e4eb0b24a5940_69e9-b221d3f0ccfccea1_2abf-fb7d765ba6874372_2361-81b10da74f7ac9ff_15c8-25b52159ad56e77c_ff7f-0955031ec589b508_aa4c-3eea22aeefd4b6ec_a76b-8463e3c141964336_c9cc-ce6428e9c062e409_9fae-173518e3f508ca80_9ffa-cf32d4a95cdbcd3a_9fa2-96f5c7fccc368de7_dfe9-0de4b62afcd06138_f2bb-a259c276e58a6548_0c8d-32813f06255beef5_0bd5-c63cc11d19216a88_1356-464fb2558d308797_5a27-2b5a33d4908ee77d_20f6-d94b413680f6d6de_17a8-dbb41344c474217f_2e3e-f22a5e8ac037a420_1c14-0-exact_time_to_episode": {
+      "q_time": "2023/11/22 10:57:39",
+      "q": "what did you do on Nov 16, 2023 at 09:46 AM?",
+      "gt": "make a plate of toast.",
+      "hyp": "I was instructed to make a plate of toast. The ingredients were located on the brown shelf by the door.",
+      "ref_ts": [
+        [
+          "2023/11/16 09:46:43",
+          "2023/11/16 09:50:39"
+        ]
+      ]
+    },
+    "94a921b29def9f26_9157-c81332c37968338f_4641-b001404996cd3a29_0181-ba8bcc8d1e38b29c_a4c6-dfc3dfb3dd5ff1fd_69af-a4352bf3d6d33265_46d2-88ddc0cbf1a23687_43ea-fb63d82d79e5a2f7_5622-66015369bcfd9dea_464c-05a5b8e82c4d198e_a899-f3bd012a65dbb5df_9b4f-3cc94d435588751b_fa04-4cd977ff61272336_4706-c66cfa360ba2ee00_45b2-d442e2b6bd559455_e091-b63996c03c2d6b3e_5234-dda9ea220761cc52_5a27-b53c115c99ca34dd_5e2b-95cb6d56c9a3d66a_7b48-64c836cb91614ac6_913a-1b382ab21a3bffcd_561a-064a69cb5d40b41f_9237-4c98e155c32cdc6f_7acc-47f966f6920a05d6_742e-09916b24496645e4_5ff9-e4f148195c6e2fd9_c290-6ccc8b815fbc093a_e921-11ed5eaa6ebb7198_c80b-6f4aca312776de7b_97f3-ad2e4eb0b24a5940_69e9-b221d3f0ccfccea1_2abf-fb7d765ba6874372_2361-81b10da74f7ac9ff_15c8-25b52159ad56e77c_ff7f-0955031ec589b508_aa4c-3eea22aeefd4b6ec_a76b-8463e3c141964336_c9cc-ce6428e9c062e409_9fae-173518e3f508ca80_9ffa-cf32d4a95cdbcd3a_9fa2-96f5c7fccc368de7_dfe9-0de4b62afcd06138_f2bb-a259c276e58a6548_0c8d-32813f06255beef5_0bd5-c63cc11d19216a88_1356-464fb2558d308797_5a27-2b5a33d4908ee77d_20f6-d94b413680f6d6de_17a8-dbb41344c474217f_2e3e-f22a5e8ac037a420_1c14-0-tasks_to_exact_times": {
+      "q_time": "2023/11/22 10:57:39",
+      "q": "When did you prepare breakfast?",
+      "gt": "Nov 15, 2023 at 01:13 PM",
+      "hyp": "I prepared a sandwich on 2023/10/30 between 10:50 and 10:53. I also made toast several times, on 2023/11/06, 2023/11/15, 2023/11/14, and 2023/11/16.",
+      "ref_ts": [
+        [
+          "2023/11/15 13:13:24",
+          "2023/11/15 13:39:12"
+        ]
+      ]
+    },
+    "94a921b29def9f26_9157-c81332c37968338f_4641-b001404996cd3a29_0181-ba8bcc8d1e38b29c_a4c6-dfc3dfb3dd5ff1fd_69af-a4352bf3d6d33265_46d2-88ddc0cbf1a23687_43ea-fb63d82d79e5a2f7_5622-66015369bcfd9dea_464c-05a5b8e82c4d198e_a899-f3bd012a65dbb5df_9b4f-3cc94d435588751b_fa04-4cd977ff61272336_4706-c66cfa360ba2ee00_45b2-d442e2b6bd559455_e091-b63996c03c2d6b3e_5234-dda9ea220761cc52_5a27-b53c115c99ca34dd_5e2b-95cb6d56c9a3d66a_7b48-64c836cb91614ac6_913a-1b382ab21a3bffcd_561a-064a69cb5d40b41f_9237-4c98e155c32cdc6f_7acc-47f966f6920a05d6_742e-09916b24496645e4_5ff9-e4f148195c6e2fd9_c290-6ccc8b815fbc093a_e921-11ed5eaa6ebb7198_c80b-6f4aca312776de7b_97f3-ad2e4eb0b24a5940_69e9-b221d3f0ccfccea1_2abf-fb7d765ba6874372_2361-81b10da74f7ac9ff_15c8-25b52159ad56e77c_ff7f-0955031ec589b508_aa4c-3eea22aeefd4b6ec_a76b-8463e3c141964336_c9cc-ce6428e9c062e409_9fae-173518e3f508ca80_9ffa-cf32d4a95cdbcd3a_9fa2-96f5c7fccc368de7_dfe9-0de4b62afcd06138_f2bb-a259c276e58a6548_0c8d-32813f06255beef5_0bd5-c63cc11d19216a88_1356-464fb2558d308797_5a27-2b5a33d4908ee77d_20f6-d94b413680f6d6de_17a8-dbb41344c474217f_2e3e-f22a5e8ac037a420_1c14-0-tasks_to_days_ago": {
+      "q_time": "2023/11/22 10:57:39",
+      "q": "Today is Nov 22, 2023 at 10:57 AM. How many days ago did you serve 1 slice(s) of tomato in a bowl?",
+      "gt": "4 days ago and 1 day ago",
+      "hyp": "2",
+      "ref_ts": [
+        [
+          "2023/11/21 12:36:33",
+          "2023/11/21 12:42:40"
+        ],
+        [
+          "2023/11/18 16:04:15",
+          "2023/11/18 16:10:25"
+        ]
+      ]
+    },
+    "94a921b29def9f26_9157-c81332c37968338f_4641-b001404996cd3a29_0181-ba8bcc8d1e38b29c_a4c6-dfc3dfb3dd5ff1fd_69af-a4352bf3d6d33265_46d2-88ddc0cbf1a23687_43ea-fb63d82d79e5a2f7_5622-66015369bcfd9dea_464c-05a5b8e82c4d198e_a899-f3bd012a65dbb5df_9b4f-3cc94d435588751b_fa04-4cd977ff61272336_4706-c66cfa360ba2ee00_45b2-d442e2b6bd559455_e091-b63996c03c2d6b3e_5234-dda9ea220761cc52_5a27-b53c115c99ca34dd_5e2b-95cb6d56c9a3d66a_7b48-64c836cb91614ac6_913a-1b382ab21a3bffcd_561a-064a69cb5d40b41f_9237-4c98e155c32cdc6f_7acc-47f966f6920a05d6_742e-09916b24496645e4_5ff9-e4f148195c6e2fd9_c290-6ccc8b815fbc093a_e921-11ed5eaa6ebb7198_c80b-6f4aca312776de7b_97f3-ad2e4eb0b24a5940_69e9-b221d3f0ccfccea1_2abf-fb7d765ba6874372_2361-81b10da74f7ac9ff_15c8-25b52159ad56e77c_ff7f-0955031ec589b508_aa4c-3eea22aeefd4b6ec_a76b-8463e3c141964336_c9cc-ce6428e9c062e409_9fae-173518e3f508ca80_9ffa-cf32d4a95cdbcd3a_9fa2-96f5c7fccc368de7_dfe9-0de4b62afcd06138_f2bb-a259c276e58a6548_0c8d-32813f06255beef5_0bd5-c63cc11d19216a88_1356-464fb2558d308797_5a27-2b5a33d4908ee77d_20f6-d94b413680f6d6de_17a8-dbb41344c474217f_2e3e-f22a5e8ac037a420_1c14-0-days_ago_to_episode": {
+      "q_time": "2023/11/22 10:57:39",
+      "q": "Today is Nov 22, 2023 at 10:57 AM. What did you do 7 days ago?",
+      "gt": "make a sandwich and prepare breakfast and put all credit card on any bed.",
+      "hyp": "Seven days ago, I performed several tasks. I made toast and a salad, and I also cleaned a mug.  I also moved some credit cards to the bed.",
+      "ref_ts": [
+        [
+          "2023/11/15 12:04:08",
+          "2023/11/15 12:09:56"
+        ],
+        [
+          "2023/11/15 13:13:24",
+          "2023/11/15 13:39:12"
+        ],
+        [
+          "2023/11/15 14:17:24",
+          "2023/11/15 14:20:58"
+        ]
+      ]
+    },
+    "6e4fc617d59944fa_915c-2bb159500f5ee79b_77a4-cf32d4a95cdbcd3a_9fa2-4aafdc038df138e8_58f0-9ac845c7d33ba73a_7fa8-133d52a8aaf9db3f_8ed8-612f99763b6978b6_0c1a-f2f6723ebab1e6a2_bfeb-b001404996cd3a29_0181-1bbfe20e48fba275_22dc-0460150bc5699dc0_4640-b87bd55d7820c86e_8d92-fc0fe94a4c8e3a29_9052-f892b2976d0955e0_b0d9-53c031a953194d07_d936-c3aabf431a64e351_e223-b2815444299854b0_2b84-345624f0e74dc947_8525-7172fd55ac8095bd_e687-0196f21923a77e88_288f-c66cfa360ba2ee00_45b2-271e4ccbac4343e1_87d1-f3bd012a65dbb5df_1a9a-e8f7cd03e3683657_4d70-b389be8338cc3292_add9-b385a8c7a7538571_e6cd-f2fab283e8dd367a_cb1f-6f4aca312776de7b_7e6e-bc081581cf493d71_0be6-f9b2ea9da7e5220a_b121-d4c51dc230306c8b_d93b-fb7d765ba6874372_06ed-c2ffd6a81bfe2613_f91c-eccc0afc91fb9b74_d5ba-78ae8aaf1a80a972_6371-4f4013ceab294a80_3864-7337be5c30b1b5d1_874c-d774a2a9ef601400_0ce5-a137cf3264d8a96d_83d2-c02445dd7a5b6f26_be05-36492265af47de94_a352-32fe2fa7cc43fbc3_b8f3-f2f6723ebab1e6a2_6bea-2cea84be063eb017_3d2f-915fdf90f4bc33cd_6c72-7affadfe549cbeb4_1df8-d8d05917aadc27f7_05a0-09d537bcc73a42fc_52e8-e860a105f7c30a29_64c8-488f96fab858496c_d6e2-0-sequence_of_task_descs": {
+      "q_time": "2023/04/09 13:56:44",
+      "q": "List the tasks you performed.",
+      "gt": "clean all the drinkwares. make a plate of toast. make a salad. put all watch on one sofa. prepare coffee in a clean mug. put all tissue box on any dresser. water the plant. water the plant. prepare coffee in a clean mug. water the plant. put all pillow on any chairs. prepare breakfast. prepare breakfast. put all sportsequipment on any bed. make a salad. prepare coffee in a clean mug. make a sandwich. prepare breakfast. make a plate of toast. put all newspaper on one sofa. clean all the plates. prepare coffee in a clean mug. boil potato. make a sandwich. make a salad. water the plant. make a sandwich. boil potato. clean all the dishwares. prepare coffee in a clean mug. make a salad. cook 1 slice(s) of potato and serve on a plate. put all remote control on one armchair. make a plate of toast. make a salad. clean all the cookwares. water the plant. clean all the pots. prepare coffee in a clean mug. prepare coffee in a clean mug. put all newspaper on one armchair. clean all the pans. water the plant. make a sandwich. put all fork in any cabinet. put all remote control on one sofa. boil potato. clean all the plates. make a salad. put all fork in any sink.",
+      "hyp": "I performed these tasks:\nToggleOn(Faucet)\nToggleOff(Faucet)\nPickup(ButterKnife_2)\nSlice(Bread_1)\nPlace(CounterTop_1)\nPickup(Bread_1_Sliced_2)\nPlace(Toaster)\nToggleOff(Toaster)\nPickup(Bread_1_Sliced_2)\nPlace(CounterTop_1)\nPickup(Plate_2)\nPlace(CounterTop_1)\nPickup(Bread_1_Sliced_2)\nPlace(CounterTop_1)\nPickup(Bread_1_0)\nPlace(CounterTop_1)\nPickup(Knife_0)\nPlace(CounterTop_1)\nPickup(Bread_1_Sliced_6)\nPlace(Toaster)\nToggleOn(Toaster)\nToggleOff(Toaster)\nPickup(Bread_1_Sliced_6)\nPlace(Plate_2)\nNoop\nPickup(Lettuce_3)\nPlace(CounterTop_0)\nOpen(Fridge)\nPickup(Knife_0)\nSlice(Lettuce_3)\nPlace(CounterTop_0)\nClose(Fridge)\nPickup(Potato_2)\nPlace(CounterTop_1)\nPickup(Knife_1)\nSlice(Potato_2)\nPlace(CounterTop_1)\nOpen(Cabinet_5)\nOpen(Cabinet_4)\nPickup(Plate_1)\nPlace(CounterTop_1)\nPickup(SoapBottle_3)\nPlace(Cabinet_5)\nPickup(Plate_1)\nToggleOff(Faucet)\nPlace(Sink_Basin)\nToggleOn(Faucet)\nToggleOff(Faucet)\nPickup(Plate_1)\nPlace(CounterTop_0)\nPickup(Lettuce_3_Sliced_0)\nPlace(CounterTop_0)\nPickup(Lettuce_3_Sliced_1)\nPlace(Plate_1)\nPickup(Lettuce_3_Sliced_2)\nPlace(Plate_1)\nPickup(Potato_2_Sliced_4)\nPlace(Plate_1)\nNoop\nPickup(Watch_0)\nPlace(Sofa)\nPickup(Watch_1)\nPlace"
+    },
+    "6e4fc617d59944fa_915c-2bb159500f5ee79b_77a4-cf32d4a95cdbcd3a_9fa2-4aafdc038df138e8_58f0-9ac845c7d33ba73a_7fa8-133d52a8aaf9db3f_8ed8-612f99763b6978b6_0c1a-f2f6723ebab1e6a2_bfeb-b001404996cd3a29_0181-1bbfe20e48fba275_22dc-0460150bc5699dc0_4640-b87bd55d7820c86e_8d92-fc0fe94a4c8e3a29_9052-f892b2976d0955e0_b0d9-53c031a953194d07_d936-c3aabf431a64e351_e223-b2815444299854b0_2b84-345624f0e74dc947_8525-7172fd55ac8095bd_e687-0196f21923a77e88_288f-c66cfa360ba2ee00_45b2-271e4ccbac4343e1_87d1-f3bd012a65dbb5df_1a9a-e8f7cd03e3683657_4d70-b389be8338cc3292_add9-b385a8c7a7538571_e6cd-f2fab283e8dd367a_cb1f-6f4aca312776de7b_7e6e-bc081581cf493d71_0be6-f9b2ea9da7e5220a_b121-d4c51dc230306c8b_d93b-fb7d765ba6874372_06ed-c2ffd6a81bfe2613_f91c-eccc0afc91fb9b74_d5ba-78ae8aaf1a80a972_6371-4f4013ceab294a80_3864-7337be5c30b1b5d1_874c-d774a2a9ef601400_0ce5-a137cf3264d8a96d_83d2-c02445dd7a5b6f26_be05-36492265af47de94_a352-32fe2fa7cc43fbc3_b8f3-f2f6723ebab1e6a2_6bea-2cea84be063eb017_3d2f-915fdf90f4bc33cd_6c72-7affadfe549cbeb4_1df8-d8d05917aadc27f7_05a0-09d537bcc73a42fc_52e8-e860a105f7c30a29_64c8-488f96fab858496c_d6e2-0-seq_specific_shortened_low_actions": {
+      "q_time": "2023/04/09 13:56:44",
+      "q": "describe what you did when you put all tissue box on any dresser.",
+      "gt": "pick up the tissue box, place the tissue box on the side table, pick up the tissue box, place the tissue box on the dresser, open the drawer, close the drawer, pick up the tissue box, place the tissue box on the dresser, pick up the tissue box, place the tissue box on the dresser",
+      "hyp": "I moved forward multiple times, asked clarifying questions about the tissues' location, and then picked up TissueBox_1 from the dresser.",
+      "ref_ts": [
+        [
+          "2023/03/12 19:56:37",
+          "2023/03/12 20:03:58"
+        ]
+      ]
+    },
+    "6e4fc617d59944fa_915c-2bb159500f5ee79b_77a4-cf32d4a95cdbcd3a_9fa2-4aafdc038df138e8_58f0-9ac845c7d33ba73a_7fa8-133d52a8aaf9db3f_8ed8-612f99763b6978b6_0c1a-f2f6723ebab1e6a2_bfeb-b001404996cd3a29_0181-1bbfe20e48fba275_22dc-0460150bc5699dc0_4640-b87bd55d7820c86e_8d92-fc0fe94a4c8e3a29_9052-f892b2976d0955e0_b0d9-53c031a953194d07_d936-c3aabf431a64e351_e223-b2815444299854b0_2b84-345624f0e74dc947_8525-7172fd55ac8095bd_e687-0196f21923a77e88_288f-c66cfa360ba2ee00_45b2-271e4ccbac4343e1_87d1-f3bd012a65dbb5df_1a9a-e8f7cd03e3683657_4d70-b389be8338cc3292_add9-b385a8c7a7538571_e6cd-f2fab283e8dd367a_cb1f-6f4aca312776de7b_7e6e-bc081581cf493d71_0be6-f9b2ea9da7e5220a_b121-d4c51dc230306c8b_d93b-fb7d765ba6874372_06ed-c2ffd6a81bfe2613_f91c-eccc0afc91fb9b74_d5ba-78ae8aaf1a80a972_6371-4f4013ceab294a80_3864-7337be5c30b1b5d1_874c-d774a2a9ef601400_0ce5-a137cf3264d8a96d_83d2-c02445dd7a5b6f26_be05-36492265af47de94_a352-32fe2fa7cc43fbc3_b8f3-f2f6723ebab1e6a2_6bea-2cea84be063eb017_3d2f-915fdf90f4bc33cd_6c72-7affadfe549cbeb4_1df8-d8d05917aadc27f7_05a0-09d537bcc73a42fc_52e8-e860a105f7c30a29_64c8-488f96fab858496c_d6e2-0-seq_right_after_questions": {
+      "q_time": "2023/04/09 13:56:44",
+      "q": "What task did you do just after clean all the pots?",
+      "gt": "prepare coffee in a clean mug.",
+      "hyp": "Picking up Pot_1",
+      "ref_ts": [
+        [
+          "2023/04/03 11:09:29",
+          "2023/04/03 11:12:03"
+        ],
+        [
+          "2023/04/03 14:25:03",
+          "2023/04/03 14:28:31"
+        ]
+      ]
+    },
+    "6e4fc617d59944fa_915c-2bb159500f5ee79b_77a4-cf32d4a95cdbcd3a_9fa2-4aafdc038df138e8_58f0-9ac845c7d33ba73a_7fa8-133d52a8aaf9db3f_8ed8-612f99763b6978b6_0c1a-f2f6723ebab1e6a2_bfeb-b001404996cd3a29_0181-1bbfe20e48fba275_22dc-0460150bc5699dc0_4640-b87bd55d7820c86e_8d92-fc0fe94a4c8e3a29_9052-f892b2976d0955e0_b0d9-53c031a953194d07_d936-c3aabf431a64e351_e223-b2815444299854b0_2b84-345624f0e74dc947_8525-7172fd55ac8095bd_e687-0196f21923a77e88_288f-c66cfa360ba2ee00_45b2-271e4ccbac4343e1_87d1-f3bd012a65dbb5df_1a9a-e8f7cd03e3683657_4d70-b389be8338cc3292_add9-b385a8c7a7538571_e6cd-f2fab283e8dd367a_cb1f-6f4aca312776de7b_7e6e-bc081581cf493d71_0be6-f9b2ea9da7e5220a_b121-d4c51dc230306c8b_d93b-fb7d765ba6874372_06ed-c2ffd6a81bfe2613_f91c-eccc0afc91fb9b74_d5ba-78ae8aaf1a80a972_6371-4f4013ceab294a80_3864-7337be5c30b1b5d1_874c-d774a2a9ef601400_0ce5-a137cf3264d8a96d_83d2-c02445dd7a5b6f26_be05-36492265af47de94_a352-32fe2fa7cc43fbc3_b8f3-f2f6723ebab1e6a2_6bea-2cea84be063eb017_3d2f-915fdf90f4bc33cd_6c72-7affadfe549cbeb4_1df8-d8d05917aadc27f7_05a0-09d537bcc73a42fc_52e8-e860a105f7c30a29_64c8-488f96fab858496c_d6e2-0-seq_right_before_questions": {
+      "q_time": "2023/04/09 13:56:44",
+      "q": "What task did you do just before put all sportsequipment on any bed?",
+      "gt": "prepare breakfast.",
+      "hyp": "Picking up the baseball bat",
+      "ref_ts": [
+        [
+          "2023/03/16 13:12:08",
+          "2023/03/16 13:19:14"
+        ],
+        [
+          "2023/03/16 19:35:23",
+          "2023/03/16 19:36:58"
+        ]
+      ]
+    },
+    "6e4fc617d59944fa_915c-2bb159500f5ee79b_77a4-cf32d4a95cdbcd3a_9fa2-4aafdc038df138e8_58f0-9ac845c7d33ba73a_7fa8-133d52a8aaf9db3f_8ed8-612f99763b6978b6_0c1a-f2f6723ebab1e6a2_bfeb-b001404996cd3a29_0181-1bbfe20e48fba275_22dc-0460150bc5699dc0_4640-b87bd55d7820c86e_8d92-fc0fe94a4c8e3a29_9052-f892b2976d0955e0_b0d9-53c031a953194d07_d936-c3aabf431a64e351_e223-b2815444299854b0_2b84-345624f0e74dc947_8525-7172fd55ac8095bd_e687-0196f21923a77e88_288f-c66cfa360ba2ee00_45b2-271e4ccbac4343e1_87d1-f3bd012a65dbb5df_1a9a-e8f7cd03e3683657_4d70-b389be8338cc3292_add9-b385a8c7a7538571_e6cd-f2fab283e8dd367a_cb1f-6f4aca312776de7b_7e6e-bc081581cf493d71_0be6-f9b2ea9da7e5220a_b121-d4c51dc230306c8b_d93b-fb7d765ba6874372_06ed-c2ffd6a81bfe2613_f91c-eccc0afc91fb9b74_d5ba-78ae8aaf1a80a972_6371-4f4013ceab294a80_3864-7337be5c30b1b5d1_874c-d774a2a9ef601400_0ce5-a137cf3264d8a96d_83d2-c02445dd7a5b6f26_be05-36492265af47de94_a352-32fe2fa7cc43fbc3_b8f3-f2f6723ebab1e6a2_6bea-2cea84be063eb017_3d2f-915fdf90f4bc33cd_6c72-7affadfe549cbeb4_1df8-d8d05917aadc27f7_05a0-09d537bcc73a42fc_52e8-e860a105f7c30a29_64c8-488f96fab858496c_d6e2-0-seq_simple_object_yes_no": {
+      "q_time": "2023/04/09 13:56:44",
+      "q": "Was there a knife ?",
+      "gt": "yes, when I water the plant. and cook 1 slice(s) of potato and serve on a plate. and make a salad. and clean all the pans. and prepare breakfast. and clean all the plates. and make a plate of toast. and make a sandwich. and prepare coffee in a clean mug. and boil potato.",
+      "hyp": "Yes",
+      "ref_ts": [
+        [
+          "2023/03/11 17:17:00",
+          "2023/03/11 17:21:04"
+        ],
+        [
+          "2023/03/11 18:33:09",
+          "2023/03/11 18:42:00"
+        ],
+        [
+          "2023/03/12 13:50:17",
+          "2023/03/12 14:17:29"
+        ],
+        [
+          "2023/03/13 11:42:31",
+          "2023/03/13 11:49:37"
+        ],
+        [
+          "2023/03/13 17:26:08",
+          "2023/03/13 17:28:09"
+        ],
+        [
+          "2023/03/16 08:39:48",
+          "2023/03/16 08:47:58"
+        ],
+        [
+          "2023/03/16 13:12:08",
+          "2023/03/16 13:19:14"
+        ],
+        [
+          "2023/03/17 09:41:17",
+          "2023/03/17 09:55:20"
+        ],
+        [
+          "2023/03/19 18:56:24",
+          "2023/03/19 19:03:58"
+        ],
+        [
+          "2023/03/20 16:44:05",
+          "2023/03/20 17:00:09"
+        ],
+        [
+          "2023/03/20 18:33:51",
+          "2023/03/20 18:39:03"
+        ],
+        [
+          "2023/03/24 10:21:44",
+          "2023/03/24 10:25:50"
+        ],
+        [
+          "2023/03/24 13:36:53",
+          "2023/03/24 13:42:04"
+        ],
+        [
+          "2023/03/24 19:55:36",
+          "2023/03/24 20:03:39"
+        ],
+        [
+          "2023/03/25 11:30:07",
+          "2023/03/25 11:40:35"
+        ],
+        [
+          "2023/03/26 12:13:32",
+          "2023/03/26 12:17:33"
+        ],
+        [
+          "2023/03/29 11:08:46",
+          "2023/03/29 11:33:23"
+        ],
+        [
+          "2023/03/30 18:28:37",
+          "2023/03/30 18:33:49"
+        ],
+        [
+          "2023/04/01 10:01:55",
+          "2023/04/01 10:06:13"
+        ],
+        [
+          "2023/04/02 18:58:24",
+          "2023/04/02 18:59:14"
+        ],
+        [
+          "2023/04/04 11:50:56",
+          "2023/04/04 11:53:06"
+        ],
+        [
+          "2023/04/05 13:50:05",
+          "2023/04/05 13:53:21"
+        ],
+        [
+          "2023/04/05 13:56:22",
+          "2023/04/05 14:12:11"
+        ],
+        [
+          "2023/04/08 12:09:41",
+          "2023/04/08 12:12:27"
+        ],
+        [
+          "2023/04/08 15:59:11",
+          "2023/04/08 16:08:02"
+        ]
+      ]
+    },
+    "6e4fc617d59944fa_915c-2bb159500f5ee79b_77a4-cf32d4a95cdbcd3a_9fa2-4aafdc038df138e8_58f0-9ac845c7d33ba73a_7fa8-133d52a8aaf9db3f_8ed8-612f99763b6978b6_0c1a-f2f6723ebab1e6a2_bfeb-b001404996cd3a29_0181-1bbfe20e48fba275_22dc-0460150bc5699dc0_4640-b87bd55d7820c86e_8d92-fc0fe94a4c8e3a29_9052-f892b2976d0955e0_b0d9-53c031a953194d07_d936-c3aabf431a64e351_e223-b2815444299854b0_2b84-345624f0e74dc947_8525-7172fd55ac8095bd_e687-0196f21923a77e88_288f-c66cfa360ba2ee00_45b2-271e4ccbac4343e1_87d1-f3bd012a65dbb5df_1a9a-e8f7cd03e3683657_4d70-b389be8338cc3292_add9-b385a8c7a7538571_e6cd-f2fab283e8dd367a_cb1f-6f4aca312776de7b_7e6e-bc081581cf493d71_0be6-f9b2ea9da7e5220a_b121-d4c51dc230306c8b_d93b-fb7d765ba6874372_06ed-c2ffd6a81bfe2613_f91c-eccc0afc91fb9b74_d5ba-78ae8aaf1a80a972_6371-4f4013ceab294a80_3864-7337be5c30b1b5d1_874c-d774a2a9ef601400_0ce5-a137cf3264d8a96d_83d2-c02445dd7a5b6f26_be05-36492265af47de94_a352-32fe2fa7cc43fbc3_b8f3-f2f6723ebab1e6a2_6bea-2cea84be063eb017_3d2f-915fdf90f4bc33cd_6c72-7affadfe549cbeb4_1df8-d8d05917aadc27f7_05a0-09d537bcc73a42fc_52e8-e860a105f7c30a29_64c8-488f96fab858496c_d6e2-0-seq_low_actions_to_episode_task_descs": {
+      "q_time": "2023/04/09 13:56:44",
+      "q": "what task or tasks did you perform when you place the pot on the stoveburner?",
+      "gt": " boil potato.",
+      "hyp": "I placed the pot on the stove burner.",
+      "ref_ts": [
+        [
+          "2023/03/26 12:13:32",
+          "2023/03/26 12:17:33"
+        ],
+        [
+          "2023/04/08 12:02:55",
+          "2023/04/08 12:13:15"
+        ],
+        [
+          "2023/03/24 10:21:44",
+          "2023/03/24 10:25:50"
+        ]
+      ]
+    },
+    "6e4fc617d59944fa_915c-2bb159500f5ee79b_77a4-cf32d4a95cdbcd3a_9fa2-4aafdc038df138e8_58f0-9ac845c7d33ba73a_7fa8-133d52a8aaf9db3f_8ed8-612f99763b6978b6_0c1a-f2f6723ebab1e6a2_bfeb-b001404996cd3a29_0181-1bbfe20e48fba275_22dc-0460150bc5699dc0_4640-b87bd55d7820c86e_8d92-fc0fe94a4c8e3a29_9052-f892b2976d0955e0_b0d9-53c031a953194d07_d936-c3aabf431a64e351_e223-b2815444299854b0_2b84-345624f0e74dc947_8525-7172fd55ac8095bd_e687-0196f21923a77e88_288f-c66cfa360ba2ee00_45b2-271e4ccbac4343e1_87d1-f3bd012a65dbb5df_1a9a-e8f7cd03e3683657_4d70-b389be8338cc3292_add9-b385a8c7a7538571_e6cd-f2fab283e8dd367a_cb1f-6f4aca312776de7b_7e6e-bc081581cf493d71_0be6-f9b2ea9da7e5220a_b121-d4c51dc230306c8b_d93b-fb7d765ba6874372_06ed-c2ffd6a81bfe2613_f91c-eccc0afc91fb9b74_d5ba-78ae8aaf1a80a972_6371-4f4013ceab294a80_3864-7337be5c30b1b5d1_874c-d774a2a9ef601400_0ce5-a137cf3264d8a96d_83d2-c02445dd7a5b6f26_be05-36492265af47de94_a352-32fe2fa7cc43fbc3_b8f3-f2f6723ebab1e6a2_6bea-2cea84be063eb017_3d2f-915fdf90f4bc33cd_6c72-7affadfe549cbeb4_1df8-d8d05917aadc27f7_05a0-09d537bcc73a42fc_52e8-e860a105f7c30a29_64c8-488f96fab858496c_d6e2-0-exact_time_to_episode": {
+      "q_time": "2023/04/09 13:56:44",
+      "q": "what did you do on Mar 23, 2023 at 09:19 AM?",
+      "gt": "prepare coffee in a clean mug.",
+      "hyp": "I picked up a mug and then rinsed it with water.",
+      "ref_ts": [
+        [
+          "2023/03/23 09:19:03",
+          "2023/03/23 09:23:12"
+        ]
+      ]
+    },
+    "6e4fc617d59944fa_915c-2bb159500f5ee79b_77a4-cf32d4a95cdbcd3a_9fa2-4aafdc038df138e8_58f0-9ac845c7d33ba73a_7fa8-133d52a8aaf9db3f_8ed8-612f99763b6978b6_0c1a-f2f6723ebab1e6a2_bfeb-b001404996cd3a29_0181-1bbfe20e48fba275_22dc-0460150bc5699dc0_4640-b87bd55d7820c86e_8d92-fc0fe94a4c8e3a29_9052-f892b2976d0955e0_b0d9-53c031a953194d07_d936-c3aabf431a64e351_e223-b2815444299854b0_2b84-345624f0e74dc947_8525-7172fd55ac8095bd_e687-0196f21923a77e88_288f-c66cfa360ba2ee00_45b2-271e4ccbac4343e1_87d1-f3bd012a65dbb5df_1a9a-e8f7cd03e3683657_4d70-b389be8338cc3292_add9-b385a8c7a7538571_e6cd-f2fab283e8dd367a_cb1f-6f4aca312776de7b_7e6e-bc081581cf493d71_0be6-f9b2ea9da7e5220a_b121-d4c51dc230306c8b_d93b-fb7d765ba6874372_06ed-c2ffd6a81bfe2613_f91c-eccc0afc91fb9b74_d5ba-78ae8aaf1a80a972_6371-4f4013ceab294a80_3864-7337be5c30b1b5d1_874c-d774a2a9ef601400_0ce5-a137cf3264d8a96d_83d2-c02445dd7a5b6f26_be05-36492265af47de94_a352-32fe2fa7cc43fbc3_b8f3-f2f6723ebab1e6a2_6bea-2cea84be063eb017_3d2f-915fdf90f4bc33cd_6c72-7affadfe549cbeb4_1df8-d8d05917aadc27f7_05a0-09d537bcc73a42fc_52e8-e860a105f7c30a29_64c8-488f96fab858496c_d6e2-0-tasks_to_exact_times": {
+      "q_time": "2023/04/09 13:56:44",
+      "q": "When did you clean all the pots?",
+      "gt": "Apr 03, 2023 at 11:09 AM",
+      "hyp": "I haven't cleaned any pots.",
+      "ref_ts": [
+        [
+          "2023/04/03 11:09:29",
+          "2023/04/03 11:12:03"
+        ]
+      ]
+    },
+    "6e4fc617d59944fa_915c-2bb159500f5ee79b_77a4-cf32d4a95cdbcd3a_9fa2-4aafdc038df138e8_58f0-9ac845c7d33ba73a_7fa8-133d52a8aaf9db3f_8ed8-612f99763b6978b6_0c1a-f2f6723ebab1e6a2_bfeb-b001404996cd3a29_0181-1bbfe20e48fba275_22dc-0460150bc5699dc0_4640-b87bd55d7820c86e_8d92-fc0fe94a4c8e3a29_9052-f892b2976d0955e0_b0d9-53c031a953194d07_d936-c3aabf431a64e351_e223-b2815444299854b0_2b84-345624f0e74dc947_8525-7172fd55ac8095bd_e687-0196f21923a77e88_288f-c66cfa360ba2ee00_45b2-271e4ccbac4343e1_87d1-f3bd012a65dbb5df_1a9a-e8f7cd03e3683657_4d70-b389be8338cc3292_add9-b385a8c7a7538571_e6cd-f2fab283e8dd367a_cb1f-6f4aca312776de7b_7e6e-bc081581cf493d71_0be6-f9b2ea9da7e5220a_b121-d4c51dc230306c8b_d93b-fb7d765ba6874372_06ed-c2ffd6a81bfe2613_f91c-eccc0afc91fb9b74_d5ba-78ae8aaf1a80a972_6371-4f4013ceab294a80_3864-7337be5c30b1b5d1_874c-d774a2a9ef601400_0ce5-a137cf3264d8a96d_83d2-c02445dd7a5b6f26_be05-36492265af47de94_a352-32fe2fa7cc43fbc3_b8f3-f2f6723ebab1e6a2_6bea-2cea84be063eb017_3d2f-915fdf90f4bc33cd_6c72-7affadfe549cbeb4_1df8-d8d05917aadc27f7_05a0-09d537bcc73a42fc_52e8-e860a105f7c30a29_64c8-488f96fab858496c_d6e2-0-tasks_to_days_ago": {
+      "q_time": "2023/04/09 13:56:44",
+      "q": "Today is Apr 09, 2023 at 01:56 PM. How many days ago did you make a sandwich?",
+      "gt": "21 days ago and 16 days ago and 15 days ago and 4 days ago",
+      "hyp": "24",
+      "ref_ts": [
+        [
+          "2023/03/19 18:56:24",
+          "2023/03/19 19:03:58"
+        ],
+        [
+          "2023/03/25 11:30:07",
+          "2023/03/25 11:40:35"
+        ],
+        [
+          "2023/04/05 13:56:22",
+          "2023/04/05 14:12:11"
+        ],
+        [
+          "2023/03/24 13:36:53",
+          "2023/03/24 13:42:04"
+        ]
+      ]
+    },
+    "6e4fc617d59944fa_915c-2bb159500f5ee79b_77a4-cf32d4a95cdbcd3a_9fa2-4aafdc038df138e8_58f0-9ac845c7d33ba73a_7fa8-133d52a8aaf9db3f_8ed8-612f99763b6978b6_0c1a-f2f6723ebab1e6a2_bfeb-b001404996cd3a29_0181-1bbfe20e48fba275_22dc-0460150bc5699dc0_4640-b87bd55d7820c86e_8d92-fc0fe94a4c8e3a29_9052-f892b2976d0955e0_b0d9-53c031a953194d07_d936-c3aabf431a64e351_e223-b2815444299854b0_2b84-345624f0e74dc947_8525-7172fd55ac8095bd_e687-0196f21923a77e88_288f-c66cfa360ba2ee00_45b2-271e4ccbac4343e1_87d1-f3bd012a65dbb5df_1a9a-e8f7cd03e3683657_4d70-b389be8338cc3292_add9-b385a8c7a7538571_e6cd-f2fab283e8dd367a_cb1f-6f4aca312776de7b_7e6e-bc081581cf493d71_0be6-f9b2ea9da7e5220a_b121-d4c51dc230306c8b_d93b-fb7d765ba6874372_06ed-c2ffd6a81bfe2613_f91c-eccc0afc91fb9b74_d5ba-78ae8aaf1a80a972_6371-4f4013ceab294a80_3864-7337be5c30b1b5d1_874c-d774a2a9ef601400_0ce5-a137cf3264d8a96d_83d2-c02445dd7a5b6f26_be05-36492265af47de94_a352-32fe2fa7cc43fbc3_b8f3-f2f6723ebab1e6a2_6bea-2cea84be063eb017_3d2f-915fdf90f4bc33cd_6c72-7affadfe549cbeb4_1df8-d8d05917aadc27f7_05a0-09d537bcc73a42fc_52e8-e860a105f7c30a29_64c8-488f96fab858496c_d6e2-0-days_ago_to_episode": {
+      "q_time": "2023/04/09 13:56:44",
+      "q": "Today is Apr 09, 2023 at 01:56 PM. What did you do 15 days ago?",
+      "gt": "water the plant and make a sandwich.",
+      "hyp": "Fifteen days ago, which was March 25, 2023, I made a sandwich.",
+      "ref_ts": [
+        [
+          "2023/03/25 10:16:01",
+          "2023/03/25 10:19:35"
+        ],
+        [
+          "2023/03/25 11:30:07",
+          "2023/03/25 11:40:35"
+        ]
+      ]
+    },
+    "d9a7f5476eac3df6_7a11-bfb3e4eaf7ba458f_81db-92a60929e3b1b576_97aa-af3ea35af62cb764_aea5-cb0e41e1b364ad27_9a72-05a5b8e82c4d198e_a899-8f7791c488b51c98_fa79-13c9487a42718fd2_86a2-ae0ef037bccf67c9_c77e-8e3082fd7bbed04c_3f32-2d37ef841a64b660_8a6a-133d52a8aaf9db3f_8ed8-1023a6f334db1f63_a47b-f211958a124a5ea7_cbf0-4e893adaff5699af_ab4f-d4c51dc230306c8b_d93b-906e85fef4d34675_4f7b-03379f213dfbda39_79a2-a690a35743c855aa_ef68-474a8460bc35eb12_20d0-724c11f87d95f819_7d28-4e8496b9f642bba0_36f1-6ccc8b815fbc093a_3e3a-72b699523a1191ff_6dc8-b389be8338cc3292_add9-95cb6d56c9a3d66a_bf80-8455e3db97f9a4dc_707d-977b52faf01e6c05_d71f-b53c115c99ca34dd_5e2b-b20314fc5fe107f3_80ee-f25eed33d1c37931_ed58-0e6278225ef19b63_c9c2-b87bd55d7820c86e_e74c-1bbfe20e48fba275_22dc-1b382ab21a3bffcd_561a-20df70c5052d0ef2_2152-22fa2e73c63bc50f_c1a7-ebd80a433c115116_b3d7-d774a2a9ef601400_0ce5-26460009b5b1f985_5847-04ac7b9babaad610_384a-60adcb4590587fb8_3e77-94a921b29def9f26_9157-5ab41ea72487ce0f_e5be-a0ccd363ffb0ee94_c237-e8f7cd03e3683657_4d70-bd7327d5d2853453_fad6-fba42374cb666e28_86e5-7cac16735d83af9f_0f84-25ef88cce38adfbc_d042-0-sequence_of_task_descs": {
+      "q_time": "2023/08/21 18:03:38",
+      "q": "List the tasks you performed.",
+      "gt": "make a sandwich. prepare coffee in a clean mug. put all newspaper on any armchair. put all pillow on any armchair. cook 3 slice(s) of potato and serve on a plate. serve 1 slice(s) of tomato on a plate. make a sandwich. serve 1 slice(s) of tomato on a plate. make a sandwich. make a plate of toast. make a plate of toast. put all tissue box on any dresser. prepare breakfast. clean all the bowls. put all book on any bed. make a salad. prepare coffee in a clean mug. prepare coffee in a clean mug. make a sandwich. prepare coffee in a clean mug. make a salad. cook 2 slice(s) of potato and serve in a bowl. cook 5 slice(s) of potato and serve on a plate. prepare breakfast. make a salad. put all pencil in any safe. make a plate of toast. cook 2 slice(s) of potato and serve in a bowl. make a sandwich. make a plate of toast. prepare breakfast. water the plant. prepare breakfast. water the plant. put all tissue box on any sidetable. water the plant. prepare coffee in a clean mug. water the plant. clean all the pots. make a sandwich. prepare coffee in a clean mug. prepare breakfast. put all remote control on any sofa. boil potato. make a plate of toast. make a sandwich. water the plant. make a sandwich. prepare breakfast. put all credit card on any furniture.",
+      "hyp": "I performed these tasks:\nOpen(Cabinet_5), Pickup(Bread_1), Place(CounterTop_1), ToggleOff(Faucet), Pickup(Knife_2), Slice(Bread_1), Place(CounterTop_1), Pickup(Lettuce_1), Place(CounterTop_1), Pickup(Bread_1_Sliced_6), Place(Toaster), ToggleOn(Toaster), Pickup(Bread_1_Sliced_6), Place(CounterTop_1), Pickup(Bread_1_Sliced_5), Place(Toaster), Pickup(Bread_1_Sliced_5), Place(CounterTop_1), Open(Fridge), Pickup(Tomato_0), Place(CounterTop_1), Pickup(Knife_2), Slice(Tomato_0), Place(CounterTop_1), Pickup(Plate_1), Place(CounterTop_1), Pickup(Bread_1_Sliced_6), Place(Plate_1), Pickup(Bread_1_Sliced_5), Place(Plate_1), Pickup(Tomato_0_Sliced_6), Place(Plate_1), Noop, Pickup(Vase_0), Place(CounterTop_0), ToggleOn(Faucet), ToggleOff(Faucet), Pickup(Mug), Pour(Sink_Basin), Place(CoffeeMachine), Noop, Pickup(Newspaper_0), Place(ArmChair), Pickup(Newspaper_2), Place(ArmChair), Pickup(Newspaper_1), Place(ArmChair), PanLeft(), Pickup(Pillow_2), Place(ArmChair), Pickup(Box_0), Place(Dresser), Pickup(Pillow_0), Place(ArmChair), Open(Cabinet_3), Pickup(Pillow_1), Place(ArmChair), Noop, Pickup(Potato_1), Place(CounterTop_0), Pickup(ButterKnife_4), Slice(Potato_1), Place(Chair_0), Pickup(Potato_1_Sliced_2), ToggleOff(Microwave), Open(Microwave), Place(Microwave), Pickup(Fork_2), Place(CounterTop_1), Pickup(Spoon_1), Place(CounterTop_1), Pickup(Potato_1_Sliced_1), Place(Microwave), Pickup(Potato_1_Sliced_4), Place(Microwave), Close(Microwave), ToggleOn(Microwave), ToggleOff"
+    },
+    "d9a7f5476eac3df6_7a11-bfb3e4eaf7ba458f_81db-92a60929e3b1b576_97aa-af3ea35af62cb764_aea5-cb0e41e1b364ad27_9a72-05a5b8e82c4d198e_a899-8f7791c488b51c98_fa79-13c9487a42718fd2_86a2-ae0ef037bccf67c9_c77e-8e3082fd7bbed04c_3f32-2d37ef841a64b660_8a6a-133d52a8aaf9db3f_8ed8-1023a6f334db1f63_a47b-f211958a124a5ea7_cbf0-4e893adaff5699af_ab4f-d4c51dc230306c8b_d93b-906e85fef4d34675_4f7b-03379f213dfbda39_79a2-a690a35743c855aa_ef68-474a8460bc35eb12_20d0-724c11f87d95f819_7d28-4e8496b9f642bba0_36f1-6ccc8b815fbc093a_3e3a-72b699523a1191ff_6dc8-b389be8338cc3292_add9-95cb6d56c9a3d66a_bf80-8455e3db97f9a4dc_707d-977b52faf01e6c05_d71f-b53c115c99ca34dd_5e2b-b20314fc5fe107f3_80ee-f25eed33d1c37931_ed58-0e6278225ef19b63_c9c2-b87bd55d7820c86e_e74c-1bbfe20e48fba275_22dc-1b382ab21a3bffcd_561a-20df70c5052d0ef2_2152-22fa2e73c63bc50f_c1a7-ebd80a433c115116_b3d7-d774a2a9ef601400_0ce5-26460009b5b1f985_5847-04ac7b9babaad610_384a-60adcb4590587fb8_3e77-94a921b29def9f26_9157-5ab41ea72487ce0f_e5be-a0ccd363ffb0ee94_c237-e8f7cd03e3683657_4d70-bd7327d5d2853453_fad6-fba42374cb666e28_86e5-7cac16735d83af9f_0f84-25ef88cce38adfbc_d042-0-seq_specific_shortened_low_actions": {
+      "q_time": "2023/08/21 18:03:38",
+      "q": "describe what you did when you cook 5 slice(s) of potato and serve on a plate.",
+      "gt": "pick up the potato, place the potato on the countertop, pick up the knife, slice potato, place the knife on the countertop, pick up the potato, place the potato on the countertop, pick up the pan, place the pan on the countertop, toggle off the stove knob, pick up the pan, place the pan on the countertop, toggle off the microwave, open the microwave, pick up the potato, place the potato in the microwave, pick up the potato, place the potato in the microwave, pick up the potato, place the potato in the microwave, pick up the potato, place the potato in the microwave, pick up the potato, place the potato in the microwave, close the microwave, toggle on the microwave, toggle off the microwave, open the microwave, open the fridge, pick up the plate, place the plate on the countertop, pick up the pepper shaker, place the pepper shaker on the countertop, pick up the potato, place the potato on the plate, pick up the potato, place the potato on the plate, pick up the potato, place the potato on the plate, pick up the potato, place the potato on the plate, pick up the potato, place the potato on the plate",
+      "hyp": "I moved towards the potato, looked down, and picked up a potato.",
+      "ref_ts": [
+        [
+          "2023/08/06 14:04:47",
+          "2023/08/06 14:13:37"
+        ]
+      ]
+    },
+    "d9a7f5476eac3df6_7a11-bfb3e4eaf7ba458f_81db-92a60929e3b1b576_97aa-af3ea35af62cb764_aea5-cb0e41e1b364ad27_9a72-05a5b8e82c4d198e_a899-8f7791c488b51c98_fa79-13c9487a42718fd2_86a2-ae0ef037bccf67c9_c77e-8e3082fd7bbed04c_3f32-2d37ef841a64b660_8a6a-133d52a8aaf9db3f_8ed8-1023a6f334db1f63_a47b-f211958a124a5ea7_cbf0-4e893adaff5699af_ab4f-d4c51dc230306c8b_d93b-906e85fef4d34675_4f7b-03379f213dfbda39_79a2-a690a35743c855aa_ef68-474a8460bc35eb12_20d0-724c11f87d95f819_7d28-4e8496b9f642bba0_36f1-6ccc8b815fbc093a_3e3a-72b699523a1191ff_6dc8-b389be8338cc3292_add9-95cb6d56c9a3d66a_bf80-8455e3db97f9a4dc_707d-977b52faf01e6c05_d71f-b53c115c99ca34dd_5e2b-b20314fc5fe107f3_80ee-f25eed33d1c37931_ed58-0e6278225ef19b63_c9c2-b87bd55d7820c86e_e74c-1bbfe20e48fba275_22dc-1b382ab21a3bffcd_561a-20df70c5052d0ef2_2152-22fa2e73c63bc50f_c1a7-ebd80a433c115116_b3d7-d774a2a9ef601400_0ce5-26460009b5b1f985_5847-04ac7b9babaad610_384a-60adcb4590587fb8_3e77-94a921b29def9f26_9157-5ab41ea72487ce0f_e5be-a0ccd363ffb0ee94_c237-e8f7cd03e3683657_4d70-bd7327d5d2853453_fad6-fba42374cb666e28_86e5-7cac16735d83af9f_0f84-25ef88cce38adfbc_d042-0-seq_right_after_questions": {
+      "q_time": "2023/08/21 18:03:38",
+      "q": "What task did you do just after put all tissue box on any dresser?",
+      "gt": "prepare breakfast.",
+      "hyp": "Put the tissue box on the side table.",
+      "ref_ts": [
+        [
+          "2023/08/01 18:56:52",
+          "2023/08/01 19:04:13"
+        ],
+        [
+          "2023/08/02 08:41:53",
+          "2023/08/02 08:47:41"
+        ]
+      ]
+    },
+    "d9a7f5476eac3df6_7a11-bfb3e4eaf7ba458f_81db-92a60929e3b1b576_97aa-af3ea35af62cb764_aea5-cb0e41e1b364ad27_9a72-05a5b8e82c4d198e_a899-8f7791c488b51c98_fa79-13c9487a42718fd2_86a2-ae0ef037bccf67c9_c77e-8e3082fd7bbed04c_3f32-2d37ef841a64b660_8a6a-133d52a8aaf9db3f_8ed8-1023a6f334db1f63_a47b-f211958a124a5ea7_cbf0-4e893adaff5699af_ab4f-d4c51dc230306c8b_d93b-906e85fef4d34675_4f7b-03379f213dfbda39_79a2-a690a35743c855aa_ef68-474a8460bc35eb12_20d0-724c11f87d95f819_7d28-4e8496b9f642bba0_36f1-6ccc8b815fbc093a_3e3a-72b699523a1191ff_6dc8-b389be8338cc3292_add9-95cb6d56c9a3d66a_bf80-8455e3db97f9a4dc_707d-977b52faf01e6c05_d71f-b53c115c99ca34dd_5e2b-b20314fc5fe107f3_80ee-f25eed33d1c37931_ed58-0e6278225ef19b63_c9c2-b87bd55d7820c86e_e74c-1bbfe20e48fba275_22dc-1b382ab21a3bffcd_561a-20df70c5052d0ef2_2152-22fa2e73c63bc50f_c1a7-ebd80a433c115116_b3d7-d774a2a9ef601400_0ce5-26460009b5b1f985_5847-04ac7b9babaad610_384a-60adcb4590587fb8_3e77-94a921b29def9f26_9157-5ab41ea72487ce0f_e5be-a0ccd363ffb0ee94_c237-e8f7cd03e3683657_4d70-bd7327d5d2853453_fad6-fba42374cb666e28_86e5-7cac16735d83af9f_0f84-25ef88cce38adfbc_d042-0-seq_right_before_questions": {
+      "q_time": "2023/08/21 18:03:38",
+      "q": "What task did you do just before put all newspaper on any armchair?",
+      "gt": "prepare coffee in a clean mug.",
+      "hyp": "Pan Right",
+      "ref_ts": [
+        [
+          "2023/07/26 14:44:36",
+          "2023/07/26 14:46:49"
+        ],
+        [
+          "2023/07/27 10:17:52",
+          "2023/07/27 10:22:04"
+        ]
+      ]
+    },
+    "d9a7f5476eac3df6_7a11-bfb3e4eaf7ba458f_81db-92a60929e3b1b576_97aa-af3ea35af62cb764_aea5-cb0e41e1b364ad27_9a72-05a5b8e82c4d198e_a899-8f7791c488b51c98_fa79-13c9487a42718fd2_86a2-ae0ef037bccf67c9_c77e-8e3082fd7bbed04c_3f32-2d37ef841a64b660_8a6a-133d52a8aaf9db3f_8ed8-1023a6f334db1f63_a47b-f211958a124a5ea7_cbf0-4e893adaff5699af_ab4f-d4c51dc230306c8b_d93b-906e85fef4d34675_4f7b-03379f213dfbda39_79a2-a690a35743c855aa_ef68-474a8460bc35eb12_20d0-724c11f87d95f819_7d28-4e8496b9f642bba0_36f1-6ccc8b815fbc093a_3e3a-72b699523a1191ff_6dc8-b389be8338cc3292_add9-95cb6d56c9a3d66a_bf80-8455e3db97f9a4dc_707d-977b52faf01e6c05_d71f-b53c115c99ca34dd_5e2b-b20314fc5fe107f3_80ee-f25eed33d1c37931_ed58-0e6278225ef19b63_c9c2-b87bd55d7820c86e_e74c-1bbfe20e48fba275_22dc-1b382ab21a3bffcd_561a-20df70c5052d0ef2_2152-22fa2e73c63bc50f_c1a7-ebd80a433c115116_b3d7-d774a2a9ef601400_0ce5-26460009b5b1f985_5847-04ac7b9babaad610_384a-60adcb4590587fb8_3e77-94a921b29def9f26_9157-5ab41ea72487ce0f_e5be-a0ccd363ffb0ee94_c237-e8f7cd03e3683657_4d70-bd7327d5d2853453_fad6-fba42374cb666e28_86e5-7cac16735d83af9f_0f84-25ef88cce38adfbc_d042-0-seq_simple_object_yes_no": {
+      "q_time": "2023/08/21 18:03:38",
+      "q": "Was there a book ?",
+      "gt": "yes, when I put all credit card on any furniture. and put all pencil in any safe. and put all book on any bed.",
+      "hyp": "Yes, there was a book on the desk in the bedroom.",
+      "ref_ts": [
+        [
+          "2023/08/07 08:26:12",
+          "2023/08/07 08:30:17"
+        ],
+        [
+          "2023/08/03 12:36:44",
+          "2023/08/03 12:37:56"
+        ],
+        [
+          "2023/08/20 12:57:33",
+          "2023/08/20 13:01:30"
+        ]
+      ]
+    },
+    "d9a7f5476eac3df6_7a11-bfb3e4eaf7ba458f_81db-92a60929e3b1b576_97aa-af3ea35af62cb764_aea5-cb0e41e1b364ad27_9a72-05a5b8e82c4d198e_a899-8f7791c488b51c98_fa79-13c9487a42718fd2_86a2-ae0ef037bccf67c9_c77e-8e3082fd7bbed04c_3f32-2d37ef841a64b660_8a6a-133d52a8aaf9db3f_8ed8-1023a6f334db1f63_a47b-f211958a124a5ea7_cbf0-4e893adaff5699af_ab4f-d4c51dc230306c8b_d93b-906e85fef4d34675_4f7b-03379f213dfbda39_79a2-a690a35743c855aa_ef68-474a8460bc35eb12_20d0-724c11f87d95f819_7d28-4e8496b9f642bba0_36f1-6ccc8b815fbc093a_3e3a-72b699523a1191ff_6dc8-b389be8338cc3292_add9-95cb6d56c9a3d66a_bf80-8455e3db97f9a4dc_707d-977b52faf01e6c05_d71f-b53c115c99ca34dd_5e2b-b20314fc5fe107f3_80ee-f25eed33d1c37931_ed58-0e6278225ef19b63_c9c2-b87bd55d7820c86e_e74c-1bbfe20e48fba275_22dc-1b382ab21a3bffcd_561a-20df70c5052d0ef2_2152-22fa2e73c63bc50f_c1a7-ebd80a433c115116_b3d7-d774a2a9ef601400_0ce5-26460009b5b1f985_5847-04ac7b9babaad610_384a-60adcb4590587fb8_3e77-94a921b29def9f26_9157-5ab41ea72487ce0f_e5be-a0ccd363ffb0ee94_c237-e8f7cd03e3683657_4d70-bd7327d5d2853453_fad6-fba42374cb666e28_86e5-7cac16735d83af9f_0f84-25ef88cce38adfbc_d042-0-seq_low_actions_to_episode_task_descs": {
+      "q_time": "2023/08/21 18:03:38",
+      "q": "what task or tasks did you perform when you pick up the pencil?",
+      "gt": " put all pencil in any safe.",
+      "hyp": "Put pencils in safe.",
+      "ref_ts": [
+        [
+          "2023/08/07 08:26:12",
+          "2023/08/07 08:30:17"
+        ]
+      ]
+    },
+    "d9a7f5476eac3df6_7a11-bfb3e4eaf7ba458f_81db-92a60929e3b1b576_97aa-af3ea35af62cb764_aea5-cb0e41e1b364ad27_9a72-05a5b8e82c4d198e_a899-8f7791c488b51c98_fa79-13c9487a42718fd2_86a2-ae0ef037bccf67c9_c77e-8e3082fd7bbed04c_3f32-2d37ef841a64b660_8a6a-133d52a8aaf9db3f_8ed8-1023a6f334db1f63_a47b-f211958a124a5ea7_cbf0-4e893adaff5699af_ab4f-d4c51dc230306c8b_d93b-906e85fef4d34675_4f7b-03379f213dfbda39_79a2-a690a35743c855aa_ef68-474a8460bc35eb12_20d0-724c11f87d95f819_7d28-4e8496b9f642bba0_36f1-6ccc8b815fbc093a_3e3a-72b699523a1191ff_6dc8-b389be8338cc3292_add9-95cb6d56c9a3d66a_bf80-8455e3db97f9a4dc_707d-977b52faf01e6c05_d71f-b53c115c99ca34dd_5e2b-b20314fc5fe107f3_80ee-f25eed33d1c37931_ed58-0e6278225ef19b63_c9c2-b87bd55d7820c86e_e74c-1bbfe20e48fba275_22dc-1b382ab21a3bffcd_561a-20df70c5052d0ef2_2152-22fa2e73c63bc50f_c1a7-ebd80a433c115116_b3d7-d774a2a9ef601400_0ce5-26460009b5b1f985_5847-04ac7b9babaad610_384a-60adcb4590587fb8_3e77-94a921b29def9f26_9157-5ab41ea72487ce0f_e5be-a0ccd363ffb0ee94_c237-e8f7cd03e3683657_4d70-bd7327d5d2853453_fad6-fba42374cb666e28_86e5-7cac16735d83af9f_0f84-25ef88cce38adfbc_d042-0-exact_time_to_episode": {
+      "q_time": "2023/08/21 18:03:38",
+      "q": "what did you do on Jul 26, 2023 at 02:44 PM?",
+      "gt": "prepare coffee in a clean mug.",
+      "hyp": "I was requested to pick up a vase and prepare coffee in a clean mug.",
+      "ref_ts": [
+        [
+          "2023/07/26 14:44:36",
+          "2023/07/26 14:46:49"
+        ]
+      ]
+    },
+    "d9a7f5476eac3df6_7a11-bfb3e4eaf7ba458f_81db-92a60929e3b1b576_97aa-af3ea35af62cb764_aea5-cb0e41e1b364ad27_9a72-05a5b8e82c4d198e_a899-8f7791c488b51c98_fa79-13c9487a42718fd2_86a2-ae0ef037bccf67c9_c77e-8e3082fd7bbed04c_3f32-2d37ef841a64b660_8a6a-133d52a8aaf9db3f_8ed8-1023a6f334db1f63_a47b-f211958a124a5ea7_cbf0-4e893adaff5699af_ab4f-d4c51dc230306c8b_d93b-906e85fef4d34675_4f7b-03379f213dfbda39_79a2-a690a35743c855aa_ef68-474a8460bc35eb12_20d0-724c11f87d95f819_7d28-4e8496b9f642bba0_36f1-6ccc8b815fbc093a_3e3a-72b699523a1191ff_6dc8-b389be8338cc3292_add9-95cb6d56c9a3d66a_bf80-8455e3db97f9a4dc_707d-977b52faf01e6c05_d71f-b53c115c99ca34dd_5e2b-b20314fc5fe107f3_80ee-f25eed33d1c37931_ed58-0e6278225ef19b63_c9c2-b87bd55d7820c86e_e74c-1bbfe20e48fba275_22dc-1b382ab21a3bffcd_561a-20df70c5052d0ef2_2152-22fa2e73c63bc50f_c1a7-ebd80a433c115116_b3d7-d774a2a9ef601400_0ce5-26460009b5b1f985_5847-04ac7b9babaad610_384a-60adcb4590587fb8_3e77-94a921b29def9f26_9157-5ab41ea72487ce0f_e5be-a0ccd363ffb0ee94_c237-e8f7cd03e3683657_4d70-bd7327d5d2853453_fad6-fba42374cb666e28_86e5-7cac16735d83af9f_0f84-25ef88cce38adfbc_d042-0-tasks_to_exact_times": {
+      "q_time": "2023/08/21 18:03:38",
+      "q": "When did you make a salad?",
+      "gt": "Aug 03, 2023 at 02:46 PM and Aug 05, 2023 at 06:58 PM and Aug 06, 2023 at 06:26 PM",
+      "hyp": "August 5, 2023 at 7:01:43 PM",
+      "ref_ts": [
+        [
+          "2023/08/06 18:26:50",
+          "2023/08/06 18:34:52"
+        ],
+        [
+          "2023/08/05 18:58:53",
+          "2023/08/05 19:05:44"
+        ],
+        [
+          "2023/08/03 14:46:50",
+          "2023/08/03 15:11:27"
+        ]
+      ]
+    },
+    "d9a7f5476eac3df6_7a11-bfb3e4eaf7ba458f_81db-92a60929e3b1b576_97aa-af3ea35af62cb764_aea5-cb0e41e1b364ad27_9a72-05a5b8e82c4d198e_a899-8f7791c488b51c98_fa79-13c9487a42718fd2_86a2-ae0ef037bccf67c9_c77e-8e3082fd7bbed04c_3f32-2d37ef841a64b660_8a6a-133d52a8aaf9db3f_8ed8-1023a6f334db1f63_a47b-f211958a124a5ea7_cbf0-4e893adaff5699af_ab4f-d4c51dc230306c8b_d93b-906e85fef4d34675_4f7b-03379f213dfbda39_79a2-a690a35743c855aa_ef68-474a8460bc35eb12_20d0-724c11f87d95f819_7d28-4e8496b9f642bba0_36f1-6ccc8b815fbc093a_3e3a-72b699523a1191ff_6dc8-b389be8338cc3292_add9-95cb6d56c9a3d66a_bf80-8455e3db97f9a4dc_707d-977b52faf01e6c05_d71f-b53c115c99ca34dd_5e2b-b20314fc5fe107f3_80ee-f25eed33d1c37931_ed58-0e6278225ef19b63_c9c2-b87bd55d7820c86e_e74c-1bbfe20e48fba275_22dc-1b382ab21a3bffcd_561a-20df70c5052d0ef2_2152-22fa2e73c63bc50f_c1a7-ebd80a433c115116_b3d7-d774a2a9ef601400_0ce5-26460009b5b1f985_5847-04ac7b9babaad610_384a-60adcb4590587fb8_3e77-94a921b29def9f26_9157-5ab41ea72487ce0f_e5be-a0ccd363ffb0ee94_c237-e8f7cd03e3683657_4d70-bd7327d5d2853453_fad6-fba42374cb666e28_86e5-7cac16735d83af9f_0f84-25ef88cce38adfbc_d042-0-tasks_to_days_ago": {
+      "q_time": "2023/08/21 18:03:38",
+      "q": "Today is Aug 21, 2023 at 06:03 PM. How many days ago did you put all book on any bed?",
+      "gt": "18 days ago",
+      "hyp": "18",
+      "ref_ts": [
+        [
+          "2023/08/03 12:36:44",
+          "2023/08/03 12:37:56"
+        ]
+      ]
+    },
+    "d9a7f5476eac3df6_7a11-bfb3e4eaf7ba458f_81db-92a60929e3b1b576_97aa-af3ea35af62cb764_aea5-cb0e41e1b364ad27_9a72-05a5b8e82c4d198e_a899-8f7791c488b51c98_fa79-13c9487a42718fd2_86a2-ae0ef037bccf67c9_c77e-8e3082fd7bbed04c_3f32-2d37ef841a64b660_8a6a-133d52a8aaf9db3f_8ed8-1023a6f334db1f63_a47b-f211958a124a5ea7_cbf0-4e893adaff5699af_ab4f-d4c51dc230306c8b_d93b-906e85fef4d34675_4f7b-03379f213dfbda39_79a2-a690a35743c855aa_ef68-474a8460bc35eb12_20d0-724c11f87d95f819_7d28-4e8496b9f642bba0_36f1-6ccc8b815fbc093a_3e3a-72b699523a1191ff_6dc8-b389be8338cc3292_add9-95cb6d56c9a3d66a_bf80-8455e3db97f9a4dc_707d-977b52faf01e6c05_d71f-b53c115c99ca34dd_5e2b-b20314fc5fe107f3_80ee-f25eed33d1c37931_ed58-0e6278225ef19b63_c9c2-b87bd55d7820c86e_e74c-1bbfe20e48fba275_22dc-1b382ab21a3bffcd_561a-20df70c5052d0ef2_2152-22fa2e73c63bc50f_c1a7-ebd80a433c115116_b3d7-d774a2a9ef601400_0ce5-26460009b5b1f985_5847-04ac7b9babaad610_384a-60adcb4590587fb8_3e77-94a921b29def9f26_9157-5ab41ea72487ce0f_e5be-a0ccd363ffb0ee94_c237-e8f7cd03e3683657_4d70-bd7327d5d2853453_fad6-fba42374cb666e28_86e5-7cac16735d83af9f_0f84-25ef88cce38adfbc_d042-0-days_ago_to_episode": {
+      "q_time": "2023/08/21 18:03:38",
+      "q": "Today is Aug 21, 2023 at 06:03 PM. What did you do 13 days ago?",
+      "gt": "cook 2 slice(s) of potato and serve in a bowl and make a sandwich.",
+      "hyp": "On August 8, 2023, I placed a potato in the microwave, sliced a potato into a bowl, made two slices of toast, and sliced lettuce onto a plate.",
+      "ref_ts": [
+        [
+          "2023/08/08 14:40:08",
+          "2023/08/08 14:47:50"
+        ],
+        [
+          "2023/08/08 14:49:45",
+          "2023/08/08 14:54:43"
+        ]
+      ]
+    },
+    "a1fc527709ebcb56_2b5d-18f6da623ba658a2_81b3-bbc10dbfaeac4a70_eaa9-e0920a891a029502_6312-25c86e7f0e9021ad_4901-8463e3c141964336_c9cc-cf32d4a95cdbcd3a_9fa2-0e6278225ef19b63_c9c2-4f4013ceab294a80_1bb3-540ef484f67d9e3a_1664-b8729e0c4c857a8e_24b5-32e631d248583662_b131-e4909f617bc99db4_4ab8-9d1c053084e66e7b_dc9f-4e8496b9f642bba0_378e-1023a6f334db1f63_a47b-2f8d482d22e56fdd_3e5c-6e26385c641764c7_fe5a-3cc94d435588751b_fa04-23acf721b22a6456_1716-af3ea35af62cb764_aea5-2e0219649e0f3030_75e3-5c12b219bbb5bc07_6008-724c11f87d95f819_a970-03379f213dfbda39_79a2-88f8ad0d2d356270_bb95-f2fab283e8dd367a_6c4c-977b52faf01e6c05_ba05-133d52a8aaf9db3f_8ed8-5026400c43e20c2d_d3fc-4e8496b9f642bba0_36f1-0ae40b26ad1ead81_6240-6ccc8b815fbc093a_f35e-c70d9a05ca542364_77d5-36492265af47de94_a352-aa310077d368fbbc_0a82-1fa4f0593088b6f2_89ee-f2f6723ebab1e6a2_6bea-58b03cb4cc6cbe0d_dd29-a690a35743c855aa_ef68-7fee2af885b45310_e7f5-a0ccd363ffb0ee94_c237-a7663c7eb724b08d_08e7-38d01f55a8e1ff9b_ca2f-133d52a8aaf9db3f_1647-bbc10dbfaeac4a70_18d0-41b067f2ce6f3fef_d081-864a2333f20b0957_be88-3041e39d6d26d967_18c4-b001404996cd3a29_0181-0-sequence_of_task_descs": {
+      "q_time": "2024/06/04 14:23:11",
+      "q": "List the tasks you performed.",
+      "gt": "water the plant. cook 1 slice(s) of potato and serve in a bowl. prepare breakfast. make a sandwich. prepare coffee in a clean mug. put all credit card on any bed. make a salad. water the plant. clean all the cookwares. prepare coffee in a clean mug. boil potato. prepare breakfast. clean all the cups. water the plant. cook 2 slice(s) of potato and serve in a bowl. prepare breakfast. serve 1 slice(s) of lettuce on a plate. clean all the mugs. make a salad. water the plant. put all pillow on any armchair. serve 3 slice(s) of tomato on a plate. prepare breakfast. make a salad. prepare coffee in a clean mug. serve 2 slice(s) of tomato on a plate. make a sandwich. cook 2 slice(s) of potato and serve in a bowl. put all tissue box on any dresser. cook 2 slice(s) of potato and serve in a bowl. cook 2 slice(s) of potato and serve in a bowl. water the plant. cook 5 slice(s) of potato and serve on a plate. make a sandwich. put all newspaper on one armchair. put all newspaper on one dresser. clean all the drinkwares. water the plant. prepare coffee in a clean mug. make a sandwich. boil potato. make a plate of toast. clean all the mugs. boil potato. put all tissue box on any dresser. prepare breakfast. put all remote control on one dresser. prepare breakfast. put all bottle in one cabinet. prepare coffee in a clean mug.",
+      "hyp": "I performed these tasks:\nPickup, Place, ToggleOn, ToggleOff, Pour, Noop, Open, Close, Slice, Say, TurnRight, PanRight."
+    },
+    "a1fc527709ebcb56_2b5d-18f6da623ba658a2_81b3-bbc10dbfaeac4a70_eaa9-e0920a891a029502_6312-25c86e7f0e9021ad_4901-8463e3c141964336_c9cc-cf32d4a95cdbcd3a_9fa2-0e6278225ef19b63_c9c2-4f4013ceab294a80_1bb3-540ef484f67d9e3a_1664-b8729e0c4c857a8e_24b5-32e631d248583662_b131-e4909f617bc99db4_4ab8-9d1c053084e66e7b_dc9f-4e8496b9f642bba0_378e-1023a6f334db1f63_a47b-2f8d482d22e56fdd_3e5c-6e26385c641764c7_fe5a-3cc94d435588751b_fa04-23acf721b22a6456_1716-af3ea35af62cb764_aea5-2e0219649e0f3030_75e3-5c12b219bbb5bc07_6008-724c11f87d95f819_a970-03379f213dfbda39_79a2-88f8ad0d2d356270_bb95-f2fab283e8dd367a_6c4c-977b52faf01e6c05_ba05-133d52a8aaf9db3f_8ed8-5026400c43e20c2d_d3fc-4e8496b9f642bba0_36f1-0ae40b26ad1ead81_6240-6ccc8b815fbc093a_f35e-c70d9a05ca542364_77d5-36492265af47de94_a352-aa310077d368fbbc_0a82-1fa4f0593088b6f2_89ee-f2f6723ebab1e6a2_6bea-58b03cb4cc6cbe0d_dd29-a690a35743c855aa_ef68-7fee2af885b45310_e7f5-a0ccd363ffb0ee94_c237-a7663c7eb724b08d_08e7-38d01f55a8e1ff9b_ca2f-133d52a8aaf9db3f_1647-bbc10dbfaeac4a70_18d0-41b067f2ce6f3fef_d081-864a2333f20b0957_be88-3041e39d6d26d967_18c4-b001404996cd3a29_0181-0-seq_specific_shortened_low_actions": {
+      "q_time": "2024/06/04 14:23:11",
+      "q": "describe what you did when you put all credit card on any bed.",
+      "gt": "pick up the credit card, place the credit card on the bed, pick up the credit card, place the credit card on the bed, pick up the credit card, place the credit card on the bed",
+      "hyp": "You asked me to put three credit cards on the bed. I picked up one credit card from the desk.",
+      "ref_ts": [
+        [
+          "2024/05/13 18:48:47",
+          "2024/05/13 18:52:20"
+        ]
+      ]
+    },
+    "a1fc527709ebcb56_2b5d-18f6da623ba658a2_81b3-bbc10dbfaeac4a70_eaa9-e0920a891a029502_6312-25c86e7f0e9021ad_4901-8463e3c141964336_c9cc-cf32d4a95cdbcd3a_9fa2-0e6278225ef19b63_c9c2-4f4013ceab294a80_1bb3-540ef484f67d9e3a_1664-b8729e0c4c857a8e_24b5-32e631d248583662_b131-e4909f617bc99db4_4ab8-9d1c053084e66e7b_dc9f-4e8496b9f642bba0_378e-1023a6f334db1f63_a47b-2f8d482d22e56fdd_3e5c-6e26385c641764c7_fe5a-3cc94d435588751b_fa04-23acf721b22a6456_1716-af3ea35af62cb764_aea5-2e0219649e0f3030_75e3-5c12b219bbb5bc07_6008-724c11f87d95f819_a970-03379f213dfbda39_79a2-88f8ad0d2d356270_bb95-f2fab283e8dd367a_6c4c-977b52faf01e6c05_ba05-133d52a8aaf9db3f_8ed8-5026400c43e20c2d_d3fc-4e8496b9f642bba0_36f1-0ae40b26ad1ead81_6240-6ccc8b815fbc093a_f35e-c70d9a05ca542364_77d5-36492265af47de94_a352-aa310077d368fbbc_0a82-1fa4f0593088b6f2_89ee-f2f6723ebab1e6a2_6bea-58b03cb4cc6cbe0d_dd29-a690a35743c855aa_ef68-7fee2af885b45310_e7f5-a0ccd363ffb0ee94_c237-a7663c7eb724b08d_08e7-38d01f55a8e1ff9b_ca2f-133d52a8aaf9db3f_1647-bbc10dbfaeac4a70_18d0-41b067f2ce6f3fef_d081-864a2333f20b0957_be88-3041e39d6d26d967_18c4-b001404996cd3a29_0181-0-seq_right_after_questions": {
+      "q_time": "2024/06/04 14:23:11",
+      "q": "What task did you do just after clean all the cookwares?",
+      "gt": "prepare coffee in a clean mug.",
+      "hyp": "ToggleOff(Faucet)",
+      "ref_ts": [
+        [
+          "2024/05/15 19:37:59",
+          "2024/05/15 19:41:45"
+        ],
+        [
+          "2024/05/15 19:40:15",
+          "2024/05/15 19:41:59"
+        ]
+      ]
+    },
+    "a1fc527709ebcb56_2b5d-18f6da623ba658a2_81b3-bbc10dbfaeac4a70_eaa9-e0920a891a029502_6312-25c86e7f0e9021ad_4901-8463e3c141964336_c9cc-cf32d4a95cdbcd3a_9fa2-0e6278225ef19b63_c9c2-4f4013ceab294a80_1bb3-540ef484f67d9e3a_1664-b8729e0c4c857a8e_24b5-32e631d248583662_b131-e4909f617bc99db4_4ab8-9d1c053084e66e7b_dc9f-4e8496b9f642bba0_378e-1023a6f334db1f63_a47b-2f8d482d22e56fdd_3e5c-6e26385c641764c7_fe5a-3cc94d435588751b_fa04-23acf721b22a6456_1716-af3ea35af62cb764_aea5-2e0219649e0f3030_75e3-5c12b219bbb5bc07_6008-724c11f87d95f819_a970-03379f213dfbda39_79a2-88f8ad0d2d356270_bb95-f2fab283e8dd367a_6c4c-977b52faf01e6c05_ba05-133d52a8aaf9db3f_8ed8-5026400c43e20c2d_d3fc-4e8496b9f642bba0_36f1-0ae40b26ad1ead81_6240-6ccc8b815fbc093a_f35e-c70d9a05ca542364_77d5-36492265af47de94_a352-aa310077d368fbbc_0a82-1fa4f0593088b6f2_89ee-f2f6723ebab1e6a2_6bea-58b03cb4cc6cbe0d_dd29-a690a35743c855aa_ef68-7fee2af885b45310_e7f5-a0ccd363ffb0ee94_c237-a7663c7eb724b08d_08e7-38d01f55a8e1ff9b_ca2f-133d52a8aaf9db3f_1647-bbc10dbfaeac4a70_18d0-41b067f2ce6f3fef_d081-864a2333f20b0957_be88-3041e39d6d26d967_18c4-b001404996cd3a29_0181-0-seq_right_before_questions": {
+      "q_time": "2024/06/04 14:23:11",
+      "q": "What task did you do just before make a plate of toast?",
+      "gt": "boil potato.",
+      "hyp": "Placing a plate on the counter.",
+      "ref_ts": [
+        [
+          "2024/05/30 14:02:04",
+          "2024/05/30 14:05:30"
+        ],
+        [
+          "2024/05/30 18:59:46",
+          "2024/05/30 19:02:17"
+        ]
+      ]
+    },
+    "a1fc527709ebcb56_2b5d-18f6da623ba658a2_81b3-bbc10dbfaeac4a70_eaa9-e0920a891a029502_6312-25c86e7f0e9021ad_4901-8463e3c141964336_c9cc-cf32d4a95cdbcd3a_9fa2-0e6278225ef19b63_c9c2-4f4013ceab294a80_1bb3-540ef484f67d9e3a_1664-b8729e0c4c857a8e_24b5-32e631d248583662_b131-e4909f617bc99db4_4ab8-9d1c053084e66e7b_dc9f-4e8496b9f642bba0_378e-1023a6f334db1f63_a47b-2f8d482d22e56fdd_3e5c-6e26385c641764c7_fe5a-3cc94d435588751b_fa04-23acf721b22a6456_1716-af3ea35af62cb764_aea5-2e0219649e0f3030_75e3-5c12b219bbb5bc07_6008-724c11f87d95f819_a970-03379f213dfbda39_79a2-88f8ad0d2d356270_bb95-f2fab283e8dd367a_6c4c-977b52faf01e6c05_ba05-133d52a8aaf9db3f_8ed8-5026400c43e20c2d_d3fc-4e8496b9f642bba0_36f1-0ae40b26ad1ead81_6240-6ccc8b815fbc093a_f35e-c70d9a05ca542364_77d5-36492265af47de94_a352-aa310077d368fbbc_0a82-1fa4f0593088b6f2_89ee-f2f6723ebab1e6a2_6bea-58b03cb4cc6cbe0d_dd29-a690a35743c855aa_ef68-7fee2af885b45310_e7f5-a0ccd363ffb0ee94_c237-a7663c7eb724b08d_08e7-38d01f55a8e1ff9b_ca2f-133d52a8aaf9db3f_1647-bbc10dbfaeac4a70_18d0-41b067f2ce6f3fef_d081-864a2333f20b0957_be88-3041e39d6d26d967_18c4-b001404996cd3a29_0181-0-seq_simple_object_yes_no": {
+      "q_time": "2024/06/04 14:23:11",
+      "q": "Was there an alarm clock ?",
+      "gt": "yes, when I put all credit card on any bed.",
+      "hyp": "Yes, there was an alarm clock.",
+      "ref_ts": [
+        [
+          "2024/05/13 18:48:47",
+          "2024/05/13 18:52:20"
+        ]
+      ]
+    },
+    "a1fc527709ebcb56_2b5d-18f6da623ba658a2_81b3-bbc10dbfaeac4a70_eaa9-e0920a891a029502_6312-25c86e7f0e9021ad_4901-8463e3c141964336_c9cc-cf32d4a95cdbcd3a_9fa2-0e6278225ef19b63_c9c2-4f4013ceab294a80_1bb3-540ef484f67d9e3a_1664-b8729e0c4c857a8e_24b5-32e631d248583662_b131-e4909f617bc99db4_4ab8-9d1c053084e66e7b_dc9f-4e8496b9f642bba0_378e-1023a6f334db1f63_a47b-2f8d482d22e56fdd_3e5c-6e26385c641764c7_fe5a-3cc94d435588751b_fa04-23acf721b22a6456_1716-af3ea35af62cb764_aea5-2e0219649e0f3030_75e3-5c12b219bbb5bc07_6008-724c11f87d95f819_a970-03379f213dfbda39_79a2-88f8ad0d2d356270_bb95-f2fab283e8dd367a_6c4c-977b52faf01e6c05_ba05-133d52a8aaf9db3f_8ed8-5026400c43e20c2d_d3fc-4e8496b9f642bba0_36f1-0ae40b26ad1ead81_6240-6ccc8b815fbc093a_f35e-c70d9a05ca542364_77d5-36492265af47de94_a352-aa310077d368fbbc_0a82-1fa4f0593088b6f2_89ee-f2f6723ebab1e6a2_6bea-58b03cb4cc6cbe0d_dd29-a690a35743c855aa_ef68-7fee2af885b45310_e7f5-a0ccd363ffb0ee94_c237-a7663c7eb724b08d_08e7-38d01f55a8e1ff9b_ca2f-133d52a8aaf9db3f_1647-bbc10dbfaeac4a70_18d0-41b067f2ce6f3fef_d081-864a2333f20b0957_be88-3041e39d6d26d967_18c4-b001404996cd3a29_0181-0-seq_low_actions_to_episode_task_descs": {
+      "q_time": "2024/06/04 14:23:11",
+      "q": "what task or tasks did you perform when you pick up the soapbottle?",
+      "gt": " serve 3 slice(s) of tomato on a plate. and make a salad. and boil potato.",
+      "hyp": "Place the soap bottle on CounterTop_1",
+      "ref_ts": [
+        [
+          "2024/06/01 09:15:12",
+          "2024/06/01 09:20:33"
+        ],
+        [
+          "2024/05/20 10:14:33",
+          "2024/05/20 10:22:09"
+        ],
+        [
+          "2024/05/14 11:31:55",
+          "2024/05/14 11:40:45"
+        ]
+      ]
+    },
+    "a1fc527709ebcb56_2b5d-18f6da623ba658a2_81b3-bbc10dbfaeac4a70_eaa9-e0920a891a029502_6312-25c86e7f0e9021ad_4901-8463e3c141964336_c9cc-cf32d4a95cdbcd3a_9fa2-0e6278225ef19b63_c9c2-4f4013ceab294a80_1bb3-540ef484f67d9e3a_1664-b8729e0c4c857a8e_24b5-32e631d248583662_b131-e4909f617bc99db4_4ab8-9d1c053084e66e7b_dc9f-4e8496b9f642bba0_378e-1023a6f334db1f63_a47b-2f8d482d22e56fdd_3e5c-6e26385c641764c7_fe5a-3cc94d435588751b_fa04-23acf721b22a6456_1716-af3ea35af62cb764_aea5-2e0219649e0f3030_75e3-5c12b219bbb5bc07_6008-724c11f87d95f819_a970-03379f213dfbda39_79a2-88f8ad0d2d356270_bb95-f2fab283e8dd367a_6c4c-977b52faf01e6c05_ba05-133d52a8aaf9db3f_8ed8-5026400c43e20c2d_d3fc-4e8496b9f642bba0_36f1-0ae40b26ad1ead81_6240-6ccc8b815fbc093a_f35e-c70d9a05ca542364_77d5-36492265af47de94_a352-aa310077d368fbbc_0a82-1fa4f0593088b6f2_89ee-f2f6723ebab1e6a2_6bea-58b03cb4cc6cbe0d_dd29-a690a35743c855aa_ef68-7fee2af885b45310_e7f5-a0ccd363ffb0ee94_c237-a7663c7eb724b08d_08e7-38d01f55a8e1ff9b_ca2f-133d52a8aaf9db3f_1647-bbc10dbfaeac4a70_18d0-41b067f2ce6f3fef_d081-864a2333f20b0957_be88-3041e39d6d26d967_18c4-b001404996cd3a29_0181-0-exact_time_to_episode": {
+      "q_time": "2024/06/04 14:23:11",
+      "q": "what did you do on May 28, 2024 at 08:10 AM?",
+      "gt": "put all newspaper on one dresser.",
+      "hyp": "I observed objects like newspaper, shelves, and a desk lamp. I also heard someone greet and then request me to put the newspaper on the dresser.",
+      "ref_ts": [
+        [
+          "2024/05/28 08:10:40",
+          "2024/05/28 08:11:53"
+        ]
+      ]
+    },
+    "a1fc527709ebcb56_2b5d-18f6da623ba658a2_81b3-bbc10dbfaeac4a70_eaa9-e0920a891a029502_6312-25c86e7f0e9021ad_4901-8463e3c141964336_c9cc-cf32d4a95cdbcd3a_9fa2-0e6278225ef19b63_c9c2-4f4013ceab294a80_1bb3-540ef484f67d9e3a_1664-b8729e0c4c857a8e_24b5-32e631d248583662_b131-e4909f617bc99db4_4ab8-9d1c053084e66e7b_dc9f-4e8496b9f642bba0_378e-1023a6f334db1f63_a47b-2f8d482d22e56fdd_3e5c-6e26385c641764c7_fe5a-3cc94d435588751b_fa04-23acf721b22a6456_1716-af3ea35af62cb764_aea5-2e0219649e0f3030_75e3-5c12b219bbb5bc07_6008-724c11f87d95f819_a970-03379f213dfbda39_79a2-88f8ad0d2d356270_bb95-f2fab283e8dd367a_6c4c-977b52faf01e6c05_ba05-133d52a8aaf9db3f_8ed8-5026400c43e20c2d_d3fc-4e8496b9f642bba0_36f1-0ae40b26ad1ead81_6240-6ccc8b815fbc093a_f35e-c70d9a05ca542364_77d5-36492265af47de94_a352-aa310077d368fbbc_0a82-1fa4f0593088b6f2_89ee-f2f6723ebab1e6a2_6bea-58b03cb4cc6cbe0d_dd29-a690a35743c855aa_ef68-7fee2af885b45310_e7f5-a0ccd363ffb0ee94_c237-a7663c7eb724b08d_08e7-38d01f55a8e1ff9b_ca2f-133d52a8aaf9db3f_1647-bbc10dbfaeac4a70_18d0-41b067f2ce6f3fef_d081-864a2333f20b0957_be88-3041e39d6d26d967_18c4-b001404996cd3a29_0181-0-tasks_to_exact_times": {
+      "q_time": "2024/06/04 14:23:11",
+      "q": "When did you put all remote control on one dresser?",
+      "gt": "Jun 03, 2024 at 08:02 AM",
+      "hyp": "2024/06/03 08:02:48",
+      "ref_ts": [
+        [
+          "2024/06/03 08:02:29",
+          "2024/06/03 08:16:13"
+        ]
+      ]
+    },
+    "a1fc527709ebcb56_2b5d-18f6da623ba658a2_81b3-bbc10dbfaeac4a70_eaa9-e0920a891a029502_6312-25c86e7f0e9021ad_4901-8463e3c141964336_c9cc-cf32d4a95cdbcd3a_9fa2-0e6278225ef19b63_c9c2-4f4013ceab294a80_1bb3-540ef484f67d9e3a_1664-b8729e0c4c857a8e_24b5-32e631d248583662_b131-e4909f617bc99db4_4ab8-9d1c053084e66e7b_dc9f-4e8496b9f642bba0_378e-1023a6f334db1f63_a47b-2f8d482d22e56fdd_3e5c-6e26385c641764c7_fe5a-3cc94d435588751b_fa04-23acf721b22a6456_1716-af3ea35af62cb764_aea5-2e0219649e0f3030_75e3-5c12b219bbb5bc07_6008-724c11f87d95f819_a970-03379f213dfbda39_79a2-88f8ad0d2d356270_bb95-f2fab283e8dd367a_6c4c-977b52faf01e6c05_ba05-133d52a8aaf9db3f_8ed8-5026400c43e20c2d_d3fc-4e8496b9f642bba0_36f1-0ae40b26ad1ead81_6240-6ccc8b815fbc093a_f35e-c70d9a05ca542364_77d5-36492265af47de94_a352-aa310077d368fbbc_0a82-1fa4f0593088b6f2_89ee-f2f6723ebab1e6a2_6bea-58b03cb4cc6cbe0d_dd29-a690a35743c855aa_ef68-7fee2af885b45310_e7f5-a0ccd363ffb0ee94_c237-a7663c7eb724b08d_08e7-38d01f55a8e1ff9b_ca2f-133d52a8aaf9db3f_1647-bbc10dbfaeac4a70_18d0-41b067f2ce6f3fef_d081-864a2333f20b0957_be88-3041e39d6d26d967_18c4-b001404996cd3a29_0181-0-tasks_to_days_ago": {
+      "q_time": "2024/06/04 14:23:11",
+      "q": "Today is Jun 04, 2024 at 02:23 PM. How many days ago did you prepare coffee in a clean mug?",
+      "gt": "22 days ago and 20 days ago and 14 days ago and 6 days ago and 0 day ago",
+      "hyp": "22 days ago.",
+      "ref_ts": [
+        [
+          "2024/05/13 13:20:28",
+          "2024/05/13 13:24:13"
+        ],
+        [
+          "2024/05/29 13:51:19",
+          "2024/05/29 13:53:42"
+        ],
+        [
+          "2024/05/15 19:40:15",
+          "2024/05/15 19:41:59"
+        ],
+        [
+          "2024/06/04 12:35:24",
+          "2024/06/04 12:40:52"
+        ],
+        [
+          "2024/05/21 15:52:32",
+          "2024/05/21 15:55:37"
+        ]
+      ]
+    },
+    "a1fc527709ebcb56_2b5d-18f6da623ba658a2_81b3-bbc10dbfaeac4a70_eaa9-e0920a891a029502_6312-25c86e7f0e9021ad_4901-8463e3c141964336_c9cc-cf32d4a95cdbcd3a_9fa2-0e6278225ef19b63_c9c2-4f4013ceab294a80_1bb3-540ef484f67d9e3a_1664-b8729e0c4c857a8e_24b5-32e631d248583662_b131-e4909f617bc99db4_4ab8-9d1c053084e66e7b_dc9f-4e8496b9f642bba0_378e-1023a6f334db1f63_a47b-2f8d482d22e56fdd_3e5c-6e26385c641764c7_fe5a-3cc94d435588751b_fa04-23acf721b22a6456_1716-af3ea35af62cb764_aea5-2e0219649e0f3030_75e3-5c12b219bbb5bc07_6008-724c11f87d95f819_a970-03379f213dfbda39_79a2-88f8ad0d2d356270_bb95-f2fab283e8dd367a_6c4c-977b52faf01e6c05_ba05-133d52a8aaf9db3f_8ed8-5026400c43e20c2d_d3fc-4e8496b9f642bba0_36f1-0ae40b26ad1ead81_6240-6ccc8b815fbc093a_f35e-c70d9a05ca542364_77d5-36492265af47de94_a352-aa310077d368fbbc_0a82-1fa4f0593088b6f2_89ee-f2f6723ebab1e6a2_6bea-58b03cb4cc6cbe0d_dd29-a690a35743c855aa_ef68-7fee2af885b45310_e7f5-a0ccd363ffb0ee94_c237-a7663c7eb724b08d_08e7-38d01f55a8e1ff9b_ca2f-133d52a8aaf9db3f_1647-bbc10dbfaeac4a70_18d0-41b067f2ce6f3fef_d081-864a2333f20b0957_be88-3041e39d6d26d967_18c4-b001404996cd3a29_0181-0-days_ago_to_episode": {
+      "q_time": "2024/06/04 14:23:11",
+      "q": "Today is Jun 04, 2024 at 02:23 PM. What did you do 9 days ago?",
+      "gt": "water the plant and cook 5 slice(s) of potato and serve on a plate.",
+      "hyp": "Nine days ago, which was May 26, 2024, I watered a plant, cooked potato slices, and performed various kitchen tasks.",
+      "ref_ts": [
+        [
+          "2024/05/26 15:10:42",
+          "2024/05/26 15:18:05"
+        ],
+        [
+          "2024/05/26 14:29:24",
+          "2024/05/26 14:30:10"
+        ]
+      ]
+    },
+    "2b5a33d4908ee77d_fb8b-f2fab283e8dd367a_6c4c-30a7f003c3e49f70_ff1d-97fd7c6740b657f5_58dc-f211958a124a5ea7_cbf0-c7cc40993ef8468b_ad24-369a8cd57dde1b82_096e-d9a7f5476eac3df6_7a11-8455e3db97f9a4dc_de9d-0de4b62afcd06138_e549-724c11f87d95f819_a970-8f7791c488b51c98_fa79-d4c51dc230306c8b_d93b-7d0db28e7d18c776_c97a-6ccc8b815fbc093a_3e3a-6f28bbc4c8ed232a_bfc2-2f8d482d22e56fdd_410e-3ebbcf3c3aed7c9e_2eb2-61e8f5910474b00b_53e6-c66cfa360ba2ee00_45b2-89512fd6f5557f29_2369-a82cd949493bada0_ffe5-7334889a1fa54076_cb4c-a800b94ef5813e01_14fc-7172fd55ac8095bd_e687-32e631d248583662_b131-977b52faf01e6c05_ebe0-92904ea754a401e6_2b2c-271e4ccbac4343e1_87d1-52e190f2e5f3b790_edbb-cf32d4a95cdbcd3a_9fa2-25b52159ad56e77c_ff7f-50bc3abf986ccabb_aaee-823f0fe4bda8607c_34d8-18f6da623ba658a2_aa07-d33861eae5655995_2fb1-fe6b3de8c88b8573_9f76-79c66caa40f16dbc_874a-133d52a8aaf9db3f_1647-b63996c03c2d6b3e_6ac5-35025f516f41aba5_ba52-0d49a886a3c99bab_4ed0-1af6ffb5c083156a_9b7a-a1694dc92f54473f_0b07-50bc3abf986ccabb_7071-c81332c37968338f_2fef-4d30e90e534e9cbb_732b-a82cd949493bada0_0827-cce21676357b2d20_b27c-dc506a8ff8638954_1a5a-0-sequence_of_task_descs": {
+      "q_time": "2023/05/06 12:07:56",
+      "q": "List the tasks you performed.",
+      "gt": "clean all the mugs. make a sandwich. prepare breakfast. put all newspaper on one furniture. clean all the bowls. cook 2 slice(s) of potato and serve in a bowl. prepare breakfast. make a sandwich. make a plate of toast. cook 2 slice(s) of potato and serve on a plate. make a salad. make a sandwich. make a salad. make a sandwich. cook 5 slice(s) of potato and serve on a plate. clean all the plates. serve 1 slice(s) of lettuce on a plate. put all pillow on any armchair. make a salad. clean all the plates. water the plant. serve 1 slice(s) of tomato on a plate. put all remote control on any tables. serve 1 slice(s) of tomato on a plate. make a plate of toast. prepare breakfast. cook 2 slice(s) of potato and serve in a bowl. make a sandwich. prepare coffee in a clean mug. clean all the plates. make a salad. make a plate of toast. make a salad. clean all the plates. cook 1 slice(s) of potato and serve in a bowl. put all remote control on one armchair. make a salad. prepare breakfast. put all tissue box on any dresser. clean all the plates. prepare breakfast. make a sandwich. clean all the plates. water the plant. make a salad. water the plant. put all watch in any box. serve 1 slice(s) of tomato on a plate. boil potato. make a salad.",
+      "hyp": "I performed the following tasks:\nOpen(Fridge), Pickup(Mug_1), Place(Sink_Basin), Pickup(Mug_0), Place(Sink_Basin), ToggleOn(Faucet), ToggleOff(Faucet), Pickup(Mug_0), Pour(Sink_Basin), Place(Sink_Basin), Pickup(Mug_1), Pour(Sink_Basin), Place(CounterTop_0), Noop, Open(Cabinet_1), Pickup(Bread_1), Place(CounterTop_0), Pickup(Knife_0), Slice(Bread_1), Place(CounterTop_0), Pickup(Bread_1_Sliced_6), Place(Toaster), Pickup(Bread_1_Sliced_5), Place(CounterTop_1), ToggleOn(Toaster), ToggleOff(Toaster), Pickup(Bread_1_Sliced_6), Place(CounterTop_1), Pickup(Bread_1_Sliced_5), Place(Toaster), ToggleOn(Toaster), ToggleOff(Toaster), Pickup(Bread_1_Sliced_5), Place(CounterTop_1), Pickup(Tomato_1), Place(CounterTop_0), Pickup(Knife_0), Slice(Tomato_1), Place(CounterTop_0), Pickup(Plate_1), Place(CounterTop_1), Pickup(Bread_1_Sliced_5), Place(Plate_1), Pickup(Tomato_1_Sliced_6), Place(Plate_1), Pickup(Tomato_1_Sliced_5), Place(Plate_1), Pickup(Bread_1_Sliced_6), Place(Plate_1), Noop, Open(Fridge), Open(Microwave), Pickup(Mug_1), Close(Microwave), ToggleOff(Faucet), Place(Sink_Basin), ToggleOn(Faucet), ToggleOff(Faucet), Pickup(Mug_1), Pour(Sink_Basin), ToggleOff(CoffeeMachine), Place(CoffeeMachine), ToggleOn(CoffeeMachine), Pickup(Mug_1), Place(CounterTop_0), ToggleOff(CoffeeMachine), Pickup(Mug_0), Pour(Sink_Basin), Place(CoffeeMachine), ToggleOn(CoffeeMachine), Pickup(Mug_0), Place(CounterTop_0), Pickup(Knife), Slice(Bread_1), Place(CounterTop_1),"
+    },
+    "2b5a33d4908ee77d_fb8b-f2fab283e8dd367a_6c4c-30a7f003c3e49f70_ff1d-97fd7c6740b657f5_58dc-f211958a124a5ea7_cbf0-c7cc40993ef8468b_ad24-369a8cd57dde1b82_096e-d9a7f5476eac3df6_7a11-8455e3db97f9a4dc_de9d-0de4b62afcd06138_e549-724c11f87d95f819_a970-8f7791c488b51c98_fa79-d4c51dc230306c8b_d93b-7d0db28e7d18c776_c97a-6ccc8b815fbc093a_3e3a-6f28bbc4c8ed232a_bfc2-2f8d482d22e56fdd_410e-3ebbcf3c3aed7c9e_2eb2-61e8f5910474b00b_53e6-c66cfa360ba2ee00_45b2-89512fd6f5557f29_2369-a82cd949493bada0_ffe5-7334889a1fa54076_cb4c-a800b94ef5813e01_14fc-7172fd55ac8095bd_e687-32e631d248583662_b131-977b52faf01e6c05_ebe0-92904ea754a401e6_2b2c-271e4ccbac4343e1_87d1-52e190f2e5f3b790_edbb-cf32d4a95cdbcd3a_9fa2-25b52159ad56e77c_ff7f-50bc3abf986ccabb_aaee-823f0fe4bda8607c_34d8-18f6da623ba658a2_aa07-d33861eae5655995_2fb1-fe6b3de8c88b8573_9f76-79c66caa40f16dbc_874a-133d52a8aaf9db3f_1647-b63996c03c2d6b3e_6ac5-35025f516f41aba5_ba52-0d49a886a3c99bab_4ed0-1af6ffb5c083156a_9b7a-a1694dc92f54473f_0b07-50bc3abf986ccabb_7071-c81332c37968338f_2fef-4d30e90e534e9cbb_732b-a82cd949493bada0_0827-cce21676357b2d20_b27c-dc506a8ff8638954_1a5a-0-seq_specific_shortened_low_actions": {
+      "q_time": "2023/05/06 12:07:56",
+      "q": "describe what you did when you serve 1 slice(s) of lettuce on a plate.",
+      "gt": "open the fridge, pick up the knife, slice lettuce, place the knife on the countertop, pick up the lettuce, place the lettuce on the countertop, pick up the plate, place the plate in the sink, toggle on the faucet, toggle off the faucet, pick up the plate, place the plate on the countertop, pick up the lettuce, place the lettuce on the plate",
+      "hyp": "I sliced the lettuce and placed it on CounterTop_0",
+      "ref_ts": [
+        [
+          "2023/04/20 12:20:33",
+          "2023/04/20 12:31:44"
+        ]
+      ]
+    },
+    "2b5a33d4908ee77d_fb8b-f2fab283e8dd367a_6c4c-30a7f003c3e49f70_ff1d-97fd7c6740b657f5_58dc-f211958a124a5ea7_cbf0-c7cc40993ef8468b_ad24-369a8cd57dde1b82_096e-d9a7f5476eac3df6_7a11-8455e3db97f9a4dc_de9d-0de4b62afcd06138_e549-724c11f87d95f819_a970-8f7791c488b51c98_fa79-d4c51dc230306c8b_d93b-7d0db28e7d18c776_c97a-6ccc8b815fbc093a_3e3a-6f28bbc4c8ed232a_bfc2-2f8d482d22e56fdd_410e-3ebbcf3c3aed7c9e_2eb2-61e8f5910474b00b_53e6-c66cfa360ba2ee00_45b2-89512fd6f5557f29_2369-a82cd949493bada0_ffe5-7334889a1fa54076_cb4c-a800b94ef5813e01_14fc-7172fd55ac8095bd_e687-32e631d248583662_b131-977b52faf01e6c05_ebe0-92904ea754a401e6_2b2c-271e4ccbac4343e1_87d1-52e190f2e5f3b790_edbb-cf32d4a95cdbcd3a_9fa2-25b52159ad56e77c_ff7f-50bc3abf986ccabb_aaee-823f0fe4bda8607c_34d8-18f6da623ba658a2_aa07-d33861eae5655995_2fb1-fe6b3de8c88b8573_9f76-79c66caa40f16dbc_874a-133d52a8aaf9db3f_1647-b63996c03c2d6b3e_6ac5-35025f516f41aba5_ba52-0d49a886a3c99bab_4ed0-1af6ffb5c083156a_9b7a-a1694dc92f54473f_0b07-50bc3abf986ccabb_7071-c81332c37968338f_2fef-4d30e90e534e9cbb_732b-a82cd949493bada0_0827-cce21676357b2d20_b27c-dc506a8ff8638954_1a5a-0-seq_right_after_questions": {
+      "q_time": "2023/05/06 12:07:56",
+      "q": "What task did you do just after serve 1 slice(s) of lettuce on a plate?",
+      "gt": "put all pillow on any armchair.",
+      "hyp": "You placed the sliced lettuce on the countertop.",
+      "ref_ts": [
+        [
+          "2023/04/20 12:20:33",
+          "2023/04/20 12:31:44"
+        ],
+        [
+          "2023/04/20 13:02:10",
+          "2023/04/20 13:04:34"
+        ]
+      ]
+    },
+    "2b5a33d4908ee77d_fb8b-f2fab283e8dd367a_6c4c-30a7f003c3e49f70_ff1d-97fd7c6740b657f5_58dc-f211958a124a5ea7_cbf0-c7cc40993ef8468b_ad24-369a8cd57dde1b82_096e-d9a7f5476eac3df6_7a11-8455e3db97f9a4dc_de9d-0de4b62afcd06138_e549-724c11f87d95f819_a970-8f7791c488b51c98_fa79-d4c51dc230306c8b_d93b-7d0db28e7d18c776_c97a-6ccc8b815fbc093a_3e3a-6f28bbc4c8ed232a_bfc2-2f8d482d22e56fdd_410e-3ebbcf3c3aed7c9e_2eb2-61e8f5910474b00b_53e6-c66cfa360ba2ee00_45b2-89512fd6f5557f29_2369-a82cd949493bada0_ffe5-7334889a1fa54076_cb4c-a800b94ef5813e01_14fc-7172fd55ac8095bd_e687-32e631d248583662_b131-977b52faf01e6c05_ebe0-92904ea754a401e6_2b2c-271e4ccbac4343e1_87d1-52e190f2e5f3b790_edbb-cf32d4a95cdbcd3a_9fa2-25b52159ad56e77c_ff7f-50bc3abf986ccabb_aaee-823f0fe4bda8607c_34d8-18f6da623ba658a2_aa07-d33861eae5655995_2fb1-fe6b3de8c88b8573_9f76-79c66caa40f16dbc_874a-133d52a8aaf9db3f_1647-b63996c03c2d6b3e_6ac5-35025f516f41aba5_ba52-0d49a886a3c99bab_4ed0-1af6ffb5c083156a_9b7a-a1694dc92f54473f_0b07-50bc3abf986ccabb_7071-c81332c37968338f_2fef-4d30e90e534e9cbb_732b-a82cd949493bada0_0827-cce21676357b2d20_b27c-dc506a8ff8638954_1a5a-0-seq_right_before_questions": {
+      "q_time": "2023/05/06 12:07:56",
+      "q": "What task did you do just before put all watch in any box?",
+      "gt": "water the plant.",
+      "hyp": "Placing a pillow on the dresser.",
+      "ref_ts": [
+        [
+          "2023/05/04 14:07:31",
+          "2023/05/04 14:09:35"
+        ],
+        [
+          "2023/05/05 08:37:27",
+          "2023/05/05 08:41:34"
+        ]
+      ]
+    },
+    "2b5a33d4908ee77d_fb8b-f2fab283e8dd367a_6c4c-30a7f003c3e49f70_ff1d-97fd7c6740b657f5_58dc-f211958a124a5ea7_cbf0-c7cc40993ef8468b_ad24-369a8cd57dde1b82_096e-d9a7f5476eac3df6_7a11-8455e3db97f9a4dc_de9d-0de4b62afcd06138_e549-724c11f87d95f819_a970-8f7791c488b51c98_fa79-d4c51dc230306c8b_d93b-7d0db28e7d18c776_c97a-6ccc8b815fbc093a_3e3a-6f28bbc4c8ed232a_bfc2-2f8d482d22e56fdd_410e-3ebbcf3c3aed7c9e_2eb2-61e8f5910474b00b_53e6-c66cfa360ba2ee00_45b2-89512fd6f5557f29_2369-a82cd949493bada0_ffe5-7334889a1fa54076_cb4c-a800b94ef5813e01_14fc-7172fd55ac8095bd_e687-32e631d248583662_b131-977b52faf01e6c05_ebe0-92904ea754a401e6_2b2c-271e4ccbac4343e1_87d1-52e190f2e5f3b790_edbb-cf32d4a95cdbcd3a_9fa2-25b52159ad56e77c_ff7f-50bc3abf986ccabb_aaee-823f0fe4bda8607c_34d8-18f6da623ba658a2_aa07-d33861eae5655995_2fb1-fe6b3de8c88b8573_9f76-79c66caa40f16dbc_874a-133d52a8aaf9db3f_1647-b63996c03c2d6b3e_6ac5-35025f516f41aba5_ba52-0d49a886a3c99bab_4ed0-1af6ffb5c083156a_9b7a-a1694dc92f54473f_0b07-50bc3abf986ccabb_7071-c81332c37968338f_2fef-4d30e90e534e9cbb_732b-a82cd949493bada0_0827-cce21676357b2d20_b27c-dc506a8ff8638954_1a5a-0-seq_simple_object_yes_no": {
+      "q_time": "2023/05/06 12:07:56",
+      "q": "Was there a bread ?",
+      "gt": "yes, when I water the plant. and clean all the mugs. and cook 5 slice(s) of potato and serve on a plate. and cook 2 slice(s) of potato and serve in a bowl. and serve 1 slice(s) of tomato on a plate. and make a salad. and prepare breakfast. and clean all the plates. and cook 1 slice(s) of potato and serve in a bowl. and clean all the bowls. and make a sandwich. and prepare coffee in a clean mug. and cook 2 slice(s) of potato and serve on a plate. and make a plate of toast. and boil potato.",
+      "hyp": "Yes",
+      "ref_ts": [
+        [
+          "2023/04/13 11:21:39",
+          "2023/04/13 11:27:01"
+        ],
+        [
+          "2023/04/13 14:26:23",
+          "2023/04/13 14:37:30"
+        ],
+        [
+          "2023/04/14 09:30:45",
+          "2023/04/14 09:41:43"
+        ],
+        [
+          "2023/04/14 18:16:05",
+          "2023/04/14 18:18:43"
+        ],
+        [
+          "2023/04/15 11:48:42",
+          "2023/04/15 11:54:30"
+        ],
+        [
+          "2023/04/16 12:15:47",
+          "2023/04/16 12:26:41"
+        ],
+        [
+          "2023/04/16 12:30:59",
+          "2023/04/16 12:38:17"
+        ],
+        [
+          "2023/04/16 17:04:26",
+          "2023/04/16 17:09:04"
+        ],
+        [
+          "2023/04/17 09:10:33",
+          "2023/04/17 09:26:06"
+        ],
+        [
+          "2023/04/17 14:28:07",
+          "2023/04/17 14:40:53"
+        ],
+        [
+          "2023/04/17 18:44:13",
+          "2023/04/17 18:53:26"
+        ],
+        [
+          "2023/04/18 17:44:00",
+          "2023/04/18 18:08:37"
+        ],
+        [
+          "2023/04/19 14:31:48",
+          "2023/04/19 14:45:37"
+        ],
+        [
+          "2023/04/19 19:05:45",
+          "2023/04/19 19:14:34"
+        ],
+        [
+          "2023/04/20 08:33:21",
+          "2023/04/20 08:35:46"
+        ],
+        [
+          "2023/04/21 14:59:12",
+          "2023/04/21 15:02:34"
+        ],
+        [
+          "2023/04/21 17:54:59",
+          "2023/04/21 18:02:36"
+        ],
+        [
+          "2023/04/22 16:18:19",
+          "2023/04/22 16:22:46"
+        ],
+        [
+          "2023/04/22 16:37:55",
+          "2023/04/22 16:39:26"
+        ],
+        [
+          "2023/04/24 10:50:58",
+          "2023/04/24 10:56:09"
+        ],
+        [
+          "2023/04/24 17:24:21",
+          "2023/04/24 17:45:28"
+        ],
+        [
+          "2023/04/25 12:17:52",
+          "2023/04/25 12:24:59"
+        ],
+        [
+          "2023/04/25 14:55:31",
+          "2023/04/25 15:15:24"
+        ],
+        [
+          "2023/04/25 15:19:25",
+          "2023/04/25 15:23:34"
+        ],
+        [
+          "2023/04/27 14:22:21",
+          "2023/04/27 14:31:12"
+        ],
+        [
+          "2023/04/27 15:47:01",
+          "2023/04/27 16:00:14"
+        ],
+        [
+          "2023/04/28 13:36:45",
+          "2023/04/28 13:45:15"
+        ],
+        [
+          "2023/04/28 17:18:02",
+          "2023/04/28 17:19:24"
+        ],
+        [
+          "2023/04/29 16:37:14",
+          "2023/04/29 16:48:49"
+        ],
+        [
+          "2023/04/30 09:31:09",
+          "2023/04/30 09:55:29"
+        ],
+        [
+          "2023/04/30 12:02:01",
+          "2023/04/30 12:22:48"
+        ],
+        [
+          "2023/05/02 17:17:43",
+          "2023/05/02 17:31:48"
+        ],
+        [
+          "2023/05/03 08:32:10",
+          "2023/05/03 08:37:28"
+        ],
+        [
+          "2023/05/04 12:42:41",
+          "2023/05/04 12:47:10"
+        ],
+        [
+          "2023/05/04 14:07:31",
+          "2023/05/04 14:09:35"
+        ],
+        [
+          "2023/05/05 09:30:48",
+          "2023/05/05 09:36:08"
+        ],
+        [
+          "2023/05/05 13:18:43",
+          "2023/05/05 13:34:01"
+        ],
+        [
+          "2023/05/06 10:24:58",
+          "2023/05/06 10:31:10"
+        ]
+      ]
+    },
+    "2b5a33d4908ee77d_fb8b-f2fab283e8dd367a_6c4c-30a7f003c3e49f70_ff1d-97fd7c6740b657f5_58dc-f211958a124a5ea7_cbf0-c7cc40993ef8468b_ad24-369a8cd57dde1b82_096e-d9a7f5476eac3df6_7a11-8455e3db97f9a4dc_de9d-0de4b62afcd06138_e549-724c11f87d95f819_a970-8f7791c488b51c98_fa79-d4c51dc230306c8b_d93b-7d0db28e7d18c776_c97a-6ccc8b815fbc093a_3e3a-6f28bbc4c8ed232a_bfc2-2f8d482d22e56fdd_410e-3ebbcf3c3aed7c9e_2eb2-61e8f5910474b00b_53e6-c66cfa360ba2ee00_45b2-89512fd6f5557f29_2369-a82cd949493bada0_ffe5-7334889a1fa54076_cb4c-a800b94ef5813e01_14fc-7172fd55ac8095bd_e687-32e631d248583662_b131-977b52faf01e6c05_ebe0-92904ea754a401e6_2b2c-271e4ccbac4343e1_87d1-52e190f2e5f3b790_edbb-cf32d4a95cdbcd3a_9fa2-25b52159ad56e77c_ff7f-50bc3abf986ccabb_aaee-823f0fe4bda8607c_34d8-18f6da623ba658a2_aa07-d33861eae5655995_2fb1-fe6b3de8c88b8573_9f76-79c66caa40f16dbc_874a-133d52a8aaf9db3f_1647-b63996c03c2d6b3e_6ac5-35025f516f41aba5_ba52-0d49a886a3c99bab_4ed0-1af6ffb5c083156a_9b7a-a1694dc92f54473f_0b07-50bc3abf986ccabb_7071-c81332c37968338f_2fef-4d30e90e534e9cbb_732b-a82cd949493bada0_0827-cce21676357b2d20_b27c-dc506a8ff8638954_1a5a-0-seq_low_actions_to_episode_task_descs": {
+      "q_time": "2023/05/06 12:07:56",
+      "q": "what task or tasks did you perform when you place the tomato on the plate?",
+      "gt": " prepare breakfast. and serve 1 slice(s) of tomato on a plate. and make a sandwich. and make a salad.",
+      "hyp": "I placed all the components on the plate.",
+      "ref_ts": [
+        [
+          "2023/04/13 14:26:23",
+          "2023/04/13 14:37:30"
+        ],
+        [
+          "2023/04/16 12:15:47",
+          "2023/04/16 12:26:41"
+        ],
+        [
+          "2023/04/16 12:30:59",
+          "2023/04/16 12:38:17"
+        ],
+        [
+          "2023/04/17 14:28:07",
+          "2023/04/17 14:40:53"
+        ],
+        [
+          "2023/04/17 18:44:13",
+          "2023/04/17 18:53:26"
+        ],
+        [
+          "2023/04/19 14:31:48",
+          "2023/04/19 14:45:37"
+        ],
+        [
+          "2023/04/21 14:59:12",
+          "2023/04/21 15:02:34"
+        ],
+        [
+          "2023/04/22 16:37:55",
+          "2023/04/22 16:39:26"
+        ],
+        [
+          "2023/04/23 13:13:52",
+          "2023/04/23 13:17:23"
+        ],
+        [
+          "2023/04/24 17:24:21",
+          "2023/04/24 17:45:28"
+        ],
+        [
+          "2023/04/28 13:36:45",
+          "2023/04/28 13:45:15"
+        ],
+        [
+          "2023/04/30 09:31:09",
+          "2023/04/30 09:55:29"
+        ],
+        [
+          "2023/04/30 12:02:01",
+          "2023/04/30 12:22:48"
+        ],
+        [
+          "2023/05/02 17:17:43",
+          "2023/05/02 17:31:48"
+        ],
+        [
+          "2023/05/03 08:32:10",
+          "2023/05/03 08:37:28"
+        ],
+        [
+          "2023/05/04 12:42:41",
+          "2023/05/04 12:47:10"
+        ],
+        [
+          "2023/05/05 09:30:48",
+          "2023/05/05 09:36:08"
+        ],
+        [
+          "2023/05/06 10:24:58",
+          "2023/05/06 10:31:10"
+        ]
+      ]
+    },
+    "2b5a33d4908ee77d_fb8b-f2fab283e8dd367a_6c4c-30a7f003c3e49f70_ff1d-97fd7c6740b657f5_58dc-f211958a124a5ea7_cbf0-c7cc40993ef8468b_ad24-369a8cd57dde1b82_096e-d9a7f5476eac3df6_7a11-8455e3db97f9a4dc_de9d-0de4b62afcd06138_e549-724c11f87d95f819_a970-8f7791c488b51c98_fa79-d4c51dc230306c8b_d93b-7d0db28e7d18c776_c97a-6ccc8b815fbc093a_3e3a-6f28bbc4c8ed232a_bfc2-2f8d482d22e56fdd_410e-3ebbcf3c3aed7c9e_2eb2-61e8f5910474b00b_53e6-c66cfa360ba2ee00_45b2-89512fd6f5557f29_2369-a82cd949493bada0_ffe5-7334889a1fa54076_cb4c-a800b94ef5813e01_14fc-7172fd55ac8095bd_e687-32e631d248583662_b131-977b52faf01e6c05_ebe0-92904ea754a401e6_2b2c-271e4ccbac4343e1_87d1-52e190f2e5f3b790_edbb-cf32d4a95cdbcd3a_9fa2-25b52159ad56e77c_ff7f-50bc3abf986ccabb_aaee-823f0fe4bda8607c_34d8-18f6da623ba658a2_aa07-d33861eae5655995_2fb1-fe6b3de8c88b8573_9f76-79c66caa40f16dbc_874a-133d52a8aaf9db3f_1647-b63996c03c2d6b3e_6ac5-35025f516f41aba5_ba52-0d49a886a3c99bab_4ed0-1af6ffb5c083156a_9b7a-a1694dc92f54473f_0b07-50bc3abf986ccabb_7071-c81332c37968338f_2fef-4d30e90e534e9cbb_732b-a82cd949493bada0_0827-cce21676357b2d20_b27c-dc506a8ff8638954_1a5a-0-exact_time_to_episode": {
+      "q_time": "2023/05/06 12:07:56",
+      "q": "what did you do on Apr 27, 2023 at 03:47 PM?",
+      "gt": "make a plate of toast.",
+      "hyp": "I was about to slice bread.",
+      "ref_ts": [
+        [
+          "2023/04/27 15:47:01",
+          "2023/04/27 16:00:14"
+        ]
+      ]
+    },
+    "2b5a33d4908ee77d_fb8b-f2fab283e8dd367a_6c4c-30a7f003c3e49f70_ff1d-97fd7c6740b657f5_58dc-f211958a124a5ea7_cbf0-c7cc40993ef8468b_ad24-369a8cd57dde1b82_096e-d9a7f5476eac3df6_7a11-8455e3db97f9a4dc_de9d-0de4b62afcd06138_e549-724c11f87d95f819_a970-8f7791c488b51c98_fa79-d4c51dc230306c8b_d93b-7d0db28e7d18c776_c97a-6ccc8b815fbc093a_3e3a-6f28bbc4c8ed232a_bfc2-2f8d482d22e56fdd_410e-3ebbcf3c3aed7c9e_2eb2-61e8f5910474b00b_53e6-c66cfa360ba2ee00_45b2-89512fd6f5557f29_2369-a82cd949493bada0_ffe5-7334889a1fa54076_cb4c-a800b94ef5813e01_14fc-7172fd55ac8095bd_e687-32e631d248583662_b131-977b52faf01e6c05_ebe0-92904ea754a401e6_2b2c-271e4ccbac4343e1_87d1-52e190f2e5f3b790_edbb-cf32d4a95cdbcd3a_9fa2-25b52159ad56e77c_ff7f-50bc3abf986ccabb_aaee-823f0fe4bda8607c_34d8-18f6da623ba658a2_aa07-d33861eae5655995_2fb1-fe6b3de8c88b8573_9f76-79c66caa40f16dbc_874a-133d52a8aaf9db3f_1647-b63996c03c2d6b3e_6ac5-35025f516f41aba5_ba52-0d49a886a3c99bab_4ed0-1af6ffb5c083156a_9b7a-a1694dc92f54473f_0b07-50bc3abf986ccabb_7071-c81332c37968338f_2fef-4d30e90e534e9cbb_732b-a82cd949493bada0_0827-cce21676357b2d20_b27c-dc506a8ff8638954_1a5a-0-tasks_to_exact_times": {
+      "q_time": "2023/05/06 12:07:56",
+      "q": "When did you cook 2 slice(s) of potato and serve on a plate?",
+      "gt": "Apr 17, 2023 at 09:10 AM",
+      "hyp": "2023/04/15 11:52:48",
+      "ref_ts": [
+        [
+          "2023/04/17 09:10:33",
+          "2023/04/17 09:26:06"
+        ]
+      ]
+    },
+    "2b5a33d4908ee77d_fb8b-f2fab283e8dd367a_6c4c-30a7f003c3e49f70_ff1d-97fd7c6740b657f5_58dc-f211958a124a5ea7_cbf0-c7cc40993ef8468b_ad24-369a8cd57dde1b82_096e-d9a7f5476eac3df6_7a11-8455e3db97f9a4dc_de9d-0de4b62afcd06138_e549-724c11f87d95f819_a970-8f7791c488b51c98_fa79-d4c51dc230306c8b_d93b-7d0db28e7d18c776_c97a-6ccc8b815fbc093a_3e3a-6f28bbc4c8ed232a_bfc2-2f8d482d22e56fdd_410e-3ebbcf3c3aed7c9e_2eb2-61e8f5910474b00b_53e6-c66cfa360ba2ee00_45b2-89512fd6f5557f29_2369-a82cd949493bada0_ffe5-7334889a1fa54076_cb4c-a800b94ef5813e01_14fc-7172fd55ac8095bd_e687-32e631d248583662_b131-977b52faf01e6c05_ebe0-92904ea754a401e6_2b2c-271e4ccbac4343e1_87d1-52e190f2e5f3b790_edbb-cf32d4a95cdbcd3a_9fa2-25b52159ad56e77c_ff7f-50bc3abf986ccabb_aaee-823f0fe4bda8607c_34d8-18f6da623ba658a2_aa07-d33861eae5655995_2fb1-fe6b3de8c88b8573_9f76-79c66caa40f16dbc_874a-133d52a8aaf9db3f_1647-b63996c03c2d6b3e_6ac5-35025f516f41aba5_ba52-0d49a886a3c99bab_4ed0-1af6ffb5c083156a_9b7a-a1694dc92f54473f_0b07-50bc3abf986ccabb_7071-c81332c37968338f_2fef-4d30e90e534e9cbb_732b-a82cd949493bada0_0827-cce21676357b2d20_b27c-dc506a8ff8638954_1a5a-0-tasks_to_days_ago": {
+      "q_time": "2023/05/06 12:07:56",
+      "q": "Today is May 06, 2023 at 12:07 PM. How many days ago did you make a salad?",
+      "gt": "19 days ago and 18 days ago and 15 days ago and 9 days ago and 8 days ago and 6 days ago and 2 days ago and 0 day ago",
+      "hyp": "2 days ago",
+      "ref_ts": [
+        [
+          "2023/04/28 13:36:45",
+          "2023/04/28 13:45:15"
+        ],
+        [
+          "2023/04/30 09:31:09",
+          "2023/04/30 09:55:29"
+        ],
+        [
+          "2023/04/17 14:28:07",
+          "2023/04/17 14:40:53"
+        ],
+        [
+          "2023/04/18 17:44:00",
+          "2023/04/18 18:08:37"
+        ],
+        [
+          "2023/05/04 12:42:41",
+          "2023/05/04 12:47:10"
+        ],
+        [
+          "2023/05/06 10:24:58",
+          "2023/05/06 10:31:10"
+        ],
+        [
+          "2023/04/21 14:59:12",
+          "2023/04/21 15:02:34"
+        ],
+        [
+          "2023/04/27 14:22:21",
+          "2023/04/27 14:31:12"
+        ]
+      ]
+    },
+    "2b5a33d4908ee77d_fb8b-f2fab283e8dd367a_6c4c-30a7f003c3e49f70_ff1d-97fd7c6740b657f5_58dc-f211958a124a5ea7_cbf0-c7cc40993ef8468b_ad24-369a8cd57dde1b82_096e-d9a7f5476eac3df6_7a11-8455e3db97f9a4dc_de9d-0de4b62afcd06138_e549-724c11f87d95f819_a970-8f7791c488b51c98_fa79-d4c51dc230306c8b_d93b-7d0db28e7d18c776_c97a-6ccc8b815fbc093a_3e3a-6f28bbc4c8ed232a_bfc2-2f8d482d22e56fdd_410e-3ebbcf3c3aed7c9e_2eb2-61e8f5910474b00b_53e6-c66cfa360ba2ee00_45b2-89512fd6f5557f29_2369-a82cd949493bada0_ffe5-7334889a1fa54076_cb4c-a800b94ef5813e01_14fc-7172fd55ac8095bd_e687-32e631d248583662_b131-977b52faf01e6c05_ebe0-92904ea754a401e6_2b2c-271e4ccbac4343e1_87d1-52e190f2e5f3b790_edbb-cf32d4a95cdbcd3a_9fa2-25b52159ad56e77c_ff7f-50bc3abf986ccabb_aaee-823f0fe4bda8607c_34d8-18f6da623ba658a2_aa07-d33861eae5655995_2fb1-fe6b3de8c88b8573_9f76-79c66caa40f16dbc_874a-133d52a8aaf9db3f_1647-b63996c03c2d6b3e_6ac5-35025f516f41aba5_ba52-0d49a886a3c99bab_4ed0-1af6ffb5c083156a_9b7a-a1694dc92f54473f_0b07-50bc3abf986ccabb_7071-c81332c37968338f_2fef-4d30e90e534e9cbb_732b-a82cd949493bada0_0827-cce21676357b2d20_b27c-dc506a8ff8638954_1a5a-0-days_ago_to_episode": {
+      "q_time": "2023/05/06 12:07:56",
+      "q": "Today is May 06, 2023 at 12:07 PM. What did you do 23 days ago?",
+      "gt": "clean all the mugs and make a sandwich.",
+      "hyp": "23 days ago was April 13, 2023. On that day, I cleaned two dirty mugs and then made a tomato sandwich by slicing bread, toasting it, slicing a tomato, and placing the ingredients on a plate.",
+      "ref_ts": [
+        [
+          "2023/04/13 11:21:39",
+          "2023/04/13 11:27:01"
+        ],
+        [
+          "2023/04/13 14:26:23",
+          "2023/04/13 14:37:30"
+        ]
+      ]
+    }
+  },
+  "token_costs": {
+    "prompt_tokens": 11550524,
+    "completion_tokens": 13684
+  }
+}
