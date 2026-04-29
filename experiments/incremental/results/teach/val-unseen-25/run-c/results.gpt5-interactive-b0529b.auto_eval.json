@@ -1,0 +1,306 @@
+{
+  "config": "llm_emv/config/llm_eval/gpt5-interactive.yaml",
+  "code_commit": "b0529b683d058deb3f8a80a3baf0b93d435200b8",
+  "results": {
+    "history-7-2-valid_unseen-a2d31b84a569e568_d0e5-281.279794-0": {
+      "cat": "no_answer"
+    },
+    "history-7-4-valid_unseen-6f4aca312776de7b_97f3-292.311574-0": {
+      "cat": "no_answer"
+    },
+    "history-7-4-valid_unseen-6f4aca312776de7b_97f3-292.311574-1": {
+      "cat": "no_answer"
+    },
+    "history-7-4-valid_unseen-6f4aca312776de7b_97f3-292.311574-2": {
+      "cat": "no_answer"
+    },
+    "history-7-4-valid_unseen-6f4aca312776de7b_97f3-292.311574-3": {
+      "cat": "no_answer"
+    },
+    "history-7-10-valid_unseen-c02445dd7a5b6f26_e68d-70.94817-0": {
+      "cat": "no_answer"
+    },
+    "history-7-16-valid_unseen-2f8d482d22e56fdd_113f-316.365112-0": {
+      "cat": "wrong"
+    },
+    "history-7-21-valid_unseen-36f78323469b2b02_5f91-222.555615-0": {
+      "cat": "no_answer"
+    },
+    "history-7-22-valid_unseen-2b5a33d4908ee77d_fb8b-212.020419-0": {
+      "cat": "no_answer"
+    },
+    "history-7-22-valid_unseen-2b5a33d4908ee77d_fb8b-212.020419-1": {
+      "cat": "wrong"
+    },
+    "history-4-3-valid_unseen-d94b413680f6d6de_17a8-141.550247-0": {
+      "cat": "correct_summarized"
+    },
+    "history-4-3-valid_unseen-d94b413680f6d6de_17a8-141.550247-1": {
+      "cat": "wrong"
+    },
+    "history-4-3-valid_unseen-d94b413680f6d6de_17a8-141.550247-2": {
+      "cat": "no_answer"
+    },
+    "history-4-7-valid_unseen-f2f6723ebab1e6a2_bfeb-107.960684-0": {
+      "cat": "wrong"
+    },
+    "history-4-16-valid_unseen-8e72a0b1a1a741cb_6600-91.565107-0": {
+      "cat": "no_answer"
+    },
+    "history-4-16-valid_unseen-8e72a0b1a1a741cb_6600-91.565107-1": {
+      "cat": "wrong"
+    },
+    "history-4-19-valid_unseen-0ae40b26ad1ead81_6240-43.587012-0": {
+      "cat": "correct"
+    },
+    "history-4-19-valid_unseen-0ae40b26ad1ead81_6240-43.587012-1": {
+      "cat": "partially_correct_tmi"
+    },
+    "history-4-22-valid_unseen-4b7b1a5b7f3d19ae_1413-267.543048-0": {
+      "cat": "correct"
+    },
+    "history-4-22-valid_unseen-4b7b1a5b7f3d19ae_1413-267.543048-1": {
+      "cat": "wrong"
+    },
+    "history-9-2-valid_unseen-a451af83aeece675_117b-592.9131-0": {
+      "cat": "wrong"
+    },
+    "history-9-4-valid_unseen-bfa7505b440eadde_b257-94.437208-0": {
+      "cat": "no_answer"
+    },
+    "history-9-10-valid_unseen-fb7d765ba6874372_0a26-139.284278-0": {
+      "cat": "wrong"
+    },
+    "history-9-10-valid_unseen-fb7d765ba6874372_0a26-139.284278-1": {
+      "cat": "wrong"
+    },
+    "history-9-12-valid_unseen-e455dbf27ecaf413_4c4d-228.399303-0": {
+      "cat": "no_answer"
+    },
+    "history-9-18-valid_unseen-05939cecccf57de5_e623-422.160692-0": {
+      "cat": "no_answer"
+    },
+    "history-9-18-valid_unseen-05939cecccf57de5_e623-422.160692-1": {
+      "cat": "no_answer"
+    },
+    "history-9-19-valid_unseen-b53c115c99ca34dd_5e2b-186.015748-0": {
+      "cat": "no_answer"
+    },
+    "history-9-19-valid_unseen-b53c115c99ca34dd_5e2b-186.015748-1": {
+      "cat": "no_answer"
+    },
+    "history-9-23-valid_unseen-4f4013ceab294a80_1bb3-125.847644-0": {
+      "cat": "wrong"
+    },
+    "history-5-2-valid_unseen-3eea22aeefd4b6ec_a76b-575.823846-0": {
+      "cat": "partially_correct_missing"
+    },
+    "history-5-2-valid_unseen-3eea22aeefd4b6ec_a76b-575.823846-1": {
+      "cat": "no_answer"
+    },
+    "history-5-3-valid_unseen-9a2caf8a70e0ae50_1b97-32.666179-0": {
+      "cat": "no_answer"
+    },
+    "history-5-4-valid_unseen-724c11f87d95f819_a970-67.591432-0": {
+      "cat": "wrong"
+    },
+    "history-5-5-valid_unseen-97cbfa8d72926abe_4599-341.454569-0": {
+      "cat": "no_answer"
+    },
+    "history-5-7-valid_unseen-c70d9a05ca542364_77d5-39.133375-0": {
+      "cat": "no_answer"
+    },
+    "history-5-17-valid_unseen-2ed555b6ad361b03_1875-111.702261-0": {
+      "cat": "wrong"
+    },
+    "history-5-18-valid_unseen-a82cd949493bada0_ffe5-159.714461-0": {
+      "cat": "correct"
+    },
+    "history-5-20-valid_unseen-e455dbf27ecaf413_4c4d-42.739599-0": {
+      "cat": "no_answer"
+    },
+    "history-5-21-valid_unseen-b87bd55d7820c86e_8d92-307.897539-0": {
+      "cat": "correct"
+    },
+    "history-1-4-valid_unseen-6ccc8b815fbc093a_e921-303.501122-0": {
+      "cat": "wrong"
+    },
+    "history-1-4-valid_unseen-6ccc8b815fbc093a_e921-303.501122-1": {
+      "cat": "wrong"
+    },
+    "history-1-6-valid_unseen-a690a35743c855aa_ef68-285.144514-0": {
+      "cat": "wrong"
+    },
+    "history-1-6-valid_unseen-a690a35743c855aa_ef68-285.144514-1": {
+      "cat": "no_answer"
+    },
+    "history-1-8-valid_unseen-56734e09a224d64c_5396-49.322285-0": {
+      "cat": "no_answer"
+    },
+    "history-1-9-valid_unseen-e935582bf436b03a_b849-365.453474-0": {
+      "cat": "correct"
+    },
+    "history-1-14-valid_unseen-2bb159500f5ee79b_77a4-248.340197-0": {
+      "cat": "no_answer"
+    },
+    "history-1-19-valid_unseen-ae0ef037bccf67c9_c77e-87.141405-0": {
+      "cat": "no_answer"
+    },
+    "history-1-22-valid_unseen-a7fe03e97b4ebb4b_effc-756.195247-0": {
+      "cat": "wrong"
+    },
+    "history-1-23-valid_unseen-408395620e930cfa_efa8-463.006822-0": {
+      "cat": "wrong"
+    },
+    "history-0-1-valid_unseen-269cf34b9f509097_1f5b-182.283625-0": {
+      "cat": "correct"
+    },
+    "history-0-4-valid_unseen-c4bde24cdcf68b31_e74b-406.015815-0": {
+      "cat": "partially_correct_tmi"
+    },
+    "history-0-8-valid_unseen-a4352bf3d6d33265_46d2-119.406193-0": {
+      "cat": "wrong"
+    },
+    "history-0-8-valid_unseen-a4352bf3d6d33265_46d2-119.406193-1": {
+      "cat": "correct"
+    },
+    "history-0-17-valid_unseen-1c9ed9fd82e4a520_cfee-106.392444-0": {
+      "cat": "no_answer"
+    },
+    "history-0-19-valid_unseen-1a8b00c643110183_ebc6-177.941119-0": {
+      "cat": "wrong"
+    },
+    "history-0-19-valid_unseen-1a8b00c643110183_ebc6-177.941119-1": {
+      "cat": "wrong"
+    },
+    "history-0-23-valid_unseen-95cb6d56c9a3d66a_bf80-227.156064-0": {
+      "cat": "no_answer"
+    },
+    "history-0-23-valid_unseen-95cb6d56c9a3d66a_bf80-227.156064-1": {
+      "cat": "no_answer"
+    },
+    "history-0-23-valid_unseen-95cb6d56c9a3d66a_bf80-227.156064-2": {
+      "cat": "partially_correct_missing"
+    },
+    "history-8-2-valid_unseen-88f8ad0d2d356270_bb95-76.968351-0": {
+      "cat": "no_answer"
+    },
+    "history-8-3-valid_unseen-e6843c101e55d384_bd4c-484.943137-0": {
+      "cat": "correct"
+    },
+    "history-8-3-valid_unseen-e6843c101e55d384_bd4c-484.943137-1": {
+      "cat": "wrong"
+    },
+    "history-8-13-valid_unseen-1bbfe20e48fba275_22dc-46.659712-0": {
+      "cat": "correct"
+    },
+    "history-8-19-valid_unseen-3f167104c834d2a1_4a77-46.636827-0": {
+      "cat": "correct"
+    },
+    "history-8-19-valid_unseen-3f167104c834d2a1_4a77-46.636827-1": {
+      "cat": "wrong"
+    },
+    "history-8-20-valid_unseen-57862376ad3394a1_c9dc-153.832735-0": {
+      "cat": "wrong"
+    },
+    "history-8-22-valid_unseen-af51d39b23e95018_8b5d-544.330782-0": {
+      "cat": "wrong"
+    },
+    "history-8-24-valid_unseen-36492265af47de94_a352-173.373526-0": {
+      "cat": "wrong"
+    },
+    "history-8-24-valid_unseen-36492265af47de94_a352-173.373526-1": {
+      "cat": "wrong"
+    },
+    "history-3-2-valid_unseen-0d600126a7947365_cac4-133.206604-0": {
+      "cat": "no_answer"
+    },
+    "history-3-2-valid_unseen-0d600126a7947365_cac4-133.206604-1": {
+      "cat": "wrong"
+    },
+    "history-3-3-valid_unseen-823f0fe4bda8607c_ee5e-80.264222-0": {
+      "cat": "wrong"
+    },
+    "history-3-3-valid_unseen-823f0fe4bda8607c_ee5e-80.264222-1": {
+      "cat": "no_answer"
+    },
+    "history-3-5-valid_unseen-f2f6723ebab1e6a2_bfeb-131.555336-0": {
+      "cat": "correct"
+    },
+    "history-3-12-valid_unseen-dcc90b08c376f4dc_74ab-83.056111-0": {
+      "cat": "wrong"
+    },
+    "history-3-12-valid_unseen-dcc90b08c376f4dc_74ab-83.056111-1": {
+      "cat": "wrong"
+    },
+    "history-3-18-valid_unseen-ed9479c5dd8f204d_7c78-153.055285-0": {
+      "cat": "wrong"
+    },
+    "history-3-23-valid_unseen-ce30a8a00ede18d4_8eef-175.878957-0": {
+      "cat": "wrong"
+    },
+    "history-3-23-valid_unseen-ce30a8a00ede18d4_8eef-175.878957-1": {
+      "cat": "correct"
+    },
+    "history-2-1-valid_unseen-a690a35743c855aa_ef68-254.645092-0": {
+      "cat": "no_answer"
+    },
+    "history-2-1-valid_unseen-a690a35743c855aa_ef68-254.645092-1": {
+      "cat": "no_answer"
+    },
+    "history-2-1-valid_unseen-a690a35743c855aa_ef68-254.645092-2": {
+      "cat": "partially_correct_missing"
+    },
+    "history-2-3-valid_unseen-b63996c03c2d6b3e_6ac5-40.26905-0": {
+      "cat": "wrong"
+    },
+    "history-2-3-valid_unseen-b63996c03c2d6b3e_6ac5-40.26905-1": {
+      "cat": "no_answer"
+    },
+    "history-2-19-valid_unseen-c1eba1e4b831e04b_f3ad-95.621925-0": {
+      "cat": "partially_correct_missing"
+    },
+    "history-2-21-valid_unseen-cb0e41e1b364ad27_6591-316.610926-0": {
+      "cat": "correct"
+    },
+    "history-2-23-valid_unseen-4bf5505b7a84f526_2d77-182.441811-0": {
+      "cat": "wrong"
+    },
+    "history-2-23-valid_unseen-4bf5505b7a84f526_2d77-182.441811-1": {
+      "cat": "wrong"
+    },
+    "history-2-23-valid_unseen-4bf5505b7a84f526_2d77-182.441811-2": {
+      "cat": "no_answer"
+    },
+    "history-6-2-valid_unseen-af51d39b23e95018_8b5d-324.011174-0": {
+      "cat": "no_answer"
+    },
+    "history-6-3-valid_unseen-54126d5229149bc1_2ccd-66.474788-0": {
+      "cat": "correct"
+    },
+    "history-6-3-valid_unseen-54126d5229149bc1_2ccd-66.474788-1": {
+      "cat": "no_answer"
+    },
+    "history-6-5-valid_unseen-7172fd55ac8095bd_e687-214.697764-0": {
+      "cat": "no_answer"
+    },
+    "history-6-8-valid_unseen-4e8496b9f642bba0_36f1-128.868318-0": {
+      "cat": "wrong"
+    },
+    "history-6-8-valid_unseen-4e8496b9f642bba0_36f1-128.868318-1": {
+      "cat": "wrong"
+    },
+    "history-6-8-valid_unseen-4e8496b9f642bba0_36f1-128.868318-2": {
+      "cat": "no_answer"
+    },
+    "history-6-16-valid_unseen-2555a8d0daa55d1b_5895-23.762845-0": {
+      "cat": "no_answer"
+    },
+    "history-6-21-valid_unseen-6f4aca312776de7b_97f3-439.590049-0": {
+      "cat": "correct"
+    },
+    "history-6-21-valid_unseen-6f4aca312776de7b_97f3-439.590049-1": {
+      "cat": "correct"
+    }
+  }
+}

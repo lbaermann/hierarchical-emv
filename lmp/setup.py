@@ -4,7 +4,7 @@ from typing import Dict
 
 import yaml
 from langchain.chat_models.base import BaseChatModel
-from langchain.schema.language_model import BaseLanguageModel
+from langchain_core.language_models import BaseLanguageModel
 
 import lmp.repl.error_handlers
 from .code_execution import CodeExecutionEnvironment
@@ -162,6 +162,7 @@ def _instantiate_learn_from_interaction(learn_cfg: Dict):
 
 
 def instantiate_llm(llm_cfg: Dict) -> BaseLanguageModel:
+    llm_cfg = dict(llm_cfg)  # Do not modify original dict
     llm_cfg.setdefault('type', 'ChatOpenAI')
     if 'OpenAI' in llm_cfg['type']:
         import openai

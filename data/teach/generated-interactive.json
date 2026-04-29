@@ -1,0 +1,522 @@
+{
+  "config": {
+    "teach_base": "/Users/leonard/Documents/KIT/Research/Papers/Hierarchical-LLM-EMV/data/teach",
+    "teach_split": "train",
+    "seed": "42",
+    "n_histories": "3",
+    "max_test_cases_per_history": "10",
+    "min_seq_len": "5",
+    "max_seq_len": "5",
+    "out_file": "data/teach/generated-interactive.json"
+  },
+  "data": {
+    "history-0": [
+      {
+        "game_id": "train/7df461d2fe5cd727_55e2",
+        "start_date": "2024-08-31 14:44:05",
+        "qa": {}
+      },
+      {
+        "game_id": "train/986e27addceee441_74b6",
+        "start_date": "2024-09-03 08:04:40",
+        "qa": {
+          "489.268561": [
+            {
+              "question": "What objects did you see the first time you did pickup a bread?",
+              "answer": "peppershaker, fridge, cabinet, potato, floor, countertop, mug, plate, tomato, drawer, bread, coffeemachine",
+              "correction": "You should always remember all the objects you see when you pickup a bread",
+              "pairid": "872807ed5df89b2e032b488dd3db0848",
+              "pair_idx": 1
+            },
+            {
+              "question": "When did you first finish to transport a bread?",
+              "answer": "At 2024/08/31, 14:50:13",
+              "correction": "You should always remember the exact time when you finish to transport a bread",
+              "pairid": "f6759fe92f7337a29d300d3c9acc82fd",
+              "pair_idx": 1
+            },
+            {
+              "question": "What objects did you see the first time you did finish to transport a bread?",
+              "answer": "peppershaker, apple, pot, bowl, countertop, spoon, plate, mug, bread, coffeemachine",
+              "correction": "You should always remember all the objects you see when you finish to transport a bread",
+              "pairid": "ca91f260a15eb042284f4e573bf251ee",
+              "pair_idx": 1
+            },
+            {
+              "question": "When did you first place a bread?",
+              "answer": "At 2024/08/31, 14:50:13",
+              "correction": "You should always remember the exact time when you place a bread",
+              "pairid": "69f20fd57fb4f3bb48fcfaf0e70d1151",
+              "pair_idx": 1
+            },
+            {
+              "question": "Where did you first place a bread?",
+              "answer": "At the countertop",
+              "correction": "You should always remember the location where you place a bread",
+              "pairid": "b49600c4e63634d991f4a8ea27ecbe24",
+              "pair_idx": 1
+            },
+            {
+              "question": "To where did you first transport a bread?",
+              "answer": "At the countertop",
+              "correction": "You should always remember the location to where you transport a bread",
+              "pairid": "de718f171efa57d72bf5710340aebd6c",
+              "pair_idx": 1
+            },
+            {
+              "question": "When did you first pickup a bread?",
+              "answer": "At 2024/08/31, 14:49:54",
+              "correction": "You should always remember the exact time when you pickup a bread",
+              "pairid": "fea8b942a821e4cbeba6a2ad7cee7d74",
+              "pair_idx": 1
+            },
+            {
+              "question": "What steps did you perform during transport of the bread?",
+              "answer": "Pickup the bread, Place the bread at the countertop",
+              "correction": "You should always remember the detailed steps you perform during transport of the bread",
+              "pairid": "0af5ece5c154e57cbd95009f744fd0e0",
+              "pair_idx": 1
+            },
+            {
+              "question": "What objects did you see the first time you did place a bread?",
+              "answer": "peppershaker, apple, pot, bowl, countertop, spoon, plate, mug, bread, coffeemachine",
+              "correction": "You should always remember all the objects you see when you place a bread",
+              "pairid": "74dc65f4aa068b8569c338735693f085",
+              "pair_idx": 1
+            }
+          ]
+        }
+      },
+      {
+        "game_id": "train/99ea6700eecc9742_3789",
+        "start_date": "2024-09-03 17:40:11",
+        "qa": {}
+      },
+      {
+        "game_id": "train/a66399234f251341_59d0",
+        "start_date": "2024-09-06 09:06:46",
+        "qa": {
+          "22.485532": [
+            {
+              "question": "What objects did you see the last time you did pickup a bread?",
+              "answer": "coffeemachine, saltshaker, fork, sink basin, butterknife, cabinet, window, mug, countertop, spoon, cup, bread, sink, faucet, spatula",
+              "correction": "You should always remember all the objects you see when you pickup a bread",
+              "pairid": "872807ed5df89b2e032b488dd3db0848",
+              "pair_idx": 2
+            },
+            {
+              "question": "When did you last finish to transport a bread?",
+              "answer": "At 2024/09/03, 17:45:26",
+              "correction": "You should always remember the exact time when you finish to transport a bread",
+              "pairid": "f6759fe92f7337a29d300d3c9acc82fd",
+              "pair_idx": 2
+            },
+            {
+              "question": "What objects did you see the last time you did finish to transport a bread?",
+              "answer": "coffeemachine, saltshaker, fork, sink basin, butterknife, cabinet, window, mug, countertop, spoon, cup, bread, sink, faucet, spatula",
+              "correction": "You should always remember all the objects you see when you finish to transport a bread",
+              "pairid": "ca91f260a15eb042284f4e573bf251ee",
+              "pair_idx": 2
+            },
+            {
+              "question": "When did you last place a bread?",
+              "answer": "At 2024/09/03, 17:45:26",
+              "correction": "You should always remember the exact time when you place a bread",
+              "pairid": "69f20fd57fb4f3bb48fcfaf0e70d1151",
+              "pair_idx": 2
+            },
+            {
+              "question": "Where did you last place a bread?",
+              "answer": "At the countertop",
+              "correction": "You should always remember the location where you place a bread",
+              "pairid": "b49600c4e63634d991f4a8ea27ecbe24",
+              "pair_idx": 2
+            },
+            {
+              "question": "To where did you last transport a bread?",
+              "answer": "At the countertop",
+              "correction": "You should always remember the location to where you transport a bread",
+              "pairid": "de718f171efa57d72bf5710340aebd6c",
+              "pair_idx": 2
+            },
+            {
+              "question": "When did you last pickup a bread?",
+              "answer": "At 2024/09/03, 17:45:22",
+              "correction": "You should always remember the exact time when you pickup a bread",
+              "pairid": "fea8b942a821e4cbeba6a2ad7cee7d74",
+              "pair_idx": 2
+            },
+            {
+              "question": "What steps did you perform during transport of the bread?",
+              "answer": "Pickup the bread, Place the bread at the countertop",
+              "correction": "You should always remember the detailed steps you perform during transport of the bread",
+              "pairid": "0af5ece5c154e57cbd95009f744fd0e0",
+              "pair_idx": 2
+            },
+            {
+              "question": "What objects did you see the last time you did place a bread?",
+              "answer": "coffeemachine, saltshaker, fork, sink basin, butterknife, cabinet, window, mug, countertop, spoon, cup, bread, sink, faucet, spatula",
+              "correction": "You should always remember all the objects you see when you place a bread",
+              "pairid": "74dc65f4aa068b8569c338735693f085",
+              "pair_idx": 2
+            }
+          ]
+        }
+      },
+      {
+        "game_id": "train/ee4ddd20f142a782_4299",
+        "start_date": "2024-09-06 12:02:20",
+        "qa": {}
+      }
+    ],
+    "history-1": [
+      {
+        "game_id": "train/200129f403652491_54b7",
+        "start_date": "2024-10-25 18:06:51",
+        "qa": {}
+      },
+      {
+        "game_id": "train/99ea6700eecc9742_3789",
+        "start_date": "2024-10-31 18:30:59",
+        "qa": {
+          "263.929759": [
+            {
+              "question": "What objects did you see the first time you did pickup a fork?",
+              "answer": "peppershaker, fridge, apple, stoveburner, window, pan, knife, floor, faucet, fork, sink basin, mug, spoon, dishsponge, spatula, soapbottle, egg, toaster, sink, coffeemachine, pot, potato, countertop",
+              "correction": "You should always remember all the objects you see when you pickup a fork",
+              "pairid": "d9dce56743ee4ce0882e8210c562bd4d",
+              "pair_idx": 1
+            },
+            {
+              "question": "When did you first place a fork?",
+              "answer": "At 2024/10/25, 18:08:58",
+              "correction": "You should always remember the exact time when you place a fork",
+              "pairid": "7e78ed19fa3a707f84816af22dd9e390",
+              "pair_idx": 1
+            }
+          ]
+        }
+      },
+      {
+        "game_id": "train/a66399234f251341_59d0",
+        "start_date": "2024-11-03 09:42:52",
+        "qa": {
+          "21.737504": [
+            {
+              "question": "What objects did you see the first time you did place a saltshaker?",
+              "answer": "coffeemachine, saltshaker, fork, sink basin, butterknife, stoveburner, cabinet, window, mug, countertop, knife, plate, spoon, dishsponge, drawer, sink, faucet, spatula",
+              "correction": "You should always remember all the objects you see when you place a saltshaker",
+              "pairid": "44eff5113f21518f4fd98060e75a7457",
+              "pair_idx": 1
+            },
+            {
+              "question": "When did you first pickup a bread?",
+              "answer": "At 2024/10/31, 18:36:10",
+              "correction": "You should always remember the exact time when you pickup a bread",
+              "pairid": "e021f1e32db6c33b600b3bf1fe874064",
+              "pair_idx": 1
+            },
+            {
+              "question": "To where did you first transport a spoon?",
+              "answer": "At the sink",
+              "correction": "You should always remember the location to where you transport a spoon",
+              "pairid": "f7eebb697fbf66478ee078ea372919df",
+              "pair_idx": 1
+            },
+            {
+              "question": "What objects did you see the first time you did finish to transport a spoon?",
+              "answer": "stoveburner, window, pan, floor, faucet, fork, sink basin, butterknife, stoveknob, mug, spoon, plate, dishsponge, spatula, cabinet, drawer, sink, coffeemachine, saltshaker, pot, countertop",
+              "correction": "You should always remember all the objects you see when you finish to transport a spoon",
+              "pairid": "66643063785bef08bd8bf6df9167df19",
+              "pair_idx": 1
+            },
+            {
+              "question": "What objects did you see the first time you did pickup a saltshaker?",
+              "answer": "coffeemachine, saltshaker, fork, sink basin, butterknife, stoveburner, cabinet, window, mug, countertop, knife, plate, spoon, dishsponge, drawer, sink, faucet, spatula",
+              "correction": "You should always remember all the objects you see when you pickup a saltshaker",
+              "pairid": "a9a8085cd1e4e7b8e53b522507b21f57",
+              "pair_idx": 1
+            },
+            {
+              "question": "What objects did you see the first time you did pickup a spoon?",
+              "answer": "stoveburner, window, pan, floor, fork, sink basin, butterknife, stoveknob, mug, spoon, plate, dishsponge, spatula, cabinet, toaster, drawer, sink, saltshaker, pot, microwave, countertop",
+              "correction": "You should always remember all the objects you see when you pickup a spoon",
+              "pairid": "7e01ff3c13272477f4bee7b3db889a4e",
+              "pair_idx": 1
+            },
+            {
+              "question": "What objects did you see the first time you did pickup a bread?",
+              "answer": "coffeemachine, saltshaker, fork, sink basin, butterknife, cabinet, window, mug, countertop, spoon, cup, bread, sink, faucet, spatula",
+              "correction": "You should always remember all the objects you see when you pickup a bread",
+              "pairid": "a95f02d39c4e6fd5dda9e8cfa0d8ae92",
+              "pair_idx": 1
+            },
+            {
+              "question": "What objects did you see the first time you did finish to transport a saltshaker?",
+              "answer": "coffeemachine, saltshaker, fork, sink basin, butterknife, stoveburner, cabinet, window, mug, countertop, knife, plate, spoon, dishsponge, drawer, sink, faucet, spatula",
+              "correction": "You should always remember all the objects you see when you finish to transport a saltshaker",
+              "pairid": "937f543aa9b681439513a9f95d8a2e58",
+              "pair_idx": 1
+            }
+          ]
+        }
+      },
+      {
+        "game_id": "train/99ea6700eecc9742_3789",
+        "start_date": "2024-11-03 15:42:51",
+        "qa": {}
+      },
+      {
+        "game_id": "train/d1ac9b2c0b2bb4a2_6797",
+        "start_date": "2024-11-08 12:47:34",
+        "qa": {
+          "165.005536": [
+            {
+              "question": "What objects did you see the last time you did place a saltshaker?",
+              "answer": "coffeemachine, saltshaker, fork, sink basin, butterknife, stoveburner, cabinet, window, mug, countertop, knife, plate, spoon, dishsponge, drawer, sink, faucet, spatula",
+              "correction": "You should always remember all the objects you see when you place a saltshaker",
+              "pairid": "44eff5113f21518f4fd98060e75a7457",
+              "pair_idx": 2
+            },
+            {
+              "question": "When did you last pickup a bread?",
+              "answer": "At 2024/11/03, 15:48:02",
+              "correction": "You should always remember the exact time when you pickup a bread",
+              "pairid": "e021f1e32db6c33b600b3bf1fe874064",
+              "pair_idx": 2
+            },
+            {
+              "question": "To where did you last transport a spoon?",
+              "answer": "At the sink",
+              "correction": "You should always remember the location to where you transport a spoon",
+              "pairid": "f7eebb697fbf66478ee078ea372919df",
+              "pair_idx": 2
+            },
+            {
+              "question": "What objects did you see the last time you did finish to transport a spoon?",
+              "answer": "stoveburner, window, pan, floor, faucet, fork, sink basin, butterknife, stoveknob, mug, spoon, plate, dishsponge, spatula, cabinet, drawer, sink, coffeemachine, saltshaker, pot, countertop",
+              "correction": "You should always remember all the objects you see when you finish to transport a spoon",
+              "pairid": "66643063785bef08bd8bf6df9167df19",
+              "pair_idx": 2
+            },
+            {
+              "question": "What objects did you see the last time you did pickup a saltshaker?",
+              "answer": "coffeemachine, saltshaker, fork, sink basin, butterknife, stoveburner, cabinet, window, mug, countertop, knife, plate, spoon, dishsponge, drawer, sink, faucet, spatula",
+              "correction": "You should always remember all the objects you see when you pickup a saltshaker",
+              "pairid": "a9a8085cd1e4e7b8e53b522507b21f57",
+              "pair_idx": 2
+            },
+            {
+              "question": "What objects did you see the last time you did pickup a fork?",
+              "answer": "saltshaker, apple, fork, pot, sink basin, butterknife, houseplant, chair, lettuce, countertop, floor, sink, diningtable",
+              "correction": "You should always remember all the objects you see when you pickup a fork",
+              "pairid": "d9dce56743ee4ce0882e8210c562bd4d",
+              "pair_idx": 2
+            },
+            {
+              "question": "What objects did you see the last time you did pickup a spoon?",
+              "answer": "stoveburner, window, pan, floor, fork, sink basin, butterknife, stoveknob, mug, spoon, plate, dishsponge, spatula, cabinet, toaster, drawer, sink, saltshaker, pot, microwave, countertop",
+              "correction": "You should always remember all the objects you see when you pickup a spoon",
+              "pairid": "7e01ff3c13272477f4bee7b3db889a4e",
+              "pair_idx": 2
+            },
+            {
+              "question": "What objects did you see the last time you did pickup a bread?",
+              "answer": "coffeemachine, saltshaker, fork, sink basin, butterknife, cabinet, window, mug, countertop, spoon, cup, bread, sink, faucet, spatula",
+              "correction": "You should always remember all the objects you see when you pickup a bread",
+              "pairid": "a95f02d39c4e6fd5dda9e8cfa0d8ae92",
+              "pair_idx": 2
+            },
+            {
+              "question": "When did you last place a fork?",
+              "answer": "At 2024/11/03, 15:46:13",
+              "correction": "You should always remember the exact time when you place a fork",
+              "pairid": "7e78ed19fa3a707f84816af22dd9e390",
+              "pair_idx": 2
+            },
+            {
+              "question": "What objects did you see the last time you did finish to transport a saltshaker?",
+              "answer": "coffeemachine, saltshaker, fork, sink basin, butterknife, stoveburner, cabinet, window, mug, countertop, knife, plate, spoon, dishsponge, drawer, sink, faucet, spatula",
+              "correction": "You should always remember all the objects you see when you finish to transport a saltshaker",
+              "pairid": "937f543aa9b681439513a9f95d8a2e58",
+              "pair_idx": 2
+            }
+          ]
+        }
+      }
+    ],
+    "history-2": [
+      {
+        "game_id": "train/00c563b66987c452_a8dd",
+        "start_date": "2024-06-13 17:40:52",
+        "qa": {}
+      },
+      {
+        "game_id": "train/986e27addceee441_74b6",
+        "start_date": "2024-06-15 19:21:48",
+        "qa": {}
+      },
+      {
+        "game_id": "train/ee4ddd20f142a782_4299",
+        "start_date": "2024-06-16 17:47:32",
+        "qa": {}
+      },
+      {
+        "game_id": "train/200129f403652491_54b7",
+        "start_date": "2024-06-21 13:04:39",
+        "qa": {
+          "350.3518": [
+            {
+              "question": "What objects did you see the first time you did place a fork?",
+              "answer": "apple, saltshaker, fork, egg, cabinet, stoveburner, pan, potato, stoveknob, countertop, cup, plate, microwave, toaster, drawer, mug, floor, knife",
+              "correction": "You should always remember all the objects you see when you place a fork",
+              "pairid": "09b5049da40ba9040c916f018da6e549",
+              "pair_idx": 1
+            },
+            {
+              "question": "Where did you first place a soapbottle?",
+              "answer": "At the countertop",
+              "correction": "You should always remember the location where you place a soapbottle",
+              "pairid": "b81c1d14d4b726ffc04a31f086aeaf8c",
+              "pair_idx": 1
+            },
+            {
+              "question": "What objects did you see the first time you did finish to transport a fork?",
+              "answer": "apple, saltshaker, fork, egg, cabinet, stoveburner, pan, potato, stoveknob, countertop, cup, plate, microwave, toaster, drawer, mug, floor, knife",
+              "correction": "You should always remember all the objects you see when you finish to transport a fork",
+              "pairid": "a5590270008bb3df46f6ff171cd57a02",
+              "pair_idx": 1
+            },
+            {
+              "question": "What steps did you perform during transport of the potato?",
+              "answer": "Pickup the potato, Place the potato at the countertop",
+              "correction": "You should always remember the detailed steps you perform during transport of the potato",
+              "pairid": "e523f12ced909a24c565794f2e28fb18",
+              "pair_idx": 1
+            },
+            {
+              "question": "When did you first finish to transport a dishsponge?",
+              "answer": "At 2024/06/15, 19:30:27",
+              "correction": "You should always remember the exact time when you finish to transport a dishsponge",
+              "pairid": "065b412cdc370adceffefabe50e68311",
+              "pair_idx": 1
+            },
+            {
+              "question": "What steps did you perform during transport of the dishsponge?",
+              "answer": "Pickup the dishsponge, Place the dishsponge at the countertop",
+              "correction": "You should always remember the detailed steps you perform during transport of the dishsponge",
+              "pairid": "6face9578e79982a7a04accde26b6cae",
+              "pair_idx": 1
+            },
+            {
+              "question": "Where did you first place a dishsponge?",
+              "answer": "At the countertop",
+              "correction": "You should always remember the location where you place a dishsponge",
+              "pairid": "baea075abfd25dd2442701d3a1c38c0a",
+              "pair_idx": 1
+            },
+            {
+              "question": "When did you first place a dishsponge?",
+              "answer": "At 2024/06/15, 19:30:27",
+              "correction": "You should always remember the exact time when you place a dishsponge",
+              "pairid": "8a690ee1c8c5082debd1574171ce2862",
+              "pair_idx": 1
+            },
+            {
+              "question": "What objects did you see the first time you did pickup a fork?",
+              "answer": "apple, saltshaker, fork, egg, cabinet, stoveburner, pan, potato, stoveknob, countertop, cup, plate, microwave, toaster, drawer, mug, floor, knife",
+              "correction": "You should always remember all the objects you see when you pickup a fork",
+              "pairid": "c177deb345f4c387a75e3ccc374d4ce5",
+              "pair_idx": 1
+            },
+            {
+              "question": "What objects did you see the first time you did pickup a soapbottle?",
+              "answer": "cabinet, mug, countertop, drawer, coffeemachine",
+              "correction": "You should always remember all the objects you see when you pickup a soapbottle",
+              "pairid": "b1fb4e129636fb37a5c7787adf1200d9",
+              "pair_idx": 1
+            }
+          ]
+        }
+      },
+      {
+        "game_id": "train/0093649eeed1f61c_da2d",
+        "start_date": "2024-06-22 17:03:47",
+        "qa": {
+          "73.055215": [
+            {
+              "question": "What objects did you see the last time you did place a fork?",
+              "answer": "peppershaker, fridge, apple, stoveburner, window, pan, knife, floor, faucet, fork, sink basin, mug, spoon, dishsponge, spatula, soapbottle, egg, toaster, sink, coffeemachine, pot, potato, countertop",
+              "correction": "You should always remember all the objects you see when you place a fork",
+              "pairid": "09b5049da40ba9040c916f018da6e549",
+              "pair_idx": 2
+            },
+            {
+              "question": "Where did you last place a soapbottle?",
+              "answer": "At the countertop",
+              "correction": "You should always remember the location where you place a soapbottle",
+              "pairid": "b81c1d14d4b726ffc04a31f086aeaf8c",
+              "pair_idx": 2
+            },
+            {
+              "question": "What objects did you see the last time you did finish to transport a fork?",
+              "answer": "peppershaker, fridge, apple, stoveburner, window, pan, knife, floor, faucet, fork, sink basin, mug, spoon, dishsponge, spatula, soapbottle, egg, toaster, sink, coffeemachine, pot, potato, countertop",
+              "correction": "You should always remember all the objects you see when you finish to transport a fork",
+              "pairid": "a5590270008bb3df46f6ff171cd57a02",
+              "pair_idx": 2
+            },
+            {
+              "question": "What steps did you perform during transport of the potato?",
+              "answer": "Pickup the potato, Place the potato at the countertop",
+              "correction": "You should always remember the detailed steps you perform during transport of the potato",
+              "pairid": "e523f12ced909a24c565794f2e28fb18",
+              "pair_idx": 2
+            },
+            {
+              "question": "When did you last finish to transport a dishsponge?",
+              "answer": "At 2024/06/21, 13:06:16",
+              "correction": "You should always remember the exact time when you finish to transport a dishsponge",
+              "pairid": "065b412cdc370adceffefabe50e68311",
+              "pair_idx": 2
+            },
+            {
+              "question": "What steps did you perform during transport of the dishsponge?",
+              "answer": "Pickup the dishsponge, Place the dishsponge at the countertop",
+              "correction": "You should always remember the detailed steps you perform during transport of the dishsponge",
+              "pairid": "6face9578e79982a7a04accde26b6cae",
+              "pair_idx": 2
+            },
+            {
+              "question": "Where did you last place a dishsponge?",
+              "answer": "At the countertop",
+              "correction": "You should always remember the location where you place a dishsponge",
+              "pairid": "baea075abfd25dd2442701d3a1c38c0a",
+              "pair_idx": 2
+            },
+            {
+              "question": "When did you last place a dishsponge?",
+              "answer": "At 2024/06/21, 13:06:16",
+              "correction": "You should always remember the exact time when you place a dishsponge",
+              "pairid": "8a690ee1c8c5082debd1574171ce2862",
+              "pair_idx": 2
+            },
+            {
+              "question": "What objects did you see the last time you did pickup a fork?",
+              "answer": "peppershaker, fridge, apple, stoveburner, window, pan, knife, floor, faucet, fork, sink basin, mug, spoon, dishsponge, spatula, soapbottle, egg, toaster, sink, coffeemachine, pot, potato, countertop",
+              "correction": "You should always remember all the objects you see when you pickup a fork",
+              "pairid": "c177deb345f4c387a75e3ccc374d4ce5",
+              "pair_idx": 2
+            },
+            {
+              "question": "What objects did you see the last time you did pickup a soapbottle?",
+              "answer": "peppershaker, fridge, apple, window, pan, knife, floor, faucet, fork, sink basin, mug, spoon, dishsponge, spatula, soapbottle, egg, cabinet, toaster, sink, coffeemachine, potato, countertop",
+              "correction": "You should always remember all the objects you see when you pickup a soapbottle",
+              "pairid": "b1fb4e129636fb37a5c7787adf1200d9",
+              "pair_idx": 2
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

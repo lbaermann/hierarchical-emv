@@ -1,13 +1,13 @@
 import re
 from types import SimpleNamespace
-from typing import List, Callable
+from typing import List
 
 from langchain_community.embeddings import HuggingFaceEmbeddings
-from langchain_community.vectorstores import Chroma
 from langchain_core.example_selectors import SemanticSimilarityExampleSelector
 from langchain_core.messages import HumanMessage, BaseMessage
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import SystemMessagePromptTemplate, HumanMessagePromptTemplate
+from langchain_core.vectorstores import InMemoryVectorStore
 
 from lmp.setup import instantiate_llm
 
@@ -24,7 +24,8 @@ class SimpleFewShotRetriever:
     def __init__(self, top_k=2,
                  sentence_similarity_model='sentence-transformers/all-MiniLM-l6-v2',
                  prompt_db: List[str] = (),
-                 question_modifier_llm: dict = None):
+                 question_modifier_llm: dict = None,
+                 similarity_model_device: str = None):
         super().__init__()
 
         example_db = list(_parse_example_db(prompt_db))
@@ -39,7 +40,8 @@ class SimpleFewShotRetriever:
                         SystemMessagePromptTemplate.from_template(system_prompt.strip())
                         + HumanMessagePromptTemplate.from_template('{q}')
                 )
-                self.question_modifier_chain = prompt | instantiate_llm(question_modifier_llm) | StrOutputParser()
+                llm = instantiate_llm(question_modifier_llm).with_config(do_not_track=True)
+                self.question_modifier_chain = prompt | llm | StrOutputParser()
                 modified_questions = self.question_modifier_chain.batch([
                     dict(q=sample['question']) for sample in example_db
                 ])
@@ -49,15 +51,15 @@ class SimpleFewShotRetriever:
                 self.question_modifier_chain = None
 
             embeddings = HuggingFaceEmbeddings(
-                model_name=sentence_similarity_model
+                model_name=sentence_similarity_model,
+                model_kwargs=dict(device=similarity_model_device)
             )
             self.example_selector = SemanticSimilarityExampleSelector.from_examples(
                 examples=example_db,
                 input_keys=['question' if question_modifier_llm is None else 'modified_question'],
                 embeddings=embeddings,
                 k=top_k,
-                vectorstore_cls=Chroma,
-                collection_name='SimpleFewShotRetriever'  # To not clash with other (in-memory) usages of Chroma
+                vectorstore_cls=InMemoryVectorStore,
             )
 
     def __call__(self, question: str) -> List[BaseMessage]:
@@ -70,8 +72,8 @@ class SimpleFewShotRetriever:
             selector_input = dict(modified_question=self.question_modifier_chain.invoke(question))
         samples = self.example_selector.select_examples(selector_input)
 
-        result = 'Example interactions:\n'
+        result = 'Example interactions:'
         for sample in samples:
-            result += sample["sample"]
+            result += '\n' + sample["sample"]
 
         return [HumanMessage(result)]

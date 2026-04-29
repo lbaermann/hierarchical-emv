@@ -3,16 +3,17 @@ import re
 from pathlib import Path
 from typing import Union, List, Tuple, Optional
 
-from langchain.output_parsers import OutputFixingParser
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
 from langchain_core.example_selectors import SemanticSimilarityExampleSelector
 from langchain_core.language_models import BaseChatModel
-from langchain_core.output_parsers import JsonOutputParser, StrOutputParser
+from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import FewShotChatMessagePromptTemplate, HumanMessagePromptTemplate, \
-    AIMessagePromptTemplate, SystemMessagePromptTemplate, PromptTemplate
+    AIMessagePromptTemplate, SystemMessagePromptTemplate
 
 from em.em_tree import HigherLevelSummary, HighestPredefinedSummaryLevel
+from em.em_util import json_fixing_parser
+from lmp.util import invoke_chain_with_adaptive_length_content
 
 ItemsToSummarize = Union[HighestPredefinedSummaryLevel, HigherLevelSummary]
 
@@ -25,16 +26,6 @@ def _load_example_db(example_dir: Path):
                        output=output_file.read_text().strip())
 
 
-_FIX_JSON_PROMPT = PromptTemplate.from_template("""
-This output is not a valid JSON object.
---------------
-{completion}
---------------
-Error: {error}
-
-Fix the error. Respond with only a copy of the above JSON object, with errors fixed:""".strip())
-
-
 class LLMBasedSummarizer:
 
     def __init__(self,
@@ -45,13 +36,15 @@ class LLMBasedSummarizer:
                  min_summary_factor_to_allow_single_item_summary=1.5
                  ):
         super().__init__()
+        self.cut_to_item_length_base = 200
 
-        json_fixing_parser = OutputFixingParser.from_llm(llm=llm, parser=JsonOutputParser(), prompt=_FIX_JSON_PROMPT)
         self.min_summary_factor_to_allow_single_item_summary = min_summary_factor_to_allow_single_item_summary
         self._group_and_summarize_chain_first_summary = self._create_group_and_summarize_template(
-            few_shot_k, similarity_model, example_db_name, higher_level_summary_mode=False) | llm | json_fixing_parser
+            few_shot_k, similarity_model, example_db_name, higher_level_summary_mode=False
+        ) | llm | json_fixing_parser(llm)
         self._group_and_summarize_chain_higher_level = self._create_group_and_summarize_template(
-            few_shot_k, similarity_model, example_db_name, higher_level_summary_mode=True) | llm | json_fixing_parser
+            few_shot_k, similarity_model, example_db_name, higher_level_summary_mode=True
+        ) | llm | json_fixing_parser(llm)
 
         simple_prompt = (
                 SystemMessagePromptTemplate.from_template(
@@ -75,10 +68,10 @@ class LLMBasedSummarizer:
         )
         self._retry_first_level_chain = (self._create_group_and_summarize_template(
             few_shot_k=0, similarity_model='', example_db_name='',
-            higher_level_summary_mode=False) + retry_prompt) | llm | json_fixing_parser
+            higher_level_summary_mode=False) + retry_prompt) | llm | json_fixing_parser(llm)
         self._retry_higher_level_chain = (self._create_group_and_summarize_template(
             few_shot_k=0, similarity_model='', example_db_name='',
-            higher_level_summary_mode=True) + retry_prompt) | llm | json_fixing_parser
+            higher_level_summary_mode=True) + retry_prompt) | llm | json_fixing_parser(llm)
 
     @staticmethod
     def _create_group_and_summarize_template(few_shot_k: int, similarity_model: str,
@@ -179,12 +172,15 @@ class LLMBasedSummarizer:
     def group_and_summarize(
             self, items: List[ItemsToSummarize]
     ) -> List[HigherLevelSummary]:
-        context = self.format_context(items)
         higher_lvl_mode = isinstance(items[0], HigherLevelSummary)
         if higher_lvl_mode:
-            result = self._group_and_summarize_chain_higher_level.invoke({'input': context})
+            chain = self._group_and_summarize_chain_higher_level
         else:
-            result = self._group_and_summarize_chain_first_summary.invoke({'input': context})
+            chain = self._group_and_summarize_chain_first_summary
+        result = invoke_chain_with_adaptive_length_content(
+            chain,
+            lambda trial: {'input': self.adaptive_format_context(items, trial)},
+            max_retries=10)
         print(self, 'group and summarize (higher level:', higher_lvl_mode, ') output:', result)
 
         parsed_result, errors = self._parse_group_and_summarize_output(result, len(items))
@@ -195,9 +191,12 @@ class LLMBasedSummarizer:
                 chain = self._retry_higher_level_chain
             else:
                 chain = self._retry_first_level_chain
-            result = chain.invoke({'input': context,
-                                   'errors': '\n'.join(f' - {e}' for e in errors),
-                                   'wrong_output': json.dumps(result)})
+            result = invoke_chain_with_adaptive_length_content(
+                chain, lambda trial: {
+                    'input': self.adaptive_format_context(items, trial),
+                    'errors': '\n'.join(f' - {e}' for e in errors),
+                    'wrong_output': json.dumps(result)
+                }, max_retries=10)
             print(self, 'retry group and summarize (higher level:', higher_lvl_mode, ') output:', result)
             i += 1
             parsed_result, errors = self._parse_group_and_summarize_output(result, len(items))
@@ -217,8 +216,10 @@ class LLMBasedSummarizer:
         ]
 
     def simple_summarize(self, items: List[ItemsToSummarize]):
-        context = self.format_context(items)
-        summary = self._simple_summarize_chain.invoke({'input': context})
+        summary = invoke_chain_with_adaptive_length_content(
+            self._simple_summarize_chain,
+            lambda trial: {'input': self.adaptive_format_context(items, trial)},
+            max_retries=10)
         print(self, 'simple summary output', summary)
         return HigherLevelSummary(
             summary, items
@@ -239,9 +240,16 @@ class LLMBasedSummarizer:
             # This is a rare edge case when group_and_summarize has mostly empty events and returns one GoalBasedSummary
             return self.simple_summarize(result)
 
+    def adaptive_format_context(self, items, trial: int):
+        if trial == 0:
+            max_length = None
+        else:
+            max_length = int(self.cut_to_item_length_base * 0.75 ** (trial - 1))
+        return self.format_context(items, max_length)
+
     @staticmethod
-    def format_context(items):
+    def format_context(items, max_item_length: int = None):
         return '\n'.join(
-            f'{i}.\t{item.range[0]} - {item.range[1]}: ' + item.nl_summary.replace("\n", "\n\t")
+            f'{i}.\t{item.range[0]} - {item.range[1]}: ' + item.nl_summary.replace("\n", "\n\t")[:max_item_length]
             for i, item in enumerate(items)
         )

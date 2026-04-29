@@ -31,8 +31,8 @@ User question: Today is November 03. How many days ago did you make a sandwich?
       ...
   ...
 
->>> now() - history[6][1].range[0]
-datetime.timedelta(days=7, seconds=10786, microseconds=540744)
+>>> now().date() - history[6][1].range[0].date()
+datetime.timedelta(days=7)
 
 2024/10/21 - 2024/11/02: "Over the past weeks, I diligently prepared meals, organized household items, and performed various cleaning tasks, consistently completing each assignment to the user's satisfaction and receiving appreciation for my efforts."  
   ...

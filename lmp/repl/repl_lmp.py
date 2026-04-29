@@ -2,7 +2,7 @@ import ast
 import traceback
 from typing import Union, List, Optional
 
-from langchain.schema.language_model import BaseLanguageModel
+from langchain_core.language_models import BaseLanguageModel
 
 from .code_execution import ReplExecutionEnvironment
 from .dynamic_prompt import DynamicPromptBuilder, END_OF_TASK

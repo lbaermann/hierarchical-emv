@@ -25,9 +25,11 @@ class SimplifiedCodingEMV:
             error_handlers: List[ErrorHandler],
             max_rounds=10,
             exclude_imports=None,
-            force_initial_command=None
+            force_initial_command=None,
+            always_use_full_indices=False
     ):
         super().__init__()
+        self._always_use_full_indices = always_use_full_indices
         self._force_initial_command = force_initial_command
         self._prompt_cfg = prompt_cfg
         self._exclude_imports = exclude_imports or []
@@ -36,7 +38,10 @@ class SimplifiedCodingEMV:
         self.llm = llm
         self.code_execution_env = code_exec_env
         self._exec_hist = ExecutionHistory()
-        self._tokenizer = tiktoken.encoding_for_model(llm.model_name) if isinstance(llm, ChatOpenAI) else None
+        try:
+            self._tokenizer = tiktoken.encoding_for_model(llm.model_name) if isinstance(llm, ChatOpenAI) else None
+        except KeyError:
+            self._tokenizer = tiktoken.encoding_for_model('gpt-4o')
 
         self._retriever = SimpleFewShotRetriever(prompt_db=prompt_cfg.pop('prompt_db', []),
                                                  **prompt_cfg.get('retrieval', {}))
@@ -50,6 +55,7 @@ class SimplifiedCodingEMV:
 
         self._history = self.code_execution_env.namespace.api.history
         recursive_apply(self._history, _set_simplified_repr)
+        recursive_apply(self._history, lambda n: setattr(n, '_use_idx_prefix', self._always_use_full_indices))
 
     def _build_prompt_message(self, loop_detected=False):
         question = self._exec_hist.items[0]
@@ -143,6 +149,7 @@ class SimplifiedCodingEMV:
 
                 for handler in self._error_handlers:
                     handler.reset()
+                recursive_apply(self._history, lambda n: setattr(n, '_use_idx_prefix', self._always_use_full_indices))
             except StopIteration as e:
                 if isinstance(e.value, tuple) and e.value[0] == ReplExecutionEnvironment.RETURN_FN_SIGNAL:
                     return e.value[1]
@@ -155,6 +162,10 @@ class SimplifiedCodingEMV:
                     if handler.can_handle(e):
                         error_message = handler.handle(e)
                         break
+                if isinstance(e, IndexError) and error_message and not self._always_use_full_indices:
+                    recursive_apply(self._history, lambda n: setattr(n, '_use_idx_prefix', True))
+                    error_message += (' Full indices are shown in the tree below. '
+                                      'E.g. to access the item shown as [1][3][2], use history[1][3][2]')
                 if error_message is not None:
                     self._exec_hist.items.append(ExecutionHistory.ExecutionResult(error_message))
                     continue

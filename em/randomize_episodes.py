@@ -53,7 +53,7 @@ def randomize_datetimes(tmp_episodes: List[HigherLevelSummary],
         next_day = last_end.date() + timedelta(days=1)
         i = 0
         while rng.random() < datetime_settings.skip_day_probability and i < datetime_settings.max_skipped_days:
-            next_day = last_end.date() + timedelta(days=1)
+            next_day = next_day + timedelta(days=1)
             i += 1
 
         min_hour, max_hour = datetime_settings.valid_hours_range

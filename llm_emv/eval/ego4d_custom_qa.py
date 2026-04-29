@@ -2,10 +2,10 @@ import ast
 import json
 import pickle
 from argparse import ArgumentParser, Namespace
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 from random import Random
-from typing import Iterator, Dict, Any, Callable
+from typing import Iterator, Dict, Any, Callable, Tuple
 
 from em.em_tree import HigherLevelSummary
 from em.em_util import move_history_to_start_date
@@ -31,7 +31,7 @@ class Ego4dCustomQADataset(EpisodicQADataset):
     def __iter__(self) -> Iterator[EpisodicQASample]:
         for i, history_sample in enumerate(self.qa_data):
             video_ids = '-'.join(h['video_id'][:6] for h in history_sample['history'])
-            history = self._get_history(history_sample['history'])
+            history, single_ep_time_spans = self._get_history(history_sample['history'])
             for q, question_sample in enumerate(history_sample['questions']):
                 q_id = f'{video_ids}-{i}-q{q}'
                 yield EpisodicQASample(
@@ -41,24 +41,45 @@ class Ego4dCustomQADataset(EpisodicQADataset):
                                    if 'q_time' in question_sample
                                    else pick_random_question_date_after_history(history, Random(q_id))),
                     answer=question_sample['a'],
-                    history=history
+                    history=history,
+                    gt_answer_time_spans=[
+                        self._get_ref_time_span(single_ep_time_spans, support)
+                        for support in question_sample['support']
+                    ]
                 )
+
+    def _get_ref_time_span(self, single_ep_time_spans: Dict[str, Tuple[datetime, datetime]],
+                           question_support: dict) -> Tuple[datetime, datetime]:
+        video_id = question_support['video_id']
+        video_start_time = single_ep_time_spans[video_id][0]
+        if 'frame' in question_support:
+            # Default Ego4D fps is 30
+            ref_time = video_start_time + timedelta(seconds=question_support['frame'] / 30)
+            # Assume 10s relevant area around this timestamp
+            delta = timedelta(seconds=5)
+            return ref_time - delta, ref_time + delta
+        else:
+            # This refers to the whole video (summary type of question)
+            return single_ep_time_spans[video_id]
 
     def _get_history(self, history_spec: list):
         histories = []
+        single_ep_time_spans = {}
         for spec in history_spec:
-            pkl_file = self.history_pkl_dir / f'{spec["video_id"]}.history.{self.pkl_suffix}'
+            video_id = spec["video_id"]
+            pkl_file = self.history_pkl_dir / f'{video_id}.history.{self.pkl_suffix}'
             start_time = datetime.strptime(spec['start_time'], '%Y-%m-%d %H:%M:%S')
             history = pickle.loads(pkl_file.read_bytes())
             history = move_history_to_start_date(history, start_time)
             histories.append(history)
+            single_ep_time_spans[video_id] = history.range
 
         if self.llm_summarizer:
             return self.llm_summarizer([  # Let the LLM re-summarize the children of each history
                 x for h in histories for x in h.children
-            ])
+            ]), single_ep_time_spans
         else:
-            return HigherLevelSummary('', histories)
+            return HigherLevelSummary('', histories), single_ep_time_spans
 
     @classmethod
     def add_argparse_args(cls, parser: ArgumentParser):

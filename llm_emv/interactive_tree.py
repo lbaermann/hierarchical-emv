@@ -10,6 +10,7 @@ from lmp.repl.semantic_hint_errror import SemanticHintError
 PRETTY_PRINT = False
 USE_DASH_IN_SIMPLIFIED_REPR = False
 INDENT_SIZE = 2
+AUTOMATIC_EXPAND_SINGLE_MATCH_DEEP_SEARCH = True
 
 
 def _overlaps_date(query: date, date_range: Tuple[datetime, datetime]):
@@ -52,14 +53,15 @@ def create_index_only_filter_fn(length, args):
         a = args[0]
         if isinstance(a, int):
             if a < 0:
-                a = length - a
+                a = length + a
+            if not (0 <= a < length):
+                raise IndexError(f'Index {a} out of bounds (length {length})')
             return lambda c, i: i == a
         elif isinstance(a, range):
             return lambda c, i: i in a
         else:
             raise NotImplementedError
     elif len(args) == 2:
-        # TODO
         raise NotImplementedError
     return lambda c, i: True
 
@@ -75,7 +77,9 @@ def create_expandable_tree_node_filter_fn(length, args):
             return lambda c, i: _overlaps_date(a, c.range)
         elif isinstance(a, int):
             if a < 0:
-                a = length - a
+                a = length + a
+            if not (0 <= a < length):
+                raise IndexError(f'Index {a} out of bounds (length {length})')
             return lambda c, i: i == a
         else:
             raise TypeError('expand function cannot handle', type(a))
@@ -85,9 +89,9 @@ def create_expandable_tree_node_filter_fn(length, args):
             raise TypeError('Both arguments to expand must be of the same type. Got:', type(a), '!=', type(b))
         elif isinstance(a, int):
             if a < 0:
-                a = length - a
+                a = length + a
             if b < 0:
-                b = length - b
+                b = length + b
             return lambda c, i: i in range(a, b)
         elif isinstance(a, datetime):
             return lambda c, i: _overlaps_datetime_range(a, b, c.range)
@@ -139,6 +143,7 @@ class ExpandableList:
         self._filter_fn_generator = filter_fn_generator
         self._search_filter_fn = search_filter_fn
         self._simplified_repr = False
+        self._use_idx_prefix = False
 
     def expand(self, *args):
         self._set_expanded(True, *args)
@@ -154,7 +159,7 @@ class ExpandableList:
     def collapse_deep(self):
         self._set_expanded(False, recursive=True)
 
-    def search(self, query, **kwargs):
+    def search(self, query, return_idx_list=False, **kwargs):
         self.collapse()
         indices = self._search_filter_fn(query, list(self.children), **kwargs)
         if len(indices) == 0:
@@ -163,11 +168,54 @@ class ExpandableList:
             else:
                 self.expand()
                 raise SemanticHintError(
-                    'No children matching search query. Expanded all nodes so you can check manually.',
+                    'No children matching search query. Expanded all child nodes so you can check manually.',
                     critical=False)
         for i in indices:
             self._children_states[i] = True
-        return self
+
+        if (
+                AUTOMATIC_EXPAND_SINGLE_MATCH_DEEP_SEARCH
+                and len(indices) == 1
+                and isinstance(self.children[indices[0]], ExpandableList)
+        ) or (
+                len(self.children) == 1
+                and isinstance(self.children[0], ExpandableList)
+                # this child must have been the one and only search result
+                # => search inside child item directly
+        ):
+            relevant_child = self.children[indices[0]]
+            if len(relevant_child.children) == 0:  # leaf node
+                deep_result = []
+            else:
+                try:
+                    deep_result = relevant_child.search(query, return_idx_list=True, **kwargs)
+                except SemanticHintError as e:
+                    deep_result = getattr(e, 'idx_list', [])
+                    if return_idx_list:
+                        e.idx_list = [indices] + deep_result
+                        raise
+                    else:
+                        raise SemanticHintError(
+                            f'Within relative child {".".join(str(x[0]) for x in [indices] + deep_result)}:'
+                            f' {e.message}', critical=False)
+
+            if isinstance(deep_result, list):
+                if return_idx_list:
+                    return [indices] + deep_result
+                else:
+                    return (f'Relevant children of the deeply selected node were expanded '
+                            f'(starting with most relevant: index {", ".join(map(str, deep_result[-1]))} '
+                            f'of relative child {".".join(str(x[0]) for x in [indices] + deep_result[:-1])})')
+
+            else:
+                return deep_result
+
+        if return_idx_list:
+            return [indices]
+        else:
+            return 'Relevant children of the selected node were expanded' + (
+                f' (starting with most relevant: index {", ".join(map(str, indices))})' if len(indices) < 10 else ''
+            )
 
     def _set_expanded(self, state, *args, recursive=False):
         filter_fn = self._filter_fn_generator(len(self.children), args)
@@ -176,6 +224,11 @@ class ExpandableList:
                 self._children_states[i] = state
                 if recursive and isinstance(c, ExpandableList):
                     c._set_expanded(state, *args, recursive=True)
+        if len(self.children) == 1 and filter_fn(self.children[0], 0):
+            # Auto-expand single-item child since it is most likely anyway the next step to expand it further
+            if isinstance(self.children[0], ExpandableList):
+                # noinspection PyProtectedMember
+                self.children[0]._set_expanded(state, *args)
 
     def __len__(self):
         return len(self.children)
@@ -185,10 +238,13 @@ class ExpandableList:
 
     def __getitem__(self, item):
         if item >= len(self.children):
-            raise IndexError(f'Index {item} out of range (length {len(self.children)})')
+            raise IndexError(f'Index {item} out of range (use an index <= {len(self.children) - 1})')
+        if not self._children_states[item]:
+            self.expand(item)
+            print(f'Trying to access node at index {item} that is not expanded yet. Automatically expanding.')
         return self.children[item]
 
-    def __repr__(self):
+    def __repr__(self, /, idx_prefix=""):
         if len(self.children) == 0:
             return '[]'
 
@@ -202,9 +258,11 @@ class ExpandableList:
             for i, (c, s) in enumerate(zip(self.children, self._children_states)):
                 start = ('' if i == 0 or self._simplified_repr else ', ') + (
                         ('\n' + ' ' * INDENT_SIZE * pretty_not_simplified) * pretty)
+                idx_str = f'{idx_prefix}[{i}]' if self._use_idx_prefix else f'{i}'
                 if s:
-                    children_str += start + dash + f'{i}: ' + indent_following_lines(
-                        repr(c), num_spaces=INDENT_SIZE * pretty_not_simplified)
+                    children_str += start + dash + f'{idx_str}: ' + indent_following_lines(
+                        c.__repr__(idx_prefix=f'{idx_prefix}[{i}]') if isinstance(c, ExpandableList) else repr(c),
+                        num_spaces=INDENT_SIZE * pretty_not_simplified)
                 elif prev_expanded:
                     children_str += start + dash + '...'
                 prev_expanded = s
@@ -222,7 +280,8 @@ class ExpandableTreeNode(ExpandableList):
                  wrapped: Any,
                  children_extractor: Callable[[Any], List[Any]],
                  search_similarity_fn: Callable[[str, Any], float],
-                 search_filter_kwargs=None
+                 search_filter_kwargs=None,
+                 idx_stack=(),
                  ) -> None:
         search_filter_kwargs = search_filter_kwargs or {}
         children = children_extractor(wrapped) or []
@@ -235,10 +294,11 @@ class ExpandableTreeNode(ExpandableList):
             assert isinstance(wrapped.nl_summary, str), str(wrapped)
 
         self._wrapped = wrapped
+        self._idx_stack = idx_stack
         search_filter_fn = search_similarity_to_filter_fn(search_similarity_fn, **search_filter_kwargs)
         super().__init__(children=[
-            ExpandableTreeNode(c, children_extractor, search_similarity_fn)
-            for c in children
+            ExpandableTreeNode(c, children_extractor, search_similarity_fn, search_filter_kwargs, idx_stack + (i,))
+            for i, c in enumerate(children)
         ], filter_fn_generator=create_expandable_tree_node_filter_fn,
             search_filter_fn=search_filter_fn)
 
@@ -254,19 +314,31 @@ class ExpandableTreeNode(ExpandableList):
             self._search_filter_fn
         )
 
-    def __repr__(self):
+    def __getitem__(self, item):
+        try:
+            return super().__getitem__(item)
+        except IndexError as e:
+            if self._use_idx_prefix:
+                idx_str = ''.join(f'[{i}]' for i in self._idx_stack)
+                e.args = (f'Index {idx_str}[{item}] is invalid. Item at {idx_str} does not have a child {item} '
+                          f'(use an index <= {len(self.children) - 1} or check another node)',)
+            raise
+
+    def __repr__(self, /, idx_prefix=""):
         if len(self.children) == 0:
             return repr(self._wrapped)  # leaf node
         pretty = PRETTY_PRINT or self._simplified_repr  # Simplified depends on spacing
 
         cls_name = self._wrapped.__class__.__name__
         range_str = format_datetime_range(*self._wrapped.range)
-        children_str = super().__repr__()[1:-1].strip()  # strip away the [] and whitespace
+        children_str = super().__repr__(idx_prefix=idx_prefix)[1:-1].strip()  # strip away the [] and whitespace
         children_str = indent_following_lines(children_str, num_spaces=INDENT_SIZE * pretty)
         children_str = ((('\n' + ' ' * INDENT_SIZE * (1 if self._simplified_repr else 2)) * pretty)
                         + children_str + (('\n' + ' ' * INDENT_SIZE) * pretty))
 
         nl_summary = indent_following_lines(self._wrapped.nl_summary, num_spaces=INDENT_SIZE * pretty)
+        if getattr(self._wrapped, '_finalized', False) and getattr(self, '_display_final', False):
+            nl_summary = 'Final: ' + nl_summary
         if len(nl_summary.splitlines()) > 1:
             nl_summary = f'"""{nl_summary}"""'
         else:
@@ -310,6 +382,9 @@ def search_similarity_to_filter_fn(
         close_match_min_cos_sim=0.7,
 ) -> Callable[[str, List[Any], ...], List[int]]:
     def search(query: str, items: List[Any], close_match=False):
+        if len(items) == 0:
+            return []
+
         _top_p = close_match_top_p if close_match else top_p
         _min_cos_sim = close_match_min_cos_sim if close_match else min_cos_sim
 

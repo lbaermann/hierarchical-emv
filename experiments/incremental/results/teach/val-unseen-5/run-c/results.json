@@ -1,0 +1,1744 @@
+{
+  "config": {
+    "cfg": "teach/paper",
+    "language_rule_llm": "None",
+    "language_rule_mod_llm": "{'type': 'ChatOpenAI', 'model': 'gpt-4.1-2025-04-14', 'temperature': 0, 'request_timeout': 60}",
+    "delete_language_rule_files": "False",
+    "forgetting_kwargs": "{}",
+    "output_dir": "output/interactive/teach-v3/val-unseen-5/run-c",
+    "max_running_experiments": "10",
+    "max_loaded_experiments": "10",
+    "max_parallel_qa_per_history": "100000",
+    "feedback_file": "None",
+    "feedback_type": "auto-always",
+    "feedback_llm": "{'type': 'ChatOpenAI', 'base_url': 'http://localhost:8000/v1', 'openai_api_key': 'fake', 'model': 'meta-llama/Llama-3.3-70B-Instruct', 'temperature': 0, 'request_timeout': 180, 'max_tokens': 512}",
+    "dataset_type": "teach-scene",
+    "n_samples": "None",
+    "dataset_file": "data/teach/interactive-v2/val-unseen-5.json",
+    "teach_base_dir": "/home/lbaermann/emv/data/TEACh",
+    "history_builder_llm": "{'type': 'ChatOpenAI', 'base_url': 'http://localhost:8000/v1', 'openai_api_key': 'fake', 'model': 'meta-llama/Llama-3.3-70B-Instruct', 'temperature': 0, 'request_timeout': 180, 'max_tokens': 512}",
+    "history_builder_kwargs": "{'similarity_model_device': 'cuda:1'}"
+  },
+  "code_commit": "48649bdef288d4d89a08c68067f77096e7e7208a",
+  "results": {
+    "history-3-2-valid_unseen-bb571c169830c652_63a4-103.360375-0": {
+      "q_time": "2023/10/04 09:57:29",
+      "q": "When did you first place a potato?",
+      "gt": "At 2023/09/30, 08:37:44",
+      "hyp": "The first time I placed a potato was on 2023/09/30 at 08:43.",
+      "meta": {
+        "q_pair_id": "7167ac53dc8393e86adf61a7ed4175d3",
+        "auto_correction": "You should always remember the exact time when you place a potato",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2023/09/30 08:37:13",
+          "2023/09/30 08:37:44"
+        ]
+      ]
+    },
+    "history-3-2-valid_unseen-bb571c169830c652_63a4-103.360375-1": {
+      "q_time": "2023/10/04 09:57:29",
+      "q": "What steps did you perform during transport of the knife?",
+      "gt": "Pickup the knife, Slice the potato, Place the knife at the countertop",
+      "hyp": "I picked up the knife, used it to slice bread, held it while placing bread in the toaster, and then placed the knife back on the counter.",
+      "meta": {
+        "q_pair_id": "932baaf408e3477a76842ebd7221072d",
+        "auto_correction": "You should always remember the detailed steps you perform during transport of the knife",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2023/09/30 08:43:19",
+          "2023/09/30 08:43:36"
+        ]
+      ]
+    },
+    "history-3-2-valid_unseen-bb571c169830c652_63a4-103.360375-2": {
+      "q_time": "2023/10/04 09:57:29",
+      "q": "What objects did you see the first time you did pickup a potato?",
+      "gt": "shelvingunit, knife, vase, shelf, cellphone, mug, potato",
+      "hyp": "I have already forgotten what objects I saw the first time I picked up a potato.",
+      "meta": {
+        "q_pair_id": "964df0ed8c3bded878301ae91fe423bb",
+        "auto_correction": "You should always remember all the objects you see when you pickup a potato",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2023/09/30 08:36:34",
+          "2023/09/30 08:37:05"
+        ]
+      ]
+    },
+    "history-3-2-valid_unseen-bb571c169830c652_63a4-103.360375-3": {
+      "q_time": "2023/10/04 09:57:29",
+      "q": "What objects did you see the first time you did finish to transport a potato?",
+      "gt": "countertop, cabinet, spatula, pan, papertowelroll, stoveburner, microwave, peppershaker, stoveknob, pot, coffeemachine, potato",
+      "hyp": "I have already forgotten what objects I saw the first time I finished transporting a potato.",
+      "meta": {
+        "q_pair_id": "6022120ff4071e22abad072b8a43bf04",
+        "auto_correction": "You should always remember all the objects you see when you finish to transport a potato",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2023/09/30 08:36:34",
+          "2023/09/30 08:37:44"
+        ]
+      ]
+    },
+    "history-3-2-valid_unseen-bb571c169830c652_63a4-103.360375-4": {
+      "q_time": "2023/10/04 09:57:29",
+      "q": "Which object did you first transport to the pot?",
+      "gt": "The potato",
+      "hyp": "The first object I transported to the pot was a potato.",
+      "meta": {
+        "q_pair_id": "ce312341ccc80fc3aab3914475a0cb58",
+        "auto_correction": "You should always remember which object you transport to the pot",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2023/09/30 08:36:34",
+          "2023/09/30 08:37:44"
+        ]
+      ]
+    },
+    "history-3-4-valid_unseen-8749503be921d8fb_d880-135.951015-0": {
+      "q_time": "2023/10/07 16:18:03",
+      "q": "When did you last place a potato?",
+      "gt": "At 2023/10/04, 13:19:37",
+      "hyp": "The last time I placed a potato was on October 4th, 2023 at 1:18 PM.",
+      "meta": {
+        "q_pair_id": "7167ac53dc8393e86adf61a7ed4175d3",
+        "auto_correction": "You should always remember the exact time when you place a potato",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2023/10/04 13:19:37",
+          "2023/10/04 13:19:37"
+        ]
+      ]
+    },
+    "history-3-4-valid_unseen-8749503be921d8fb_d880-135.951015-1": {
+      "q_time": "2023/10/07 16:18:03",
+      "q": "What steps did you perform during transport of the knife?",
+      "gt": "Pickup the knife, Slice the potato, Place the knife at the countertop",
+      "hyp": "There is no explicit record of me transporting the knife in the available history. The steps only show navigation actions and visual observations of the knife.",
+      "meta": {
+        "q_pair_id": "932baaf408e3477a76842ebd7221072d",
+        "auto_correction": "You should always remember the detailed steps you perform during transport of the knife",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2023/10/04 09:56:20",
+          "2023/10/04 09:57:15"
+        ]
+      ]
+    },
+    "history-3-4-valid_unseen-8749503be921d8fb_d880-135.951015-2": {
+      "q_time": "2023/10/07 16:18:03",
+      "q": "What objects did you see the last time you did pickup a potato?",
+      "gt": "drawer, egg, countertop, cabinet, pan, papertowelroll, stoveburner, microwave, peppershaker, saltshaker, stoveknob, mug, dishsponge, cellphone, pot, potato",
+      "hyp": "The last time I picked up a potato, I saw Egg_2, ButterKnife_1, CounterTop_0, Potato, SoapBottle_0, HousePlant, Chair_1, Bread_2, Bottle_0 filled, Chair_0, Fork, and ShelvingUnit.",
+      "meta": {
+        "q_pair_id": "964df0ed8c3bded878301ae91fe423bb",
+        "auto_correction": "You should always remember all the objects you see when you pickup a potato",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2023/10/04 13:19:35",
+          "2023/10/04 13:19:35"
+        ]
+      ]
+    },
+    "history-3-4-valid_unseen-8749503be921d8fb_d880-135.951015-3": {
+      "q_time": "2023/10/07 16:18:03",
+      "q": "What objects did you see the last time you did finish to transport a potato?",
+      "gt": "drawer, egg, countertop, cabinet, pan, papertowelroll, stoveburner, microwave, peppershaker, saltshaker, stoveknob, mug, dishsponge, cellphone, pot, potato",
+      "hyp": "I have already forgotten what objects I saw the last time I finished transporting a potato.",
+      "meta": {
+        "q_pair_id": "6022120ff4071e22abad072b8a43bf04",
+        "auto_correction": "You should always remember all the objects you see when you finish to transport a potato",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2023/10/04 13:19:35",
+          "2023/10/04 13:19:37"
+        ]
+      ]
+    },
+    "history-3-4-valid_unseen-8749503be921d8fb_d880-135.951015-4": {
+      "q_time": "2023/10/07 16:18:03",
+      "q": "Which object did you last transport to the pot?",
+      "gt": "The potato",
+      "hyp": "The last object I transported to the pot was a mug and its contents.",
+      "meta": {
+        "q_pair_id": "ce312341ccc80fc3aab3914475a0cb58",
+        "auto_correction": "You should always remember which object you transport to the pot",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2023/10/04 13:19:35",
+          "2023/10/04 13:19:37"
+        ]
+      ]
+    },
+    "history-8-2-valid_unseen-133d52a8aaf9db3f_1647-223.72489-0": {
+      "q_time": "2023/05/15 08:57:55",
+      "q": "What objects did you see the first time you did pickup a vase?",
+      "gt": "garbagecan, countertop, vase, floor, bread, potato",
+      "hyp": "I do not know what objects I saw the first time I picked up a vase.",
+      "meta": {
+        "q_pair_id": "7ce7573144c7388365ceaead021127d3",
+        "auto_correction": "You should always remember all the objects you see when you pickup a vase",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2023/05/13 14:54:34",
+          "2023/05/13 14:56:09"
+        ]
+      ]
+    },
+    "history-8-2-valid_unseen-133d52a8aaf9db3f_1647-223.72489-1": {
+      "q_time": "2023/05/15 08:57:55",
+      "q": "When did you first pickup a vase?",
+      "gt": "At 2023/05/13, 14:56:09",
+      "hyp": "The first time I picked up a vase was on May 13th, 2023.",
+      "meta": {
+        "q_pair_id": "7098a18388bdb60676d213497bd1063a",
+        "auto_correction": "You should always remember the exact time when you pickup a vase",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2023/05/13 14:54:34",
+          "2023/05/13 14:56:09"
+        ]
+      ]
+    },
+    "history-8-2-valid_unseen-133d52a8aaf9db3f_1647-223.72489-2": {
+      "q_time": "2023/05/15 08:57:55",
+      "q": "When did you first place a vase?",
+      "gt": "At 2023/05/13, 14:56:31",
+      "hyp": "I first placed a vase on May 13th, 2023, between 2:54 and 2:57 PM.",
+      "meta": {
+        "q_pair_id": "6439fa9fbb6ae2dccf1e8ae85866a83f",
+        "auto_correction": "You should always remember the exact time when you place a vase",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2023/05/13 14:56:17",
+          "2023/05/13 14:56:31"
+        ]
+      ]
+    },
+    "history-8-2-valid_unseen-133d52a8aaf9db3f_1647-223.72489-3": {
+      "q_time": "2023/05/15 08:57:55",
+      "q": "Where did you first place a vase?",
+      "gt": "At the sink basin",
+      "hyp": "The first time I placed a vase was on 2023/05/13.",
+      "meta": {
+        "q_pair_id": "05c9ec46f04433f0cb4632a6337a0493",
+        "auto_correction": "You should always remember the location where you place a vase",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2023/05/13 14:56:17",
+          "2023/05/13 14:56:31"
+        ]
+      ]
+    },
+    "history-8-2-valid_unseen-133d52a8aaf9db3f_1647-223.72489-4": {
+      "q_time": "2023/05/15 08:57:55",
+      "q": "What objects did you see the first time you did place a vase?",
+      "gt": "fork, houseplant, soapbottle, knife, sink basin, countertop, spatula, vase, sink, creditcard, dishsponge, bread",
+      "hyp": "I have already forgotten what objects I saw the first time I placed a vase.",
+      "meta": {
+        "q_pair_id": "3fb58492bc39d97377dcba38caff258e",
+        "auto_correction": "You should always remember all the objects you see when you place a vase",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2023/05/13 14:56:17",
+          "2023/05/13 14:56:31"
+        ]
+      ]
+    },
+    "history-8-4-valid_unseen-36f78323469b2b02_5f91-170.353226-0": {
+      "q_time": "2023/05/17 18:14:45",
+      "q": "What objects did you see the last time you did pickup a vase?",
+      "gt": "fork, houseplant, soapbottle, sink basin, countertop, spatula, plate, pan, vase, sink, butterknife, pot, faucet, potato",
+      "hyp": "I do not have any record of picking up a vase, so I cannot answer what objects I saw during that action.",
+      "meta": {
+        "q_pair_id": "7ce7573144c7388365ceaead021127d3",
+        "auto_correction": "You should always remember all the objects you see when you pickup a vase",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2023/05/15 16:18:53",
+          "2023/05/15 16:18:53"
+        ]
+      ]
+    },
+    "history-8-4-valid_unseen-36f78323469b2b02_5f91-170.353226-1": {
+      "q_time": "2023/05/17 18:14:45",
+      "q": "When did you last pickup a vase?",
+      "gt": "At 2023/05/15, 16:18:53",
+      "hyp": "I have no record of ever picking up a vase.",
+      "meta": {
+        "q_pair_id": "7098a18388bdb60676d213497bd1063a",
+        "auto_correction": "You should always remember the exact time when you pickup a vase",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2023/05/15 16:18:53",
+          "2023/05/15 16:18:53"
+        ]
+      ]
+    },
+    "history-8-4-valid_unseen-36f78323469b2b02_5f91-170.353226-2": {
+      "q_time": "2023/05/17 18:14:45",
+      "q": "When did you last place a vase?",
+      "gt": "At 2023/05/15, 16:18:56",
+      "hyp": "I do not have any record of placing a vase.",
+      "meta": {
+        "q_pair_id": "6439fa9fbb6ae2dccf1e8ae85866a83f",
+        "auto_correction": "You should always remember the exact time when you place a vase",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2023/05/15 16:18:56",
+          "2023/05/15 16:18:56"
+        ]
+      ]
+    },
+    "history-8-4-valid_unseen-36f78323469b2b02_5f91-170.353226-3": {
+      "q_time": "2023/05/17 18:14:45",
+      "q": "Where did you last place a vase?",
+      "gt": "At the countertop",
+      "hyp": "I do not have any record of placing a vase in the available history.",
+      "meta": {
+        "q_pair_id": "05c9ec46f04433f0cb4632a6337a0493",
+        "auto_correction": "You should always remember the location where you place a vase",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2023/05/15 16:18:56",
+          "2023/05/15 16:18:56"
+        ]
+      ]
+    },
+    "history-8-4-valid_unseen-36f78323469b2b02_5f91-170.353226-4": {
+      "q_time": "2023/05/17 18:14:45",
+      "q": "What objects did you see the last time you did place a vase?",
+      "gt": "fork, houseplant, soapbottle, sink basin, countertop, spatula, plate, pan, vase, sink, pot, potato",
+      "hyp": "I do not have any record of placing a vase, so I cannot answer your question.",
+      "meta": {
+        "q_pair_id": "3fb58492bc39d97377dcba38caff258e",
+        "auto_correction": "You should always remember all the objects you see when you place a vase",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2023/05/15 16:18:56",
+          "2023/05/15 16:18:56"
+        ]
+      ]
+    },
+    "history-9-2-valid_unseen-393bc086dd2d379f_4352-41.289486-0": {
+      "q_time": "2024/03/20 10:53:36",
+      "q": "What steps did you perform during transport of the knife?",
+      "gt": "Pickup the knife, Close the fridge, Slice the bread, Place the knife at the countertop",
+      "hyp": "There is no record of any steps performed during transport of the knife in the available history.",
+      "meta": {
+        "q_pair_id": "e1667e342e143bef34af7e101ad1e528",
+        "auto_correction": "You should always remember the detailed steps you perform during transport of the knife",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2024/03/14 15:12:53",
+          "2024/03/14 15:13:55"
+        ]
+      ]
+    },
+    "history-9-2-valid_unseen-393bc086dd2d379f_4352-41.289486-1": {
+      "q_time": "2024/03/20 10:53:36",
+      "q": "Which object did you first transport to the sink basin?",
+      "gt": "The cup",
+      "hyp": "I did not transport any object to the sink basin during the recorded actions. Spatula and credit card were already there.",
+      "meta": {
+        "q_pair_id": "eb175f1d007c8af351ba1f9f24439072",
+        "auto_correction": "You should always remember which object you transport to the sink basin",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2024/03/14 11:21:21",
+          "2024/03/14 11:22:20"
+        ]
+      ]
+    },
+    "history-9-2-valid_unseen-393bc086dd2d379f_4352-41.289486-2": {
+      "q_time": "2024/03/20 10:53:36",
+      "q": "To where did you first transport a knife?",
+      "gt": "At the countertop",
+      "hyp": "There is no record of me transporting a knife in my available history.",
+      "meta": {
+        "q_pair_id": "3b12cba7bb8c0b3baa167836d95329e0",
+        "auto_correction": "You should always remember the location to where you transport a knife",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2024/03/14 15:12:53",
+          "2024/03/14 15:13:55"
+        ]
+      ]
+    },
+    "history-9-2-valid_unseen-393bc086dd2d379f_4352-41.289486-3": {
+      "q_time": "2024/03/20 10:53:36",
+      "q": "Which object did you first transport to the countertop?",
+      "gt": "The cup",
+      "hyp": "I have already forgotten which object I first transported to the countertop.",
+      "meta": {
+        "q_pair_id": "a1fffabfb92fd97a76025314dacfffd7",
+        "auto_correction": "You should always remember which object you transport to the countertop",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2024/03/14 11:22:31",
+          "2024/03/14 11:22:43"
+        ]
+      ]
+    },
+    "history-9-2-valid_unseen-393bc086dd2d379f_4352-41.289486-4": {
+      "q_time": "2024/03/20 10:53:36",
+      "q": "To where did you first transport a bread?",
+      "gt": "At the countertop",
+      "hyp": "I first transported a bread to the countertop.",
+      "meta": {
+        "q_pair_id": "d449532a588af3ea78f93d3fe89b1864",
+        "auto_correction": "You should always remember the location to where you transport a bread",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2024/03/14 15:12:02",
+          "2024/03/14 15:12:34"
+        ]
+      ]
+    },
+    "history-9-4-valid_unseen-485726b073721e1c_04d4-322.857519-0": {
+      "q_time": "2024/03/26 12:26:30",
+      "q": "What steps did you perform during transport of the knife?",
+      "gt": "Pickup the knife, Close the fridge, Slice the bread, Place the knife at the countertop",
+      "hyp": "I have already forgotten the detailed steps I performed during the transport of the knife.",
+      "meta": {
+        "q_pair_id": "e1667e342e143bef34af7e101ad1e528",
+        "auto_correction": "You should always remember the detailed steps you perform during transport of the knife",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2024/03/20 13:46:44",
+          "2024/03/20 13:48:35"
+        ]
+      ]
+    },
+    "history-9-4-valid_unseen-485726b073721e1c_04d4-322.857519-1": {
+      "q_time": "2024/03/26 12:26:30",
+      "q": "Which object did you last transport to the sink basin?",
+      "gt": "The plate",
+      "hyp": "The last object I transported to the sink basin was a dirty plate.",
+      "meta": {
+        "q_pair_id": "eb175f1d007c8af351ba1f9f24439072",
+        "auto_correction": "You should always remember which object you transport to the sink basin",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2024/03/20 13:52:56",
+          "2024/03/20 13:53:08"
+        ]
+      ]
+    },
+    "history-9-4-valid_unseen-485726b073721e1c_04d4-322.857519-2": {
+      "q_time": "2024/03/26 12:26:30",
+      "q": "To where did you last transport a knife?",
+      "gt": "At the countertop",
+      "hyp": "The last place I transported a knife to was the countertop, where I used it to slice lettuce.",
+      "meta": {
+        "q_pair_id": "3b12cba7bb8c0b3baa167836d95329e0",
+        "auto_correction": "You should always remember the location to where you transport a knife",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2024/03/20 13:46:44",
+          "2024/03/20 13:48:35"
+        ]
+      ]
+    },
+    "history-9-4-valid_unseen-485726b073721e1c_04d4-322.857519-3": {
+      "q_time": "2024/03/26 12:26:30",
+      "q": "Which object did you last transport to the countertop?",
+      "gt": "The plate",
+      "hyp": "The last object I transported to the countertop was a clean plate.",
+      "meta": {
+        "q_pair_id": "a1fffabfb92fd97a76025314dacfffd7",
+        "auto_correction": "You should always remember which object you transport to the countertop",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2024/03/20 13:53:30",
+          "2024/03/20 13:53:33"
+        ]
+      ]
+    },
+    "history-9-4-valid_unseen-485726b073721e1c_04d4-322.857519-4": {
+      "q_time": "2024/03/26 12:26:30",
+      "q": "To where did you last transport a bread?",
+      "gt": "At the countertop",
+      "hyp": "I already forgot to where I last transported a bread.",
+      "meta": {
+        "q_pair_id": "d449532a588af3ea78f93d3fe89b1864",
+        "auto_correction": "You should always remember the location to where you transport a bread",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2024/03/20 10:53:01",
+          "2024/03/20 10:53:19"
+        ]
+      ]
+    },
+    "history-2-2-valid_unseen-25b52159ad56e77c_ff7f-129.492709-0": {
+      "q_time": "2024/08/10 18:51:35",
+      "q": "When did you first transport something to the pot?",
+      "gt": "At 2024/08/07, 18:16:33",
+      "hyp": "I already forgot when I first transported something to the pot.",
+      "meta": {
+        "q_pair_id": "e09056ef93c57f357f12ad66037778ad",
+        "auto_correction": "You should always remember the exact time when you transport something to the pot",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2024/08/07 18:16:23",
+          "2024/08/07 18:16:33"
+        ]
+      ]
+    },
+    "history-2-2-valid_unseen-25b52159ad56e77c_ff7f-129.492709-1": {
+      "q_time": "2024/08/10 18:51:35",
+      "q": "What steps did you perform during transport of the potato?",
+      "gt": "Pickup the potato, Place the potato at the countertop",
+      "hyp": "I do not have information about the steps performed during the transport of the potato.",
+      "meta": {
+        "q_pair_id": "5fde90e367b08a050d5a31b2834be9fe",
+        "auto_correction": "You should always remember the detailed steps you perform during transport of the potato",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2024/08/07 18:11:03",
+          "2024/08/07 18:13:13"
+        ]
+      ]
+    },
+    "history-2-2-valid_unseen-25b52159ad56e77c_ff7f-129.492709-2": {
+      "q_time": "2024/08/10 18:51:35",
+      "q": "When did you first transport something to the countertop?",
+      "gt": "At 2024/08/07, 18:13:13",
+      "hyp": "There is no record of me transporting something to the countertop in my available history.",
+      "meta": {
+        "q_pair_id": "da010629905560727c409ce4193f82da",
+        "auto_correction": "You should always remember the exact time when you transport something to the countertop",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2024/08/07 18:11:03",
+          "2024/08/07 18:13:13"
+        ]
+      ]
+    },
+    "history-2-2-valid_unseen-25b52159ad56e77c_ff7f-129.492709-3": {
+      "q_time": "2024/08/10 18:51:35",
+      "q": "Which object did you first transport to the pot?",
+      "gt": "The potato",
+      "hyp": "The first object I transported to the pot was a potato.",
+      "meta": {
+        "q_pair_id": "f1c385ec2ed299e2695316f03255ef50",
+        "auto_correction": "You should always remember which object you transport to the pot",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2024/08/07 18:16:23",
+          "2024/08/07 18:16:33"
+        ]
+      ]
+    },
+    "history-2-2-valid_unseen-25b52159ad56e77c_ff7f-129.492709-4": {
+      "q_time": "2024/08/10 18:51:35",
+      "q": "To where did you first transport a potato?",
+      "gt": "At the countertop",
+      "hyp": "I have already forgotten the specific location where I first transported a potato.",
+      "meta": {
+        "q_pair_id": "32599f60c65ea05b7f43821a40829be5",
+        "auto_correction": "You should always remember the location to where you transport a potato",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2024/08/07 18:11:03",
+          "2024/08/07 18:13:13"
+        ]
+      ]
+    },
+    "history-2-3-valid_unseen-dda9ea220761cc52_5a27-110.623717-0": {
+      "q_time": "2024/08/12 11:12:28",
+      "q": "When did you last transport something to the countertop?",
+      "gt": "At 2024/08/10, 19:02:05",
+      "hyp": "The last time I transported something to the countertop was on August 10th, 2024, between 19:01:54 and 19:02:26.",
+      "meta": {
+        "q_pair_id": "da010629905560727c409ce4193f82da",
+        "auto_correction": "You should always remember the exact time when you transport something to the countertop",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2024/08/10 19:01:54",
+          "2024/08/10 19:02:05"
+        ]
+      ]
+    },
+    "history-2-4-valid_unseen-4364fccce0c7e619_be95-86.500308-0": {
+      "q_time": "2024/08/14 16:46:32",
+      "q": "When did you last transport something to the pot?",
+      "gt": "At 2024/08/12, 11:12:51",
+      "hyp": "The last time I transported something to the pot was on August 12, 2024.",
+      "meta": {
+        "q_pair_id": "e09056ef93c57f357f12ad66037778ad",
+        "auto_correction": "You should always remember the exact time when you transport something to the pot",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2024/08/12 11:10:56",
+          "2024/08/12 11:12:51"
+        ]
+      ]
+    },
+    "history-2-4-valid_unseen-4364fccce0c7e619_be95-86.500308-1": {
+      "q_time": "2024/08/14 16:46:32",
+      "q": "What steps did you perform during transport of the potato?",
+      "gt": "Pickup the potato, Place the potato at the countertop",
+      "hyp": "I am unable to provide the specific steps performed during the transport of the potato, as that information has already been forgotten.",
+      "meta": {
+        "q_pair_id": "5fde90e367b08a050d5a31b2834be9fe",
+        "auto_correction": "You should always remember the detailed steps you perform during transport of the potato",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2024/08/12 11:10:56",
+          "2024/08/12 11:12:51"
+        ]
+      ]
+    },
+    "history-2-4-valid_unseen-4364fccce0c7e619_be95-86.500308-2": {
+      "q_time": "2024/08/14 16:46:32",
+      "q": "Which object did you last transport to the pot?",
+      "gt": "The potato",
+      "hyp": "The last object I transported to the pot was a potato.",
+      "meta": {
+        "q_pair_id": "f1c385ec2ed299e2695316f03255ef50",
+        "auto_correction": "You should always remember which object you transport to the pot",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2024/08/12 11:10:56",
+          "2024/08/12 11:12:51"
+        ]
+      ]
+    },
+    "history-2-4-valid_unseen-4364fccce0c7e619_be95-86.500308-3": {
+      "q_time": "2024/08/14 16:46:32",
+      "q": "To where did you last transport a potato?",
+      "gt": "At the pot",
+      "hyp": "The last place I transported a potato to was a pot on the stove.",
+      "meta": {
+        "q_pair_id": "32599f60c65ea05b7f43821a40829be5",
+        "auto_correction": "You should always remember the location to where you transport a potato",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2024/08/12 11:10:56",
+          "2024/08/12 11:12:51"
+        ]
+      ]
+    },
+    "history-4-2-valid_unseen-14995cb55fdcb9f9_e822-433.867702-0": {
+      "q_time": "2024/09/01 18:42:29",
+      "q": "When did you first transport something to the toaster?",
+      "gt": "At 2024/08/31, 16:01:20",
+      "hyp": "The first time I transported something to the toaster was on 2024/09/01 at 18:40:06.",
+      "meta": {
+        "q_pair_id": "45453e44b9db5d5f3c8f416840e66595",
+        "auto_correction": "You should always remember the exact time when you transport something to the toaster",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2024/08/31 16:01:17",
+          "2024/08/31 16:01:20"
+        ]
+      ]
+    },
+    "history-4-2-valid_unseen-14995cb55fdcb9f9_e822-433.867702-1": {
+      "q_time": "2024/09/01 18:42:29",
+      "q": "When did you first slice a bread?",
+      "gt": "At 2024/08/31, 16:01:12",
+      "hyp": "The first time I sliced bread was on September 1st, 2024 at 18:39:48.",
+      "meta": {
+        "q_pair_id": "facfe3fa2b16330a7954f2dd3b0ad1f6",
+        "auto_correction": "You should always remember the exact time when you slice a bread",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2024/08/31 16:00:39",
+          "2024/08/31 16:01:12"
+        ]
+      ]
+    },
+    "history-4-2-valid_unseen-14995cb55fdcb9f9_e822-433.867702-2": {
+      "q_time": "2024/09/01 18:42:29",
+      "q": "What objects did you see the first time you did slice a bread?",
+      "gt": "toaster, knife, countertop, cabinet, cup, pan, bowl, stoveburner, drawer, bread, potato",
+      "hyp": "The first time I sliced bread, I saw a paper towel roll, dirty pot, salt shaker, stove burners, cabinets, drawers, countertop, bread, knife, a toggled stove knob, dirty pan, toggled toaster, filled pot, spatula, open microwave, and my agent hand.",
+      "meta": {
+        "q_pair_id": "e9b75f2ce853ec0c92e6b1e0b656e631",
+        "auto_correction": "You should always remember all the objects you see when you slice a bread",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2024/08/31 16:00:39",
+          "2024/08/31 16:01:12"
+        ]
+      ]
+    },
+    "history-4-2-valid_unseen-14995cb55fdcb9f9_e822-433.867702-3": {
+      "q_time": "2024/09/01 18:42:29",
+      "q": "Which object did you first transport to the toaster?",
+      "gt": "The bread slice",
+      "hyp": "The first object I transported to the toaster was Bread Sliced 3.",
+      "meta": {
+        "q_pair_id": "928b80a4c8bb7bfffe0174653f8e8937",
+        "auto_correction": "You should always remember which object you transport to the toaster",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2024/08/31 16:01:17",
+          "2024/08/31 16:01:20"
+        ]
+      ]
+    },
+    "history-4-2-valid_unseen-14995cb55fdcb9f9_e822-433.867702-4": {
+      "q_time": "2024/09/01 18:42:29",
+      "q": "When did you first transport something to the sink basin?",
+      "gt": "At 2024/08/31, 16:02:17",
+      "hyp": "There is no record of me transporting anything to the sink basin before 18:38:33 on 2024/09/01 in the available history.",
+      "meta": {
+        "q_pair_id": "cfa560c5c38dec773e0f7eb226ed5e7b",
+        "auto_correction": "You should always remember the exact time when you transport something to the sink basin",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2024/08/31 16:01:33",
+          "2024/08/31 16:02:17"
+        ]
+      ]
+    },
+    "history-4-4-valid_unseen-88f8ad0d2d356270_bb95-102.819419-0": {
+      "q_time": "2024/09/03 17:45:14",
+      "q": "When did you last transport something to the toaster?",
+      "gt": "At 2024/09/01, 18:43:56",
+      "hyp": "The last time I transported something to the toaster was on 2024/09/01 at 18:43:55.",
+      "meta": {
+        "q_pair_id": "45453e44b9db5d5f3c8f416840e66595",
+        "auto_correction": "You should always remember the exact time when you transport something to the toaster",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2024/09/01 18:43:51",
+          "2024/09/01 18:43:56"
+        ]
+      ]
+    },
+    "history-4-4-valid_unseen-88f8ad0d2d356270_bb95-102.819419-1": {
+      "q_time": "2024/09/03 17:45:14",
+      "q": "When did you last slice a bread?",
+      "gt": "At 2024/09/01, 18:39:54",
+      "hyp": "I have no record of slicing bread in my recent history.",
+      "meta": {
+        "q_pair_id": "facfe3fa2b16330a7954f2dd3b0ad1f6",
+        "auto_correction": "You should always remember the exact time when you slice a bread",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2024/09/01 18:39:49",
+          "2024/09/01 18:39:54"
+        ]
+      ]
+    },
+    "history-4-4-valid_unseen-88f8ad0d2d356270_bb95-102.819419-2": {
+      "q_time": "2024/09/03 17:45:14",
+      "q": "What objects did you see the last time you did slice a bread?",
+      "gt": "bread, toaster, knife, countertop, cabinet, spatula, papertowelroll, pan, stoveburner, microwave, saltshaker, stoveknob, drawer, pot",
+      "hyp": "I do not have information about the last time I sliced bread.",
+      "meta": {
+        "q_pair_id": "e9b75f2ce853ec0c92e6b1e0b656e631",
+        "auto_correction": "You should always remember all the objects you see when you slice a bread",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2024/09/01 18:39:49",
+          "2024/09/01 18:39:54"
+        ]
+      ]
+    },
+    "history-4-4-valid_unseen-88f8ad0d2d356270_bb95-102.819419-3": {
+      "q_time": "2024/09/03 17:45:14",
+      "q": "Which object did you last transport to the toaster?",
+      "gt": "The bread sliced slice",
+      "hyp": "The last object I transported to the toaster was bread slice 6.",
+      "meta": {
+        "q_pair_id": "928b80a4c8bb7bfffe0174653f8e8937",
+        "auto_correction": "You should always remember which object you transport to the toaster",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2024/09/01 18:43:51",
+          "2024/09/01 18:43:56"
+        ]
+      ]
+    },
+    "history-4-4-valid_unseen-88f8ad0d2d356270_bb95-102.819419-4": {
+      "q_time": "2024/09/03 17:45:14",
+      "q": "When did you last transport something to the sink basin?",
+      "gt": "At 2024/09/02, 10:52:44",
+      "hyp": "The last time I transported something to the sink basin was on 2024/09/02.",
+      "meta": {
+        "q_pair_id": "cfa560c5c38dec773e0f7eb226ed5e7b",
+        "auto_correction": "You should always remember the exact time when you transport something to the sink basin",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2024/09/02 10:52:38",
+          "2024/09/02 10:52:44"
+        ]
+      ]
+    },
+    "history-6-1-valid_unseen-064a69cb5d40b41f_9c2e-619.99282-0": {
+      "q_time": "2023/03/21 15:03:08",
+      "q": "What steps did you perform during transport of the plate?",
+      "gt": "Pickup the plate, Place the plate at the countertop",
+      "hyp": "I picked up a clean plate from the counter, placed it on the counter, and used it to serve the cooked potato slices.",
+      "meta": {
+        "q_pair_id": "f0e5cf04e1b1ee31821ed4583a1e5e22",
+        "auto_correction": "You should always remember the detailed steps you perform during transport of the plate",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2023/03/19 15:26:38",
+          "2023/03/19 15:27:04"
+        ]
+      ]
+    },
+    "history-6-1-valid_unseen-064a69cb5d40b41f_9c2e-619.99282-1": {
+      "q_time": "2023/03/21 15:03:08",
+      "q": "What objects did you see the first time you did finish to transport a knife?",
+      "gt": "fork, toaster, knife, bread slice, countertop, cabinet, statue, cup, bread",
+      "hyp": "I do not have information about the objects I saw the first time I finished transporting a knife.",
+      "meta": {
+        "q_pair_id": "8344dc01d25212f3d2fbf5a0a0b3ee98",
+        "auto_correction": "You should always remember all the objects you see when you finish to transport a knife",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2023/03/19 15:21:42",
+          "2023/03/19 15:22:04"
+        ]
+      ]
+    },
+    "history-6-1-valid_unseen-064a69cb5d40b41f_9c2e-619.99282-2": {
+      "q_time": "2023/03/21 15:03:08",
+      "q": "What objects did you see the first time you did pickup a knife?",
+      "gt": "toaster, knife, egg, countertop, spatula, cabinet, pan, fridge, floor, bread",
+      "hyp": "The first time I picked up a knife, I saw these objects: CellPhone_1, SaltShaker_1, Potato_3, Potato_2 cooked, StoveBurner_0, StoveBurner_2, Drawer_0, CounterTop_0, CounterTop_1, StoveBurner_3, Drawer_1, Drawer_2, Sink, Knife, StoveKnob_0, StoveKnob_2 toggled, StoveKnob_3 toggled, Pan, Spatula, Sink_Basin, Microwave toggled, ButterKnife_0, and SoapBottle_0.",
+      "meta": {
+        "q_pair_id": "12d22038656e5ee2457d46deaa3051b8",
+        "auto_correction": "You should always remember all the objects you see when you pickup a knife",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2023/03/19 15:21:42",
+          "2023/03/19 15:21:42"
+        ]
+      ]
+    },
+    "history-6-2-valid_unseen-1bbfe20e48fba275_22dc-81.313395-0": {
+      "q_time": "2023/03/24 08:04:56",
+      "q": "To where did you first transport a pot?",
+      "gt": "At the countertop",
+      "hyp": "I did not transport the pot anywhere after first picking it up; I only picked it up and looked around.",
+      "meta": {
+        "q_pair_id": "903a0ef9962d16d2a62a700c47553297",
+        "auto_correction": "You should always remember the location to where you transport a pot",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2023/03/21 14:59:38",
+          "2023/03/21 14:59:59"
+        ]
+      ]
+    },
+    "history-6-2-valid_unseen-1bbfe20e48fba275_22dc-81.313395-1": {
+      "q_time": "2023/03/24 08:04:56",
+      "q": "What steps did you perform during transport of the plate?",
+      "gt": "Pickup the plate, Place the plate at the countertop",
+      "hyp": "During the transport of the plate, I picked up a plate, placed it on the counter, picked up cooked potato slices and placed them on the plate, and interacted with kitchen objects like the fridge, counter, pepper shaker, and salt shaker.",
+      "meta": {
+        "q_pair_id": "f0e5cf04e1b1ee31821ed4583a1e5e22",
+        "auto_correction": "You should always remember the detailed steps you perform during transport of the plate",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2023/03/21 15:01:58",
+          "2023/03/21 15:02:29"
+        ]
+      ]
+    },
+    "history-6-2-valid_unseen-1bbfe20e48fba275_22dc-81.313395-2": {
+      "q_time": "2023/03/24 08:04:56",
+      "q": "What objects did you see the last time you did finish to transport a knife?",
+      "gt": "cellphone, toaster, statue, knife, countertop, cabinet, soapbottle, pan, bowl, stoveburner, microwave, stoveknob, drawer, potato slice, pot, potato",
+      "hyp": "The last time I finished transporting a knife, I saw a dirty bowl, a cell phone, a cooked potato, and other kitchen items.",
+      "meta": {
+        "q_pair_id": "8344dc01d25212f3d2fbf5a0a0b3ee98",
+        "auto_correction": "You should always remember all the objects you see when you finish to transport a knife",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2023/03/21 14:57:12",
+          "2023/03/21 14:57:40"
+        ]
+      ]
+    },
+    "history-6-2-valid_unseen-1bbfe20e48fba275_22dc-81.313395-3": {
+      "q_time": "2023/03/24 08:04:56",
+      "q": "Where did you first place a pot?",
+      "gt": "At the countertop",
+      "hyp": "I first picked up a pot from the counter near the sink on March 24th, 2023 at 8:04 AM. There is no record of placing a pot before this event.",
+      "meta": {
+        "q_pair_id": "ddf44cd953dcffde2a777d3148333c12",
+        "auto_correction": "You should always remember the location where you place a pot",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2023/03/21 14:59:54",
+          "2023/03/21 14:59:59"
+        ]
+      ]
+    },
+    "history-6-2-valid_unseen-1bbfe20e48fba275_22dc-81.313395-4": {
+      "q_time": "2023/03/24 08:04:56",
+      "q": "What objects did you see the last time you did pickup a knife?",
+      "gt": "toaster, statue, knife, countertop, cabinet, soapbottle, pan, bowl, stoveburner, drawer, cellphone, potato",
+      "hyp": "The last time I picked up a knife, I saw a dirty bowl, a cell phone, a cooked potato, and other kitchen items.",
+      "meta": {
+        "q_pair_id": "12d22038656e5ee2457d46deaa3051b8",
+        "auto_correction": "You should always remember all the objects you see when you pickup a knife",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2023/03/21 14:57:12",
+          "2023/03/21 14:57:27"
+        ]
+      ]
+    },
+    "history-6-4-valid_unseen-58b03cb4cc6cbe0d_dd29-58.830529-0": {
+      "q_time": "2023/03/25 10:38:03",
+      "q": "To where did you last transport a pot?",
+      "gt": "At the countertop",
+      "hyp": "I last transported a pot to the countertop after watering the house plant.",
+      "meta": {
+        "q_pair_id": "903a0ef9962d16d2a62a700c47553297",
+        "auto_correction": "You should always remember the location to where you transport a pot",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2023/03/24 08:03:59",
+          "2023/03/24 08:05:49"
+        ]
+      ]
+    },
+    "history-6-4-valid_unseen-58b03cb4cc6cbe0d_dd29-58.830529-1": {
+      "q_time": "2023/03/25 10:38:03",
+      "q": "Where did you last place a pot?",
+      "gt": "At the countertop",
+      "hyp": "I last placed the pot on the countertop after watering the house plant.",
+      "meta": {
+        "q_pair_id": "ddf44cd953dcffde2a777d3148333c12",
+        "auto_correction": "You should always remember the location where you place a pot",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2023/03/24 08:05:43",
+          "2023/03/24 08:05:49"
+        ]
+      ]
+    },
+    "history-1-1-valid_unseen-88f8ad0d2d356270_bb95-72.823313-0": {
+      "q_time": "2023/07/17 12:16:04",
+      "q": "What objects did you see the first time you did pickup a mug?",
+      "gt": "apple, bread, sink basin, pot, plate, sink, peppershaker, creditcard, spoon, dishsponge, mug, faucet",
+      "hyp": "I have not picked up a mug yet, so I did not see any objects during that action.",
+      "meta": {
+        "q_pair_id": "8dbbce8a5d005724f5f781724f6d4665",
+        "auto_correction": "You should always remember all the objects you see when you pickup a mug",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2023/07/12 18:35:54",
+          "2023/07/12 18:35:54"
+        ]
+      ]
+    },
+    "history-1-1-valid_unseen-88f8ad0d2d356270_bb95-72.823313-1": {
+      "q_time": "2023/07/17 12:16:04",
+      "q": "What objects did you see the first time you did place a mug?",
+      "gt": "soapbottle, countertop, cabinet, window, mug, coffeemachine",
+      "hyp": "I already forgot what objects I saw the first time I placed a mug.",
+      "meta": {
+        "q_pair_id": "ae038b2c108388c751585f78305755ef",
+        "auto_correction": "You should always remember all the objects you see when you place a mug",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2023/07/12 18:36:01",
+          "2023/07/12 18:36:18"
+        ]
+      ]
+    },
+    "history-1-1-valid_unseen-88f8ad0d2d356270_bb95-72.823313-2": {
+      "q_time": "2023/07/17 12:16:04",
+      "q": "Which object did you first transport to the coffeemachine?",
+      "gt": "The mug",
+      "hyp": "The first object I transported to the coffeemachine was a mug.",
+      "meta": {
+        "q_pair_id": "767922256b738788fb16ae29f75ca316",
+        "auto_correction": "You should always remember which object you transport to the coffeemachine",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2023/07/12 18:35:54",
+          "2023/07/12 18:36:18"
+        ]
+      ]
+    },
+    "history-1-1-valid_unseen-88f8ad0d2d356270_bb95-72.823313-3": {
+      "q_time": "2023/07/17 12:16:04",
+      "q": "What steps did you perform during transport of the mug?",
+      "gt": "Pickup the mug, Pour the mug at the sink basin, Place the mug at the coffeemachine",
+      "hyp": "I already forgot the specific steps I performed during transport of the mug.",
+      "meta": {
+        "q_pair_id": "a3ce1808722977389314b011b801066e",
+        "auto_correction": "You should always remember the detailed steps you perform during transport of the mug",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2023/07/12 18:35:54",
+          "2023/07/12 18:36:18"
+        ]
+      ]
+    },
+    "history-1-1-valid_unseen-88f8ad0d2d356270_bb95-72.823313-4": {
+      "q_time": "2023/07/17 12:16:04",
+      "q": "What objects did you see inside the sink the first time you poured the mug?",
+      "gt": "peppershaker, dishsponge, creditcard, spoon",
+      "hyp": "I already forgot what objects I saw inside the sink the first time I poured the mug.",
+      "meta": {
+        "q_pair_id": "1c82c626481bfc2dc4bc9b34008cc6d6",
+        "auto_correction": "You should always remember all the objects you see in the sink when you pour the mug",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2023/07/12 18:35:59",
+          "2023/07/12 18:35:59"
+        ]
+      ]
+    },
+    "history-1-4-valid_unseen-4b7b1a5b7f3d19ae_1413-138.010759-0": {
+      "q_time": "2023/07/20 17:38:18",
+      "q": "What objects did you see the last time you did pickup a mug?",
+      "gt": "fork, houseplant, soapbottle, knife, sink basin, countertop, spatula, vase, sink, peppershaker, creditcard, mug, faucet",
+      "hyp": "The last time I picked up a mug, I saw a dirty pan, stove burners, cabinets, a countertop, and stove knobs.",
+      "meta": {
+        "q_pair_id": "8dbbce8a5d005724f5f781724f6d4665",
+        "auto_correction": "You should always remember all the objects you see when you pickup a mug",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2023/07/18 19:50:00",
+          "2023/07/18 19:50:00"
+        ]
+      ]
+    },
+    "history-1-4-valid_unseen-4b7b1a5b7f3d19ae_1413-138.010759-1": {
+      "q_time": "2023/07/20 17:38:18",
+      "q": "What objects did you see the last time you did place a mug?",
+      "gt": "countertop, cabinet, window, pan, papertowelroll, stoveburner, microwave, cup, saltshaker, stoveknob, mug, coffeemachine",
+      "hyp": "The last time I placed a mug, I saw a dirty pan, stove burners, cabinets, a countertop, and stove knobs.",
+      "meta": {
+        "q_pair_id": "ae038b2c108388c751585f78305755ef",
+        "auto_correction": "You should always remember all the objects you see when you place a mug",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2023/07/18 19:50:07",
+          "2023/07/18 19:50:21"
+        ]
+      ]
+    },
+    "history-1-4-valid_unseen-4b7b1a5b7f3d19ae_1413-138.010759-2": {
+      "q_time": "2023/07/20 17:38:18",
+      "q": "Which object did you last transport to the coffeemachine?",
+      "gt": "The mug",
+      "hyp": "The last object I transported to the coffeemachine was a mug.",
+      "meta": {
+        "q_pair_id": "767922256b738788fb16ae29f75ca316",
+        "auto_correction": "You should always remember which object you transport to the coffeemachine",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2023/07/18 19:50:00",
+          "2023/07/18 19:50:21"
+        ]
+      ]
+    },
+    "history-1-4-valid_unseen-4b7b1a5b7f3d19ae_1413-138.010759-3": {
+      "q_time": "2023/07/20 17:38:18",
+      "q": "What steps did you perform during transport of the mug?",
+      "gt": "Pickup the mug, Pour the mug at the sink basin, Place the mug at the coffeemachine",
+      "hyp": "I picked up the mug from the cupboard, placed it in the sink and cleaned it, then transported it to the coffee machine and placed it there.",
+      "meta": {
+        "q_pair_id": "a3ce1808722977389314b011b801066e",
+        "auto_correction": "You should always remember the detailed steps you perform during transport of the mug",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2023/07/18 19:50:00",
+          "2023/07/18 19:50:21"
+        ]
+      ]
+    },
+    "history-1-4-valid_unseen-4b7b1a5b7f3d19ae_1413-138.010759-4": {
+      "q_time": "2023/07/20 17:38:18",
+      "q": "What objects did you see inside the sink the last time you poured the mug?",
+      "gt": "peppershaker, spatula, soapbottle",
+      "hyp": "I have already forgotten what objects I saw inside the sink the last time I poured the mug.",
+      "meta": {
+        "q_pair_id": "1c82c626481bfc2dc4bc9b34008cc6d6",
+        "auto_correction": "You should always remember all the objects you see in the sink when you pour the mug",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2023/07/18 19:50:05",
+          "2023/07/18 19:50:05"
+        ]
+      ]
+    },
+    "history-0-1-valid_unseen-f2f6723ebab1e6a2_6bea-174.407183-0": {
+      "q_time": "2024/09/26 15:43:22",
+      "q": "When did you first place a knife?",
+      "gt": "At 2024/09/23, 10:05:28",
+      "hyp": "There is no record of me placing a knife in my available history.",
+      "meta": {
+        "q_pair_id": "b08b516f77eed7d7e6568dd6311cc715",
+        "auto_correction": "You should always remember the exact time when you place a knife",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2024/09/23 10:05:22",
+          "2024/09/23 10:05:28"
+        ]
+      ]
+    },
+    "history-0-1-valid_unseen-f2f6723ebab1e6a2_6bea-174.407183-1": {
+      "q_time": "2024/09/26 15:43:22",
+      "q": "What objects did you see the first time you did place a plate?",
+      "gt": "cellphone, toaster, statue, knife, countertop, cabinet, plate, bowl, peppershaker, fridge, floor, potato slice, pot",
+      "hyp": "The first time I placed a plate, I saw potato slices, a plate, and the countertop.",
+      "meta": {
+        "q_pair_id": "c75875a4e8841fc1c6ff3f8f829622cb",
+        "auto_correction": "You should always remember all the objects you see when you place a plate",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2024/09/23 10:06:20",
+          "2024/09/23 10:06:25"
+        ]
+      ]
+    },
+    "history-0-1-valid_unseen-f2f6723ebab1e6a2_6bea-174.407183-2": {
+      "q_time": "2024/09/26 15:43:22",
+      "q": "When did you first place a plate?",
+      "gt": "At 2024/09/23, 10:06:25",
+      "hyp": "The first time I placed a plate was on 2024/09/23 at 10:07.",
+      "meta": {
+        "q_pair_id": "f45850dd8737f88593c4d17f304baa06",
+        "auto_correction": "You should always remember the exact time when you place a plate",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2024/09/23 10:06:20",
+          "2024/09/23 10:06:25"
+        ]
+      ]
+    },
+    "history-0-1-valid_unseen-f2f6723ebab1e6a2_6bea-174.407183-3": {
+      "q_time": "2024/09/26 15:43:22",
+      "q": "What steps did you perform during transport of the plate?",
+      "gt": "Pickup the plate, Place the plate at the countertop",
+      "hyp": "There is no recorded information about the steps performed during transport of the plate.",
+      "meta": {
+        "q_pair_id": "52982e24018ce570c0cc430e183253da",
+        "auto_correction": "You should always remember the detailed steps you perform during transport of the plate",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2024/09/23 10:06:18",
+          "2024/09/23 10:06:25"
+        ]
+      ]
+    },
+    "history-0-1-valid_unseen-f2f6723ebab1e6a2_6bea-174.407183-4": {
+      "q_time": "2024/09/26 15:43:22",
+      "q": "Which object did you first transport to the countertop?",
+      "gt": "The potato",
+      "hyp": "The first object I transported to the countertop was a cooked potato.",
+      "meta": {
+        "q_pair_id": "687cfc473a1c1e02f93c248efa4bb9a6",
+        "auto_correction": "You should always remember which object you transport to the countertop",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2024/09/23 10:05:01",
+          "2024/09/23 10:05:11"
+        ]
+      ]
+    },
+    "history-0-3-valid_unseen-8749503be921d8fb_d880-252.444891-0": {
+      "q_time": "2024/10/03 18:33:26",
+      "q": "When did you last place a knife?",
+      "gt": "At 2024/09/27, 18:11:25",
+      "hyp": "I have already forgotten the specific details of when I last placed a knife.",
+      "meta": {
+        "q_pair_id": "b08b516f77eed7d7e6568dd6311cc715",
+        "auto_correction": "You should always remember the exact time when you place a knife",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2024/09/27 18:11:23",
+          "2024/09/27 18:11:25"
+        ]
+      ]
+    },
+    "history-0-3-valid_unseen-8749503be921d8fb_d880-252.444891-1": {
+      "q_time": "2024/10/03 18:33:26",
+      "q": "What objects did you see the last time you did place a plate?",
+      "gt": "fork, toaster, statue, bread slice, countertop, cabinet, knife, plate, pot, cup, stoveburner, microwave, tomato, lettuce, bread, bottle",
+      "hyp": "The last time I placed a plate, I saw bread, lettuce, tomato, and a plate.",
+      "meta": {
+        "q_pair_id": "c75875a4e8841fc1c6ff3f8f829622cb",
+        "auto_correction": "You should always remember all the objects you see when you place a plate",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2024/09/27 18:10:35",
+          "2024/09/27 18:10:35"
+        ]
+      ]
+    },
+    "history-0-3-valid_unseen-8749503be921d8fb_d880-252.444891-2": {
+      "q_time": "2024/10/03 18:33:26",
+      "q": "When did you last place a plate?",
+      "gt": "At 2024/09/27, 18:10:35",
+      "hyp": "The last time I placed a plate was on 2024/09/27.",
+      "meta": {
+        "q_pair_id": "f45850dd8737f88593c4d17f304baa06",
+        "auto_correction": "You should always remember the exact time when you place a plate",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2024/09/27 18:10:35",
+          "2024/09/27 18:10:35"
+        ]
+      ]
+    },
+    "history-0-3-valid_unseen-8749503be921d8fb_d880-252.444891-3": {
+      "q_time": "2024/10/03 18:33:26",
+      "q": "What steps did you perform during transport of the plate?",
+      "gt": "Pickup the plate, Place the plate at the countertop",
+      "hyp": "I have forgotten the specific steps I performed during transport of the plate and they are no longer available.",
+      "meta": {
+        "q_pair_id": "52982e24018ce570c0cc430e183253da",
+        "auto_correction": "You should always remember the detailed steps you perform during transport of the plate",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2024/09/27 18:10:23",
+          "2024/09/27 18:10:35"
+        ]
+      ]
+    },
+    "history-0-4-valid_unseen-43ab49a445e41c42_0717-92.26973-0": {
+      "q_time": "2024/10/06 15:44:14",
+      "q": "Which object did you last transport to the countertop?",
+      "gt": "The dishsponge",
+      "hyp": "The last object I transported to the countertop was a filled mug.",
+      "meta": {
+        "q_pair_id": "687cfc473a1c1e02f93c248efa4bb9a6",
+        "auto_correction": "You should always remember which object you transport to the countertop",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2024/10/03 18:32:45",
+          "2024/10/03 18:32:49"
+        ]
+      ]
+    },
+    "history-5-2-valid_unseen-fb7d765ba6874372_0a26-397.6581-0": {
+      "q_time": "2023/06/30 10:36:29",
+      "q": "When did you first slice a tomato?",
+      "gt": "At 2023/06/28, 18:53:48",
+      "hyp": "I first sliced a tomato on June 28, 2023, between 18:50 and 18:55.",
+      "meta": {
+        "q_pair_id": "12c1e8917e1cf01fec760a9e437da07d",
+        "auto_correction": "You should always remember the exact time when you slice a tomato",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2023/06/28 18:53:31",
+          "2023/06/28 18:53:48"
+        ]
+      ]
+    },
+    "history-5-2-valid_unseen-fb7d765ba6874372_0a26-397.6581-1": {
+      "q_time": "2023/06/30 10:36:29",
+      "q": "What objects did you see the first time you did pickup a spatula?",
+      "gt": "sink basin, knife, countertop, spatula, plate, bread sliced slice, sink, butterknife, mug, dishsponge, pot, faucet",
+      "hyp": "The first time I picked up a spatula, I saw a mug, soap bottle, pan, spatula, stove burners, drawers, countertops, sink, stove knobs, paper towel roll, sink basin, microwave, and floor.",
+      "meta": {
+        "q_pair_id": "6f1d16a58b263d35f3d82fa23cc3bc06",
+        "auto_correction": "You should always remember all the objects you see when you pickup a spatula",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2023/06/28 15:26:51",
+          "2023/06/28 15:26:51"
+        ]
+      ]
+    },
+    "history-5-2-valid_unseen-fb7d765ba6874372_0a26-397.6581-2": {
+      "q_time": "2023/06/30 10:36:29",
+      "q": "When did you first place a spatula?",
+      "gt": "At 2023/06/28, 15:26:54",
+      "hyp": "I have not placed a spatula yet.",
+      "meta": {
+        "q_pair_id": "1f8bb0ea0f4e24428d880ec921e4315e",
+        "auto_correction": "You should always remember the exact time when you place a spatula",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2023/06/28 15:26:54",
+          "2023/06/28 15:26:54"
+        ]
+      ]
+    },
+    "history-5-2-valid_unseen-fb7d765ba6874372_0a26-397.6581-3": {
+      "q_time": "2023/06/30 10:36:29",
+      "q": "When did you first finish to transport a spatula?",
+      "gt": "At 2023/06/28, 15:26:54",
+      "hyp": "I have never finished transporting a spatula.",
+      "meta": {
+        "q_pair_id": "bafbaa86f102800c0a97f2426141d28a",
+        "auto_correction": "You should always remember the exact time when you finish to transport a spatula",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2023/06/28 15:26:51",
+          "2023/06/28 15:26:54"
+        ]
+      ]
+    },
+    "history-5-2-valid_unseen-fb7d765ba6874372_0a26-397.6581-4": {
+      "q_time": "2023/06/30 10:36:29",
+      "q": "Which object did you first transport to the toaster?",
+      "gt": "The bread sliced slice",
+      "hyp": "The first object I transported to the toaster was a slice of bread.",
+      "meta": {
+        "q_pair_id": "f068119f28108ee81c6945eca669f5d8",
+        "auto_correction": "You should always remember which object you transport to the toaster",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2023/06/28 15:25:02",
+          "2023/06/28 15:25:06"
+        ]
+      ]
+    },
+    "history-5-4-valid_unseen-cb0e41e1b364ad27_6591-163.583271-0": {
+      "q_time": "2023/07/05 17:34:39",
+      "q": "When did you last slice a tomato?",
+      "gt": "At 2023/06/30, 11:41:51",
+      "hyp": "The last time I sliced a tomato was on June 30th, 2023.",
+      "meta": {
+        "q_pair_id": "12c1e8917e1cf01fec760a9e437da07d",
+        "auto_correction": "You should always remember the exact time when you slice a tomato",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2023/06/30 11:41:45",
+          "2023/06/30 11:41:51"
+        ]
+      ]
+    },
+    "history-5-4-valid_unseen-cb0e41e1b364ad27_6591-163.583271-1": {
+      "q_time": "2023/07/05 17:34:39",
+      "q": "What objects did you see the last time you did pickup a spatula?",
+      "gt": "houseplant, knife, sink basin, countertop, spatula, plate, window, papertowelroll, sink, spoon, dishsponge, potato slice, mug, faucet",
+      "hyp": "I do not have any record of picking up a spatula, so I cannot answer what objects I saw during that action.",
+      "meta": {
+        "q_pair_id": "6f1d16a58b263d35f3d82fa23cc3bc06",
+        "auto_correction": "You should always remember all the objects you see when you pickup a spatula",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2023/06/30 10:37:37",
+          "2023/06/30 10:37:38"
+        ]
+      ]
+    },
+    "history-5-4-valid_unseen-cb0e41e1b364ad27_6591-163.583271-2": {
+      "q_time": "2023/07/05 17:34:39",
+      "q": "When did you last place a spatula?",
+      "gt": "At 2023/06/30, 10:37:43",
+      "hyp": "I do not have any record of placing a spatula in my available history.",
+      "meta": {
+        "q_pair_id": "1f8bb0ea0f4e24428d880ec921e4315e",
+        "auto_correction": "You should always remember the exact time when you place a spatula",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2023/06/30 10:37:43",
+          "2023/06/30 10:37:43"
+        ]
+      ]
+    },
+    "history-5-4-valid_unseen-cb0e41e1b364ad27_6591-163.583271-3": {
+      "q_time": "2023/07/05 17:34:39",
+      "q": "When did you last finish to transport a spatula?",
+      "gt": "At 2023/06/30, 10:37:43",
+      "hyp": "I do not have any record of finishing the transport of a spatula in my available history.",
+      "meta": {
+        "q_pair_id": "bafbaa86f102800c0a97f2426141d28a",
+        "auto_correction": "You should always remember the exact time when you finish to transport a spatula",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2023/06/30 10:37:37",
+          "2023/06/30 10:37:43"
+        ]
+      ]
+    },
+    "history-5-4-valid_unseen-cb0e41e1b364ad27_6591-163.583271-4": {
+      "q_time": "2023/07/05 17:34:39",
+      "q": "Which object did you last transport to the toaster?",
+      "gt": "The bread slice",
+      "hyp": "The last object I transported to the toaster was bread.",
+      "meta": {
+        "q_pair_id": "f068119f28108ee81c6945eca669f5d8",
+        "auto_correction": "You should always remember which object you transport to the toaster",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2023/06/30 11:41:07",
+          "2023/06/30 11:41:16"
+        ]
+      ]
+    },
+    "history-7-1-valid_unseen-498d06abfb7e9487_5c19-143.820243-0": {
+      "q_time": "2024/08/21 12:13:54",
+      "q": "What objects did you see the first time you did place a knife?",
+      "gt": "houseplant, soapbottle, statue, knife, countertop, sink basin, plate, sink, peppershaker, creditcard, spoon, potato slice, faucet",
+      "hyp": "I did not see any objects the first time I placed a knife, as there is no record of placing a knife.",
+      "meta": {
+        "q_pair_id": "2b01d01fc566cab1b595848a1d57df05",
+        "auto_correction": "You should always remember all the objects you see when you place a knife",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2024/08/16 12:34:16",
+          "2024/08/16 12:34:20"
+        ]
+      ]
+    },
+    "history-7-1-valid_unseen-498d06abfb7e9487_5c19-143.820243-1": {
+      "q_time": "2024/08/21 12:13:54",
+      "q": "When did you first slice a potato?",
+      "gt": "At 2024/08/16, 12:34:13",
+      "hyp": "The first time I sliced a potato was on August 16th, 2024.",
+      "meta": {
+        "q_pair_id": "2c23bd41d3c1b670fa2a9e19416533fd",
+        "auto_correction": "You should always remember the exact time when you slice a potato",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2024/08/16 12:33:43",
+          "2024/08/16 12:34:13"
+        ]
+      ]
+    },
+    "history-7-1-valid_unseen-498d06abfb7e9487_5c19-143.820243-2": {
+      "q_time": "2024/08/21 12:13:54",
+      "q": "What steps did you perform during transport of the knife?",
+      "gt": "Pickup the knife, Slice the potato, Place the knife at the countertop",
+      "hyp": "There is no record of any steps performed during transport of a knife.",
+      "meta": {
+        "q_pair_id": "924c7d972d689dd54a3b1145e44e210f",
+        "auto_correction": "You should always remember the detailed steps you perform during transport of the knife",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2024/08/16 12:32:58",
+          "2024/08/16 12:34:20"
+        ]
+      ]
+    },
+    "history-7-1-valid_unseen-498d06abfb7e9487_5c19-143.820243-3": {
+      "q_time": "2024/08/21 12:13:54",
+      "q": "When did you first transport something to the plate?",
+      "gt": "At 2024/08/16, 12:35:53",
+      "hyp": "I have not yet transported anything onto the plate. The first related action was placing the plate itself on the counter at 2024/08/21 12:13:46.",
+      "meta": {
+        "q_pair_id": "860f3c7e3e4d456c1cf3cbf8237b2f65",
+        "auto_correction": "You should always remember the exact time when you transport something to the plate",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2024/08/16 12:35:08",
+          "2024/08/16 12:35:53"
+        ]
+      ]
+    },
+    "history-7-1-valid_unseen-498d06abfb7e9487_5c19-143.820243-4": {
+      "q_time": "2024/08/21 12:13:54",
+      "q": "What objects did you see the first time you did pickup a potato slice?",
+      "gt": "houseplant, soapbottle, statue, knife, countertop, sink basin, plate, sink, peppershaker, creditcard, spoon, potato slice, faucet",
+      "hyp": "I do not know what objects I saw the first time I picked up a potato slice.",
+      "meta": {
+        "q_pair_id": "4bff1e7c2c0f522ab610a80bd07edaf0",
+        "auto_correction": "You should always remember all the objects you see when you pickup a potato slice",
+        "q_pair_idx": 1
+      },
+      "ref_ts": [
+        [
+          "2024/08/16 12:34:24",
+          "2024/08/16 12:34:24"
+        ]
+      ]
+    },
+    "history-7-3-valid_unseen-b001404996cd3a29_0181-485.108041-0": {
+      "q_time": "2024/08/22 19:28:05",
+      "q": "What objects did you see the last time you did place a knife?",
+      "gt": "egg, knife, sink basin, countertop, lettuce sliced slice, plate, mug, tomato, sink, butterknife, tomato slice, potato slice, pot, faucet",
+      "hyp": "The last time I placed a knife, I saw a saltshaker, light switch, vase, countertop, pepper shaker, plate, floor, tomato, and shelf.",
+      "meta": {
+        "q_pair_id": "2b01d01fc566cab1b595848a1d57df05",
+        "auto_correction": "You should always remember all the objects you see when you place a knife",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2024/08/21 16:00:56",
+          "2024/08/21 16:00:56"
+        ]
+      ]
+    },
+    "history-7-3-valid_unseen-b001404996cd3a29_0181-485.108041-1": {
+      "q_time": "2024/08/22 19:28:05",
+      "q": "When did you last slice a potato?",
+      "gt": "At 2024/08/21, 15:53:02",
+      "hyp": "The last time I sliced a potato was on August 21st, 2024, between 3:51 and 3:53 PM.",
+      "meta": {
+        "q_pair_id": "2c23bd41d3c1b670fa2a9e19416533fd",
+        "auto_correction": "You should always remember the exact time when you slice a potato",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2024/08/21 15:52:47",
+          "2024/08/21 15:53:02"
+        ]
+      ]
+    },
+    "history-7-3-valid_unseen-b001404996cd3a29_0181-485.108041-2": {
+      "q_time": "2024/08/22 19:28:05",
+      "q": "What steps did you perform during transport of the knife?",
+      "gt": "Pickup the knife, Slice the potato, Place the knife at the countertop",
+      "hyp": "I picked up the knife, used it to slice a tomato, and then placed it on the countertop.",
+      "meta": {
+        "q_pair_id": "924c7d972d689dd54a3b1145e44e210f",
+        "auto_correction": "You should always remember the detailed steps you perform during transport of the knife",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2024/08/21 16:00:48",
+          "2024/08/21 16:00:56"
+        ]
+      ]
+    },
+    "history-7-3-valid_unseen-b001404996cd3a29_0181-485.108041-3": {
+      "q_time": "2024/08/22 19:28:05",
+      "q": "When did you last transport something to the plate?",
+      "gt": "At 2024/08/21, 16:03:51",
+      "hyp": "The last time I transported something to the plate was on August 21st, 2024, between 15:57 and 15:58.",
+      "meta": {
+        "q_pair_id": "860f3c7e3e4d456c1cf3cbf8237b2f65",
+        "auto_correction": "You should always remember the exact time when you transport something to the plate",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2024/08/21 16:03:40",
+          "2024/08/21 16:03:51"
+        ]
+      ]
+    },
+    "history-7-3-valid_unseen-b001404996cd3a29_0181-485.108041-4": {
+      "q_time": "2024/08/22 19:28:05",
+      "q": "What objects did you see the last time you did pickup a potato slice?",
+      "gt": "egg, statue, knife, countertop, cabinet, window, spatula, pan, plate, stoveburner, microwave, tomato slice, potato slice, mug, coffeemachine",
+      "hyp": "The last time I picked up a potato slice, I saw tomato slices and lettuce slices nearby.",
+      "meta": {
+        "q_pair_id": "4bff1e7c2c0f522ab610a80bd07edaf0",
+        "auto_correction": "You should always remember all the objects you see when you pickup a potato slice",
+        "q_pair_idx": 2
+      },
+      "ref_ts": [
+        [
+          "2024/08/21 16:01:28",
+          "2024/08/21 16:03:01"
+        ]
+      ]
+    }
+  },
+  "times": {
+    "builder": 95307.43794488907,
+    "qa": 1699.6361224651337,
+    "forgetting": 347.4056947231293
+  },
+  "token_costs": {
+    "builder": {
+      "prompt_tokens": 17586565,
+      "completion_tokens": 784043
+    },
+    "qa": {
+      "prompt_tokens": 907999,
+      "completion_tokens": 23736
+    },
+    "forgetting": {
+      "prompt_tokens": 0,
+      "completion_tokens": 0
+    }
+  }
+}

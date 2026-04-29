@@ -1,0 +1,3 @@
++include: predefined_zs
+prompt_cfg:
+  system: system_zs_forgetting

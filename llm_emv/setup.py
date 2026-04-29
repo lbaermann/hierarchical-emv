@@ -9,13 +9,13 @@ from langchain_core.language_models import BaseChatModel
 from sentence_transformers import SentenceTransformer
 
 from em.em_tree import HigherLevelSummary
+from em.vlm import instantiate_vlm
 from lmp.api_visibility_wrapper import ApiVisibilityWrapper
 from lmp.namespace import DynamicNamespaceDict
 from lmp.repl.code_execution import ReplExecutionEnvironment
 from lmp.setup import load_config, setup_lmp, instantiate_llm, instantiate_error_handlers
 from .emv_api import EMVerbalizationAPI
 from .simplified_agent.simple_coding_emv import SimplifiedCodingEMV
-from .vlm import OpenAiVision
 from .zs_flat_history_qa import ZeroShotOnePassSemiFlatQA
 
 
@@ -47,7 +47,8 @@ def setup_llm_emv(cfg_path='teach/simplified/full',
                   history: HigherLevelSummary = None,
                   now_time: datetime.datetime = None,
                   wait_for_trigger_callback=lambda: {'type': 'dialog', 'text': input('User:')},
-                  tts=lambda s: print('System:', s)):
+                  tts=lambda s: print('System:', s),
+                  return_answer_with_reasoning=False):
     if history is None:
         raise ValueError('history == None')
     full_cfg_path = Path(__file__).parent / 'config' / f'{cfg_path}.yaml'
@@ -58,12 +59,13 @@ def setup_llm_emv(cfg_path='teach/simplified/full',
         model = ZeroShotOnePassSemiFlatQA(instantiate_llm(cfg.pop('llm')), now_time=now_time, **cfg)
         return partial(model, history)
 
-    vlm = _instantiate_vlm(cfg.pop('question_vlm', None))
+    vlm = instantiate_vlm(cfg.pop('question_vlm', None))
     search_emb, filter_kwargs = create_search_embedding_and_cfg(cfg.pop('search', None))
     # noinspection PyTypeChecker
     api = EMVerbalizationAPI(wait_for_trigger=wait_for_trigger_callback, tts=tts, history=history,
                              now_time=now_time, hierarchy_level=cfg.pop('hierarchy_level', 'deep'),
-                             vlm=vlm, search_embedding_fn=search_emb, search_filter_kwargs=filter_kwargs)
+                             vlm=vlm, search_embedding_fn=search_emb, search_filter_kwargs=filter_kwargs,
+                             return_answer_with_reasoning=return_answer_with_reasoning)
     api = ApiVisibilityWrapper(api, **cfg.pop('api'))
     namespace = setup_namespace(api)
     if vlm is None:
@@ -90,25 +92,21 @@ def setup_namespace(api):
     return namespace
 
 
-def _instantiate_vlm(vlm_cfg: Optional[dict]):
-    if vlm_cfg is None:
-        return None
-    assert vlm_cfg.get('type') == 'ChatOpenAI'
-    model = instantiate_llm(vlm_cfg)
-    # noinspection PyTypeChecker
-    return OpenAiVision(model)
-
-
 def create_search_embedding_and_cfg(search_cfg: Optional[dict]):
     if search_cfg is None:
         return None, None
 
     embedding_model_name = search_cfg.pop('embedding', 'all-MiniLM-L6-v2')
     embedding_model = SentenceTransformer(embedding_model_name)
+    embedding_model.to(device=search_cfg.pop('device', None))
     cache = {}
     cache_file = Path('search-embedding-cache.pt')
     if cache_file.is_file():
-        cache = torch.load(cache_file, map_location=embedding_model.device)
+        try:
+            cache = torch.load(cache_file, map_location=embedding_model.device)
+        except:
+            # Avoid file conflicts with concurrent processes => no persistent cache for this session
+            cache_file = None
     write_cache_executor = ThreadPoolExecutor(max_workers=1, thread_name_prefix='search-emb-cache-writer')
 
     def _embed_cached(texts: Tuple[str, ...]):
@@ -125,10 +123,11 @@ def create_search_embedding_and_cfg(search_cfg: Optional[dict]):
         print('Embedding', len(texts), ', new:', len(todo_texts))
         if todo_indices:
             new_embeddings = embedding_model.encode(list(todo_texts), convert_to_tensor=True)
-            result[todo_indices] = new_embeddings
+            result[todo_indices] = new_embeddings.to(result.device)
             for text, emb in zip(todo_texts, new_embeddings):
                 cache[text] = emb
-            write_cache_executor.submit(lambda: torch.save(dict(cache), cache_file))
+            if cache_file:
+                write_cache_executor.submit(lambda: torch.save(dict(cache), cache_file))
         return result
 
     def _embed(texts: List[str]):
@@ -142,6 +141,6 @@ def create_search_embedding_and_cfg(search_cfg: Optional[dict]):
                 original_to_unique_indices.append(len(unique_entries))
                 unique_entries.append(text)
         embeddings = _embed_cached(tuple(unique_entries))
-        return torch.index_select(embeddings, 0, torch.tensor(original_to_unique_indices))
+        return torch.index_select(embeddings.cpu(), 0, torch.tensor(original_to_unique_indices, dtype=torch.int32))
 
     return _embed, search_cfg.pop('filter_kwargs', {})

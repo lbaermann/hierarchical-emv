@@ -4,7 +4,7 @@ from abc import ABC
 from argparse import Namespace
 from collections import OrderedDict
 from copy import deepcopy
-from datetime import datetime
+from datetime import datetime, timedelta
 from functools import cache, cached_property
 from hashlib import md5
 from pathlib import Path
@@ -15,7 +15,7 @@ from em.em_tree import HigherLevelSummary
 from em.em_util import move_history_to_start_date
 from em.llm_summary import LLMBasedSummarizer
 from em.randomize_episodes import gen_random_date_from_seed, randomize_datetimes
-from em.teach import load_teach_episode, load_teach_episode_no_gt
+from em.teach import load_teach_episode, load_teach_episode_no_gt, peek_teach_episode_length
 from .qa_eval import EpisodicQADataset, EpisodicQASample
 from .util import make_llm_summarizer_from_cfg, pick_random_question_date_after_history
 
@@ -51,7 +51,8 @@ class DeChantQaDataset(EpisodicQADataset, ABC):
     def _parse_datetime_from_trial_id(self, trial_id: Tuple[str, ...]) -> datetime:
         raise NotImplementedError
 
-    def _load_history(self, batch: Dict[str, Any], start_time: datetime) -> Optional[HigherLevelSummary]:
+    def _load_history(self, batch: Dict[str, Any], start_time: datetime
+                      ) -> Optional[Tuple[HigherLevelSummary, List[Tuple[datetime, datetime]]]]:
         raise NotImplementedError
 
     @classmethod
@@ -77,9 +78,10 @@ class DeChantQaDataset(EpisodicQADataset, ABC):
                 # Prevent loading history if it is not usable with the current filter
                 continue
 
-            history = self._load_history(batch, start_time)
-            if history is None:
+            history_and_ep_ranges = self._load_history(batch, start_time)
+            if history_and_ep_ranges is None:
                 continue
+            history, ep_ranges = history_and_ep_ranges
 
             for key, value in batch.items():
                 if key in self._non_question_keys():
@@ -95,7 +97,13 @@ class DeChantQaDataset(EpisodicQADataset, ABC):
                     q_time = batch['now_time_stamp']
                 else:
                     q_time = pick_random_question_date_after_history(history, Random(sample_id))
-                yield EpisodicQASample(sample_id, q, q_time, a, deepcopy(history))
+                ep_indices = value.get('corrected_episode_indices_involved', value.get('episode_indices_involved'))
+                if ep_indices:
+                    answer_time_spans = [ep_ranges[ep_idx] for ep_idx in set(ep_indices)]
+                else:
+                    answer_time_spans = []
+                yield EpisodicQASample(sample_id, q, q_time, a, deepcopy(history),
+                                       gt_answer_time_spans=answer_time_spans)
 
     @cache
     def __len__(self):
@@ -161,16 +169,28 @@ class TeachDeChantDataset(DeChantQaDataset):
         # This will be ignored in the multi-episode case when there are predefined dates and times in the data dict
         return gen_random_date_from_seed("-".join(trial_ids))  # Seed with game id to ensure deterministic behavior
 
-    def _load_history(self, batch: Dict[str, Any], start_time: datetime) -> Optional[HigherLevelSummary]:
+    def _load_history(self, batch: Dict[str, Any], start_time: datetime
+                      ) -> Optional[Tuple[HigherLevelSummary, List[Tuple[datetime, datetime]]]]:
         split = batch['dataset_name']
         single_episode = 'game_id' in batch
         cached_history, cache_file = self._get_cached_history(
             split, batch['game_id'] if single_episode else batch['episode_ids'])
 
         if cached_history:
-            if single_episode and start_time is not None:
-                cached_history = move_history_to_start_date(cached_history, start_time)
-            return cached_history
+            if single_episode:
+                if start_time is not None:
+                    cached_history = move_history_to_start_date(cached_history, start_time)
+                single_episode_ranges = [cached_history.range]
+            else:
+                # Actually, single_episode_ranges should have been stored in cache file. However, legacy code didn't
+                #  do that, so we need to reconstruct it here somehow. Deleting the cache files would redo summaries
+                single_episode_ranges = [
+                    (start, start + timedelta(seconds=peek_teach_episode_length(
+                        self.teach_base_path / 'games' / split / f'{ep_id}.game.json'
+                    )))
+                    for ep_id, start in zip(batch["episode_ids"], batch['time_stamps'])
+                ]
+            return cached_history, single_episode_ranges
 
         if single_episode:
             game_id = batch["game_id"]
@@ -186,28 +206,31 @@ class TeachDeChantDataset(DeChantQaDataset):
                 )
             else:
                 raw_history = load_teach_episode(game_file, start_time)
+            single_episode_ranges = [raw_history.range]
         else:
             episode_ids = batch["episode_ids"]
             time_info = batch.get('time_stamps', [])
             time_info = {
                 ep_id: ts for ep_id, ts in zip(episode_ids, time_info)
             }
-            single_ep_histories = [
+            single_ep_histories_with_ranges = [
                 self._load_history(dict(dataset_name=split, game_id=ep_id), time_info.get(ep_id))
                 for ep_id in episode_ids
             ]
+            single_ep_histories = [x[0] for x in single_ep_histories_with_ranges]
+            single_episode_ranges = [x[1][0] for x in single_ep_histories_with_ranges]
             if not time_info:
                 # Seed deterministically based on start time, which itself is seeded based on the episode ids
                 single_ep_histories = randomize_datetimes(single_ep_histories, rng=Random(str(start_time)))
             raw_history = HigherLevelSummary('', single_ep_histories)
 
         if self.llm_summarizer is None:
-            return raw_history
+            return raw_history, single_episode_ranges
 
         hierarchical_history = self.llm_summarizer.recursively_summarize(raw_history.children)
         cache_file.parent.mkdir(parents=True, exist_ok=True)
         cache_file.write_bytes(pickle.dumps(hierarchical_history))
-        return hierarchical_history
+        return hierarchical_history, single_episode_ranges
 
     def _get_cached_history(self, split: str, history_id: Union[str, Tuple[str, ...]]
                             ) -> Tuple[Optional[HigherLevelSummary], Path]:
@@ -222,7 +245,6 @@ class TeachDeChantDataset(DeChantQaDataset):
             episode_ids: Tuple[str, ...] = history_id
             # Don't want to run into "too long file name" errors, but still want unique file names
             if len(episode_ids) >= 100:
-                md5()
                 quarter_size = len(episode_ids) // 4 + 1
                 episode_id_str = ''.join(md5(''.join(episode_ids[i * quarter_size:(i + 1) * quarter_size]
                                                      ).encode()).hexdigest()

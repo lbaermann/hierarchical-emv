@@ -66,7 +66,7 @@ class TreeNode:
         return node + children + child_indicator
 
 
-def _create_tree_from_lines(tree_lines: List[str], tab_width=2):
+def create_tree_from_lines(tree_lines: List[str], tab_width=2):
     in_triple_quotes = False
     stack: List[Tuple[int, TreeNode]] = []
     for line in tree_lines:
@@ -77,12 +77,16 @@ def _create_tree_from_lines(tree_lines: List[str], tab_width=2):
             while depth <= stack[-1][0]:
                 stack.pop()
 
-        match = re.match(r'(\d+: )?(?:([-0-9/: ]+): ("+)|SceneGraphInstant)', line.strip())
+        match = re.match(r'(\d+: )?(?:([-0-9/: ]+): (("+)|<forgotten>)|SceneGraphInstant)', line.strip())
+
         if match:
             local_idx = int(match.group(1)[:-2]) if match.group(1) else 0  # for root node
             if match.group().endswith('SceneGraphInstant'):
                 node = TreeNode(local_index=local_idx, dt_text='', text=line.strip()[match.end(1):].strip(),
                                 children=[])
+            elif match.group().endswith('<forgotten>'):
+                node = TreeNode(local_index=local_idx, dt_text=match.group(2),
+                                text='<forgotten>', children=[])
             else:
                 node = TreeNode(local_index=local_idx, dt_text=match.group(2),
                                 text=line.strip()[match.end():].strip('"'), children=[])
@@ -199,7 +203,7 @@ def load_steps_from_logfile(
         if len(tree_end_idx) == 0:
             raise AssertionError(lines)
         tree_lines = lines[:tree_end_idx[0]]
-        tree = _create_tree_from_lines(tree_lines)
+        tree = create_tree_from_lines(tree_lines)
         messages = _read_messages_from_log(part[messages_start:tree_start])
         steps.append((tree, messages))
 
@@ -274,32 +278,12 @@ def _fill_states(merged_tree: TreeNode, tree_state: TreeNode, html_states: Dict[
         html_states[f'child-indicator-after-node-{idx_str}-{last_local_idx}'] = '+shown -collapsed'
 
 
-def create_website_js_from_steps(merged_tree, steps) -> str:
-    js_per_step = []
-
-    for tree_state, messages in steps:
-        states = {}
-        _fill_states(merged_tree, tree_state, states)
-
-        step_code = ''
-        for element_id, state in states.items():
-            element_code = f'$("#{element_id}")'
-            for state_action in state.split():
-                if '-' == state_action[0]:
-                    element_code += f'.removeClass("{state_action[1:]}")'
-                elif '+' == state_action[0]:
-                    element_code += f'.addClass("{state_action[1:]}")'
-            step_code += element_code + ';'
-        step_code += ';'.join(f'$("#msg-{i}").removeClass("collapsed")' for i in range(len(messages)))
-        js_per_step.append(step_code)
-
-    apply_step_code = ''
-    for i, code in enumerate(js_per_step):
-        apply_step_code += f'if (step == {i}) ' + '{' + code + '}\n'
-    return '''
+WEBSITE_JS_TEMPLATE = '''
     var step = 0;
     const numSteps = {num_steps};
-    function applyStep() {
+    var stepPicker = $("#step-picker");function applyStep() {
+      stepPicker.val(step)
+    
       $(".node").addClass("collapsed");
       $(".child-container").addClass("collapsed");
       $(".node-children-indicator").addClass("collapsed").removeClass("shown");
@@ -315,6 +299,10 @@ def create_website_js_from_steps(merged_tree, steps) -> str:
     })
     $("#button-next").on("click", () => {
         if (step + 1 < numSteps) step += 1;
+        applyStep();
+    })
+    stepPicker.on("change", () => {
+        step = Math.min(numSteps - 1, Math.max(0, stepPicker.val()));
         applyStep();
     })
     function animateStep() {
@@ -343,11 +331,41 @@ def create_website_js_from_steps(merged_tree, steps) -> str:
         }
     }
     document.addEventListener("keydown", keyPress, false);
+'''
 
-    '''.replace('{apply_step_code}', apply_step_code).replace('{num_steps}', str(len(steps)))
+
+def create_website_js_from_steps(merged_tree, steps, extra_final_msg=False) -> str:
+    js_per_step = []
+
+    for k, (tree_state, messages) in enumerate(steps):
+        states = {}
+        _fill_states(merged_tree, tree_state, states)
+
+        step_code = ''
+        for element_id, state in states.items():
+            element_code = f'$("#{element_id}")'
+            for state_action in state.split():
+                if '-' == state_action[0]:
+                    element_code += f'.removeClass("{state_action[1:]}")'
+                elif '+' == state_action[0]:
+                    element_code += f'.addClass("{state_action[1:]}")'
+            step_code += element_code + ';'
+
+        if extra_final_msg and k == len(steps) - 1:
+            num_msgs = len(messages) + 1
+        else:
+            num_msgs = len(messages)
+        step_code += ';'.join(f'$("#msg-{i}").removeClass("collapsed")' for i in range(num_msgs))
+        js_per_step.append(step_code)
+
+    apply_step_code = ''
+    for i, code in enumerate(js_per_step):
+        apply_step_code += f'if (step == {i}) ' + '{' + code + '}\n'
+    return WEBSITE_JS_TEMPLATE.replace('{apply_step_code}', apply_step_code
+                                       ).replace('{num_steps}', str(len(steps)))
 
 
-def _create_html_from_messages(messages: List[Tuple[bool, str]]):
+def _create_html_from_messages(messages: List[Tuple[bool, str]], gt_answer=None, semantic_cat=None):
     initial_question = messages[0][1]
     assert messages[0][0], 'Initial message must be user question.'
 
@@ -359,25 +377,33 @@ def _create_html_from_messages(messages: List[Tuple[bool, str]]):
         html_content += f'<div class="message {message_class}" id="msg-{i}">{text}</div>\n'
 
     answer = messages[-1][1]
-    html_content += f'<div class="message answer" id="msg-{len(messages) - 1}">{answer}</div>\n'
+    if semantic_cat:
+        answer_cls = 'answer-partially' if 'partially_correct' in semantic_cat else (
+            'answer-correct' if 'correct' in semantic_cat else 'answer-wrong'
+        )
+    else:
+        answer_cls = 'answer-correct'
+    html_content += f'<div class="message answer {answer_cls}" id="msg-{len(messages) - 1}">{answer}</div>\n'
+    if gt_answer:
+        html_content += f'<div class="message answer answer-gt" id="msg-{len(messages)}">{gt_answer}</div>\n'
     return html_content
 
 
-def create_demo_from_logfile(log_file: Path, sample_name: str):
+def create_demo_from_logfile(log_file: Path, sample_name: str, gt_answer=None, semantic_cat=None):
     steps = load_steps_from_logfile(log_file, sample_name)
     tree_per_step = [s[0] for s in steps]
     merged_tree = _merge_trees(tree_per_step)
 
-    button_script = create_website_js_from_steps(merged_tree, steps)
+    button_script = create_website_js_from_steps(merged_tree, steps, extra_final_msg=gt_answer is not None)
 
     demo_dir = Path(__file__).parent
     template = (demo_dir / 'demo_template.html').read_text()
     output = (template
               .replace('{tree}', merged_tree.render_html())
               .replace('/*js_code*/', button_script)
-              .replace('{messages}', _create_html_from_messages(steps[-1][1])))
+              .replace('{messages}', _create_html_from_messages(steps[-1][1], gt_answer, semantic_cat)))
     file_sample_name = sample_name if len(sample_name) < 200 else sample_name[:97] + '___' + sample_name[-100:]
-    (demo_dir / f'{log_file.stem}-{file_sample_name}.html').write_text(output)
+    (demo_dir / 'gen' / f'{log_file.stem}-{file_sample_name}.html').write_text(output)
 
 
 def main():
@@ -385,9 +411,10 @@ def main():
     sample_or_json = sys.argv[2]
     if len(sample_or_json) < 200 and Path(sample_or_json).is_file():
         json_content = json.loads(Path(sample_or_json).read_text())
-        samples = json_content['results'].keys()
-        for sample in samples:
-            create_demo_from_logfile(log_file, sample_name=sample)
+        for sample_id, data in json_content['results'].items():
+            create_demo_from_logfile(log_file, sample_name=sample_id, gt_answer=data['gt'],
+                                     semantic_cat=data['cat']
+                                     )
     else:
         create_demo_from_logfile(log_file, sample_name=sample_or_json)
 

@@ -8,11 +8,11 @@ from langchain_core.messages import HumanMessage
 from sentence_transformers import util
 
 from em.em_tree import HigherLevelSummary, type_to_children_property_map, HighestPredefinedSummaryLevel, AnyTreeNode
+from em.vlm import VLM
 from lmp.api_visibility_wrapper import group
 from lmp.namespace import comment
 from lmp.repl.semantic_hint_errror import SemanticHintError
 from .interactive_tree import ExpandableTreeNode, ExpandableList, create_expandable_tree_node_filter_fn
-from .vlm import VLM
 
 
 class EMVerbalizationAPI:
@@ -26,23 +26,24 @@ class EMVerbalizationAPI:
             hierarchy_level: Literal['none', 'predefined', 'predefined+', 'deep'] = 'deep',
             vlm: VLM = None,
             search_embedding_fn: Callable[[List[str]], torch.Tensor] = None,
-            search_filter_kwargs=None
+            search_filter_kwargs=None,
+            return_answer_with_reasoning=False
     ) -> None:
         super().__init__()
         self._vlm = vlm
         self._wait_for_trigger = wait_for_trigger
         self._tts = tts
         self._now_time = now_time
+        self._return_answer_with_reasoning = return_answer_with_reasoning
         if hierarchy_level == 'deep':
             self._history: ExpandableTreeNode = make_tree_interactive(history, search_embedding_fn,
                                                                       search_filter_kwargs)
         elif hierarchy_level.startswith('predefined'):
-            # noinspection PyTypeChecker
             nodes = [make_tree_interactive(x, search_embedding_fn, search_filter_kwargs)
                      for x in (find_all_predefined_summary_nodes
                                if hierarchy_level == 'predefined'
                                else find_all_parents_of_predefined_summary_nodes)(history)]
-            # noinspection PyProtectedMember
+            # noinspection PyProtectedMember,PyTypeChecker
             self._history = ExpandableList(
                 nodes,
                 filter_fn_generator=create_expandable_tree_node_filter_fn,
@@ -89,7 +90,11 @@ class EMVerbalizationAPI:
                 answer = reasoning
                 reasoning = None
         print('Answering', answer, ' with reason:', reasoning)
-        return self._tts(answer)
+        if self._return_answer_with_reasoning:
+            # noinspection PyTypeChecker
+            return self._tts(dict(reasoning=reasoning, answer=answer))
+        else:
+            return self._tts(answer)
 
     #########################
     # Utils
@@ -161,7 +166,10 @@ def history_search_similarity(embedding_fn: Callable[[List[str]], torch.Tensor],
     if hasattr(node, '_embedding_cache'):
         embedding = getattr(node, '_embedding_cache')
     else:
-        embedding = embedding_fn([s for s in node.index_content if s])
+        index_content = [s for s in node.index_content if s]
+        if len(index_content) == 0:
+            return 0.0
+        embedding = embedding_fn(index_content)
         setattr(node, '_embedding_cache', embedding)
 
     query_emb = embedding_fn([query])

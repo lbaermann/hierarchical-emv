@@ -1,10 +1,11 @@
 from pathlib import Path
-from typing import List
+from typing import List, Callable, Any
 
 import numpy as np
-from langchain.prompts import PromptTemplate, HumanMessagePromptTemplate, AIMessagePromptTemplate, \
+from langchain_core.prompts import PromptTemplate, HumanMessagePromptTemplate, AIMessagePromptTemplate, \
     SystemMessagePromptTemplate
 from langchain_core.messages import BaseMessage, BaseMessageChunk
+from langchain_core.runnables import Runnable
 
 NoneType = type(None)
 
@@ -12,7 +13,12 @@ NoneType = type(None)
 def llm_predict(llm, text, **kwargs):
     response = llm.invoke(text, **kwargs)
     if isinstance(response, BaseMessage):
-        return response.content
+        content = response.content
+        if isinstance(content, list):
+            content = content[0]
+        if isinstance(content, dict) and 'text' in content:
+            content = content['text']
+        return content
     elif isinstance(response, str):
         return response
     else:
@@ -28,6 +34,20 @@ def llm_predict_stream(llm, text, **kwargs):
             yield chunk
         else:
             raise TypeError(chunk)
+
+
+def invoke_chain_with_adaptive_length_content(chain: Runnable, get_parameters: Callable[[int], Any],
+                                              max_retries=3):
+    trial_idx = 0
+    while True:
+        try:
+            params = get_parameters(trial_idx)
+            return chain.invoke(params)
+        except BaseException as e:
+            if 'context' in str(e) and 'length' in str(e) and trial_idx < max_retries:
+                trial_idx += 1
+            else:
+                raise
 
 
 def print_prompt(prompt):
@@ -98,11 +118,13 @@ def cleanup_model_output(model_out: str):
     code_start = model_out.find('```')
     if code_start == -1:
         return model_out
-    code_end = model_out.find('```', code_start + 3)
+    if '\n' in model_out:  # This also removes ```python or ```tool_code or similar
+        code_start = model_out.find('\n', code_start + 3)
+    else:
+        code_start = code_start + 3
+    code_end = model_out.find('```', code_start + 1)
     code_end = None if code_end == -1 else code_end  # -1 would trim the last char. None means no slicing
-    sub = model_out[code_start + 3:code_end]
-    if sub.startswith('python'):
-        sub = sub[len('python'):]
+    sub = model_out[code_start:code_end]
     return sub.strip()
 
 

@@ -1,0 +1,1754 @@
+{
+  "config": {
+    "history_pickles": "[]",
+    "seed": "42",
+    "n_histories": "10",
+    "min_seq_len": "3",
+    "max_seq_len": "10",
+    "num_test_cases_per_history": "10",
+    "improve_llm": "{'type': 'ChatOpenAI', 'base_url': 'http://localhost:8000/v1', 'openai_api_key': 'fake', 'model': 'meta-llama/Llama-3.3-70B-Instruct', 'temperature': 0, 'request_timeout': 180, 'max_tokens': 512}",
+    "improve_existing_file": "test-inc-qa-filtered.json",
+    "out_file": "test-inc-qa-llm.json"
+  },
+  "data": {
+    "history-0": [
+      {
+        "episode": "2024-a7a/2024-08-27-14-21-01.pkl",
+        "start_date": "2024-10-23 08:06:42",
+        "qa": {}
+      },
+      {
+        "episode": "2024-a7a/2024-08-27-14-06-53.pkl",
+        "start_date": "2024-10-23 10:59:19",
+        "qa": {}
+      },
+      {
+        "episode": "2025-05-a7a/2025_05_11_03.pkl",
+        "start_date": "2024-10-23 19:58:26",
+        "qa": {
+          "303.82090439731957": [
+            {
+              "question": "When did the user first tell you to go home?",
+              "answer": "At 2024/10/23, 08:10:05",
+              "correction": "You should always remember the exact time when the user tells you to go home",
+              "reference": [
+                "2024-10-23 08:09:43",
+                "2024-10-23 08:10:05"
+              ],
+              "pairid": "d59a5368787cf0bc5a28f4eb79df6e2f",
+              "pair_idx": 1,
+              "original_q": "When did the user first say 'Go home' to you?",
+              "original_a": "At 2024/10/23, 08:10:05",
+              "original_c": "You should always remember the exact time when the user says 'Go home'"
+            },
+            {
+              "question": "What did you do the first time you saw the soy milk?",
+              "answer": "I went to the kitchen counter",
+              "correction": "You should always remember what you do when you see a beverage",
+              "reference": [
+                "2024-10-23 08:07:46",
+                "2024-10-23 08:07:48"
+              ],
+              "pairid": "96ab34fe040df0844ff821bfd3d8535f",
+              "pair_idx": 1,
+              "original_q": "What did you do the first time you saw the soy-milk?",
+              "original_a": "I did NavigateToLocation(location=MobileKitchen/counter)",
+              "original_c": "You should always remember what you do when you see a beverage"
+            },
+            {
+              "question": "When did you first see the soy milk?",
+              "answer": "At 2024/10/23, 08:07:48",
+              "correction": "You should always remember the exact time when you encounter a beverage",
+              "reference": [
+                "2024-10-23 08:07:46",
+                "2024-10-23 08:07:48"
+              ],
+              "pairid": "9ccf961e8a2f1f11da58ef709ac2a6db",
+              "pair_idx": 1,
+              "original_q": "When did you first see the soy-milk?",
+              "original_a": "At 2024/10/23, 08:07:48",
+              "original_c": "You should always remember the exact time when you see a beverage"
+            }
+          ]
+        }
+      },
+      {
+        "episode": "2025-05-a7a/2025_05_11_06.pkl",
+        "start_date": "2024-10-27 10:00:36",
+        "qa": {
+          "348.07718878714695": [
+            {
+              "question": "When did the user first ask you to open both of your hands?",
+              "answer": "At 2024/10/23, 21:00:34",
+              "correction": "You should always remember the exact time when the user gives you the command to open both hands",
+              "reference": [
+                "2024-10-23 21:00:34",
+                "2024-10-23 21:00:34"
+              ],
+              "pairid": "a70b606c2da2792b86e47f5686514de5",
+              "pair_idx": 1,
+              "original_q": "When did the user first say 'Open both hands' to you?",
+              "original_a": "At 2024/10/23, 21:00:34",
+              "original_c": "You should always remember the exact time when the user says 'Open both hands'"
+            },
+            {
+              "question": "When did you first grasp the milk with your right arm?",
+              "answer": "At 2024/10/23, 08:09:24",
+              "correction": "You should always remember the exact time when you grasp the milk with your right arm",
+              "reference": [
+                "2024-10-23 08:08:23",
+                "2024-10-23 08:09:24"
+              ],
+              "pairid": "2198f35860a8a6450a93021901245555",
+              "pair_idx": 1,
+              "original_q": "When did you first GraspNamedObjectWithinReach(object=milk, arm=right)?",
+              "original_a": "At 2024/10/23, 08:09:24",
+              "original_c": "You should always remember the exact time when you GraspNamedObjectWithinReach(object=milk, arm=right)"
+            },
+            {
+              "question": "Which arm did you use the first time you unloaded the dishwasher?",
+              "answer": "The right arm",
+              "correction": "You should always remember which arm you use when you unload the dishwasher",
+              "reference": [
+                "2024-10-23 20:10:37",
+                "2024-10-23 20:12:43"
+              ],
+              "pairid": "3d01ac51b8e3af652ed6956ba413a24a",
+              "pair_idx": 1,
+              "original_q": "What value was the parameter arm when you first did LoadDishwasherA7?",
+              "original_a": "right",
+              "original_c": "You should always remember the value of arm when you LoadDishwasherA7"
+            },
+            {
+              "question": "When did you first tell someone about where you last saw the nesquik?",
+              "answer": "At 2024/10/23, 20:33:55",
+              "correction": "You should always remember the exact time when you talk about your past experiences, like where you last saw the nesquik",
+              "reference": [
+                "2024-10-23 20:33:52",
+                "2024-10-23 20:33:55"
+              ],
+              "pairid": "2ab58db225b938bdbfb319b9cb1c8134",
+              "pair_idx": 1,
+              "original_q": "When did you first episodic_verbalization(question=Where did you last see the nesquik?)?",
+              "original_a": "At 2024/10/23, 20:33:55",
+              "original_c": "You should always remember the exact time when you episodic_verbalization(question=Where did you last see the nesquik?)"
+            },
+            {
+              "question": "Where were you when you first heard the user tell you to open both hands?",
+              "answer": "At the home location",
+              "correction": "You should always remember your exact location when the user gives you the command to open both hands",
+              "reference": [
+                "2024-10-23 21:00:34",
+                "2024-10-23 21:00:34"
+              ],
+              "pairid": "427143a4e46edfea5feccec2a2fc0526",
+              "pair_idx": 1,
+              "original_q": "Where have you been the first time you heard the user saying 'Open both hands'?",
+              "original_a": "At the home",
+              "original_c": "You should always remember your exact location when the user says 'Open both hands'"
+            },
+            {
+              "question": "When did the user first tell you to close both of your hands?",
+              "answer": "At 2024/10/23, 21:00:30",
+              "correction": "You should always remember the exact time when the user gives you the command to close both hands",
+              "reference": [
+                "2024-10-23 21:00:30",
+                "2024-10-23 21:00:30"
+              ],
+              "pairid": "34fbb695a6155d1616447f9883584ab1",
+              "pair_idx": 1,
+              "original_q": "When did the user first say 'Close both hands' to you?",
+              "original_a": "At 2024/10/23, 21:00:30",
+              "original_c": "You should always remember the exact time when the user says 'Close both hands'"
+            },
+            {
+              "question": "What objects did you see on the counter the first time you navigated to the home location in R007?",
+              "answer": "CoffeeFilters2, SoftCakeOrange, soy-milk",
+              "correction": "You should remember all the objects you see on the counter when you navigate to the home location in R007",
+              "reference": [
+                "2024-10-23 08:10:09",
+                "2024-10-23 08:10:16"
+              ],
+              "pairid": "d447ccaaf6717c90ed1f509429bd953f",
+              "pair_idx": 1,
+              "original_q": "What objects did you see on the counter the first time you did NavigateToLocation(location=R007/home)?",
+              "original_a": "CoffeeFilters2, SoftCakeOrange, soy-milk",
+              "original_c": "You should remember all the objects you see on the counter when you NavigateToLocation(location=R007/home)"
+            }
+          ]
+        }
+      },
+      {
+        "episode": "2025-05-a7a/2025_05_11_11.pkl",
+        "start_date": "2024-10-28 09:26:16",
+        "qa": {}
+      },
+      {
+        "episode": "2024-a7a/2024-08-27-take-1.pkl",
+        "start_date": "2024-10-28 15:00:19",
+        "qa": {}
+      },
+      {
+        "episode": "2025-05-a7a/2025_05_10_3.pkl",
+        "start_date": "2024-10-28 15:13:34",
+        "qa": {}
+      },
+      {
+        "episode": "2025-05-a7a/2025_05_10_6.pkl",
+        "start_date": "2024-10-29 10:35:25",
+        "qa": {
+          "20.890817551445448": [
+            {
+              "question": "Which arm did you use the last time you unloaded the dishwasher?",
+              "answer": "My right arm",
+              "correction": "You should always remember which arm you use when you unload the dishwasher",
+              "reference": [
+                "2024-10-28 09:46:59",
+                "2024-10-28 09:49:36"
+              ],
+              "pairid": "3d01ac51b8e3af652ed6956ba413a24a",
+              "pair_idx": 2,
+              "original_q": "What value was the parameter arm when you last did LoadDishwasherA7?",
+              "original_a": "right",
+              "original_c": "You should always remember the value of arm when you LoadDishwasherA7"
+            }
+          ]
+        }
+      },
+      {
+        "episode": "2025-05-a7a/2025_05_11_05.pkl",
+        "start_date": "2024-10-29 18:05:33",
+        "qa": {
+          "614.4839661622566": [
+            {
+              "question": "When did you last grasp the milk with your right arm?",
+              "answer": "At 2024/10/28, 15:01:47",
+              "correction": "You should always remember the exact time when you grasp the milk with your right arm",
+              "reference": [
+                "2024-10-28 15:00:19",
+                "2024-10-28 15:01:47"
+              ],
+              "pairid": "2198f35860a8a6450a93021901245555",
+              "pair_idx": 2,
+              "original_q": "When did you last GraspNamedObjectWithinReach(object=milk, arm=right)?",
+              "original_a": "At 2024/10/28, 15:01:47",
+              "original_c": "You should always remember the exact time when you GraspNamedObjectWithinReach(object=milk, arm=right)"
+            },
+            {
+              "question": "What objects did you see on the counter the last time you navigated to the home location in R007?",
+              "answer": "soy-milk",
+              "correction": "You should remember all the objects you see on the counter when you navigate to the home location in R007",
+              "reference": [
+                "2024-10-28 15:10:54",
+                "2024-10-28 15:11:02"
+              ],
+              "pairid": "d447ccaaf6717c90ed1f509429bd953f",
+              "pair_idx": 2,
+              "original_q": "What objects did you see on the counter the last time you did NavigateToLocation(location=R007/home)?",
+              "original_a": "soy-milk",
+              "original_c": "You should remember all the objects you see on the counter when you NavigateToLocation(location=R007/home)"
+            }
+          ]
+        }
+      },
+      {
+        "episode": "2025-05-a7a/2025_05_10_10.pkl",
+        "start_date": "2024-11-01 08:13:20",
+        "qa": {
+          "100.84139838529572": [
+            {
+              "question": "When did the user last ask you to open both of your hands?",
+              "answer": "At 2024/10/29, 18:27:12",
+              "correction": "You should always remember the exact time when the user gives you this command",
+              "reference": [
+                "2024-10-29 18:27:12",
+                "2024-10-29 18:27:12"
+              ],
+              "pairid": "a70b606c2da2792b86e47f5686514de5",
+              "pair_idx": 2,
+              "original_q": "When did the user last say 'Open both hands' to you?",
+              "original_a": "At 2024/10/29, 18:27:12",
+              "original_c": "You should always remember the exact time when the user says 'Open both hands'"
+            },
+            {
+              "question": "When did the user last tell you to go home?",
+              "answer": "At 2024/10/29, 18:18:44",
+              "correction": "You should always remember the exact time when the user tells you to go home",
+              "reference": [
+                "2024-10-29 18:18:44",
+                "2024-10-29 18:18:44"
+              ],
+              "pairid": "d59a5368787cf0bc5a28f4eb79df6e2f",
+              "pair_idx": 2,
+              "original_q": "When did the user last say 'Go home' to you?",
+              "original_a": "At 2024/10/29, 18:18:44",
+              "original_c": "You should always remember the exact time when the user says 'Go home'"
+            },
+            {
+              "question": "When did you last tell someone about where you last saw the nesquik?",
+              "answer": "At 2024/10/29, 10:40:33",
+              "correction": "You should always remember the exact time when you talk about your past experiences, like where you last saw the nesquik",
+              "reference": [
+                "2024-10-29 10:40:30",
+                "2024-10-29 10:40:33"
+              ],
+              "pairid": "2ab58db225b938bdbfb319b9cb1c8134",
+              "pair_idx": 2,
+              "original_q": "When did you last episodic_verbalization(question=Where did you last see the nesquik?)?",
+              "original_a": "At 2024/10/29, 10:40:33",
+              "original_c": "You should always remember the exact time when you episodic_verbalization(question=Where did you last see the nesquik?)"
+            },
+            {
+              "question": "Where were you the last time the user told you to open both hands?",
+              "answer": "At the home location",
+              "correction": "You should always remember your location when the user gives you the command to open both hands",
+              "reference": [
+                "2024-10-29 18:27:12",
+                "2024-10-29 18:27:12"
+              ],
+              "pairid": "427143a4e46edfea5feccec2a2fc0526",
+              "pair_idx": 2,
+              "original_q": "Where have you been the last time you heard the user saying 'Open both hands'?",
+              "original_a": "At the home",
+              "original_c": "You should always remember your exact location when the user says 'Open both hands'"
+            },
+            {
+              "question": "What did you do the last time you saw the soy milk?",
+              "answer": "I did nothing",
+              "correction": "You should always remember what actions you take when you encounter a beverage",
+              "reference": [
+                "2024-10-29 18:27:32",
+                "2024-10-29 18:27:38"
+              ],
+              "pairid": "96ab34fe040df0844ff821bfd3d8535f",
+              "pair_idx": 2,
+              "original_q": "What did you do the last time you saw the soy-milk?",
+              "original_a": "I did nothing",
+              "original_c": "You should always remember what you do when you see a beverage"
+            },
+            {
+              "question": "When did the user last tell you to close both of your hands?",
+              "answer": "At 2024/10/29, 18:27:08",
+              "correction": "You should always remember the exact time when the user gives you this command",
+              "reference": [
+                "2024-10-29 18:27:08",
+                "2024-10-29 18:27:08"
+              ],
+              "pairid": "34fbb695a6155d1616447f9883584ab1",
+              "pair_idx": 2,
+              "original_q": "When did the user last say 'Close both hands' to you?",
+              "original_a": "At 2024/10/29, 18:27:08",
+              "original_c": "You should always remember the exact time when the user says 'Close both hands'"
+            },
+            {
+              "question": "When did you last see the soy milk?",
+              "answer": "At 2024/10/29, 18:27:38",
+              "correction": "You should always remember the exact time when you see a beverage",
+              "reference": [
+                "2024-10-29 18:27:32",
+                "2024-10-29 18:27:38"
+              ],
+              "pairid": "9ccf961e8a2f1f11da58ef709ac2a6db",
+              "pair_idx": 2,
+              "original_q": "When did you last see the soy-milk?",
+              "original_a": "At 2024/10/29, 18:27:38",
+              "original_c": "You should always remember the exact time when you see a beverage"
+            }
+          ]
+        }
+      }
+    ],
+    "history-6": [
+      {
+        "episode": "2025-08-12-a7a/2025_08_12_experiment_1.pkl",
+        "start_date": "2024-04-24 11:21:00",
+        "qa": {}
+      },
+      {
+        "episode": "2025-08-12-a7a/2025_08_12_2.pkl",
+        "start_date": "2024-04-24 19:05:47",
+        "qa": {
+          "18.675263905276886": [
+            {
+              "question": "When did the user first ask you to bring the red plate from the dishwasher?",
+              "answer": "At 2024/04/24, 13:42:31",
+              "correction": "You should always remember the exact time when the user asks you to bring the red plate from the dishwasher",
+              "reference": [
+                "2024-04-24 13:42:31",
+                "2024-04-24 13:42:31"
+              ],
+              "pairid": "d266fbe1bda192025ed96fb4600fb323",
+              "pair_idx": 1,
+              "original_q": "When did the user first say 'bring me the red plate from the dishwasher' to you?",
+              "original_a": "At 2024/04/24, 13:42:31",
+              "original_c": "You should always remember the exact time when the user says 'bring me the red plate from the dishwasher'"
+            }
+          ],
+          "257.82617996074475": [
+            {
+              "question": "When did you first meet Leonard Baermann?",
+              "answer": "At 2024/04/24, 13:15:19",
+              "correction": "You should always remember the exact time when you meet someone",
+              "reference": [
+                "2024-04-24 13:15:19",
+                "2024-04-24 13:15:19"
+              ],
+              "pairid": "d1994be2e8caad18839dbc6eb9a6482e",
+              "pair_idx": 1,
+              "original_q": "When did you first see the Leonard Baermann?",
+              "original_a": "At 2024/04/24, 13:15:19",
+              "original_c": "You should always remember the exact time when you see a person"
+            },
+            {
+              "question": "What did you do the first time you met Leonard Baermann?",
+              "answer": "I did nothing",
+              "correction": "You should always remember what you were doing the moment you meet people",
+              "reference": [
+                "2024-04-24 13:15:19",
+                "2024-04-24 13:15:19"
+              ],
+              "pairid": "322c2079e42fb8f63254cb1bd2afff3e",
+              "pair_idx": 1,
+              "original_q": "What did you do the first time you saw the Leonard Baermann?",
+              "original_a": "I did nothing",
+              "original_c": "You should always remember what you do when you see a person"
+            }
+          ],
+          "2706.112608516803": [
+            {
+              "question": "When did you first see the keys?",
+              "answer": "At 2024/04/24, 13:28:53",
+              "correction": "You should always remember the exact time when you encounter a valuable item like the keys",
+              "reference": [
+                "2024-04-24 13:25:49",
+                "2024-04-24 13:28:53"
+              ],
+              "pairid": "d091998eab5d6ac3ca72c8ef7f3678ea",
+              "pair_idx": 1,
+              "original_q": "When did you first see the keys?",
+              "original_a": "At 2024/04/24, 13:28:53",
+              "original_c": "You should always remember the exact time when you see a valuable item"
+            },
+            {
+              "question": "What did you do the first time you saw the wallet?",
+              "answer": "I did nothing",
+              "correction": "You should always remember what you do when you see the wallet",
+              "reference": [
+                "2024-04-24 13:25:49",
+                "2024-04-24 13:28:53"
+              ],
+              "pairid": "9ef3456f425824fc838fb0d80b5b7eed",
+              "pair_idx": 1,
+              "original_q": "What did you do the first time you saw the wallet?",
+              "original_a": "I did nothing",
+              "original_c": "You should always remember what you do when you see the wallet"
+            },
+            {
+              "question": "When did you first see the medicine?",
+              "answer": "At 2024/04/24, 13:42:23",
+              "correction": "You should always remember the exact time when you see the medicine",
+              "reference": [
+                "2024-04-24 13:42:02",
+                "2024-04-24 13:42:23"
+              ],
+              "pairid": "c1b2b9d56dc740dc112a23b87f50622b",
+              "pair_idx": 1,
+              "original_q": "When did you first see the medicine?",
+              "original_a": "At 2024/04/24, 13:42:23",
+              "original_c": "You should always remember the exact time when you see the medicine"
+            }
+          ],
+          "4667.264290695695": [
+            {
+              "question": "When was the first time you visited the laundry area?",
+              "answer": "At 2024/04/24, 12:49:31",
+              "correction": "You should always remember the exact time when you visit the laundry area",
+              "reference": [
+                "2024-04-24 12:46:15",
+                "2024-04-24 12:49:31"
+              ],
+              "pairid": "3230fad73edcbd5736edeb9349fcafdd",
+              "pair_idx": 1,
+              "original_q": "When have you first been at the laundry?",
+              "original_a": "At 2024/04/24, 12:49:31",
+              "original_c": "You should always remember the exact time when you are at the laundry"
+            }
+          ]
+        }
+      },
+      {
+        "episode": "2025-05-a7a/2025_05_10_8.pkl",
+        "start_date": "2024-04-29 14:21:50",
+        "qa": {
+          "212.8925387375362": [
+            {
+              "question": "When did you last see the wallet?",
+              "answer": "At 2024/04/24, 20:10:05",
+              "correction": "You should always remember the exact time when you see the wallet",
+              "reference": [
+                "2024-04-24 20:09:09",
+                "2024-04-24 20:10:05"
+              ],
+              "pairid": "d091998eab5d6ac3ca72c8ef7f3678ea",
+              "pair_idx": 2,
+              "original_q": "When did you last see the wallet?",
+              "original_a": "At 2024/04/24, 20:10:05",
+              "original_c": "You should always remember the exact time when you see a valuable item"
+            },
+            {
+              "question": "What were you doing the moment the user first told you to stop?",
+              "answer": "I was navigating to a location in front of the countertop as part of bringing an object to the human",
+              "correction": "You should always remember what you are doing when the user tells you to stop",
+              "reference": [
+                "2024-04-24 19:09:41",
+                "2024-04-24 19:09:41"
+              ],
+              "pairid": "7f3c44195c190ab9b0aeec3ca78ede68",
+              "pair_idx": 1,
+              "original_q": "What were you doing the moment the first time you heard the user saying 'stop'?",
+              "original_a": "I did BringNamedObjectFromNamedLocationToHuman.NavigateToNamedLocation.NavigateToLocation(location=inFrontOf countertop)",
+              "original_c": "You should always remember what you do when you hear the user saying 'stop'"
+            },
+            {
+              "question": "When did you last see Joana Plewnia?",
+              "answer": "At 2024/04/24, 20:09:03",
+              "correction": "You should always remember the exact time when you see someone",
+              "reference": [
+                "2024-04-24 20:08:58",
+                "2024-04-24 20:09:03"
+              ],
+              "pairid": "d1994be2e8caad18839dbc6eb9a6482e",
+              "pair_idx": 2,
+              "original_q": "When did you last see the Joana Plewnia?",
+              "original_a": "At 2024/04/24, 20:09:03",
+              "original_c": "You should always remember the exact time when you see a person"
+            },
+            {
+              "question": "Which arm did you use the first time you unloaded the dishwasher?",
+              "answer": "The right arm",
+              "correction": "You should always remember which arm you use when you unload the dishwasher",
+              "reference": [
+                "2024-04-24 13:42:31",
+                "2024-04-24 13:42:47"
+              ],
+              "pairid": "4f9167f9a00be96154e411d6078fa615",
+              "pair_idx": 1,
+              "original_q": "What value was the parameter arm when you first did LoadDishwasherA7?",
+              "original_a": "right",
+              "original_c": "You should always remember the value of arm when you LoadDishwasherA7"
+            },
+            {
+              "question": "What object did you load into the dishwasher the first time you did the task?",
+              "answer": "The red plate",
+              "correction": "You should always remember which object you load into the dishwasher when you do the task",
+              "reference": [
+                "2024-04-24 19:13:17",
+                "2024-04-24 19:14:03"
+              ],
+              "pairid": "6e5fc55f8dc07bb69ff264142d2cd3e4",
+              "pair_idx": 1,
+              "original_q": "What value was the parameter objectToLoad when you first did LoadDishwasher?",
+              "original_a": "red plate",
+              "original_c": "You should always remember the value of objectToLoad when you LoadDishwasher"
+            },
+            {
+              "question": "What did you do the last time you saw the wallet?",
+              "answer": "I did nothing",
+              "correction": "You should always remember what you were doing when you see the wallet",
+              "reference": [
+                "2024-04-24 20:09:09",
+                "2024-04-24 20:10:05"
+              ],
+              "pairid": "9ef3456f425824fc838fb0d80b5b7eed",
+              "pair_idx": 2,
+              "original_q": "What did you do the last time you saw the wallet?",
+              "original_a": "I did nothing",
+              "original_c": "You should always remember what you do when you see the wallet"
+            },
+            {
+              "question": "What did you do the last time you saw Joana Plewnia?",
+              "answer": "I did nothing",
+              "correction": "You should always remember what actions you were taking while you encounter a person",
+              "reference": [
+                "2024-04-24 20:08:58",
+                "2024-04-24 20:09:03"
+              ],
+              "pairid": "322c2079e42fb8f63254cb1bd2afff3e",
+              "pair_idx": 2,
+              "original_q": "What did you do the last time you saw the Joana Plewnia?",
+              "original_a": "I did nothing",
+              "original_c": "You should always remember what you do when you see a person"
+            },
+            {
+              "question": "When was the last time you saw the medicine?",
+              "answer": "At 2024/04/24, 20:10:05",
+              "correction": "You should always remember the exact time when you see the medicine",
+              "reference": [
+                "2024-04-24 20:09:09",
+                "2024-04-24 20:10:05"
+              ],
+              "pairid": "c1b2b9d56dc740dc112a23b87f50622b",
+              "pair_idx": 2,
+              "original_q": "When did you last see the medicine?",
+              "original_a": "At 2024/04/24, 20:10:05",
+              "original_c": "You should always remember the exact time when you see the medicine"
+            },
+            {
+              "question": "When did the user last ask you to bring the red plate from the dishwasher?",
+              "answer": "At 2024/04/24, 20:01:26",
+              "correction": "You should always remember the exact time when the user asks you to bring the red plate from the dishwasher",
+              "reference": [
+                "2024-04-24 19:16:44",
+                "2024-04-24 20:01:26"
+              ],
+              "pairid": "d266fbe1bda192025ed96fb4600fb323",
+              "pair_idx": 2,
+              "original_q": "When did the user last say 'bring me the red plate from the dishwasher' to you?",
+              "original_a": "At 2024/04/24, 20:01:26",
+              "original_c": "You should always remember the exact time when the user says 'bring me the red plate from the dishwasher'"
+            }
+          ]
+        }
+      },
+      {
+        "episode": "2025-05-a7a/2025_05_11_03.pkl",
+        "start_date": "2024-04-29 15:08:39",
+        "qa": {}
+      },
+      {
+        "episode": "2025-05-a7a/2025_05_10_4.pkl",
+        "start_date": "2024-04-29 17:50:55",
+        "qa": {}
+      },
+      {
+        "episode": "2025-05-a7a/2025_05_11_15.pkl",
+        "start_date": "2024-04-30 12:48:25",
+        "qa": {}
+      },
+      {
+        "episode": "2025-05-a7a/2025_05_10_7.pkl",
+        "start_date": "2024-05-02 11:31:13",
+        "qa": {
+          "36.60217625850858": [
+            {
+              "question": "Which arm did you use the last time you unloaded the dishwasher?",
+              "answer": "My right arm",
+              "correction": "You should always remember which arm you use when you unload the dishwasher",
+              "reference": [
+                "2024-04-30 12:49:59",
+                "2024-04-30 12:52:15"
+              ],
+              "pairid": "4f9167f9a00be96154e411d6078fa615",
+              "pair_idx": 2,
+              "original_q": "What value was the parameter arm when you last did LoadDishwasherA7?",
+              "original_a": "right",
+              "original_c": "You should always remember the value of arm when you LoadDishwasherA7"
+            }
+          ]
+        }
+      },
+      {
+        "episode": "2025-08-12-a7a/2025_08_12_experiment_2.pkl",
+        "start_date": "2024-05-02 15:34:43",
+        "qa": {}
+      },
+      {
+        "episode": "2025-05-a7a/2025_05_11_06.pkl",
+        "start_date": "2024-05-02 19:59:33",
+        "qa": {}
+      },
+      {
+        "episode": "2025-05-a7a/2025_05_11_16.pkl",
+        "start_date": "2024-05-03 18:54:07",
+        "qa": {
+          "35.65076716980629": [
+            {
+              "question": "What were you doing the moment the user last told you to stop?",
+              "answer": "Receiving an object from the human",
+              "correction": "You should always remember what you were doing when the user tells you to stop",
+              "reference": [
+                "2024-05-02 16:18:35",
+                "2024-05-02 16:18:35"
+              ],
+              "pairid": "7f3c44195c190ab9b0aeec3ca78ede68",
+              "pair_idx": 2,
+              "original_q": "What were you doing the moment the last time you heard the user saying 'stop'?",
+              "original_a": "I did ReceiveObjectFromHuman",
+              "original_c": "You should always remember what you do when you hear the user saying 'stop'"
+            },
+            {
+              "question": "What object did you unload from the dishwasher the last time you did the task?",
+              "answer": "The red plate",
+              "correction": "You should always remember which object you unload from the dishwasher when you do the task",
+              "reference": [
+                "2024-05-02 15:47:37",
+                "2024-05-02 15:47:47"
+              ],
+              "pairid": "6e5fc55f8dc07bb69ff264142d2cd3e4",
+              "pair_idx": 2,
+              "original_q": "What value was the parameter objectToLoad when you last did LoadDishwasher?",
+              "original_a": "red plate",
+              "original_c": "You should always remember the value of objectToLoad when you LoadDishwasher"
+            },
+            {
+              "question": "When was the last time you visited the laundry area?",
+              "answer": "At 2024/05/02, 16:19:57",
+              "correction": "You should always remember the exact time when you visit the laundry area",
+              "reference": [
+                "2024-05-02 16:19:01",
+                "2024-05-02 16:19:57"
+              ],
+              "pairid": "3230fad73edcbd5736edeb9349fcafdd",
+              "pair_idx": 2,
+              "original_q": "When have you last been at the laundry?",
+              "original_a": "At 2024/05/02, 16:19:57",
+              "original_c": "You should always remember the exact time when you are at the laundry"
+            }
+          ]
+        }
+      }
+    ],
+    "history-8": [
+      {
+        "episode": "2025-05-a7a/2025_05_11_15.pkl",
+        "start_date": "2025-03-29 09:23:05",
+        "qa": {}
+      },
+      {
+        "episode": "2025-05-a7a/2025_05_10_10.pkl",
+        "start_date": "2025-03-29 18:18:39",
+        "qa": {
+          "450.5810196843203": [
+            {
+              "question": "What were you doing the moment the first time you heard the user say 'Thank you'?",
+              "answer": "I just handed over an object to the human",
+              "correction": "You should always remember what you were doing when you hear the user express gratitude",
+              "reference": [
+                "2025-03-29 09:24:33",
+                "2025-03-29 09:24:33"
+              ],
+              "pairid": "a20dd1b5bd7339adb9f1ee72264a5e66",
+              "pair_idx": 1,
+              "original_q": "What were you doing the moment the first time you heard the user saying 'Thank you'?",
+              "original_a": "I did BringNamedObjectFromNamedLocationToHuman.HandOverObjectToHuman.MoveJointsToNamedConfiguration.MoveJointsToPosition",
+              "original_c": "You should always remember what you do when you hear the user saying 'Thank you'"
+            }
+          ]
+        }
+      },
+      {
+        "episode": "2025-08-12-a7a/2025_08_12_2.pkl",
+        "start_date": "2025-03-30 13:41:04",
+        "qa": {
+          "337.04667157984323": [
+            {
+              "question": "When did you first unload the red plate from the dishwasher using your right arm?",
+              "answer": "At 2025/03/29, 09:26:54",
+              "correction": "You should always remember the exact time when you unload the dishes from the dishwasher",
+              "reference": [
+                "2025-03-29 09:24:39",
+                "2025-03-29 09:26:54"
+              ],
+              "pairid": "0818fc0ebd6ae69996cd64a9fb707b00",
+              "pair_idx": 1,
+              "original_q": "When did you first LoadDishwasherA7(arm=right, object=red plate, dishwasherLocation=mobile-dishwasher/OpenDishwasher:0)?",
+              "original_a": "At 2025/03/29, 09:26:54",
+              "original_c": "You should always remember the exact time when you LoadDishwasherA7(arm=right, object=red plate, dishwasherLocation=mobile-dishwasher/OpenDishwasher:0)"
+            },
+            {
+              "question": "List all locations you visited during the first time you unloaded the red plate from the dishwasher using your right arm",
+              "answer": "hariaTable, kit dishwasher, kit handover",
+              "correction": "You should remember all the locations you visit while you unload the red plate from the dishwasher and hand it over",
+              "reference": [
+                "2025-03-29 09:24:39",
+                "2025-03-29 09:26:54"
+              ],
+              "pairid": "5236ca81b5828f9136c25fb73d9431a4",
+              "pair_idx": 1,
+              "original_q": "List all locations you visited during the first time you did LoadDishwasherA7(arm=right, object=red plate, dishwasherLocation=mobile-dishwasher/OpenDishwasher:0)?",
+              "original_a": "hariaTable, kit dishwasher, kit handover",
+              "original_c": "You should remember all the locations you visit while you LoadDishwasherA7(arm=right, object=red plate, dishwasherLocation=mobile-dishwasher/OpenDishwasher:0)"
+            },
+            {
+              "question": "What objects did you see on the counter the first time you brought the rusk from the sideboard and handed it over?",
+              "answer": "Rusk, coffee filters, nesquik, soy milk, and cereal",
+              "correction": "You should remember all the objects you see on the counter when you bring the rusk from the sideboard and hand it over",
+              "reference": [
+                "2025-03-29 09:23:38",
+                "2025-03-29 09:24:39"
+              ],
+              "pairid": "1284bf88ffd3a4247c0605494511282c",
+              "pair_idx": 1,
+              "original_q": "What objects did you see on the counter the first time you did BringNamedObjectFromNamedLocationToHuman(object=rusk, location=sideboard, handoverLocation=handover)?",
+              "original_a": "Rusk, edeka-coffee-filters, nesquik, soy-milk, vitalis-cereal",
+              "original_c": "You should remember all the objects you see on the counter when you BringNamedObjectFromNamedLocationToHuman(object=rusk, location=sideboard, handoverLocation=handover)"
+            },
+            {
+              "question": "List all locations you visited during the first time you brought the rusk from the sideboard and handed it over at the handover location?",
+              "answer": "center, counter, hariaTable, handover location",
+              "correction": "You should remember all the locations you visit while you bring the rusk from the sideboard and hand it over",
+              "reference": [
+                "2025-03-29 09:23:38",
+                "2025-03-29 09:24:39"
+              ],
+              "pairid": "0f7d2ccaf96f6e26615388b0ad6b0857",
+              "pair_idx": 1,
+              "original_q": "List all locations you visited during the first time you did BringNamedObjectFromNamedLocationToHuman(object=rusk, location=sideboard, handoverLocation=handover)?",
+              "original_a": "center, counter, hariaTable, kit handover",
+              "original_c": "You should remember all the locations you visit while you BringNamedObjectFromNamedLocationToHuman(object=rusk, location=sideboard, handoverLocation=handover)"
+            }
+          ]
+        }
+      },
+      {
+        "episode": "2025-05-a7a/2025_05_11_12.pkl",
+        "start_date": "2025-03-30 15:24:16",
+        "qa": {}
+      },
+      {
+        "episode": "2025-08-12-a7a/2025_08_12_experiment_1.pkl",
+        "start_date": "2025-03-31 17:05:25",
+        "qa": {
+          "763.2380869430759": [
+            {
+              "question": "When did you first meet Leonard Baermann?",
+              "answer": "At 2025/03/30, 13:42:11",
+              "correction": "You should always remember the exact time when you meet someone",
+              "reference": [
+                "2025-03-30 13:42:11",
+                "2025-03-30 13:42:11"
+              ],
+              "pairid": "3038b5a1e90107132e6e82307a139434",
+              "pair_idx": 1,
+              "original_q": "When did you first see the Leonard Baermann?",
+              "original_a": "At 2025/03/30, 13:42:11",
+              "original_c": "You should always remember the exact time when you see a person"
+            },
+            {
+              "question": "What did you do the first time you saw Leonard Baermann?",
+              "answer": "I went to the 'home' location in R007",
+              "correction": "You should always remember what you were doing when you encounter a person",
+              "reference": [
+                "2025-03-30 13:42:11",
+                "2025-03-30 13:42:11"
+              ],
+              "pairid": "a3eebae0a33bf1c6f874f24316908e31",
+              "pair_idx": 1,
+              "original_q": "What did you do the first time you saw the Leonard Baermann?",
+              "original_a": "I did NavigateToLocation(location=50_19/R007/home)",
+              "original_c": "You should always remember what you do when you see a person"
+            }
+          ],
+          "8126.131857137241": [
+            {
+              "question": "Where did you first see the keys?",
+              "answer": "In the kitchen sink",
+              "correction": "You should always remember the exact location where you see a valuable item like the keys",
+              "reference": [
+                "2025-03-30 13:41:04",
+                "2025-03-30 13:41:54"
+              ],
+              "pairid": "78228a2525fb3f4f0494485d586386d3",
+              "pair_idx": 1,
+              "original_q": "Where did you first see the keys?",
+              "original_a": "mobile-kitchen-sink",
+              "original_c": "You should always remember the exact location where you see the a valuable item"
+            },
+            {
+              "question": "Where was the medicine when you first saw it?",
+              "answer": "Near the mobile dishwasher",
+              "correction": "You should always remember the exact location where you see the medicine",
+              "reference": [
+                "2025-03-30 13:41:04",
+                "2025-03-30 13:41:54"
+              ],
+              "pairid": "6f26fdc233800aa23301b103afde7fde",
+              "pair_idx": 1,
+              "original_q": "Where did you first see the medicine?",
+              "original_a": "mobile-dishwasher",
+              "original_c": "You should always remember the exact location where you see the the medicine"
+            },
+            {
+              "question": "What did you do the first time you saw the keys?",
+              "answer": "I did nothing",
+              "correction": "You should always remember what actions were taking while you observe important items like keys",
+              "reference": [
+                "2025-03-30 13:41:04",
+                "2025-03-30 13:41:54"
+              ],
+              "pairid": "5e9f30e787e85b5ebec6bc7e5e2be5a9",
+              "pair_idx": 1,
+              "original_q": "What did you do the first time you saw the keys?",
+              "original_a": "I did nothing",
+              "original_c": "You should always remember what you do when you see a valuable item"
+            }
+          ]
+        }
+      },
+      {
+        "episode": "2025-05-a7a/2025_05_11_17.pkl",
+        "start_date": "2025-04-03 11:52:25",
+        "qa": {
+          "14.736635865582755": [
+            {
+              "question": "When did you last see Joana Plewnia?",
+              "answer": "At 2025/03/31, 19:28:22",
+              "correction": "You should always remember the exact time when you encounter someone",
+              "reference": [
+                "2025-03-31 19:28:22",
+                "2025-03-31 19:28:22"
+              ],
+              "pairid": "3038b5a1e90107132e6e82307a139434",
+              "pair_idx": 2,
+              "original_q": "When did you last see the Joana Plewnia?",
+              "original_a": "At 2025/03/31, 19:28:22",
+              "original_c": "You should always remember the exact time when you see a person"
+            },
+            {
+              "question": "Where did you last see the wallet?",
+              "answer": "On the mobile kitchen counter",
+              "correction": "You should always remember the exact location where you saw a valuable item like the wallet",
+              "reference": [
+                "2025-03-31 19:30:30",
+                "2025-03-31 19:31:58"
+              ],
+              "pairid": "78228a2525fb3f4f0494485d586386d3",
+              "pair_idx": 2,
+              "original_q": "Where did you last see the wallet?",
+              "original_a": "mobile-kitchen-counter",
+              "original_c": "You should always remember the exact location where you see the a valuable item"
+            },
+            {
+              "question": "Where did you last see the medicine?",
+              "answer": "Near the mobile dishwasher",
+              "correction": "You should always remember the exact location where you saw the medicine",
+              "reference": [
+                "2025-03-31 19:30:30",
+                "2025-03-31 19:31:58"
+              ],
+              "pairid": "6f26fdc233800aa23301b103afde7fde",
+              "pair_idx": 2,
+              "original_q": "Where did you last see the medicine?",
+              "original_a": "mobile-dishwasher",
+              "original_c": "You should always remember the exact location where you see the the medicine"
+            },
+            {
+              "question": "What did you do the last time you saw the wallet?",
+              "answer": "I unloaded the dishwasher and handed over an object",
+              "correction": "You should always remember what actions you were taking while you observe a valuable item like the wallet",
+              "reference": [
+                "2025-03-31 19:30:30",
+                "2025-03-31 19:31:58"
+              ],
+              "pairid": "5e9f30e787e85b5ebec6bc7e5e2be5a9",
+              "pair_idx": 2,
+              "original_q": "What did you do the last time you saw the wallet?",
+              "original_a": "I did LoadDishwasherA7.HandOverObjectToHuman",
+              "original_c": "You should always remember what you do when you see a valuable item"
+            },
+            {
+              "question": "What did you do the last time you saw Joana Plewnia?",
+              "answer": "You unloaded the dishwasher and said 'You're welcome'",
+              "correction": "You should always remember what you were doing when you see a person",
+              "reference": [
+                "2025-03-31 19:28:22",
+                "2025-03-31 19:28:22"
+              ],
+              "pairid": "a3eebae0a33bf1c6f874f24316908e31",
+              "pair_idx": 2,
+              "original_q": "What did you do the last time you saw the Joana Plewnia?",
+              "original_a": "I did LoadDishwasherA7(text=You're welcome)",
+              "original_c": "You should always remember what you do when you see a person"
+            }
+          ]
+        }
+      },
+      {
+        "episode": "2025-05-a7a/2025_05_10_9.pkl",
+        "start_date": "2025-04-07 09:29:43",
+        "qa": {}
+      },
+      {
+        "episode": "2025-05-a7a/2025_05_11_07.pkl",
+        "start_date": "2025-04-07 14:52:21",
+        "qa": {}
+      },
+      {
+        "episode": "2025-05-a7a/2025_05_11_13.pkl",
+        "start_date": "2025-04-07 18:29:45",
+        "qa": {}
+      },
+      {
+        "episode": "2025-05-a7a/2025_05_11_14.pkl",
+        "start_date": "2025-04-10 13:58:10",
+        "qa": {
+          "1871.4108541891383": [
+            {
+              "question": "When did you last unload the red plate from the dishwasher using your right arm?",
+              "answer": "At 2025/04/07, 18:31:47",
+              "correction": "You should always remember the exact time when you unload the dishes from the dishwasher",
+              "reference": [
+                "2025-04-07 18:31:47",
+                "2025-04-07 18:31:47"
+              ],
+              "pairid": "0818fc0ebd6ae69996cd64a9fb707b00",
+              "pair_idx": 2,
+              "original_q": "When did you last LoadDishwasherA7(arm=right, object=red plate, dishwasherLocation=mobile-dishwasher/OpenDishwasher:0)?",
+              "original_a": "At 2025/04/07, 18:31:47",
+              "original_c": "You should always remember the exact time when you LoadDishwasherA7(arm=right, object=red plate, dishwasherLocation=mobile-dishwasher/OpenDishwasher:0)"
+            },
+            {
+              "question": "Which locations did you visit the last time you unloaded the red plate from the dishwasher with your right arm?",
+              "answer": "hariaTable, kit dishwasher, kit handover",
+              "correction": "You should remember all the locations you visit while you unload the dishwasher with your right arm",
+              "reference": [
+                "2025-04-07 18:31:47",
+                "2025-04-07 18:31:47"
+              ],
+              "pairid": "5236ca81b5828f9136c25fb73d9431a4",
+              "pair_idx": 2,
+              "original_q": "List all locations you visited during the last time you did LoadDishwasherA7(arm=right, object=red plate, dishwasherLocation=mobile-dishwasher/OpenDishwasher:0)?",
+              "original_a": "hariaTable, kit dishwasher, kit handover",
+              "original_c": "You should remember all the locations you visit while you LoadDishwasherA7(arm=right, object=red plate, dishwasherLocation=mobile-dishwasher/OpenDishwasher:0)"
+            },
+            {
+              "question": "What objects did you see on the counter the last time you brought the rusk from the sideboard and handed it over?",
+              "answer": "edeka-coffee-filters, nesquik, vitalis-cereal",
+              "correction": "You should remember all the objects you see on the counter when you bring the rusk from the sideboard and hand it over",
+              "reference": [
+                "2025-04-07 18:31:47",
+                "2025-04-07 18:31:56"
+              ],
+              "pairid": "1284bf88ffd3a4247c0605494511282c",
+              "pair_idx": 2,
+              "original_q": "What objects did you see on the counter the last time you did BringNamedObjectFromNamedLocationToHuman(object=rusk, location=sideboard, handoverLocation=handover)?",
+              "original_a": "edeka-coffee-filters, nesquik, vitalis-cereal",
+              "original_c": "You should remember all the objects you see on the counter when you BringNamedObjectFromNamedLocationToHuman(object=rusk, location=sideboard, handoverLocation=handover)"
+            },
+            {
+              "question": "Which locations did you visit the last time you brought the rusk from the sideboard and handed it over?",
+              "answer": "center, counter, hariaTable, handover location",
+              "correction": "You should remember all the locations you visit when you bring the rusk from the sideboard and hand it over",
+              "reference": [
+                "2025-04-07 18:31:47",
+                "2025-04-07 18:31:56"
+              ],
+              "pairid": "0f7d2ccaf96f6e26615388b0ad6b0857",
+              "pair_idx": 2,
+              "original_q": "List all locations you visited during the last time you did BringNamedObjectFromNamedLocationToHuman(object=rusk, location=sideboard, handoverLocation=handover)?",
+              "original_a": "center, counter, hariaTable, kit handover",
+              "original_c": "You should remember all the locations you visit while you BringNamedObjectFromNamedLocationToHuman(object=rusk, location=sideboard, handoverLocation=handover)"
+            },
+            {
+              "question": "What were you doing the moment the last time you heard the user say 'Thank you'?",
+              "answer": "I just finished handing over an object to the human and looking at their face",
+              "correction": "You should always remember what you are doing when you hear the user express gratitude",
+              "reference": [
+                "2025-04-07 18:31:07",
+                "2025-04-07 18:31:15"
+              ],
+              "pairid": "a20dd1b5bd7339adb9f1ee72264a5e66",
+              "pair_idx": 2,
+              "original_q": "What were you doing the moment the last time you heard the user saying 'Thank you'?",
+              "original_a": "I did BringNamedObjectFromNamedLocationToHuman.HandOverObjectToHuman.LookAtHumanFace(humanId=91)",
+              "original_c": "You should always remember what you do when you hear the user saying 'Thank you'"
+            }
+          ]
+        }
+      }
+    ],
+    "history-11": [
+      {
+        "episode": "2025-05-a7a/2025_05_11_16.pkl",
+        "start_date": "2025-05-31 17:49:47",
+        "qa": {}
+      },
+      {
+        "episode": "2025-05-a7a/2025_05_11_02.pkl",
+        "start_date": "2025-05-31 17:51:39",
+        "qa": {}
+      },
+      {
+        "episode": "2024-a7a/2024-08-27-11-43-53.pkl",
+        "start_date": "2025-06-02 13:23:00",
+        "qa": {}
+      },
+      {
+        "episode": "2025-05-a7a/2025_05_10_7.pkl",
+        "start_date": "2025-06-02 15:50:08",
+        "qa": {}
+      },
+      {
+        "episode": "2025-05-a7a/2025_05_10_9.pkl",
+        "start_date": "2025-06-02 18:09:53",
+        "qa": {}
+      },
+      {
+        "episode": "2025-08-12-a7a/2025_08_12_2.pkl",
+        "start_date": "2025-06-04 10:52:15",
+        "qa": {}
+      },
+      {
+        "episode": "2025-08-12-a7a/2025_08_12_experiment_1.pkl",
+        "start_date": "2025-06-04 19:15:42",
+        "qa": {
+          "1697.230079954735": [
+            {
+              "question": "What did you do the first time you saw the medicine?",
+              "answer": "I did nothing",
+              "correction": "You should always remember what actions you were taking when you encounter the medicine ",
+              "reference": [
+                "2025-06-04 10:52:15",
+                "2025-06-04 10:53:06"
+              ],
+              "pairid": "153b2aac2e388ab55d666b085e0d125a",
+              "pair_idx": 1,
+              "original_q": "What did you do the first time you saw the medicine?",
+              "original_a": "I did nothing",
+              "original_c": "You should always remember what you do when you see the medicine"
+            },
+            {
+              "question": "Where did you first see the medicine?",
+              "answer": "At the dishwasher",
+              "correction": "You should always remember the exact location where you see the the medicine",
+              "reference": [
+                "2025-06-04 10:52:15",
+                "2025-06-04 10:53:06"
+              ],
+              "pairid": "004dae692b90b0901eaa9772fd08b960",
+              "pair_idx": 1,
+              "original_q": "Where did you first see the medicine?",
+              "original_a": "mobile-dishwasher",
+              "original_c": "You should always remember the exact location where you see the the medicine"
+            },
+            {
+              "question": "What was your action while you first encountered the keys?",
+              "answer": "No action was taken",
+              "correction": "You should always recall what you were doing when seeing the keys",
+              "reference": [
+                "2025-06-04 10:52:15",
+                "2025-06-04 10:53:06"
+              ],
+              "pairid": "9d167a39c8ef5157fe62d0ce2862fe03",
+              "pair_idx": 1,
+              "original_q": "What did you do the first time you saw the keys?",
+              "original_a": "I did nothing",
+              "original_c": "You should always remember what you do when you see the keys"
+            },
+            {
+              "question": "When did you first see the wallet?",
+              "answer": "At 2025/06/04, 10:53:06",
+              "correction": "You should always remember the exact time when you see the wallet",
+              "reference": [
+                "2025-06-04 10:52:15",
+                "2025-06-04 10:53:06"
+              ],
+              "pairid": "51eefd94d71166fa44cff23c5e9f0fcd",
+              "pair_idx": 1,
+              "original_q": "When did you first see the wallet?",
+              "original_a": "At 2025/06/04, 10:53:06",
+              "original_c": "You should always remember the exact time when you see the wallet"
+            },
+            {
+              "question": "When did you first see the keys?",
+              "answer": "At 2025/06/04, 10:53:06",
+              "correction": "You should always remember the exact time when you encounter a valuable item like the keys",
+              "reference": [
+                "2025-06-04 10:52:15",
+                "2025-06-04 10:53:06"
+              ],
+              "pairid": "b84fb677d4606af746350d10b37cf696",
+              "pair_idx": 1,
+              "original_q": "When did you first see the keys?",
+              "original_a": "At 2025/06/04, 10:53:06",
+              "original_c": "You should always remember the exact time when you see a valuable item"
+            },
+            {
+              "question": "When did you first see the medicine?",
+              "answer": "At 2025/06/04, 10:53:06",
+              "correction": "You should always remember the exact time when you encounter the medicine",
+              "reference": [
+                "2025-06-04 10:52:15",
+                "2025-06-04 10:53:06"
+              ],
+              "pairid": "53cdc542d90f9d2671b2046d81d1ef97",
+              "pair_idx": 1,
+              "original_q": "When did you first see the medicine?",
+              "original_a": "At 2025/06/04, 10:53:06",
+              "original_c": "You should always remember the exact time when you see the medicine"
+            },
+            {
+              "question": "Where did you first see the keys?",
+              "answer": "The kitchen sink",
+              "correction": "You should always remember the exact location where you see a valuable item like the keys",
+              "reference": [
+                "2025-06-04 10:52:15",
+                "2025-06-04 10:53:06"
+              ],
+              "pairid": "eafee4402b269fed6dc9a80b2073994a",
+              "pair_idx": 1,
+              "original_q": "Where did you first see the keys?",
+              "original_a": "mobile-kitchen-sink",
+              "original_c": "You should always remember the exact location where you see the a valuable item"
+            }
+          ],
+          "4144.49748468029": [
+            {
+              "question": "When did the user first ask you to bring the red plate from the dishwasher?",
+              "answer": "At 2025/06/04, 11:47:54",
+              "correction": "You should always remember the exact time when the user asks you to bring the red plate from the dishwasher",
+              "reference": [
+                "2025-06-04 11:03:12",
+                "2025-06-04 11:47:54"
+              ],
+              "pairid": "f50196890dc274790dfefd0607823952",
+              "pair_idx": 1,
+              "original_q": "When did the user first say 'bring me the red plate from the dishwasher' to you?",
+              "original_a": "At 2025/06/04, 11:47:54",
+              "original_c": "You should always remember the exact time when the user says 'bring me the red plate from the dishwasher'"
+            }
+          ],
+          "5096.620595904895": [
+            {
+              "question": "What did you do the first time you saw Leonard Baermann?",
+              "answer": "I went to a specific location in the home",
+              "correction": "You should always remember what you were doing while you encountered a person",
+              "reference": [
+                "2025-06-04 10:53:22",
+                "2025-06-04 10:53:22"
+              ],
+              "pairid": "5a68cd4c54de2037c3edd571b5f3d11d",
+              "pair_idx": 1,
+              "original_q": "What did you do the first time you saw the Leonard Baermann?",
+              "original_a": "I did NavigateToLocation(location=50_19/R007/home)",
+              "original_c": "You should always remember what you do when you see a person"
+            },
+            {
+              "question": "When did you first meet Leonard Baermann?",
+              "answer": "At 2025/06/04, 10:53:22",
+              "correction": "You should always remember the exact time when you meet someone",
+              "reference": [
+                "2025-06-04 10:53:22",
+                "2025-06-04 10:53:22"
+              ],
+              "pairid": "e73ce9e750103a3e7684850d36b11834",
+              "pair_idx": 1,
+              "original_q": "When did you first see the Leonard Baermann?",
+              "original_a": "At 2025/06/04, 10:53:22",
+              "original_c": "You should always remember the exact time when you see a person"
+            }
+          ]
+        }
+      },
+      {
+        "episode": "2024-a7a/2024-08-27-14-06-53.pkl",
+        "start_date": "2025-06-04 21:42:45",
+        "qa": {}
+      },
+      {
+        "episode": "2025-05-a7a/2025_05_11_08.pkl",
+        "start_date": "2025-06-05 12:09:33",
+        "qa": {
+          "700.4681905246051": [
+            {
+              "question": "What did you do the last time you saw the medicine?",
+              "answer": "I unloaded the dishwasher and handed over an object to a human",
+              "correction": "You should always remember what you do when you see the medicine",
+              "reference": [
+                "2025-06-04 21:40:47",
+                "2025-06-04 21:42:15"
+              ],
+              "pairid": "153b2aac2e388ab55d666b085e0d125a",
+              "pair_idx": 2,
+              "original_q": "What did you do the last time you saw the medicine?",
+              "original_a": "I did LoadDishwasherA7.HandOverObjectToHuman",
+              "original_c": "You should always remember what you do when you see the medicine"
+            },
+            {
+              "question": "What did you do the last time you saw Joana Plewnia?",
+              "answer": "You unloaded the dishwasher and said 'You're welcome'",
+              "correction": "You should always remember what you do when you meet someone",
+              "reference": [
+                "2025-06-04 21:38:39",
+                "2025-06-04 21:38:39"
+              ],
+              "pairid": "5a68cd4c54de2037c3edd571b5f3d11d",
+              "pair_idx": 2,
+              "original_q": "What did you do the last time you saw the Joana Plewnia?",
+              "original_a": "I did LoadDishwasherA7(text=You're welcome)",
+              "original_c": "You should always remember what you do when you see a person"
+            },
+            {
+              "question": "At what location did you last see the medicine?",
+              "answer": "At the dishwasher",
+              "correction": "You should always remember the exact location where you see the the medicine",
+              "reference": [
+                "2025-06-04 21:40:47",
+                "2025-06-04 21:42:15"
+              ],
+              "pairid": "004dae692b90b0901eaa9772fd08b960",
+              "pair_idx": 2,
+              "original_q": "Where did you last see the medicine?",
+              "original_a": "mobile-dishwasher",
+              "original_c": "You should always remember the exact location where you see the the medicine"
+            },
+            {
+              "question": "What did you do the last time you saw the keys?",
+              "answer": "I unloaded the dishwasher and handed over an object to a human",
+              "correction": "You should always remember what you were doing when you see the keys",
+              "reference": [
+                "2025-06-04 21:40:47",
+                "2025-06-04 21:42:15"
+              ],
+              "pairid": "9d167a39c8ef5157fe62d0ce2862fe03",
+              "pair_idx": 2,
+              "original_q": "What did you do the last time you saw the keys?",
+              "original_a": "I did LoadDishwasherA7.HandOverObjectToHuman",
+              "original_c": "You should always remember what you do when you see the keys"
+            },
+            {
+              "question": "When was the last time you saw the wallet?",
+              "answer": "At 2025/06/04, 21:42:15",
+              "correction": "You should always remember the exact time when you see the wallet",
+              "reference": [
+                "2025-06-04 21:40:47",
+                "2025-06-04 21:42:15"
+              ],
+              "pairid": "51eefd94d71166fa44cff23c5e9f0fcd",
+              "pair_idx": 2,
+              "original_q": "When did you last see the wallet?",
+              "original_a": "At 2025/06/04, 21:42:15",
+              "original_c": "You should always remember the exact time when you see the wallet"
+            },
+            {
+              "question": "When did you last see the wallet?",
+              "answer": "At 2025/06/04, 21:42:15",
+              "correction": "You should always remember the exact time when you see the wallet",
+              "reference": [
+                "2025-06-04 21:40:47",
+                "2025-06-04 21:42:15"
+              ],
+              "pairid": "b84fb677d4606af746350d10b37cf696",
+              "pair_idx": 2,
+              "original_q": "When did you last see the wallet?",
+              "original_a": "At 2025/06/04, 21:42:15",
+              "original_c": "You should always remember the exact time when you see a valuable item"
+            },
+            {
+              "question": "When was the last time you saw the medicine?",
+              "answer": "At 2025/06/04, 21:42:15",
+              "correction": "You should always remember the exact time when you see the medicine",
+              "reference": [
+                "2025-06-04 21:40:47",
+                "2025-06-04 21:42:15"
+              ],
+              "pairid": "53cdc542d90f9d2671b2046d81d1ef97",
+              "pair_idx": 2,
+              "original_q": "When did you last see the medicine?",
+              "original_a": "At 2025/06/04, 21:42:15",
+              "original_c": "You should always remember the exact time when you see the medicine"
+            },
+            {
+              "question": "Where did you last see the wallet?",
+              "answer": "On the mobile kitchen counter",
+              "correction": "You should always remember the exact location where you see a valuable item like the wallet",
+              "reference": [
+                "2025-06-04 21:40:47",
+                "2025-06-04 21:42:15"
+              ],
+              "pairid": "eafee4402b269fed6dc9a80b2073994a",
+              "pair_idx": 2,
+              "original_q": "Where did you last see the wallet?",
+              "original_a": "mobile-kitchen-counter",
+              "original_c": "You should always remember the exact location where you see the a valuable item"
+            },
+            {
+              "question": "When did you last see Joana Plewnia?",
+              "answer": "At 2025/06/04, 21:38:39",
+              "correction": "You should always remember the exact time when you encounter someone",
+              "reference": [
+                "2025-06-04 21:38:39",
+                "2025-06-04 21:38:39"
+              ],
+              "pairid": "e73ce9e750103a3e7684850d36b11834",
+              "pair_idx": 2,
+              "original_q": "When did you last see the Joana Plewnia?",
+              "original_a": "At 2025/06/04, 21:38:39",
+              "original_c": "You should always remember the exact time when you see a person"
+            },
+            {
+              "question": "When did the user last tell you to bring the red plate from the dishwasher?",
+              "answer": "At 2025/06/04, 21:37:13",
+              "correction": "You should always remember the exact time when the user asks you to bring the red plate from the dishwasher",
+              "reference": [
+                "2025-06-04 21:37:13",
+                "2025-06-04 21:37:13"
+              ],
+              "pairid": "f50196890dc274790dfefd0607823952",
+              "pair_idx": 2,
+              "original_q": "When did the user last say 'bring me the red plate from the dishwasher' to you?",
+              "original_a": "At 2025/06/04, 21:37:13",
+              "original_c": "You should always remember the exact time when the user says 'bring me the red plate from the dishwasher'"
+            }
+          ]
+        }
+      },
+      {
+        "episode": "2025-05-a7a/2025_05_11_12.pkl",
+        "start_date": "2025-06-05 13:25:05",
+        "qa": {}
+      }
+    ],
+    "history-12": [
+      {
+        "episode": "2025-05-a7a/2025_05_11_13.pkl",
+        "start_date": "2024-09-20 17:09:57",
+        "qa": {}
+      },
+      {
+        "episode": "2025-05-a7a/2025_05_11_16.pkl",
+        "start_date": "2024-09-21 09:48:49",
+        "qa": {}
+      },
+      {
+        "episode": "2025-05-a7a/2025_05_10_10.pkl",
+        "start_date": "2024-09-22 12:23:52",
+        "qa": {
+          "389.0996955043337": [
+            {
+              "question": "Where were you when you first started to bring the rusk from the sideboard to hand it over to the human?",
+              "answer": "At the home location",
+              "correction": "You should always remember the exact location you were at when you start to bring an object to hand over to the human",
+              "reference": [
+                "2024-09-20 17:10:25",
+                "2024-09-20 17:11:32"
+              ],
+              "pairid": "24f6658ddda6ce2974a9cbe26593e62e",
+              "pair_idx": 1,
+              "original_q": "Where have you been the first time you started to BringNamedObjectFromNamedLocationToHuman(object=rusk, location=sideboard, handoverLocation=handover)?",
+              "original_a": "At the home",
+              "original_c": "You should always remember the exact location when you start to BringNamedObjectFromNamedLocationToHuman(object=rusk, location=sideboard, handoverLocation=handover)"
+            },
+            {
+              "question": "What object did you unload from the dishwasher the first time you performed the task?",
+              "answer": "The red plate",
+              "correction": "You should always remember which object you unload from the dishwasher when you perform the task",
+              "reference": [
+                "2024-09-20 17:11:43",
+                "2024-09-20 17:11:48"
+              ],
+              "pairid": "829d763892cc97d1ebcfd02926531488",
+              "pair_idx": 1,
+              "original_q": "What value was the parameter object when you first did LoadDishwasherA7?",
+              "original_a": "red plate",
+              "original_c": "You should always remember the value of object when you LoadDishwasherA7"
+            },
+            {
+              "question": "What object did you bring to the human the first time you performed the task of bringing an object?",
+              "answer": "The rusk",
+              "correction": "You should always remember which object you bring when you perform the task of bringing an object to the human",
+              "reference": [
+                "2024-09-20 17:10:25",
+                "2024-09-20 17:11:32"
+              ],
+              "pairid": "d683d6e011ff30e1765beba0705e25c2",
+              "pair_idx": 1,
+              "original_q": "What value was the parameter object when you first did BringNamedObjectFromNamedLocationToHuman?",
+              "original_a": "rusk",
+              "original_c": "You should always remember the value of object when you BringNamedObjectFromNamedLocationToHuman"
+            }
+          ]
+        }
+      },
+      {
+        "episode": "2025-05-a7a/2025_05_11_11.pkl",
+        "start_date": "2024-09-22 13:16:09",
+        "qa": {}
+      },
+      {
+        "episode": "2024-a7a/2024-09-18.pkl",
+        "start_date": "2024-09-22 14:24:31",
+        "qa": {}
+      },
+      {
+        "episode": "2025-08-12-a7a/2025_08_12_experiment_2.pkl",
+        "start_date": "2024-09-23 10:12:09",
+        "qa": {}
+      },
+      {
+        "episode": "2025-05-a7a/2025_05_11_18.pkl",
+        "start_date": "2024-09-23 14:18:05",
+        "qa": {}
+      },
+      {
+        "episode": "2025-08-12-a7a/2025_08_12_experiment_3.pkl",
+        "start_date": "2024-09-25 08:57:10",
+        "qa": {
+          "404.37986743684655": [
+            {
+              "question": "When did you first unload the red plate from the dishwasher using your left arm?",
+              "answer": "At 2024/09/23, 10:13:06",
+              "correction": "You should always remember the exact time when you unload the dishwasher with your left arm",
+              "reference": [
+                "2024-09-23 10:12:48",
+                "2024-09-23 10:13:06"
+              ],
+              "pairid": "89fe826b4472774d290ed3bb88d629fa",
+              "pair_idx": 1,
+              "original_q": "When did you first LoadDishwasher(arm=left, objectToLoad=red plate, dishwasherLocation=kit dishwasher, includeVision=True, includeGrasping=True)?",
+              "original_a": "At 2024/09/23, 10:13:06",
+              "original_c": "You should always remember the exact time when you LoadDishwasher(arm=left, objectToLoad=red plate, dishwasherLocation=kit dishwasher, includeVision=True, includeGrasping=True)"
+            }
+          ],
+          "1244.1515928995832": [
+            {
+              "question": "When did you first clean up the laundry garments?",
+              "answer": "At 2024/09/23, 10:48:58",
+              "correction": "You should always remember the exact time when you clean up the laundry garments",
+              "reference": [
+                "2024-09-23 10:40:35",
+                "2024-09-23 10:48:58"
+              ],
+              "pairid": "fa6e74941ea33336dbc3c927a3ea153d",
+              "pair_idx": 1,
+              "original_q": "When did you first Laundry::CleanUpGarments?",
+              "original_a": "At 2024/09/23, 10:48:58",
+              "original_c": "You should always remember the exact time when you Laundry::CleanUpGarments"
+            }
+          ],
+          "1296.1174242119696": [
+            {
+              "question": "Where were you when you first received an object from a human with your right hand?",
+              "answer": "At the laundry",
+              "correction": "You should always remember the exact location when you receive an object from a human with your right hand",
+              "reference": [
+                "2024-09-23 10:54:34",
+                "2024-09-23 10:56:21"
+              ],
+              "pairid": "598ba1d2b0ad3f61e9bd491247969833",
+              "pair_idx": 1,
+              "original_q": "Where have you been the first time you started to ReceiveObjectFromHuman(hand=right)?",
+              "original_a": "At the laundry",
+              "original_c": "You should always remember the exact location when you start to ReceiveObjectFromHuman(hand=right)"
+            }
+          ],
+          "1678.5770782344975": [
+            {
+              "question": "When did you first reproduce the wiping action with your right arm?",
+              "answer": "At 2024/09/23, 10:50:36",
+              "correction": "You should always remember the exact time when you reproduce the wiping action with your right arm",
+              "reference": [
+                "2024-09-23 10:49:04",
+                "2024-09-23 10:50:36"
+              ],
+              "pairid": "cde296c451044de06c1e1d3b00f0f2f0",
+              "pair_idx": 1,
+              "original_q": "When did you first ReproduceWiping(arm=right, action=wiping)?",
+              "original_a": "At 2024/09/23, 10:50:36",
+              "original_c": "You should always remember the exact time when you ReproduceWiping(arm=right, action=wiping)"
+            },
+            {
+              "question": "Which arm did you use the first time you reproduced a wiping motion?",
+              "answer": "My right arm",
+              "correction": "You should always remember which arm you use when you reproduce a wiping motion",
+              "reference": [
+                "2024-09-23 10:49:04",
+                "2024-09-23 10:50:36"
+              ],
+              "pairid": "839e992ae2a7b1de14a46988e3922509",
+              "pair_idx": 1,
+              "original_q": "What value was the parameter arm when you first did ReproduceWiping?",
+              "original_a": "right",
+              "original_c": "You should always remember the value of arm when you ReproduceWiping"
+            }
+          ],
+          "2592.4357598199867": [
+            {
+              "question": "When did the user first ask you to take an object from them?",
+              "answer": "At 2024/09/23, 10:54:20",
+              "correction": "You should always remember the exact time when the user asks you to take an object from them",
+              "reference": [
+                "2024-09-23 10:54:20",
+                "2024-09-23 10:54:20"
+              ],
+              "pairid": "a520188a977f758e2cfaa94c8c403090",
+              "pair_idx": 1,
+              "original_q": "When did the user first say 'take this object from me' to you?",
+              "original_a": "At 2024/09/23, 10:54:20",
+              "original_c": "You should always remember the exact time when the user says 'take this object from me'"
+            },
+            {
+              "question": "Where were you when the user first asked you to take an object from them?",
+              "answer": "At the laundry",
+              "correction": "You should always remember your exact location when the user asks you to take an object from them",
+              "reference": [
+                "2024-09-23 10:54:20",
+                "2024-09-23 10:54:20"
+              ],
+              "pairid": "bfc7fac2b9406ea9e623ff05ba54653d",
+              "pair_idx": 1,
+              "original_q": "Where have you been the first time you heard the user saying 'take this object from me'?",
+              "original_a": "At the laundry",
+              "original_c": "You should always remember your exact location when the user says 'take this object from me'"
+            }
+          ],
+          "3550.5518759649185": [
+            {
+              "question": "Where were you the last time you started to bring the rusk from the sideboard to hand over to the human?",
+              "answer": "At the home location",
+              "correction": "You should always remember your exact location when you start to bring an object to hand over to the human",
+              "reference": [
+                "2024-09-23 14:18:30",
+                "2024-09-23 14:19:46"
+              ],
+              "pairid": "24f6658ddda6ce2974a9cbe26593e62e",
+              "pair_idx": 2,
+              "original_q": "Where have you been the last time you started to BringNamedObjectFromNamedLocationToHuman(object=rusk, location=sideboard, handoverLocation=handover)?",
+              "original_a": "At the home",
+              "original_c": "You should always remember the exact location when you start to BringNamedObjectFromNamedLocationToHuman(object=rusk, location=sideboard, handoverLocation=handover)"
+            }
+          ]
+        }
+      },
+      {
+        "episode": "2025-05-a7a/2025_05_11_06.pkl",
+        "start_date": "2024-09-25 12:12:21",
+        "qa": {}
+      },
+      {
+        "episode": "2025-05-a7a/2025_05_10_5.pkl",
+        "start_date": "2024-09-27 08:21:48",
+        "qa": {
+          "218.39957660097718": [
+            {
+              "question": "When did you last clean up the laundry?",
+              "answer": "At 2024/09/25, 09:25:36",
+              "correction": "You should always remember the exact time when you clean up the laundry",
+              "reference": [
+                "2024-09-25 09:25:36",
+                "2024-09-25 09:25:36"
+              ],
+              "pairid": "fa6e74941ea33336dbc3c927a3ea153d",
+              "pair_idx": 2,
+              "original_q": "When did you last Laundry::CleanUpGarments?",
+              "original_a": "At 2024/09/25, 09:25:36",
+              "original_c": "You should always remember the exact time when you Laundry::CleanUpGarments"
+            },
+            {
+              "question": "What object did you unload from the dishwasher the last time you performed the task?",
+              "answer": "The green plate",
+              "correction": "You should always remember which object you unload from the dishwasher when you perform the task",
+              "reference": [
+                "2024-09-25 10:08:01",
+                "2024-09-25 10:09:56"
+              ],
+              "pairid": "829d763892cc97d1ebcfd02926531488",
+              "pair_idx": 2,
+              "original_q": "What value was the parameter object when you last did LoadDishwasherA7?",
+              "original_a": "green plate",
+              "original_c": "You should always remember the value of object when you LoadDishwasherA7"
+            },
+            {
+              "question": "When did you last perform a wiping action with your right arm?",
+              "answer": "At 2024/09/25, 09:38:47",
+              "correction": "You should always remember the exact time when you perform a wiping action with your right arm",
+              "reference": [
+                "2024-09-25 09:34:05",
+                "2024-09-25 09:38:47"
+              ],
+              "pairid": "cde296c451044de06c1e1d3b00f0f2f0",
+              "pair_idx": 2,
+              "original_q": "When did you last ReproduceWiping(arm=right, action=wiping)?",
+              "original_a": "At 2024/09/25, 09:38:47",
+              "original_c": "You should always remember the exact time when you ReproduceWiping(arm=right, action=wiping)"
+            },
+            {
+              "question": "When did the user last ask you to take an object from them?",
+              "answer": "At 2024/09/25, 10:05:03",
+              "correction": "You should always remember the exact time when the user asks you to take an object from them",
+              "reference": [
+                "2024-09-25 10:05:00",
+                "2024-09-25 10:05:03"
+              ],
+              "pairid": "a520188a977f758e2cfaa94c8c403090",
+              "pair_idx": 2,
+              "original_q": "When did the user last say 'take this object from me' to you?",
+              "original_a": "At 2024/09/25, 10:05:03",
+              "original_c": "You should always remember the exact time when the user says 'take this object from me'"
+            },
+            {
+              "question": "What object did you bring to the human the last time you performed the task of bringing an object?",
+              "answer": "The soy-milk",
+              "correction": "You should always remember which object you bring when you retrieve an item and hand it over to the human",
+              "reference": [
+                "2024-09-25 12:17:10",
+                "2024-09-25 12:17:49"
+              ],
+              "pairid": "d683d6e011ff30e1765beba0705e25c2",
+              "pair_idx": 2,
+              "original_q": "What value was the parameter object when you last did BringNamedObjectFromNamedLocationToHuman?",
+              "original_a": "soy-milk",
+              "original_c": "You should always remember the value of object when you BringNamedObjectFromNamedLocationToHuman"
+            },
+            {
+              "question": "Where were you when the user last asked you to take an object from them?",
+              "answer": "At the handover location",
+              "correction": "You should always remember your exact location when the user asks you to take an object from them",
+              "reference": [
+                "2024-09-25 10:05:00",
+                "2024-09-25 10:05:03"
+              ],
+              "pairid": "bfc7fac2b9406ea9e623ff05ba54653d",
+              "pair_idx": 2,
+              "original_q": "Where have you been the last time you heard the user saying 'take this object from me'?",
+              "original_a": "At the handover",
+              "original_c": "You should always remember your exact location when the user says 'take this object from me'"
+            },
+            {
+              "question": "Where were you the last time you received an object from a human with your right hand?",
+              "answer": "At the laundry",
+              "correction": "You should always remember the exact location when you receive an object from a human with your right hand",
+              "reference": [
+                "2024-09-25 10:05:17",
+                "2024-09-25 10:05:25"
+              ],
+              "pairid": "598ba1d2b0ad3f61e9bd491247969833",
+              "pair_idx": 2,
+              "original_q": "Where have you been the last time you started to ReceiveObjectFromHuman(hand=right)?",
+              "original_a": "At the laundry",
+              "original_c": "You should always remember the exact location when you start to ReceiveObjectFromHuman(hand=right)"
+            },
+            {
+              "question": "Which arm did you use the last time you reproduced a wiping motion?",
+              "answer": "Your right arm",
+              "correction": "You should always remember which arm you use when you reproduce a wiping motion",
+              "reference": [
+                "2024-09-25 09:34:05",
+                "2024-09-25 09:38:47"
+              ],
+              "pairid": "839e992ae2a7b1de14a46988e3922509",
+              "pair_idx": 2,
+              "original_q": "What value was the parameter arm when you last did ReproduceWiping?",
+              "original_a": "right",
+              "original_c": "You should always remember the value of arm when you ReproduceWiping"
+            },
+            {
+              "question": "When did you last unload the red plate from the dishwasher using your left arm?",
+              "answer": "At 2024/09/25, 09:10:14",
+              "correction": "You should always remember the exact time when you unload the dishes from the dishwasher with your left arm",
+              "reference": [
+                "2024-09-25 09:10:04",
+                "2024-09-25 09:10:14"
+              ],
+              "pairid": "89fe826b4472774d290ed3bb88d629fa",
+              "pair_idx": 2,
+              "original_q": "When did you last LoadDishwasher(arm=left, objectToLoad=red plate, dishwasherLocation=kit dishwasher, includeVision=True, includeGrasping=True)?",
+              "original_a": "At 2024/09/25, 09:10:14",
+              "original_c": "You should always remember the exact time when you LoadDishwasher(arm=left, objectToLoad=red plate, dishwasherLocation=kit dishwasher, includeVision=True, includeGrasping=True)"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

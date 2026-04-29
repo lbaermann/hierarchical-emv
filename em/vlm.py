@@ -1,11 +1,13 @@
 import base64
 from abc import ABC
 from io import BytesIO
-from typing import Union, List
+from typing import Union, List, Optional
 
 from PIL.Image import Image
 from langchain_core.language_models import BaseChatModel
 from langchain_openai import ChatOpenAI
+
+from lmp.setup import instantiate_llm
 
 
 class VLM(ABC):
@@ -23,7 +25,7 @@ class OpenAiVision(VLM):
     def __init__(self,
                  model: ChatOpenAI = None):
         super().__init__()
-        self._model = model or ChatOpenAI(model='gpt-4o', max_tokens=256)
+        self._model = model or ChatOpenAI(model_name='gpt-4o', max_tokens=256)
 
     @property
     def model(self):
@@ -46,7 +48,17 @@ class OpenAiVision(VLM):
 
 
 def _encode_image_png_base64(image: Image):
+
     img_byte_arr = BytesIO()
     image.save(img_byte_arr, format='PNG')
     img_byte_arr = img_byte_arr.getvalue()
     return base64.b64encode(img_byte_arr).decode('utf-8')
+
+
+def instantiate_vlm(vlm_cfg: Optional[dict]):
+    if vlm_cfg is None:
+        return None
+    model = instantiate_llm(vlm_cfg)
+    # This simply works because other langchain models also implement images adhering to the OpenAI format.
+    # noinspection PyTypeChecker
+    return OpenAiVision(model)

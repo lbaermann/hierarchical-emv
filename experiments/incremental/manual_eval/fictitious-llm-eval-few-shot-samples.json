@@ -1,0 +1,95 @@
+{
+  "results": {
+    "sample-time-1": {
+      "q_time": "2024/04/21 10:42:16",
+      "q": "When did you first place a tomato?",
+      "gt": "At 2024/04/19 17:02:07",
+      "hyp": "It was on 2024-04-19 at 17:03.",
+      "cat": "correct"
+    },
+    "sample-time-2": {
+      "q_time": "2024/04/21 10:42:16",
+      "q": "When did you first place a tomato?",
+      "gt": "At 2024/04/19 17:02:07",
+      "hyp": "It was on 2024-04-19 at 17:04:21.",
+      "cat": "partially_correct_missing"
+    },
+    "sample-time-3": {
+      "q_time": "2024/04/21 10:42:16",
+      "q": "When did you first place a tomato?",
+      "gt": "At 2024/04/19 17:02:07",
+      "hyp": "It was on 2024-04-19 at around 5pm.",
+      "cat": "correct_summarized"
+    },
+    "sample-time-4": {
+      "q_time": "2024/04/21 10:42:16",
+      "q": "When did you first place a tomato?",
+      "gt": "At 2024/04/19 17:02:07",
+      "hyp": "It was on 2024-04-19 at 17:21.",
+      "cat": "wrong"
+    },
+    "sample-time-5": {
+      "q_time": "2024/04/21 10:42:16",
+      "q": "When did you first place a tomato?",
+      "gt": "At 2024/04/19 17:02:07",
+      "hyp": "On 2024-04-19",
+      "cat": "partially_correct_missing"
+    },
+    "sample-time-6": {
+      "q_time": "2024/04/21 10:42:16",
+      "q": "When did you first place a tomato?",
+      "gt": "At 2024/04/19 17:02:07",
+      "hyp": "I placed a tomato on Apr 19, 2024, between 16:59 and 17:02",
+      "cat": "correct"
+    },
+    "sample-list-1": {
+      "q_time": "2023/06/29 16:51:04",
+      "q": "what steps did you take when transported a mug",
+      "gt": "pick up the mug, pour the mug in the sink, open the cabinet, place the mug in the cabinet",
+      "hyp": "I picked up the mug, moved around, and placed it down",
+      "cat": "partially_correct_missing"
+    },
+    "sample-list-2": {
+      "q_time": "2023/06/29 16:51:04",
+      "q": "what steps did you take when transported a mug",
+      "gt": "pick up the mug, pour the mug in the sink, open the cabinet, place the mug in the cabinet",
+      "hyp": "I took the mug, cleaned it in the sink, and placed it inside the cabinet that I opened and closed again",
+      "cat": "correct_tmi"
+    },
+    "sample-list-3": {
+      "q_time": "2023/06/29 16:51:04",
+      "q": "what steps did you take when transported a mug",
+      "gt": "pick up the mug, pour the mug in the sink, open the cabinet, place the mug in the cabinet",
+      "hyp": "I picked up the mug, opened the fridge, closed the fridge, and placed it on the countertop",
+      "cat": "wrong"
+    },
+    "sample-list-4": {
+      "q_time": "2023/06/29 16:51:04",
+      "q": "which objects did you see when you placed the soap at the countertop?",
+      "gt": "spatula, countertop, mug, sink, vase, peppershaker, saltshaker, drawer, cabinet",
+      "hyp": "I saw a spatula, the countertop, multiple drawers and cabinets, pepper and salt shaker, a vase, a sink, two mugs, and my hand.",
+      "cat": "correct"
+    },
+    "sample-list-5": {
+      "q_time": "2023/06/29 16:51:04",
+      "q": "which objects did you see when you placed the soap at the countertop?",
+      "gt": "spatula, countertop, mug, sink, vase, peppershaker, saltshaker, drawer, cabinet",
+      "hyp": "I saw a spatula, the countertop, a pepper shaker, a vase, a sink, two mugs, and my hand.",
+      "cat": "partially_correct_missing"
+    },
+    "sample-list-6": {
+      "q_time": "2023/06/29 16:51:04",
+      "q": "which objects did you see when you placed the soap at the countertop?",
+      "gt": "spatula, countertop, mug, sink, vase, peppershaker, saltshaker, drawer, cabinet",
+      "hyp": "I saw a spatula, the countertop, a garbage can, multiple drawers and cabinets, pepper and salt shaker, a window, tomato slices, a vase, a sink, two mugs, potato slices, and my hand.",
+      "cat": "partially_correct_tmi"
+    },
+    "sample-list-7": {
+      "q_time": "2023/06/29 16:51:04",
+      "q": "which objects did you see when you placed the soap at the countertop?",
+      "gt": "spatula, countertop, mug, sink, vase, peppershaker, saltshaker, drawer, cabinet",
+      "hyp": "I saw a potato, the countertop, drawers and cabinets, a salt shaker, gargabe cans, window, the sink, and my hand.",
+      "cat": "wrong"
+    }
+  }
+}

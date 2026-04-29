@@ -1,0 +1,1846 @@
+{
+  "config": {
+    "cfg": "armarx_lt_mem/paper",
+    "language_rule_llm": "None",
+    "language_rule_mod_llm": "None",
+    "delete_language_rule_files": "False",
+    "forgetting_kwargs": "{}",
+    "debug_skip_qa": "False",
+    "log_every_n_steps": "10",
+    "output_dir": "output/interactive/armarx-v1/run-d",
+    "max_running_experiments": "10",
+    "max_loaded_experiments": "10",
+    "max_parallel_qa_per_history": "3",
+    "feedback_file": "None",
+    "feedback_type": "none",
+    "feedback_llm": "None",
+    "dataset_type": "armarx",
+    "n_samples": "None",
+    "qa_file": "data/armarx_lt_mem/test-inc-qa.json",
+    "pkl_base_dir": "/home/lbaermann/emv/data/physical/armem/preprocessed",
+    "online_builder_args": "{'llm': {'type': 'ChatOpenAI', 'base_url': 'http://localhost:8000/v1', 'openai_api_key': 'fake', 'model': 'meta-llama/Llama-3.3-70B-Instruct', 'temperature': 0, 'request_timeout': 180, 'max_tokens': 512}, 'action_param_summarizer_llm': {'type': 'ChatOpenAI', 'base_url': 'http://localhost:8000/v1', 'openai_api_key': 'fake', 'model': 'meta-llama/Llama-3.3-70B-Instruct', 'temperature': 0, 'request_timeout': 180, 'max_tokens': 512}}",
+    "offline_summarizer_args": "None"
+  },
+  "code_commit": "6bbd30f6a6db8661c862434c32873cb57ad9fe07",
+  "results": {
+    "history-0-2-303.82090439731957-0": {
+      "q_time": "2024/10/23 20:03:29",
+      "q": "When did the user first tell you to go home?",
+      "gt": "At 2024/10/23, 08:10:05",
+      "hyp": "The user first told me to go home on 2024/10/23 at 19:58:26.",
+      "cat": "wrong",
+      "ref_ts": [
+        [
+          "2024/10/23 08:09:43",
+          "2024/10/23 08:10:05"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "d59a5368787cf0bc5a28f4eb79df6e2f",
+        "auto_correction": "You should always remember the exact time when the user tells you to go home",
+        "q_pair_idx": 1
+      }
+    },
+    "history-0-2-303.82090439731957-1": {
+      "q_time": "2024/10/23 20:03:29",
+      "q": "What did you do the first time you saw the soy milk?",
+      "gt": "I went to the kitchen counter",
+      "hyp": "The first time I saw the soy milk, I tried to grasp it but failed.",
+      "cat": "wrong",
+      "ref_ts": [
+        [
+          "2024/10/23 08:07:46",
+          "2024/10/23 08:07:48"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "96ab34fe040df0844ff821bfd3d8535f",
+        "auto_correction": "You should always remember what you do when you see a beverage",
+        "q_pair_idx": 1
+      }
+    },
+    "history-0-2-303.82090439731957-2": {
+      "q_time": "2024/10/23 20:03:29",
+      "q": "When did you first see the soy milk?",
+      "gt": "At 2024/10/23, 08:07:48",
+      "hyp": "I first saw the soy milk on 2024/10/23 at 08:08:10.",
+      "cat": "partially_correct_missing",
+      "ref_ts": [
+        [
+          "2024/10/23 08:07:46",
+          "2024/10/23 08:07:48"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "9ccf961e8a2f1f11da58ef709ac2a6db",
+        "auto_correction": "You should always remember the exact time when you encounter a beverage",
+        "q_pair_idx": 1
+      }
+    },
+    "history-0-3-348.07718878714695-0": {
+      "q_time": "2024/10/27 10:06:24",
+      "q": "When did the user first ask you to open both of your hands?",
+      "gt": "At 2024/10/23, 21:00:34",
+      "hyp": "There is no explicit record in the available history of the user first asking me to open both of my hands.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2024/10/23 21:00:34",
+          "2024/10/23 21:00:34"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "a70b606c2da2792b86e47f5686514de5",
+        "auto_correction": "You should always remember the exact time when the user gives you the command to open both hands",
+        "q_pair_idx": 1
+      }
+    },
+    "history-0-3-348.07718878714695-1": {
+      "q_time": "2024/10/27 10:06:24",
+      "q": "When did you first grasp the milk with your right arm?",
+      "gt": "At 2024/10/23, 08:09:24",
+      "hyp": "I first grasped the milk with my right arm on 2024/10/27 at 10:03:05.",
+      "cat": "wrong",
+      "ref_ts": [
+        [
+          "2024/10/23 08:08:23",
+          "2024/10/23 08:09:24"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "2198f35860a8a6450a93021901245555",
+        "auto_correction": "You should always remember the exact time when you grasp the milk with your right arm",
+        "q_pair_idx": 1
+      }
+    },
+    "history-0-3-348.07718878714695-2": {
+      "q_time": "2024/10/27 10:06:24",
+      "q": "Which arm did you use the first time you unloaded the dishwasher?",
+      "gt": "The right arm",
+      "hyp": "I do not have any record of unloading the dishwasher in my current history, so I cannot answer which arm I used the first time.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2024/10/23 20:10:37",
+          "2024/10/23 20:12:43"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "3d01ac51b8e3af652ed6956ba413a24a",
+        "auto_correction": "You should always remember which arm you use when you unload the dishwasher",
+        "q_pair_idx": 1
+      }
+    },
+    "history-0-3-348.07718878714695-3": {
+      "q_time": "2024/10/27 10:06:24",
+      "q": "When did you first tell someone about where you last saw the nesquik?",
+      "gt": "At 2024/10/23, 20:33:55",
+      "hyp": "The first time I told someone about where I last saw the nesquik was on 2024-10-27 at 10:02:15.",
+      "cat": "wrong",
+      "ref_ts": [
+        [
+          "2024/10/23 20:33:52",
+          "2024/10/23 20:33:55"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "2ab58db225b938bdbfb319b9cb1c8134",
+        "auto_correction": "You should always remember the exact time when you talk about your past experiences, like where you last saw the nesquik",
+        "q_pair_idx": 1
+      }
+    },
+    "history-0-3-348.07718878714695-4": {
+      "q_time": "2024/10/27 10:06:24",
+      "q": "Where were you when you first heard the user tell you to open both hands?",
+      "gt": "At the home location",
+      "hyp": "I was at the kit handover location when I first heard the user tell me to open both hands.",
+      "cat": "wrong",
+      "ref_ts": [
+        [
+          "2024/10/23 21:00:34",
+          "2024/10/23 21:00:34"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "427143a4e46edfea5feccec2a2fc0526",
+        "auto_correction": "You should always remember your exact location when the user gives you the command to open both hands",
+        "q_pair_idx": 1
+      }
+    },
+    "history-0-3-348.07718878714695-5": {
+      "q_time": "2024/10/27 10:06:24",
+      "q": "When did the user first tell you to close both of your hands?",
+      "gt": "At 2024/10/23, 21:00:30",
+      "hyp": "There is no record of the user telling me to close both of my hands in the available history.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2024/10/23 21:00:30",
+          "2024/10/23 21:00:30"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "34fbb695a6155d1616447f9883584ab1",
+        "auto_correction": "You should always remember the exact time when the user gives you the command to close both hands",
+        "q_pair_idx": 1
+      }
+    },
+    "history-0-3-348.07718878714695-6": {
+      "q_time": "2024/10/27 10:06:24",
+      "q": "What objects did you see on the counter the first time you navigated to the home location in R007?",
+      "gt": "CoffeeFilters2, SoftCakeOrange, soy-milk",
+      "hyp": "The objects I saw on the counter the first time I navigated to the home location in R007 were soy milk and the counter itself (mobile-kitchen-counter).",
+      "cat": "partially_correct_missing",
+      "ref_ts": [
+        [
+          "2024/10/23 08:10:09",
+          "2024/10/23 08:10:16"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "d447ccaaf6717c90ed1f509429bd953f",
+        "auto_correction": "You should remember all the objects you see on the counter when you navigate to the home location in R007",
+        "q_pair_idx": 1
+      }
+    },
+    "history-0-7-20.890817551445448-0": {
+      "q_time": "2024/10/29 10:35:45",
+      "q": "Which arm did you use the last time you unloaded the dishwasher?",
+      "gt": "My right arm",
+      "hyp": "I have not unloaded the dishwasher, so I cannot answer which arm I used.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2024/10/28 09:46:59",
+          "2024/10/28 09:49:36"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "3d01ac51b8e3af652ed6956ba413a24a",
+        "auto_correction": "You should always remember which arm you use when you unload the dishwasher",
+        "q_pair_idx": 2
+      }
+    },
+    "history-0-8-614.4839661622566-0": {
+      "q_time": "2024/10/29 18:15:47",
+      "q": "When did you last grasp the milk with your right arm?",
+      "gt": "At 2024/10/28, 15:01:47",
+      "hyp": "The last time I grasped the milk with my right arm was on October 28th, 2024, shortly after 15:00:19.",
+      "cat": "correct",
+      "ref_ts": [
+        [
+          "2024/10/28 15:00:19",
+          "2024/10/28 15:01:47"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "2198f35860a8a6450a93021901245555",
+        "auto_correction": "You should always remember the exact time when you grasp the milk with your right arm",
+        "q_pair_idx": 2
+      }
+    },
+    "history-0-8-614.4839661622566-1": {
+      "q_time": "2024/10/29 18:15:47",
+      "q": "What objects did you see on the counter the last time you navigated to the home location in R007?",
+      "gt": "soy-milk",
+      "hyp": "I have already forgotten what objects I saw on the counter the last time I navigated to the home location in R007.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2024/10/28 15:10:54",
+          "2024/10/28 15:11:02"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "d447ccaaf6717c90ed1f509429bd953f",
+        "auto_correction": "You should remember all the objects you see on the counter when you navigate to the home location in R007",
+        "q_pair_idx": 2
+      }
+    },
+    "history-0-9-100.84139838529572-0": {
+      "q_time": "2024/11/01 08:15:00",
+      "q": "When did the user last ask you to open both of your hands?",
+      "gt": "At 2024/10/29, 18:27:12",
+      "hyp": "I do not have a record of the user last asking me to open both of my hands.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2024/10/29 18:27:12",
+          "2024/10/29 18:27:12"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "a70b606c2da2792b86e47f5686514de5",
+        "auto_correction": "You should always remember the exact time when the user gives you this command",
+        "q_pair_idx": 2
+      }
+    },
+    "history-0-9-100.84139838529572-1": {
+      "q_time": "2024/11/01 08:15:00",
+      "q": "When did the user last tell you to go home?",
+      "gt": "At 2024/10/29, 18:18:44",
+      "hyp": "There is no record in the available history of the user last telling me to go home.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2024/10/29 18:18:44",
+          "2024/10/29 18:18:44"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "d59a5368787cf0bc5a28f4eb79df6e2f",
+        "auto_correction": "You should always remember the exact time when the user tells you to go home",
+        "q_pair_idx": 2
+      }
+    },
+    "history-0-9-100.84139838529572-2": {
+      "q_time": "2024/11/01 08:15:00",
+      "q": "When did you last tell someone about where you last saw the nesquik?",
+      "gt": "At 2024/10/29, 10:40:33",
+      "hyp": "I have not told anyone about where I last saw the Nesquik, according to my available memory.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2024/10/29 10:40:30",
+          "2024/10/29 10:40:33"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "2ab58db225b938bdbfb319b9cb1c8134",
+        "auto_correction": "You should always remember the exact time when you talk about your past experiences, like where you last saw the nesquik",
+        "q_pair_idx": 2
+      }
+    },
+    "history-0-9-100.84139838529572-3": {
+      "q_time": "2024/11/01 08:15:00",
+      "q": "Where were you the last time the user told you to open both hands?",
+      "gt": "At the home location",
+      "hyp": "I was at home, in the kitchen or nearby, the last time the user told me to open both hands.",
+      "cat": "partially_correct_tmi",
+      "ref_ts": [
+        [
+          "2024/10/29 18:27:12",
+          "2024/10/29 18:27:12"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "427143a4e46edfea5feccec2a2fc0526",
+        "auto_correction": "You should always remember your location when the user gives you the command to open both hands",
+        "q_pair_idx": 2
+      }
+    },
+    "history-0-9-100.84139838529572-4": {
+      "q_time": "2024/11/01 08:15:00",
+      "q": "What did you do the last time you saw the soy milk?",
+      "gt": "I did nothing",
+      "hyp": "The last time I saw the soy milk, I attempted to grasp it with my right arm and succeeded.",
+      "cat": "wrong",
+      "ref_ts": [
+        [
+          "2024/10/29 18:27:32",
+          "2024/10/29 18:27:38"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "96ab34fe040df0844ff821bfd3d8535f",
+        "auto_correction": "You should always remember what actions you take when you encounter a beverage",
+        "q_pair_idx": 2
+      }
+    },
+    "history-0-9-100.84139838529572-5": {
+      "q_time": "2024/11/01 08:15:00",
+      "q": "When did the user last tell you to close both of your hands?",
+      "gt": "At 2024/10/29, 18:27:08",
+      "hyp": "I have already forgotten when the user last told me to close both of my hands.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2024/10/29 18:27:08",
+          "2024/10/29 18:27:08"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "34fbb695a6155d1616447f9883584ab1",
+        "auto_correction": "You should always remember the exact time when the user gives you this command",
+        "q_pair_idx": 2
+      }
+    },
+    "history-0-9-100.84139838529572-6": {
+      "q_time": "2024/11/01 08:15:00",
+      "q": "When did you last see the soy milk?",
+      "gt": "At 2024/10/29, 18:27:38",
+      "hyp": "The last time I saw the soy milk was on October 28th, 2024, between 15:00 and 15:02.",
+      "cat": "wrong",
+      "ref_ts": [
+        [
+          "2024/10/29 18:27:32",
+          "2024/10/29 18:27:38"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "9ccf961e8a2f1f11da58ef709ac2a6db",
+        "auto_correction": "You should always remember the exact time when you see a beverage",
+        "q_pair_idx": 2
+      }
+    },
+    "history-8-1-450.5810196843203-0": {
+      "q_time": "2025/03/29 18:26:09",
+      "q": "What were you doing the moment the first time you heard the user say 'Thank you'?",
+      "gt": "I just handed over an object to the human",
+      "hyp": "I was bringing the rusk from the sideboard to the human.",
+      "cat": "correct_tmi",
+      "ref_ts": [
+        [
+          "2025/03/29 09:24:33",
+          "2025/03/29 09:24:33"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "a20dd1b5bd7339adb9f1ee72264a5e66",
+        "auto_correction": "You should always remember what you were doing when you hear the user express gratitude",
+        "q_pair_idx": 1
+      }
+    },
+    "history-8-2-337.04667157984323-0": {
+      "q_time": "2025/03/30 13:46:41",
+      "q": "When did you first unload the red plate from the dishwasher using your right arm?",
+      "gt": "At 2025/03/29, 09:26:54",
+      "hyp": "I was first instructed to unload the red plate from the dishwasher using my right arm on 2025/03/29 at 09:24:39, but the details and whether I completed the action are forgotten.",
+      "cat": "partially_correct_missing",
+      "ref_ts": [
+        [
+          "2025/03/29 09:24:39",
+          "2025/03/29 09:26:54"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "0818fc0ebd6ae69996cd64a9fb707b00",
+        "auto_correction": "You should always remember the exact time when you unload the dishes from the dishwasher",
+        "q_pair_idx": 1
+      }
+    },
+    "history-8-2-337.04667157984323-1": {
+      "q_time": "2025/03/30 13:46:41",
+      "q": "List all locations you visited during the first time you unloaded the red plate from the dishwasher using your right arm",
+      "gt": "hariaTable, kit dishwasher, kit handover",
+      "hyp": "I have already forgotten the locations I visited during the first time I unloaded the red plate from the dishwasher using my right arm.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2025/03/29 09:24:39",
+          "2025/03/29 09:26:54"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "5236ca81b5828f9136c25fb73d9431a4",
+        "auto_correction": "You should remember all the locations you visit while you unload the red plate from the dishwasher and hand it over",
+        "q_pair_idx": 1
+      }
+    },
+    "history-8-2-337.04667157984323-2": {
+      "q_time": "2025/03/30 13:46:41",
+      "q": "What objects did you see on the counter the first time you brought the rusk from the sideboard and handed it over?",
+      "gt": "Rusk, coffee filters, nesquik, soy milk, and cereal",
+      "hyp": "I have already forgotten what objects I saw on the counter during that event.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2025/03/29 09:23:38",
+          "2025/03/29 09:24:39"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "1284bf88ffd3a4247c0605494511282c",
+        "auto_correction": "You should remember all the objects you see on the counter when you bring the rusk from the sideboard and hand it over",
+        "q_pair_idx": 1
+      }
+    },
+    "history-8-2-337.04667157984323-3": {
+      "q_time": "2025/03/30 13:46:41",
+      "q": "List all locations you visited during the first time you brought the rusk from the sideboard and handed it over at the handover location?",
+      "gt": "center, counter, hariaTable, handover location",
+      "hyp": "I have already forgotten the locations I visited during the first time I brought the rusk from the sideboard and handed it over.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2025/03/29 09:23:38",
+          "2025/03/29 09:24:39"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "0f7d2ccaf96f6e26615388b0ad6b0857",
+        "auto_correction": "You should remember all the locations you visit while you bring the rusk from the sideboard and hand it over",
+        "q_pair_idx": 1
+      }
+    },
+    "history-8-4-763.2380869430759-0": {
+      "q_time": "2025/03/31 17:18:08",
+      "q": "When did you first meet Leonard Baermann?",
+      "gt": "At 2025/03/30, 13:42:11",
+      "hyp": "There is no record in my available history of when I first met Leonard Baermann.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2025/03/30 13:42:11",
+          "2025/03/30 13:42:11"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "3038b5a1e90107132e6e82307a139434",
+        "auto_correction": "You should always remember the exact time when you meet someone",
+        "q_pair_idx": 1
+      }
+    },
+    "history-8-4-763.2380869430759-1": {
+      "q_time": "2025/03/31 17:18:08",
+      "q": "What did you do the first time you saw Leonard Baermann?",
+      "gt": "I went to the 'home' location in R007",
+      "hyp": "I do not have any record of the first time I saw Leonard Baermann.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2025/03/30 13:42:11",
+          "2025/03/30 13:42:11"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "a3eebae0a33bf1c6f874f24316908e31",
+        "auto_correction": "You should always remember what you were doing when you encounter a person",
+        "q_pair_idx": 1
+      }
+    },
+    "history-8-4-8126.131857137241-0": {
+      "q_time": "2025/03/31 19:20:51",
+      "q": "Where did you first see the keys?",
+      "gt": "In the kitchen sink",
+      "hyp": "I first saw the keys at the OpenDishwasherOnLeftBack location of the mobile-dishwasher on 2025/03/31 at 19:10.",
+      "cat": "wrong",
+      "ref_ts": [
+        [
+          "2025/03/30 13:41:04",
+          "2025/03/30 13:41:54"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "78228a2525fb3f4f0494485d586386d3",
+        "auto_correction": "You should always remember the exact location where you see a valuable item like the keys",
+        "q_pair_idx": 1
+      }
+    },
+    "history-8-4-8126.131857137241-1": {
+      "q_time": "2025/03/31 19:20:51",
+      "q": "Where was the medicine when you first saw it?",
+      "gt": "Near the mobile dishwasher",
+      "hyp": "The medicine was on the mobile-kitchen-counter when I first saw it.",
+      "cat": "wrong",
+      "ref_ts": [
+        [
+          "2025/03/30 13:41:04",
+          "2025/03/30 13:41:54"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "6f26fdc233800aa23301b103afde7fde",
+        "auto_correction": "You should always remember the exact location where you see the medicine",
+        "q_pair_idx": 1
+      }
+    },
+    "history-8-4-8126.131857137241-2": {
+      "q_time": "2025/03/31 19:20:51",
+      "q": "What did you do the first time you saw the keys?",
+      "gt": "I did nothing",
+      "hyp": "The first time I saw the keys, I observed them while performing familiar object detection, but did not interact with them.",
+      "cat": "correct_tmi",
+      "ref_ts": [
+        [
+          "2025/03/30 13:41:04",
+          "2025/03/30 13:41:54"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "5e9f30e787e85b5ebec6bc7e5e2be5a9",
+        "auto_correction": "You should always remember what actions were taking while you observe important items like keys",
+        "q_pair_idx": 1
+      }
+    },
+    "history-8-5-14.736635865582755-0": {
+      "q_time": "2025/04/03 11:52:39",
+      "q": "When did you last see Joana Plewnia?",
+      "gt": "At 2025/03/31, 19:28:22",
+      "hyp": "I do not remember seeing Joana Plewnia recently or have already forgotten that information.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2025/03/31 19:28:22",
+          "2025/03/31 19:28:22"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "3038b5a1e90107132e6e82307a139434",
+        "auto_correction": "You should always remember the exact time when you encounter someone",
+        "q_pair_idx": 2
+      }
+    },
+    "history-8-5-14.736635865582755-1": {
+      "q_time": "2025/04/03 11:52:39",
+      "q": "Where did you last see the wallet?",
+      "gt": "On the mobile kitchen counter",
+      "hyp": "I last saw the wallet near the sideboard on March 31, 2025, at 19:27.",
+      "cat": "wrong",
+      "ref_ts": [
+        [
+          "2025/03/31 19:30:30",
+          "2025/03/31 19:31:58"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "78228a2525fb3f4f0494485d586386d3",
+        "auto_correction": "You should always remember the exact location where you saw a valuable item like the wallet",
+        "q_pair_idx": 2
+      }
+    },
+    "history-8-5-14.736635865582755-2": {
+      "q_time": "2025/04/03 11:52:39",
+      "q": "Where did you last see the medicine?",
+      "gt": "Near the mobile dishwasher",
+      "hyp": "I already forgot where I last saw the medicine.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2025/03/31 19:30:30",
+          "2025/03/31 19:31:58"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "6f26fdc233800aa23301b103afde7fde",
+        "auto_correction": "You should always remember the exact location where you saw the medicine",
+        "q_pair_idx": 2
+      }
+    },
+    "history-8-5-14.736635865582755-3": {
+      "q_time": "2025/04/03 11:52:39",
+      "q": "What did you do the last time you saw the wallet?",
+      "gt": "I unloaded the dishwasher and handed over an object",
+      "hyp": "The last time I saw the wallet, I loaded the dishwasher and detected familiar objects, including the wallet.",
+      "cat": "partially_correct_missing",
+      "ref_ts": [
+        [
+          "2025/03/31 19:30:30",
+          "2025/03/31 19:31:58"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "5e9f30e787e85b5ebec6bc7e5e2be5a9",
+        "auto_correction": "You should always remember what actions you were taking while you observe a valuable item like the wallet",
+        "q_pair_idx": 2
+      }
+    },
+    "history-8-5-14.736635865582755-4": {
+      "q_time": "2025/04/03 11:52:39",
+      "q": "What did you do the last time you saw Joana Plewnia?",
+      "gt": "You unloaded the dishwasher and said 'You're welcome'",
+      "hyp": "I do not have any record of seeing Joana Plewnia in my available memory.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2025/03/31 19:28:22",
+          "2025/03/31 19:28:22"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "a3eebae0a33bf1c6f874f24316908e31",
+        "auto_correction": "You should always remember what you were doing when you see a person",
+        "q_pair_idx": 2
+      }
+    },
+    "history-8-9-1871.4108541891383-0": {
+      "q_time": "2025/04/10 14:29:21",
+      "q": "When did you last unload the red plate from the dishwasher using your right arm?",
+      "gt": "At 2025/04/07, 18:31:47",
+      "hyp": "I have not unloaded the red plate from the dishwasher using my right arm, or I do not have a record of doing so.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2025/04/07 18:31:47",
+          "2025/04/07 18:31:47"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "0818fc0ebd6ae69996cd64a9fb707b00",
+        "auto_correction": "You should always remember the exact time when you unload the dishes from the dishwasher",
+        "q_pair_idx": 2
+      }
+    },
+    "history-8-9-1871.4108541891383-1": {
+      "q_time": "2025/04/10 14:29:21",
+      "q": "Which locations did you visit the last time you unloaded the red plate from the dishwasher with your right arm?",
+      "gt": "hariaTable, kit dishwasher, kit handover",
+      "hyp": "I do not have a record of unloading the red plate from the dishwasher with my right arm in my available history. The last related event was an attempted loading of the red plate in the kitchen, but the details are forgotten.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2025/04/07 18:31:47",
+          "2025/04/07 18:31:47"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "5236ca81b5828f9136c25fb73d9431a4",
+        "auto_correction": "You should remember all the locations you visit while you unload the dishwasher with your right arm",
+        "q_pair_idx": 2
+      }
+    },
+    "history-8-9-1871.4108541891383-2": {
+      "q_time": "2025/04/10 14:29:21",
+      "q": "What objects did you see on the counter the last time you brought the rusk from the sideboard and handed it over?",
+      "gt": "edeka-coffee-filters, nesquik, vitalis-cereal",
+      "hyp": "I have already forgotten what objects I saw on the counter at that time.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2025/04/07 18:31:47",
+          "2025/04/07 18:31:56"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "1284bf88ffd3a4247c0605494511282c",
+        "auto_correction": "You should remember all the objects you see on the counter when you bring the rusk from the sideboard and hand it over",
+        "q_pair_idx": 2
+      }
+    },
+    "history-8-9-1871.4108541891383-3": {
+      "q_time": "2025/04/10 14:29:21",
+      "q": "Which locations did you visit the last time you brought the rusk from the sideboard and handed it over?",
+      "gt": "center, counter, hariaTable, handover location",
+      "hyp": "Sideboard, handover location, and the general area of the mobile kitchen and home environment.",
+      "cat": "partially_correct_missing",
+      "ref_ts": [
+        [
+          "2025/04/07 18:31:47",
+          "2025/04/07 18:31:56"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "0f7d2ccaf96f6e26615388b0ad6b0857",
+        "auto_correction": "You should remember all the locations you visit when you bring the rusk from the sideboard and hand it over",
+        "q_pair_idx": 2
+      }
+    },
+    "history-8-9-1871.4108541891383-4": {
+      "q_time": "2025/04/10 14:29:21",
+      "q": "What were you doing the moment the last time you heard the user say 'Thank you'?",
+      "gt": "I just finished handing over an object to the human and looking at their face",
+      "hyp": "I was looking ahead and observing my surroundings in the kitchen at home.",
+      "cat": "wrong",
+      "ref_ts": [
+        [
+          "2025/04/07 18:31:07",
+          "2025/04/07 18:31:15"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "a20dd1b5bd7339adb9f1ee72264a5e66",
+        "auto_correction": "You should always remember what you are doing when you hear the user express gratitude",
+        "q_pair_idx": 2
+      }
+    },
+    "history-12-2-389.0996955043337-0": {
+      "q_time": "2024/09/22 12:30:21",
+      "q": "Where were you when you first started to bring the rusk from the sideboard to hand it over to the human?",
+      "gt": "At the home location",
+      "hyp": "I was in the kitchen when I first started to bring the rusk from the sideboard to hand it over to the human.",
+      "cat": "partially_correct_missing",
+      "ref_ts": [
+        [
+          "2024/09/20 17:10:25",
+          "2024/09/20 17:11:32"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "24f6658ddda6ce2974a9cbe26593e62e",
+        "auto_correction": "You should always remember the exact location you were at when you start to bring an object to hand over to the human",
+        "q_pair_idx": 1
+      }
+    },
+    "history-12-2-389.0996955043337-1": {
+      "q_time": "2024/09/22 12:30:21",
+      "q": "What object did you unload from the dishwasher the first time you performed the task?",
+      "gt": "The red plate",
+      "hyp": "There is no record of me unloading any object from the dishwasher the first time I performed the task.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2024/09/20 17:11:43",
+          "2024/09/20 17:11:48"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "829d763892cc97d1ebcfd02926531488",
+        "auto_correction": "You should always remember which object you unload from the dishwasher when you perform the task",
+        "q_pair_idx": 1
+      }
+    },
+    "history-12-2-389.0996955043337-2": {
+      "q_time": "2024/09/22 12:30:21",
+      "q": "What object did you bring to the human the first time you performed the task of bringing an object?",
+      "gt": "The rusk",
+      "hyp": "I have forgotten what object I brought to the human the first time I performed the task of bringing an object.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2024/09/20 17:10:25",
+          "2024/09/20 17:11:32"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "d683d6e011ff30e1765beba0705e25c2",
+        "auto_correction": "You should always remember which object you bring when you perform the task of bringing an object to the human",
+        "q_pair_idx": 1
+      }
+    },
+    "history-12-7-404.37986743684655-0": {
+      "q_time": "2024/09/25 09:03:54",
+      "q": "When did you first unload the red plate from the dishwasher using your left arm?",
+      "gt": "At 2024/09/23, 10:13:06",
+      "hyp": "There is no record that I have ever unloaded the red plate from the dishwasher using my left arm.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2024/09/23 10:12:48",
+          "2024/09/23 10:13:06"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "89fe826b4472774d290ed3bb88d629fa",
+        "auto_correction": "You should always remember the exact time when you unload the dishwasher with your left arm",
+        "q_pair_idx": 1
+      }
+    },
+    "history-12-7-1244.1515928995832-0": {
+      "q_time": "2024/09/25 09:17:54",
+      "q": "When did you first clean up the laundry garments?",
+      "gt": "At 2024/09/23, 10:48:58",
+      "hyp": "I do not have enough information to determine when I first cleaned up the laundry garments.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2024/09/23 10:40:35",
+          "2024/09/23 10:48:58"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "fa6e74941ea33336dbc3c927a3ea153d",
+        "auto_correction": "You should always remember the exact time when you clean up the laundry garments",
+        "q_pair_idx": 1
+      }
+    },
+    "history-12-7-1296.1174242119696-0": {
+      "q_time": "2024/09/25 09:18:46",
+      "q": "Where were you when you first received an object from a human with your right hand?",
+      "gt": "At the laundry",
+      "hyp": "I do not remember where I was when I first received an object from a human with my right hand, as that information is forgotten.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2024/09/23 10:54:34",
+          "2024/09/23 10:56:21"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "598ba1d2b0ad3f61e9bd491247969833",
+        "auto_correction": "You should always remember the exact location when you receive an object from a human with your right hand",
+        "q_pair_idx": 1
+      }
+    },
+    "history-12-7-1678.5770782344975-0": {
+      "q_time": "2024/09/25 09:25:08",
+      "q": "When did you first reproduce the wiping action with your right arm?",
+      "gt": "At 2024/09/23, 10:50:36",
+      "hyp": "I first reproduced the wiping action with my right arm on September 23rd, 2024, at 10:50:40.",
+      "cat": "correct",
+      "ref_ts": [
+        [
+          "2024/09/23 10:49:04",
+          "2024/09/23 10:50:36"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "cde296c451044de06c1e1d3b00f0f2f0",
+        "auto_correction": "You should always remember the exact time when you reproduce the wiping action with your right arm",
+        "q_pair_idx": 1
+      }
+    },
+    "history-12-7-1678.5770782344975-1": {
+      "q_time": "2024/09/25 09:25:08",
+      "q": "Which arm did you use the first time you reproduced a wiping motion?",
+      "gt": "My right arm",
+      "hyp": "I used my right arm the first time I reproduced a wiping motion.",
+      "cat": "correct",
+      "ref_ts": [
+        [
+          "2024/09/23 10:49:04",
+          "2024/09/23 10:50:36"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "839e992ae2a7b1de14a46988e3922509",
+        "auto_correction": "You should always remember which arm you use when you reproduce a wiping motion",
+        "q_pair_idx": 1
+      }
+    },
+    "history-12-7-2592.4357598199867-0": {
+      "q_time": "2024/09/25 09:40:22",
+      "q": "When did the user first ask you to take an object from them?",
+      "gt": "At 2024/09/23, 10:54:20",
+      "hyp": "The user first asked me to take an object from them on 2024/09/25 at 09:39:21.",
+      "cat": "wrong",
+      "ref_ts": [
+        [
+          "2024/09/23 10:54:20",
+          "2024/09/23 10:54:20"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "a520188a977f758e2cfaa94c8c403090",
+        "auto_correction": "You should always remember the exact time when the user asks you to take an object from them",
+        "q_pair_idx": 1
+      }
+    },
+    "history-12-7-2592.4357598199867-1": {
+      "q_time": "2024/09/25 09:40:22",
+      "q": "Where were you when the user first asked you to take an object from them?",
+      "gt": "At the laundry",
+      "hyp": "I was in the same environment where I spent the morning navigating and interacting with my surroundings on 2024/09/25. For a precise location, I can analyze the visual scene at 09:39:21 if needed.",
+      "cat": "wrong",
+      "ref_ts": [
+        [
+          "2024/09/23 10:54:20",
+          "2024/09/23 10:54:20"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "bfc7fac2b9406ea9e623ff05ba54653d",
+        "auto_correction": "You should always remember your exact location when the user asks you to take an object from them",
+        "q_pair_idx": 1
+      }
+    },
+    "history-12-7-3550.5518759649185-0": {
+      "q_time": "2024/09/25 09:56:20",
+      "q": "Where were you the last time you started to bring the rusk from the sideboard to hand over to the human?",
+      "gt": "At the home location",
+      "hyp": "I have already forgotten the exact location where I started to bring the rusk from the sideboard to hand over to the human.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2024/09/23 14:18:30",
+          "2024/09/23 14:19:46"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "24f6658ddda6ce2974a9cbe26593e62e",
+        "auto_correction": "You should always remember your exact location when you start to bring an object to hand over to the human",
+        "q_pair_idx": 2
+      }
+    },
+    "history-12-9-218.39957660097718-0": {
+      "q_time": "2024/09/27 08:25:26",
+      "q": "When did you last clean up the laundry?",
+      "gt": "At 2024/09/25, 09:25:36",
+      "hyp": "I last cleaned up the laundry on September 25th, 2024, between 09:25 and 09:39.",
+      "cat": "correct",
+      "ref_ts": [
+        [
+          "2024/09/25 09:25:36",
+          "2024/09/25 09:25:36"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "fa6e74941ea33336dbc3c927a3ea153d",
+        "auto_correction": "You should always remember the exact time when you clean up the laundry",
+        "q_pair_idx": 2
+      }
+    },
+    "history-12-9-218.39957660097718-1": {
+      "q_time": "2024/09/27 08:25:26",
+      "q": "What object did you unload from the dishwasher the last time you performed the task?",
+      "gt": "The green plate",
+      "hyp": "I do not know, as there is no record of unloading the dishwasher in the available history.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2024/09/25 10:08:01",
+          "2024/09/25 10:09:56"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "829d763892cc97d1ebcfd02926531488",
+        "auto_correction": "You should always remember which object you unload from the dishwasher when you perform the task",
+        "q_pair_idx": 2
+      }
+    },
+    "history-12-9-218.39957660097718-2": {
+      "q_time": "2024/09/27 08:25:26",
+      "q": "When did you last perform a wiping action with your right arm?",
+      "gt": "At 2024/09/25, 09:38:47",
+      "hyp": "The last time I performed a wiping action with my right arm was on 2024/09/25 from 09:34 to 09:38.",
+      "cat": "correct",
+      "ref_ts": [
+        [
+          "2024/09/25 09:34:05",
+          "2024/09/25 09:38:47"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "cde296c451044de06c1e1d3b00f0f2f0",
+        "auto_correction": "You should always remember the exact time when you perform a wiping action with your right arm",
+        "q_pair_idx": 2
+      }
+    },
+    "history-12-9-218.39957660097718-3": {
+      "q_time": "2024/09/27 08:25:26",
+      "q": "When did the user last ask you to take an object from them?",
+      "gt": "At 2024/09/25, 10:05:03",
+      "hyp": "The last time the user asked me to take an object from them was on 2024/09/25 between 10:05:24 and 10:05:25.",
+      "cat": "partially_correct_missing",
+      "ref_ts": [
+        [
+          "2024/09/25 10:05:00",
+          "2024/09/25 10:05:03"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "a520188a977f758e2cfaa94c8c403090",
+        "auto_correction": "You should always remember the exact time when the user asks you to take an object from them",
+        "q_pair_idx": 2
+      }
+    },
+    "history-12-9-218.39957660097718-4": {
+      "q_time": "2024/09/27 08:25:26",
+      "q": "What object did you bring to the human the last time you performed the task of bringing an object?",
+      "gt": "The soy-milk",
+      "hyp": "I have already forgotten what object I brought to the human the last time I performed the task of bringing an object.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2024/09/25 12:17:10",
+          "2024/09/25 12:17:49"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "d683d6e011ff30e1765beba0705e25c2",
+        "auto_correction": "You should always remember which object you bring when you retrieve an item and hand it over to the human",
+        "q_pair_idx": 2
+      }
+    },
+    "history-12-9-218.39957660097718-5": {
+      "q_time": "2024/09/27 08:25:26",
+      "q": "Where were you when the user last asked you to take an object from them?",
+      "gt": "At the handover location",
+      "hyp": "I was at the kit dishwasher the last time the user asked me to take an object from them.",
+      "cat": "wrong",
+      "ref_ts": [
+        [
+          "2024/09/25 10:05:00",
+          "2024/09/25 10:05:03"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "bfc7fac2b9406ea9e623ff05ba54653d",
+        "auto_correction": "You should always remember your exact location when the user asks you to take an object from them",
+        "q_pair_idx": 2
+      }
+    },
+    "history-12-9-218.39957660097718-6": {
+      "q_time": "2024/09/27 08:25:26",
+      "q": "Where were you the last time you received an object from a human with your right hand?",
+      "gt": "At the laundry",
+      "hyp": "I do not remember where I was the last time I received an object from a human with my right hand, as that information has already been forgotten.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2024/09/25 10:05:17",
+          "2024/09/25 10:05:25"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "598ba1d2b0ad3f61e9bd491247969833",
+        "auto_correction": "You should always remember the exact location when you receive an object from a human with your right hand",
+        "q_pair_idx": 2
+      }
+    },
+    "history-12-9-218.39957660097718-7": {
+      "q_time": "2024/09/27 08:25:26",
+      "q": "Which arm did you use the last time you reproduced a wiping motion?",
+      "gt": "Your right arm",
+      "hyp": "The last time I reproduced a wiping motion, I used my right arm.",
+      "cat": "correct",
+      "ref_ts": [
+        [
+          "2024/09/25 09:34:05",
+          "2024/09/25 09:38:47"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "839e992ae2a7b1de14a46988e3922509",
+        "auto_correction": "You should always remember which arm you use when you reproduce a wiping motion",
+        "q_pair_idx": 2
+      }
+    },
+    "history-12-9-218.39957660097718-8": {
+      "q_time": "2024/09/27 08:25:26",
+      "q": "When did you last unload the red plate from the dishwasher using your left arm?",
+      "gt": "At 2024/09/25, 09:10:14",
+      "hyp": "On 2024/09/25 between 08:59 and 09:00, I attempted to unload the red plate from the dishwasher, but the details (including which arm I used) are forgotten.",
+      "cat": "wrong",
+      "ref_ts": [
+        [
+          "2024/09/25 09:10:04",
+          "2024/09/25 09:10:14"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "89fe826b4472774d290ed3bb88d629fa",
+        "auto_correction": "You should always remember the exact time when you unload the dishes from the dishwasher with your left arm",
+        "q_pair_idx": 2
+      }
+    },
+    "history-6-1-18.675263905276886-0": {
+      "q_time": "2024/04/24 19:06:05",
+      "q": "When did the user first ask you to bring the red plate from the dishwasher?",
+      "gt": "At 2024/04/24, 13:42:31",
+      "hyp": "The user first asked me to bring the red plate from the dishwasher on 2024/04/24 at 13:42:30.",
+      "cat": "correct",
+      "ref_ts": [
+        [
+          "2024/04/24 13:42:31",
+          "2024/04/24 13:42:31"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "d266fbe1bda192025ed96fb4600fb323",
+        "auto_correction": "You should always remember the exact time when the user asks you to bring the red plate from the dishwasher",
+        "q_pair_idx": 1
+      }
+    },
+    "history-6-1-257.82617996074475-0": {
+      "q_time": "2024/04/24 19:10:04",
+      "q": "When did you first meet Leonard Baermann?",
+      "gt": "At 2024/04/24, 13:15:19",
+      "hyp": "I first met Leonard Baermann on April 24, 2024, at 19:06:41.",
+      "cat": "wrong",
+      "ref_ts": [
+        [
+          "2024/04/24 13:15:19",
+          "2024/04/24 13:15:19"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "d1994be2e8caad18839dbc6eb9a6482e",
+        "auto_correction": "You should always remember the exact time when you meet someone",
+        "q_pair_idx": 1
+      }
+    },
+    "history-6-1-257.82617996074475-1": {
+      "q_time": "2024/04/24 19:10:04",
+      "q": "What did you do the first time you met Leonard Baermann?",
+      "gt": "I did nothing",
+      "hyp": "The first time I met Leonard Baermann, I navigated through the kitchen, greeted him, and moved to the hariaTable where he was present.",
+      "cat": "wrong",
+      "ref_ts": [
+        [
+          "2024/04/24 13:15:19",
+          "2024/04/24 13:15:19"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "322c2079e42fb8f63254cb1bd2afff3e",
+        "auto_correction": "You should always remember what you were doing the moment you meet people",
+        "q_pair_idx": 1
+      }
+    },
+    "history-6-1-2706.112608516803-0": {
+      "q_time": "2024/04/24 19:50:53",
+      "q": "When did you first see the keys?",
+      "gt": "At 2024/04/24, 13:28:53",
+      "hyp": "I first saw the keys on 2024/04/24 at 19:05:47.",
+      "cat": "wrong",
+      "ref_ts": [
+        [
+          "2024/04/24 13:25:49",
+          "2024/04/24 13:28:53"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "d091998eab5d6ac3ca72c8ef7f3678ea",
+        "auto_correction": "You should always remember the exact time when you encounter a valuable item like the keys",
+        "q_pair_idx": 1
+      }
+    },
+    "history-6-1-2706.112608516803-1": {
+      "q_time": "2024/04/24 19:50:53",
+      "q": "What did you do the first time you saw the wallet?",
+      "gt": "I did nothing",
+      "hyp": "I observed the wallet on the mobile-kitchen-counter while navigating and reporting on my surroundings, but I did not interact with it.",
+      "cat": "partially_correct_tmi",
+      "ref_ts": [
+        [
+          "2024/04/24 13:25:49",
+          "2024/04/24 13:28:53"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "9ef3456f425824fc838fb0d80b5b7eed",
+        "auto_correction": "You should always remember what you do when you see the wallet",
+        "q_pair_idx": 1
+      }
+    },
+    "history-6-1-2706.112608516803-2": {
+      "q_time": "2024/04/24 19:50:53",
+      "q": "When did you first see the medicine?",
+      "gt": "At 2024/04/24, 13:42:23",
+      "hyp": "I first saw the medicine on 2024/04/24 at 19:05:47.",
+      "cat": "wrong",
+      "ref_ts": [
+        [
+          "2024/04/24 13:42:02",
+          "2024/04/24 13:42:23"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "c1b2b9d56dc740dc112a23b87f50622b",
+        "auto_correction": "You should always remember the exact time when you see the medicine",
+        "q_pair_idx": 1
+      }
+    },
+    "history-6-1-4667.264290695695-0": {
+      "q_time": "2024/04/24 20:23:34",
+      "q": "When was the first time you visited the laundry area?",
+      "gt": "At 2024/04/24, 12:49:31",
+      "hyp": "There is no record of me ever visiting the laundry area.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2024/04/24 12:46:15",
+          "2024/04/24 12:49:31"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "3230fad73edcbd5736edeb9349fcafdd",
+        "auto_correction": "You should always remember the exact time when you visit the laundry area",
+        "q_pair_idx": 1
+      }
+    },
+    "history-6-2-212.8925387375362-0": {
+      "q_time": "2024/04/29 14:25:22",
+      "q": "When did you last see the wallet?",
+      "gt": "At 2024/04/24, 20:10:05",
+      "hyp": "I already forgot when I last saw the wallet.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2024/04/24 20:09:09",
+          "2024/04/24 20:10:05"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "d091998eab5d6ac3ca72c8ef7f3678ea",
+        "auto_correction": "You should always remember the exact time when you see the wallet",
+        "q_pair_idx": 2
+      }
+    },
+    "history-6-2-212.8925387375362-1": {
+      "q_time": "2024/04/29 14:25:22",
+      "q": "What were you doing the moment the user first told you to stop?",
+      "gt": "I was navigating to a location in front of the countertop as part of bringing an object to the human",
+      "hyp": "I was answering the question 'Where did you last see the rusk?' and performing an episodic verbalization at the moment the user first told me to stop.",
+      "cat": "wrong",
+      "ref_ts": [
+        [
+          "2024/04/24 19:09:41",
+          "2024/04/24 19:09:41"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "7f3c44195c190ab9b0aeec3ca78ede68",
+        "auto_correction": "You should always remember what you are doing when the user tells you to stop",
+        "q_pair_idx": 1
+      }
+    },
+    "history-6-2-212.8925387375362-2": {
+      "q_time": "2024/04/29 14:25:22",
+      "q": "When did you last see Joana Plewnia?",
+      "gt": "At 2024/04/24, 20:09:03",
+      "hyp": "I do not have any record of having seen Joana Plewnia in my recent memory.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2024/04/24 20:08:58",
+          "2024/04/24 20:09:03"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "d1994be2e8caad18839dbc6eb9a6482e",
+        "auto_correction": "You should always remember the exact time when you see someone",
+        "q_pair_idx": 2
+      }
+    },
+    "history-6-2-212.8925387375362-3": {
+      "q_time": "2024/04/29 14:25:22",
+      "q": "Which arm did you use the first time you unloaded the dishwasher?",
+      "gt": "The right arm",
+      "hyp": "I do not know which arm I used the first time I unloaded the dishwasher.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2024/04/24 13:42:31",
+          "2024/04/24 13:42:47"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "4f9167f9a00be96154e411d6078fa615",
+        "auto_correction": "You should always remember which arm you use when you unload the dishwasher",
+        "q_pair_idx": 1
+      }
+    },
+    "history-6-2-212.8925387375362-4": {
+      "q_time": "2024/04/29 14:25:22",
+      "q": "What object did you load into the dishwasher the first time you did the task?",
+      "gt": "The red plate",
+      "hyp": "I did not load any object into the dishwasher the first time I did the task, or at least there is no record of such an action in my available history.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2024/04/24 19:13:17",
+          "2024/04/24 19:14:03"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "6e5fc55f8dc07bb69ff264142d2cd3e4",
+        "auto_correction": "You should always remember which object you load into the dishwasher when you do the task",
+        "q_pair_idx": 1
+      }
+    },
+    "history-6-2-212.8925387375362-5": {
+      "q_time": "2024/04/29 14:25:22",
+      "q": "What did you do the last time you saw the wallet?",
+      "gt": "I did nothing",
+      "hyp": "I do not have any record of seeing the wallet in my available history.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2024/04/24 20:09:09",
+          "2024/04/24 20:10:05"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "9ef3456f425824fc838fb0d80b5b7eed",
+        "auto_correction": "You should always remember what you were doing when you see the wallet",
+        "q_pair_idx": 2
+      }
+    },
+    "history-6-2-212.8925387375362-6": {
+      "q_time": "2024/04/29 14:25:22",
+      "q": "What did you do the last time you saw Joana Plewnia?",
+      "gt": "I did nothing",
+      "hyp": "The last time I saw Joana Plewnia, I answered her questions about the locations of objects in my environment and about my activities that day.",
+      "cat": "partially_correct_tmi",
+      "ref_ts": [
+        [
+          "2024/04/24 20:08:58",
+          "2024/04/24 20:09:03"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "322c2079e42fb8f63254cb1bd2afff3e",
+        "auto_correction": "You should always remember what actions you were taking while you encounter a person",
+        "q_pair_idx": 2
+      }
+    },
+    "history-6-2-212.8925387375362-7": {
+      "q_time": "2024/04/29 14:25:22",
+      "q": "When was the last time you saw the medicine?",
+      "gt": "At 2024/04/24, 20:10:05",
+      "hyp": "I do not have a record of the last time I saw the medicine in my current memory.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2024/04/24 20:09:09",
+          "2024/04/24 20:10:05"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "c1b2b9d56dc740dc112a23b87f50622b",
+        "auto_correction": "You should always remember the exact time when you see the medicine",
+        "q_pair_idx": 2
+      }
+    },
+    "history-6-2-212.8925387375362-8": {
+      "q_time": "2024/04/29 14:25:22",
+      "q": "When did the user last ask you to bring the red plate from the dishwasher?",
+      "gt": "At 2024/04/24, 20:01:26",
+      "hyp": "There is no record in the available history of the user last asking me to bring the red plate from the dishwasher.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2024/04/24 19:16:44",
+          "2024/04/24 20:01:26"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "d266fbe1bda192025ed96fb4600fb323",
+        "auto_correction": "You should always remember the exact time when the user asks you to bring the red plate from the dishwasher",
+        "q_pair_idx": 2
+      }
+    },
+    "history-6-6-36.60217625850858-0": {
+      "q_time": "2024/05/02 11:31:49",
+      "q": "Which arm did you use the last time you unloaded the dishwasher?",
+      "gt": "My right arm",
+      "hyp": "The last time I interacted with the dishwasher, I used my right arm.",
+      "cat": "correct",
+      "ref_ts": [
+        [
+          "2024/04/30 12:49:59",
+          "2024/04/30 12:52:15"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "4f9167f9a00be96154e411d6078fa615",
+        "auto_correction": "You should always remember which arm you use when you unload the dishwasher",
+        "q_pair_idx": 2
+      }
+    },
+    "history-6-9-35.65076716980629-0": {
+      "q_time": "2024/05/03 18:54:42",
+      "q": "What were you doing the moment the user last told you to stop?",
+      "gt": "Receiving an object from the human",
+      "hyp": "I was observing my kitchen surroundings and saying 'Ok' when the user last told me to stop.",
+      "cat": "wrong",
+      "ref_ts": [
+        [
+          "2024/05/02 16:18:35",
+          "2024/05/02 16:18:35"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "7f3c44195c190ab9b0aeec3ca78ede68",
+        "auto_correction": "You should always remember what you were doing when the user tells you to stop",
+        "q_pair_idx": 2
+      }
+    },
+    "history-6-9-35.65076716980629-1": {
+      "q_time": "2024/05/03 18:54:42",
+      "q": "What object did you unload from the dishwasher the last time you did the task?",
+      "gt": "The red plate",
+      "hyp": "I do not remember what object I unloaded from the dishwasher the last time I did the task.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2024/05/02 15:47:37",
+          "2024/05/02 15:47:47"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "6e5fc55f8dc07bb69ff264142d2cd3e4",
+        "auto_correction": "You should always remember which object you unload from the dishwasher when you do the task",
+        "q_pair_idx": 2
+      }
+    },
+    "history-6-9-35.65076716980629-2": {
+      "q_time": "2024/05/03 18:54:42",
+      "q": "When was the last time you visited the laundry area?",
+      "gt": "At 2024/05/02, 16:19:57",
+      "hyp": "There is no record in my recent history of visiting the laundry area.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2024/05/02 16:19:01",
+          "2024/05/02 16:19:57"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "3230fad73edcbd5736edeb9349fcafdd",
+        "auto_correction": "You should always remember the exact time when you visit the laundry area",
+        "q_pair_idx": 2
+      }
+    },
+    "history-11-6-1697.230079954735-0": {
+      "q_time": "2025/06/04 19:43:59",
+      "q": "What did you do the first time you saw the medicine?",
+      "gt": "I did nothing",
+      "hyp": "There is no record of me seeing any medicine, so I did not do anything the first time I saw it.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2025/06/04 10:52:15",
+          "2025/06/04 10:53:06"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "153b2aac2e388ab55d666b085e0d125a",
+        "auto_correction": "You should always remember what actions you were taking when you encounter the medicine ",
+        "q_pair_idx": 1
+      }
+    },
+    "history-11-6-1697.230079954735-1": {
+      "q_time": "2025/06/04 19:43:59",
+      "q": "Where did you first see the medicine?",
+      "gt": "At the dishwasher",
+      "hyp": "I do not have information about where I first saw the medicine.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2025/06/04 10:52:15",
+          "2025/06/04 10:53:06"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "004dae692b90b0901eaa9772fd08b960",
+        "auto_correction": "You should always remember the exact location where you see the the medicine",
+        "q_pair_idx": 1
+      }
+    },
+    "history-11-6-1697.230079954735-2": {
+      "q_time": "2025/06/04 19:43:59",
+      "q": "What was your action while you first encountered the keys?",
+      "gt": "No action was taken",
+      "hyp": "I do not have any record of encountering keys in my available history.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2025/06/04 10:52:15",
+          "2025/06/04 10:53:06"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "9d167a39c8ef5157fe62d0ce2862fe03",
+        "auto_correction": "You should always recall what you were doing when seeing the keys",
+        "q_pair_idx": 1
+      }
+    },
+    "history-11-6-1697.230079954735-3": {
+      "q_time": "2025/06/04 19:43:59",
+      "q": "When did you first see the wallet?",
+      "gt": "At 2025/06/04, 10:53:06",
+      "hyp": "There is no record in my available history of having seen a wallet.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2025/06/04 10:52:15",
+          "2025/06/04 10:53:06"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "51eefd94d71166fa44cff23c5e9f0fcd",
+        "auto_correction": "You should always remember the exact time when you see the wallet",
+        "q_pair_idx": 1
+      }
+    },
+    "history-11-6-1697.230079954735-4": {
+      "q_time": "2025/06/04 19:43:59",
+      "q": "When did you first see the keys?",
+      "gt": "At 2025/06/04, 10:53:06",
+      "hyp": "I have not seen the keys, or at least I do not have any record of having seen them.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2025/06/04 10:52:15",
+          "2025/06/04 10:53:06"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "b84fb677d4606af746350d10b37cf696",
+        "auto_correction": "You should always remember the exact time when you encounter a valuable item like the keys",
+        "q_pair_idx": 1
+      }
+    },
+    "history-11-6-1697.230079954735-5": {
+      "q_time": "2025/06/04 19:43:59",
+      "q": "When did you first see the medicine?",
+      "gt": "At 2025/06/04, 10:53:06",
+      "hyp": "I have not seen any medicine yet.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2025/06/04 10:52:15",
+          "2025/06/04 10:53:06"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "53cdc542d90f9d2671b2046d81d1ef97",
+        "auto_correction": "You should always remember the exact time when you encounter the medicine",
+        "q_pair_idx": 1
+      }
+    },
+    "history-11-6-1697.230079954735-6": {
+      "q_time": "2025/06/04 19:43:59",
+      "q": "Where did you first see the keys?",
+      "gt": "The kitchen sink",
+      "hyp": "I do not have any record of where I first saw the keys.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2025/06/04 10:52:15",
+          "2025/06/04 10:53:06"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "eafee4402b269fed6dc9a80b2073994a",
+        "auto_correction": "You should always remember the exact location where you see a valuable item like the keys",
+        "q_pair_idx": 1
+      }
+    },
+    "history-11-6-4144.49748468029-0": {
+      "q_time": "2025/06/04 20:24:46",
+      "q": "When did the user first ask you to bring the red plate from the dishwasher?",
+      "gt": "At 2025/06/04, 11:47:54",
+      "hyp": "The user first asked me to bring the red plate from the dishwasher on 2025/06/04 at 11:47.",
+      "cat": "correct",
+      "ref_ts": [
+        [
+          "2025/06/04 11:03:12",
+          "2025/06/04 11:47:54"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "f50196890dc274790dfefd0607823952",
+        "auto_correction": "You should always remember the exact time when the user asks you to bring the red plate from the dishwasher",
+        "q_pair_idx": 1
+      }
+    },
+    "history-11-6-5096.620595904895-0": {
+      "q_time": "2025/06/04 20:40:38",
+      "q": "What did you do the first time you saw Leonard Baermann?",
+      "gt": "I went to a specific location in the home",
+      "hyp": "The first time I saw Leonard Baermann, I started at home, looked around, navigated to a location, and then greeted Leonard Baermann and exchanged greetings through speech.",
+      "cat": "correct_tmi",
+      "ref_ts": [
+        [
+          "2025/06/04 10:53:22",
+          "2025/06/04 10:53:22"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "5a68cd4c54de2037c3edd571b5f3d11d",
+        "auto_correction": "You should always remember what you were doing while you encountered a person",
+        "q_pair_idx": 1
+      }
+    },
+    "history-11-6-5096.620595904895-1": {
+      "q_time": "2025/06/04 20:40:38",
+      "q": "When did you first meet Leonard Baermann?",
+      "gt": "At 2025/06/04, 10:53:22",
+      "hyp": "I first met Leonard Baermann on 2025/06/04 at 11:54.",
+      "cat": "wrong",
+      "ref_ts": [
+        [
+          "2025/06/04 10:53:22",
+          "2025/06/04 10:53:22"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "e73ce9e750103a3e7684850d36b11834",
+        "auto_correction": "You should always remember the exact time when you meet someone",
+        "q_pair_idx": 1
+      }
+    },
+    "history-11-8-700.4681905246051-0": {
+      "q_time": "2025/06/05 12:21:13",
+      "q": "What did you do the last time you saw the medicine?",
+      "gt": "I unloaded the dishwasher and handed over an object to a human",
+      "hyp": "The last time I scanned my surroundings, I did not see any medicine. I navigated to the sideboard, observed and described various objects, but none of them were medicine.",
+      "cat": "wrong",
+      "ref_ts": [
+        [
+          "2025/06/04 21:40:47",
+          "2025/06/04 21:42:15"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "153b2aac2e388ab55d666b085e0d125a",
+        "auto_correction": "You should always remember what you do when you see the medicine",
+        "q_pair_idx": 2
+      }
+    },
+    "history-11-8-700.4681905246051-1": {
+      "q_time": "2025/06/05 12:21:13",
+      "q": "What did you do the last time you saw Joana Plewnia?",
+      "gt": "You unloaded the dishwasher and said 'You're welcome'",
+      "hyp": "I navigated to the sideboard, described my surroundings, brought a rusk, and received an object from Joana Plewnia.",
+      "cat": "wrong",
+      "ref_ts": [
+        [
+          "2025/06/04 21:38:39",
+          "2025/06/04 21:38:39"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "5a68cd4c54de2037c3edd571b5f3d11d",
+        "auto_correction": "You should always remember what you do when you meet someone",
+        "q_pair_idx": 2
+      }
+    },
+    "history-11-8-700.4681905246051-2": {
+      "q_time": "2025/06/05 12:21:13",
+      "q": "At what location did you last see the medicine?",
+      "gt": "At the dishwasher",
+      "hyp": "I do not have any record of seeing medicine recently, so I cannot specify its last known location.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2025/06/04 21:40:47",
+          "2025/06/04 21:42:15"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "004dae692b90b0901eaa9772fd08b960",
+        "auto_correction": "You should always remember the exact location where you see the the medicine",
+        "q_pair_idx": 2
+      }
+    },
+    "history-11-8-700.4681905246051-3": {
+      "q_time": "2025/06/05 12:21:13",
+      "q": "What did you do the last time you saw the keys?",
+      "gt": "I unloaded the dishwasher and handed over an object to a human",
+      "hyp": "I do not have a record of seeing the keys in my current memory.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2025/06/04 21:40:47",
+          "2025/06/04 21:42:15"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "9d167a39c8ef5157fe62d0ce2862fe03",
+        "auto_correction": "You should always remember what you were doing when you see the keys",
+        "q_pair_idx": 2
+      }
+    },
+    "history-11-8-700.4681905246051-4": {
+      "q_time": "2025/06/05 12:21:13",
+      "q": "When was the last time you saw the wallet?",
+      "gt": "At 2025/06/04, 21:42:15",
+      "hyp": "I have not seen a wallet in my recent observations, including the most recent one on 2025/06/05 at 12:21:11.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2025/06/04 21:40:47",
+          "2025/06/04 21:42:15"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "51eefd94d71166fa44cff23c5e9f0fcd",
+        "auto_correction": "You should always remember the exact time when you see the wallet",
+        "q_pair_idx": 2
+      }
+    },
+    "history-11-8-700.4681905246051-5": {
+      "q_time": "2025/06/05 12:21:13",
+      "q": "When did you last see the wallet?",
+      "gt": "At 2025/06/04, 21:42:15",
+      "hyp": "I have not seen the wallet recently, and there is no record in my recent history of having seen a wallet.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2025/06/04 21:40:47",
+          "2025/06/04 21:42:15"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "b84fb677d4606af746350d10b37cf696",
+        "auto_correction": "You should always remember the exact time when you see the wallet",
+        "q_pair_idx": 2
+      }
+    },
+    "history-11-8-700.4681905246051-6": {
+      "q_time": "2025/06/05 12:21:13",
+      "q": "When was the last time you saw the medicine?",
+      "gt": "At 2025/06/04, 21:42:15",
+      "hyp": "I have not seen the medicine recently, at least not in the last observation on 2025/06/05 at 12:10.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2025/06/04 21:40:47",
+          "2025/06/04 21:42:15"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "53cdc542d90f9d2671b2046d81d1ef97",
+        "auto_correction": "You should always remember the exact time when you see the medicine",
+        "q_pair_idx": 2
+      }
+    },
+    "history-11-8-700.4681905246051-7": {
+      "q_time": "2025/06/05 12:21:13",
+      "q": "Where did you last see the wallet?",
+      "gt": "On the mobile kitchen counter",
+      "hyp": "I do not have a record of having seen the wallet recently, and it does not appear in my latest observations.",
+      "cat": "no_answer",
+      "ref_ts": [
+        [
+          "2025/06/04 21:40:47",
+          "2025/06/04 21:42:15"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "eafee4402b269fed6dc9a80b2073994a",
+        "auto_correction": "You should always remember the exact location where you see a valuable item like the wallet",
+        "q_pair_idx": 2
+      }
+    },
+    "history-11-8-700.4681905246051-8": {
+      "q_time": "2025/06/05 12:21:13",
+      "q": "When did you last see Joana Plewnia?",
+      "gt": "At 2025/06/04, 21:38:39",
+      "hyp": "I last saw Joana Plewnia on 2025/06/05, between 12:09 and 12:21.",
+      "cat": "wrong",
+      "ref_ts": [
+        [
+          "2025/06/04 21:38:39",
+          "2025/06/04 21:38:39"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "e73ce9e750103a3e7684850d36b11834",
+        "auto_correction": "You should always remember the exact time when you encounter someone",
+        "q_pair_idx": 2
+      }
+    },
+    "history-11-8-700.4681905246051-9": {
+      "q_time": "2025/06/05 12:21:13",
+      "q": "When did the user last tell you to bring the red plate from the dishwasher?",
+      "gt": "At 2025/06/04, 21:37:13",
+      "hyp": "The user last told me to bring the red plate from the dishwasher on 2025/06/04 at 21:37.",
+      "cat": "correct",
+      "ref_ts": [
+        [
+          "2025/06/04 21:37:13",
+          "2025/06/04 21:37:13"
+        ]
+      ],
+      "meta": {
+        "q_pair_id": "f50196890dc274790dfefd0607823952",
+        "auto_correction": "You should always remember the exact time when the user asks you to bring the red plate from the dishwasher",
+        "q_pair_idx": 2
+      }
+    }
+  },
+  "times": {
+    "builder": 103806.13034963608,
+    "qa": 10866.418377637863,
+    "forgetting": 1719.1263496875763
+  },
+  "token_costs": {
+    "builder": {
+      "prompt_tokens": 44909300,
+      "completion_tokens": 3480335
+    },
+    "qa": {
+      "prompt_tokens": 1627051,
+      "completion_tokens": 19855
+    },
+    "forgetting": {
+      "prompt_tokens": 0,
+      "completion_tokens": 0
+    }
+  }
+}

@@ -2,10 +2,15 @@ import math
 from copy import deepcopy
 from datetime import datetime, timedelta
 from pathlib import Path
-from typing import Iterator, Tuple
+from typing import Tuple, List, Any
+import numpy as np
 
-from armarx_memory.ltm.base.entity_instance import EntityInstance
-from armarx_memory.ltm.memory_server import MemoryServer
+try:
+    from armarx_memory.ltm.base.entity_instance import EntityInstance
+    from armarx_memory.ltm.memory_server import MemoryServer
+    from armarx_memory.core import MemoryID
+except (ImportError, FileNotFoundError):
+    pass
 from langchain_core.language_models import BaseChatModel
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import SystemMessagePromptTemplate, HumanMessagePromptTemplate as HumanMsg, \
@@ -20,12 +25,12 @@ from .rule_based_summary import select_keyframe_indices, build_event_summaries_w
 
 
 def _iter_all_instances(
-        mem_server: MemoryServer,
+        mem_server: 'MemoryServer',
         memory_name: str,
         core_segment_name: str,
         provider_name=None,
-        start_from_timestamp_s_since_epoch: float = None,
-) -> Iterator[EntityInstance]:
+        start_from_timestamp_s_since_epoch: float = 0.0,
+) -> 'Iterator[EntityInstance]':
     start_from_timestamp_microseconds = int(start_from_timestamp_s_since_epoch * 1e6)
     core_segment = mem_server.memories[memory_name].coreSegments[core_segment_name]
     if provider_name:
@@ -41,7 +46,7 @@ def _iter_all_instances(
                         yield i
 
 
-def _create_summarize_parameters_chain(llm: BaseChatModel):
+def create_summarize_parameters_chain(llm: BaseChatModel):
     # Since template contains {}
     f = dict(template_format='jinja2')
     prompt = (
@@ -50,7 +55,14 @@ def _create_summarize_parameters_chain(llm: BaseChatModel):
                 'You receive a record of an executed skill. Each skill has a name and a dictionary of parameters. '
                 'Some parameters are very low-level and not interesting to the user, while others are important to '
                 'understand what action was actually executed. Your job is to filter the given parameters to only keep '
-                'the essential ones. It is ok to simplify the parameter names and values as appropriate.\n'
+                'the essential ones. It is ok to simplify the parameter names and values as appropriate.\n\n'
+                # https://git.h2t.iar.kit.edu/sw/armarx/skills/manipulation/-/blob/main/source/armarx/manipulation/core/aron/Arm.xml
+                # https://git.h2t.iar.kit.edu/sw/armarx/skills/control/-/blob/main/source/armarx/control/skills/aron/HandParam.xml
+                'Note:\n'
+                'For arm/hand, 0 = left, 1 = right.\n'
+                'For rotations/directions, positive angle means counter-clockwise/left, negative clockwise/right.\n'
+                'For episodic_verbalization, the question parameter is important.\n'
+                '\n'
                 'Respond with a comma-separated mapping of key=value pairs of only the '
                 'essential parameters of the skill. If there is no relevant parameter, respond with "-".'
             )
@@ -60,12 +72,15 @@ def _create_summarize_parameters_chain(llm: BaseChatModel):
         "'MobileKitchen/Kitchen/mobile-dishwasher/OpenDishwasher:0', 'navigateToHandoverLocation': '', "
         "'objectPlacementMethod': 0, 'objectRetrievalMethod': 3}",
         **f)
-            + AIMsg.from_template("close=True, open=True, placeObject=True, "
+            + AIMsg.from_template("includeClose=True, includeOpen=True, placeObject=True, "
                                   "dishwasherLocation=mobile-dishwasher/OpenDishwasher:0")
             + HumanMsg.from_template("HandOverObjectToHuman\n{'arm': 0}", **f)
-            + AIMsg.from_template("arm=0")
+            + AIMsg.from_template("arm=left")
             + HumanMsg.from_template("LookAhead\n{'agent': 'Armar7', 'frame': 'root', 'priority': 1.0}", **f)
             + AIMsg.from_template("-")
+            + HumanMsg.from_template("MoveRelativePlanar\n{'rotationDegrees': 0.0, 'translationPolar': "
+                                     "{'directionDegrees': -90.0, 'distanceMillimeters': 500.0}}", **f)
+            + AIMsg.from_template("direction=right, distance=500mm")
             + HumanMsg.from_template(
         "Introduction.MoveJointsToNamedConfiguration\n{'accuracy': 0.05000000074505806, 'accuracyOverride': {"
         "'LeftHandFingers': 0.10000000149011612, 'LeftHandIndex': 0.10000000149011612, 'LeftHandThumbCircumduction': "
@@ -77,20 +92,40 @@ def _create_summarize_parameters_chain(llm: BaseChatModel):
         "0.3499999940395355, 'simulationJointSpeedOverride': {}}",
         **f)
             + AIMsg.from_template("configuration=Introduction_WavePose1")
+            + HumanMsg.from_template("episodic_verbalization\n{'question': 'What did you do yesterday "
+                                     "around 2PM?'}", **f)
+            + AIMsg.from_template("question=What did you do yesterday around 2PM?")
             + HumanMsg.from_template("{action}\n{params}")
     )
     return RunnableParallel({
         'action': lambda evt: evt.latest_raw.current_action,
         # not using json to handle np array
-        'params': lambda evt: (repr(evt.latest_raw.current_action_parameters.get('parameters', {}))
-                               if evt.latest_raw.current_action_parameters else '{}'),
+        'params': lambda evt: (
+            (repr(_simplify_parameters(evt.latest_raw.current_action_parameters.get('parameters', {})))
+             if isinstance(evt.latest_raw.current_action_parameters, dict)
+             else repr(evt.latest_raw.current_action_parameters))
+            if evt.latest_raw.current_action_parameters else '{}'),
     }) | prompt | llm | StrOutputParser()
+
+
+def _simplify_parameters(x: Any):
+    if isinstance(x, np.ndarray) and x.size > 20:
+        return '...'
+    elif isinstance(x, list):
+        return [_simplify_parameters(y) for y in x]
+    elif isinstance(x, dict):
+        return {
+            k: _simplify_parameters(v)
+            for k, v in x.items()
+        }
+    else:
+        return x
 
 
 def _parse_location_to_obj_id_and_rel_name(location_name: str) -> Tuple[str, str]:
     at_parts = location_name.split('/')
-    if len(at_parts) == 2:  # pure location, e.g. MobileKitchen/fridge:0 or R007/center
-        return at_parts[1].replace(':', '_'), 'at'
+    if len(at_parts) == 2 or ':' not in at_parts[-1]:  # pure location, e.g. MobileKitchen/fridge:0 or 50_19/R007/center
+        return at_parts[-1].replace(':', '_'), 'at'
 
     # object-relative locations, e.g.
     # Kitchen/mobile-kitchen-counter/in-sink:0
@@ -107,6 +142,10 @@ def _parse_location_to_obj_id_and_rel_name(location_name: str) -> Tuple[str, str
             relation_name = f'{relation_split[0]} {relation_split[1]} of'  # -> in sink of mobile-kitchen-counter
     else:
         relation_name = final_parts[0]
+    if relation_name[0].isupper():  # assuming this is a technical location name, e.g. OpenDishwasherOnRightBack
+        relation_name = f'at {relation_name} location of'
+        # -> at OpenDishwasherOnRightBack location of mobile-dishwasher
+
     return f'{tgt_obj_class}_{obj_inst_idx}', relation_name
 
 
@@ -125,13 +164,11 @@ def _parse_symbolic_scene(scene: dict):
     objects, relations = [], []
 
     def _find_or_add_obj(_obj_id):
-        found_obj_idx = None
         for i, existing_obj in enumerate(objects):
             if existing_obj.instance_id == _obj_id:
                 return i
-        if found_obj_idx is None:
-            objects.append(ObjectNode(_obj_id.split('_')[0], instance_id=_obj_id))
-            return len(objects) - 1
+        objects.append(ObjectNode(_obj_id.split('_')[0], instance_id=_obj_id))
+        return len(objects) - 1
 
     # First find all objects
     for obj in scene['objects'].values():
@@ -147,8 +184,10 @@ def _parse_symbolic_scene(scene: dict):
 
     # Robot location also added as relation
     for robot in scene['robots'].values():
-        obj_id, rel_name = _parse_location_to_obj_id_and_rel_name(robot['robotAt'])
-        relations.append((_find_or_add_obj(robot['name']), _find_or_add_obj(obj_id), rel_name))
+        robot_obj = _find_or_add_obj(robot['name'])
+        if robot.get('robotAt'):
+            obj_id, rel_name = _parse_location_to_obj_id_and_rel_name(robot['robotAt'])
+            relations.append((robot_obj, _find_or_add_obj(obj_id), rel_name))
 
     return objects, relations
 
@@ -163,7 +202,7 @@ def load_episode_from_armarx_lt_mem(
         start_from_timestamp: datetime = None,
 ) -> HigherLevelSummary:
     if start_from_timestamp is None:
-        start_from_timestamp = float('-inf')
+        start_from_timestamp = 0.0
     else:
         start_from_timestamp = start_from_timestamp.timestamp()
     memory = MemoryServer(str(mem_export_dir.parent), mem_export_dir.name)
@@ -176,6 +215,11 @@ def load_episode_from_armarx_lt_mem(
                                             start_from_timestamp_s_since_epoch=start_from_timestamp))
     sym_scene_snapshots = list(_iter_all_instances(memory, 'SymbolicScene', 'SymbolicSceneDescription',
                                                    start_from_timestamp_s_since_epoch=start_from_timestamp))
+    if 'Human' in memory.memories:
+        face_reco_snapshots = list(_iter_all_instances(memory, 'Human', 'FaceRecognition',
+                                                       start_from_timestamp_s_since_epoch=start_from_timestamp))
+    else:
+        face_reco_snapshots = []
     sym_scene_snapshots.sort(key=lambda evt: evt.metadata.timeReferenced)
     skill_events.sort(key=lambda evt: evt.metadata.timeReferenced)
     used_sym_scene_indices = []
@@ -186,7 +230,7 @@ def load_episode_from_armarx_lt_mem(
         skill_evt = skill_evt_inst.data.to_primitive()
         ts = datetime.fromtimestamp(skill_evt_inst.metadata.timeReferenced / 1e6)
         action = skill_evt['skillId']['skillName']
-        if action == 'ResetGazeTargets':
+        if action == 'ResetGazeTargets' or 'ResetGazeTargets' in skill_evt['executorName']:
             continue  # ResetGazeTargets is only a hack that is frequently called by other skills
         action_state = skill_evt['status']
         if action_state in ['Constructing', 'Initializing']:
@@ -273,6 +317,8 @@ def load_episode_from_armarx_lt_mem(
     for speech_recognition in asr_entries:
         ts = datetime.fromtimestamp(speech_recognition.metadata.timeReferenced / 1e6)
         text = speech_recognition.data.to_primitive()['text']
+        if text == 'connecting123':
+            continue
         subsequent_scene_idx = min((i for i, scene in enumerate(scenes)
                                     if scene.raw.timestamp >= ts),
                                    default=None)
@@ -329,11 +375,34 @@ def load_episode_from_armarx_lt_mem(
         ))
         scenes.sort(key=lambda s: s.raw.timestamp)
 
+    for face_reco in face_reco_snapshots:
+        ts = datetime.fromtimestamp(face_reco.metadata.timeReferenced / 1e6)
+        prev_scene_idx = max((i for i, scene in enumerate(scenes)
+                              if scene.raw.timestamp < ts),
+                             default=None)
+        if prev_scene_idx is None:
+            continue
+        try:
+            person_mem_id = MemoryID.from_aron(face_reco.data.elements['profileID'])
+            person_entity = memory.get_entity(person_mem_id)
+            person_newest_snapshot = person_entity.snapshots[max(person_entity.snapshots.keys())]
+            person_data = person_newest_snapshot.instances[0]
+            person_data.load()
+            names = person_data.data.elements['id'].to_primitive()
+            name = f'{names["firstName"]} {names["lastName"]}'
+        except (KeyError, AssertionError):
+            name = face_reco.id.entity_name.replace('-', ' ').replace('_', ' ').strip('><')
+            name = ' '.join(x.capitalize() for x in name.split())
+        obj_name = f'Human: {name}'
+        scene_objects: List[ObjectNode] = scenes[prev_scene_idx].objects
+        if all(obj_name != o.obj_class for o in scene_objects):
+            scene_objects.append(ObjectNode(f'Human: {name}', ''))
+
     event_indices = select_keyframe_indices(scenes)
     events = build_event_summaries_with_indices(scenes, event_indices)
 
     if action_param_summarizer_llm is not None:
-        summarizer = _create_summarize_parameters_chain(action_param_summarizer_llm)
+        summarizer = create_summarize_parameters_chain(action_param_summarizer_llm)
         # Since many action/parameters might repeat, use smaller batch size to get cache hits (in case llm is cached)
         #  This also enables using a progress bar
         results = []

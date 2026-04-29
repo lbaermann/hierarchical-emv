@@ -1,4 +1,5 @@
 import json
+import os
 from collections import defaultdict
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -19,6 +20,18 @@ RELEVANT_OBJECT_STATES = {
     'isToggled': 'toggled', 'isBroken': 'broken', 'isDirty': 'dirty', 'isCooked': 'cooked', 'isOpen': 'open',
     'simbotIsFilledWithWater': 'filled', 'isFilledWithLiquid': 'filled'
 }
+TEACH_INTERACTION_ACTIONS = ['Close', 'Open', 'Pickup', 'Place', 'Pour', 'Slice', 'ToggleOff', 'ToggleOn']
+TEACH_RENAME_ACTIONS = {
+    'PanRight': 'StepRight',
+    'PanLeft': 'StepLeft',
+}
+
+TEACH_ACTIONS_WITH_INDIRECT_OBJECT = [
+    # Meaning that the parameter of this action itself is a location, and the actual object is inside the agent's hand
+    'Place',
+    'Pour',
+    # There are other actions (Empty, Break, ...) in the TEACh definitions, but these are never used.
+]
 
 
 class _TeachNamingAndStateTrackingHandler:
@@ -32,6 +45,7 @@ class _TeachNamingAndStateTrackingHandler:
         }
         self._objects_per_class = defaultdict(list)
         self._object_states = defaultdict(dict)
+        self._picked_up_object = None
         for obj in game_data['tasks'][0]['episodes'][0]['initial_state']['objects']:
             obj_id = obj['objectId']
             states = self._object_states[obj_id]
@@ -40,6 +54,12 @@ class _TeachNamingAndStateTrackingHandler:
                 states[internal_key] = obj.get(state_key, False) or states.get(internal_key, False)
 
     def update_object_states_from_diff(self, state_diff: dict):
+        picked_up_obj = None
+        for obj_id, current_obj_state in state_diff.items():
+            if current_obj_state.get('isPickedUp', False):
+                picked_up_obj = obj_id
+        self._picked_up_object = picked_up_obj
+
         for obj_id, state in state_diff.items():
             current_states = self._object_states[obj_id]
             for state_key, internal_key in RELEVANT_OBJECT_STATES.items():
@@ -63,7 +83,10 @@ class _TeachNamingAndStateTrackingHandler:
                 raise AssertionError(agent)
 
         action_name = self._action_id_to_name[action_id]
+        action_name = TEACH_RENAME_ACTIONS.get(action_name, action_name)
         params = []
+        if action_name in TEACH_ACTIONS_WITH_INDIRECT_OBJECT and self._picked_up_object:
+            params.append(self.obj_id_to_name(self._picked_up_object))
         if 'oid' in action:
             params.append(self.obj_id_to_name(action['oid']) if action['oid'] else 'None')
 
@@ -95,7 +118,9 @@ class _TeachNamingAndStateTrackingHandler:
                           state=', '.join(active_states) if active_states else None)
 
 
-def load_teach_episode(teach_game_file: Path, start_time: datetime = None) -> HigherLevelSummary:
+def load_teach_episode(teach_game_file: Path,
+                       start_time: datetime = None,
+                       return_initial_ts_correction=False) -> tuple[HigherLevelSummary, float] | HigherLevelSummary:
     if start_time is None:
         start_time = datetime.now()
 
@@ -110,9 +135,12 @@ def load_teach_episode(teach_game_file: Path, start_time: datetime = None) -> Hi
     interaction_timestamps = []
 
     # Teach episodes have some empty time in the beginning, where nothing happens (commander/follower reading the
-    #  instructions). We want start_time as the time at which the first action happens, not some point in time before
-    #  where nothing is happening. Thus, always subtract initial_ts_seconds
-    initial_ts_seconds = game['tasks'][0]['episodes'][0]['interactions'][0]['time_start']
+    #  instructions). We want start_time as the time at which the first _relevant_ action happens, not some point in
+    #  time before where nothing is happening (except some irrelevant command interface actions).
+    #  Thus, always subtract initial_ts_seconds
+    initial_ts_seconds = None  # Initialized below when encountering first relevant action
+    if os.getenv('TEACH_EP_LOADER_LEGACY_INITIAL_TS', False) == 'True':
+        initial_ts_seconds = game['tasks'][0]['episodes'][0]['interactions'][0]['time_start']
 
     for step in game['tasks'][0]['episodes'][0]['interactions']:
         action_id = step['action_id']
@@ -120,6 +148,8 @@ def load_teach_episode(teach_game_file: Path, start_time: datetime = None) -> Hi
         if not helper.is_relevant_action(action_id) or (agent == COMMANDER_AGENT_ID and action_id != ACTION_ID_DIALOG):
             continue  # Skip irrelevant actions such as "check progress"
         ts = step['time_start']
+        if initial_ts_seconds is None:
+            initial_ts_seconds = ts
         timestamp = start_time + timedelta(seconds=ts - initial_ts_seconds)
         objs_state_diff = json.loads((img_dir / f'statediff.{ts}.json').read_text())['objects']
         helper.update_object_states_from_diff(objs_state_diff)
@@ -180,10 +210,36 @@ def load_teach_episode(teach_game_file: Path, start_time: datetime = None) -> Hi
             )
         ))
 
-    return _build_tree(scenes, interaction_timestamps, task_summary=game['tasks'][0]['desc'])
+    result = _build_tree(scenes, interaction_timestamps, task_summary=game['tasks'][0]['desc'])
+    if return_initial_ts_correction:
+        return result, initial_ts_seconds
+    else:
+        return result
 
 
-TEACH_INTERACTION_ACTIONS = ['Close', 'Open', 'Pickup', 'Place', 'Pour', 'Slice', 'ToggleOff', 'ToggleOn']
+def peek_teach_episode_length(teach_game_file: Path) -> float:
+    game = json.loads(teach_game_file.read_text())
+    helper = _TeachNamingAndStateTrackingHandler(game)
+    initial_ts_seconds = None
+    if os.getenv('TEACH_EP_LOADER_LEGACY_INITIAL_TS', False) == 'True':
+        initial_ts_seconds = game['tasks'][0]['episodes'][0]['interactions'][0]['time_start']
+    else:
+        for step in game['tasks'][0]['episodes'][0]['interactions']:
+            action_id = step['action_id']
+            if not helper.is_relevant_action(action_id) or (
+                    step['agent_id'] == COMMANDER_AGENT_ID and action_id != ACTION_ID_DIALOG):
+                continue
+            if initial_ts_seconds is None:
+                initial_ts_seconds = step['time_start']
+                break
+    for step in reversed(game['tasks'][0]['episodes'][0]['interactions']):
+        action_id = step['action_id']
+        if not helper.is_relevant_action(action_id) or (
+                step['agent_id'] == COMMANDER_AGENT_ID and action_id != ACTION_ID_DIALOG):
+            continue
+        return step['time_start'] - initial_ts_seconds
+    assert False
+
 
 
 def load_teach_episode_no_gt(teach_trial_image_dir: Path,

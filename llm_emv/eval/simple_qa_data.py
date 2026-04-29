@@ -32,7 +32,8 @@ class SimpleHistoryQADataset(EpisodicQADataset):
         self.qa_data = json.loads(qa_file.read_text())
         assert len(self.qa_data) == len(set(sample['id'] for sample in self.qa_data)), 'Check for duplicate keys'
         for sample in self.qa_data:
-            assert (pickled_histories_base_dir / f'{sample["history"]}.pkl').exists(), sample['history']
+            sample_file = pickled_histories_base_dir / f'{sample["history"]}.pkl'
+            assert sample_file.exists(), str(sample_file)
 
     def __iter__(self) -> Iterator[EpisodicQASample]:
         for sample in self.qa_data:
@@ -45,7 +46,20 @@ class SimpleHistoryQADataset(EpisodicQADataset):
                       if 'q_time' in sample else pick_random_question_date_after_history(history, Random(q_id)))
             if history.range[-1] > q_time:
                 print('WARN: Question time', q_time, 'not after', history.range[-1], 'for sample', q_id)
-            yield EpisodicQASample(q_id, question, q_time, answer, history)
+            yield EpisodicQASample(
+                q_id, question, q_time, answer, history,
+                gt_answer_time_spans=(
+                    [
+                        (
+                            datetime.strptime(ref[0], '%Y-%m-%d %H:%M:%S'),
+                            datetime.strptime(ref[1], '%Y-%m-%d %H:%M:%S')
+                        )
+                        for ref in sample['reference']
+                    ]
+                    if 'reference' in sample
+                    else []
+                )
+            )
 
     @classmethod
     def add_argparse_args(cls, parser: ArgumentParser):

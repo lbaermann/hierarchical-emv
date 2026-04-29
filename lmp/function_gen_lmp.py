@@ -1,7 +1,7 @@
 import ast
 
 import astunparse
-from langchain.schema.language_model import BaseLanguageModel
+from langchain_core.language_models import BaseLanguageModel
 
 from .code_execution import CodeExecutionEnvironment
 from .lmp import LMPBase

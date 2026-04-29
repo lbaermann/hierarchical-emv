@@ -1,5 +1,6 @@
 import json
 import sys
+from datetime import datetime
 from pathlib import Path
 from typing import Iterable
 
@@ -11,8 +12,9 @@ from langchain_core.language_models import BaseChatModel
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import HumanMessagePromptTemplate, SystemMessagePromptTemplate, \
     FewShotChatMessagePromptTemplate, AIMessagePromptTemplate
-from langchain_core.runnables import Runnable
+from langchain_core.runnables import Runnable, RunnablePassthrough
 
+from em.incremental_history import format_rel_date
 from lmp.setup import instantiate_llm
 from .categories import FineEmvOutputCategory
 from ..util import determine_git_commit
@@ -24,6 +26,10 @@ def create_llm_evaluator(llm: BaseChatModel,
                          sample_files: Iterable[Path] = (),
                          use_broad_labels=False):
     sample_template = HumanMessagePromptTemplate.from_template('q: "{q}". gt: "{gt}". hyp: "{hyp}"')
+    sample_template_with_ref_ts = HumanMessagePromptTemplate.from_template(
+        'q: "{q}". gt: "{gt}". hyp: "{hyp}".'
+        'GT reference time span: {ref_ts}'
+    )
 
     embeddings = HuggingFaceEmbeddings(
         model_name=similarity_model
@@ -83,12 +89,28 @@ Your task is to evaluate samples into the the following categories:
 
 {cat_descriptions}
 
+When a question is about time, a small offset can still be rated as correct.
+Also consider the GT reference time span provided with the sample to assess whether a small offset is correct, partially_correct_missing or wrong.
+When the question asks for a list of something (actions, objects, ...), compare the GT and hyp lists carefully.
+If they match (modulo different specificity for object instance names or object quantities), its correct. 
+If everything from hyp is in GT but hyp is missing some items from GT, it's partially_correct_missing.
+If everything from GT is in hyp but hyp has some additional items, it's partially_correct_tmi (ignore the agent's hand).
+If there is additional info different from listing items (e.g. specifiying object placement), but otherwise it's correct, use correct_tmi. 
+Otherwise, it's wrong (even if there is some partial overlap). As soon as each list has one item that the other does not have, it's wrong.
+You can rate a list answer correct_summarized if it has every item, but some are reasonably summarized (if it is not too broad). 
+
 Output only a single category identifier, no reasoning or other sentence.
             '''.strip())
             + few_shot_prompt
-            + sample_template
+            + sample_template_with_ref_ts
     )
-    return prompt | llm | StrOutputParser()
+    dtp = lambda s: datetime.strptime(s, '%Y/%m/%d %H:%M:%S')
+    return RunnablePassthrough.assign(
+        hyp=lambda d: '< no answer >' if d['hyp'] is None else d['hyp'],
+        ref_ts=lambda d: (format_rel_date(None, dtp(d['ref_ts'][0][0]))
+                          + ' - ' + format_rel_date(dtp(d['ref_ts'][0][0]), dtp(d['ref_ts'][0][1]))
+                          if d['ref_ts'] else '-')
+    ) | prompt | llm | StrOutputParser()
 
 
 def _load_eval_chain_from_cfg(eval_cfg_file: Path) -> Runnable[dict, str]:
@@ -106,7 +128,7 @@ def _load_eval_chain_from_cfg(eval_cfg_file: Path) -> Runnable[dict, str]:
 
 def llm_eval(eval_cfg_file: Path, result_file: Path, eval_chain: Runnable[dict, str]):
     result_data = json.loads(result_file.read_text())
-    samples = [dict(key=k, **v) for k, v in result_data['results'].items()]
+    samples = [dict(key=k, **v) for k, v in list(result_data['results'].items())[:10]]
     categories = eval_chain.batch(samples)
     result_map = {
         sample['key']: {'cat': cat}
@@ -127,7 +149,7 @@ def main():
     import langchain_community.callbacks
     from langchain_community.cache import SQLiteCache
     langchain.globals.set_llm_cache(SQLiteCache(database_path="langchain-cache.db"))
-    langchain.globals.set_verbose(True)
+    langchain.globals.set_debug(True)
 
     eval_cfg_file = Path(sys.argv[1])
     print('Loading eval chain from', eval_cfg_file)

@@ -2,7 +2,7 @@ from collections import defaultdict
 from dataclasses import dataclass
 from datetime import datetime
 from itertools import chain
-from typing import List, Tuple, Optional, Union
+from typing import List, Tuple, Optional, Union, Type, Generator, TypeVar
 
 import numpy as np
 from PIL.Image import Image
@@ -25,7 +25,6 @@ class RawDataInstant:  # L0
     current_action_parameters: Optional[dict] = None
     current_goal: Optional[str] = None
     current_goal_state: Optional[str] = None
-    # TODO add more here...
 
 
 _original_repr = RawDataInstant.__repr__
@@ -33,7 +32,7 @@ _original_repr = RawDataInstant.__repr__
 
 def _repr_without_img_details(self: RawDataInstant):
     r = _original_repr(self)
-    if self.image is None:
+    if self.image is None or isinstance(self.image, str):
         return r
     img_start = r.find('image=')
     img_end = r.find(', sound=')
@@ -55,20 +54,21 @@ class SceneGraphInstant:  # L1
     objects: List[ObjectNode]
     relations: List[Tuple[int, int, str]]  # (from idx, to idx, type)
     raw: RawDataInstant
+    scene_description: Optional[str] = None
 
     @property
     def nl_graph_summary(self):
         objects = [f'{o.obj_class} [{o.state}]' if o.state else o.obj_class for o in self.objects]
-        # Collect same relations to the same target to compatify representation
+        # Collect same relations to the same target to compactify representation
         grouped_relations = defaultdict(list)
         for o1, o2, rel in self.relations:
             grouped_relations[o2, rel].append(o1)
         relations = [(
                          f'{self.objects[objs1[0]].obj_class} is'
                          if len(objs1) == 1 else
-                         ', '.join(self.objects[o].obj_class for o in objs1) + ' are'
+                         ', '.join(self.objects[o].obj_class for o in sorted(objs1)) + ' are'
                      ) + f' {rel} {self.objects[o2].obj_class}'
-                     for (o2, rel), objs1 in grouped_relations.items()]
+                     for (o2, rel), objs1 in sorted(grouped_relations.items())]
         relations_str = '\n'.join(relations)
         if relations_str:
             relations_str = '\n' + relations_str
@@ -96,6 +96,7 @@ class SceneGraphInstant:  # L1
 class EventBasedSummary:  # L2
     scenes: List[SceneGraphInstant]  # from oldest to newest. the last element is the moment of the event
     audio_description: Optional[str] = None
+    explicit_action: Optional[str] = None
     action_parameter_summary: Optional[str] = None
 
     @property
@@ -116,7 +117,9 @@ class EventBasedSummary:  # L2
 
     @property
     def nl_summary(self):
-        action = self.latest_raw.current_action
+        action = self.explicit_action or self.latest_raw.current_action
+        if action:
+            action = action.rstrip('.')
         action_state = self.latest_raw.current_action_state
         graph = self.latest_scene.nl_graph_summary
         if graph:
@@ -126,7 +129,7 @@ class EventBasedSummary:  # L2
         action_param_str = f'({self.action_parameter_summary})' if self.action_parameter_summary else ''
         action_state_str = f' <{action_state}>' if action_state else ''
         return (f"Action: {action}{action_param_str}{action_state_str}"
-                f"{graph}{audio}{asr}.")
+                f"{asr}{audio}{graph}.")
 
     @property
     def range(self):
@@ -148,8 +151,12 @@ class GoalBasedSummary:  # L3
     explicit_goal: Optional[str] = None
 
     @property
-    def latest_event(self):
-        return self.events[-1]
+    def latest_event(self) -> EventBasedSummary:
+        latest = self.events[-1]
+        if isinstance(latest, EventBasedSummary):
+            return latest
+        else:
+            return latest.latest_event
 
     @property
     def latest_scene(self):
@@ -167,8 +174,8 @@ class GoalBasedSummary:  # L3
 
     def __getattr__(self, item):
         if item == 'image':
-            raise SemanticHintError('Goal summaries do not have an image. '
-                                    'Use its child nodes to access observed images.')
+            raise SemanticHintError('Goal summaries do not have an image. Expand this node and then use '
+                                    'its most relevant child nodes to access observed images.')
         raise AttributeError(f"'GoalBasedSummary' object has no attribute '{item}'")
 
     @property
@@ -183,12 +190,12 @@ class GoalBasedSummary:  # L3
         if goal_state and not goal_state.lower().startswith('succe'):  # successful, succeeded etc
             result += f' <{goal_state}>'
         graph = self.latest_scene.nl_graph_summary
-        if graph:
-            result += '\n' + graph
-        if audio:
-            result += '\n' + audio
         if asr:
             result += '\nSpeech:\n' + asr
+        if audio:
+            result += '\n' + audio
+        if graph:
+            result += '\n' + graph
         return result
 
     @property
@@ -237,3 +244,15 @@ AnyTreeNode = Union[
     EventBasedSummary,
     SceneGraphInstant
 ]
+
+_T = TypeVar('_T', bound=AnyTreeNode)
+
+
+def iter_nodes_of_type(x: AnyTreeNode, of_type: Type[_T]) -> Generator[_T, None, None]:
+    if isinstance(x, of_type):
+        yield x
+    elif hasattr(x, '_forgotten'):
+        return  # Forgotten entry has no children
+    else:
+        for y in getattr(x, type_to_children_property_map[type(x)]):
+            yield from iter_nodes_of_type(y, of_type)

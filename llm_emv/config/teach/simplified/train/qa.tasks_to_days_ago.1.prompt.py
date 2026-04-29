@@ -27,8 +27,8 @@ User question: Today is July 21. How many days ago did you put all pillow on any
     ...
   ...
 
->>> now() - history[4][1].range[0]
-datetime.timedelta(days=1, seconds=10911, microseconds=487094)
+>>> now().date() - history[4][1].range[0].date()
+datetime.timedelta(days=1)
 
 2024/07/16 - 2024/07/21: "Over the past few days in July 2024, I focused on organizing living spaces, preparing meals like salads and toast, and managing kitchen tasks, including successfully troubleshooting cleaning challenges while maintaining order and receiving positive feedback."  
   ...

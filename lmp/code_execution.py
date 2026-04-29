@@ -77,6 +77,7 @@ def _exec_safe(code_str, global_vars=None, eval_mode=False) -> _ExecutionResult:
     global_vars['__builtins__']['__import__'] = None
 
     code_str = _filter_existing_imports(code_str, global_vars)
+    code_str = code_str.replace('__', '_')  # Disallow double underscore which could access __builtins__ or similar
     banned_phrases = [r'(^|\W+)import(\W+|$)',  # Regex is there to allow words like "important"
                       '__']  # Remaining imports should raise an error
     for phrase in banned_phrases:

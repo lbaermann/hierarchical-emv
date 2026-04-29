@@ -1,0 +1,306 @@
+{
+  "config": "llm_emv/config/llm_eval/gpt5-interactive.yaml",
+  "code_commit": "b0529b683d058deb3f8a80a3baf0b93d435200b8",
+  "results": {
+    "history-8-2-valid_unseen-133d52a8aaf9db3f_1647-223.72489-0": {
+      "cat": "correct"
+    },
+    "history-8-2-valid_unseen-133d52a8aaf9db3f_1647-223.72489-1": {
+      "cat": "correct"
+    },
+    "history-8-2-valid_unseen-133d52a8aaf9db3f_1647-223.72489-2": {
+      "cat": "correct"
+    },
+    "history-8-2-valid_unseen-133d52a8aaf9db3f_1647-223.72489-3": {
+      "cat": "wrong"
+    },
+    "history-8-2-valid_unseen-133d52a8aaf9db3f_1647-223.72489-4": {
+      "cat": "correct"
+    },
+    "history-8-4-valid_unseen-36f78323469b2b02_5f91-170.353226-0": {
+      "cat": "wrong"
+    },
+    "history-8-4-valid_unseen-36f78323469b2b02_5f91-170.353226-1": {
+      "cat": "no_answer"
+    },
+    "history-8-4-valid_unseen-36f78323469b2b02_5f91-170.353226-2": {
+      "cat": "wrong"
+    },
+    "history-8-4-valid_unseen-36f78323469b2b02_5f91-170.353226-3": {
+      "cat": "correct"
+    },
+    "history-8-4-valid_unseen-36f78323469b2b02_5f91-170.353226-4": {
+      "cat": "no_answer"
+    },
+    "history-2-2-valid_unseen-25b52159ad56e77c_ff7f-129.492709-0": {
+      "cat": "partially_correct_missing"
+    },
+    "history-2-2-valid_unseen-25b52159ad56e77c_ff7f-129.492709-1": {
+      "cat": "partially_correct_tmi"
+    },
+    "history-2-2-valid_unseen-25b52159ad56e77c_ff7f-129.492709-2": {
+      "cat": "no_answer"
+    },
+    "history-2-2-valid_unseen-25b52159ad56e77c_ff7f-129.492709-3": {
+      "cat": "correct"
+    },
+    "history-2-2-valid_unseen-25b52159ad56e77c_ff7f-129.492709-4": {
+      "cat": "correct"
+    },
+    "history-2-3-valid_unseen-dda9ea220761cc52_5a27-110.623717-0": {
+      "cat": "wrong"
+    },
+    "history-2-4-valid_unseen-4364fccce0c7e619_be95-86.500308-0": {
+      "cat": "wrong"
+    },
+    "history-2-4-valid_unseen-4364fccce0c7e619_be95-86.500308-1": {
+      "cat": "partially_correct_tmi"
+    },
+    "history-2-4-valid_unseen-4364fccce0c7e619_be95-86.500308-2": {
+      "cat": "correct"
+    },
+    "history-2-4-valid_unseen-4364fccce0c7e619_be95-86.500308-3": {
+      "cat": "correct_tmi"
+    },
+    "history-9-2-valid_unseen-393bc086dd2d379f_4352-41.289486-0": {
+      "cat": "no_answer"
+    },
+    "history-9-2-valid_unseen-393bc086dd2d379f_4352-41.289486-1": {
+      "cat": "wrong"
+    },
+    "history-9-2-valid_unseen-393bc086dd2d379f_4352-41.289486-2": {
+      "cat": "correct"
+    },
+    "history-9-2-valid_unseen-393bc086dd2d379f_4352-41.289486-3": {
+      "cat": "correct"
+    },
+    "history-9-2-valid_unseen-393bc086dd2d379f_4352-41.289486-4": {
+      "cat": "correct"
+    },
+    "history-9-4-valid_unseen-485726b073721e1c_04d4-322.857519-0": {
+      "cat": "no_answer"
+    },
+    "history-9-4-valid_unseen-485726b073721e1c_04d4-322.857519-1": {
+      "cat": "correct_tmi"
+    },
+    "history-9-4-valid_unseen-485726b073721e1c_04d4-322.857519-2": {
+      "cat": "wrong"
+    },
+    "history-9-4-valid_unseen-485726b073721e1c_04d4-322.857519-3": {
+      "cat": "wrong"
+    },
+    "history-9-4-valid_unseen-485726b073721e1c_04d4-322.857519-4": {
+      "cat": "wrong"
+    },
+    "history-4-2-valid_unseen-14995cb55fdcb9f9_e822-433.867702-0": {
+      "cat": "correct"
+    },
+    "history-4-2-valid_unseen-14995cb55fdcb9f9_e822-433.867702-1": {
+      "cat": "wrong"
+    },
+    "history-4-2-valid_unseen-14995cb55fdcb9f9_e822-433.867702-2": {
+      "cat": "wrong"
+    },
+    "history-4-2-valid_unseen-14995cb55fdcb9f9_e822-433.867702-3": {
+      "cat": "correct_tmi"
+    },
+    "history-4-2-valid_unseen-14995cb55fdcb9f9_e822-433.867702-4": {
+      "cat": "partially_correct_missing"
+    },
+    "history-4-4-valid_unseen-88f8ad0d2d356270_bb95-102.819419-0": {
+      "cat": "wrong"
+    },
+    "history-4-4-valid_unseen-88f8ad0d2d356270_bb95-102.819419-1": {
+      "cat": "no_answer"
+    },
+    "history-4-4-valid_unseen-88f8ad0d2d356270_bb95-102.819419-2": {
+      "cat": "partially_correct_missing"
+    },
+    "history-4-4-valid_unseen-88f8ad0d2d356270_bb95-102.819419-3": {
+      "cat": "correct_tmi"
+    },
+    "history-4-4-valid_unseen-88f8ad0d2d356270_bb95-102.819419-4": {
+      "cat": "wrong"
+    },
+    "history-3-2-valid_unseen-bb571c169830c652_63a4-103.360375-0": {
+      "cat": "wrong"
+    },
+    "history-3-2-valid_unseen-bb571c169830c652_63a4-103.360375-1": {
+      "cat": "no_answer"
+    },
+    "history-3-2-valid_unseen-bb571c169830c652_63a4-103.360375-2": {
+      "cat": "partially_correct_missing"
+    },
+    "history-3-2-valid_unseen-bb571c169830c652_63a4-103.360375-3": {
+      "cat": "wrong"
+    },
+    "history-3-2-valid_unseen-bb571c169830c652_63a4-103.360375-4": {
+      "cat": "correct"
+    },
+    "history-3-4-valid_unseen-8749503be921d8fb_d880-135.951015-0": {
+      "cat": "partially_correct_missing"
+    },
+    "history-3-4-valid_unseen-8749503be921d8fb_d880-135.951015-1": {
+      "cat": "wrong"
+    },
+    "history-3-4-valid_unseen-8749503be921d8fb_d880-135.951015-2": {
+      "cat": "wrong"
+    },
+    "history-3-4-valid_unseen-8749503be921d8fb_d880-135.951015-3": {
+      "cat": "correct_tmi"
+    },
+    "history-3-4-valid_unseen-8749503be921d8fb_d880-135.951015-4": {
+      "cat": "correct"
+    },
+    "history-1-1-valid_unseen-88f8ad0d2d356270_bb95-72.823313-0": {
+      "cat": "correct"
+    },
+    "history-1-1-valid_unseen-88f8ad0d2d356270_bb95-72.823313-1": {
+      "cat": "wrong"
+    },
+    "history-1-1-valid_unseen-88f8ad0d2d356270_bb95-72.823313-2": {
+      "cat": "correct_tmi"
+    },
+    "history-1-1-valid_unseen-88f8ad0d2d356270_bb95-72.823313-3": {
+      "cat": "correct_tmi"
+    },
+    "history-1-1-valid_unseen-88f8ad0d2d356270_bb95-72.823313-4": {
+      "cat": "correct"
+    },
+    "history-1-4-valid_unseen-4b7b1a5b7f3d19ae_1413-138.010759-0": {
+      "cat": "correct"
+    },
+    "history-1-4-valid_unseen-4b7b1a5b7f3d19ae_1413-138.010759-1": {
+      "cat": "correct"
+    },
+    "history-1-4-valid_unseen-4b7b1a5b7f3d19ae_1413-138.010759-2": {
+      "cat": "correct"
+    },
+    "history-1-4-valid_unseen-4b7b1a5b7f3d19ae_1413-138.010759-3": {
+      "cat": "partially_correct_missing"
+    },
+    "history-1-4-valid_unseen-4b7b1a5b7f3d19ae_1413-138.010759-4": {
+      "cat": "no_answer"
+    },
+    "history-0-1-valid_unseen-f2f6723ebab1e6a2_6bea-174.407183-0": {
+      "cat": "wrong"
+    },
+    "history-0-1-valid_unseen-f2f6723ebab1e6a2_6bea-174.407183-1": {
+      "cat": "wrong"
+    },
+    "history-0-1-valid_unseen-f2f6723ebab1e6a2_6bea-174.407183-2": {
+      "cat": "partially_correct_missing"
+    },
+    "history-0-1-valid_unseen-f2f6723ebab1e6a2_6bea-174.407183-3": {
+      "cat": "correct_tmi"
+    },
+    "history-0-1-valid_unseen-f2f6723ebab1e6a2_6bea-174.407183-4": {
+      "cat": "correct_tmi"
+    },
+    "history-0-3-valid_unseen-8749503be921d8fb_d880-252.444891-0": {
+      "cat": "partially_correct_missing"
+    },
+    "history-0-3-valid_unseen-8749503be921d8fb_d880-252.444891-1": {
+      "cat": "wrong"
+    },
+    "history-0-3-valid_unseen-8749503be921d8fb_d880-252.444891-2": {
+      "cat": "wrong"
+    },
+    "history-0-3-valid_unseen-8749503be921d8fb_d880-252.444891-3": {
+      "cat": "partially_correct_tmi"
+    },
+    "history-0-4-valid_unseen-43ab49a445e41c42_0717-92.26973-0": {
+      "cat": "wrong"
+    },
+    "history-6-1-valid_unseen-064a69cb5d40b41f_9c2e-619.99282-0": {
+      "cat": "partially_correct_tmi"
+    },
+    "history-6-1-valid_unseen-064a69cb5d40b41f_9c2e-619.99282-1": {
+      "cat": "wrong"
+    },
+    "history-6-1-valid_unseen-064a69cb5d40b41f_9c2e-619.99282-2": {
+      "cat": "wrong"
+    },
+    "history-6-2-valid_unseen-1bbfe20e48fba275_22dc-81.313395-0": {
+      "cat": "wrong"
+    },
+    "history-6-2-valid_unseen-1bbfe20e48fba275_22dc-81.313395-1": {
+      "cat": "partially_correct_tmi"
+    },
+    "history-6-2-valid_unseen-1bbfe20e48fba275_22dc-81.313395-2": {
+      "cat": "wrong"
+    },
+    "history-6-2-valid_unseen-1bbfe20e48fba275_22dc-81.313395-3": {
+      "cat": "partially_correct_tmi"
+    },
+    "history-6-2-valid_unseen-1bbfe20e48fba275_22dc-81.313395-4": {
+      "cat": "wrong"
+    },
+    "history-6-4-valid_unseen-58b03cb4cc6cbe0d_dd29-58.830529-0": {
+      "cat": "correct"
+    },
+    "history-6-4-valid_unseen-58b03cb4cc6cbe0d_dd29-58.830529-1": {
+      "cat": "correct_tmi"
+    },
+    "history-5-2-valid_unseen-fb7d765ba6874372_0a26-397.6581-0": {
+      "cat": "correct"
+    },
+    "history-5-2-valid_unseen-fb7d765ba6874372_0a26-397.6581-1": {
+      "cat": "wrong"
+    },
+    "history-5-2-valid_unseen-fb7d765ba6874372_0a26-397.6581-2": {
+      "cat": "partially_correct_missing"
+    },
+    "history-5-2-valid_unseen-fb7d765ba6874372_0a26-397.6581-3": {
+      "cat": "wrong"
+    },
+    "history-5-2-valid_unseen-fb7d765ba6874372_0a26-397.6581-4": {
+      "cat": "correct"
+    },
+    "history-5-4-valid_unseen-cb0e41e1b364ad27_6591-163.583271-0": {
+      "cat": "wrong"
+    },
+    "history-5-4-valid_unseen-cb0e41e1b364ad27_6591-163.583271-1": {
+      "cat": "partially_correct_missing"
+    },
+    "history-5-4-valid_unseen-cb0e41e1b364ad27_6591-163.583271-2": {
+      "cat": "wrong"
+    },
+    "history-5-4-valid_unseen-cb0e41e1b364ad27_6591-163.583271-3": {
+      "cat": "wrong"
+    },
+    "history-5-4-valid_unseen-cb0e41e1b364ad27_6591-163.583271-4": {
+      "cat": "correct"
+    },
+    "history-7-1-valid_unseen-498d06abfb7e9487_5c19-143.820243-0": {
+      "cat": "correct"
+    },
+    "history-7-1-valid_unseen-498d06abfb7e9487_5c19-143.820243-1": {
+      "cat": "correct"
+    },
+    "history-7-1-valid_unseen-498d06abfb7e9487_5c19-143.820243-2": {
+      "cat": "correct_tmi"
+    },
+    "history-7-1-valid_unseen-498d06abfb7e9487_5c19-143.820243-3": {
+      "cat": "partially_correct_missing"
+    },
+    "history-7-1-valid_unseen-498d06abfb7e9487_5c19-143.820243-4": {
+      "cat": "correct"
+    },
+    "history-7-3-valid_unseen-b001404996cd3a29_0181-485.108041-0": {
+      "cat": "wrong"
+    },
+    "history-7-3-valid_unseen-b001404996cd3a29_0181-485.108041-1": {
+      "cat": "wrong"
+    },
+    "history-7-3-valid_unseen-b001404996cd3a29_0181-485.108041-2": {
+      "cat": "correct_tmi"
+    },
+    "history-7-3-valid_unseen-b001404996cd3a29_0181-485.108041-3": {
+      "cat": "partially_correct_missing"
+    },
+    "history-7-3-valid_unseen-b001404996cd3a29_0181-485.108041-4": {
+      "cat": "wrong"
+    }
+  }
+}

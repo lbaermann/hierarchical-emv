@@ -1,0 +1,13 @@
+llm:
+  type: ChatOpenAI
+  model_name: gpt-5-2025-08-07
+  temperature: 0.1
+  request_timeout: 30
+  max_retries: 2
+similarity_model: all-mpnet-base-v2
+few_shot_k: 14
+samples:
+  - ../../../experiments/results/teach/preliminary/exp_1-25_train_1shot_20.json
+  - ../../../experiments/results/teach/preliminary/exp_1-25_train_0shot_20.json
+  - ../../../experiments/results/teach/preliminary/exp_1-25_train_predef_1shot_20.json
+  - ../../../experiments/incremental/manual_eval/fictitious-llm-eval-few-shot-samples.json

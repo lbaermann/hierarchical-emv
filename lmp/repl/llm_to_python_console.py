@@ -1,5 +1,6 @@
+import ast
 from copy import deepcopy
-from typing import Tuple, Dict, Any, Callable
+from typing import Tuple, Dict, Any, Callable, Optional
 
 from langchain_core.language_models import BaseLanguageModel
 
@@ -43,6 +44,11 @@ class LlmToPythonConsoleHelper:
     def __call__(self, loop_detected_flag=False) -> Tuple[str, str]:  # (code, expected output)
         code_str_with_expected_reply = self._context_length_adaptive_generate(loop_detected_flag)
         code_str, expected_output_str = self._split_llm_output(code_str_with_expected_reply)
+        try:
+            code_str = self._fix_cutoff_syntax(code_str)
+        except SyntaxError as e:
+            # Not raise here, this is the job of the execution environment
+            print(f'Could not fix invalid code str "{code_str}"', e)
         return code_str, expected_output_str
 
     def _context_length_adaptive_generate(self, loop_detected):
@@ -156,3 +162,22 @@ class LlmToPythonConsoleHelper:
             print('command:', code_str_exec)
             print('expected output:', expected_output_str)
         return code_str_exec, expected_output_str
+
+    @staticmethod
+    def _fix_cutoff_syntax(code_str):
+        prev_error: Optional[SyntaxError] = None
+        while True:
+            try:
+                ast.parse(code_str)
+                return code_str
+            except SyntaxError as e:
+                if prev_error and prev_error.args == e.args:
+                    raise
+                prev_error = e
+                offending_char = e.text[e.offset - 1]
+                if "unterminated string literal" in e.msg:
+                    code_str += offending_char
+                elif 'was never closed' in e.msg:
+                    code_str += {'[': ']', '(': ')', '{': '}'}[offending_char]
+                else:
+                    raise

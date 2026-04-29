@@ -134,7 +134,7 @@ def _build_hierarchical_goals(
             groups[-1].append(event)
         prev_goal_at_idx = current_goal_at_idx
 
-    if len(groups) > 1:
+    if len(groups) > 1 or prev_goal_at_idx is not None:
         sub_goals = [
             _build_hierarchical_goals(g, stack_idx + 1)
             for g in groups

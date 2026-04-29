@@ -1,10 +1,14 @@
 from copy import deepcopy
 from datetime import datetime
 from pathlib import Path
-from typing import Union, Optional
+from typing import Union, Optional, Any, List
 
 import PIL.Image
 import cv2
+from langchain.output_parsers import OutputFixingParser
+from langchain_core.output_parsers import JsonOutputParser
+from langchain_core.outputs import Generation
+from langchain_core.prompts import PromptTemplate
 
 from em.em_tree import HigherLevelSummary, GoalBasedSummary, EventBasedSummary
 
@@ -50,6 +54,15 @@ class LazyLoadPILImage:
     def _load_img(self):
         return PIL.Image.open(self._path)
 
+    def __getstate__(self):
+        state = self.__dict__.copy()
+        del state['_loaded_img']  # Don't pickle loaded img
+        return state
+
+    def __setstate__(self, state):
+        self.__dict__.update(state)
+        self._loaded_img = None
+
 
 class LazyVideoFramePILImage(LazyLoadPILImage):
 
@@ -70,6 +83,40 @@ class LazyVideoFramePILImage(LazyLoadPILImage):
             video.set(cv2.CAP_PROP_POS_FRAMES, self._frame_num)
         success, image = video.read()
         if not success:
-            raise IOError(f'Cannot read frame {self._frame_num} from {self._path}')
+            raise IOError(
+                f'Cannot read frame {f"at {self._frame_timestamp}s" if self._frame_num is None else self._frame_num}'
+                f' from {self._path}')
         color_converted = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         return PIL.Image.fromarray(color_converted)
+
+
+class _InitialTextForgivingJsonOutputParser(JsonOutputParser):
+    json_keyword: str = 'JSON:'
+
+    def parse_result(self, result: List[Generation], *, partial: bool = False) -> Any:
+        text = result[0].text
+        text = text.strip()
+        start_idx = text.find(self.json_keyword)
+        if start_idx > -1:
+            text = text[start_idx + len(self.json_keyword):]
+        return super().parse_result([Generation(text=text)], partial=partial)
+
+
+_FIX_JSON_PROMPT = PromptTemplate.from_template("""
+This output is not a valid JSON object.
+--------------
+{completion}
+--------------
+Error: {error}
+
+Fix the error. Respond with only a copy of the above JSON object, with errors fixed. 
+No other output except valid JSON:""".strip())
+
+
+def json_fixing_parser(llm):
+    return OutputFixingParser.from_llm(llm=llm, parser=JsonOutputParser(), prompt=_FIX_JSON_PROMPT)
+
+
+def initial_text_forgiving_json_fixing_parser(llm, json_keyword='JSON:'):
+    return OutputFixingParser.from_llm(llm=llm, prompt=_FIX_JSON_PROMPT,
+                                       parser=_InitialTextForgivingJsonOutputParser(json_keyword=json_keyword))

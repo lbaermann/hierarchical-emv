@@ -16,7 +16,7 @@ from .categories import BroadEmvOutputCategory, FineEmvOutputCategory
 def _calc_meteor(predictions: List[str], gold_annotations: List[List[str]]):
     total = 0
     for pred, possible_refs in zip(predictions, gold_annotations):
-        pred = tokenize(pred, None)  # TODO check tokenization
+        pred = tokenize(pred, None)
         # https://github.com/cmu-mtlab/meteor/blob/master/src/edu/cmu/meteor/util/Normalizer.java
         possible_refs = [tokenize(x, None) for x in possible_refs]
         total += meteor_score(possible_refs, pred)

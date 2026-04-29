@@ -1,0 +1,1453 @@
+{
+  "config": {
+    "teach_base": "/home/lbaermann/emv/data/TEACh",
+    "teach_split": "valid_unseen",
+    "seed": "42",
+    "n_histories": "10",
+    "num_test_cases_per_history": "5",
+    "min_seq_len": "5",
+    "max_seq_len": "5",
+    "out_file": "data/teach/interactive-v2/val-unseen-5.json"
+  },
+  "data": {
+    "history-0": [
+      {
+        "game_id": "valid_unseen/6ccc8b815fbc093a_5865",
+        "start_date": "2024-09-23 10:03:13",
+        "qa": {}
+      },
+      {
+        "game_id": "valid_unseen/f2f6723ebab1e6a2_6bea",
+        "start_date": "2024-09-26 15:40:47",
+        "qa": {
+          "174.407183": [
+            {
+              "question": "When did you first place a knife?",
+              "answer": "At 2024/09/23, 10:05:28",
+              "correction": "You should always remember the exact time when you place a knife",
+              "reference": [
+                "2024-09-23 10:05:22",
+                "2024-09-23 10:05:28"
+              ],
+              "pairid": "b08b516f77eed7d7e6568dd6311cc715",
+              "pair_idx": 1
+            },
+            {
+              "question": "What objects did you see the first time you did place a plate?",
+              "answer": "pot, fridge, floor, countertop, bowl, knife, peppershaker, plate, toaster, cellphone, potato slice, statue, cabinet",
+              "correction": "You should always remember all the objects you see when you place a plate",
+              "reference": [
+                "2024-09-23 10:06:20",
+                "2024-09-23 10:06:25"
+              ],
+              "pairid": "df61d4c3f984760e6cd1566c161cc567",
+              "pair_idx": 1
+            },
+            {
+              "question": "When did you first place a plate?",
+              "answer": "At 2024/09/23, 10:06:25",
+              "correction": "You should always remember the exact time when you place a plate",
+              "reference": [
+                "2024-09-23 10:06:20",
+                "2024-09-23 10:06:25"
+              ],
+              "pairid": "f45850dd8737f88593c4d17f304baa06",
+              "pair_idx": 1
+            },
+            {
+              "question": "What steps did you perform during transport of the plate?",
+              "answer": "Pickup the plate, Place the plate at the countertop",
+              "correction": "You should always remember the detailed steps you perform during transport of the plate",
+              "reference": [
+                "2024-09-23 10:06:18",
+                "2024-09-23 10:06:25"
+              ],
+              "pairid": "52982e24018ce570c0cc430e183253da",
+              "pair_idx": 1
+            },
+            {
+              "question": "Which object did you first transport to the countertop?",
+              "answer": "The potato",
+              "correction": "You should always remember which object you transport to the countertop",
+              "reference": [
+                "2024-09-23 10:05:01",
+                "2024-09-23 10:05:11"
+              ],
+              "pairid": "687cfc473a1c1e02f93c248efa4bb9a6",
+              "pair_idx": 1
+            }
+          ]
+        }
+      },
+      {
+        "game_id": "valid_unseen/0c2b61fdbb890609_1bb2",
+        "start_date": "2024-09-27 18:06:51",
+        "qa": {}
+      },
+      {
+        "game_id": "valid_unseen/8749503be921d8fb_d880",
+        "start_date": "2024-10-03 18:30:59",
+        "qa": {
+          "252.444891": [
+            {
+              "question": "When did you last place a knife?",
+              "answer": "At 2024/09/27, 18:11:25",
+              "correction": "You should always remember the exact time when you place a knife",
+              "reference": [
+                "2024-09-27 18:11:23",
+                "2024-09-27 18:11:25"
+              ],
+              "pairid": "b08b516f77eed7d7e6568dd6311cc715",
+              "pair_idx": 2
+            },
+            {
+              "question": "What objects did you see the last time you did place a plate?",
+              "answer": "pot, countertop, lettuce, knife, plate, microwave, stoveburner, toaster, bread slice, bottle, tomato, statue, cabinet, bread, fork, cup",
+              "correction": "You should always remember all the objects you see when you place a plate",
+              "reference": [
+                "2024-09-27 18:10:35",
+                "2024-09-27 18:10:35"
+              ],
+              "pairid": "df61d4c3f984760e6cd1566c161cc567",
+              "pair_idx": 2
+            },
+            {
+              "question": "When did you last place a plate?",
+              "answer": "At 2024/09/27, 18:10:35",
+              "correction": "You should always remember the exact time when you place a plate",
+              "reference": [
+                "2024-09-27 18:10:35",
+                "2024-09-27 18:10:35"
+              ],
+              "pairid": "f45850dd8737f88593c4d17f304baa06",
+              "pair_idx": 2
+            },
+            {
+              "question": "What steps did you perform during transport of the plate?",
+              "answer": "Pickup the plate, Place the plate at the countertop",
+              "correction": "You should always remember the detailed steps you perform during transport of the plate",
+              "reference": [
+                "2024-09-27 18:10:23",
+                "2024-09-27 18:10:35"
+              ],
+              "pairid": "52982e24018ce570c0cc430e183253da",
+              "pair_idx": 2
+            }
+          ]
+        }
+      },
+      {
+        "game_id": "valid_unseen/43ab49a445e41c42_0717",
+        "start_date": "2024-10-06 15:42:51",
+        "qa": {
+          "92.26973": [
+            {
+              "question": "Which object did you last transport to the countertop?",
+              "answer": "The dishsponge",
+              "correction": "You should always remember which object you transport to the countertop",
+              "reference": [
+                "2024-10-03 18:32:45",
+                "2024-10-03 18:32:49"
+              ],
+              "pairid": "687cfc473a1c1e02f93c248efa4bb9a6",
+              "pair_idx": 2
+            }
+          ]
+        }
+      }
+    ],
+    "history-1": [
+      {
+        "game_id": "valid_unseen/83a764f25b99f089_d4f4",
+        "start_date": "2023-07-12 18:35:18",
+        "qa": {}
+      },
+      {
+        "game_id": "valid_unseen/88f8ad0d2d356270_bb95",
+        "start_date": "2023-07-17 12:15:05",
+        "qa": {
+          "72.823313": [
+            {
+              "question": "What objects did you see the first time you did pickup a mug?",
+              "answer": "pot, creditcard, apple, faucet, sink basin, plate, peppershaker, sink, dishsponge, spoon, bread, mug",
+              "correction": "You should always remember all the objects you see when you pickup a mug",
+              "reference": [
+                "2023-07-12 18:35:54",
+                "2023-07-12 18:35:54"
+              ],
+              "pairid": "4ee7be4a2f18eb1d57bcfb334c531c7b",
+              "pair_idx": 1
+            },
+            {
+              "question": "What objects did you see the first time you did place a mug?",
+              "answer": "countertop, window, coffeemachine, soapbottle, cabinet, mug",
+              "correction": "You should always remember all the objects you see when you place a mug",
+              "reference": [
+                "2023-07-12 18:36:01",
+                "2023-07-12 18:36:18"
+              ],
+              "pairid": "71929fefa1f6680e6fca44e1daf63d30",
+              "pair_idx": 1
+            },
+            {
+              "question": "Which object did you first transport to the coffeemachine?",
+              "answer": "The mug",
+              "correction": "You should always remember which object you transport to the coffeemachine",
+              "reference": [
+                "2023-07-12 18:35:54",
+                "2023-07-12 18:36:18"
+              ],
+              "pairid": "767922256b738788fb16ae29f75ca316",
+              "pair_idx": 1
+            },
+            {
+              "question": "What steps did you perform during transport of the mug?",
+              "answer": "Pickup the mug, Pour the mug at the sink basin, Place the mug at the coffeemachine",
+              "correction": "You should always remember the detailed steps you perform during transport of the mug",
+              "reference": [
+                "2023-07-12 18:35:54",
+                "2023-07-12 18:36:18"
+              ],
+              "pairid": "a3ce1808722977389314b011b801066e",
+              "pair_idx": 1
+            },
+            {
+              "question": "What objects did you see inside the sink the first time you poured the mug?",
+              "answer": "peppershaker, creditcard, dishsponge, spoon",
+              "correction": "You should always remember all the objects you see in the sink when you pour the mug",
+              "reference": [
+                "2023-07-12 18:35:59",
+                "2023-07-12 18:35:59"
+              ],
+              "pairid": "60a31daeff549078e4f6e89f8584163a",
+              "pair_idx": 1
+            }
+          ]
+        }
+      },
+      {
+        "game_id": "valid_unseen/18e6380ba49c1f55_4ae0",
+        "start_date": "2023-07-17 12:55:59",
+        "qa": {}
+      },
+      {
+        "game_id": "valid_unseen/68a173940e8df691_eb50",
+        "start_date": "2023-07-18 19:48:35",
+        "qa": {}
+      },
+      {
+        "game_id": "valid_unseen/4b7b1a5b7f3d19ae_1413",
+        "start_date": "2023-07-20 17:36:25",
+        "qa": {
+          "138.010759": [
+            {
+              "question": "What objects did you see the last time you did pickup a mug?",
+              "answer": "houseplant, creditcard, faucet, countertop, spatula, knife, sink basin, peppershaker, soapbottle, sink, vase, mug, fork",
+              "correction": "You should always remember all the objects you see when you pickup a mug",
+              "reference": [
+                "2023-07-18 19:50:00",
+                "2023-07-18 19:50:00"
+              ],
+              "pairid": "4ee7be4a2f18eb1d57bcfb334c531c7b",
+              "pair_idx": 2
+            },
+            {
+              "question": "What objects did you see the last time you did place a mug?",
+              "answer": "countertop, cup, pan, stoveburner, window, microwave, papertowelroll, coffeemachine, stoveknob, cabinet, mug, saltshaker",
+              "correction": "You should always remember all the objects you see when you place a mug",
+              "reference": [
+                "2023-07-18 19:50:07",
+                "2023-07-18 19:50:21"
+              ],
+              "pairid": "71929fefa1f6680e6fca44e1daf63d30",
+              "pair_idx": 2
+            },
+            {
+              "question": "Which object did you last transport to the coffeemachine?",
+              "answer": "The mug",
+              "correction": "You should always remember which object you transport to the coffeemachine",
+              "reference": [
+                "2023-07-18 19:50:00",
+                "2023-07-18 19:50:21"
+              ],
+              "pairid": "767922256b738788fb16ae29f75ca316",
+              "pair_idx": 2
+            },
+            {
+              "question": "What steps did you perform during transport of the mug?",
+              "answer": "Pickup the mug, Pour the mug at the sink basin, Place the mug at the coffeemachine",
+              "correction": "You should always remember the detailed steps you perform during transport of the mug",
+              "reference": [
+                "2023-07-18 19:50:00",
+                "2023-07-18 19:50:21"
+              ],
+              "pairid": "a3ce1808722977389314b011b801066e",
+              "pair_idx": 2
+            },
+            {
+              "question": "What objects did you see inside the sink the last time you poured the mug?",
+              "answer": "peppershaker, soapbottle, spatula",
+              "correction": "You should always remember all the objects you see in the sink when you pour the mug",
+              "reference": [
+                "2023-07-18 19:50:05",
+                "2023-07-18 19:50:05"
+              ],
+              "pairid": "60a31daeff549078e4f6e89f8584163a",
+              "pair_idx": 2
+            }
+          ]
+        }
+      }
+    ],
+    "history-2": [
+      {
+        "game_id": "valid_unseen/e32e722334301fa7_892d",
+        "start_date": "2024-08-06 18:01:56",
+        "qa": {}
+      },
+      {
+        "game_id": "valid_unseen/0ad91909295bf186_134b",
+        "start_date": "2024-08-07 18:11:03",
+        "qa": {}
+      },
+      {
+        "game_id": "valid_unseen/25b52159ad56e77c_ff7f",
+        "start_date": "2024-08-10 18:49:45",
+        "qa": {
+          "129.492709": [
+            {
+              "question": "When did you first transport something to the pot?",
+              "answer": "At 2024/08/07, 18:16:33",
+              "correction": "You should always remember the exact time when you transport something to the pot",
+              "reference": [
+                "2024-08-07 18:16:23",
+                "2024-08-07 18:16:33"
+              ],
+              "pairid": "e09056ef93c57f357f12ad66037778ad",
+              "pair_idx": 1
+            },
+            {
+              "question": "What steps did you perform during transport of the potato?",
+              "answer": "Pickup the potato, Place the potato at the countertop",
+              "correction": "You should always remember the detailed steps you perform during transport of the potato",
+              "reference": [
+                "2024-08-07 18:11:03",
+                "2024-08-07 18:13:13"
+              ],
+              "pairid": "5fde90e367b08a050d5a31b2834be9fe",
+              "pair_idx": 1
+            },
+            {
+              "question": "When did you first transport something to the countertop?",
+              "answer": "At 2024/08/07, 18:13:13",
+              "correction": "You should always remember the exact time when you transport something to the countertop",
+              "reference": [
+                "2024-08-07 18:11:03",
+                "2024-08-07 18:13:13"
+              ],
+              "pairid": "da010629905560727c409ce4193f82da",
+              "pair_idx": 1
+            },
+            {
+              "question": "Which object did you first transport to the pot?",
+              "answer": "The potato",
+              "correction": "You should always remember which object you transport to the pot",
+              "reference": [
+                "2024-08-07 18:16:23",
+                "2024-08-07 18:16:33"
+              ],
+              "pairid": "f1c385ec2ed299e2695316f03255ef50",
+              "pair_idx": 1
+            },
+            {
+              "question": "To where did you first transport a potato?",
+              "answer": "At the countertop",
+              "correction": "You should always remember the location to where you transport a potato",
+              "reference": [
+                "2024-08-07 18:11:03",
+                "2024-08-07 18:13:13"
+              ],
+              "pairid": "32599f60c65ea05b7f43821a40829be5",
+              "pair_idx": 1
+            }
+          ]
+        }
+      },
+      {
+        "game_id": "valid_unseen/dda9ea220761cc52_5a27",
+        "start_date": "2024-08-12 11:10:56",
+        "qa": {
+          "110.623717": [
+            {
+              "question": "When did you last transport something to the countertop?",
+              "answer": "At 2024/08/10, 19:02:05",
+              "correction": "You should always remember the exact time when you transport something to the countertop",
+              "reference": [
+                "2024-08-10 19:01:54",
+                "2024-08-10 19:02:05"
+              ],
+              "pairid": "da010629905560727c409ce4193f82da",
+              "pair_idx": 2
+            }
+          ]
+        }
+      },
+      {
+        "game_id": "valid_unseen/4364fccce0c7e619_be95",
+        "start_date": "2024-08-14 16:45:57",
+        "qa": {
+          "86.500308": [
+            {
+              "question": "When did you last transport something to the pot?",
+              "answer": "At 2024/08/12, 11:12:51",
+              "correction": "You should always remember the exact time when you transport something to the pot",
+              "reference": [
+                "2024-08-12 11:10:56",
+                "2024-08-12 11:12:51"
+              ],
+              "pairid": "e09056ef93c57f357f12ad66037778ad",
+              "pair_idx": 2
+            },
+            {
+              "question": "What steps did you perform during transport of the potato?",
+              "answer": "Pickup the potato, Place the potato at the countertop",
+              "correction": "You should always remember the detailed steps you perform during transport of the potato",
+              "reference": [
+                "2024-08-12 11:10:56",
+                "2024-08-12 11:12:51"
+              ],
+              "pairid": "5fde90e367b08a050d5a31b2834be9fe",
+              "pair_idx": 2
+            },
+            {
+              "question": "Which object did you last transport to the pot?",
+              "answer": "The potato",
+              "correction": "You should always remember which object you transport to the pot",
+              "reference": [
+                "2024-08-12 11:10:56",
+                "2024-08-12 11:12:51"
+              ],
+              "pairid": "f1c385ec2ed299e2695316f03255ef50",
+              "pair_idx": 2
+            },
+            {
+              "question": "To where did you last transport a potato?",
+              "answer": "At the pot",
+              "correction": "You should always remember the location to where you transport a potato",
+              "reference": [
+                "2024-08-12 11:10:56",
+                "2024-08-12 11:12:51"
+              ],
+              "pairid": "32599f60c65ea05b7f43821a40829be5",
+              "pair_idx": 2
+            }
+          ]
+        }
+      }
+    ],
+    "history-3": [
+      {
+        "game_id": "valid_unseen/5026400c43e20c2d_d3fc",
+        "start_date": "2023-09-30 08:36:34",
+        "qa": {}
+      },
+      {
+        "game_id": "valid_unseen/dcc90b08c376f4dc_74ab",
+        "start_date": "2023-09-30 15:36:41",
+        "qa": {}
+      },
+      {
+        "game_id": "valid_unseen/bb571c169830c652_63a4",
+        "start_date": "2023-10-04 09:56:20",
+        "qa": {
+          "103.360375": [
+            {
+              "question": "When did you first place a potato?",
+              "answer": "At 2023/09/30, 08:37:44",
+              "correction": "You should always remember the exact time when you place a potato",
+              "reference": [
+                "2023-09-30 08:37:13",
+                "2023-09-30 08:37:44"
+              ],
+              "pairid": "7167ac53dc8393e86adf61a7ed4175d3",
+              "pair_idx": 1
+            },
+            {
+              "question": "What steps did you perform during transport of the knife?",
+              "answer": "Pickup the knife, Slice the potato, Place the knife at the countertop",
+              "correction": "You should always remember the detailed steps you perform during transport of the knife",
+              "reference": [
+                "2023-09-30 08:43:19",
+                "2023-09-30 08:43:36"
+              ],
+              "pairid": "932baaf408e3477a76842ebd7221072d",
+              "pair_idx": 1
+            },
+            {
+              "question": "What objects did you see the first time you did pickup a potato?",
+              "answer": "shelvingunit, knife, cellphone, shelf, potato, vase, mug",
+              "correction": "You should always remember all the objects you see when you pickup a potato",
+              "reference": [
+                "2023-09-30 08:36:34",
+                "2023-09-30 08:37:05"
+              ],
+              "pairid": "020e19b1af1dc2a72f6e18821e4312da",
+              "pair_idx": 1
+            },
+            {
+              "question": "What objects did you see the first time you did finish to transport a potato?",
+              "answer": "pot, countertop, spatula, peppershaker, pan, stoveburner, microwave, papertowelroll, coffeemachine, potato, stoveknob, cabinet",
+              "correction": "You should always remember all the objects you see when you finish to transport a potato",
+              "reference": [
+                "2023-09-30 08:36:34",
+                "2023-09-30 08:37:44"
+              ],
+              "pairid": "7d43329072c72366b53db08af8dbf9b7",
+              "pair_idx": 1
+            },
+            {
+              "question": "Which object did you first transport to the pot?",
+              "answer": "The potato",
+              "correction": "You should always remember which object you transport to the pot",
+              "reference": [
+                "2023-09-30 08:36:34",
+                "2023-09-30 08:37:44"
+              ],
+              "pairid": "ce312341ccc80fc3aab3914475a0cb58",
+              "pair_idx": 1
+            }
+          ]
+        }
+      },
+      {
+        "game_id": "valid_unseen/4fc54b735d3f45a6_b7b4",
+        "start_date": "2023-10-04 13:18:07",
+        "qa": {}
+      },
+      {
+        "game_id": "valid_unseen/8749503be921d8fb_d880",
+        "start_date": "2023-10-07 16:17:32",
+        "qa": {
+          "135.951015": [
+            {
+              "question": "When did you last place a potato?",
+              "answer": "At 2023/10/04, 13:19:37",
+              "correction": "You should always remember the exact time when you place a potato",
+              "reference": [
+                "2023-10-04 13:19:37",
+                "2023-10-04 13:19:37"
+              ],
+              "pairid": "7167ac53dc8393e86adf61a7ed4175d3",
+              "pair_idx": 2
+            },
+            {
+              "question": "What steps did you perform during transport of the knife?",
+              "answer": "Pickup the knife, Slice the potato, Place the knife at the countertop",
+              "correction": "You should always remember the detailed steps you perform during transport of the knife",
+              "reference": [
+                "2023-10-04 09:56:20",
+                "2023-10-04 09:57:15"
+              ],
+              "pairid": "932baaf408e3477a76842ebd7221072d",
+              "pair_idx": 2
+            },
+            {
+              "question": "What objects did you see the last time you did pickup a potato?",
+              "answer": "pot, drawer, countertop, egg, peppershaker, pan, stoveburner, microwave, cellphone, papertowelroll, potato, dishsponge, stoveknob, cabinet, mug, saltshaker",
+              "correction": "You should always remember all the objects you see when you pickup a potato",
+              "reference": [
+                "2023-10-04 13:19:35",
+                "2023-10-04 13:19:35"
+              ],
+              "pairid": "020e19b1af1dc2a72f6e18821e4312da",
+              "pair_idx": 2
+            },
+            {
+              "question": "What objects did you see the last time you did finish to transport a potato?",
+              "answer": "pot, drawer, countertop, egg, peppershaker, pan, stoveburner, microwave, cellphone, papertowelroll, potato, dishsponge, stoveknob, cabinet, mug, saltshaker",
+              "correction": "You should always remember all the objects you see when you finish to transport a potato",
+              "reference": [
+                "2023-10-04 13:19:35",
+                "2023-10-04 13:19:37"
+              ],
+              "pairid": "7d43329072c72366b53db08af8dbf9b7",
+              "pair_idx": 2
+            },
+            {
+              "question": "Which object did you last transport to the pot?",
+              "answer": "The potato",
+              "correction": "You should always remember which object you transport to the pot",
+              "reference": [
+                "2023-10-04 13:19:35",
+                "2023-10-04 13:19:37"
+              ],
+              "pairid": "ce312341ccc80fc3aab3914475a0cb58",
+              "pair_idx": 2
+            }
+          ]
+        }
+      }
+    ],
+    "history-4": [
+      {
+        "game_id": "valid_unseen/8e3082fd7bbed04c_3f32",
+        "start_date": "2024-08-31 16:00:11",
+        "qa": {}
+      },
+      {
+        "game_id": "valid_unseen/e935582bf436b03a_b849",
+        "start_date": "2024-09-01 12:52:35",
+        "qa": {}
+      },
+      {
+        "game_id": "valid_unseen/14995cb55fdcb9f9_e822",
+        "start_date": "2024-09-01 18:36:34",
+        "qa": {
+          "433.867702": [
+            {
+              "question": "When did you first transport something to the toaster?",
+              "answer": "At 2024/08/31, 16:01:20",
+              "correction": "You should always remember the exact time when you transport something to the toaster",
+              "reference": [
+                "2024-08-31 16:01:17",
+                "2024-08-31 16:01:20"
+              ],
+              "pairid": "45453e44b9db5d5f3c8f416840e66595",
+              "pair_idx": 1
+            },
+            {
+              "question": "When did you first slice a bread?",
+              "answer": "At 2024/08/31, 16:01:12",
+              "correction": "You should always remember the exact time when you slice a bread",
+              "reference": [
+                "2024-08-31 16:00:39",
+                "2024-08-31 16:01:12"
+              ],
+              "pairid": "facfe3fa2b16330a7954f2dd3b0ad1f6",
+              "pair_idx": 1
+            },
+            {
+              "question": "What objects did you see the first time you did slice a bread?",
+              "answer": "drawer, countertop, bowl, knife, pan, stoveburner, toaster, bread, potato, cabinet, cup",
+              "correction": "You should always remember all the objects you see when you slice a bread",
+              "reference": [
+                "2024-08-31 16:00:39",
+                "2024-08-31 16:01:12"
+              ],
+              "pairid": "a8cf3bd4072bc221a743846e2bb38803",
+              "pair_idx": 1
+            },
+            {
+              "question": "Which object did you first transport to the toaster?",
+              "answer": "The bread slice",
+              "correction": "You should always remember which object you transport to the toaster",
+              "reference": [
+                "2024-08-31 16:01:17",
+                "2024-08-31 16:01:20"
+              ],
+              "pairid": "928b80a4c8bb7bfffe0174653f8e8937",
+              "pair_idx": 1
+            },
+            {
+              "question": "When did you first transport something to the sink basin?",
+              "answer": "At 2024/08/31, 16:02:17",
+              "correction": "You should always remember the exact time when you transport something to the sink basin",
+              "reference": [
+                "2024-08-31 16:01:33",
+                "2024-08-31 16:02:17"
+              ],
+              "pairid": "cfa560c5c38dec773e0f7eb226ed5e7b",
+              "pair_idx": 1
+            }
+          ]
+        }
+      },
+      {
+        "game_id": "valid_unseen/6e26385c641764c7_e084",
+        "start_date": "2024-09-02 10:50:27",
+        "qa": {}
+      },
+      {
+        "game_id": "valid_unseen/88f8ad0d2d356270_bb95",
+        "start_date": "2024-09-03 17:43:45",
+        "qa": {
+          "102.819419": [
+            {
+              "question": "When did you last transport something to the toaster?",
+              "answer": "At 2024/09/01, 18:43:56",
+              "correction": "You should always remember the exact time when you transport something to the toaster",
+              "reference": [
+                "2024-09-01 18:43:51",
+                "2024-09-01 18:43:56"
+              ],
+              "pairid": "45453e44b9db5d5f3c8f416840e66595",
+              "pair_idx": 2
+            },
+            {
+              "question": "When did you last slice a bread?",
+              "answer": "At 2024/09/01, 18:39:54",
+              "correction": "You should always remember the exact time when you slice a bread",
+              "reference": [
+                "2024-09-01 18:39:49",
+                "2024-09-01 18:39:54"
+              ],
+              "pairid": "facfe3fa2b16330a7954f2dd3b0ad1f6",
+              "pair_idx": 2
+            },
+            {
+              "question": "What objects did you see the last time you did slice a bread?",
+              "answer": "pot, drawer, countertop, spatula, knife, pan, stoveburner, microwave, toaster, papertowelroll, bread, stoveknob, cabinet, saltshaker",
+              "correction": "You should always remember all the objects you see when you slice a bread",
+              "reference": [
+                "2024-09-01 18:39:49",
+                "2024-09-01 18:39:54"
+              ],
+              "pairid": "a8cf3bd4072bc221a743846e2bb38803",
+              "pair_idx": 2
+            },
+            {
+              "question": "Which object did you last transport to the toaster?",
+              "answer": "The bread sliced slice",
+              "correction": "You should always remember which object you transport to the toaster",
+              "reference": [
+                "2024-09-01 18:43:51",
+                "2024-09-01 18:43:56"
+              ],
+              "pairid": "928b80a4c8bb7bfffe0174653f8e8937",
+              "pair_idx": 2
+            },
+            {
+              "question": "When did you last transport something to the sink basin?",
+              "answer": "At 2024/09/02, 10:52:44",
+              "correction": "You should always remember the exact time when you transport something to the sink basin",
+              "reference": [
+                "2024-09-02 10:52:38",
+                "2024-09-02 10:52:44"
+              ],
+              "pairid": "cfa560c5c38dec773e0f7eb226ed5e7b",
+              "pair_idx": 2
+            }
+          ]
+        }
+      }
+    ],
+    "history-5": [
+      {
+        "game_id": "valid_unseen/b20314fc5fe107f3_80ee",
+        "start_date": "2023-06-28 15:23:10",
+        "qa": {}
+      },
+      {
+        "game_id": "valid_unseen/5aa3cbd322d4f163_3bda",
+        "start_date": "2023-06-28 18:50:01",
+        "qa": {}
+      },
+      {
+        "game_id": "valid_unseen/fb7d765ba6874372_0a26",
+        "start_date": "2023-06-30 10:31:19",
+        "qa": {
+          "397.6581": [
+            {
+              "question": "When did you first slice a tomato?",
+              "answer": "At 2023/06/28, 18:53:48",
+              "correction": "You should always remember the exact time when you slice a tomato",
+              "reference": [
+                "2023-06-28 18:53:31",
+                "2023-06-28 18:53:48"
+              ],
+              "pairid": "12c1e8917e1cf01fec760a9e437da07d",
+              "pair_idx": 1
+            },
+            {
+              "question": "What objects did you see the first time you did pickup a spatula?",
+              "answer": "pot, faucet, countertop, spatula, bread sliced slice, sink basin, plate, knife, butterknife, dishsponge, sink, mug",
+              "correction": "You should always remember all the objects you see when you pickup a spatula",
+              "reference": [
+                "2023-06-28 15:26:51",
+                "2023-06-28 15:26:51"
+              ],
+              "pairid": "536b6ac444dddf5350d331feaa8af5e0",
+              "pair_idx": 1
+            },
+            {
+              "question": "When did you first place a spatula?",
+              "answer": "At 2023/06/28, 15:26:54",
+              "correction": "You should always remember the exact time when you place a spatula",
+              "reference": [
+                "2023-06-28 15:26:54",
+                "2023-06-28 15:26:54"
+              ],
+              "pairid": "1f8bb0ea0f4e24428d880ec921e4315e",
+              "pair_idx": 1
+            },
+            {
+              "question": "When did you first finish to transport a spatula?",
+              "answer": "At 2023/06/28, 15:26:54",
+              "correction": "You should always remember the exact time when you finish to transport a spatula",
+              "reference": [
+                "2023-06-28 15:26:51",
+                "2023-06-28 15:26:54"
+              ],
+              "pairid": "bafbaa86f102800c0a97f2426141d28a",
+              "pair_idx": 1
+            },
+            {
+              "question": "Which object did you first transport to the toaster?",
+              "answer": "The bread sliced slice",
+              "correction": "You should always remember which object you transport to the toaster",
+              "reference": [
+                "2023-06-28 15:25:02",
+                "2023-06-28 15:25:06"
+              ],
+              "pairid": "f068119f28108ee81c6945eca669f5d8",
+              "pair_idx": 1
+            }
+          ]
+        }
+      },
+      {
+        "game_id": "valid_unseen/7504548a0dd7baf8_b148",
+        "start_date": "2023-06-30 11:38:47",
+        "qa": {}
+      },
+      {
+        "game_id": "valid_unseen/cb0e41e1b364ad27_6591",
+        "start_date": "2023-07-05 17:33:08",
+        "qa": {
+          "163.583271": [
+            {
+              "question": "When did you last slice a tomato?",
+              "answer": "At 2023/06/30, 11:41:51",
+              "correction": "You should always remember the exact time when you slice a tomato",
+              "reference": [
+                "2023-06-30 11:41:45",
+                "2023-06-30 11:41:51"
+              ],
+              "pairid": "12c1e8917e1cf01fec760a9e437da07d",
+              "pair_idx": 2
+            },
+            {
+              "question": "What objects did you see the last time you did pickup a spatula?",
+              "answer": "houseplant, faucet, countertop, spatula, knife, sink basin, plate, window, sink, papertowelroll, potato slice, dishsponge, spoon, mug",
+              "correction": "You should always remember all the objects you see when you pickup a spatula",
+              "reference": [
+                "2023-06-30 10:37:37",
+                "2023-06-30 10:37:38"
+              ],
+              "pairid": "536b6ac444dddf5350d331feaa8af5e0",
+              "pair_idx": 2
+            },
+            {
+              "question": "When did you last place a spatula?",
+              "answer": "At 2023/06/30, 10:37:43",
+              "correction": "You should always remember the exact time when you place a spatula",
+              "reference": [
+                "2023-06-30 10:37:43",
+                "2023-06-30 10:37:43"
+              ],
+              "pairid": "1f8bb0ea0f4e24428d880ec921e4315e",
+              "pair_idx": 2
+            },
+            {
+              "question": "When did you last finish to transport a spatula?",
+              "answer": "At 2023/06/30, 10:37:43",
+              "correction": "You should always remember the exact time when you finish to transport a spatula",
+              "reference": [
+                "2023-06-30 10:37:37",
+                "2023-06-30 10:37:43"
+              ],
+              "pairid": "bafbaa86f102800c0a97f2426141d28a",
+              "pair_idx": 2
+            },
+            {
+              "question": "Which object did you last transport to the toaster?",
+              "answer": "The bread slice",
+              "correction": "You should always remember which object you transport to the toaster",
+              "reference": [
+                "2023-06-30 11:41:07",
+                "2023-06-30 11:41:16"
+              ],
+              "pairid": "f068119f28108ee81c6945eca669f5d8",
+              "pair_idx": 2
+            }
+          ]
+        }
+      }
+    ],
+    "history-6": [
+      {
+        "game_id": "valid_unseen/0c2b61fdbb890609_74a7",
+        "start_date": "2023-03-19 15:20:07",
+        "qa": {}
+      },
+      {
+        "game_id": "valid_unseen/064a69cb5d40b41f_9c2e",
+        "start_date": "2023-03-21 14:54:28",
+        "qa": {
+          "619.99282": [
+            {
+              "question": "What steps did you perform during transport of the plate?",
+              "answer": "Pickup the plate, Place the plate at the countertop",
+              "correction": "You should always remember the detailed steps you perform during transport of the plate",
+              "reference": [
+                "2023-03-19 15:26:38",
+                "2023-03-19 15:27:04"
+              ],
+              "pairid": "f0e5cf04e1b1ee31821ed4583a1e5e22",
+              "pair_idx": 1
+            },
+            {
+              "question": "What objects did you see the first time you did finish to transport a knife?",
+              "answer": "countertop, knife, toaster, bread slice, statue, cabinet, bread, fork, cup",
+              "correction": "You should always remember all the objects you see when you finish to transport a knife",
+              "reference": [
+                "2023-03-19 15:21:42",
+                "2023-03-19 15:22:04"
+              ],
+              "pairid": "3a19f90face257b01f89dbe475eb7a11",
+              "pair_idx": 1
+            },
+            {
+              "question": "What objects did you see the first time you did pickup a knife?",
+              "answer": "fridge, floor, countertop, spatula, knife, egg, pan, toaster, bread, cabinet",
+              "correction": "You should always remember all the objects you see when you pickup a knife",
+              "reference": [
+                "2023-03-19 15:21:42",
+                "2023-03-19 15:21:42"
+              ],
+              "pairid": "69822ad649a45d6bb4c9f157b5cdc18a",
+              "pair_idx": 1
+            }
+          ]
+        }
+      },
+      {
+        "game_id": "valid_unseen/1bbfe20e48fba275_22dc",
+        "start_date": "2023-03-24 08:03:59",
+        "qa": {
+          "81.313395": [
+            {
+              "question": "To where did you first transport a pot?",
+              "answer": "At the countertop",
+              "correction": "You should always remember the location to where you transport a pot",
+              "reference": [
+                "2023-03-21 14:59:38",
+                "2023-03-21 14:59:59"
+              ],
+              "pairid": "903a0ef9962d16d2a62a700c47553297",
+              "pair_idx": 1
+            },
+            {
+              "question": "What steps did you perform during transport of the plate?",
+              "answer": "Pickup the plate, Place the plate at the countertop",
+              "correction": "You should always remember the detailed steps you perform during transport of the plate",
+              "reference": [
+                "2023-03-21 15:01:58",
+                "2023-03-21 15:02:29"
+              ],
+              "pairid": "f0e5cf04e1b1ee31821ed4583a1e5e22",
+              "pair_idx": 2
+            },
+            {
+              "question": "What objects did you see the last time you did finish to transport a knife?",
+              "answer": "pot, drawer, countertop, bowl, knife, pan, stoveburner, microwave, toaster, cellphone, potato slice, statue, potato, soapbottle, stoveknob, cabinet",
+              "correction": "You should always remember all the objects you see when you finish to transport a knife",
+              "reference": [
+                "2023-03-21 14:57:12",
+                "2023-03-21 14:57:40"
+              ],
+              "pairid": "3a19f90face257b01f89dbe475eb7a11",
+              "pair_idx": 2
+            },
+            {
+              "question": "Where did you first place a pot?",
+              "answer": "At the countertop",
+              "correction": "You should always remember the location where you place a pot",
+              "reference": [
+                "2023-03-21 14:59:54",
+                "2023-03-21 14:59:59"
+              ],
+              "pairid": "ddf44cd953dcffde2a777d3148333c12",
+              "pair_idx": 1
+            },
+            {
+              "question": "What objects did you see the last time you did pickup a knife?",
+              "answer": "drawer, countertop, bowl, knife, pan, stoveburner, toaster, cellphone, statue, potato, soapbottle, cabinet",
+              "correction": "You should always remember all the objects you see when you pickup a knife",
+              "reference": [
+                "2023-03-21 14:57:12",
+                "2023-03-21 14:57:27"
+              ],
+              "pairid": "69822ad649a45d6bb4c9f157b5cdc18a",
+              "pair_idx": 2
+            }
+          ]
+        }
+      },
+      {
+        "game_id": "valid_unseen/9ac845c7d33ba73a_7fa8",
+        "start_date": "2023-03-24 17:00:41",
+        "qa": {}
+      },
+      {
+        "game_id": "valid_unseen/58b03cb4cc6cbe0d_dd29",
+        "start_date": "2023-03-25 10:37:33",
+        "qa": {
+          "58.830529": [
+            {
+              "question": "To where did you last transport a pot?",
+              "answer": "At the countertop",
+              "correction": "You should always remember the location to where you transport a pot",
+              "reference": [
+                "2023-03-24 08:03:59",
+                "2023-03-24 08:05:49"
+              ],
+              "pairid": "903a0ef9962d16d2a62a700c47553297",
+              "pair_idx": 2
+            },
+            {
+              "question": "Where did you last place a pot?",
+              "answer": "At the countertop",
+              "correction": "You should always remember the location where you place a pot",
+              "reference": [
+                "2023-03-24 08:05:43",
+                "2023-03-24 08:05:49"
+              ],
+              "pairid": "ddf44cd953dcffde2a777d3148333c12",
+              "pair_idx": 2
+            }
+          ]
+        }
+      }
+    ],
+    "history-7": [
+      {
+        "game_id": "valid_unseen/92ec5d9ad47a53b8_d3c5",
+        "start_date": "2024-08-16 12:32:58",
+        "qa": {}
+      },
+      {
+        "game_id": "valid_unseen/498d06abfb7e9487_5c19",
+        "start_date": "2024-08-21 12:11:58",
+        "qa": {
+          "143.820243": [
+            {
+              "question": "What objects did you see the first time you did place a knife?",
+              "answer": "houseplant, creditcard, faucet, countertop, knife, sink basin, peppershaker, plate, potato slice, statue, soapbottle, sink, spoon",
+              "correction": "You should always remember all the objects you see when you place a knife",
+              "reference": [
+                "2024-08-16 12:34:16",
+                "2024-08-16 12:34:20"
+              ],
+              "pairid": "a374d9d7e7bbb9b7fb593713a2bdee03",
+              "pair_idx": 1
+            },
+            {
+              "question": "When did you first slice a potato?",
+              "answer": "At 2024/08/16, 12:34:13",
+              "correction": "You should always remember the exact time when you slice a potato",
+              "reference": [
+                "2024-08-16 12:33:43",
+                "2024-08-16 12:34:13"
+              ],
+              "pairid": "2c23bd41d3c1b670fa2a9e19416533fd",
+              "pair_idx": 1
+            },
+            {
+              "question": "What steps did you perform during transport of the knife?",
+              "answer": "Pickup the knife, Slice the potato, Place the knife at the countertop",
+              "correction": "You should always remember the detailed steps you perform during transport of the knife",
+              "reference": [
+                "2024-08-16 12:32:58",
+                "2024-08-16 12:34:20"
+              ],
+              "pairid": "924c7d972d689dd54a3b1145e44e210f",
+              "pair_idx": 1
+            },
+            {
+              "question": "When did you first transport something to the plate?",
+              "answer": "At 2024/08/16, 12:35:53",
+              "correction": "You should always remember the exact time when you transport something to the plate",
+              "reference": [
+                "2024-08-16 12:35:08",
+                "2024-08-16 12:35:53"
+              ],
+              "pairid": "860f3c7e3e4d456c1cf3cbf8237b2f65",
+              "pair_idx": 1
+            },
+            {
+              "question": "What objects did you see the first time you did pickup a potato slice?",
+              "answer": "houseplant, creditcard, faucet, countertop, knife, sink basin, peppershaker, plate, potato slice, statue, soapbottle, sink, spoon",
+              "correction": "You should always remember all the objects you see when you pickup a potato slice",
+              "reference": [
+                "2024-08-16 12:34:24",
+                "2024-08-16 12:34:24"
+              ],
+              "pairid": "75a7b74dc866f1bbe030e7848a888652",
+              "pair_idx": 1
+            }
+          ]
+        }
+      },
+      {
+        "game_id": "valid_unseen/345624f0e74dc947_8525",
+        "start_date": "2024-08-21 15:48:06",
+        "qa": {}
+      },
+      {
+        "game_id": "valid_unseen/b001404996cd3a29_0181",
+        "start_date": "2024-08-22 19:23:43",
+        "qa": {
+          "485.108041": [
+            {
+              "question": "What objects did you see the last time you did place a knife?",
+              "answer": "pot, faucet, countertop, tomato slice, knife, sink basin, plate, egg, mug, tomato, potato slice, butterknife, sink, lettuce sliced slice",
+              "correction": "You should always remember all the objects you see when you place a knife",
+              "reference": [
+                "2024-08-21 16:00:56",
+                "2024-08-21 16:00:56"
+              ],
+              "pairid": "a374d9d7e7bbb9b7fb593713a2bdee03",
+              "pair_idx": 2
+            },
+            {
+              "question": "When did you last slice a potato?",
+              "answer": "At 2024/08/21, 15:53:02",
+              "correction": "You should always remember the exact time when you slice a potato",
+              "reference": [
+                "2024-08-21 15:52:47",
+                "2024-08-21 15:53:02"
+              ],
+              "pairid": "2c23bd41d3c1b670fa2a9e19416533fd",
+              "pair_idx": 2
+            },
+            {
+              "question": "What steps did you perform during transport of the knife?",
+              "answer": "Pickup the knife, Slice the potato, Place the knife at the countertop",
+              "correction": "You should always remember the detailed steps you perform during transport of the knife",
+              "reference": [
+                "2024-08-21 16:00:48",
+                "2024-08-21 16:00:56"
+              ],
+              "pairid": "924c7d972d689dd54a3b1145e44e210f",
+              "pair_idx": 2
+            },
+            {
+              "question": "When did you last transport something to the plate?",
+              "answer": "At 2024/08/21, 16:03:51",
+              "correction": "You should always remember the exact time when you transport something to the plate",
+              "reference": [
+                "2024-08-21 16:03:40",
+                "2024-08-21 16:03:51"
+              ],
+              "pairid": "860f3c7e3e4d456c1cf3cbf8237b2f65",
+              "pair_idx": 2
+            },
+            {
+              "question": "What objects did you see the last time you did pickup a potato slice?",
+              "answer": "countertop, spatula, tomato slice, knife, egg, plate, pan, stoveburner, window, microwave, potato slice, coffeemachine, statue, cabinet, mug",
+              "correction": "You should always remember all the objects you see when you pickup a potato slice",
+              "reference": [
+                "2024-08-21 16:01:28",
+                "2024-08-21 16:03:01"
+              ],
+              "pairid": "75a7b74dc866f1bbe030e7848a888652",
+              "pair_idx": 2
+            }
+          ]
+        }
+      },
+      {
+        "game_id": "valid_unseen/c63cc11d19216a88_1356",
+        "start_date": "2024-08-23 15:27:21",
+        "qa": {}
+      }
+    ],
+    "history-8": [
+      {
+        "game_id": "valid_unseen/5c3835818a6347f2_2f55",
+        "start_date": "2023-05-12 09:17:49",
+        "qa": {}
+      },
+      {
+        "game_id": "valid_unseen/ff072a5b00385b3d_4f7a",
+        "start_date": "2023-05-13 14:54:34",
+        "qa": {}
+      },
+      {
+        "game_id": "valid_unseen/133d52a8aaf9db3f_1647",
+        "start_date": "2023-05-15 08:54:43",
+        "qa": {
+          "223.72489": [
+            {
+              "question": "What objects did you see the first time you did pickup a vase?",
+              "answer": "floor, countertop, garbagecan, bread, potato, vase",
+              "correction": "You should always remember all the objects you see when you pickup a vase",
+              "reference": [
+                "2023-05-13 14:54:34",
+                "2023-05-13 14:56:09"
+              ],
+              "pairid": "35df4e0da8dc634f3d1e87e86939c6bf",
+              "pair_idx": 1
+            },
+            {
+              "question": "When did you first pickup a vase?",
+              "answer": "At 2023/05/13, 14:56:09",
+              "correction": "You should always remember the exact time when you pickup a vase",
+              "reference": [
+                "2023-05-13 14:54:34",
+                "2023-05-13 14:56:09"
+              ],
+              "pairid": "7098a18388bdb60676d213497bd1063a",
+              "pair_idx": 1
+            },
+            {
+              "question": "When did you first place a vase?",
+              "answer": "At 2023/05/13, 14:56:31",
+              "correction": "You should always remember the exact time when you place a vase",
+              "reference": [
+                "2023-05-13 14:56:17",
+                "2023-05-13 14:56:31"
+              ],
+              "pairid": "6439fa9fbb6ae2dccf1e8ae85866a83f",
+              "pair_idx": 1
+            },
+            {
+              "question": "Where did you first place a vase?",
+              "answer": "At the sink basin",
+              "correction": "You should always remember the location where you place a vase",
+              "reference": [
+                "2023-05-13 14:56:17",
+                "2023-05-13 14:56:31"
+              ],
+              "pairid": "05c9ec46f04433f0cb4632a6337a0493",
+              "pair_idx": 1
+            },
+            {
+              "question": "What objects did you see the first time you did place a vase?",
+              "answer": "houseplant, creditcard, countertop, spatula, knife, sink basin, vase, soapbottle, dishsponge, sink, bread, fork",
+              "correction": "You should always remember all the objects you see when you place a vase",
+              "reference": [
+                "2023-05-13 14:56:17",
+                "2023-05-13 14:56:31"
+              ],
+              "pairid": "0a26fb86f838f94bc4d4972eaede256a",
+              "pair_idx": 1
+            }
+          ]
+        }
+      },
+      {
+        "game_id": "valid_unseen/c66cfa360ba2ee00_b907",
+        "start_date": "2023-05-15 16:17:14",
+        "qa": {}
+      },
+      {
+        "game_id": "valid_unseen/36f78323469b2b02_5f91",
+        "start_date": "2023-05-17 18:12:12",
+        "qa": {
+          "170.353226": [
+            {
+              "question": "What objects did you see the last time you did pickup a vase?",
+              "answer": "pot, houseplant, faucet, countertop, spatula, sink basin, plate, pan, butterknife, potato, soapbottle, sink, vase, fork",
+              "correction": "You should always remember all the objects you see when you pickup a vase",
+              "reference": [
+                "2023-05-15 16:18:53",
+                "2023-05-15 16:18:53"
+              ],
+              "pairid": "35df4e0da8dc634f3d1e87e86939c6bf",
+              "pair_idx": 2
+            },
+            {
+              "question": "When did you last pickup a vase?",
+              "answer": "At 2023/05/15, 16:18:53",
+              "correction": "You should always remember the exact time when you pickup a vase",
+              "reference": [
+                "2023-05-15 16:18:53",
+                "2023-05-15 16:18:53"
+              ],
+              "pairid": "7098a18388bdb60676d213497bd1063a",
+              "pair_idx": 2
+            },
+            {
+              "question": "When did you last place a vase?",
+              "answer": "At 2023/05/15, 16:18:56",
+              "correction": "You should always remember the exact time when you place a vase",
+              "reference": [
+                "2023-05-15 16:18:56",
+                "2023-05-15 16:18:56"
+              ],
+              "pairid": "6439fa9fbb6ae2dccf1e8ae85866a83f",
+              "pair_idx": 2
+            },
+            {
+              "question": "Where did you last place a vase?",
+              "answer": "At the countertop",
+              "correction": "You should always remember the location where you place a vase",
+              "reference": [
+                "2023-05-15 16:18:56",
+                "2023-05-15 16:18:56"
+              ],
+              "pairid": "05c9ec46f04433f0cb4632a6337a0493",
+              "pair_idx": 2
+            },
+            {
+              "question": "What objects did you see the last time you did place a vase?",
+              "answer": "pot, houseplant, countertop, spatula, sink basin, plate, pan, potato, soapbottle, sink, vase, fork",
+              "correction": "You should always remember all the objects you see when you place a vase",
+              "reference": [
+                "2023-05-15 16:18:56",
+                "2023-05-15 16:18:56"
+              ],
+              "pairid": "0a26fb86f838f94bc4d4972eaede256a",
+              "pair_idx": 2
+            }
+          ]
+        }
+      }
+    ],
+    "history-9": [
+      {
+        "game_id": "valid_unseen/56734e09a224d64c_5396",
+        "start_date": "2024-03-14 11:21:21",
+        "qa": {}
+      },
+      {
+        "game_id": "valid_unseen/04ae108b77699c0f_2453",
+        "start_date": "2024-03-14 15:09:13",
+        "qa": {}
+      },
+      {
+        "game_id": "valid_unseen/393bc086dd2d379f_4352",
+        "start_date": "2024-03-20 10:53:01",
+        "qa": {
+          "41.289486": [
+            {
+              "question": "What steps did you perform during transport of the knife?",
+              "answer": "Pickup the knife, Close the fridge, Slice the bread, Place the knife at the countertop",
+              "correction": "You should always remember the detailed steps you perform during transport of the knife",
+              "reference": [
+                "2024-03-14 15:12:53",
+                "2024-03-14 15:13:55"
+              ],
+              "pairid": "e1667e342e143bef34af7e101ad1e528",
+              "pair_idx": 1
+            },
+            {
+              "question": "Which object did you first transport to the sink basin?",
+              "answer": "The cup",
+              "correction": "You should always remember which object you transport to the sink basin",
+              "reference": [
+                "2024-03-14 11:21:21",
+                "2024-03-14 11:22:20"
+              ],
+              "pairid": "eb175f1d007c8af351ba1f9f24439072",
+              "pair_idx": 1
+            },
+            {
+              "question": "To where did you first transport a knife?",
+              "answer": "At the countertop",
+              "correction": "You should always remember the location to where you transport a knife",
+              "reference": [
+                "2024-03-14 15:12:53",
+                "2024-03-14 15:13:55"
+              ],
+              "pairid": "3b12cba7bb8c0b3baa167836d95329e0",
+              "pair_idx": 1
+            },
+            {
+              "question": "Which object did you first transport to the countertop?",
+              "answer": "The cup",
+              "correction": "You should always remember which object you transport to the countertop",
+              "reference": [
+                "2024-03-14 11:22:31",
+                "2024-03-14 11:22:43"
+              ],
+              "pairid": "a1fffabfb92fd97a76025314dacfffd7",
+              "pair_idx": 1
+            },
+            {
+              "question": "To where did you first transport a bread?",
+              "answer": "At the countertop",
+              "correction": "You should always remember the location to where you transport a bread",
+              "reference": [
+                "2024-03-14 15:12:02",
+                "2024-03-14 15:12:34"
+              ],
+              "pairid": "d449532a588af3ea78f93d3fe89b1864",
+              "pair_idx": 1
+            }
+          ]
+        }
+      },
+      {
+        "game_id": "valid_unseen/2f8d482d22e56fdd_410e",
+        "start_date": "2024-03-20 13:42:47",
+        "qa": {}
+      },
+      {
+        "game_id": "valid_unseen/485726b073721e1c_04d4",
+        "start_date": "2024-03-26 12:25:41",
+        "qa": {
+          "322.857519": [
+            {
+              "question": "What steps did you perform during transport of the knife?",
+              "answer": "Pickup the knife, Close the fridge, Slice the bread, Place the knife at the countertop",
+              "correction": "You should always remember the detailed steps you perform during transport of the knife",
+              "reference": [
+                "2024-03-20 13:46:44",
+                "2024-03-20 13:48:35"
+              ],
+              "pairid": "e1667e342e143bef34af7e101ad1e528",
+              "pair_idx": 2
+            },
+            {
+              "question": "Which object did you last transport to the sink basin?",
+              "answer": "The plate",
+              "correction": "You should always remember which object you transport to the sink basin",
+              "reference": [
+                "2024-03-20 13:52:56",
+                "2024-03-20 13:53:08"
+              ],
+              "pairid": "eb175f1d007c8af351ba1f9f24439072",
+              "pair_idx": 2
+            },
+            {
+              "question": "To where did you last transport a knife?",
+              "answer": "At the countertop",
+              "correction": "You should always remember the location to where you transport a knife",
+              "reference": [
+                "2024-03-20 13:46:44",
+                "2024-03-20 13:48:35"
+              ],
+              "pairid": "3b12cba7bb8c0b3baa167836d95329e0",
+              "pair_idx": 2
+            },
+            {
+              "question": "Which object did you last transport to the countertop?",
+              "answer": "The plate",
+              "correction": "You should always remember which object you transport to the countertop",
+              "reference": [
+                "2024-03-20 13:53:30",
+                "2024-03-20 13:53:33"
+              ],
+              "pairid": "a1fffabfb92fd97a76025314dacfffd7",
+              "pair_idx": 2
+            },
+            {
+              "question": "To where did you last transport a bread?",
+              "answer": "At the countertop",
+              "correction": "You should always remember the location to where you transport a bread",
+              "reference": [
+                "2024-03-20 10:53:01",
+                "2024-03-20 10:53:19"
+              ],
+              "pairid": "d449532a588af3ea78f93d3fe89b1864",
+              "pair_idx": 2
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
